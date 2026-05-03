@@ -51,7 +51,7 @@ def upload_video(video_path, title, description="", playlist_id=None, tags=None)
     creds = get_credentials()
     youtube = build("youtube", "v3", credentials=creds)
     body = {
-        "snippet": {"title": title, "description": description, "categoryId": "22"},
+        "snippet": {"title": title, "description": description, "categoryId": "27"},
         "status": {"privacyStatus": "public"}
     }
     if tags:
