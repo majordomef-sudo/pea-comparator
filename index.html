@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparateur ETF PEA 2026 — Les meilleurs ETF éligibles au PEA</title>
+  <meta name="description" content="Comparateur complet des 429 ETF éligibles au PEA. Filtrez par frais, SRI, émetteur. Trouvez le meilleur ETF PEA pour 2026.">
+  <meta name="keywords" content="ETF PEA, comparateur ETF, meilleur ETF PEA 2026, ETF éligible PEA, frais ETF, SRI ETF">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://majordomef-sudo.github.io/pea-comparator/">
+  <link rel="stylesheet" href="style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Comparateur ETF PEA 2026">
+  <meta property="og:description" content="Les 429 ETF éligibles au PEA comparés en un coup d'œil.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">🎩 Alfred IA</div>
+      <p class="tagline">Comparateur indépendant <strong>ETF PEA</strong> — Données mises à jour juin 2026</p>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Comparateur ETF PEA 2026</h1>
+      <p class="hero-sub">Les <strong>429 ETF éligibles au PEA</strong> analysés : frais, risque (SRI), performance, émetteur. Trouvez en un clic celui qui vous correspond.</p>
+    </div>
+  </section>
+
+  <!-- Filtres -->
+  <section class="filters container">
+    <div class="filters-row">
+      <div class="filter-group search-group">
+        <label for="search">Recherche</label>
+        <input type="text" id="search" placeholder="Nom ou ISIN…" autocomplete="off">
+      </div>
+      <div class="filter-group">
+        <label for="feesMin">Frais min (%)</label>
+        <input type="number" id="feesMin" min="0" step="0.01" placeholder="0">
+      </div>
+      <div class="filter-group">
+        <label for="feesMax">Frais max (%)</label>
+        <input type="number" id="feesMax" min="0" step="0.01" placeholder="3">
+      </div>
+      <div class="filter-group">
+        <label for="sri">SRI</label>
+        <select id="sri">
+          <option value="">Tous</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="emetteur">Émetteur</label>
+        <select id="emetteur">
+          <option value="">Tous</option>
+        </select>
+      </div>
+    </div>
+    <div class="filters-stats">
+      <span id="resultCount">429 ETF</span> trouvés
+      <button id="resetFilters" class="btn-link">Réinitialiser les filtres</button>
+    </div>
+  </section>
+
+  <!-- Tableau -->
+  <section class="table-wrap container">
+    <table id="etfTable">
+      <thead>
+        <tr>
+          <th data-col="isin" class="sortable">ISIN <span class="sort-arrow"></span></th>
+          <th data-col="nom" class="sortable">Nom <span class="sort-arrow"></span></th>
+          <th data-col="frais" class="sortable">Frais <span class="sort-arrow"></span></th>
+          <th data-col="sri" class="sortable">SRI <span class="sort-arrow"></span></th>
+          <th data-col="perf5" class="sortable">Perf 5 ans <span class="sort-arrow"></span></th>
+          <th data-col="emetteur" class="sortable">Émetteur <span class="sort-arrow"></span></th>
+          <th data-col="pays" class="sortable">Pays <span class="sort-arrow"></span></th>
+          <th>PEA</th>
+          <th>DIC</th>
+        </tr>
+      </thead>
+      <tbody id="etfBody"></tbody>
+    </table>
+    <div id="pagination" class="pagination"></div>
+  </section>
+
+  <!-- ISIN copié toast -->
+  <div id="toast" class="toast hidden">ISIN copié !</div>
+
+  <!-- Calculateurs -->
+  <section class="calculators container">
+    <h2>🧮 Simulateurs d'investissement</h2>
+    <p class="calc-sub">Calculez votre chemin vers l'indépendance financière avec les données de votre comparateur.</p>
+
+    <div class="calc-tabs">
+      <button class="calc-tab active" data-tab="compound">Intérêts composés</button>
+      <button class="calc-tab" data-tab="fire">Indépendance financière</button>
+      <button class="calc-tab" data-tab="fees">Impact des frais</button>
+      <button class="calc-tab" data-tab="enveloppe">PEA vs AV vs CTO</button>
+      <button class="calc-tab" data-tab="allocation">Mon allocation</button>
+    </div>
+
+    <!-- TAB 1: Intérêts Composés -->
+    <div class="calc-panel active" id="tab-compound">
+      <h3>📈 Simulateur d'intérêts composés</h3>
+      <p>Découvrez combien votre épargne peut atteindre grâce aux intérêts composés, et quand votre argent travaille plus que vous.</p>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label>Capital initial (€)
+            <input type="number" id="comp-init" value="10000" min="0">
+          </label>
+          <label>Versements mensuels (€)
+            <input type="number" id="comp-monthly" value="200" min="0">
+          </label>
+          <label>Taux annuel (%)
+            <input type="number" id="comp-rate" value="7" min="0" max="30" step="0.1">
+          </label>
+          <label>Durée (années)
+            <input type="number" id="comp-years" value="30" min="1" max="60">
+          </label>
+          <button class="calc-btn" id="comp-calc">Calculer</button>
+        </div>
+        <div class="calc-results" id="comp-results">
+          <div class="result-card highlight">
+            <span class="result-label">Capital final</span>
+            <span class="result-value" id="comp-final">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Capital investi</span>
+            <span class="result-value" id="comp-invested">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Plus-value</span>
+            <span class="result-value" id="comp-gain">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">🔄 Moitié du chemin</span>
+            <span class="result-value" id="comp-half">—</span>
+          </div>
+          <div class="result-card milestone">
+            <span class="result-label">⚡ Ton argent travaille pour toi dès l'année</span>
+            <span class="result-value" id="comp-work-year">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: FIRE -->
+    <div class="calc-panel" id="tab-fire">
+      <h3>🔥 Calculateur d'indépendance financière (FIRE)</h3>
+      <p>La règle de Trinity : avec un taux de retrait de 4%, votre capital peut durer indéfiniment.</p>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label>Revenus mensuels souhaités (€)
+            <input type="number" id="fire-income" value="2000" min="0">
+          </label>
+          <label>Taux de retrait annuel (%)
+            <input type="number" id="fire-rate" value="4" min="1" max="10" step="0.1">
+          </label>
+          <label>Capital actuel (€)
+            <input type="number" id="fire-current" value="0" min="0">
+          </label>
+          <label>Épargne mensuelle (€)
+            <input type="number" id="fire-save" value="200" min="0">
+          </label>
+          <label>Rendement attendu (%)
+            <input type="number" id="fire-return" value="7" min="0" max="30" step="0.1">
+          </label>
+          <button class="calc-btn" id="fire-calc">Calculer</button>
+        </div>
+        <div class="calc-results" id="fire-results">
+          <div class="result-card highlight">
+            <span class="result-label">Capital nécessaire</span>
+            <span class="result-value" id="fire-target">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Temps estimé (au rythme actuel)</span>
+            <span class="result-value" id="fire-time">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Âge d'atteinte</span>
+            <span class="result-value" id="fire-age">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Capital estimé à l'arrivée</span>
+            <span class="result-value" id="fire-estimate">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: Impact des frais -->
+    <div class="calc-panel" id="tab-fees">
+      <h3>💰 Comparateur d'impact des frais</h3>
+      <p>Visualisez l'effet dévastateur des frais sur vos rendements à long terme.</p>
+      <div class="calc-grid-full">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Capital initial (€)
+              <input type="number" id="fees-init" value="25000" min="0">
+            </label>
+            <label>Versements mensuels (€)
+              <input type="number" id="fees-monthly" value="300" min="0">
+            </label>
+            <label>Rendement brut annuel (%)
+              <input type="number" id="fees-rate" value="8" min="0" max="30" step="0.1">
+            </label>
+            <label>Durée (années)
+              <input type="number" id="fees-years" value="25" min="1" max="60">
+            </label>
+            <button class="calc-btn" id="fees-calc">Comparer</button>
+          </div>
+          <div class="calc-results" id="fees-results">
+            <div class="result-card highlight">
+              <span class="result-label">✅ Sans frais</span>
+              <span class="result-value" id="fees-none">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">🟡 Frais 0,50%</span>
+              <span class="result-value" id="fees-low">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">🔴 Frais 1,00%</span>
+              <span class="result-value" id="fees-mid">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">💀 Frais 1,50% (typique fonds actif)</span>
+              <span class="result-value" id="fees-high">—</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="fees-chart" width="700" height="350"></canvas>
+        </div>
+      </div>
+      <p class="calc-note">💡 <strong>La différence entre 0,05% et 0,50% de frais, c'est des dizaines de milliers d'euros sur 25 ans.</strong> Voir les courbes ci-dessus.</p>
+    </div>
+
+    <!-- TAB 4: PEA vs AV vs CTO -->
+    <div class="calc-panel" id="tab-enveloppe">
+      <h3>⚖️ Comparateur PEA vs Assurance-Vie vs CTO</h3>
+      <p>Comparez l'impact fiscal des 3 enveloppes d'investissement sur votre capital final.</p>
+      <div class="calc-grid-full">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Capital initial (€)
+              <input type="number" id="env-init" value="25000" min="0">
+            </label>
+            <label>Versements mensuels (€)
+              <input type="number" id="env-monthly" value="300" min="0">
+            </label>
+            <label>Rendement annuel brut (%)
+              <input type="number" id="env-rate" value="8" min="0" max="30" step="0.1">
+            </label>
+            <label>Durée (années)
+              <input type="number" id="env-years" value="30" min="5" max="60">
+            </label>
+            <button class="calc-btn" id="env-calc">Comparer</button>
+          </div>
+          <div class="calc-results" id="env-results">
+            <div class="result-card env-pea">
+              <span class="result-label">💼 PEA (17,2% PS)</span>
+              <span class="result-value" id="env-pea">—</span>
+            </div>
+            <div class="result-card env-av">
+              <span class="result-label">📜 AV 8 ans+ (7,5% nets)</span>
+              <span class="result-value" id="env-av">—</span>
+            </div>
+            <div class="result-card env-cto highlight">
+              <span class="result-label">📈 CTO (30% PFU)</span>
+              <span class="result-value" id="env-cto">—</span>
+            </div>
+            <div class="result-card milestone">
+              <span class="result-label">🏆 Gagnant fiscal</span>
+              <span class="result-value" id="env-winner">—</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="env-chart" width="700" height="350"></canvas>
+        </div>
+      </div>
+      <p class="calc-note">🔍 <strong>PEA</strong> : 17,2% PS après 5 ans (0% IR) · <strong>AV</strong> : 7,5% après 8 ans (abattement 4600€/an) · <strong>CTO</strong> : 30% PFU flat. Les frais de gestion AV (~0,75%) sont inclus.</p>
+    </div>
+
+    <!-- TAB 5: Allocation recommandée -->
+    <div class="calc-panel" id="tab-allocation">
+      <h3>🎯 Allocation recommandée selon votre profil</h3>
+      <p>Basée sur la stratégie multi-actifs 70/25/5 (Offensif / Équilibre / Défensif) — idéal pour un horizon 10+ ans.</p>
+      <div class="calc-grid-full">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Votre profil
+              <select id="alloc-profile">
+                <option value="offensif">⚔️ Offensif (10-30 ans)</option>
+                <option value="equilibre" selected>⚖️ Équilibré (5-15 ans)</option>
+                <option value="defensif">🛡️ Défensif (0-5 ans)</option>
+              </select>
+            </label>
+            <label>Budget mensuel (€)
+              <input type="number" id="alloc-monthly" value="200" min="0">
+            </label>
+            <label>Capital initial (€)
+              <input type="number" id="alloc-init" value="10000" min="0">
+            </label>
+            <label>Pays / Résidence fiscale
+              <select id="alloc-country">
+                <option value="fr">🇫🇷 France (PEA)</option>
+                <option value="other">🌍 Hors France (CTO)</option>
+              </select>
+            </label>
+            <button class="calc-btn" id="alloc-calc">Générer</button>
+          </div>
+          <div class="calc-results" id="alloc-results">
+            <div class="result-card highlight">
+              <span class="result-label">📊 Nombre d'ETF recommandés</span>
+              <span class="result-value" id="alloc-count">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">💼 Allocation</span>
+              <span class="result-value" id="alloc-pie" style="font-size:1em">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">💰 Frais moyens pondérés</span>
+              <span class="result-value" id="alloc-ter">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">📈 Perf annualisée estimée</span>
+              <span class="result-value" id="alloc-perf">—</span>
+            </div>
+            <div class="result-card milestone">
+              <span class="result-label">🛒 ETF ET ISIN</span>
+              <span class="result-value" id="alloc-etfs" style="font-size:0.85em">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 <strong>Basé sur le portefeuille 70/25/5</strong> (42% MSCI World, 7% EM, 10% Or, 5% Crypto, 5% SCPI…). Voir l'onglet Intérêts Composés pour la projection.</p>
+    </div>
+  </section>
+
+  <!-- CTA Affiliation -->
+  <section class="cta container">
+    <h2>Prêt à investir ?</h2>
+    <p>Ouvrez un <strong>PEA chez Trade Republic</strong>, le courtier le plus simple et le moins cher pour investir en ETF.</p>
+    <a href="https://ref.trade.re/wt7d" class="cta-button" target="_blank" rel="noopener noreferrer">
+      Ouvrir un PEA Trade Republic →
+    </a>
+    <p class="cta-disclaimer">🎩 Alfred IA · Liens d'affiliation · Sans frais supplémentaires pour vous</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>🎩 Alfred IA · <strong>Comparateur ETF PEA 2026</strong></p>
+      <p>Données issues des DIC PRIIPs · Mis à jour juin 2026</p>
+      <p class="footer-note">Ce site est un outil informatif indépendant. Les performances passées ne préjugent pas des performances futures. Vérifiez l'éligibilité PEA auprès de votre courtier.</p>
+    </div>
+  </footer>
+
+  <script src="etf-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
