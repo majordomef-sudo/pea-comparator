@@ -106,6 +106,7 @@
       <button class="calc-tab" data-tab="fire">Indépendance financière</button>
       <button class="calc-tab" data-tab="fees">Impact des frais</button>
       <button class="calc-tab" data-tab="enveloppe">PEA vs AV vs CTO</button>
+      <button class="calc-tab" data-tab="allocation">Mon allocation</button>
     </div>
 
     <!-- TAB 1: Intérêts Composés -->
@@ -201,42 +202,47 @@
     <div class="calc-panel" id="tab-fees">
       <h3>💰 Comparateur d'impact des frais</h3>
       <p>Visualisez l'effet dévastateur des frais sur vos rendements à long terme.</p>
-      <div class="calc-grid">
-        <div class="calc-inputs">
-          <label>Capital initial (€)
-            <input type="number" id="fees-init" value="25000" min="0">
-          </label>
-          <label>Versements mensuels (€)
-            <input type="number" id="fees-monthly" value="300" min="0">
-          </label>
-          <label>Rendement brut annuel (%)
-            <input type="number" id="fees-rate" value="8" min="0" max="30" step="0.1">
-          </label>
-          <label>Durée (années)
-            <input type="number" id="fees-years" value="25" min="1" max="60">
-          </label>
-          <button class="calc-btn" id="fees-calc">Comparer</button>
+      <div class="calc-grid-full">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Capital initial (€)
+              <input type="number" id="fees-init" value="25000" min="0">
+            </label>
+            <label>Versements mensuels (€)
+              <input type="number" id="fees-monthly" value="300" min="0">
+            </label>
+            <label>Rendement brut annuel (%)
+              <input type="number" id="fees-rate" value="8" min="0" max="30" step="0.1">
+            </label>
+            <label>Durée (années)
+              <input type="number" id="fees-years" value="25" min="1" max="60">
+            </label>
+            <button class="calc-btn" id="fees-calc">Comparer</button>
+          </div>
+          <div class="calc-results" id="fees-results">
+            <div class="result-card highlight">
+              <span class="result-label">✅ Sans frais</span>
+              <span class="result-value" id="fees-none">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">🟡 Frais 0,50%</span>
+              <span class="result-value" id="fees-low">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">🔴 Frais 1,00%</span>
+              <span class="result-value" id="fees-mid">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">💀 Frais 1,50% (typique fonds actif)</span>
+              <span class="result-value" id="fees-high">—</span>
+            </div>
+          </div>
         </div>
-        <div class="calc-results" id="fees-results">
-          <div class="result-card highlight">
-            <span class="result-label">✅ Sans frais</span>
-            <span class="result-value" id="fees-none">—</span>
-          </div>
-          <div class="result-card">
-            <span class="result-label">🟡 Frais 0,50%</span>
-            <span class="result-value" id="fees-low">—</span>
-          </div>
-          <div class="result-card">
-            <span class="result-label">🔴 Frais 1,00%</span>
-            <span class="result-value" id="fees-mid">—</span>
-          </div>
-          <div class="result-card">
-            <span class="result-label">💀 Frais 1,50% (typique fonds actif)</span>
-            <span class="result-value" id="fees-high">—</span>
-          </div>
+        <div class="chart-wrap">
+          <canvas id="fees-chart" width="700" height="350"></canvas>
         </div>
       </div>
-      <p class="calc-note">💡 <strong>La différence entre 0,05% et 0,50% de frais, c'est des dizaines de milliers d'euros sur 25 ans.</strong></p>
+      <p class="calc-note">💡 <strong>La différence entre 0,05% et 0,50% de frais, c'est des dizaines de milliers d'euros sur 25 ans.</strong> Voir les courbes ci-dessus.</p>
     </div>
 
     <!-- TAB 4: PEA vs AV vs CTO -->
@@ -284,6 +290,61 @@
         </div>
       </div>
       <p class="calc-note">🔍 <strong>PEA</strong> : 17,2% PS après 5 ans (0% IR) · <strong>AV</strong> : 7,5% après 8 ans (abattement 4600€/an) · <strong>CTO</strong> : 30% PFU flat. Les frais de gestion AV (~0,75%) sont inclus.</p>
+    </div>
+
+    <!-- TAB 5: Allocation recommandée -->
+    <div class="calc-panel" id="tab-allocation">
+      <h3>🎯 Allocation recommandée selon votre profil</h3>
+      <p>Basée sur la stratégie multi-actifs 70/25/5 (Offensif / Équilibre / Défensif) — idéal pour un horizon 10+ ans.</p>
+      <div class="calc-grid-full">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Votre profil
+              <select id="alloc-profile">
+                <option value="offensif">⚔️ Offensif (10-30 ans)</option>
+                <option value="equilibre" selected>⚖️ Équilibré (5-15 ans)</option>
+                <option value="defensif">🛡️ Défensif (0-5 ans)</option>
+              </select>
+            </label>
+            <label>Budget mensuel (€)
+              <input type="number" id="alloc-monthly" value="200" min="0">
+            </label>
+            <label>Capital initial (€)
+              <input type="number" id="alloc-init" value="10000" min="0">
+            </label>
+            <label>Pays / Résidence fiscale
+              <select id="alloc-country">
+                <option value="fr">🇫🇷 France (PEA)</option>
+                <option value="other">🌍 Hors France (CTO)</option>
+              </select>
+            </label>
+            <button class="calc-btn" id="alloc-calc">Générer</button>
+          </div>
+          <div class="calc-results" id="alloc-results">
+            <div class="result-card highlight">
+              <span class="result-label">📊 Nombre d'ETF recommandés</span>
+              <span class="result-value" id="alloc-count">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">💼 Allocation</span>
+              <span class="result-value" id="alloc-pie" style="font-size:1em">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">💰 Frais moyens pondérés</span>
+              <span class="result-value" id="alloc-ter">—</span>
+            </div>
+            <div class="result-card">
+              <span class="result-label">📈 Perf annualisée estimée</span>
+              <span class="result-value" id="alloc-perf">—</span>
+            </div>
+            <div class="result-card milestone">
+              <span class="result-label">🛒 ETF ET ISIN</span>
+              <span class="result-value" id="alloc-etfs" style="font-size:0.85em">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 <strong>Basé sur le portefeuille 70/25/5</strong> (42% MSCI World, 7% EM, 10% Or, 5% Crypto, 5% SCPI…). Voir l'onglet Intérêts Composés pour la projection.</p>
     </div>
   </section>
 

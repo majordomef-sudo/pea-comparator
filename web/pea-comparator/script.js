@@ -401,32 +401,199 @@
     document.getElementById('fire-estimate').textContent = formatEuro(cap);
   });
 
-  // Fee impact calculator
-  document.getElementById('fees-calc').addEventListener('click', () => {
+  // Fee impact calculator with chart
+  function calculateFees() {
     const init = +document.getElementById('fees-init').value || 0;
     const monthly = +document.getElementById('fees-monthly').value || 0;
     const rate = +document.getElementById('fees-rate').value / 100 || 0;
     const years = +document.getElementById('fees-years').value || 0;
     const months = years * 12;
 
-    function simulate(fee) {
+    function simulateWithHistory(fee) {
       const r = (rate - fee) / 12;
       let cap = init;
-      for (let m = 0; m < months; m++) {
+      const data = [{ year: 0, value: cap }];
+      for (let m = 1; m <= months; m++) {
         cap = (cap + monthly) * (1 + r);
+        if (m % 12 === 0) {
+          data.push({ year: m / 12, value: cap });
+        }
       }
-      return cap;
+      return data;
     }
 
-    const r0 = simulate(0);
-    const rLow = simulate(0.005);
-    const rMid = simulate(0.01);
-    const rHigh = simulate(0.015);
+    const d0 = simulateWithHistory(0);
+    const dLow = simulateWithHistory(0.005);
+    const dMid = simulateWithHistory(0.01);
+    const dHigh = simulateWithHistory(0.015);
+
+    const r0 = d0[d0.length - 1].value;
+    const rLow = dLow[dLow.length - 1].value;
+    const rMid = dMid[dMid.length - 1].value;
+    const rHigh = dHigh[dHigh.length - 1].value;
 
     document.getElementById('fees-none').textContent = formatEuro(r0);
     document.getElementById('fees-low').textContent = formatEuro(rLow);
     document.getElementById('fees-mid').textContent = formatEuro(rMid);
     document.getElementById('fees-high').textContent = formatEuro(rHigh);
+
+    // Draw chart
+    drawFeeChart(d0, dLow, dMid, dHigh, years);
+  }
+
+  function drawFeeChart(d0, dLow, dMid, dHigh, years) {
+    const canvas = document.getElementById('fees-chart');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.clientWidth || 700;
+    const h = canvas.clientHeight || 350;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.scale(dpr, dpr);
+
+    const pad = { top: 20, right: 20, bottom: 40, left: 70 };
+    const plotW = w - pad.left - pad.right;
+    const plotH = h - pad.top - pad.bottom;
+
+    let maxVal = 0;
+    [d0, dLow, dMid, dHigh].forEach(s => s.forEach(d => { if (d.value > maxVal) maxVal = d.value; }));
+
+    function toX(year) { return pad.left + (year / years) * plotW; }
+    function toY(val) { return pad.top + plotH - (val / maxVal) * plotH; }
+
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#fafafa';
+    ctx.fillRect(pad.left, pad.top, plotW, plotH);
+
+    // Grid
+    ctx.strokeStyle = '#e0e0e0';
+    ctx.lineWidth = 1;
+    for (let y = 0; y <= 4; y++) {
+      const val = (maxVal / 4) * y;
+      const yy = toY(val);
+      ctx.beginPath();
+      ctx.moveTo(pad.left, yy);
+      ctx.lineTo(w - pad.right, yy);
+      ctx.stroke();
+      ctx.fillStyle = '#999';
+      ctx.font = '11px system-ui';
+      ctx.textAlign = 'right';
+      ctx.fillText(formatEuro(val), pad.left - 8, yy + 4);
+    }
+
+    ctx.fillStyle = '#999';
+    ctx.font = '11px system-ui';
+    ctx.textAlign = 'center';
+    for (let y = 0; y <= years; y += Math.max(1, Math.floor(years / 6))) {
+      ctx.fillText(y + 'a', toX(y), h - pad.bottom + 16);
+    }
+
+    const series = [
+      { data: d0, color: '#2ecc71', label: '0%' },
+      { data: dLow, color: '#f39c12', label: '0,50%' },
+      { data: dMid, color: '#e74c3c', label: '1,00%' },
+      { data: dHigh, color: '#c0392b', label: '1,50%' },
+    ];
+
+    series.forEach(s => {
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      s.data.forEach((d, i) => {
+        const x = toX(d.year);
+        const y = toY(d.value);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+
+      const last = s.data[s.data.length - 1];
+      ctx.fillStyle = s.color;
+      ctx.font = 'bold 12px system-ui';
+      ctx.textAlign = 'left';
+      ctx.fillText(s.label, toX(last.year) + 6, toY(last.value) + 4);
+    });
+
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 13px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('Écart selon les frais de gestion', w / 2, 14);
+  }
+
+  document.getElementById('fees-calc').addEventListener('click', calculateFees);
+
+  // Allocation recommandée
+  const ALLOCATIONS = {
+    offensif: {
+      name: '⚔️ Offensif (10-30 ans)',
+      etfs: [
+        { label: 'MSCI World (42%)', isin: 'FR001400U5Q4   ', ticker: 'DCAM', pct: 42 },
+        { label: 'MSCI EM IMI (7%)', isin: 'IE00BKM4GZ66', ticker: 'IS3N', pct: 7 },
+        { label: 'MSCI World Small Cap (3%)', isin: 'IE00B4RFH31', ticker: 'IUSN', pct: 3 },
+        { label: 'MSCI World Quality (5%)', isin: 'IE00BQN1K786', ticker: 'CEMR', pct: 5 },
+        { label: 'Nasdaq-100 (4%)', isin: 'LU182922024', ticker: 'PUST', pct: 4 },
+        { label: 'Or physique (10%)', isin: 'FR0013416716', ticker: 'GOLD', pct: 10 },
+        { label: 'Obligations agg. (5%)', isin: 'IE00BDBRDM35', ticker: 'EUN4', pct: 5 },
+        { label: 'Crypto Basket (5%)', isin: 'CH0445689208', ticker: 'HODL', pct: 5 },
+        { label: 'SCPI (10%)', isin: '—', ticker: 'EN AV', pct: 10 },
+        { label: 'Fonds daté (5%)', isin: 'FR001400MCQ6', ticker: '2030', pct: 5 },
+        { label: 'Private Equity (4%)', isin: 'FR0013202108', ticker: 'NEXT', pct: 4 },
+      ],
+      perf: 10.78,
+      ter: 0.28,
+    },
+    equilibre: {
+      name: '⚖️ Équilibré (5-15 ans)',
+      etfs: [
+        { label: 'MSCI World (35%)', isin: 'FR001400U5Q4   ', ticker: 'DCAM', pct: 35 },
+        { label: 'MSCI EM IMI (5%)', isin: 'IE00BKM4GZ66', ticker: 'IS3N', pct: 5 },
+        { label: 'S&P 500 (10%)', isin: 'FR0010755611', ticker: 'ESE', pct: 10 },
+        { label: 'Or physique (10%)', isin: 'FR0013416716', ticker: 'GOLD', pct: 10 },
+        { label: 'Obligations agg. (10%)', isin: 'IE00BDBRDM35', ticker: 'EUN4', pct: 10 },
+        { label: 'Monétaire (10%)', isin: 'FR0010754209', ticker: 'CSH', pct: 10 },
+        { label: 'SCPI (10%)', isin: '—', ticker: 'EN AV', pct: 10 },
+        { label: 'Crypto (3%)', isin: 'CH0445689208', ticker: 'HODL', pct: 3 },
+        { label: 'Fonds daté (7%)', isin: 'FR001400MCQ6', ticker: '2030', pct: 7 },
+      ],
+      perf: 8.5,
+      ter: 0.35,
+    },
+    defensif: {
+      name: '🛡️ Défensif (0-5 ans)',
+      etfs: [
+        { label: 'MSCI World (15%)', isin: 'FR001400U5Q4   ', ticker: 'DCAM', pct: 15 },
+        { label: 'Obligations agg. (25%)', isin: 'IE00BDBRDM35', ticker: 'EUN4', pct: 25 },
+        { label: 'Monétaire (25%)', isin: 'FR0010754209', ticker: 'CSH', pct: 25 },
+        { label: 'Or (10%)', isin: 'FR0013416716', ticker: 'GOLD', pct: 10 },
+        { label: 'Fonds daté (15%)', isin: 'FR001400MCQ6', ticker: '2030', pct: 15 },
+        { label: 'SCPI (5%)', isin: '—', ticker: 'EN AV', pct: 5 },
+        { label: 'Fonds € (5%)', isin: '—', ticker: 'EN AV', pct: 5 },
+      ],
+      perf: 5.2,
+      ter: 0.45,
+    },
+  };
+
+  document.getElementById('alloc-calc').addEventListener('click', () => {
+    const profile = document.getElementById('alloc-profile').value;
+    const monthly = +document.getElementById('alloc-monthly').value || 0;
+    const init = +document.getElementById('alloc-init').value || 0;
+    const country = document.getElementById('alloc-country').value;
+
+    const alloc = ALLOCATIONS[profile];
+    document.getElementById('alloc-count').textContent = alloc.etfs.length + ' ETF / Fonds';
+
+    // Build pie text
+    const pieParts = alloc.etfs.map(e => e.label).join(' · ');
+    document.getElementById('alloc-pie').textContent = pieParts;
+
+    document.getElementById('alloc-ter').textContent = alloc.ter.toFixed(2) + '%';
+    document.getElementById('alloc-perf').textContent = alloc.perf.toFixed(1) + '% / an';
+
+    // ETF list with ISIN
+    const etfLines = alloc.etfs.map(e => e.label + ' (' + e.pct + '%)' + (e.isin !== '—' ? ' → ' + e.isin : ' → via AV')).join('\n');
+    document.getElementById('alloc-etfs').textContent = etfLines;
   });
 
   // PEA vs AV vs CTO comparator with chart
