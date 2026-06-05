@@ -1,22 +1,25 @@
 # Actions en cours
 
-## 🔴 Semaine 1 (05-07/06) ✅ FAIT
+## 🔴 Semaine 1 (05-06/06) ✅ FAIT
 - [x] Harmoniser MEMORY.md avec la roadmap réelle
-- [x] Ajouter 3 calculateurs au Comparateur PEA (intérêts composés, FIRE, impact frais)
-- [x] ⏳ **Déploiement :** Eric doit créer le repo GitHub pour le site (déplacé)
+- [x] 3 calculateurs (intérêts composés, FIRE, impact frais) + chart frais
+- [x] Comparateur PEA/AV/CTO + chart enveloppes fiscales
+- [x] Outil allocation recommandée (offensif/équilibré/défensif)
+- [x] SEO complet (JSON-LD, FAQ, OG, Twitter Card, robots.txt, sitemap)
+- [x] Bot Telegram enrichi (/fire, /compound, recherche par nom, multi-résultats)
+- [x] 5 scripts vidéo finance prêts pour le pipeline YouTube
+- [ ] ⏳ **Déploiement :** Eric crée le repo GitHub ce soir
 
-## 🟠 Semaine 2 (05-07/06) — EN COURS
-- [x] Ajouter le **comparateur PEA vs AV vs CTO** avec graphique visuel (canvas)
-- [ ] Ajouter le **graphique d'impact des frais** (courbes comparatives)
-- [ ] ⏳ **Déploiement :** Push sur GitHub dès que le repo est dispo (Eric)
+## 🟠 Semaine 2 (06-09/06)
+- [ ] Pusher le site sur GitHub dès que repo dispo
+- [ ] Configurer GitHub Pages ou déploiement
+- [ ] Lancer le bot Telegram enrichi
+- [ ] Planifier les 5 vidéos dans le pipeline YouTube
 
-## 🟡 Semaine 3 (10-14/06)
-- [ ] 3 vidéos YouTube Neuro-Finance avec les données investissement
-- [ ] Améliorer SEO du comparateur PEA
-
-## 🟢 Semaine 4 (14-18/06)
-- [ ] Enrichir le bot Telegram avec les données ETF
+## 🟡 Semaine 3 (09-13/06)
 - [ ] Articles SEO finance personnelle
+- [ ] Améliorations continue du comparateur
+- [ ] Optimisation SEO avancée
 
 ## Bloqué par
-- Repo GitHub pour déploiement du comparateur PEA (Eric)
+- ~~Repo GitHub pour déploiement du comparateur PEA (Eric fait ce soir)~~
