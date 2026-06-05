@@ -529,6 +529,26 @@ a:hover { text-decoration: underline; }
   font-size: 0.95em;
 }
 
+/* Enveloppe tab with chart */
+.calc-grid-full {
+  display: grid;
+  gap: 30px;
+}
+.chart-wrap {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.chart-wrap canvas {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+.env-pea .result-value { color: #2ecc71; }
+.env-av .result-value { color: #3498db; }
+.env-cto .result-value { color: #e67e22; }
+
 @media (max-width: 768px) {
   .calc-grid {
     grid-template-columns: 1fr;

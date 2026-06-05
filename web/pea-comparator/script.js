@@ -429,6 +429,162 @@
     document.getElementById('fees-high').textContent = formatEuro(rHigh);
   });
 
+  // PEA vs AV vs CTO comparator with chart
+  function calculateEnveloppe() {
+    const init = +document.getElementById('env-init').value || 0;
+    const monthly = +document.getElementById('env-monthly').value || 0;
+    const gross = +document.getElementById('env-rate').value / 100 || 0;
+    const years = +document.getElementById('env-years').value || 0;
+    const months = years * 12;
+
+    // Simulate each enveloppe year by year
+    function simulate(taxOnGain, yearlyFee, taxFreeAllowance) {
+      let cap = init;
+      let totalInvested = init;
+      let yearlyData = [];
+      yearlyData.push({ year: 0, value: cap, invested: totalInvested });
+
+      for (let y = 1; y <= years; y++) {
+        // Monthly contributions + growth
+        for (let m = 0; m < 12; m++) {
+          cap = (cap + monthly) * (1 + (gross - yearlyFee) / 12);
+          totalInvested += monthly;
+        }
+        // Apply tax on gains at year end (after 5 years for PEA, 8 for AV)
+        if (y >= 5) {
+          // Only tax the gain portion
+        }
+        yearlyData.push({ year: y, value: cap, invested: totalInvested });
+      }
+
+      // Final tax calculation
+      const gain = cap - totalInvested;
+      let netGain = gain;
+
+      if (taxOnGain > 0) {
+        // PEA: 17.2% PS on gains (no IR) after 5 years
+        // AV: 7.5% on gains after 8 years (with allowance)
+        // CTO: 30% flat on gains
+        let taxableGain = gain;
+        if (taxFreeAllowance > 0) {
+          taxableGain = Math.max(0, gain - taxFreeAllowance);
+        }
+        netGain = gain - taxableGain * taxOnGain;
+      }
+
+      return { net: totalInvested + netGain, gross: cap, invested: totalInvested, data: yearlyData };
+    }
+
+    // PEA: 17.2% PS on gains after 5 years
+    const pea = simulate(0.172, 0.002, 0);
+    // AV: 7.5% + ~0.75% fees/year, allowance 4600€/yr
+    const av = simulate(0.075, 0.0075, 4600);
+    // CTO: 30% PFU flat on gains
+    const cto = simulate(0.30, 0.002, 0);
+
+    document.getElementById('env-pea').textContent = formatEuro(pea.net);
+    document.getElementById('env-av').textContent = formatEuro(av.net);
+    document.getElementById('env-cto').textContent = formatEuro(cto.net);
+
+    // Winner
+    const vals = [
+      { name: 'PEA', val: pea.net, emoji: '💼' },
+      { name: 'AV', val: av.net, emoji: '📜' },
+      { name: 'CTO', val: cto.net, emoji: '📈' },
+    ];
+    vals.sort((a, b) => b.val - a.val);
+    document.getElementById('env-winner').innerHTML = vals[0].emoji + ' ' + vals[0].name + ' (' + formatEuro(vals[0].val) + ')';
+
+    // Render chart
+    drawEnveloppeChart(pea.data, av.data, cto.data, years);
+  }
+
+  function drawEnveloppeChart(peaData, avData, ctoData, years) {
+    const canvas = document.getElementById('env-chart');
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.clientWidth || 700;
+    const h = canvas.clientHeight || 350;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.scale(dpr, dpr);
+
+    const pad = { top: 20, right: 20, bottom: 40, left: 70 };
+    const plotW = w - pad.left - pad.right;
+    const plotH = h - pad.top - pad.bottom;
+
+    // Find max value across all series
+    let maxVal = 0;
+    [peaData, avData, ctoData].forEach(s => s.forEach(d => { if (d.value > maxVal) maxVal = d.value; }));
+
+    function toX(year) { return pad.left + (year / years) * plotW; }
+    function toY(val) { return pad.top + plotH - (val / maxVal) * plotH; }
+
+    // Clear
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#fafafa';
+    ctx.fillRect(pad.left, pad.top, plotW, plotH);
+
+    // Grid lines
+    ctx.strokeStyle = '#e0e0e0';
+    ctx.lineWidth = 1;
+    for (let y = 0; y <= 4; y++) {
+      const val = (maxVal / 4) * y;
+      const yy = toY(val);
+      ctx.beginPath();
+      ctx.moveTo(pad.left, yy);
+      ctx.lineTo(w - pad.right, yy);
+      ctx.stroke();
+      ctx.fillStyle = '#999';
+      ctx.font = '11px system-ui';
+      ctx.textAlign = 'right';
+      ctx.fillText(formatEuro(val), pad.left - 8, yy + 4);
+    }
+
+    // X labels
+    ctx.fillStyle = '#999';
+    ctx.font = '11px system-ui';
+    ctx.textAlign = 'center';
+    for (let y = 0; y <= years; y += Math.max(1, Math.floor(years / 6))) {
+      ctx.fillText(y + 'a', toX(y), h - pad.bottom + 16);
+    }
+
+    // Draw series
+    const series = [
+      { data: peaData, color: '#2ecc71', label: 'PEA' },
+      { data: avData, color: '#3498db', label: 'AV' },
+      { data: ctoData, color: '#e67e22', label: 'CTO' },
+    ];
+
+    series.forEach(s => {
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      s.data.forEach((d, i) => {
+        const x = toX(d.year);
+        const y = toY(d.value);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+
+      // Label at end
+      const last = s.data[s.data.length - 1];
+      ctx.fillStyle = s.color;
+      ctx.font = 'bold 12px system-ui';
+      ctx.textAlign = 'left';
+      ctx.fillText(s.label, toX(last.year) + 6, toY(last.value) + 4);
+    });
+
+    // Title
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 13px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('Évolution du capital selon l\'enveloppe fiscale', w / 2, 14);
+  }
+
+  document.getElementById('env-calc').addEventListener('click', calculateEnveloppe);
+
   // Auto-calc on enter
   document.querySelectorAll('.calc-inputs input').forEach(inp => {
     inp.addEventListener('keydown', e => {
@@ -449,6 +605,10 @@
   // Auto-run calculators on load
   setTimeout(() => {
     document.getElementById('comp-calc').click();
+    // Also trigger enveloppe chart for immediate preview
+    if (document.getElementById('env-chart')) {
+      calculateEnveloppe();
+    }
   }, 100);
 
 })();

@@ -105,6 +105,7 @@
       <button class="calc-tab active" data-tab="compound">Intérêts composés</button>
       <button class="calc-tab" data-tab="fire">Indépendance financière</button>
       <button class="calc-tab" data-tab="fees">Impact des frais</button>
+      <button class="calc-tab" data-tab="enveloppe">PEA vs AV vs CTO</button>
     </div>
 
     <!-- TAB 1: Intérêts Composés -->
@@ -236,6 +237,53 @@
         </div>
       </div>
       <p class="calc-note">💡 <strong>La différence entre 0,05% et 0,50% de frais, c'est des dizaines de milliers d'euros sur 25 ans.</strong></p>
+    </div>
+
+    <!-- TAB 4: PEA vs AV vs CTO -->
+    <div class="calc-panel" id="tab-enveloppe">
+      <h3>⚖️ Comparateur PEA vs Assurance-Vie vs CTO</h3>
+      <p>Comparez l'impact fiscal des 3 enveloppes d'investissement sur votre capital final.</p>
+      <div class="calc-grid-full">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label>Capital initial (€)
+              <input type="number" id="env-init" value="25000" min="0">
+            </label>
+            <label>Versements mensuels (€)
+              <input type="number" id="env-monthly" value="300" min="0">
+            </label>
+            <label>Rendement annuel brut (%)
+              <input type="number" id="env-rate" value="8" min="0" max="30" step="0.1">
+            </label>
+            <label>Durée (années)
+              <input type="number" id="env-years" value="30" min="5" max="60">
+            </label>
+            <button class="calc-btn" id="env-calc">Comparer</button>
+          </div>
+          <div class="calc-results" id="env-results">
+            <div class="result-card env-pea">
+              <span class="result-label">💼 PEA (17,2% PS)</span>
+              <span class="result-value" id="env-pea">—</span>
+            </div>
+            <div class="result-card env-av">
+              <span class="result-label">📜 AV 8 ans+ (7,5% nets)</span>
+              <span class="result-value" id="env-av">—</span>
+            </div>
+            <div class="result-card env-cto highlight">
+              <span class="result-label">📈 CTO (30% PFU)</span>
+              <span class="result-value" id="env-cto">—</span>
+            </div>
+            <div class="result-card milestone">
+              <span class="result-label">🏆 Gagnant fiscal</span>
+              <span class="result-value" id="env-winner">—</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="env-chart" width="700" height="350"></canvas>
+        </div>
+      </div>
+      <p class="calc-note">🔍 <strong>PEA</strong> : 17,2% PS après 5 ans (0% IR) · <strong>AV</strong> : 7,5% après 8 ans (abattement 4600€/an) · <strong>CTO</strong> : 30% PFU flat. Les frais de gestion AV (~0,75%) sont inclus.</p>
     </div>
   </section>
 
