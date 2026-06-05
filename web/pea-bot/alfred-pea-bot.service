@@ -1,0 +1,15 @@
+[Unit]
+Description=Alfred ETF PEA Bot — Recherche d'ETF par ISIN
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/.openclaw/workspace/web/pea-bot
+EnvironmentFile=/home/ubuntu/.secrets/env
+ExecStart=/usr/bin/python3 /home/ubuntu/.openclaw/workspace/web/pea-bot/bot.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
