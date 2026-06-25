@@ -804,23 +804,40 @@
     });
   });
 
-  // 3. Email capture (localStorage mock)
+  // 3. Email capture - inscription newsletter Ghost
+  const ghostMembersUrl = 'https://alfredstudio.mooo.com/blog/members/api/send-magic-link/';
   const emailForm = document.getElementById('emailForm');
   if (emailForm) {
     emailForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = document.getElementById('emailInput').value.trim();
+      const emailInput = document.getElementById('emailInput');
+      const email = emailInput.value.trim();
       if (!email) return;
 
-      // Store locally (in production: POST to API)
-      const subscribers = JSON.parse(localStorage.getItem('pea-subscribers') || '[]');
-      if (!subscribers.includes(email)) {
-        subscribers.push(email);
-        localStorage.setItem('pea-subscribers', JSON.stringify(subscribers));
-      }
+      const btn = emailForm.querySelector('.email-btn');
+      btn.textContent = 'Envoi en cours...';
+      btn.disabled = true;
 
-      document.getElementById('emailForm').style.display = 'none';
-      document.getElementById('emailSuccess').style.display = 'block';
+      fetch(ghostMembersUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, emailType: 'signup' })
+      })
+      .then(r => {
+        if (r.ok) {
+          emailForm.style.display = 'none';
+          document.getElementById('emailSuccess').style.display = 'block';
+        } else {
+          alert('Erreur : vérifie ton email et réessaie.');
+          btn.textContent = 'Je veux la sélection →';
+          btn.disabled = false;
+        }
+      })
+      .catch(() => {
+        alert('Erreur de connexion. Réessaie.');
+        btn.textContent = 'Je veux la sélection →';
+        btn.disabled = false;
+      });
     });
   }
 
