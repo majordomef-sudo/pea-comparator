@@ -9,10 +9,36 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://majordomef-sudo.github.io/pea-comparator/">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Open Graph -->
   <meta property="og:title" content="Comparateur ETF PEA 2026">
   <meta property="og:description" content="Les 429 ETF éligibles au PEA comparés en un coup d'œil.">
   <meta property="og:type" content="website">
+  <!-- JSON-LD FAQ Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Quel est le meilleur ETF PEA en 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "Le meilleur ETF PEA dépend de votre profil. Le plus populaire est le DCAM (Amundi MSCI World, FR001400U5Q4, 0,20% de frais) qui couvre les grandes capitalisations mondiales. Pour les marchés émergents, le PAEEM (FR0013412020, 0,30%) est recommandé."}},
+      {"@type": "Question", "name": "Quels sont les frais moyens d'un ETF PEA ?", "acceptedAnswer": {"@type": "Answer", "text": "Les frais de gestion (TER) des ETF PEA varient de 0,05% à 1,50% selon l'émetteur et la complexité. Les ETF les plus compétitifs (Amundi, iShares, BNP Paribas Easy) facturent entre 0,12% et 0,40%. Évitez les ETF au-delà de 0,50% sauf cas particulier."}},
+      {"@type": "Question", "name": "PEA ou CTO pour investir en ETF ?", "acceptedAnswer": {"@type": "Answer", "text": "Le PEA est plus avantageux fiscalement pour les résidents français : 17,2% de prélèvements sociaux après 5 ans, contre 30% de PFU pour le CTO. Cependant, le PEA a un plafond de 150 000€ et limite les ETF aux éligibles PEA. Pour les gros portefeuilles, une combinaison PEA + CTO est optimale."}},
+      {"@type": "Question", "name": "Combien investir par mois dans un ETF PEA ?", "acceptedAnswer": {"@type": "Answer", "text": "Même 50€ par mois suffisent pour commencer grâce aux ETF fractionnés. L'objectif recommandé est 200€/mois pour un cap de 600 000€ sur 30 ans (à 7%/an). Le DCA (moyenne des coûts) lisse les fluctuations du marché."}},
+      {"@type": "Question", "name": "Les ETF PEA sont-ils sûrs ?", "acceptedAnswer": {"@type": "Answer", "text": "Les ETF PEA sont régulés par l'AMF et investis dans des actifs diversifiés. Le risque principal est le risque de marché (les ETF baissent quand les marchés baissent). Ils sont considérés comme sûrs pour du long terme (10+ ans) grâce à la diversification."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://majordomef-sudo.github.io/pea-comparator/"},
+      {"@type": "ListItem", "position": 2, "name": "Comparateur ETF PEA", "item": "https://majordomef-sudo.github.io/pea-comparator/"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -20,6 +46,7 @@
     <div class="container header-inner">
       <div class="logo">🎩 Alfred IA</div>
       <p class="tagline">Comparateur indépendant <strong>ETF PEA</strong> — Données mises à jour juin 2026</p>
+      <button id="darkToggle" class="dark-toggle" aria-label="Mode sombre">🌙</button>
     </div>
   </header>
 
@@ -30,6 +57,13 @@
       <p class="hero-sub">Les <strong>429 ETF éligibles au PEA</strong> analysés : frais, risque (SRI), performance, émetteur. Trouvez en un clic celui qui vous correspond.</p>
     </div>
   </section>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs container">
+    <a href="/pea-comparator/">🏠 Accueil</a>
+    <span class="breadcrumb-sep">›</span>
+    <span>Comparateur ETF PEA</span>
+  </nav>
 
   <!-- Filtres -->
   <section class="filters container">
@@ -93,6 +127,84 @@
     <div id="pagination" class="pagination"></div>
   </section>
 
+  <!-- Top 10 ETF sélection -->
+  <section class="top10 container">
+    <h2>🏆 Top 10 ETF PEA 2026</h2>
+    <p class="top10-sub">Les ETF les plus performants et populaires du moment, sélectionnés par Alfred.</p>
+    <div class="top10-grid" id="top10Grid">
+      <div class="top10-card" data-isin="FR001400U5Q4">
+        <span class="top10-rank">1</span>
+        <div class="top10-info">
+          <strong>DCAM</strong>
+          <span>Amundi MSCI World · 0,20%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="FR0013412020">
+        <span class="top10-rank">2</span>
+        <div class="top10-info">
+          <strong>PAEEM</strong>
+          <span>Amundi MSCI EM · 0,30%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="IE00B4L5Y983">
+        <span class="top10-rank">3</span>
+        <div class="top10-info">
+          <strong>IWDA</strong>
+          <span>iShares Core MSCI World · 0,20%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="FR0010755611">
+        <span class="top10-rank">4</span>
+        <div class="top10-info">
+          <strong>ESE</strong>
+          <span>BNP Easy S&P 500 · 0,15%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="IE00B3RBWM25">
+        <span class="top10-rank">5</span>
+        <div class="top10-info">
+          <strong>CEMR</strong>
+          <span>MSCI World Quality · 0,35%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="FR0013416716">
+        <span class="top10-rank">6</span>
+        <div class="top10-info">
+          <strong>GOLD</strong>
+          <span>Amundi Or Physique · 0,12%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="LU1829221024">
+        <span class="top10-rank">7</span>
+        <div class="top10-info">
+          <strong>PUST</strong>
+          <span>Nasdaq-100 · 0,30%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="FR0010754209">
+        <span class="top10-rank">8</span>
+        <div class="top10-info">
+          <strong>CSH</strong>
+          <span>Monétaire · 0,10%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="IE00BDBRDM35">
+        <span class="top10-rank">9</span>
+        <div class="top10-info">
+          <strong>EUN4</strong>
+          <span>Obligations Globales · 0,10%</span>
+        </div>
+      </div>
+      <div class="top10-card" data-isin="FR001400MCQ6">
+        <span class="top10-rank">10</span>
+        <div class="top10-info">
+          <strong>2030</strong>
+          <span>Fond daté · 0,25%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ISIN copié toast -->
   <div id="toast" class="toast hidden">ISIN copié !</div>
 
@@ -107,6 +219,7 @@
       <button class="calc-tab" data-tab="fees">Impact des frais</button>
       <button class="calc-tab" data-tab="enveloppe">PEA vs AV vs CTO</button>
       <button class="calc-tab" data-tab="allocation">Mon allocation</button>
+    <button class="calc-tab" data-tab="compare">Comparer 2 ETF</button>
     </div>
 
     <!-- TAB 1: Intérêts Composés -->
@@ -348,6 +461,77 @@
     </div>
   </section>
 
+    <!-- TAB 6: Comparateur 2 ETF -->
+    <div class="calc-panel" id="tab-compare">
+      <h3>⚔️ Comparateur 2 ETF</h3>
+      <p>Sélectionnez deux ETF depuis le tableau (clic sur les lignes) et comparez leurs caractéristiques côte à côte.</p>
+      <div class="compare-wrap">
+        <div class="compare-empty" id="compare-empty">
+          <p>🔍 Sélectionnez <strong>2 ETF</strong> dans le tableau ci-dessus en cliquant sur leurs lignes.</p>
+          <p class="compare-hint">Les lignes sélectionnées apparaissent en vert. Cliquez-en deux pour les comparer.</p>
+        </div>
+        <div class="compare-table-wrap" id="compare-table-wrap" style="display:none">
+          <table class="compare-table" id="compareTable">
+            <thead><tr><th>Caractéristique</th><th id="cmp-name-1">ETF 1</th><th id="cmp-name-2">ETF 2</th></tr></thead>
+            <tbody id="cmp-body"></tbody>
+          </table>
+          <div class="compare-actions">
+            <span id="cmp-savings" class="cmp-savings"></span>
+            <a id="cmp-affiliate" href="https://refnocode.trade.re/pgbqgk3f" target="_blank" class="cta-button" style="display:none">Ouvrir un PEA Trade Republic →</a>
+          </div>
+          <button class="btn-link" id="cmp-clear">Effacer la sélection</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email Capture -->
+  <section class="email-capture container">
+    <div class="email-capture-inner">
+      <h2>📬 Les meilleurs ETF du mois</h2>
+      <p>Recevez chaque mois ma sélection des <strong>3 ETF PEA les plus prometteurs</strong> — frais, performance, analyse.</p>
+      <form id="emailForm" class="email-form">
+        <input type="email" id="emailInput" placeholder="Votre email" required autocomplete="email">
+        <button type="submit" class="email-btn">Je veux la sélection →</button>
+      </form>
+      <p class="email-note">🎩 Alfred IA · Pas de spam, désabonnement 1 clic</p>
+      <div id="emailSuccess" class="email-success" style="display:none">
+        ✅ Merci ! Vous recevrez bientôt la sélection. Vérifiez vos spams.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section container">
+    <h2>❓ Questions fréquentes sur les ETF PEA</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Quel est le meilleur ETF PEA en 2026 ?</button>
+        <div class="faq-answer">Le meilleur ETF PEA dépend de votre profil. Le plus populaire est le <strong>DCAM (Amundi MSCI World, FR001400U5Q4, 0,20%)</strong> qui couvre les grandes capitalisations mondiales. Pour les marchés émergents, le <strong>PAEEM (FR0013412020, 0,30%)</strong> est recommandé.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quels sont les frais moyens d'un ETF PEA ?</button>
+        <div class="faq-answer">Les frais de gestion (TER) des ETF PEA varient de <strong>0,05% à 1,50%</strong>. Les ETF les plus compétitifs (Amundi, iShares, BNP Paribas Easy) facturent entre <strong>0,12% et 0,40%</strong>. Évitez les ETF au-delà de 0,50%.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">PEA ou CTO pour investir en ETF ?</button>
+        <div class="faq-answer">Le <strong>PEA</strong> est plus avantageux : 17,2% de prélèvements sociaux après 5 ans, contre <strong>30% de PFU</strong> pour le CTO. Limite PEA : 150 000€ et ETF éligibles uniquement. Combinaison PEA + CTO recommandée pour les gros portefeuilles.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Combien investir par mois dans un ETF PEA ?</button>
+        <div class="faq-answer">Même <strong>50€/mois</strong> suffisent. L'objectif recommandé est <strong>200€/mois</strong> pour viser 600 000€ sur 30 ans (à 7%/an). Le DCA lisse les fluctuations.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Les ETF PEA sont-ils sûrs ?</button>
+        <div class="faq-answer">Régulés par l'<strong>AMF</strong>, les ETF PEA sont diversifiés et sûrs pour du long terme (10+ ans). Le risque principal est le <strong>risque de marché</strong> : l'ETF suit son indice, il baisse quand le marché baisse.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Comment ouvrir un PEA chez Trade Republic ?</button>
+        <div class="faq-answer">Téléchargez l'<strong>app Trade Republic</strong>, créez un compte (IBAN gratuit), versez un premier montant, puis recherchez votre ETF (ex: DCAM, ISIN: FR001400U5Q4) et passez un ordre. Le <a href="https://refnocode.trade.re/pgbqgk3f" target="_blank">lien d'affiliation</a> permet une ouverture facilitée.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Affiliation -->
   <section class="cta container">
     <h2>Prêt à investir ?</h2>
@@ -367,6 +551,13 @@
       <p class="footer-note">Ce site est un outil informatif indépendant. Les performances passées ne préjugent pas des performances futures. Vérifiez l'éligibilité PEA auprès de votre courtier.</p>
     </div>
   </footer>
+
+  <!-- Sticky CTA for mobile -->
+  <div class="sticky-cta">
+    <a href="https://refnocode.trade.re/pgbqgk3f" class="cta-button" target="_blank" rel="noopener noreferrer">
+      🏦 Ouvrir un PEA Trade Republic
+    </a>
+  </div>
 
   <script src="etf-data.js"></script>
   <script src="script.js"></script>
