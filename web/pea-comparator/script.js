@@ -319,15 +319,30 @@
     return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(v);
   }
 
-  // Tab switching
+  // Tab switching + URL hash support
+  function switchTab(tabName) {
+    const tab = document.querySelector(`.calc-tab[data-tab="${tabName}"]`);
+    if (!tab) return false;
+    document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel = document.getElementById('tab-' + tab.dataset.tab);
+    if (panel) panel.classList.add('active');
+    return true;
+  }
+
   document.querySelectorAll('.calc-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-      document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      switchTab(tab.dataset.tab);
+      history.replaceState(null, '', '#' + tab.dataset.tab);
     });
   });
+
+  // Activate tab from URL hash
+  const hash = window.location.hash.slice(1);
+  if (hash && !switchTab(hash)) {
+    // Default: first tab stays active
+  }
 
   // Compound interest
   document.getElementById('comp-calc').addEventListener('click', () => {
@@ -382,6 +397,7 @@
     const current = +document.getElementById('fire-current').value || 0;
     const save = +document.getElementById('fire-save').value || 0;
     const ret = +document.getElementById('fire-return').value / 100 || 0.07;
+    const age = +document.getElementById('fire-age-input').value || 30;
 
     const target = (income * 12) / rate;
     document.getElementById('fire-target').textContent = formatEuro(target);
@@ -395,9 +411,9 @@
       years++;
     }
 
-    const age = 26 + years;
+    const reachAge = age + years;
     document.getElementById('fire-time').textContent = years < 100 ? years + ' ans' : '> 100 ans';
-    document.getElementById('fire-age').textContent = years < 100 ? age + ' ans' : '—';
+    document.getElementById('fire-age').textContent = years < 100 ? reachAge + ' ans' : '—';
     document.getElementById('fire-estimate').textContent = formatEuro(cap);
   });
 
@@ -752,6 +768,68 @@
 
   document.getElementById('env-calc').addEventListener('click', calculateEnveloppe);
 
+  
+  // Catch-up / Plan de rattrapage Calculator
+  document.getElementById('catchup-calc').addEventListener('click', () => {
+    const income = +document.getElementById('catchup-income').value || 0;
+    const capital = +document.getElementById('catchup-capital').value || 0;
+    const save = +document.getElementById('catchup-save').value || 0;
+    const rate = +document.getElementById('catchup-rate').value / 100 || 0;
+    const age = +document.getElementById('catchup-age').value || 30;
+    const targetAge = +document.getElementById('catchup-target-age').value || 60;
+    const years = targetAge - age;
+    const withdrawalRate = 0.04;
+
+    if (years <= 0) {
+      document.getElementById('catchup-target').textContent = 'Âge cible doit être > âge actuel';
+      return;
+    }
+
+    // Target capital (Trinity rule)
+    const target = (income * 12) / withdrawalRate;
+    document.getElementById('catchup-target').textContent = formatEuro(target);
+
+    // Time to reach at current pace
+    let cap = capital;
+    let yearsReached = 0;
+    const r = rate;
+    for (let y = 1; y <= 100; y++) {
+      cap = cap * (1 + r) + save * 12;
+      if (cap >= target) {
+        yearsReached = y;
+        break;
+      }
+    }
+
+    if (yearsReached > 0) {
+      document.getElementById('catchup-time').textContent = yearsReached + ' ans';
+      document.getElementById('catchup-reach-age').textContent = (age + yearsReached) + ' ans';
+    } else {
+      document.getElementById('catchup-time').textContent = '> 100 ans';
+      document.getElementById('catchup-reach-age').textContent = '> 100 ans';
+    }
+
+    // Monthly savings needed to reach target in time
+    let neededMonthly = 0;
+    if (years > 0 && rate > 0) {
+      const rMonthly = rate / 12;
+      const months = years * 12;
+      const futureCap = capital * Math.pow(1 + rMonthly, months);
+      const remaining = target - futureCap;
+      if (remaining > 0) {
+        neededMonthly = (remaining * rMonthly) / (Math.pow(1 + rMonthly, months) - 1);
+      } else {
+        neededMonthly = 0; // Already have enough
+      }
+    } else if (rate === 0) {
+      neededMonthly = Math.max(0, (target - capital) / (years * 12));
+    }
+
+    document.getElementById('catchup-needed').textContent = formatEuro(neededMonthly);
+
+    const gap = neededMonthly - save;
+    document.getElementById('catchup-gap').textContent = (gap > 0 ? '🔴 +' : '✅ ') + formatEuro(Math.abs(gap)) + (gap > 0 ? ' /mois à ajouter' : ' déjà suffisant');
+  });
   // Auto-calc on enter
   document.querySelectorAll('.calc-inputs input').forEach(inp => {
     inp.addEventListener('keydown', e => {

@@ -319,15 +319,30 @@
     return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(v);
   }
 
-  // Tab switching
+  // Tab switching + URL hash support
+  function switchTab(tabName) {
+    const tab = document.querySelector(`.calc-tab[data-tab="${tabName}"]`);
+    if (!tab) return false;
+    document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel = document.getElementById('tab-' + tab.dataset.tab);
+    if (panel) panel.classList.add('active');
+    return true;
+  }
+
   document.querySelectorAll('.calc-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-      document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      switchTab(tab.dataset.tab);
+      history.replaceState(null, '', '#' + tab.dataset.tab);
     });
   });
+
+  // Activate tab from URL hash
+  const hash = window.location.hash.slice(1);
+  if (hash && !switchTab(hash)) {
+    // Default: first tab stays active
+  }
 
   // Compound interest
   document.getElementById('comp-calc').addEventListener('click', () => {
@@ -382,6 +397,7 @@
     const current = +document.getElementById('fire-current').value || 0;
     const save = +document.getElementById('fire-save').value || 0;
     const ret = +document.getElementById('fire-return').value / 100 || 0.07;
+    const age = +document.getElementById('fire-age-input').value || 30;
 
     const target = (income * 12) / rate;
     document.getElementById('fire-target').textContent = formatEuro(target);
@@ -395,9 +411,9 @@
       years++;
     }
 
-    const age = 26 + years;
+    const reachAge = age + years;
     document.getElementById('fire-time').textContent = years < 100 ? years + ' ans' : '> 100 ans';
-    document.getElementById('fire-age').textContent = years < 100 ? age + ' ans' : '—';
+    document.getElementById('fire-age').textContent = years < 100 ? reachAge + ' ans' : '—';
     document.getElementById('fire-estimate').textContent = formatEuro(cap);
   });
 
@@ -528,7 +544,7 @@
     offensif: {
       name: '⚔️ Offensif (10-30 ans)',
       etfs: [
-        { label: 'MSCI World (42%)', isin: 'FR001400U5Q4', ticker: 'DCAM', pct: 42 },
+        { label: 'MSCI World (42%)', isin: 'FR001400U5Q4   ', ticker: 'DCAM', pct: 42 },
         { label: 'MSCI EM IMI (7%)', isin: 'IE00BKM4GZ66', ticker: 'IS3N', pct: 7 },
         { label: 'MSCI World Small Cap (3%)', isin: 'IE00B4RFH31', ticker: 'IUSN', pct: 3 },
         { label: 'MSCI World Quality (5%)', isin: 'IE00BQN1K786', ticker: 'CEMR', pct: 5 },
@@ -546,7 +562,7 @@
     equilibre: {
       name: '⚖️ Équilibré (5-15 ans)',
       etfs: [
-        { label: 'MSCI World (35%)', isin: 'FR001400U5Q4', ticker: 'DCAM', pct: 35 },
+        { label: 'MSCI World (35%)', isin: 'FR001400U5Q4   ', ticker: 'DCAM', pct: 35 },
         { label: 'MSCI EM IMI (5%)', isin: 'IE00BKM4GZ66', ticker: 'IS3N', pct: 5 },
         { label: 'S&P 500 (10%)', isin: 'FR0010755611', ticker: 'ESE', pct: 10 },
         { label: 'Or physique (10%)', isin: 'FR0013416716', ticker: 'GOLD', pct: 10 },
@@ -562,7 +578,7 @@
     defensif: {
       name: '🛡️ Défensif (0-5 ans)',
       etfs: [
-        { label: 'MSCI World (15%)', isin: 'FR001400U5Q4', ticker: 'DCAM', pct: 15 },
+        { label: 'MSCI World (15%)', isin: 'FR001400U5Q4   ', ticker: 'DCAM', pct: 15 },
         { label: 'Obligations agg. (25%)', isin: 'IE00BDBRDM35', ticker: 'EUN4', pct: 25 },
         { label: 'Monétaire (25%)', isin: 'FR0010754209', ticker: 'CSH', pct: 25 },
         { label: 'Or (10%)', isin: 'FR0013416716', ticker: 'GOLD', pct: 10 },
@@ -752,6 +768,68 @@
 
   document.getElementById('env-calc').addEventListener('click', calculateEnveloppe);
 
+  
+  // Catch-up / Plan de rattrapage Calculator
+  document.getElementById('catchup-calc').addEventListener('click', () => {
+    const income = +document.getElementById('catchup-income').value || 0;
+    const capital = +document.getElementById('catchup-capital').value || 0;
+    const save = +document.getElementById('catchup-save').value || 0;
+    const rate = +document.getElementById('catchup-rate').value / 100 || 0;
+    const age = +document.getElementById('catchup-age').value || 30;
+    const targetAge = +document.getElementById('catchup-target-age').value || 60;
+    const years = targetAge - age;
+    const withdrawalRate = 0.04;
+
+    if (years <= 0) {
+      document.getElementById('catchup-target').textContent = 'Âge cible doit être > âge actuel';
+      return;
+    }
+
+    // Target capital (Trinity rule)
+    const target = (income * 12) / withdrawalRate;
+    document.getElementById('catchup-target').textContent = formatEuro(target);
+
+    // Time to reach at current pace
+    let cap = capital;
+    let yearsReached = 0;
+    const r = rate;
+    for (let y = 1; y <= 100; y++) {
+      cap = cap * (1 + r) + save * 12;
+      if (cap >= target) {
+        yearsReached = y;
+        break;
+      }
+    }
+
+    if (yearsReached > 0) {
+      document.getElementById('catchup-time').textContent = yearsReached + ' ans';
+      document.getElementById('catchup-reach-age').textContent = (age + yearsReached) + ' ans';
+    } else {
+      document.getElementById('catchup-time').textContent = '> 100 ans';
+      document.getElementById('catchup-reach-age').textContent = '> 100 ans';
+    }
+
+    // Monthly savings needed to reach target in time
+    let neededMonthly = 0;
+    if (years > 0 && rate > 0) {
+      const rMonthly = rate / 12;
+      const months = years * 12;
+      const futureCap = capital * Math.pow(1 + rMonthly, months);
+      const remaining = target - futureCap;
+      if (remaining > 0) {
+        neededMonthly = (remaining * rMonthly) / (Math.pow(1 + rMonthly, months) - 1);
+      } else {
+        neededMonthly = 0; // Already have enough
+      }
+    } else if (rate === 0) {
+      neededMonthly = Math.max(0, (target - capital) / (years * 12));
+    }
+
+    document.getElementById('catchup-needed').textContent = formatEuro(neededMonthly);
+
+    const gap = neededMonthly - save;
+    document.getElementById('catchup-gap').textContent = (gap > 0 ? '🔴 +' : '✅ ') + formatEuro(Math.abs(gap)) + (gap > 0 ? ' /mois à ajouter' : ' déjà suffisant');
+  });
   // Auto-calc on enter
   document.querySelectorAll('.calc-inputs input').forEach(inp => {
     inp.addEventListener('keydown', e => {
@@ -777,211 +855,5 @@
       calculateEnveloppe();
     }
   }, 100);
-
-  // === NEW FEATURES ===
-
-  // 1. Dark mode toggle
-  const darkToggle = document.getElementById('darkToggle');
-  if (darkToggle) {
-    // Check saved preference
-    if (localStorage.getItem('pea-dark') === 'true') {
-      document.body.classList.add('dark-mode');
-      darkToggle.textContent = '☀️';
-    }
-    darkToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      darkToggle.textContent = isDark ? '☀️' : '🌙';
-      localStorage.setItem('pea-dark', isDark);
-    });
-  }
-
-  // 2. Top 10 ETF click → copy ISIN
-  document.querySelectorAll('.top10-card').forEach(card => {
-    card.addEventListener('click', function () {
-      const isin = this.dataset.isin;
-      if (isin) copyISIN(isin);
-    });
-  });
-
-  // 3. Email capture - inscription newsletter Ghost
-  const ghostMembersUrl = 'https://alfredstudio.mooo.com/blog/members/api/send-magic-link/';
-  const emailForm = document.getElementById('emailForm');
-  if (emailForm) {
-    emailForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = document.getElementById('emailInput');
-      const email = emailInput.value.trim();
-      if (!email) return;
-
-      const btn = emailForm.querySelector('.email-btn');
-      btn.textContent = 'Envoi en cours...';
-      btn.disabled = true;
-
-      fetch(ghostMembersUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, emailType: 'signup' })
-      })
-      .then(r => {
-        if (r.ok) {
-          emailForm.style.display = 'none';
-          document.getElementById('emailSuccess').style.display = 'block';
-        } else {
-          alert('Erreur : vérifie ton email et réessaie.');
-          btn.textContent = 'Je veux la sélection →';
-          btn.disabled = false;
-        }
-      })
-      .catch(() => {
-        alert('Erreur de connexion. Réessaie.');
-        btn.textContent = 'Je veux la sélection →';
-        btn.disabled = false;
-      });
-    });
-  }
-
-  // 4. FAQ accordion
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', function () {
-      const item = this.parentElement;
-      const wasOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
-      // Toggle current
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
-
-  // 5. Comparateur 2 ETF
-  let selectedETFs = [];
-
-  // Click on ETF table row → toggle selection
-  function setupCompareClicks() {
-    document.querySelectorAll('#etfBody tr').forEach(tr => {
-      tr.removeEventListener('click', handleCompareClick);
-      tr.addEventListener('click', handleCompareClick);
-    });
-  }
-
-  function handleCompareClick() {
-    const isin = this.dataset.isin;
-    if (!isin) return;
-
-    // Find ETF data
-    const etf = ROWS.find(e => e.isin === isin);
-    if (!etf) return;
-
-    const idx = selectedETFs.findIndex(s => s.isin === isin);
-    if (idx >= 0) {
-      // Deselect
-      selectedETFs.splice(idx, 1);
-      this.classList.remove('selected');
-    } else {
-      if (selectedETFs.length >= 2) {
-        // Remove oldest
-        const old = selectedETFs.shift();
-        document.querySelector(`#etfBody tr[data-isin="${old.isin}"]`)?.classList.remove('selected');
-      }
-      selectedETFs.push(etf);
-      this.classList.add('selected');
-    }
-
-    updateComparePanel();
-  }
-
-  function updateComparePanel() {
-    const empty = document.getElementById('compare-empty');
-    const wrap = document.getElementById('compare-table-wrap');
-    const body = document.getElementById('cmp-body');
-
-    if (selectedETFs.length < 2) {
-      empty.style.display = 'block';
-      wrap.style.display = 'none';
-      return;
-    }
-
-    empty.style.display = 'none';
-    wrap.style.display = 'block';
-
-    const a = selectedETFs[0];
-    const b = selectedETFs[1];
-
-    document.getElementById('cmp-name-1').textContent = a.nom + ' (' + a.isin + ')';
-    document.getElementById('cmp-name-2').textContent = b.nom + ' (' + b.isin + ')';
-
-    const rows = [
-      { label: 'ISIN', v1: a.isin, v2: b.isin },
-      { label: 'Nom', v1: a.nom, v2: b.nom },
-      { label: 'Frais (TER)', v1: a.frais ? a.frais + '%' : '—', v2: b.frais ? b.frais + '%' : '—' },
-      { label: 'SRI (Risque)', v1: a.sri || '—', v2: b.sri || '—' },
-      { label: 'Perf 5 ans', v1: a.perf5 ? a.perf5 + '%' : '—', v2: b.perf5 ? b.perf5 + '%' : '—' },
-      { label: 'Émetteur', v1: a.emetteur || '—', v2: b.emetteur || '—' },
-      { label: 'Pays', v1: a.pays || '—', v2: b.pays || '—' },
-    ];
-
-    body.innerHTML = rows.map(r => {
-      // Highlight the lower fees, higher perf, lower risk
-      let class1 = '';
-      let class2 = '';
-      if (r.label === 'Frais (TER)' && a.frais && b.frais) {
-        const f1 = parseNum(a.frais);
-        const f2 = parseNum(b.frais);
-        if (!isNaN(f1) && !isNaN(f2)) {
-          class1 = f1 < f2 ? 'frais-vert' : '';
-          class2 = f2 < f1 ? 'frais-vert' : '';
-        }
-      }
-      if (r.label === 'Perf 5 ans' && a.perf5 && b.perf5) {
-        const p1 = parseNum(a.perf5);
-        const p2 = parseNum(b.perf5);
-        if (!isNaN(p1) && !isNaN(p2)) {
-          class1 = p1 > p2 ? 'perf-positive' : '';
-          class2 = p2 > p1 ? 'perf-positive' : '';
-        }
-      }
-      return `<tr><td>${r.label}</td><td class="${class1}">${r.v1}</td><td class="${class2}">${r.v2}</td></tr>`;
-    }).join('');
-
-    // Show savings comparison
-    const savings = document.getElementById('cmp-savings');
-    if (a.frais && b.frais) {
-      const f1 = parseNum(a.frais);
-      const f2 = parseNum(b.frais);
-      if (!isNaN(f1) && !isNaN(f2) && f1 !== f2) {
-        const diff = Math.abs(f1 - f2).toFixed(2);
-        const lower = f1 < f2 ? a.nom : b.nom;
-        savings.textContent = '💡 ' + lower + ' est ' + diff + '% moins cher en frais';
-      } else {
-        savings.textContent = '';
-      }
-    }
-
-    document.getElementById('cmp-affiliate').style.display = 'inline-block';
-  }
-
-  document.getElementById('cmp-clear')?.addEventListener('click', () => {
-    selectedETFs = [];
-    document.querySelectorAll('#etfBody tr.selected').forEach(r => r.classList.remove('selected'));
-    updateComparePanel();
-  });
-
-  // Override render to attach compare clicks
-  const originalRender = render;
-  render = function () {
-    originalRender();
-    setupCompareClicks();
-    // Re-highlight selected rows
-    selectedETFs.forEach(s => {
-      const tr = document.querySelector(`#etfBody tr[data-isin="${s.isin}"]`);
-      if (tr) tr.classList.add('selected');
-    });
-  };
-
-  // 6. Open first FAQ on load
-  setTimeout(() => {
-    const firstFaq = document.querySelector('.faq-item');
-    if (firstFaq) firstFaq.classList.add('open');
-  }, 500);
 
 })();

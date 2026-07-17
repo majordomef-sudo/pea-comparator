@@ -1,44 +1,270 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparateur ETF PEA 2026 — Les meilleurs ETF éligibles au PEA</title>
-  <meta name="description" content="Comparateur complet des 429 ETF éligibles au PEA. Filtrez par frais, SRI, émetteur. Trouvez le meilleur ETF PEA pour 2026.">
-  <meta name="keywords" content="ETF PEA, comparateur ETF, meilleur ETF PEA 2026, ETF éligible PEA, frais ETF, SRI ETF">
+  <title>Comparateur ETF PEA 2026 — Simulateurs & Outils</title>
+  <meta name="description" content="429 ETF PEA comparés + 9 simulateurs : intérêts composés, FIRE, inflation, impact frais, chemin vers 1M. Trouvez votre ETF idéal et planifiez votre liberté financière.">
+  <meta name="keywords" content="ETF PEA, comparateur ETF, meilleur ETF PEA 2026, simulateur intérêts composés, chemin vers 1 million, FIRE, inflation, ETF éligible PEA">
   <meta name="robots" content="index, follow">
+<<<<<<< HEAD
+  <link rel="canonical" href="https://alfredstudio.mooo.com/">
+  <!-- Plausible Analytics (self-hosted) -->
+  <script defer data-domain="alfredstudio.mooo.com" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Comparateur ETF PEA",
+    "description": "Comparateur de 429 ETF éligibles au PEA",
+    "applicationCategory": "Finance",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+=======
   <link rel="canonical" href="https://majordomef-sudo.github.io/pea-comparator/">
   <!-- Plausible Analytics (self-hosted) -->
   <script defer data-domain="majordomef-sudo.github.io" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
+>>>>>>> aba08c2a14295782437b99dfea8f5e7000a18ba5
   <link rel="stylesheet" href="style.css">
+  <!-- Premium Design System -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+    body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;color:#f1f5f9;background:#0a0e1a;line-height:1.6;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,168,67,0.15)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1200px;margin:0 auto}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem}
+    .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,#d4a843,#b8912e);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;box-shadow:0 2px 8px rgba(212,168,67,0.25);flex-shrink:0}
+    .tagline{font-size:.8rem;color:#94a3b8}
+    .hero{position:relative;background:linear-gradient(135deg,#0a0e1a,#1a1a2e,#0f172a);color:#fff;text-align:center;padding:80px 20px 60px;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 400px at 20% 30%,rgba(255,255,255,0.12) 0%,transparent 70%),radial-gradient(ellipse 500px 300px at 80% 70%,rgba(255,255,255,0.08) 0%,transparent 70%);pointer-events:none}
+    .hero .container{position:relative;z-index:1}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);padding:6px 18px;border-radius:999px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,0.9);margin-bottom:20px}
+    .hero-badge-dot{width:6px;height:6px;background:#d4a843;border-radius:50%;animation:pulse 2s infinite}
+    .hero h1{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px}
+    .hero h1 .highlight{background:linear-gradient(90deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-sub{font-size:clamp(.95rem,1.8vw,1.15rem);max-width:640px;margin:0 auto 32px;opacity:0.85;line-height:1.7}
+    .hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+    .hero-stat{text-align:center}.hero-stat-value{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;margin-bottom:2px}
+    .hero-stat-label{font-size:.75rem;opacity:0.7;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.7}}
+    section{margin-bottom:48px}
+    .section-divider{border:none;height:1px;background:linear-gradient(90deg,transparent,#dfe6ed,transparent);margin:48px 0}
+    .section-title{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:800;text-align:center;margin-bottom:6px;letter-spacing:-.02em}
+    .section-sub{text-align:center;color:#94a3b8;margin-bottom:28px;font-size:.92rem;max-width:560px;margin-left:auto;margin-right:auto}
+    .filters{background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:16px;padding:24px;margin:-20px 0 32px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+    .filters-row{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+    .filter-group{flex:1;min-width:140px}
+    .filter-group label{display:block;font-size:.75rem;font-weight:600;color:#94a3b8;margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
+    .filter-group input,.filter-group select{width:100%;padding:10px 14px;border:1.5px solid rgba(212,168,67,0.15);border-radius:10px;font-size:.88rem;background:#131a2e;font-family:inherit;transition:border-color .2s}
+    .filter-group input:focus,.filter-group select:focus{outline:none;border-color:#d4a843;box-shadow:0 0 0 3px rgba(212,168,67,0.1)}
+    .filters-stats{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:.85rem;color:#94a3b8}
+    .btn-link{background:none;border:none;color:#d4a843;font-weight:600;cursor:pointer;font-family:inherit}
+    .table-wrap{overflow-x:auto;background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+    #etfTable{width:100%;border-collapse:collapse;font-size:.82rem}
+    #etfTable thead{background:#1a2540}
+    #etfTable th{padding:14px 12px;text-align:left;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#94a3b8;border-bottom:2px solid rgba(212,168,67,0.1);cursor:pointer;user-select:none}
+    #etfTable th:hover{color:#d4a843}
+    #etfTable td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.04);transition:background .15s}
+    #etfTable tbody tr:hover td{background:rgba(212,168,67,0.05)}
+    #etfTable tbody tr{cursor:pointer}
+    .badge-pea{display:inline-block;padding:2px 8px;background:rgba(212,168,67,0.15);color:#b8912e;border-radius:6px;font-size:.7rem;font-weight:700}
+    .frais-vert,.perf-positive{color:#d4a843;font-weight:700}
+    .perf-negative{color:#ef4444;font-weight:700}
+    .top-etf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+    .top-etf-card{display:flex;align-items:center;gap:14px;padding:16px;background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:12px;cursor:pointer;transition:all .2s}
+    .top-etf-card:hover{border-color:#d4a843;box-shadow:0 4px 16px rgba(212,168,67,0.1);transform:translateY(-2px)}
+    .top-etf-rank{width:36px;height:36px;background:linear-gradient(135deg,#fbbf24,#f59e0b);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+    .top-etf-info h4{font-size:.88rem;font-weight:700;margin-bottom:2px}
+    .top-etf-info p{font-size:.75rem;color:#94a3b8}
+    .calculators{background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.04)}
+    .non-etf-section{margin-bottom:48px}
+    .non-etf-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;justify-content:center}
+    .non-etf-tab{padding:10px 22px;border:1.5px solid rgba(212,168,67,0.15);border-radius:10px;background:#131a2e;cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit;transition:all .2s;color:#94a3b8}
+    .non-etf-tab:hover{border-color:#d4a843;color:#d4a843}
+    .non-etf-tab.active{background:#d4a843;color:#fff;border-color:#d4a843;box-shadow:0 2px 12px rgba(212,168,67,0.2)}
+    .non-etf-card{background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+    .non-etf-card-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+    .non-etf-icon{font-size:2rem}
+    .non-etf-card-header h3{font-size:1.1rem;font-weight:800;margin-bottom:2px}
+    .non-etf-card-header p{font-size:.8rem;color:#94a3b8}
+    .non-etf-table-wrap{overflow-x:auto}
+    .non-etf-table{width:100%;border-collapse:collapse;font-size:.82rem}
+    .non-etf-table thead{background:#1a2540}
+    .non-etf-table th{padding:12px 10px;text-align:left;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#94a3b8;border-bottom:2px solid rgba(212,168,67,0.1)}
+    .non-etf-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .non-etf-table tbody tr:hover td{background:rgba(212,168,67,0.05)}
+    .non-etf-name{font-weight:600}
+    @media(max-width:768px){.non-etf-tabs{gap:4px}.non-etf-tab{padding:8px 14px;font-size:.75rem}}
+    .calc-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;justify-content:center}
+    .calc-tab{padding:10px 22px;border:1.5px solid rgba(212,168,67,0.15);border-radius:10px;background:#131a2e;cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit;transition:all .2s;color:#94a3b8}
+    .calc-tab:hover{border-color:#d4a843;color:#d4a843}
+    .calc-tab.active{background:#d4a843;color:#fff;border-color:#d4a843;box-shadow:0 2px 12px rgba(212,168,67,0.2)}
+    .calc-panel{display:none}.calc-panel.active{display:block}
+    .calc-panel h3{font-size:1.15rem;font-weight:800;margin-bottom:4px}
+    .calc-panel>p{font-size:.85rem;color:#94a3b8;margin-bottom:20px}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .calc-inputs label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;color:#94a3b8}
+    .calc-inputs input,.calc-inputs select{width:100%;padding:10px 14px;border:1.5px solid rgba(212,168,67,0.15);border-radius:10px;font-size:.9rem;background:#1a2540;font-family:inherit;transition:all .2s}
+    .calc-inputs input:focus,.calc-inputs select:focus{outline:none;border-color:#d4a843;box-shadow:0 0 0 3px rgba(212,168,67,0.1);background:#131a2e}
+    .calc-btn{width:100%;padding:12px 24px;background:linear-gradient(135deg,#d4a843,#b8912e);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.9rem;cursor:pointer;font-family:inherit;transition:all .2s;margin-top:4px}
+    .calc-btn:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(212,168,67,0.3)}
+    .result-card{padding:14px 18px;background:linear-gradient(135deg,rgba(212,168,67,0.05),#ecfdf5);border:1px solid rgba(212,168,67,0.15);border-radius:12px;margin-bottom:8px;text-align:center}
+    .result-card.highlight{background:linear-gradient(135deg,#d4a843,#a07828);color:#fff;border-color:transparent}
+    .result-card.milestone{background:linear-gradient(135deg,#fefce8,#fffbeb);border-color:#fde68a}
+    .result-label{display:block;font-size:.75rem;font-weight:600;margin-bottom:4px;opacity:0.85}
+    .result-value{font-size:clamp(.95rem,1.8vw,1.3rem);font-weight:800}
+    .result-card.highlight .result-value,.result-card.highlight .result-label{color:#fff}
+    .result-card.highlight .result-label{opacity:0.7}
+    .calc-note{font-size:.8rem;color:#94a3b8;margin-top:16px;font-style:italic}
+    .chart-wrap{background:#1a2540;border:1px solid rgba(212,168,67,0.1);border-radius:12px;padding:16px;margin-top:16px}
+    .lead-section{background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:20px;padding:36px 24px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.04)}
+    .lead-section h3{font-size:1.3rem;font-weight:800;margin-bottom:6px}
+    .lead-section p{color:#94a3b8;font-size:.88rem;margin-bottom:20px}
+    .lead-badge{display:inline-block;background:linear-gradient(135deg,#fbbf24,#f59e0b);padding:4px 14px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.5px;margin-bottom:12px;text-transform:uppercase}
+    .lead-form{display:flex;max-width:460px;margin:0 auto;gap:8px}
+    .lead-form input{flex:1;padding:12px 16px;border:1.5px solid rgba(212,168,67,0.15);border-radius:10px;font-size:.9rem;background:#1a2540;font-family:inherit;transition:all .2s}
+    .lead-form input:focus{outline:none;border-color:#d4a843;box-shadow:0 0 0 3px rgba(212,168,67,0.1)}
+    .lead-form button{padding:12px 28px;background:linear-gradient(135deg,#d4a843,#b8912e);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:.88rem;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .2s}
+    .lead-form button:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(212,168,67,0.3)}
+    .lead-success{background:rgba(212,168,67,0.05);border:1px solid rgba(212,168,67,0.15);border-radius:12px;padding:20px;max-width:460px;margin:12px auto 0}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .faq-item{background:#131a2e;border:1px solid rgba(212,168,67,0.1);border-radius:12px;padding:20px;transition:all .2s}
+    .faq-item:hover{border-color:#d4a843}
+    .faq-item h4{font-size:.92rem;font-weight:700;margin-bottom:6px}
+    .faq-item p{font-size:.82rem;color:#94a3b8;line-height:1.6}
+    .cta{text-align:center;padding:56px 32px;background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:20px;margin-bottom:32px;position:relative;overflow:hidden}
+    .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(212,168,67,0.08) 0%,transparent 60%);pointer-events:none}
+    .cta .container{position:relative;z-index:1}
+    .cta h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:900;margin-bottom:8px}
+    .cta-button{display:inline-block;padding:16px 36px;background:linear-gradient(135deg,#d4a843,#b8912e);color:#fff;border-radius:12px;font-weight:700;font-size:1.05rem;text-decoration:none;margin-top:16px;transition:all .2s;box-shadow:0 4px 16px rgba(212,168,67,0.2)}
+    .cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,168,67,0.3)}
+    .footer{background:#0b1423;color:rgba(255,255,255,.85);padding:48px 20px 36px;text-align:center;font-size:.82rem;line-height:1.8}
+    .footer-logo{font-size:1.5rem;font-weight:800;margin-bottom:12px}
+    .footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+    .footer a{color:#f0d080;text-decoration:none}
+    .pagination{display:flex;justify-content:center;gap:4px;padding:16px;flex-wrap:wrap}
+    .page-btn{width:34px;height:34px;border:1px solid rgba(212,168,67,0.1);border-radius:8px;background:#131a2e;cursor:pointer;font-size:.78rem;font-weight:600;font-family:inherit;color:#94a3b8;transition:all .15s}
+    .page-btn.active{background:#d4a843;color:#fff;border-color:#d4a843}
+    .page-btn:disabled{opacity:.35;cursor:default}
+    .theme-toggle{position:fixed;bottom:24px;right:24px;z-index:999;width:48px;height:48px;border-radius:50%;border:1px solid rgba(212,168,67,0.1);background:#131a2e;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center}
+    .theme-toggle:hover{transform:scale(1.1)}
+    .back-to-top{position:fixed;bottom:84px;right:24px;z-index:998;width:40px;height:40px;border-radius:50%;border:1px solid rgba(212,168,67,0.1);background:#131a2e;font-size:1.1rem;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none}
+    .back-to-top.visible{opacity:1;pointer-events:auto}
+    .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#0b1423;color:#fff;padding:12px 28px;border-radius:999px;font-size:.88rem;font-weight:600;z-index:200;box-shadow:0 8px 30px rgba(0,0,0,0.15);transition:all .3s;pointer-events:none}
+    .toast.hidden{opacity:0;transform:translateX(-50%) translateY(16px)}
+    .result-card .result-value{color:inherit}
+    @media(max-width:768px){
+      .filters-row{flex-direction:column}.filter-group{width:100%;min-width:auto}
+      .calc-grid{grid-template-columns:1fr}.calc-tabs{flex-direction:column;align-items:stretch}
+      .calc-tab{text-align:center}.top-etf-grid,.faq-grid{grid-template-columns:1fr}
+      .lead-form{flex-direction:column}.result-card{text-align:left}
+    }
+    @media(max-width:480px){
+      #etfTable thead th:nth-child(6),#etfTable tbody td:nth-child(6),
+      #etfTable thead th:nth-child(7),#etfTable tbody td:nth-child(7){display:none}
+    }
+    @media(prefers-color-scheme:dark){
+      body{background:#0b1120;color:#e8edf5}
+      .header{background:rgba(11,17,32,0.92);border-bottom-color:rgba(255,255,255,0.05)}
+      .filters{background:#111827;border-color:#243152}
+      .filter-group input,.filter-group select{background:#1a2540;border-color:#243152;color:#e8edf5}
+      .filter-group label{color:#8899b4}
+      .table-wrap{background:#111827;border-color:#243152}
+      #etfTable thead{background:#0b1120}#etfTable th{color:#8899b4;border-bottom-color:#243152}
+      #etfTable td{color:#e8edf5;border-bottom-color:#1e293b}#etfTable tbody tr:hover td{background:#1f2b4a}
+      .top-etf-card{background:#1a2540;border-color:#243152}
+      .top-etf-card:hover{border-color:#d4a843;background:#1f2b4a}
+      .top-etf-info h4{color:#e8edf5}.top-etf-info p{color:#8899b4}
+      .calculators{background:#111827;border-color:#243152}
+      .non-etf-tab,.non-etf-card{background:#111827;border-color:#243152}
+      .calc-tab{background:#1a2540;border-color:#243152;color:#8899b4}
+      .calc-tab.active{background:#d4a843;color:#fff}
+      .calc-inputs input,.calc-inputs select{background:#1a2540;border-color:#243152;color:#e8edf5}
+      .calc-panel h3{color:#e8edf5}.calc-panel>p{color:#8899b4}
+      .result-card{background:linear-gradient(135deg,#1f2b4a,#182235);border-color:#243152}
+      .result-card .result-value{color:#e8edf5}.result-card .result-label{color:#8899b4}
+      .result-card.highlight{background:linear-gradient(135deg,#b8912e,#a07828);color:#fff}
+      .result-card.milestone{background:linear-gradient(135deg,#292524,#1c1917);border-color:#713f12}
+      .result-card.milestone .result-value{color:#fbbf24}.result-card.milestone .result-label{color:#f59e0b}
+      .section-title{color:#e8edf5}.section-sub,.calc-note{color:#8899b4}
+      .lead-section{background:#111827;border-color:#243152}.lead-section h3{color:#e8edf5}
+      .lead-section p{color:#8899b4}.lead-form input{background:#1a2540;border-color:#243152;color:#e8edf5}
+      .faq-item{background:#1a2540;border-color:#243152}.faq-item h4{color:#e8edf5}.faq-item p{color:#8899b4}
+      .chart-wrap{background:#1a2540;border-color:#243152}
+      .page-btn{background:#1a2540;border-color:#243152;color:#8899b4}
+      .theme-toggle,.back-to-top{background:#1a2540;border-color:#243152;color:#e8edf5}
+      .cta{background:linear-gradient(135deg,#0b1120,#1a2540)}
+      .section-divider{background:linear-gradient(90deg,transparent,#243152,transparent)}
+      .badge-pea{background:#0f172a;color:#f0d080}
+      .footer{background:#070c16}
+    }
+  </style>
+  <!-- Theme init — no flicker -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <!-- Open Graph -->
   <meta property="og:title" content="Comparateur ETF PEA 2026">
   <meta property="og:description" content="Les 429 ETF éligibles au PEA comparés en un coup d'œil.">
+  <meta property="og:image" content="https://alfredstudio.mooo.com/og-image.jpg">
   <meta property="og:type" content="website">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="container header-inner">
-      <div class="logo">🎩 Alfred IA</div>
-      <p class="tagline">Comparateur indépendant <strong>ETF PEA</strong> — Données mises à jour juin 2026</p>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon" style="width:34px;height:34px;background:linear-gradient(135deg,#d4a843,#b8912e);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4C9 4 7 6 7 8.5c0 1.5.8 2.8 2 3.5v.5c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-.5c1.2-.7 2-2 2-3.5C17 6 15 4 12 4z"/><path d="M9 15v1c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-1"/><path d="M10 19v1c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-1"/></svg></div>
+        <span>Alfred IA</span>
+      </div>
+      <p class="tagline">Comparateur indépendant <strong>ETF PEA</strong> — Juillet 2026</p>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Comparateur ETF PEA 2026</h1>
-      <p class="hero-sub">Les <strong>429 ETF éligibles au PEA</strong> analysés : frais, risque (SRI), performance, émetteur. Trouvez en un clic celui qui vous correspond.</p>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Mis à jour juin 2026 · 429 ETF PEA
+      </div>
+      <h1>Le meilleur <span class="highlight">ETF PEA</span> pour votre portefeuille</h1>
+      <p class="hero-sub">Comparez les <strong>429 ETF éligibles au PEA</strong> en un coup d'œil : frais, risque, performance. Trouvez celui qui matche votre stratégie d'investissement.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value">429</div>
+          <div class="hero-stat-label">ETF PEA</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">&lt; 0,20%</div>
+          <div class="hero-stat-label">Frais moyen</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">🎯</div>
+          <div class="hero-stat-label">Recherche intelligente</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Filtres -->
-  <section class="filters container">
+  <section class="filters container animate-in">
     <div class="filters-row">
       <div class="filter-group search-group">
         <label for="search">Recherche</label>
-        <input type="text" id="search" placeholder="Nom ou ISIN…" autocomplete="off">
+        <input type="text" id="search" placeholder="Nom, ISIN ou émetteur…" autocomplete="off">
       </div>
       <div class="filter-group">
         <label for="feesMin">Frais min (%)</label>
@@ -69,13 +295,13 @@
       </div>
     </div>
     <div class="filters-stats">
-      <span id="resultCount">429 ETF</span> trouvés
+      <span id="resultCount">429</span> ETF trouvés
       <button id="resetFilters" class="btn-link">Réinitialiser les filtres</button>
     </div>
   </section>
 
   <!-- Tableau -->
-  <section class="table-wrap container">
+  <section class="table-wrap container animate-in">
     <table id="etfTable">
       <thead>
         <tr>
@@ -96,19 +322,125 @@
   </section>
 
   <!-- ISIN copié toast -->
-  <div id="toast" class="toast hidden">ISIN copié !</div>
+  <div id="toast" class="toast hidden">✅ ISIN copié !</div>
+
+  <!-- Top 10 ETF -->
+  <section class="container top-etfs animate-in">
+    <hr class="section-divider">
+    <h2 class="section-title">🏆 Top 10 ETF PEA 2026</h2>
+    <p class="section-sub">Les ETF les plus performants et populaires du moment, sélectionnés par Alfred.</p>
+    <div class="top-etf-grid" id="topEtfGrid">
+      <div class="top-etf-card" onclick="document.getElementById('search').value='DCAM';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">1</div>
+        <div class="top-etf-info">
+          <h4>DCAM · Amundi MSCI World</h4>
+          <p>0,20% de frais · Le roi des ETF PEA</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='PAEEM';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">2</div>
+        <div class="top-etf-info">
+          <h4>PAEEM · Amundi MSCI EM</h4>
+          <p>0,30% · Meilleur ETF émergents PEA</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='ESE';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">3</div>
+        <div class="top-etf-info">
+          <h4>ESE · BNP Easy S&P 500</h4>
+          <p>0,15% · Le S&P 500 au meilleur prix</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='CEMR';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">4</div>
+        <div class="top-etf-info">
+          <h4>CEMR · MSCI World Quality</h4>
+          <p>0,35% · Quality factor screening</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='GOLD';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">5</div>
+        <div class="top-etf-info">
+          <h4>GOLD · Amundi Or Physique</h4>
+          <p>0,12% · Hedging souverain</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='PUST';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">6</div>
+        <div class="top-etf-info">
+          <h4>PUST · Nasdaq-100</h4>
+          <p>0,30% · Technos US dans ton PEA</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='IWDA';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">7</div>
+        <div class="top-etf-info">
+          <h4>IWDA · iShares Core MSCI World</h4>
+          <p>0,20% · Exposition monde large</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='CSH';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">8</div>
+        <div class="top-etf-info">
+          <h4>CSH · Monétaire</h4>
+          <p>0,10% · Poche de sécurité</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='EUN4';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">9</div>
+        <div class="top-etf-info">
+          <h4>EUN4 · Obligations Globales</h4>
+          <p>0,10% · Diversification obligataire</p>
+        </div>
+      </div>
+      <div class="top-etf-card" onclick="document.getElementById('search').value='2030';document.getElementById('search').dispatchEvent(new Event('input'))">
+        <div class="top-etf-rank">10</div>
+        <div class="top-etf-info">
+          <h4>2030 · Fond daté</h4>
+          <p>0,25% · Taux connu à l'avance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autres actifs (Fonds, SCPI, PE, Crypto, Or) -->
+  <section class="container non-etf-section animate-in">
+    <hr class="section-divider">
+    <h2 class="section-title">📋 Comparatif Fonds, SCPI, Private Equity & Crypto</h2>
+    <p class="section-sub">Analyse complète de 22 actifs alternatifs : performances, frais, risques et éligibilité fiscale.</p>
+    
+    <div class="non-etf-tabs" id="nonEtfTabs">
+      <button class="non-etf-tab active" data-cat="etf_action">📊 ETF Action</button>
+      <button class="non-etf-tab" data-cat="etn_crypto">₿ Crypto</button>
+      <button class="non-etf-tab" data-cat="etc_or">🥇 Or</button>
+      <button class="non-etf-tab" data-cat="etf_obligataire">🔒 Obligations</button>
+      <button class="non-etf-tab" data-cat="fond_date">📅 Fonds Datés</button>
+      <button class="non-etf-tab" data-cat="private_equity">🏢 Private Equity</button>
+      <button class="non-etf-tab" data-cat="scpi">🏠 SCPI</button>
+    </div>
+
+    <div id="nonEtfContainer" class="non-etf-container">
+      <p style="text-align:center;color:#94a3b8;padding:40px;">Charge en cours...</p>
+    </div>
+  </section>
 
   <!-- Calculateurs -->
-  <section class="calculators container">
-    <h2>🧮 Simulateurs d'investissement</h2>
-    <p class="calc-sub">Calculez votre chemin vers l'indépendance financière avec les données de votre comparateur.</p>
+  <section class="calculators container animate-in">
+    <hr class="section-divider">
+    <h2 class="section-title">🧮 Simulateurs d'investissement</h2>
+    <p class="section-sub">Calculez votre chemin vers l'indépendance financière avec les données de votre comparateur.</p>
 
     <div class="calc-tabs">
-      <button class="calc-tab active" data-tab="compound">Intérêts composés</button>
-      <button class="calc-tab" data-tab="fire">Indépendance financière</button>
-      <button class="calc-tab" data-tab="fees">Impact des frais</button>
-      <button class="calc-tab" data-tab="enveloppe">PEA vs AV vs CTO</button>
-      <button class="calc-tab" data-tab="allocation">Mon allocation</button>
+      <button class="calc-tab active" data-tab="compound">📈 Intérêts composés</button>
+      <button class="calc-tab" data-tab="fire">🔥 Indépendance financière</button>
+      <button class="calc-tab" data-tab="fees">💰 Impact des frais</button>
+      <button class="calc-tab" data-tab="enveloppe">⚖️ PEA vs AV vs CTO</button>
+      <button class="calc-tab" data-tab="allocation">🎯 Mon allocation</button>
+      <button class="calc-tab" data-tab="compare">⚔️ Comparer 2 ETF</button>
+      <button class="calc-tab" data-tab="inflation">📉 Inflation</button>
+      <button class="calc-tab" data-tab="path1m">🛤️ Chemin vers 1M</button>
+      <button class="calc-tab" data-tab="consumption">🏦 Consommation</button>
+      <button class="calc-tab" data-tab="catchup">🚀 Plan de rattrapage</button>
     </div>
 
     <!-- TAB 1: Intérêts Composés -->
@@ -149,7 +481,7 @@
             <span class="result-value" id="comp-half">—</span>
           </div>
           <div class="result-card milestone">
-            <span class="result-label">⚡ Ton argent travaille pour toi dès l'année</span>
+            <span class="result-label">⚡ L'argent travaille pour toi dès l'année</span>
             <span class="result-value" id="comp-work-year">—</span>
           </div>
         </div>
@@ -163,19 +495,22 @@
       <div class="calc-grid">
         <div class="calc-inputs">
           <label>Revenus mensuels souhaités (€)
-            <input type="number" id="fire-income" value="2000" min="0">
+            <input type="number" id="fire-income" value="3000" min="0">
           </label>
           <label>Taux de retrait annuel (%)
             <input type="number" id="fire-rate" value="4" min="1" max="10" step="0.1">
           </label>
           <label>Capital actuel (€)
-            <input type="number" id="fire-current" value="0" min="0">
+            <input type="number" id="fire-current" value="50000" min="0">
           </label>
           <label>Épargne mensuelle (€)
-            <input type="number" id="fire-save" value="200" min="0">
+            <input type="number" id="fire-save" value="500" min="0">
           </label>
           <label>Rendement attendu (%)
             <input type="number" id="fire-return" value="7" min="0" max="30" step="0.1">
+          </label>
+          <label>Âge actuel (ans)
+            <input type="number" id="fire-age-input" value="30" min="18" max="80">
           </label>
           <button class="calc-btn" id="fire-calc">Calculer</button>
         </div>
@@ -235,7 +570,7 @@
               <span class="result-value" id="fees-mid">—</span>
             </div>
             <div class="result-card">
-              <span class="result-label">💀 Frais 1,50% (typique fonds actif)</span>
+              <span class="result-label">💀 Frais 1,50% (fonds actif)</span>
               <span class="result-value" id="fees-high">—</span>
             </div>
           </div>
@@ -329,7 +664,7 @@
             </div>
             <div class="result-card">
               <span class="result-label">💼 Allocation</span>
-              <span class="result-value" id="alloc-pie" style="font-size:1em">—</span>
+              <span class="result-value" id="alloc-pie" style="font-size:0.85em">—</span>
             </div>
             <div class="result-card">
               <span class="result-label">💰 Frais moyens pondérés</span>
@@ -341,36 +676,668 @@
             </div>
             <div class="result-card milestone">
               <span class="result-label">🛒 ETF ET ISIN</span>
-              <span class="result-value" id="alloc-etfs" style="font-size:0.85em">—</span>
+              <span class="result-value" id="alloc-etfs" style="font-size:0.78em">—</span>
             </div>
           </div>
         </div>
       </div>
       <p class="calc-note">💡 <strong>Basé sur le portefeuille 70/25/5</strong> (42% MSCI World, 7% EM, 10% Or, 5% Crypto, 5% SCPI…). Voir l'onglet Intérêts Composés pour la projection.</p>
     </div>
+
+    <!-- TAB 6: Comparer 2 ETF -->
+    <div class="calc-panel" id="tab-compare">
+      <h3>⚔️ Comparateur 2 ETF</h3>
+      <p>Sélectionnez deux ETF dans le tableau ci-dessus (clic sur les lignes), puis comparez-les côte à côte ici.</p>
+      <div class="calc-grid-full">
+        <div class="calc-grid" id="compareGrid" style="grid-template-columns:1fr 1fr;">
+          <div class="calc-inputs" style="text-align:center;">
+            <div style="font-size:0.8rem;color:var(--text-tertiary);margin-bottom:8px;">ETF #1</div>
+            <div id="compare1_isin" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-tertiary);">—</div>
+            <div id="compare1_name" style="font-size:1.1rem;font-weight:700;margin:4px 0;">Sélectionne un ETF</div>
+            <div id="compare1_detail" style="font-size:0.85rem;color:var(--text-secondary);">Clique sur une ligne du tableau</div>
+          </div>
+          <div class="calc-inputs" style="text-align:center;">
+            <div style="font-size:0.8rem;color:var(--text-tertiary);margin-bottom:8px;">ETF #2</div>
+            <div id="compare2_isin" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-tertiary);">—</div>
+            <div id="compare2_name" style="font-size:1.1rem;font-weight:700;margin:4px 0;">Sélectionne un ETF</div>
+            <div id="compare2_detail" style="font-size:0.85rem;color:var(--text-secondary);">Clique sur une ligne du tableau</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="result-card highlight" style="text-align:center;" id="compareWinner">
+            <span class="result-label">🏆 Gagnant</span>
+            <span class="result-value" style="font-size:1.2rem">Sélectionne 2 ETF</span>
+          </div>
+          <div class="result-card" style="text-align:center;">
+            <span class="result-label">Différence de frais</span>
+            <span class="result-value" id="compareFeeDiff" style="font-size:1.2rem">—</span>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 Les lignes sélectionnées apparaissent en vert dans le tableau. Clique sur une ligne pour sélectionner/désélectionner un ETF à comparer.</p>
+    </div>
+
+    <!-- TAB 7: Inflation -->
+    <div class="calc-panel" id="tab-inflation">
+      <h3>📉 Simulateur d'inflation</h3>
+      <p>Découvrez à quel point l'inflation ronge votre épargne. Visualisez votre pouvoir d'achat dans 10, 20, 30 ans.</p>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label>Capital actuel (€)
+            <input type="number" id="inf-capital" value="100000" min="0">
+          </label>
+          <label>Taux d'inflation annuel (%)
+            <input type="number" id="inf-rate" value="2.5" min="0" max="20" step="0.1">
+          </label>
+          <label>Horizon (années)
+            <input type="number" id="inf-years" value="20" min="1" max="60">
+          </label>
+          <button class="calc-btn" id="inf-calc">Calculer</button>
+        </div>
+        <div class="calc-results" id="inf-results">
+          <div class="result-card highlight">
+            <span class="result-label">Pouvoir d'achat futur</span>
+            <span class="result-value" id="inf-future">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Perte de pouvoir d'achat</span>
+            <span class="result-value" id="inf-loss">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Capital nécessaire pour maintenir le niveau</span>
+            <span class="result-value" id="inf-needed">—</span>
+          </div>
+          <div class="result-card milestone">
+            <span class="result-label">⚠️ L'inflation divise par 2 tous les</span>
+            <span class="result-value" id="inf-double">—</span>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 <strong>Règle de 72 :</strong> à 2% d'inflation, votre pouvoir d'achat est divisé par 2 en 36 ans. À 5%, en 14 ans. Votre argent doit GROSSIR plus vite que l'inflation.</p>
+    </div>
+
+    <!-- TAB 8: Chemin vers 1M -->
+    <div class="calc-panel" id="tab-path1m">
+      <h3>🛤️ Le chemin vers 1 000 000 €</h3>
+      <p>Votre argent travaille-t-il plus que vous ? Découvrez quand vous atteignez les paliers symboliques.</p>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label>Capital initial (€)
+            <input type="number" id="p1m-init" value="10000" min="0">
+          </label>
+          <label>Versements mensuels (€)
+            <input type="number" id="p1m-monthly" value="400" min="0">
+          </label>
+          <label>Taux annuel (%)
+            <input type="number" id="p1m-rate" value="10" min="0" max="30" step="0.1">
+          </label>
+          <label>Objectif (€)
+            <input type="number" id="p1m-target" value="1000000" min="0" step="10000">
+          </label>
+          <button class="calc-btn" id="p1m-calc">Lancer la simulation</button>
+        </div>
+        <div class="calc-results" id="p1m-results">
+          <div class="result-card highlight">
+            <span class="result-label">👑 1 000 000 € atteint en</span>
+            <span class="result-value" id="p1m-time">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">🎯 Paller 20 000 €</span>
+            <span class="result-value" id="p1m-p20k">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">🎯 Paller 100 000 €</span>
+            <span class="result-value" id="p1m-p100k">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">🎯 Paller 250 000 €</span>
+            <span class="result-value" id="p1m-p250k">—</span>
+          </div>
+          <div class="result-card milestone">
+            <span class="result-label">⚡ Moitié du chemin</span>
+            <span class="result-value" id="p1m-half">—</span>
+          </div>
+          <div class="result-card milestone">
+            <span class="result-label">💪 Ton argent travaille plus que toi dès l'année</span>
+            <span class="result-value" id="p1m-work">—</span>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 <strong>La moitié du chemin :</strong> les intérêts composés font que les 500 000 premiers euros sont les plus longs. Le reste est une accélération. La magie des intérêts composés.</p>
+    </div>
+
+    <!-- TAB 9: Consommation Portefeuille -->
+    <div class="calc-panel" id="tab-consumption">
+      <h3>🏦 Simulateur de consommation (phase de retrait)</h3>
+      <p>Vous êtes en phase de capitalisation et vous voulez savoir combien vous pourrez retirer plus tard. Ou combien il vous faut pour vivre de vos rentes.</p>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label>Capital visé (€)
+            <input type="number" id="cons-capital" value="500000" min="0">
+          </label>
+          <label>Revenus mensuels souhaités (€)
+            <input type="number" id="cons-income" value="2000" min="0">
+          </label>
+          <label>Taux de retrait annuel (%)
+            <input type="number" id="cons-rate" value="4" min="1" max="10" step="0.1">
+          </label>
+          <label>Durée de retrait (années)
+            <input type="number" id="cons-years" value="30" min="1" max="50">
+          </label>
+          <button class="calc-btn" id="cons-calc">Simuler</button>
+        </div>
+        <div class="calc-results" id="cons-results">
+          <div class="result-card highlight">
+            <span class="result-label">Revenus mensuels estimés</span>
+            <span class="result-value" id="cons-monthly">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Capital nécessaire pour vos revenus</span>
+            <span class="result-value" id="cons-needed">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Capital restant après la période</span>
+            <span class="result-value" id="cons-remaining">—</span>
+          </div>
+          <div class="result-card milestone">
+            <span class="result-label">📊 Taux de retrait recommandé</span>
+            <span class="result-value" id="cons-advice">—</span>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 <strong>Règle de Trinity :</strong> 4% de retrait annuel = votre capital dure 30 ans avec 95% de chances de succès. Pour une retraite plus longue, visez 3-3,5%.</p>
+    </div>
+  </section>
+
+      <!-- TAB 10: Plan de rattrapage -->
+    <div class="calc-panel" id="tab-catchup">
+      <h3>🚀 Plan de rattrapage</h3>
+      <p>Vous avez commencé tard ? Calculez le DCA mensuel nécessaire pour atteindre votre objectif de revenu passif, et combien vous devez augmenter votre épargne.</p>
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label>Revenu passif mensuel souhaité (€)
+            <input type="number" id="catchup-income" value="3000" min="0">
+          </label>
+          <label>Capital actuel (€)
+            <input type="number" id="catchup-capital" value="0" min="0">
+          </label>
+          <label>Épargne mensuelle actuelle (€)
+            <input type="number" id="catchup-save" value="500" min="0">
+          </label>
+          <label>Rendement attendu (%)
+            <input type="number" id="catchup-rate" value="7" min="0" max="30" step="0.1">
+          </label>
+          <label>Âge actuel (ans)
+            <input type="number" id="catchup-age" value="35" min="18" max="80">
+          </label>
+          <label>Âge cible (retraite)
+            <input type="number" id="catchup-target-age" value="60" min="20" max="90">
+          </label>
+          <button class="calc-btn" id="catchup-calc">Calculer mon plan de rattrapage</button>
+        </div>
+        <div class="calc-results" id="catchup-results">
+          <div class="result-card highlight">
+            <span class="result-label">🎯 Capital cible nécessaire</span>
+            <span class="result-value" id="catchup-target">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">⏱️ Temps estimé (rythme actuel)</span>
+            <span class="result-value" id="catchup-time">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">📅 Âge d'atteinte (rythme actuel)</span>
+            <span class="result-value" id="catchup-reach-age">—</span>
+          </div>
+          <div class="result-card">
+            <span class="result-label">💰 Mensualité nécessaire</span>
+            <span class="result-value" id="catchup-needed">—</span>
+          </div>
+          <div class="result-card milestone">
+            <span class="result-label">⚡ Écart à combler</span>
+            <span class="result-value" id="catchup-gap">—</span>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">💡 La formule calcule le capital cible via la règle de Trinity (taux de retrait 4%), puis résout la mensualité DCA nécessaire pour l'atteindre dans le temps imparti.</p>
+    </div>
+
+<!-- Newsletter / Lead Gen -->
+  <section class="container lead-section animate-in">
+    <div class="lead-badge">🎁 GRATUIT</div>
+    <h3>📥 La sélection des 5 meilleurs ETF PEA 2026</h3>
+    <p><strong>Recevez mon fichier Excel</strong> avec les 5 ETF PEA indispensables : frais, ISIN, code, et analyse détaillée. + accès à la newsletter Alfred AI.</p>
+    <form class="lead-form" id="newsletterForm">
+      <input type="text" id="newsletterName" placeholder="Ton prénom" style="width:120px;flex-shrink:0;">
+      <input type="email" id="newsletterEmail" placeholder="ton@email.com" required>
+      <button type="submit" id="newsletterBtn">Je télécharge →</button>
+    </form>
+    <div id="newsletterSuccess" style="display:none;" class="lead-success">
+      <p>✅ Merci ! Le fichier est prêt : <a href="#" id="downloadLink" class="lead-download-btn" onclick="downloadBonus()">📥 Télécharger la sélection ETF PEA 2026</a></p>
+    </div>
+    <p id="newsletterMsg" style="font-size:0.85rem;color:var(--text-tertiary);margin-top:8px;display:none;"></p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container faq-section animate-in">
+    <hr class="section-divider">
+    <h2 class="section-title">❓ Questions fréquentes</h2>
+    <p class="section-sub">Tout ce qu'il faut savoir sur les ETF PEA.</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Qu'est-ce qu'un ETF PEA ?</h4>
+        <p>Un ETF (Exchange Traded Fund) éligible au PEA est un fonds indiciel qui respecte la réglementation européenne — max 60% d'exposition hors UE. Il permet d'investir en bourse dans le cadre du Plan d'Épargne en Actions.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quel est le meilleur ETF PEA ?</h4>
+        <p>Le DCAM (Amundi MSCI World, 0,20%) est le choix n°1 : diversification mondiale, frais réduits, performance solide. Pour les marchés émergents, le PAEEM (Amundi EM, 0,30%) est le leader.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quels frais pour un ETF PEA ?</h4>
+        <p>Les frais de gestion (TER) vont de 0,05% à 1,50%. Les meilleurs ETF PEA coûtent entre 0,10% et 0,40%. À frais égaux, préférez les gros ETF (plus liquides).</p>
+      </div>
+      <div class="faq-item">
+        <h4>PEA ou CTO pour ETF ?</h4>
+        <p>Le PEA est plus avantageux fiscalement : 17,2% de prélèvements sociaux (vs 30% PFU pour le CTO) après 5 ans. Limité à 150k€ de versements. Au-delà, le CTO devient nécessaire.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Combien d'ETF dans un PEA ?</h4>
+        <p>3 à 5 ETF suffisent pour une diversification optimale. Exemple : MSCI World (core) + EM (émergents) + Or (hedge) + Obligations (sécurité). Pas besoin de 15 lignes.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quel courtier pour son PEA ?</h4>
+        <p>Trade Republic est le meilleur rapport qualité/prix : 0€ de courtage, frais de garde 0%, interface simple. Boursorama et Fortuneo sont des alternatives solides.</p>
+      </div>
+    </div>
   </section>
 
   <!-- CTA Affiliation -->
-  <section class="cta container">
+  <section class="container cta animate-in">
     <h2>Prêt à investir ?</h2>
     <p>Ouvrez un <strong>PEA chez Trade Republic</strong>, le courtier le plus simple et le moins cher pour investir en ETF.</p>
-    <a href="https://ref.trade.re/wt7d" class="cta-button" target="_blank" rel="noopener noreferrer">
+    <a href="https://refnocode.trade.re/pgbqgk3f" class="cta-button" target="_blank" rel="noopener noreferrer">
       Ouvrir un PEA Trade Republic →
     </a>
-    <p class="cta-disclaimer">🎩 Alfred IA · Liens d'affiliation · Sans frais supplémentaires pour vous</p>
+    <p class="cta-disclaimer"><span style="display:inline-block;width:22px;height:22px;background:linear-gradient(135deg,#d4a843,#b8912e);border-radius:6px;vertical-align:middle;margin-right:6px;font-size:0.65rem;color:#fff;text-align:center;line-height:22px;font-weight:800">A</span> Alfred IA · Liens d'affiliation · Sans frais supplémentaires</p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>🎩 Alfred IA · <strong>Comparateur ETF PEA 2026</strong></p>
-      <p>📖 <a href="blog/pea-vs-cto.html">PEA vs CTO : comparatif fiscal 2026</a> · <a href="blog/meilleurs-etf-pea.html">Meilleurs ETF PEA 2026</a> · <a href="blog/investir-200-euros-mois.html">Investir 200€/mois</a></p>
+    <div class="footer-inner">
+      <div class="footer-logo"><span style="display:inline-block;width:22px;height:22px;background:linear-gradient(135deg,#d4a843,#b8912e);border-radius:6px;vertical-align:middle;margin-right:6px;font-size:0.65rem;color:#fff;text-align:center;line-height:22px;font-weight:800">A</span> Alfred IA</div>
+      <p><strong>Comparateur ETF PEA 2026</strong> — L'outil indépendant pour choisir ses ETF</p>
+      <div class="footer-links">
+        <a href="blog/pea-vs-cto.html">PEA vs CTO</a>
+        <a href="blog/meilleurs-etf-pea.html">Meilleurs ETF PEA</a>
+        <a href="https://alfredstudio.mooo.com/blog/" target="_blank" rel="noopener">Blog Alfred IA →</a>
+        <a href="blog/investir-200-euros-mois.html">200€/mois</a>
+        <a href="blog/pea-trade-republic-avis.html">Trade Republic</a>
+        <a href="https://alfredstudio.mooo.com/blog/etf-pea-vs-assurance-vie-le-vrai-match-2026-calculateur/" target="_blank" rel="noopener">PEA vs AV 2026</a>
+        <a href="https://alfredstudio.mooo.com/blog/investir-300eu-mois-en-etf-le-chemin-vers-1-million-deuros/" target="_blank" rel="noopener">Devenir millionnaire</a>
+        <a href="blog/investir-100-euros-par-mois-etf-pea.html">100€/mois</a>
+        <a href="blog/quel-etf-pea-choisir-2026.html">Choisir son ETF</a>
+      </div>
       <p>Données issues des DIC PRIIPs · Mis à jour juin 2026</p>
       <p class="footer-note">Ce site est un outil informatif indépendant. Les performances passées ne préjugent pas des performances futures. Vérifiez l'éligibilité PEA auprès de votre courtier.</p>
     </div>
   </footer>
 
-  <script src="etf-data.js"></script>
-  <script src="script.js"></script>
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Mode sombre/clair">🌙</button>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <script src="etf-data.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="non-etf-assets.min.js"></script>
+  <script src="script.min.js"></script>
+
+  <!-- Post-init: dark mode toggle, scroll effects, newsletter, compare -->
+  <script>
+    (function() {
+      // Theme toggle
+      var btn = document.getElementById('themeToggle');
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme');
+      btn.textContent = current === 'dark' ? '☀️' : '🌙';
+
+      btn.addEventListener('click', function() {
+        var t = html.getAttribute('data-theme');
+        var next = t === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        btn.textContent = next === 'dark' ? '☀️' : '🌙';
+      });
+
+      // Back to top
+      var topBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 600) {
+          topBtn.classList.add('visible');
+        } else {
+          topBtn.classList.remove('visible');
+        }
+      });
+      topBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Create downloadable bonus content inline
+      window.downloadBonus = function() {
+        var content = '[A] Alfred IA — Top 5 ETF PEA 2026\r\n';
+        content += '═'.repeat(40) + '\r\n\r\n';
+        content += '1. DCAM — Amundi MSCI World (0,20%)\r\n';
+        content += '   ISIN: FR001400U5Q4 | Le roi des ETF PEA\r\n\r\n';
+        content += '2. ESE — BNP Paribas Easy S&P 500 (0,15%)\r\n';
+        content += '   ISIN: FR0011550185 | S&P 500 au meilleur prix\r\n\r\n';
+        content += '3. PAEEM — Amundi MSCI EM (0,30%)\r\n';
+        content += '   ISIN: FR0013412020 | Meilleur ETF émergents PEA\r\n\r\n';
+        content += '4. GOLD — Amundi Or Physique (0,12%)\r\n';
+        content += '   ISIN: FR0013416716 | Hedging et sécurité\r\n\r\n';
+        content += '5. PUST — Nasdaq-100 (0,30%)\r\n';
+        content += '   ISIN: FR0011871110 | Technos US\r\n\r\n';
+        content += '═'.repeat(40) + '\r\n';
+        content += 'Recevez la sélection mensuelle complète sur alfredstudio.mooo.com\r\n';
+        content += '📊 Comparateur 429 ETF : alfredstudio.mooo.com/pea-comparator\r\n';
+
+        var blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'Alfred_IA_Top_5_ETF_PEA_2026.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      };
+
+      // Newsletter form — save to local + Google Forms fallback
+      var nlForm = document.getElementById('newsletterForm');
+      if (nlForm) {
+        nlForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var name = document.getElementById('newsletterName').value.trim();
+          var email = document.getElementById('newsletterEmail').value.trim();
+          var btn = document.getElementById('newsletterBtn');
+          var msg = document.getElementById('newsletterMsg');
+          var success = document.getElementById('newsletterSuccess');
+          if (!email || !email.includes('@')) return;
+          btn.textContent = '⏳...';
+          btn.disabled = true;
+
+          // Save to local storage (lead capture offline-friendly)
+          try {
+            var leads = JSON.parse(localStorage.getItem('alfredLeads') || '[]');
+            leads.push({ name: name, email: email, date: new Date().toISOString() });
+            localStorage.setItem('alfredLeads', JSON.stringify(leads));
+          } catch(e) {}
+
+          // Try to save on server via Ghost
+          fetch('https://alfredstudio.mooo.com/blog/ghost/api/admin/members/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Ghost eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTk3Njg0MDAsImV4cCI6NDkyMjc5NzYwMCwiYXVkIjoiNmEzMWIzNTQwNTU4MzUwMDAxNzNjOTlhIn0.7kY8L6dX3QeS6I3HmO3tqJhG1VzK4W1d2Fp4sI9t2C0'
+            },
+            body: JSON.stringify({
+              members: [{ email: email, name: name || email.split('@')[0] }]
+            })
+          }).catch(function() { /* Ghost member creation may fail, that's ok */ });
+
+          // Show download
+          success.style.display = 'block';
+          msg.style.display = 'none';
+          document.getElementById('newsletterEmail').value = '';
+          document.getElementById('newsletterName').value = '';
+          btn.textContent = 'Je télécharge →';
+          btn.disabled = false;
+
+          // Auto-trigger download after 1s
+          setTimeout(window.downloadBonus, 1000);
+        });
+      }
+
+      // Comparator 2 ETF — monitor table selections
+      var compareSelection = [];
+      window.updateComparePanel = function(isin1, isin2) {
+        var etfs = window.PEA_ETFS || [];
+        function fillSlot(slot, isin) {
+          var etf = etfs.find(function(e) { return e.isin === isin; });
+          if (!etf) {
+            document.getElementById('compare' + slot + '_isin').textContent = '—';
+            document.getElementById('compare' + slot + '_name').textContent = 'Sélectionne un ETF';
+            document.getElementById('compare' + slot + '_detail').textContent = 'Clique sur une ligne du tableau';
+            return;
+          }
+          var fee = etf.frais ? parseFloat(String(etf.frais).replace(',','.')) : null;
+          document.getElementById('compare' + slot + '_isin').textContent = etf.isin;
+          document.getElementById('compare' + slot + '_name').textContent = etf.nom;
+          var lines = [];
+          lines.push('Frais: ' + (fee !== null ? fee.toFixed(2) + '%' : 'N/A'));
+          lines.push('SRI: ' + (etf.sri || 'N/A'));
+          if (etf.perf5) lines.push('Perf 5 ans: ' + parseFloat(String(etf.perf5).replace(',','.')).toFixed(1) + '%');
+          if (etf.emetteur) lines.push(etf.emetteur);
+          document.getElementById('compare' + slot + '_detail').textContent = lines.join(' · ');
+        }
+        fillSlot(1, isin1);
+        fillSlot(2, isin2);
+
+        // Winner
+        if (isin1 && isin2) {
+          var e1 = etfs.find(function(e) { return e.isin === isin1; });
+          var e2 = etfs.find(function(e) { return e.isin === isin2; });
+          if (e1 && e2) {
+            var f1 = e1.frais ? parseFloat(String(e1.frais).replace(',','.')) : 999;
+            var f2 = e2.frais ? parseFloat(String(e2.frais).replace(',','.')) : 999;
+            var winner = f1 <= f2 ? e1 : e2;
+            var diff = Math.abs(f1 - f2);
+            document.getElementById('compareWinner').querySelector('.result-value').textContent = '🏆 ' + winner.nom + ' (' + winner.isin.slice(0,8) + '...)';
+            document.getElementById('compareFeeDiff').textContent = diff.toFixed(2) + '%';
+          }
+        }
+      };
+
+      // Hook table row click to update comparator
+      var etfBody = document.getElementById('etfBody');
+      if (etfBody) {
+        var observer = new MutationObserver(function() {
+          etfBody.querySelectorAll('tr').forEach(function(tr) {
+            tr.addEventListener('click', function() {
+              var isin = this.dataset.isin;
+              if (!isin) return;
+              if (this.classList.contains('selected')) {
+                // Already selected — deselect or add to compare
+                if (compareSelection.includes(isin)) {
+                  compareSelection = compareSelection.filter(function(s) { return s !== isin; });
+                }
+              } else {
+                compareSelection.push(isin);
+                if (compareSelection.length > 2) compareSelection.shift();
+              }
+              // Update panel
+              if (typeof window.updateComparePanel === 'function') {
+                window.updateComparePanel(compareSelection[0] || null, compareSelection[1] || null);
+              }
+            });
+          });
+        });
+        observer.observe(etfBody, { childList: true, subtree: true });
+      }
+
+      // === NEW CALCULATORS ===
+
+      // Inflation Calculator
+      document.getElementById('inf-calc').addEventListener('click', function() {
+        var capital = +document.getElementById('inf-capital').value || 0;
+        var rate = +document.getElementById('inf-rate').value / 100 || 0;
+        var years = +document.getElementById('inf-years').value || 0;
+
+        var future = capital / Math.pow(1 + rate, years);
+        var loss = capital - future;
+        var needed = capital * Math.pow(1 + rate, years);
+        var rule72 = rate > 0 ? (72 / (rate * 100)).toFixed(1) : '—';
+
+        document.getElementById('inf-future').textContent = formatEuro(future);
+        document.getElementById('inf-loss').textContent = formatEuro(loss) + ' (' + (-(1 - future/capital)*100).toFixed(1) + '%)';
+        document.getElementById('inf-needed').textContent = formatEuro(needed);
+        document.getElementById('inf-double').textContent = rule72 !== '—' ? rule72 + ' ans' : '—';
+      });
+
+      // Path to 1M Calculator
+      document.getElementById('p1m-calc').addEventListener('click', function() {
+        var init = +document.getElementById('p1m-init').value || 0;
+        var monthly = +document.getElementById('p1m-monthly').value || 0;
+        var rate = +document.getElementById('p1m-rate').value / 100 || 0;
+        var target = +document.getElementById('p1m-target').value || 1000000;
+        var r = rate / 12;
+
+        var cap = init;
+        var totalInvested = init;
+        var totalContrib = init + monthly;
+        var month = 0;
+
+        var milestones = { 20000: null, 100000: null, 250000: null, target: null };
+        var halfFound = false;
+        var workFound = false;
+        var workYear = 0;
+
+        while (month < 1200) { // 100 years max
+          cap = (cap + monthly) * (1 + r);
+          totalInvested += monthly;
+          month++;
+
+          for (var m in milestones) {
+            if (milestones[m] === null && cap >= parseInt(m)) {
+              milestones[m] = { months: month, years: (month/12).toFixed(1) };
+            }
+          }
+
+          if (!halfFound && cap >= target / 2) {
+            halfFound = true;
+            milestones['half'] = { months: month, years: (month/12).toFixed(1), value: cap };
+          }
+
+          if (!workFound && month % 12 === 0) {
+            var yearlyReturn = cap * rate;
+            var yearlyContrib = monthly * 12;
+            if (yearlyReturn >= yearlyContrib) {
+              workFound = true;
+              workYear = month / 12;
+            }
+          }
+
+          if (milestones[target] && halfFound && workFound) break;
+        }
+
+        document.getElementById('p1m-time').textContent = milestones[target] ? milestones[target].years + ' ans (' + milestones[target].months + ' mois)' : '> 100 ans';
+        document.getElementById('p1m-p20k').textContent = milestones[20000] ? milestones[20000].years + ' ans' : 'Atteint dès le départ';
+        document.getElementById('p1m-p100k').textContent = milestones[100000] ? milestones[100000].years + ' ans' : 'Atteint dès le départ';
+        document.getElementById('p1m-p250k').textContent = milestones[250000] ? milestones[250000].years + ' ans' : 'Atteint dès le départ';
+        document.getElementById('p1m-half').textContent = milestones['half'] ? formatEuro(milestones['half'].value) + ' en ' + milestones['half'].years + ' ans' : 'Atteint après la période';
+        document.getElementById('p1m-work').textContent = workFound ? 'Année ' + workYear : 'Pas encore atteint';
+      });
+
+      // Consumption Calculator
+      document.getElementById('cons-calc').addEventListener('click', function() {
+        var capital = +document.getElementById('cons-capital').value || 0;
+        var income = +document.getElementById('cons-income').value || 0;
+        var rate = +document.getElementById('cons-rate').value / 100 || 0.04;
+        var years = +document.getElementById('cons-years').value || 30;
+
+        // Monthly income based on capital
+        var monthlyIncome = capital * rate / 12;
+        document.getElementById('cons-monthly').textContent = formatEuro(monthlyIncome);
+
+        // Capital needed for desired income
+        var needed = (income * 12) / rate;
+        document.getElementById('cons-needed').textContent = formatEuro(needed);
+
+        // Simulate withdrawal over period (with 4% growth)
+        var remaining = capital;
+        var withdrawMonthly = income;
+        var growth = 0.04; // conservative growth during withdrawal
+        var r = growth / 12;
+        for (var m = 0; m < years * 12; m++) {
+          remaining = (remaining - withdrawMonthly) * (1 + r);
+          if (remaining < 0) { remaining = 0; break; }
+        }
+        document.getElementById('cons-remaining').textContent = formatEuro(remaining);
+
+        // Recommended withdrawal rate based on years
+        var recRate = years <= 20 ? '3.5%' : years <= 30 ? '4%' : '3%';
+        document.getElementById('cons-advice').textContent = recRate + ' pour ' + years + ' ans';
+      });
+
+      // === Rendu des actifs non-ETF (Fonds, SCPI, PE...) ===
+      function renderNonEtfAssets() {
+        var assets = window.NON_ETF_ASSETS;
+        if (!assets) return;
+        var container = document.getElementById('nonEtfContainer');
+        if (!container) return;
+        var tabs = document.querySelectorAll('#nonEtfTabs .non-etf-tab');
+
+        function renderTable(cat) {
+          var data = assets[cat];
+          if (!data) return;
+          var html = '<div class="non-etf-card">';
+          html += '<div class="non-etf-card-header">';
+          html += '<span class="non-etf-icon">' + (data.icone || '') + '</span>';
+          html += '<div><h3>' + data.titre + '</h3><p>' + (data.description || '') + '</p></div>';
+          html += '</div>';
+          html += '<div class="non-etf-table-wrap">';
+          html += '<table class="non-etf-table"><thead><tr>';
+          data.colonnes.forEach(function(c) { html += '<th>' + c + '</th>'; });
+          html += '</tr></thead><tbody>';
+          data.lignes.forEach(function(row) {
+            html += '<tr>';
+            row.forEach(function(cell, i) {
+              var cls = '';
+              if (i === 0) cls = 'non-etf-name';
+              html += '<td class="' + cls + '">' + cell + '</td>';
+            });
+            html += '</tr>';
+          });
+          html += '</tbody></table></div></div>';
+          container.innerHTML = html;
+        }
+
+        // Tab clicks
+        tabs.forEach(function(tab) {
+          tab.addEventListener('click', function() {
+            tabs.forEach(function(t) { t.classList.remove('active'); });
+            tab.classList.add('active');
+            renderTable(tab.dataset.cat);
+          });
+        });
+
+        // Render first tab
+        var firstTab = document.querySelector('#nonEtfTabs .non-etf-tab.active');
+        if (firstTab) renderTable(firstTab.dataset.cat);
+      }
+
+      // Init on load
+      if (document.readyState === 'complete') {
+        renderNonEtfAssets();
+      } else {
+        window.addEventListener('load', renderNonEtfAssets);
+      }
+
+      // Tab switch — charts
+      var tabs = document.querySelectorAll('.calc-tab');
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var panelId = 'tab-' + tab.dataset.tab;
+          if (panelId === 'tab-fees') {
+            var feeBtn = document.getElementById('fees-calc');
+            if (feeBtn) setTimeout(feeBtn.click, 100);
+          }
+          if (panelId === 'tab-enveloppe') {
+            var envBtn = document.getElementById('env-calc');
+            if (envBtn) setTimeout(envBtn.click, 100);
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

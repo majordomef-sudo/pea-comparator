@@ -2,26 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://majordomef-sudo.github.io/pea-comparator/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://majordomef-sudo.github.io/pea-comparator/blog/pea-vs-cto.html</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://majordomef-sudo.github.io/pea-comparator/blog/quel-etf-pea-choisir-2026.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://majordomef-sudo.github.io/pea-comparator/blog/investir-100-euros-par-mois-etf-pea.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://majordomef-sudo.github.io/pea-comparator/blog/pea-trade-republic-avis.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alfredstudio.mooo.com/blog/etf-pea-vs-assurance-vie-le-vrai-match-2026-calculateur/</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://majordomef-sudo.github.io/pea-comparator/blog/meilleurs-etf-pea.html</loc>
-    <lastmod>2026-06-06</lastmod>
+    <loc>https://alfredstudio.mooo.com/blog/investir-300eu-mois-en-etf-le-chemin-vers-1-million-deuros/</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://majordomef-sudo.github.io/pea-comparator/blog/investir-200-euros-mois.html</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://alfredstudio.mooo.com/blog/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
