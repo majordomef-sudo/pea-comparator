@@ -129,8 +129,8 @@ a{color:var(--accent);text-decoration:none}
 .tool-form input{width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-family:var(--font-mono);font-variant-numeric:tabular-nums}
 .tool-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .tool-result-full{grid-column:1/-1}
-.tool-card-header[aria-expanded='true']+.tool-card-body{display:block}
-.tool-card-header[aria-expanded='true'] .tool-card-chevron{transform:rotate(180deg)}
+.tool-card.open .tool-card-body{display:block}
+.tool-card.open .tool-card-chevron{transform:rotate(180deg)}
 .tool-note.gain{color:var(--gain)}
 .tool-note.loss{color:var(--loss)}
 .watchlist-panel{background:var(--surface);border:1px solid var(--accent);border-radius:var(--radius-md);padding:16px 20px;margin-bottom:20px;display:none}

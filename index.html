@@ -31,7 +31,7 @@
 <script defer data-domain="alfredstudio.mooo.com" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Alfred Invest","description":"Plus de 400 ETF référencés, simulateurs financiers, guide FIRE","applicationCategory":"Finance","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 
-<link rel="stylesheet" href="/style.css?v=1789744101">
+<link rel="stylesheet" href="/style.css?v=1789744102">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
   </head>
 <body>
@@ -982,13 +982,13 @@ f.addEventListener('submit',function(e){
   if(hp&&hp.value){msg.textContent=' Merci !';f.reset();return;}
   var em=document.getElementById('newsletterEmail').value.trim();
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){msg.textContent=' Email invalide';msg.style.color='#ef4444';return;}
-  if(!document.getElementById('newsletterConsent').checked){msg.textContent=' Merci d'accepter la politique de confidentialité';msg.style.color='#ef4444';return;}
+  if(!document.getElementById('newsletterConsent').checked){msg.textContent=' Merci d’accepter la politique de confidentialité';msg.style.color='#ef4444';return;}
   btn.disabled=true;btn.textContent='Envoi…';msg.textContent='';
   fetch('/api/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,source:'site-footer'})})
     .then(function(r){return r.json();})
     .then(function(d){if(d&&d.success){msg.textContent=' Bienvenue à bord ! Vérifie ta boîte mail.';msg.style.color='#10b981';f.reset();}else{msg.textContent=' '+(d.error||'Erreur');msg.style.color='#ef4444';}})
     .catch(function(){msg.textContent=' Erreur réseau, réessaie.';msg.style.color='#ef4444';})
-    .finally(function(){btn.disabled=false;btn.textContent='S'abonner →';});
+    .finally(function(){btn.disabled=false;btn.textContent='S’abonner →';});
 });})();
 </script>
 
