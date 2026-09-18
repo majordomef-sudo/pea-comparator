@@ -1,0 +1,81 @@
+// Données des actifs non-ETF (Fonds, SCPI, Private Equity, etc.)
+window.NON_ETF_ASSETS = {
+  "etf_action": {
+    "titre": "ETF Action",
+    "icone": "📊",
+    "description": "ETF actions large/ciblé (World, S&P500, Sectoriel)",
+    "colonnes": ["Nom", "ISIN", "Ticker", "Frais", "Encours", "Perf 3a", "Vol 3a", "PEA"],
+    "lignes": [
+      ["SPDR MSCI World UCITS ETF", "IE00BFY0GT14", "SPPW", "0,12%", "14B€", "14,63%", "10,50%", "❌"],
+      ["SPDR ACWI IMI UCITS ETF", "IE00B3YLTY66", "IMIE", "0,17%", "4,3B€", "13,92%", "10,22%", "❌"],
+      ["Amundi Core S&P 500 Swap", "LU1135865084", "SP5C", "0,05%", "12,5B€", "15,70%", "12,07%", "❌"],
+      ["Amundi Core EURO STOXX 50", "LU1681047236", "C50", "0,09%", "3,4B€", "12,14%", "10,57%", "✅"],
+      ["iShares MSCI EM IMI", "IE00BKM4GZ66", "IS3N", "0,18%", "30,4B€", "13,47%", "11,33%", "❌"],
+      ["Amundi PEA Nasdaq-100", "FR0011871110", "PUST", "0,30%", "791M€", "19,28%", "15,89%", "✅"],
+      ["Amundi Euro Stoxx Banks", "LU1829219390", "BNKE", "0,30%", "4,4B€", "40,00%", "19,80%", "✅"],
+      ["iShares Global Aerosp. & Defence", "IE000U9ODG19", "DFND", "0,35%", "1,4B€", "26,24%*", "17,60%*", "❌"],
+      ["iShares MSCI Europe Momentum", "IE00BQN1K786", "CEMR", "0,25%", "694M€", "16,87%", "10,04%", "❌"],
+      ["Amundi EURO STOXX 50 Lev. 2x", "FR0010468983", "LVE", "0,40%", "196M€", "17,97%", "21,57%", "✅"]
+    ]
+  },
+  "etn_crypto": {
+    "titre": "ETN Crypto",
+    "icone": "₿",
+    "description": "Produits crypto cotés (ETP physiques)",
+    "colonnes": ["Nom", "ISIN", "Ticker", "Frais", "Encours", "Perf 3a", "Vol 3a"],
+    "lignes": [
+      ["21shares Bitcoin Core ETP", "CH1199067674", "CBTC", "0,10%", "343M€", "30,25%", "51,72%"],
+      ["21shares Crypto Basket ETP", "CH0445689208", "HODL", "0,99%", "121M€", "15,59%", "56,18%"]
+    ]
+  },
+  "etc_or": {
+    "titre": "ETC Or",
+    "icone": "🥇",
+    "description": "Produits adossés à l'or (éligibles AV)",
+    "colonnes": ["Nom", "ISIN", "Ticker", "Frais", "Encours", "Perf 3a", "Vol 3a", "AV"],
+    "lignes": [
+      ["Xtrackers Gold EUR Hedged ETC", "DE000A1EK0G3", "XAD1", "0,59%", "2B€", "28,36%", "15,14%", "✅"],
+      ["Amundi Physical Gold ETC", "FR0013416716", "GOLD", "0,12%", "10,5B€", "29,80%", "13,78%", "✅"]
+    ]
+  },
+  "etf_obligataire": {
+    "titre": "ETF Obligataire",
+    "icone": "🔒",
+    "description": "Obligations corporate et aggregate ESG",
+    "colonnes": ["Nom", "ISIN", "Ticker", "Frais", "Encours", "Perf 3a", "Vol 3a", "Dist."],
+    "lignes": [
+      ["iShares Core EUR Corp Bond", "IE00B3F81R35", "EUN5", "0,09%", "8,6B€", "4,35%", "2,92%", "Oui"],
+      ["iShares EUR Agg Bond ESG SRI", "IE00B3DKXQ41", "EUN4", "0,16%", "1,6B€", "2,62%", "4,02%", "Oui"]
+    ]
+  },
+  "fond_date": {
+    "titre": "Fonds Datés",
+    "icone": "📅",
+    "description": "Private debt à échéance fixe (2030)",
+    "colonnes": ["Nom", "ISIN", "Échéance", "Frais courants", "Perf 1a", "Vol 1a", "Notation"],
+    "lignes": [
+      ["SYCOYIELD 2030 RC", "FR001400MCQ6", "2030", "1,00%", "4,00%", "2,48%", "BB"],
+      ["Mandarine Global Target 2030", "LU2786374178", "2030", "1,00%", "4,13%", "3,67%", "B+"]
+    ]
+  },
+  "private_equity": {
+    "titre": "Private Equity",
+    "icone": "🏢",
+    "description": "Fonds PE labellisés FCPR (fiscalité avantageuse)",
+    "colonnes": ["Nom", "ISIN", "FCPR", "Encours", "Frais gestion", "Perf 1a", "Risque"],
+    "lignes": [
+      ["ODDO BHF Global PE A1", "FR001400ROU2", "Oui", "55M€", "2,00%", "6,70%", "6/7"],
+      ["Ardian Access Solution A", "FR001400AUA7", "Oui", "415M€", "1,90%", "5,45%", "6/7"]
+    ]
+  },
+  "scpi": {
+    "titre": "SCPI",
+    "icone": "🏠",
+    "description": "Sociétés Civiles de Placement Immobilier",
+    "colonnes": ["Nom", "Localisation", "Prix", "Frais total", "Cap.", "TD 2025", "TRI 5a", "Taux occ."],
+    "lignes": [
+      ["NCAP CONTINENT", "Étranger", "210€", "10%+14,4%", "65M€", "7,10%", "—", "100%"],
+      ["CORUM ORIGIN", "Étranger/France", "1135€", "11,96%+13,2%", "3,8B€", "6,50%", "5,31%", "96,2%"]
+    ]
+  }
+};
