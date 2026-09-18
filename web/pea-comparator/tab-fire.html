@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Calculateur FIRE Pro</title>
+<link rel="stylesheet" href="style.css">
+<style>body{padding:10px;background:transparent}.container{padding:10px;max-width:100%}.hero,.etf-table-wrap{display:none}.calculators{padding-top:0;margin-top:0}.calc-panel{display:block!important}</style>
+</head><body>
+<div class="calculators container">
+<div class="calc-panel active" id="tab-fire">
+<h3 style="margin-top:0">🔥 Calculateur FIRE</h3>
+<div class="calc-grid">
+<div><label>Dépenses mensuelles (€)</label><input type="number" id="fire-spend" value="2000" min="0"></div>
+<div><label>Patrimoine actuel (€)</label><input type="number" id="fire-capital" value="50000" min="0"></div>
+<div><label>Épargne mensuelle (€)</label><input type="number" id="fire-save" value="500" min="0"></div>
+<div><label>Rendement attendu (%)</label><input type="number" id="fire-return" value="7" min="0" max="15" step="0.1"></div>
+</div>
+<button class="btn" id="fire-calc">Calculer</button>
+<div id="fire-result" style="margin-top:15px;padding:15px;background:#f5f0eb;border-radius:8px;"></div>
+</div></div>
+<script src="script.js"></script>
+<script>setTimeout(function(){var b=document.getElementById("fire-calc");if(b)b.click()},800)</script>
+</body></html>

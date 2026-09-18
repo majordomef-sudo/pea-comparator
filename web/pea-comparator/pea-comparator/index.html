@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/jpeg" href="/alfred-logo.jpg">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparateur ETF PEA — Trouvez le meilleur ETF pour votre PEA</title>
+<meta name="description" content="429 ETF PEA comparés + simulateurs gratuits : intérêts composés, FIRE, frais, allocation. Trouvez l'ETF idéal pour votre PEA.">
+<meta name="keywords" content="ETF PEA, comparateur ETF, meilleur ETF PEA 2026, simulateur intérêts composés, FIRE, Trade Republic">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alfredstudio.mooo.com/">
+<script defer data-domain="alfredstudio.mooo.com" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Comparateur ETF PEA","description":"429 ETF PEA comparés + simulateurs gratuits","applicationCategory":"Finance","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+
+<style>
+/* ========== DESIGN SYSTEM ========== */
+:root {
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
+  --text: #0f172a;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --accent: #0d9488;
+  --accent-hover: #0f766e;
+  --accent-light: #f0fdfa;
+  --accent-border: #ccfbf1;
+  --gold: #b45309;
+  --gold-light: #fffbeb;
+  --gold-border: #fde68a;
+  --red: #dc2626;
+  --red-light: #fef2f2;
+  --green: #16a34a;
+  --green-light: #f0fdf4;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.06), 0 4px 6px -4px rgba(0,0,0,0.04);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ========== HEADER ========== */
+.header { position: sticky; top: 0; z-index: 100; background: rgba(248,250,252,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; max-width: 1100px; margin: 0 auto; }
+.header-left { display: flex; align-items: center; gap: 10px; }
+.logo { font-weight: 800; font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+.header-logo { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.header-cta { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--accent); color: white; border-radius: 8px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: background 0.15s; white-space: nowrap; }
+.header-cta:hover { background: var(--accent-hover); }
+
+/* ========== HERO ========== */
+.hero { padding: 60px 0 40px; text-align: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: var(--accent-hover); border: 1px solid var(--accent-border); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-bottom: 20px; }
+.hero-badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: blink 1.5s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 12px; color: var(--text); }
+.hero h1 span { color: var(--accent); }
+.hero p { font-size: 1.05rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto 28px; line-height: 1.6; }
+.hero-search { display: flex; max-width: 540px; margin: 0 auto 20px; background: var(--bg-card); border: 2px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: border-color 0.2s; }
+.hero-search:focus-within { border-color: var(--accent); box-shadow: var(--shadow-lg), 0 0 0 3px rgba(13,148,136,0.1); }
+.hero-search input { flex: 1; border: none; padding: 14px 18px; font-size: 0.95rem; font-family: var(--font); background: transparent; color: var(--text); outline: none; }
+.hero-search input::placeholder { color: var(--text-tertiary); }
+.hero-search button { padding: 14px 24px; background: var(--accent); color: white; border: none; font-weight: 700; font-size: 0.9rem; cursor: pointer; font-family: var(--font); white-space: nowrap; transition: background 0.15s; }
+.hero-search button:hover { background: var(--accent-hover); }
+.hero-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 12px; }
+.hero-stat { text-align: center; }
+.hero-stat-val { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+.hero-stat-lbl { font-size: 0.75rem; color: var(--text-tertiary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ========== SECTIONS ========== */
+.section { padding: 48px 0; }
+.section-header { text-align: center; margin-bottom: 32px; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px; }
+.section-header p { color: var(--text-secondary); font-size: 0.92rem; max-width: 500px; margin: 0 auto; }
+
+/* ========== TOOL CARDS GRID ========== */
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.tool-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.2s; cursor: pointer; }
+.tool-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.tool-card.open { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+.tool-card-header { display: flex; align-items: flex-start; gap: 12px; padding: 18px 20px; }
+.tool-card-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; background: var(--accent-light); }
+.tool-card-info h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
+.tool-card-info p { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; }
+.tool-card-chevron { margin-left: auto; color: var(--text-tertiary); transition: transform 0.25s; font-size: 0.9rem; align-self: center; }
+.tool-card.open .tool-card-chevron { transform: rotate(180deg); color: var(--accent); }
+.tool-card-body { display: none; padding: 0 20px 20px; border-top: 1px solid var(--border-light); }
+.tool-card.open .tool-card-body { display: block; }
+
+/* Form elements inside tool cards */
+.tool-form { display: flex; flex-direction: column; gap: 10px; padding-top: 16px; }
+.tool-form label { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); }
+.tool-form input, .tool-form select { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.88rem; font-family: var(--font); background: var(--bg); color: var(--text); transition: border-color 0.15s; }
+.tool-form input:focus, .tool-form select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+.tool-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tool-btn { padding: 10px 20px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: var(--font); transition: background 0.15s; margin-top: 4px; }
+.tool-btn:hover { background: var(--accent-hover); }
+.tool-result { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tool-result-item { padding: 12px; background: var(--bg); border-radius: 8px; text-align: center; }
+.tool-result-item.highlight { background: var(--accent); color: white; }
+.tool-result-item.highlight .result-label { color: rgba(255,255,255,0.7); }
+.tool-result-item .result-label { display: block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-tertiary); margin-bottom: 2px; }
+.tool-result-item .result-value { font-size: 1.1rem; font-weight: 800; }
+.tool-result-full { margin-top: 8px; padding: 12px; background: var(--bg); border-radius: 8px; font-size: 0.82rem; white-space: pre-line; color: var(--text-secondary); line-height: 1.5; }
+.tool-note { margin-top: 8px; font-size: 0.75rem; color: var(--text-tertiary); font-style: italic; }
+
+/* ========== ETF COMPARATOR ========== */
+.etf-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-sm); }
+.etf-filters { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+.etf-filter-group { flex: 1; min-width: 120px; }
+.etf-filter-group label { display: block; font-size: 0.7rem; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.etf-filter-group input, .etf-filter-group select { width: 100%; padding: 8px 10px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.82rem; font-family: var(--font); background: var(--bg); color: var(--text); }
+.etf-filter-group input:focus, .etf-filter-group select:focus { outline: none; border-color: var(--accent); }
+.etf-filter-actions { display: flex; gap: 6px; align-items: end; }
+.etf-btn-sm { padding: 8px 14px; font-size: 0.78rem; font-weight: 600; border: 1.5px solid var(--border); border-radius: 8px; cursor: pointer; font-family: var(--font); background: var(--bg-card); color: var(--text-secondary); transition: all 0.15s; }
+.etf-btn-sm:hover { border-color: var(--accent); color: var(--accent); }
+.etf-btn-sm.primary { background: var(--accent); color: white; border-color: var(--accent); }
+.etf-btn-sm.primary:hover { background: var(--accent-hover); }
+.etf-stats { padding: 10px 20px; font-size: 0.8rem; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; }
+.table-wrap { overflow-x: auto; }
+#etfTable { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+#etfTable thead { background: var(--bg); }
+#etfTable th { padding: 10px 10px; text-align: left; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--text-tertiary); border-bottom: 2px solid var(--border); cursor: pointer; user-select: none; white-space: nowrap; }
+#etfTable th:hover { color: var(--accent); }
+#etfTable th.sorted-asc::after { content: ' ↑'; color: var(--accent); }
+#etfTable th.sorted-desc::after { content: ' ↓'; color: var(--accent); }
+#etfTable td { padding: 10px; border-bottom: 1px solid var(--border-light); white-space: nowrap; }
+#etfTable tbody tr { cursor: pointer; transition: background 0.1s; }
+#etfTable tbody tr:hover { background: var(--accent-light); }
+#etfTable tbody tr.selected { background: var(--accent-light); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 5px; font-size: 0.68rem; font-weight: 700; }
+.badge-pea { background: var(--accent-light); color: var(--accent-hover); }
+.watchlist-star { background: none; border: none; cursor: pointer; font-size: 0.9rem; padding: 0 4px 0 0; color: var(--text-tertiary); transition: color 0.15s; }
+.watchlist-star.active { color: #f59e0b; }
+.pagination { display: flex; justify-content: center; gap: 4px; padding: 16px; flex-wrap: wrap; }
+.page-btn { width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); cursor: pointer; font-size: 0.78rem; font-weight: 600; font-family: var(--font); color: var(--text-secondary); transition: all 0.15s; }
+.page-btn:hover { border-color: var(--accent); color: var(--accent); }
+.page-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+.page-btn:disabled { opacity: 0.35; cursor: default; }
+.page-dots { padding: 0 4px; color: var(--text-tertiary); align-self: center; }
+
+/* ========== WATCHLIST PANEL ========== */
+.watchlist-panel { display: none; padding: 10px 20px; border-bottom: 1px solid var(--border-light); background: var(--gold-light); }
+.watchlist-panel.visible { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.watchlist-panel-label { font-size: 0.7rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+.watchlist-chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: white; border: 1px solid var(--gold-border); border-radius: 16px; font-size: 0.72rem; cursor: pointer; color: var(--text); transition: all 0.15s; }
+.watchlist-chip:hover { border-color: var(--gold); }
+.watchlist-chip-remove { color: var(--text-tertiary); font-size: 0.65rem; cursor: pointer; padding: 2px; }
+.watchlist-chip-remove:hover { color: var(--red); }
+
+/* ========== MODAL ========== */
+.modal-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+.modal-overlay.active { opacity: 1; pointer-events: auto; }
+.modal { background: var(--bg-card); border-radius: var(--radius-xl); width: 100%; max-width: 480px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); overflow: hidden; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); }
+.modal-header h3 { font-size: 1rem; font-weight: 800; }
+.modal-close { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text-tertiary); padding: 4px 8px; border-radius: 6px; }
+.modal-close:hover { background: var(--bg-hover); color: var(--text); }
+.modal-body { padding: 20px; }
+.modal-field { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-light); }
+.modal-field:last-child { border-bottom: none; }
+.modal-field-label { font-size: 0.78rem; color: var(--text-secondary); }
+.modal-field-value { font-weight: 600; font-size: 0.85rem; }
+.modal-actions { display: flex; gap: 8px; margin-top: 16px; }
+.modal-actions a { flex: 1; text-align: center; padding: 10px; border-radius: 8px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
+
+/* ========== TOP ETFs ========== */
+.top-etfs { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.top-etf { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; transition: all 0.15s; }
+.top-etf:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.top-etf-rank { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.82rem; flex-shrink: 0; background: var(--accent-light); color: var(--accent-hover); }
+.top-etf h4 { font-size: 0.82rem; font-weight: 700; margin-bottom: 1px; }
+.top-etf p { font-size: 0.72rem; color: var(--text-tertiary); }
+
+/* ========== FAQ ========== */
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; }
+.faq-item h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+.faq-item p { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; }
+
+/* ========== CTA ========== */
+.cta { background: linear-gradient(135deg, var(--accent-hover), #115e59); border-radius: var(--radius-xl); padding: 40px 32px; text-align: center; color: white; margin: 48px 0; }
+.cta h2 { font-size: 1.5rem; font-weight: 900; margin-bottom: 6px; }
+.cta p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 20px; }
+.cta-btn { display: inline-block; padding: 14px 32px; background: white; color: var(--accent-hover); border-radius: 10px; font-weight: 800; font-size: 0.95rem; text-decoration: none; transition: all 0.15s; }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+/* ========== FOOTER ========== */
+.footer { text-align: center; padding: 40px 20px; color: var(--text-tertiary); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 32px; }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+
+/* ========== TOAST ========== */
+.toast { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%); background: var(--text); color: white; padding: 12px 24px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; z-index: 200; box-shadow: var(--shadow-lg); transition: all 0.3s; }
+.toast.hidden { opacity: 0; transform: translateX(-50%) translateY(16px); pointer-events: none; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  .tool-form-row { grid-template-columns: 1fr; }
+  .etf-filters { flex-direction: column; }
+  .etf-filter-group { min-width: 100%; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .top-etfs { grid-template-columns: 1fr; }
+  .tool-result { grid-template-columns: 1fr; }
+  .hero { padding: 40px 0 28px; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero-stats { gap: 16px; }
+  #etfTable th:nth-child(5), #etfTable td:nth-child(5),
+  #etfTable th:nth-child(6), #etfTable td:nth-child(6) { display: none; }
+}
+@media (max-width: 480px) {
+  .header-cta { font-size: 0.72rem; padding: 6px 12px; }
+  .hero-search { flex-direction: column; }
+  .hero-search button { width: 100%; border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+  .hero-search input { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner container">
+    <div class="header-left">
+      <img src="/alfred-logo.jpg" alt="Alfred AI" class="header-logo">
+      <a href="/" class="logo">PEA Comparator</a>
+    </div>
+    <a href="https://refnocode.trade.re/pgbqgk3f" target="_blank" rel="noopener" class="header-cta">Ouvrir un PEA Trade Republic →</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero container">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Mis à jour juillet 2026</div>
+    <h1>Trouvez le meilleur <span>ETF PEA</span><br>pour votre argent</h1>
+    <p>429 ETF comparés, simulateurs gratuits. Prenez les bonnes décisions pour votre liberté financière.</p>
+    <div class="hero-search">
+      <input type="text" id="heroSearch" placeholder="Chercher un ETF par nom ou ISIN…" autocomplete="off">
+      <button id="heroSearchBtn">Rechercher</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-val">429</div><div class="hero-stat-lbl">ETF PEA</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">10</div><div class="hero-stat-lbl">Simulateurs</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">Gratuit</div><div class="hero-stat-lbl">Sans pub</div></div>
+    </div>
+  </section>
+
+  <!-- Simulators -->
+  <section class="section container" id="outils">
+    <div class="section-header">
+      <h2>📊 Simulateurs</h2>
+      <p>Cliquez sur une carte pour l'ouvrir. Tous les calculs sont instantanés.</p>
+    </div>
+    <div class="tools-grid">
+      <!-- 1. Compound Interest -->
+      <div class="tool-card" id="tc-compound">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">📈</div>
+          <div class="tool-card-info">
+            <h3>Intérêts composés</h3>
+            <p>Visualisez la puissance des intérêts composés</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>Capital initial (€)</label>
+            <input type="number" id="comp-init" value="1000" min="0">
+            <div class="tool-form-row">
+              <div><label>Mensualité (€)</label><input type="number" id="comp-monthly" value="200" min="0"></div>
+              <div><label>Rendement annuel (%)</label><input type="number" id="comp-rate" value="7" min="0" step="0.1"></div>
+            </div>
+            <label>Durée (années)</label>
+            <input type="number" id="comp-years" value="20" min="1" max="60">
+            <button class="tool-btn" id="comp-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="comp-result">
+            <div class="tool-result-item highlight"><span class="result-label">Capital final</span><span class="result-value" id="comp-final">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Total investi</span><span class="result-value" id="comp-invested">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Gains nets</span><span class="result-value" id="comp-gain">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Mi-parcours</span><span class="result-value" id="comp-half">—</span></div>
+          </div>
+          <div class="tool-note" id="comp-work-year"></div>
+        </div>
+      </div>
+
+      <!-- 2. FIRE -->
+      <div class="tool-card" id="tc-fire">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">🔥</div>
+          <div class="tool-card-info">
+            <h3>Indépendance financière</h3>
+            <p>Quand pourrez-vous arrêter de travailler ?</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>Revenus mensuels souhaités (€)</label>
+            <input type="number" id="fire-income" value="2000" min="0">
+            <label>Taux de retrait (règle des 4%)</label>
+            <input type="number" id="fire-rate" value="4" min="1" max="10" step="0.1">
+            <div class="tool-form-row">
+              <div><label>Capital actuel (€)</label><input type="number" id="fire-current" value="5000" min="0"></div>
+              <div><label>Âge</label><input type="number" id="fire-age-input" value="39" min="18" max="80"></div>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Épargne / mois (€)</label><input type="number" id="fire-save" value="500" min="0"></div>
+              <div><label>Rendement (%)</label><input type="number" id="fire-return" value="7" min="0" step="0.1"></div>
+            </div>
+            <button class="tool-btn" id="fire-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="fire-result">
+            <div class="tool-result-item highlight"><span class="result-label">Capital cible</span><span class="result-value" id="fire-target">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Temps estimé</span><span class="result-value" id="fire-time">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Âge FIRE</span><span class="result-value" id="fire-age">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Capital projeté</span><span class="result-value" id="fire-estimate">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Fee Impact -->
+      <div class="tool-card" id="tc-fees">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">💸</div>
+          <div class="tool-card-info">
+            <h3>Impact des frais</h3>
+            <p>Visualisez ce que 1% de frais vous coûte vraiment</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Capital initial (€)</label><input type="number" id="fees-init" value="10000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="fees-monthly" value="200" min="0"></div>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Rendement (%)</label><input type="number" id="fees-rate" value="7" min="0" step="0.1"></div>
+              <div><label>Durée (ans)</label><input type="number" id="fees-years" value="25" min="1" max="50"></div>
+            </div>
+            <button class="tool-btn" id="fees-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="fees-result">
+            <div class="tool-result-item"><span class="result-label">0% frais</span><span class="result-value" id="fees-none">—</span></div>
+            <div class="tool-result-item"><span class="result-label">0.50% frais</span><span class="result-value" id="fees-low">—</span></div>
+            <div class="tool-result-item"><span class="result-label">1% frais</span><span class="result-value" id="fees-mid">—</span></div>
+            <div class="tool-result-item highlight"><span class="result-label">1.50% frais</span><span class="result-value" id="fees-high">—</span></div>
+          </div>
+          <canvas id="fees-chart" style="width:100%;height:280px;margin-top:12px;border-radius:8px;"></canvas>
+        </div>
+      </div>
+
+      <!-- 4. PEA vs AV vs CTO -->
+      <div class="tool-card" id="tc-env">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">🏦</div>
+          <div class="tool-card-info">
+            <h3>PEA vs AV vs CTO</h3>
+            <p>Comparez les enveloppes fiscales sur le long terme</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Capital initial (€)</label><input type="number" id="env-init" value="10000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="env-monthly" value="300" min="0"></div>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Rendement (%)</label><input type="number" id="env-rate" value="7" min="0" step="0.1"></div>
+              <div><label>Durée (ans)</label><input type="number" id="env-years" value="20" min="1" max="50"></div>
+            </div>
+            <button class="tool-btn" id="env-calc">Comparer</button>
+          </div>
+          <div class="tool-result" id="env-result">
+            <div class="tool-result-item highlight"><span class="result-label">PEA</span><span class="result-value" id="env-pea">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Assurance-Vie</span><span class="result-value" id="env-av">—</span></div>
+            <div class="tool-result-item"><span class="result-label">CTO</span><span class="result-value" id="env-cto">—</span></div>
+            <div class="tool-result-item"><span class="result-label">🏆 Gagnant</span><span class="result-value" id="env-winner">—</span></div>
+          </div>
+          <canvas id="env-chart" style="width:100%;height:280px;margin-top:12px;border-radius:8px;"></canvas>
+        </div>
+      </div>
+
+      <!-- 5. Allocation -->
+      <div class="tool-card" id="tc-alloc">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">🎯</div>
+          <div class="tool-card-info">
+            <h3>Mon allocation</h3>
+            <p>Portefeuille recommandé selon votre profil de risque</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>Profil de risque</label>
+            <select id="alloc-profile">
+              <option value="offensif">⚔️ Offensif (10-30 ans)</option>
+              <option value="equilibre">⚖️ Équilibré (5-15 ans)</option>
+              <option value="defensif">🛡️ Défensif (0-5 ans)</option>
+            </select>
+            <div class="tool-form-row">
+              <div><label>Capital initial (€)</label><input type="number" id="alloc-init" value="5000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="alloc-monthly" value="300" min="0"></div>
+            </div>
+            <button class="tool-btn" id="alloc-calc">Voir l'allocation</button>
+          </div>
+          <div class="tool-result" id="alloc-result">
+            <div class="tool-result-item"><span class="result-label">Nombre d'ETF</span><span class="result-value" id="alloc-count">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Performance</span><span class="result-value" id="alloc-perf">—</span></div>
+            <div class="tool-result-item"><span class="result-label">TER moyen</span><span class="result-value" id="alloc-ter">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Répartition</span><span class="result-value" id="alloc-pie">—</span></div>
+          </div>
+          <div class="tool-result-full" id="alloc-etfs"></div>
+        </div>
+      </div>
+
+      <!-- 6. Catch-up -->
+      <div class="tool-card" id="tc-catchup">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">⏰</div>
+          <div class="tool-card-info">
+            <h3>Plan de rattrapage</h3>
+            <p>Vous avez commencé tard ? Voici comment rattraper</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>Objectif (€)</label>
+            <input type="number" id="catchup-target" value="300000" min="0">
+            <div class="tool-form-row">
+              <div><label>Capital actuel (€)</label><input type="number" id="catchup-current" value="5000" min="0"></div>
+              <div><label>Âge</label><input type="number" id="catchup-age" value="45" min="18" max="70"></div>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Âge retraite</label><input type="number" id="catchup-retire" value="65" min="40" max="75"></div>
+              <div><label>Rendement (%)</label><input type="number" id="catchup-rate" value="7" min="0" step="0.1"></div>
+            </div>
+            <button class="tool-btn" id="catchup-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="catchup-result">
+            <div class="tool-result-item highlight"><span class="result-label">Mensualité nécessaire</span><span class="result-value" id="catchup-monthly">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Capital à la retraite</span><span class="result-value" id="catchup-final">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Inflation -->
+      <div class="tool-card" id="tc-inflation">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">📉</div>
+          <div class="tool-card-info">
+            <h3>Inflation</h3>
+            <p>Ce que votre épargne vaudra vraiment dans 20 ans</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Montant aujourd'hui (€)</label><input type="number" id="infl-amount" value="100000" min="0"></div>
+              <div><label>Taux d'inflation (%)</label><input type="number" id="infl-rate" value="2.5" min="0" step="0.1"></div>
+            </div>
+            <label>Dans combien d'années ?</label>
+            <input type="number" id="infl-years" value="20" min="1" max="60">
+            <button class="tool-btn" id="infl-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="infl-result">
+            <div class="tool-result-item highlight"><span class="result-label">Pouvoir d'achat futur</span><span class="result-value" id="infl-future">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Perte de valeur</span><span class="result-value" id="infl-loss">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Path to 1M -->
+      <div class="tool-card" id="tc-million">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">💎</div>
+          <div class="tool-card-info">
+            <h3>Chemin vers 1 million</h3>
+            <p>Combien de temps pour devenir millionnaire ?</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Capital actuel (€)</label><input type="number" id="mil-current" value="10000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="mil-monthly" value="500" min="0"></div>
+            </div>
+            <label>Rendement annuel (%)</label>
+            <input type="number" id="mil-rate" value="7" min="0" step="0.1">
+            <button class="tool-btn" id="mil-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="mil-result">
+            <div class="tool-result-item highlight"><span class="result-label">Années pour 1M</span><span class="result-value" id="mil-years">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Capital final</span><span class="result-value" id="mil-final">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Consumption -->
+      <div class="tool-card" id="tc-consumption">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">🛒</div>
+          <div class="tool-card-info">
+            <h3>Consommation</h3>
+            <p>Combien pouvez-vous dépenser sans toucher au capital ?</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Capital (€)</label><input type="number" id="cons-capital" value="300000" min="0"></div>
+              <div><label>Rendement (%)</label><input type="number" id="cons-rate" value="4" min="0" step="0.1"></div>
+            </div>
+            <label>Durée de vie restante (ans)</label>
+            <input type="number" id="cons-years" value="30" min="1" max="60">
+            <button class="tool-btn" id="cons-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="cons-result">
+            <div class="tool-result-item highlight"><span class="result-label">Dépense / mois</span><span class="result-value" id="cons-monthly">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Dépense / an</span><span class="result-value" id="cons-yearly">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Compare 2 ETFs -->
+      <div class="tool-card" id="tc-compare">
+        <div class="tool-card-header">
+          <div class="tool-card-icon">⚖️</div>
+          <div class="tool-card-info">
+            <h3>Comparer 2 ETF</h3>
+            <p>Côte à côte : frais, risque, performance</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>ISIN ETF 1</label>
+            <input type="text" id="cmp-isin1" placeholder="FR001400U5Q4" maxlength="12" style="text-transform:uppercase">
+            <label>ISIN ETF 2</label>
+            <input type="text" id="cmp-isin2" placeholder="IE00B4L5Y983" maxlength="12" style="text-transform:uppercase">
+            <button class="tool-btn" id="cmp-calc">Comparer</button>
+          </div>
+          <div class="tool-result-full" id="cmp-result" style="font-size:0.82rem;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETF Comparator -->
+  <section class="section container" id="comparateur">
+    <div class="section-header">
+      <h2>🔍 Comparateur ETF PEA</h2>
+      <p>429 ETF éligibles PEA. Filtrez, triez, comparez.</p>
+    </div>
+    <div class="etf-section">
+      <div class="watchlist-panel" id="watchlistPanel">
+        <span class="watchlist-panel-label">★ Watchlist</span>
+        <span id="watchlistItems"></span>
+      </div>
+      <div class="etf-filters">
+        <div class="etf-filter-group" style="flex:2;min-width:180px;">
+          <label>Recherche</label>
+          <input type="text" id="search" placeholder="Nom, ISIN, émetteur…" autocomplete="off">
+        </div>
+        <div class="etf-filter-group">
+          <label>Frais min %</label>
+          <input type="number" id="feesMin" placeholder="0" step="0.01" min="0">
+        </div>
+        <div class="etf-filter-group">
+          <label>Frais max %</label>
+          <input type="number" id="feesMax" placeholder="1" step="0.01" min="0">
+        </div>
+        <div class="etf-filter-group">
+          <label>Risque SRI</label>
+          <select id="sri"><option value="">Tous</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option></select>
+        </div>
+        <div class="etf-filter-group">
+          <label>Émetteur</label>
+          <select id="emetteur"><option value="">Tous</option></select>
+        </div>
+        <div class="etf-filter-actions">
+          <button class="etf-btn-sm" id="resetFilters">↺ Reset</button>
+          <button class="etf-btn-sm" id="shareFilters">🔗 Copier lien</button>
+        </div>
+      </div>
+      <div class="etf-stats">
+        <span><strong id="resultCount">0</strong> ETF trouvés</span>
+        <span id="dataUpdateBadge">Données : juillet 2026</span>
+      </div>
+      <div class="table-wrap">
+        <table id="etfTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-col="isin">ISIN</th>
+              <th class="sortable" data-col="nom">Nom</th>
+              <th class="sortable" data-col="frais">Frais</th>
+              <th class="sortable" data-col="sri">SRI</th>
+              <th class="sortable" data-col="perf5">Perf 5A</th>
+              <th class="sortable" data-col="emetteur">Émetteur</th>
+              <th>PEA</th>
+              <th>Détail</th>
+            </tr>
+          </thead>
+          <tbody id="etfBody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
+
+  <!-- Top ETFs -->
+  <section class="section container" id="top-etfs-section">
+    <div class="section-header">
+      <h2>🏆 Top ETF PEA</h2>
+      <p>Les plus populaires du moment</p>
+    </div>
+    <div class="top-etfs" id="topEtfsGrid"></div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section container">
+    <div class="section-header">
+      <h2>❓ Questions fréquentes</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><h4>Qu'est-ce qu'un ETF PEA ?</h4><p>Un ETF (Exchange Traded Fund) est un fonds indiciel coté en bourse. Les ETF éligibles PEA sont conformes à la réglementation française et bénéficient d'une fiscalité avantageuse (exonération d'impôt sur le revenu après 5 ans).</p></div>
+      <div class="faq-item"><h4>Quel est le meilleur ETF PEA ?</h4><p>Le MSCI World (DCAM d'Amundi, 0,20% de frais) est le plus recommandé pour une exposition diversifiée. Pour les marchés émergents, le PAEEM ou IS3N sont d'excellents compléments.</p></div>
+      <div class="faq-item"><h4>Quels sont les frais à surveiller ?</h4><p>Le TER (Total Expense Ratio) est le principal. Un bon ETF PEA a un TER entre 0,10% et 0,30%. Au-delà de 0,50%, l'impact sur le long terme devient significatif. Utilisez notre simulateur d'impact des frais.</p></div>
+      <div class="faq-item"><h4>PEA ou Assurance-Vie ?</h4><p>Le PEA est plus avantageux fiscalement après 5 ans (17,2% de prélèvements sociaux uniquement). L'AV offre plus de flexibilité et permet d'investir dans des fonds non-ETF. Utilisez notre comparateur PEA vs AV.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+    <div class="cta">
+      <h2>Prêt à investir ?</h2>
+      <p>Ouvrez un PEA chez Trade Republic et commencez avec 0€ de frais de courtage.</p>
+      <a href="https://refnocode.trade.re/pgbqgk3f" target="_blank" rel="noopener" class="cta-btn">Ouvrir un PEA Trade Republic →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Comparateur ETF PEA &copy; 2026 — Outils gratuits pour votre liberté financière.</p>
+  <div class="footer-links">
+    <a href="https://alfredstudio.mooo.com/blog">Blog</a>
+    <a href="https://refnocode.trade.re/pgbqgk3f" target="_blank" rel="noopener">Trade Republic</a>
+    <a href="https://t.me/AlfredETFBot" target="_blank" rel="noopener">Bot Telegram</a>
+  </div>
+</footer>
+
+<div class="toast hidden" id="toast">✅ ISIN copié !</div>
+<div class="modal-overlay" id="etfModal"><div class="modal"><div class="modal-header"><h3 id="modalTitle"></h3><button class="modal-close" id="modalClose">✕</button></div><div class="modal-body" id="modalBody"></div></div></div>
+
+<script>document.title="✅ JS v1784891032";console.log("INLINE TEST OK");document.body.style.outline="3px solid green";</script>
+<script src="script.js?v=1784891032"></script>
+<script>document.addEventListener("click",function(e){var h=e.target.closest(".tool-card-header");if(h){var c=h.closest(".tool-card");if(c){c.classList.toggle("open");console.log("Toggled:",c.id);}}});</script>
+</body>
+</html>

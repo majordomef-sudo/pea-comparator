@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIAGNOSTIC</title>
+</head>
+<body style="font-family:system-ui;padding:20px;background:#fff">
+<h1>Page diagnostic</h1>
+<div id="result" style="padding:20px;background:#fee2e2;border-radius:8px;font-size:18px">⏳ Test en cours...</div>
+<script>
+  var r = document.getElementById("result");
+  try {
+    r.textContent = "✅ JS INLINE FONCTIONNE";
+    r.style.background = "#dcfce7";
+    r.style.color = "#166534";
+    
+    // Test DOM manipulation
+    var btn = document.createElement("button");
+    btn.textContent = "Clique-moi";
+    btn.style.cssText = "padding:12px 24px;margin-top:16px;background:#0d9488;color:white;border:none;border-radius:8px;font-size:16px";
+    btn.onclick = function() {
+      r.textContent = "✅ CLIC FONCTIONNE";
+      r.style.background = "#dbeafe";
+    };
+    document.body.appendChild(btn);
+    
+    document.title = "✅ DIAGNOSTIC OK";
+  } catch(e) {
+    r.textContent = "❌ ERREUR: " + e.message;
+    r.style.background = "#fee2e2";
+  }
+</script>
+</body>
+</html>
