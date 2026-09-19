@@ -1,3 +1,12 @@
 User-agent: *
 Allow: /
+
+# Chemins internes / non destinés à l'indexation
+Disallow: /api/
+Disallow: /ddns/
+Disallow: /analytics/
+Disallow: /ghost/
+Disallow: /kakeibo/
+
 Sitemap: https://alfredstudio.mooo.com/sitemap.xml
+

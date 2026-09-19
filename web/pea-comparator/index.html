@@ -32,7 +32,7 @@
 <script defer data-domain="alfredstudio.mooo.com" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Alfred Invest","description":"Plus de 400 ETF référencés, simulateurs financiers, guide FIRE","applicationCategory":"Finance","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 
-<link rel="stylesheet" href="/style.css?v=1789804741">
+<link rel="stylesheet" href="/style.css?v=1789811600">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
   </head>
 <body>
@@ -58,35 +58,162 @@
 <main role="main">
   <!-- Hero -->
 <section class="hero-section">
-  <div class="badge-pill">Comparateur intelligent · plus de 400 ETF</div>
-  <h1>Votre <span>liberté financière</span><br>commence ici</h1>
-  <p class="hero-sub">Comparez, calculez et investissez. Les meilleurs ETF PEA et 11 outils financiers pour votre patrimoine.</p>
-
-  <div class="search-box">
-    <input type="text" id="heroSearch" placeholder="Rechercher un ETF (ex: CW8, WPEA)...">
-    <button type="submit" onclick="document.getElementById('search').value=document.getElementById('heroSearch').value;document.getElementById('search').dispatchEvent(new Event('input'));location.href='#comparateur'">Rechercher</button>
-  </div>
-
-  <div class="hero-stats">
-    <div class="stat-card"><strong>400+</strong><span>ETF référencés</span></div>
-    <div class="stat-card"><strong>11</strong><span>Outils</span></div>
-    <div class="stat-card"><strong>0 €</strong><span>de frais de courtage</span></div>
-  </div>
+   <div class="badge-pill">Plateforme d'analyse ETF PEA · 435 ETF référencés · 12 outils gratuits</div>
+   <h1>Analysez les ETF.<br><span>Comprenez les risques.</span><br>Construisez votre stratégie.</h1>
+   <p class="hero-sub">Le Score Alfred, des données comparées et des outils d'aide à la décision pour votre PEA. Gratuit, sans compte, sans blabla.</p>
+   <div class="search-box">
+     <input type="text" id="heroSearch" placeholder="Rechercher un ETF (ISIN, nom, émetteur)...">
+     <button type="submit" onclick="document.getElementById('search').value=document.getElementById('heroSearch').value;document.getElementById('search').dispatchEvent(new Event('input'));location.href='#comparateur'">Rechercher</button>
+   </div>
+   <div class="hero-actions">
+     <a href="#comparateur" class="hero-action hero-action-primary" onclick="setTimeout(function(){var hs=document.getElementById('heroSearch');if(hs)hs.focus();},300)">
+       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+       <span class="hero-action-text"><strong>Rechercher un ETF</strong><small>Par nom, ISIN ou émetteur</small></span>
+     </a>
+     <a href="#outils" class="hero-action" onclick="ouvrirCarte('tc-compare')">
+       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
+       <span class="hero-action-text"><strong>Comparer 2 ETF</strong><small>Côte à côte, critère par critère</small></span>
+     </a>
+     <a href="/top-etf.html" class="hero-action">
+       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+       <span class="hero-action-text"><strong>Explorer les meilleurs ETF</strong><small>Par catégorie et indice</small></span>
+     </a>
+     <a href="#outils" class="hero-action" onclick="ouvrirCarte('tc-alloc')">
+       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+       <span class="hero-action-text"><strong>Calculer son allocation</strong><small>Simulez votre portefeuille idéal</small></span>
+     </a>
+   </div>
+   <div class="hero-stats">
+     <div class="stat-card"><strong>435</strong><span>ETF référencés</span></div>
+     <div class="stat-card"><strong>12</strong><span>Outils gratuits</span></div>
+     <div class="stat-card"><strong>0 €</strong><span>Frais de courtage sur l'outil</span></div>
+   </div>
 </section>
 
 
 
   
 
+  <!-- Score Alfred --> <section class="score-section" id="score">   <div class="section-head">     <h2>Le <span>Score Alfred</span> : chaque ETF noté sur 100</h2>     <p>Un score transparent, décomposé et expliqué. Un point de départ pour votre analyse — jamais une vérité absolue.</p>   </div>   <div class="score-pillars">     <div class="pillar-card"><div class="pillar-top"><strong>Frais (TER)</strong><span class="pillar-weight">40%</span></div><div class="pillar-bar"><span style="width:40%"></span></div><p>Le TER pèse directement sur la performance long terme. Plus il est bas, meilleur est le score.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Encours</strong><span class="pillar-weight">25%</span></div><div class="pillar-bar"><span style="width:25%"></span></div><p>Un encours élevé signale un ETF mature, liquide et adopté par les investisseurs.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Liquidité</strong><span class="pillar-weight">20%</span></div><div class="pillar-bar"><span style="width:20%"></span></div><p>Spreads bid-ask et volumes échangés. Une liquidité élevée réduit le coût d'entrée et de sortie.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Tracking Error</strong><span class="pillar-weight">15%</span></div><div class="pillar-bar"><span style="width:15%"></span></div><p>L'écart entre la performance de l'ETF et celle de son indice. Un écart faible = une réplication fidèle.</p></div>   </div>   <div class="score-legend">     <span class="legend-item"><i class="legend-dot" style="background:#28a745"></i>Achat (74+)</span>     <span class="legend-item"><i class="legend-dot" style="background:#007bff"></i>Conserver (64-73)</span>     <span class="legend-item"><i class="legend-dot" style="background:#ffc107"></i>Surveiller (54-63)</span>     <span class="legend-item"><i class="legend-dot" style="background:#fd7e14"></i>Remplacer (44-53)</span>     <span class="legend-item"><i class="legend-dot" style="background:#dc3545"></i>Vendre (-44)</span>     <button class="score-more" onclick="document.getElementById('scoreModal').classList.add('active')">Voir la méthodologie complète →</button>   </div>   <p class="score-note">Le Score Alfred est un indicateur pédagogique calculé à partir de données publiques. Il ne constitue ni une recommandation d'achat ni un conseil financier personnalisé.</p> </section>
   <!-- Simulators -->
   <section class="section container" id="outils">
     <div class="section-header">
-      <h2>Outils Financiers</h2>
-      <p>Cliquez sur un outil pour l'utiliser. Calculs instantanés et gratuits.</p>
+      <h2>Outils financiers</h2>
+      <p>Trois familles d'outils gratuits pour décider en connaissance de cause.</p>
     </div>
-    <div class="tools-grid">
-      <!-- 1. Compound Interest -->
-      <div class="tool-card" id="tc-compound">
+    <div class="tool-category">
+      <div class="tool-category-head"><span class="tool-category-badge">1</span><div><h3>Investir</h3><p>Construisez, comparez et structurez votre portefeuille d'ETF.</p></div></div>
+      <div class="tools-grid"><div class="tool-card" id="tc-compare">
+        <div class="tool-card-header">
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg></div>
+          <div class="tool-card-info">
+            <h3>Comparer 2 ETF</h3>
+            <p>Côte à côte : frais, risque, performance</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>ISIN ETF 1</label>
+            <input type="text" id="cmp-isin1" placeholder="FR001400U5Q4" maxlength="12" style="text-transform:uppercase">
+            <label>ISIN ETF 2</label>
+            <input type="text" id="cmp-isin2" placeholder="IE00B4L5Y983" maxlength="12" style="text-transform:uppercase">
+            <button class="tool-btn" id="cmp-calc">Comparer</button>
+          </div>
+          <div class="tool-result-full" id="cmp-result" style="font-size:0.82rem;"></div>
+        </div>
+      </div><div class="tool-card" id="tc-topetf">
+        <div class="tool-card-header">
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+          <div class="tool-card-info">
+            <h3>Top ETF par Indice et Secteur</h3>
+            <p>Les meilleurs ETF classés par catégorie selon le score Alfred</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form" style="text-align:center;padding:8px 0">
+            <p style="color:#4a5b72;margin-bottom:16px;font-size:0.9rem;line-height:1.5">Découvrez les ETF les mieux notés dans chaque catégorie d’indice et secteur, avec le <strong style="color:#0d9488">score qualité Alfred</strong>.</p>
+            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#16a34a;color:#fff">≥74 Achat</span>
+              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#2563eb;color:#fff">≥64 Conserver</span>
+              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#eab308;color:#000">≥54 Surveiller</span>
+              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#ea580c;color:#fff">≥44 Remplacer</span>
+              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#dc2626;color:#fff"><44 Vendre</span>
+            </div>
+            <div style="display:flex;justify-content:center;gap:20px;margin-bottom:16px">
+              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">14</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Indices</div></div>
+              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">13</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Secteurs</div></div>
+              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">429</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">ETF notés</div></div>
+            </div>
+            <a href="/top-etf.html" target="_blank" style="display:inline-block;text-decoration:none;padding:12px 28px;font-size:0.9rem;font-weight:700;border-radius:10px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;box-shadow:0 4px 12px rgba(13,148,136,0.25)">Voir le classement complet →</a>
+          </div>
+        </div>
+      </div><div class="tool-card" id="tc-alloc">
+        <div class="tool-card-header">
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
+          <div class="tool-card-info">
+            <h3>Mon allocation</h3>
+            <p>Portefeuille recommandé selon votre profil de risque</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <label>Profil de risque</label>
+            <select id="alloc-profile">
+              <option value="offensif">Offensif (10-30 ans)</option>
+              <option value="equilibre">Équilibré (5-15 ans)</option>
+              <option value="defensif">Défensif (0-5 ans)</option>
+            </select>
+            <div class="tool-form-row">
+              <div><label>Capital initial (€)</label><input type="number" id="alloc-init" value="5000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="alloc-monthly" value="300" min="0"></div>
+            </div>
+            <button class="tool-btn" id="alloc-calc">Voir l'allocation</button>
+          </div>
+          <div class="tool-result" id="alloc-result">
+            <div class="tool-result-item"><span class="result-label">Nombre d'ETF</span><span class="result-value" id="alloc-count">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Performance</span><span class="result-value" id="alloc-perf">—</span></div>
+            <div class="tool-result-item"><span class="result-label">TER moyen</span><span class="result-value" id="alloc-ter">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Répartition</span><span class="result-value" id="alloc-pie">—</span></div>
+          </div>
+          <div class="tool-result-full" id="alloc-etfs"></div>
+        </div>
+      </div><div class="tool-card" id="tc-env">
+        <div class="tool-card-header">
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg></div>
+          <div class="tool-card-info">
+            <h3>PEA vs AV vs CTO</h3>
+            <p>Comparez les enveloppes fiscales sur le long terme</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Capital initial (€)</label><input type="number" id="env-init" value="10000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="env-monthly" value="300" min="0"></div>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Rendement (%)</label><input type="number" id="env-rate" value="7" min="0" step="0.1"></div>
+              <div><label>Durée (ans)</label><input type="number" id="env-years" value="20" min="1" max="50"></div>
+            </div>
+            <button class="tool-btn" id="env-calc">Comparer</button>
+          </div>
+          <div class="tool-result" id="env-result">
+            <div class="tool-result-item highlight"><span class="result-label">PEA</span><span class="result-value" id="env-pea">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Assurance-Vie</span><span class="result-value" id="env-av">—</span></div>
+            <div class="tool-result-item"><span class="result-label">CTO</span><span class="result-value" id="env-cto">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Gagnant</span><span class="result-value" id="env-winner">—</span></div>
+          </div>
+          <canvas id="env-chart" style="width:100%;height:280px;margin-top:12px;border-radius:8px;"></canvas>
+        </div>
+      </div></div>
+    </div>
+    <div class="tool-category">
+      <div class="tool-category-head"><span class="tool-category-badge">2</span><div><h3>Projeter</h3><p>Simulez votre avenir financier : capital, retraite, indépendance.</p></div></div>
+      <div class="tools-grid"><div class="tool-card" id="tc-compound">
         <div class="tool-card-header" role="button" tabindex="0" aria-expanded="false" aria-label="Ouvrir l'outil">
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><path d="M17 6h6v6"></path></svg></div>
           <div class="tool-card-info">
@@ -115,10 +242,85 @@
           </div>
           <div class="tool-note" id="comp-work-year"></div>
         </div>
-      </div>
-
-      <!-- 2. FIRE -->
-      <div class="tool-card" id="tc-fire">
+      </div><div class="tool-card" id="tc-plan40">
+        <div class="tool-card-header">
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+          <div class="tool-card-info">
+            <h3>Plan des 40 ans</h3>
+            <p>Votre plan retraite en 2 étapes : capital cible + chemin d'investissement</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div style="background:#eaf2fc;border-radius:10px;padding:14px;margin-bottom:12px">
+              <strong style="font-size:0.85rem">Phase 1 : Quel revenu mensuel souhaitez-vous à la retraite ?</strong>
+            </div>
+            <label>Revenu mensuel souhaité (brut)</label>
+            <input type="range" id="p40-income" min="500" max="3000" step="50" value="1500" style="width:100%">
+            <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--muted)">
+              <span>500 €</span><span id="p40-income-value" style="font-weight:700;color:var(--accent)">1 500 €/mois</span><span>3 000 €</span>
+            </div>
+            <div style="margin-top:10px">
+              <label>Taux de retrait annuel</label>
+              <div style="display:flex;gap:6px;flex-wrap:wrap" id="p40-rate-options">
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="3">3 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="3.5">3,5 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--accent);color:white;border:1.5px solid var(--accent)" data-rate="4">4 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="4.5">4,5 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="5">5 %</button>
+              </div>
+            </div>
+            <div style="margin-top:10px;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center;color:white">
+              <p style="font-size:0.75rem;color:#b8b8b8;margin:0 0 4px 0">Capital nécessaire</p>
+              <p style="font-size:1.5rem;font-weight:700;margin:0" id="p40-target">450 000 €</p>
+            </div>
+            <div style="background:#eaf2fc;border-radius:10px;padding:14px;margin:16px 0 12px">
+              <strong style="font-size:0.85rem">Phase 2 : Construisez votre chemin sur 25 ans</strong>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Capital de départ (€)</label><input type="number" id="p40-start" value="10000" min="0"></div>
+              <div><label>DCA mensuel (€)</label><input type="number" id="p40-dca" value="350" min="0"></div>
+            </div>
+            <div class="tool-form-row">
+              <div><label>Injection annuelle (€)</label><input type="number" id="p40-annual" value="0" min="0"></div>
+              <div><label>Rendement annualisé (%)</label><input type="number" id="p40-return" value="8" min="1" max="15" step="0.5"></div>
+            </div>
+            <button class="tool-btn" id="p40-calc">Calculer le plan</button>
+          </div>
+          <div class="tool-result" id="p40-result">
+            <div class="tool-result-item highlight"><span class="result-label">Capital 10 ans</span><span class="result-value" id="p40-y10">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Capital 20 ans</span><span class="result-value" id="p40-y20">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Capital 25 ans</span><span class="result-value" id="p40-y25">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Objectif</span><span class="result-value" id="p40-goal">—</span></div>
+          </div>
+          <div class="tool-note" id="p40-status"></div>
+        </div>
+      </div><div class="tool-card" id="tc-million">
+        <div class="tool-card-header">
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+          <div class="tool-card-info">
+            <h3>Chemin vers 1 million</h3>
+            <p>Combien de temps pour devenir millionnaire ?</p>
+          </div>
+          <span class="tool-card-chevron">▾</span>
+        </div>
+        <div class="tool-card-body">
+          <div class="tool-form">
+            <div class="tool-form-row">
+              <div><label>Capital actuel (€)</label><input type="number" id="mil-current" value="10000" min="0"></div>
+              <div><label>Mensualité (€)</label><input type="number" id="mil-monthly" value="500" min="0"></div>
+            </div>
+            <label>Rendement annuel (%)</label>
+            <input type="number" id="mil-rate" value="7" min="0" step="0.1">
+            <button class="tool-btn" id="mil-calc">Calculer</button>
+          </div>
+          <div class="tool-result" id="mil-result">
+            <div class="tool-result-item highlight"><span class="result-label">Années pour 1M</span><span class="result-value" id="mil-years">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Capital final</span><span class="result-value" id="mil-final">—</span></div>
+          </div>
+        </div>
+      </div><div class="tool-card" id="tc-fire">
         <div class="tool-card-header">
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
           <div class="tool-card-info">
@@ -154,10 +356,11 @@
             <div class="tool-result-item"><span class="result-label">Capital projeté</span><span class="result-value" id="fire-estimate">—</span></div>
           </div>
         </div>
-      </div>
-
-      <!-- 3. Fee Impact -->
-      <div class="tool-card" id="tc-fees">
+      </div></div>
+    </div>
+    <div class="tool-category">
+      <div class="tool-category-head"><span class="tool-category-badge">3</span><div><h3>Optimiser</h3><p>Réduisez les coûts et les fuites invisibles de votre patrimoine.</p></div></div>
+      <div class="tools-grid"><div class="tool-card" id="tc-fees">
         <div class="tool-card-header">
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
           <div class="tool-card-info">
@@ -186,76 +389,55 @@
           </div>
           <canvas id="fees-chart" style="width:100%;height:280px;margin-top:12px;border-radius:8px;"></canvas>
         </div>
-      </div>
-
-      <!-- 4. PEA vs AV vs CTO -->
-      <div class="tool-card" id="tc-env">
+      </div><div class="tool-card" id="tc-inflation">
         <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
           <div class="tool-card-info">
-            <h3>PEA vs AV vs CTO</h3>
-            <p>Comparez les enveloppes fiscales sur le long terme</p>
+            <h3>Inflation</h3>
+            <p>Ce que votre épargne vaudra vraiment dans 20 ans</p>
           </div>
           <span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
             <div class="tool-form-row">
-              <div><label>Capital initial (€)</label><input type="number" id="env-init" value="10000" min="0"></div>
-              <div><label>Mensualité (€)</label><input type="number" id="env-monthly" value="300" min="0"></div>
+              <div><label>Montant aujourd'hui (€)</label><input type="number" id="infl-amount" value="100000" min="0"></div>
+              <div><label>Taux d'inflation (%)</label><input type="number" id="infl-rate" value="2.5" min="0" step="0.1"></div>
             </div>
-            <div class="tool-form-row">
-              <div><label>Rendement (%)</label><input type="number" id="env-rate" value="7" min="0" step="0.1"></div>
-              <div><label>Durée (ans)</label><input type="number" id="env-years" value="20" min="1" max="50"></div>
-            </div>
-            <button class="tool-btn" id="env-calc">Comparer</button>
+            <label>Dans combien d'années ?</label>
+            <input type="number" id="infl-years" value="20" min="1" max="60">
+            <button class="tool-btn" id="infl-calc">Calculer</button>
           </div>
-          <div class="tool-result" id="env-result">
-            <div class="tool-result-item highlight"><span class="result-label">PEA</span><span class="result-value" id="env-pea">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Assurance-Vie</span><span class="result-value" id="env-av">—</span></div>
-            <div class="tool-result-item"><span class="result-label">CTO</span><span class="result-value" id="env-cto">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Gagnant</span><span class="result-value" id="env-winner">—</span></div>
+          <div class="tool-result" id="infl-result">
+            <div class="tool-result-item highlight"><span class="result-label">Pouvoir d'achat futur</span><span class="result-value" id="infl-future">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Perte de valeur</span><span class="result-value" id="infl-loss">—</span></div>
           </div>
-          <canvas id="env-chart" style="width:100%;height:280px;margin-top:12px;border-radius:8px;"></canvas>
         </div>
-      </div>
-
-      <!-- 5. Allocation -->
-      <div class="tool-card" id="tc-alloc">
+      </div><div class="tool-card" id="tc-consumption">
         <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
           <div class="tool-card-info">
-            <h3>Mon allocation</h3>
-            <p>Portefeuille recommandé selon votre profil de risque</p>
+            <h3>Consommation</h3>
+            <p>Combien pouvez-vous retirer chaque mois sur la durée choisie ?</p>
           </div>
           <span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
-            <label>Profil de risque</label>
-            <select id="alloc-profile">
-              <option value="offensif">Offensif (10-30 ans)</option>
-              <option value="equilibre">Équilibré (5-15 ans)</option>
-              <option value="defensif">Défensif (0-5 ans)</option>
-            </select>
             <div class="tool-form-row">
-              <div><label>Capital initial (€)</label><input type="number" id="alloc-init" value="5000" min="0"></div>
-              <div><label>Mensualité (€)</label><input type="number" id="alloc-monthly" value="300" min="0"></div>
+              <div><label>Capital (€)</label><input type="number" id="cons-capital" value="300000" min="0"></div>
+              <div><label>Rendement (%)</label><input type="number" id="cons-rate" value="4" min="0" step="0.1"></div>
             </div>
-            <button class="tool-btn" id="alloc-calc">Voir l'allocation</button>
+            <label>Durée de vie restante (ans)</label>
+            <input type="number" id="cons-years" value="30" min="1" max="60">
+            <button class="tool-btn" id="cons-calc">Calculer</button>
           </div>
-          <div class="tool-result" id="alloc-result">
-            <div class="tool-result-item"><span class="result-label">Nombre d'ETF</span><span class="result-value" id="alloc-count">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Performance</span><span class="result-value" id="alloc-perf">—</span></div>
-            <div class="tool-result-item"><span class="result-label">TER moyen</span><span class="result-value" id="alloc-ter">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Répartition</span><span class="result-value" id="alloc-pie">—</span></div>
+          <div class="tool-result" id="cons-result">
+            <div class="tool-result-item highlight"><span class="result-label">Dépense / mois</span><span class="result-value" id="cons-monthly">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Dépense / an</span><span class="result-value" id="cons-yearly">—</span></div>
           </div>
-          <div class="tool-result-full" id="alloc-etfs"></div>
         </div>
-      </div>
-
-      <!-- 6. Catch-up -->
-      <div class="tool-card" id="tc-catchup">
+      </div><div class="tool-card" id="tc-catchup">
         <div class="tool-card-header">
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
           <div class="tool-card-info">
@@ -283,110 +465,7 @@
             <div class="tool-result-item"><span class="result-label">Capital à la retraite</span><span class="result-value" id="catchup-final">—</span></div>
           </div>
         </div>
-      </div>
-
-      <!-- 7. Inflation -->
-      <div class="tool-card" id="tc-inflation">
-        <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-          <div class="tool-card-info">
-            <h3>Inflation</h3>
-            <p>Ce que votre épargne vaudra vraiment dans 20 ans</p>
-          </div>
-          <span class="tool-card-chevron">▾</span>
-        </div>
-        <div class="tool-card-body">
-          <div class="tool-form">
-            <div class="tool-form-row">
-              <div><label>Montant aujourd'hui (€)</label><input type="number" id="infl-amount" value="100000" min="0"></div>
-              <div><label>Taux d'inflation (%)</label><input type="number" id="infl-rate" value="2.5" min="0" step="0.1"></div>
-            </div>
-            <label>Dans combien d'années ?</label>
-            <input type="number" id="infl-years" value="20" min="1" max="60">
-            <button class="tool-btn" id="infl-calc">Calculer</button>
-          </div>
-          <div class="tool-result" id="infl-result">
-            <div class="tool-result-item highlight"><span class="result-label">Pouvoir d'achat futur</span><span class="result-value" id="infl-future">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Perte de valeur</span><span class="result-value" id="infl-loss">—</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. Path to 1M -->
-      <div class="tool-card" id="tc-million">
-        <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <div class="tool-card-info">
-            <h3>Chemin vers 1 million</h3>
-            <p>Combien de temps pour devenir millionnaire ?</p>
-          </div>
-          <span class="tool-card-chevron">▾</span>
-        </div>
-        <div class="tool-card-body">
-          <div class="tool-form">
-            <div class="tool-form-row">
-              <div><label>Capital actuel (€)</label><input type="number" id="mil-current" value="10000" min="0"></div>
-              <div><label>Mensualité (€)</label><input type="number" id="mil-monthly" value="500" min="0"></div>
-            </div>
-            <label>Rendement annuel (%)</label>
-            <input type="number" id="mil-rate" value="7" min="0" step="0.1">
-            <button class="tool-btn" id="mil-calc">Calculer</button>
-          </div>
-          <div class="tool-result" id="mil-result">
-            <div class="tool-result-item highlight"><span class="result-label">Années pour 1M</span><span class="result-value" id="mil-years">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Capital final</span><span class="result-value" id="mil-final">—</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. Consumption -->
-      <div class="tool-card" id="tc-consumption">
-        <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
-          <div class="tool-card-info">
-            <h3>Consommation</h3>
-            <p>Combien pouvez-vous retirer chaque mois sur la durée choisie ?</p>
-          </div>
-          <span class="tool-card-chevron">▾</span>
-        </div>
-        <div class="tool-card-body">
-          <div class="tool-form">
-            <div class="tool-form-row">
-              <div><label>Capital (€)</label><input type="number" id="cons-capital" value="300000" min="0"></div>
-              <div><label>Rendement (%)</label><input type="number" id="cons-rate" value="4" min="0" step="0.1"></div>
-            </div>
-            <label>Durée de vie restante (ans)</label>
-            <input type="number" id="cons-years" value="30" min="1" max="60">
-            <button class="tool-btn" id="cons-calc">Calculer</button>
-          </div>
-          <div class="tool-result" id="cons-result">
-            <div class="tool-result-item highlight"><span class="result-label">Dépense / mois</span><span class="result-value" id="cons-monthly">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Dépense / an</span><span class="result-value" id="cons-yearly">—</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10. Compare 2 ETFs -->
-      <div class="tool-card" id="tc-compare">
-        <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg></div>
-          <div class="tool-card-info">
-            <h3>Comparer 2 ETF</h3>
-            <p>Côte à côte : frais, risque, performance</p>
-          </div>
-          <span class="tool-card-chevron">▾</span>
-        </div>
-        <div class="tool-card-body">
-          <div class="tool-form">
-            <label>ISIN ETF 1</label>
-            <input type="text" id="cmp-isin1" placeholder="FR001400U5Q4" maxlength="12" style="text-transform:uppercase">
-            <label>ISIN ETF 2</label>
-            <input type="text" id="cmp-isin2" placeholder="IE00B4L5Y983" maxlength="12" style="text-transform:uppercase">
-            <button class="tool-btn" id="cmp-calc">Comparer</button>
-          </div>
-          <div class="tool-result-full" id="cmp-result" style="font-size:0.82rem;"></div>
-        </div>
-      </div>
+      </div></div>
     </div>
   </section>
 
@@ -518,7 +597,7 @@
       </div>
       <div class="etf-stats">
         <span><strong id="resultCount">0</strong> ETF trouvés</span>
-        <span id="dataUpdateBadge">Données : juillet 2026</span>
+        <span id="dataUpdateBadge">Données mises à jour le 15/09/2026</span>
       </div>
       <div class="etf-loader" id="etfLoader">
         <div class="etf-loader-spinner"></div>
@@ -546,6 +625,8 @@
   </section>
 
   <!-- FAQ -->
+  <!-- Derniers articles --> <section class="articles-section" id="articles">   <div class="section-head">     <h2>Dernières analyses</h2>     <a href="/blog" class="section-link">Tous les articles →</a>   </div>   <div class="articles-grid">     <a href="/blog/marche-du-18-09-2026-cac-40-s-p-500-etfs/" class="article-card"><span class="article-date">18/09/2026</span><h3>Marché du 18/09/2026 — CAC 40, S&amp;P 500, ETFs</h3><p>Les mouvements du jour et ce qu'ils signifient pour vos ETF.</p></a>     <a href="/blog/comment-construire-un-portefeuille-permanent-la-harry-browne-15-09/" class="article-card"><span class="article-date">15/09/2026</span><h3>Construire un portefeuille permanent à la Harry Browne</h3><p>L'allocation défensive qui traverse les cycles : or, actions, obligations, cash.</p></a>     <a href="/blog/l-impact-de-la-psychologie-sur-vos-d-cisions-d-investissement-14-09/" class="article-card"><span class="article-date">14/09/2026</span><h3>L'impact de la psychologie sur vos décisions d'investissement</h3><p>Biais comportementaux : comment ils vous coûtent de l'argent — et comment les contourner.</p></a>   </div> </section>
+  <!-- Pourquoi Alfred --> <section class="why-section" id="pourquoi">   <div class="section-head">     <h2>Pourquoi Alfred est différent</h2>     <p>Pas un énième comparateur : une plateforme pensée pour la décision.</p>   </div>   <div class="why-grid">     <div class="why-item"><strong>Un score décomposé et transparent</strong><p>Chaque note sur 100 s'explique critère par critère : frais, encours, liquidité, tracking error. Rien de caché.</p></div>     <div class="why-item"><strong>Des données sourcées et datées</strong><p>Chaque jeu de données affiche sa date de mise à jour et ses sources. Aucune donnée inventée, jamais.</p></div>     <div class="why-item"><strong>Gratuit, sans compte, sans piège</strong><p>Tous les outils sont libres d'accès. Aucune inscription, aucun email obligatoire, aucune revente de données.</p></div>     <div class="why-item"><strong>Pédagogie d'abord</strong><p>Alfred informe et outille. Il ne vend pas de conseil personnalisé : les décisions vous appartiennent.</p></div>   </div> </section>
   <section class="section container" id="faq">
     <div class="section-header">
       <h2>Questions fréquentes</h2>
@@ -620,6 +701,8 @@
   if(si)si.addEventListener("input",function(){s();setTimeout(n,400)});
 })();
 </script>
+  <script src="etf-data.min.js?v=5530291372" defer></script>
+  <script src="etf-scores.js?v=5530291372" defer></script>
   <script src="app.min.js?v=5526815120" defer></script>
 <script>document.addEventListener("click",function(e){var h=e.target.closest(".tool-card-header");if(h){var c=h.closest(".tool-card");if(c){c.classList.toggle("open")}}});</script>
 
@@ -938,5 +1021,8 @@ f.addEventListener('submit',function(e){
 
 
 <script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('headerNav');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});n.addEventListener('click',function(e){if(e.target.tagName=== 'A'){n.classList.remove('open');t.setAttribute('aria-expanded','false');}});})();</script>
+<script>
+function ouvrirCarte(id){var c=document.getElementById(id);if(!c)return;var h=c.querySelector('.tool-card-header');if(h&&!c.classList.contains('open')){c.classList.add('open');var chev=h.querySelector('.tool-card-chevron');if(chev)chev.textContent='▴';}setTimeout(function(){c.scrollIntoView({behavior:'smooth',block:'center'});},60);}
+</script>
 </body>
 </html>
