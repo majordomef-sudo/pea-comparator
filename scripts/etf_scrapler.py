@@ -1,4 +1,4 @@
-"""ETF Scrapler v2.4 - yfinance + Scrapling JustETF avec mapping ISIN → ticker"""
+"""ETF Scrapler v2.6 - yfinance + Scrapling JustETF avec mapping ISIN → ticker"""
 import json, re, os, time
 from datetime import datetime
 from scrapling import Fetcher
@@ -201,7 +201,7 @@ def fetch_fundamentals(isin):
     """Enrichit un ETF avec les fondamentaux justETF : encours, devise, dist/cap, date creation, indice, vol, replication."""
     try:
         f = Fetcher()
-        r = f.get(f"https://www.justetf.com/en/etf-profile.html?isin={isin}", timeout=15)
+        r = f.get(f"https://www.justetf.com/fr/etf-profile.html?isin={isin}", timeout=15)
         if r.status != 200:
             return {"error": f"HTTP {r.status}"}
         s = r.body.decode("utf-8", "ignore")
@@ -244,12 +244,17 @@ def fetch_fundamentals(isin):
         v = grab(tid)
         if v and v not in ("-", ""):
             result[key] = v
+    # Flag PEA - expose uniquement sur la fiche FRANCAISE justETF (par ISIN)
+    if 'data-testid="etf-profile-controls_pea-label"' in s:
+        result["peap"] = "Oui"
+    elif 'data-testid="etf-profile-header_etf-name"' in s:
+        result["peap"] = "Non"
     return result if result else {"error": "no data scraped"}
 
 
 def process_fundamentals(etf, idx, total):
     """Remplit encours, devise, distribution, date_creation, indice, vol, replication (un seul passage par ETF)."""
-    if etf.get("encours_mio"):
+    if etf.get("encours_mio") and etf.get("peap"):
         return False  # déjà enrichi
     isin = etf.get("isin", "")
     if isin[:2] in ("BG",):
@@ -261,7 +266,7 @@ def process_fundamentals(etf, idx, total):
         return False
     upd = []
     for k in ("encours_mio", "encours_devise", "devise", "distribution", "date_creation",
-              "indice", "volatilite", "replication", "repl_method", "emetteur_full", "domicile", "hedge"):
+              "indice", "volatilite", "replication", "repl_method", "emetteur_full", "domicile", "hedge", "peap"):
         if d.get(k) not in (None, "", "N/A", "?"):
             if etf.get(k) in (None, "", "N/A", "?"):
                 etf[k] = d[k]
@@ -316,8 +321,9 @@ def main():
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--specific", type=str)
     p.add_argument("--refresh-all", action="store_true")
+    p.add_argument("--peap", type=int, default=0, help="backfill PEA: N ETF sans peap (fiche FR)")
     args = p.parse_args()
-    print(f"ETF Scrapler v2.4 - {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"ETF Scrapler v2.6 - {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     etfs = load()
     print(f"  {len(etfs)} ETFs loaded")
     if args.specific:
@@ -332,6 +338,23 @@ def main():
         batch = missing if args.refresh_all else missing[:args.batch]
     count = 0
     # ---- Passe fondamentaux (encours, devise, dist/cap, date, indice, vol) ----
+    if args.peap and not args.specific:
+        missing = [e for e in etfs if e.get("isin", "")[:2] not in ("BG",) and not e.get("peap")]
+        print(f"  {len(missing)} ETF sans flag PEA (excl. BG)")
+        batch = missing[:args.peap]
+        count_peap = 0
+        for i, e in enumerate(batch):
+            if process_fundamentals(e, i + 1, len(batch)):
+                count_peap += 1
+            time.sleep(0.8)  # gentillesse justETF
+        print(f"PEAP done: {count_peap}/{len(batch)}")
+        if not args.dry_run and count_peap > 0:
+            save(etfs)
+            print("Saved to etf-data.js (peap)")
+        if args.build_min and not args.dry_run:
+            build_min()
+        return
+
     if args.fundamentals and not args.specific:
         missing = [e for e in etfs if e.get("isin", "")[:2] not in ("BG",) and not e.get("encours_mio")]
         print(f"  {len(missing)} ETF sans encours (excl. BG)")
