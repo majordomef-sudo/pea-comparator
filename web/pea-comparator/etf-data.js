@@ -1,5 +1,3 @@
-// Alfred Invest — données ETF (source unique, générée depuis etf-data.min.js prod)
-// 435 ETF — mise à jour 2026-09-19
 window.PEA_ETFS = [
   {
     "isin": "BG9000011163",
@@ -89,7 +87,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSH.DE",
+    "prix": "25.85",
+    "perf3": "92.5",
+    "perf1": "33.2"
   },
   {
     "isin": "BGSLOBI02187",
@@ -99,7 +101,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSH.DE",
+    "prix": "25.85",
+    "perf3": "92.5",
+    "perf1": "33.2"
   },
   {
     "isin": "BGSRBBE05183",
@@ -109,7 +115,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSH.DE",
+    "prix": "25.85",
+    "perf3": "92.5",
+    "perf1": "33.2"
   },
   {
     "isin": "DE0002635299",
@@ -119,7 +129,23 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSH.DE",
+    "prix": "25.85",
+    "perf3": "92.5",
+    "perf1": "33.2",
+    "encours_mio": 1424.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distributing",
+    "date_creation": "3 May 2005",
+    "indice": "STOXX® Europe Select Dividend 30",
+    "volatilite": "11.47%",
+    "replication": "Physical",
+    "repl_method": "Full replication",
+    "emetteur_full": "iShares",
+    "domicile": "Germany",
+    "hedge": "Currency unhedged"
   },
   {
     "isin": "DE0002635273",
@@ -129,7 +155,23 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSB.DE",
+    "prix": "23.0",
+    "perf3": "32.5",
+    "perf1": "8.2",
+    "encours_mio": 554.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distributing",
+    "date_creation": "4 April 2005",
+    "indice": "DivDAX®",
+    "volatilite": "13.91%",
+    "replication": "Physical",
+    "repl_method": "Full replication",
+    "emetteur_full": "iShares",
+    "domicile": "Germany",
+    "hedge": "Currency unhedged"
   },
   {
     "isin": "DE0002635281",
@@ -139,7 +181,23 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSG.DE",
+    "prix": "23.34",
+    "perf3": "79.4",
+    "perf1": "23.1",
+    "encours_mio": 623.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distributing",
+    "date_creation": "3 May 2005",
+    "indice": "EURO STOXX® Select Dividend 30",
+    "volatilite": "11.11%",
+    "replication": "Physical",
+    "repl_method": "Full replication",
+    "emetteur_full": "iShares",
+    "domicile": "Germany",
+    "hedge": "Currency unhedged"
   },
   {
     "isin": "DE0002635307",
@@ -149,7 +207,23 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSA.DE",
+    "prix": "63.96",
+    "perf3": "50.1",
+    "perf1": "20.1",
+    "encours_mio": 9510.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distributing",
+    "date_creation": "13 February 2004",
+    "indice": "STOXX® Europe 600",
+    "volatilite": "12.13%",
+    "replication": "Physical",
+    "repl_method": "Full replication",
+    "emetteur_full": "iShares",
+    "domicile": "Germany",
+    "hedge": "Currency unhedged"
   },
   {
     "isin": "DE0005933931",
@@ -159,7 +233,23 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXS1.DE",
+    "prix": "0.95",
+    "perf3": "52.0",
+    "perf1": "3.1",
+    "encours_mio": 8481.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Accumulating",
+    "date_creation": "27 December 2000",
+    "indice": "DAX®",
+    "volatilite": "15.71%",
+    "replication": "Physical",
+    "repl_method": "Full replication",
+    "emetteur_full": "iShares",
+    "domicile": "Germany",
+    "hedge": "Currency unhedged"
   },
   {
     "isin": "DE0005933949",
@@ -169,7 +259,23 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXW3.DE",
+    "prix": "54.92",
+    "perf3": "49.6",
+    "perf1": "26.2",
+    "encours_mio": 138.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distributing",
+    "date_creation": "27 December 2000",
+    "indice": "STOXX® Europe 600 Top 20",
+    "volatilite": "13.76%",
+    "replication": "Physical",
+    "repl_method": "Full replication",
+    "emetteur_full": "iShares",
+    "domicile": "Germany",
+    "hedge": "Currency unhedged"
   },
   {
     "isin": "DE0005933956",
@@ -179,7 +285,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXW1.DE",
+    "prix": "63.46",
+    "perf3": "55.0",
+    "perf1": "20.4"
   },
   {
     "isin": "DE0005933923",
@@ -189,7 +299,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXS3.DE",
+    "prix": "258.8",
+    "perf3": "10.1",
+    "perf1": "0.7"
   },
   {
     "isin": "DE0005933972",
@@ -199,7 +313,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXS2.DE",
+    "prix": "32.98",
+    "perf3": "11.8",
+    "perf1": "-2.9"
   },
   {
     "isin": "DE0005933980",
@@ -209,7 +327,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSC.DE",
+    "prix": "0.95",
+    "perf3": "51.9",
+    "perf1": "21.4"
   },
   {
     "isin": "DE0005933964",
@@ -219,7 +341,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXI1.DE",
+    "prix": "160.0",
+    "perf3": "37.7",
+    "perf1": "16.2"
   },
   {
     "isin": "DE0005933998",
@@ -229,7 +355,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSD.DE",
+    "prix": "66.93",
+    "perf3": "47.8",
+    "perf1": "16.3"
   },
   {
     "isin": "DE0006289309",
@@ -239,7 +369,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXX1.DE",
+    "prix": "28.73",
+    "perf3": "212.0",
+    "perf1": "49.2"
   },
   {
     "isin": "DE000A0D8Q07",
@@ -249,7 +383,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSI.DE",
+    "prix": "0.95",
+    "perf3": "55.6",
+    "perf1": "20.0"
   },
   {
     "isin": "DE000A0D8Q23",
@@ -259,7 +397,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXXX.DE",
+    "prix": "68.7",
+    "perf3": "121.3",
+    "perf1": "44.4"
   },
   {
     "isin": "DE000A0D8Q49",
@@ -269,7 +411,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXX5.DE",
+    "prix": "101.4",
+    "perf3": "45.2",
+    "perf1": "25.5"
   },
   {
     "isin": "DE000A0D8QZ7",
@@ -279,7 +425,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXSE.DE",
+    "prix": "0.95",
+    "perf3": "37.2",
+    "perf1": "14.7"
   },
   {
     "isin": "DE000A0F5UG3",
@@ -289,7 +439,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXXV.DE",
+    "prix": "23.17",
+    "perf3": "62.1",
+    "perf1": "18.2"
   },
   {
     "isin": "DE000A0F5UJ7",
@@ -299,7 +453,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV1.DE",
+    "prix": "40.26",
+    "perf3": "198.7",
+    "perf1": "51.1"
   },
   {
     "isin": "DE000A0F5UK5",
@@ -309,7 +467,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV6.DE",
+    "prix": "76.59",
+    "perf3": "52.3",
+    "perf1": "56.3"
   },
   {
     "isin": "DE000A0H0744",
@@ -319,7 +481,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXXW.DE",
+    "prix": "32.38",
+    "perf3": "68.8",
+    "perf1": "33.6"
   },
   {
     "isin": "DE000A0H08F7",
@@ -329,7 +495,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV8.DE",
+    "prix": "86.44",
+    "perf3": "44.1",
+    "perf1": "1.7"
   },
   {
     "isin": "DE000A0H08E0",
@@ -339,7 +509,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV7.DE",
+    "prix": "124.38",
+    "perf3": "8.5",
+    "perf1": "6.0"
   },
   {
     "isin": "DE000A0H08G5",
@@ -349,7 +523,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH2.DE",
+    "prix": "96.03",
+    "perf3": "65.5",
+    "perf1": "12.0"
   },
   {
     "isin": "DE000A0H08H3",
@@ -359,7 +537,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH3.DE",
+    "prix": "65.09",
+    "perf3": "-8.6",
+    "perf1": "5.6"
   },
   {
     "isin": "DE000A0H08J9",
@@ -369,7 +551,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH4.DE",
+    "prix": "116.78",
+    "perf3": "64.3",
+    "perf1": "13.8"
   },
   {
     "isin": "DE000A0H08K7",
@@ -379,7 +565,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH5.DE",
+    "prix": "54.37",
+    "perf3": "87.2",
+    "perf1": "17.6"
   },
   {
     "isin": "DE000A0H08L5",
@@ -389,7 +579,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH6.DE",
+    "prix": "32.8",
+    "perf3": "10.8",
+    "perf1": "-11.6"
   },
   {
     "isin": "DE000A0H08M3",
@@ -399,7 +593,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH1.DE",
+    "prix": "53.84",
+    "perf3": "78.1",
+    "perf1": "48.9"
   },
   {
     "isin": "DE000A0H08N1",
@@ -409,7 +607,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH7.DE",
+    "prix": "95.83",
+    "perf3": "-1.5",
+    "perf1": "2.3"
   },
   {
     "isin": "DE000A0H08P6",
@@ -419,7 +621,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH8.DE",
+    "prix": "46.3",
+    "perf3": "35.7",
+    "perf1": "15.5"
   },
   {
     "isin": "DE000A0H08Q4",
@@ -429,7 +635,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV3.DE",
+    "prix": "93.69",
+    "perf3": "37.0",
+    "perf1": "20.8"
   },
   {
     "isin": "DE000A0H08R2",
@@ -439,7 +649,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV2.DE",
+    "prix": "26.7",
+    "perf3": "58.8",
+    "perf1": "11.1"
   },
   {
     "isin": "DE000A0H08S0",
@@ -449,7 +663,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV9.DE",
+    "prix": "24.61",
+    "perf3": "18.0",
+    "perf1": "0.6"
   },
   {
     "isin": "DE000A0Q4R02",
@@ -459,7 +677,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH9.DE",
+    "prix": "59.11",
+    "perf3": "67.8",
+    "perf1": "32.5"
   },
   {
     "isin": "DE000A0Q4R28",
@@ -469,7 +691,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV5.DE",
+    "prix": "39.06",
+    "perf3": "-25.4",
+    "perf1": "-18.9"
   },
   {
     "isin": "DE000A0Q4R36",
@@ -479,7 +705,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXV4.DE",
+    "prix": "114.68",
+    "perf3": "13.3",
+    "perf1": "11.9"
   },
   {
     "isin": "DE000A0Q4R69",
@@ -489,7 +719,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXIA.DE",
+    "prix": "7.93",
+    "perf3": "53.7",
+    "perf1": "5.3"
   },
   {
     "isin": "DE000A2QP323",
@@ -499,7 +733,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXIB.DE",
+    "prix": "5.11",
+    "perf3": "11.8",
+    "perf1": "-2.8"
   },
   {
     "isin": "DE000A2QP331",
@@ -509,7 +747,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXIC.DE",
+    "prix": "7.13",
+    "perf3": "51.9",
+    "perf1": "3.1"
   },
   {
     "isin": "DE000A2QP372",
@@ -519,7 +761,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXI4.DE",
+    "prix": "4.44",
+    "perf3": "9.8",
+    "perf1": "0.6"
   },
   {
     "isin": "DE000A2QP349",
@@ -529,7 +775,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXID.DE",
+    "prix": "4.44",
+    "perf3": "9.8",
+    "perf1": "0.6"
   },
   {
     "isin": "DE000A2QP398",
@@ -539,7 +789,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXH0.DE",
+    "prix": "7.76",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "DE000A2QP380",
@@ -549,7 +803,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXI0.DE",
+    "prix": "7.76",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "DE000A2QP4B6",
@@ -559,7 +817,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXIE.DE",
+    "prix": "7.76",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "DE000A2QP4A8",
@@ -569,7 +831,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EXHG.DE",
+    "prix": "4.57",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "DE000ETF9074",
@@ -579,7 +845,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,30"
+    "stress5": "-22,30",
+    "ticker": "E907.DE",
+    "prix": "154.08",
+    "perf3": "11.1",
+    "perf1": "5.1"
   },
   {
     "isin": "DE000ETF9082",
@@ -589,7 +859,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,20"
+    "stress5": "-21,20",
+    "ticker": "E908.DE",
+    "prix": "26.95",
+    "perf3": "14.6",
+    "perf1": "-2.5"
   },
   {
     "isin": "DE000ETF9090",
@@ -599,7 +873,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,20"
+    "stress5": "-21,20",
+    "ticker": "E909.DE",
+    "prix": "51.72",
+    "perf3": "52.9",
+    "perf1": "8.2"
   },
   {
     "isin": "FR0000021842",
@@ -609,7 +887,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,30"
+    "stress5": "-18,30",
+    "ticker": "BEL.BR",
+    "prix": "86.35",
+    "perf3": "63.0",
+    "perf1": "26.5"
   },
   {
     "isin": "DE000ETF9603",
@@ -619,7 +901,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "E960.DE",
+    "prix": "65.04",
+    "perf3": "48.1",
+    "perf1": "19.5"
   },
   {
     "isin": "FR0007054358",
@@ -629,7 +915,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,70"
+    "stress5": "-20,70",
+    "ticker": "LYSX.DE",
+    "prix": "71.52",
+    "perf3": "52.5",
+    "perf1": "20.4"
   },
   {
     "isin": "FR0007052782",
@@ -639,7 +929,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,80"
+    "stress5": "-19,80",
+    "ticker": "LYY.DE",
+    "prix": "463.4",
+    "perf3": "47.4",
+    "perf1": "21.3"
   },
   {
     "isin": "FR0007056841",
@@ -649,7 +943,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,00"
+    "stress5": "-18,00",
+    "ticker": "DJAM.DE",
+    "prix": "463.4",
+    "perf3": "47.4",
+    "perf1": "21.3"
   },
   {
     "isin": "FR0007075494",
@@ -659,7 +957,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-33,80"
+    "stress5": "-33,80",
+    "ticker": "L8IF.DE",
+    "prix": "214.29",
+    "perf3": "52.5",
+    "perf1": "28.2"
   },
   {
     "isin": "FR0010010827",
@@ -669,7 +971,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,40"
+    "stress5": "-22,40",
+    "ticker": "LYMK.DE",
+    "prix": "214.29",
+    "perf3": "52.5",
+    "perf1": "28.2"
   },
   {
     "isin": "FR0010245514",
@@ -679,7 +985,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-26,20"
+    "stress5": "-26,20",
+    "ticker": "LYY4.DE",
+    "prix": "214.29",
+    "perf3": "52.5",
+    "perf1": "28.2"
   },
   {
     "isin": "FR0010251744",
@@ -689,7 +999,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,20"
+    "stress5": "-19,20",
+    "ticker": "LYXIB.MC",
+    "prix": "206.7",
+    "perf3": "134.4",
+    "perf1": "40.4"
   },
   {
     "isin": "FR0010261198",
@@ -699,7 +1013,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "ticker": "LYY5.DE",
+    "prix": "246.2",
+    "perf3": "47.5",
+    "perf1": "20.4"
   },
   {
     "isin": "FR0010315770",
@@ -709,7 +1027,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,20"
+    "stress5": "-17,20",
+    "ticker": "LYYA.DE",
+    "prix": "422.22",
+    "perf3": "58.7",
+    "perf1": "22.0"
   },
   {
     "isin": "FR0010361683",
@@ -719,7 +1041,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,20"
+    "stress5": "-17,20",
+    "ticker": "LYMD.DE",
+    "prix": "25.23",
+    "perf3": "4.9",
+    "perf1": "-9.4"
   },
   {
     "isin": "FR0010375766",
@@ -729,7 +1055,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,90"
+    "stress5": "-18,90",
+    "ticker": "NK4G.DE",
+    "prix": "24200.0",
+    "perf3": "52.5",
+    "perf1": "15.8"
   },
   {
     "isin": "FR0010377028",
@@ -739,7 +1069,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-29,00"
+    "stress5": "-29,00",
+    "ticker": "LYJPN.SW",
+    "prix": "24200.0",
+    "perf3": "52.5",
+    "perf1": "15.8"
   },
   {
     "isin": "FR0010405431",
@@ -749,7 +1083,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-24,20"
+    "stress5": "-24,20",
+    "ticker": "LYMH.DE",
+    "prix": "2.8",
+    "perf3": "114.3",
+    "perf1": "29.3"
   },
   {
     "isin": "FR0010429068",
@@ -759,7 +1097,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,90"
+    "stress5": "-17,90",
+    "ticker": "LYM7.DE",
+    "prix": "18.24",
+    "perf3": "58.8",
+    "perf1": "35.2"
   },
   {
     "isin": "FR0010435297",
@@ -769,7 +1111,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,40"
+    "stress5": "-18,40",
+    "ticker": "LNY4.DE",
+    "prix": "114.15",
+    "perf3": "8.9",
+    "perf1": "2.1"
   },
   {
     "isin": "FR0010510800",
@@ -779,7 +1125,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "L8I3.DE",
+    "prix": "114.15",
+    "perf3": "8.9",
+    "perf1": "2.1"
   },
   {
     "isin": "FR0010524777",
@@ -789,7 +1139,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,70"
+    "stress5": "-21,70",
+    "ticker": "LYM9.DE",
+    "prix": "42.72",
+    "perf3": "26.7",
+    "perf1": "52.1"
   },
   {
     "isin": "FR0010527275",
@@ -799,7 +1153,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-14,90"
+    "stress5": "-14,90",
+    "ticker": "LYM8.DE",
+    "prix": "70.86",
+    "perf3": "26.9",
+    "perf1": "5.0"
   },
   {
     "isin": "FR0010655704",
@@ -809,7 +1167,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,80"
+    "stress5": "-22,80",
+    "ticker": "X13J.DE",
+    "prix": "443.55",
+    "perf3": "50.3",
+    "perf1": "2.8"
   },
   {
     "isin": "FR0010655712",
@@ -819,7 +1181,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,90"
+    "stress5": "-21,90",
+    "ticker": "CG1G.DE",
+    "prix": "443.55",
+    "perf3": "50.3",
+    "perf1": "2.8"
   },
   {
     "isin": "FR0010655746",
@@ -829,7 +1195,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,20"
+    "stress5": "-19,20",
+    "ticker": "AMES.DE",
+    "prix": "506.0",
+    "perf3": "44.3",
+    "perf1": "nan"
   },
   {
     "isin": "FR0010717090",
@@ -839,7 +1209,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-16,00"
+    "stress5": "-16,00",
+    "ticker": "18M2.DE",
+    "prix": "213.8",
+    "perf3": "44.3",
+    "perf1": "21.8"
   },
   {
     "isin": "FR0010790980",
@@ -849,7 +1223,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "AE50.DE",
+    "prix": "152.42",
+    "perf3": "45.5",
+    "perf1": "23.1"
   },
   {
     "isin": "FR0010756114",
@@ -859,7 +1237,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,00"
+    "stress5": "-18,00",
+    "ticker": "ACM9.DE",
+    "prix": "720.2",
+    "perf3": "58.3",
+    "perf1": "21.9"
   },
   {
     "isin": "FR0010821819",
@@ -869,7 +1251,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-15,80"
+    "stress5": "-15,80",
+    "ticker": "540H.DE",
+    "prix": "418.15",
+    "perf3": "29.0",
+    "perf1": "10.4"
   },
   {
     "isin": "FR0010930644",
@@ -879,7 +1265,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-26,00"
+    "stress5": "-26,00",
+    "ticker": "AMEE.DE",
+    "prix": "724.1",
+    "perf3": "115.6",
+    "perf1": "43.7"
   },
   {
     "isin": "FR0011036268",
@@ -889,7 +1279,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "2INVE.MC",
+    "prix": "0.28",
+    "perf3": "-81.3",
+    "perf1": "-50.6"
   },
   {
     "isin": "FR0011042753",
@@ -899,7 +1293,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IBEXA.MC",
+    "prix": "81.5",
+    "perf3": "354.7",
+    "perf1": "86.1"
   },
   {
     "isin": "FR0011475078",
@@ -909,7 +1307,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-30,30"
+    "stress5": "-30,30",
+    "ticker": "JPNH.DE",
+    "prix": "333.9",
+    "perf3": "92.9",
+    "perf1": "39.8"
   },
   {
     "isin": "FR0011550177",
@@ -939,7 +1341,8 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
-    "stress5": "-17,94"
+    "stress5": "-17,94",
+    "ticker": "DJAB.DE"
   },
   {
     "isin": "FR0011550672",
@@ -949,7 +1352,8 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
-    "stress5": "-17,94"
+    "stress5": "-17,94",
+    "ticker": "DJAB.DE"
   },
   {
     "isin": "FR0011550680",
@@ -959,7 +1363,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
-    "stress5": "-22,13"
+    "stress5": "-22,13",
+    "ticker": "DJAB.DE",
+    "prix": "170.92",
+    "perf3": "20.8",
+    "perf1": "22.6"
   },
   {
     "isin": "FR0011660927",
@@ -969,7 +1377,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80"
+    "stress5": "-17,80",
+    "ticker": "DJAB.DE",
+    "prix": "170.92",
+    "perf3": "20.8",
+    "perf1": "22.6"
   },
   {
     "isin": "FR0011669845",
@@ -979,7 +1391,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80"
+    "stress5": "-17,80",
+    "ticker": "WLDU.DE",
+    "prix": "170.92",
+    "perf3": "20.8",
+    "perf1": "22.6"
   },
   {
     "isin": "FR0011720911",
@@ -989,7 +1405,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-23,40"
+    "stress5": "-23,40",
+    "ticker": "CNAA.DE",
+    "prix": "170.92",
+    "perf3": "20.8",
+    "perf1": "22.6"
   },
   {
     "isin": "FR0011758085",
@@ -999,7 +1419,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,10"
+    "stress5": "-20,10",
+    "ticker": "ITAMID.DE",
+    "prix": "150.14\n=======",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "FR0011857234",
@@ -1009,7 +1433,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,70"
+    "stress5": "-22,70",
+    "ticker": "MD4X.DE",
+    "prix": "150.14\n=======",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "FR0012399772",
@@ -1019,7 +1447,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,80"
+    "stress5": "-20,80",
+    "ticker": "NK4B.DE",
+    "prix": "210.0",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "FR0012399806",
@@ -1029,7 +1461,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,50"
+    "stress5": "-20,50",
+    "ticker": "LYQ4.DE",
+    "prix": "210.0",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "FR0012399731",
@@ -1039,7 +1475,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,70"
+    "stress5": "-20,70",
+    "ticker": "MSEC.SW",
+    "prix": "210.0",
+    "perf3": "nan",
+    "perf1": "nan"
   },
   {
     "isin": "FR0012739431",
@@ -1049,7 +1489,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
-    "stress5": "-20,87"
+    "stress5": "-20,87",
+    "ticker": "OBLI.PA",
+    "prix": "9.77",
+    "perf3": "11.0",
+    "perf1": "2.1"
   },
   {
     "isin": "FR0012740983",
@@ -1059,7 +1503,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
-    "stress5": "-20,87"
+    "stress5": "-20,87",
+    "ticker": "OBLI.PA",
+    "prix": "9.77",
+    "perf3": "11.0",
+    "perf1": "2.1"
   },
   {
     "isin": "FR0013041530",
@@ -1069,7 +1517,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
-    "stress5": "-21,35"
+    "stress5": "-21,35",
+    "ticker": "OBLI.PA",
+    "prix": "9.77",
+    "perf3": "11.0",
+    "perf1": "2.1"
   },
   {
     "isin": "FR0013346681",
@@ -1079,7 +1531,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "OBLI.PA",
+    "prix": "9.77",
+    "perf3": "11.0",
+    "perf1": "2.1"
   },
   {
     "isin": "FR0013380607",
@@ -1089,7 +1545,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-31,80"
+    "stress5": "-31,80",
+    "ticker": "VOOP.DE",
+    "prix": "248.1",
+    "perf3": "57.2",
+    "perf1": "29.0"
   },
   {
     "isin": "FR0013209921",
@@ -1099,7 +1559,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-33,70"
+    "stress5": "-33,70",
+    "ticker": "WLXU.DE",
+    "prix": "248.1",
+    "perf3": "57.2",
+    "perf1": "29.0"
   },
   {
     "isin": "FR0013411980",
@@ -1109,7 +1573,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-26,70"
+    "stress5": "-26,70",
+    "ticker": "PTPXE.PA",
+    "prix": "37.72",
+    "perf3": "57.2",
+    "perf1": "29.0"
   },
   {
     "isin": "FR0013412004",
@@ -1119,7 +1587,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,60"
+    "stress5": "-19,60",
+    "ticker": "PALAT.PA",
+    "prix": "28.24",
+    "perf3": "29.1",
+    "perf1": "39.0"
   },
   {
     "isin": "FR0013412012",
@@ -1129,7 +1601,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,60"
+    "stress5": "-20,60",
+    "ticker": "PAASI.PA",
+    "prix": "37.82",
+    "perf3": "76.8",
+    "perf1": "40.1"
   },
   {
     "isin": "FR0013412038",
@@ -1139,7 +1615,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "ticker": "PCEU.PA",
+    "prix": "39.74",
+    "perf3": "51.3",
+    "perf1": "20.3"
   },
   {
     "isin": "FR0013412020",
@@ -1149,7 +1629,11 @@ window.PEA_ETFS = [
     "perf5": "3,70",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80"
+    "stress5": "-17,80",
+    "ticker": "PANX.PA",
+    "prix": "77.35",
+    "perf3": "91.7",
+    "perf1": "31.9"
   },
   {
     "isin": "FR0013412269",
@@ -1159,7 +1643,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-28,80"
+    "stress5": "-28,80",
+    "ticker": "PANX.PA",
+    "prix": "77.35",
+    "perf3": "91.7",
+    "perf1": "31.9"
   },
   {
     "isin": "FR0013412285",
@@ -1169,7 +1657,11 @@ window.PEA_ETFS = [
     "perf5": "15,50",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,70"
+    "stress5": "-21,70",
+    "ticker": "P500H.PA",
+    "prix": "46.76",
+    "perf3": "58.2",
+    "perf1": "16.3"
   },
   {
     "isin": "FR0013412293",
@@ -1179,7 +1671,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,40"
+    "stress5": "-22,40",
+    "ticker": "P500H.PA",
+    "prix": "46.76",
+    "perf3": "58.2",
+    "perf1": "16.3"
   },
   {
     "isin": "FR0013416716",
@@ -1199,7 +1695,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-14,90"
+    "stress5": "-14,90",
+    "ticker": "WATC.DE",
+    "prix": "75.36",
+    "perf3": "70.0",
+    "perf1": "21.3"
   },
   {
     "isin": "FR0014002H76",
@@ -1209,7 +1709,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,40"
+    "stress5": "-22,40",
+    "ticker": "MIBA.DE",
+    "prix": "75.36",
+    "perf3": "70.0",
+    "perf1": "21.3"
   },
   {
     "isin": "FR0014003FW1",
@@ -1219,7 +1723,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,60"
+    "stress5": "-21,60",
+    "ticker": "PABV.DE",
+    "prix": "75.36",
+    "perf3": "70.0",
+    "perf1": "21.3"
   },
   {
     "isin": "FR0014002CG3",
@@ -1229,7 +1737,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,70"
+    "stress5": "-21,70",
+    "ticker": "NRJC.DE",
+    "prix": "16.7",
+    "perf3": "61.4",
+    "perf1": "17.2"
   },
   {
     "isin": "FR0014003IY1",
@@ -1239,7 +1751,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,20"
+    "stress5": "-17,20",
+    "ticker": "BUN1.DE",
+    "prix": "16.7",
+    "perf3": "61.4",
+    "perf1": "17.2"
   },
   {
     "isin": "FR0014003N93",
@@ -1249,7 +1765,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80"
+    "stress5": "-17,80",
+    "ticker": "WLDHC.PA",
+    "prix": "16.7",
+    "perf3": "61.4",
+    "perf1": "17.2"
   },
   {
     "isin": "FR001400KE06",
@@ -1259,7 +1779,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-13,90"
+    "stress5": "-13,90",
+    "ticker": "COSE.PA",
+    "prix": "11.18",
+    "perf1": "7.9"
   },
   {
     "isin": "FR001400KH45",
@@ -1269,7 +1792,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,10"
+    "stress5": "-20,10",
+    "ticker": "USVE.PA",
+    "prix": "14.3",
+    "perf1": "25.2"
   },
   {
     "isin": "FR001400ZGO4",
@@ -1279,7 +1805,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80"
+    "stress5": "-17,80",
+    "ticker": "PEMS.PA",
+    "prix": "7.2",
+    "perf1": "35.0"
   },
   {
     "isin": "FR0014015ZN2",
@@ -1289,7 +1818,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,70"
+    "stress5": "-22,70",
+    "ticker": "MD4C.DE",
+    "prix": "5.63",
+    "perf3": "58.5",
+    "perf1": "21.2"
   },
   {
     "isin": "IE00000EF730",
@@ -1299,7 +1832,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EUEE.AS",
+    "prix": "7.58",
+    "perf3": "58.5",
+    "perf1": "21.2"
   },
   {
     "isin": "IE00002ZKAP0",
@@ -1309,7 +1846,11 @@ window.PEA_ETFS = [
     "perf5": "19,50",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-17,50"
+    "stress5": "-17,50",
+    "ticker": "JREZ.DE",
+    "prix": "45.4",
+    "perf3": "58.5",
+    "perf1": "23.6"
   },
   {
     "isin": "IE00004PGEY9",
@@ -1319,7 +1860,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-19,00"
+    "stress5": "-19,00",
+    "ticker": "JREZ.DE",
+    "prix": "45.4",
+    "perf3": "58.5",
+    "perf1": "23.6"
   },
   {
     "isin": "IE0000BNORX6",
@@ -1329,7 +1874,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "JEEA.DE",
+    "prix": "26.8"
   },
   {
     "isin": "IE0001JH5CB4",
@@ -1339,7 +1886,10 @@ window.PEA_ETFS = [
     "perf5": "17,88",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-17,20"
+    "stress5": "-17,20",
+    "ticker": "EUDF.DE",
+    "prix": "31.34",
+    "perf1": "5.5"
   },
   {
     "isin": "IE0002A3VE77",
@@ -1349,7 +1899,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "-17,21"
+    "stress5": "-17,21",
+    "ticker": "EUDF.DE",
+    "prix": "31.34",
+    "perf1": "5.5"
   },
   {
     "isin": "IE0002Z12PN9",
@@ -1359,7 +1912,10 @@ window.PEA_ETFS = [
     "perf5": "19,15",
     "emetteur": "",
     "pays": "NL",
-    "stress5": "-18,10"
+    "stress5": "-18,10",
+    "ticker": "EUDF.DE",
+    "prix": "31.34",
+    "perf1": "5.5"
   },
   {
     "isin": "IE0002Y8CX98",
@@ -1369,7 +1925,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-24,16"
+    "stress5": "-24,16",
+    "ticker": "EUDF.DE",
+    "prix": "31.34",
+    "perf1": "5.5"
   },
   {
     "isin": "IE0003UN5CT1",
@@ -1379,7 +1938,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "JESE.DE",
+    "prix": "32.02",
+    "perf1": "20.8"
   },
   {
     "isin": "IE0005HNE843",
@@ -1389,7 +1951,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,89"
+    "stress5": "-16,89",
+    "ticker": "VYEU.DE",
+    "prix": "30.44"
   },
   {
     "isin": "IE00064TWYK9",
@@ -1399,7 +1963,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "JEEP.DE",
+    "prix": "25.82",
+    "perf1": "20.9"
   },
   {
     "isin": "IE00067X7JX0",
@@ -1409,7 +1976,10 @@ window.PEA_ETFS = [
     "perf5": "20,49",
     "emetteur": "Invesco",
     "pays": "IE",
-    "stress5": "-20,44"
+    "stress5": "-20,44",
+    "ticker": "MCTA.DE",
+    "prix": "6.69",
+    "perf1": "20.9"
   },
   {
     "isin": "IE0006PTRUI8",
@@ -1419,7 +1989,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "MCTA.DE",
+    "prix": "6.69",
+    "perf1": "20.9"
   },
   {
     "isin": "IE0007WLHX89",
@@ -1429,7 +2002,11 @@ window.PEA_ETFS = [
     "perf5": "19,14",
     "emetteur": "",
     "pays": "NL",
-    "stress5": "-16,80"
+    "stress5": "-16,80",
+    "ticker": "EVSD.DE",
+    "prix": "19.42",
+    "perf3": "46.4",
+    "perf1": "35.0"
   },
   {
     "isin": "IE00082MOBL9",
@@ -1439,7 +2016,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "17,81"
+    "stress5": "17,81",
+    "ticker": "EVSD.DE",
+    "prix": "19.42",
+    "perf3": "46.4",
+    "perf1": "35.0"
   },
   {
     "isin": "IE0008470928",
@@ -1449,7 +2030,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EUN1.DE",
+    "prix": "55.58",
+    "perf3": "46.4",
+    "perf1": "35.0"
   },
   {
     "isin": "IE0008471009",
@@ -1459,7 +2044,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EUN2.DE",
+    "prix": "64.54",
+    "perf3": "52.7",
+    "perf1": "20.4"
   },
   {
     "isin": "IE0008F9FCT2",
@@ -1469,7 +2058,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IEUC.SW",
+    "prix": "6.9",
+    "perf1": "18.2"
   },
   {
     "isin": "IE0008GRJRO8",
@@ -1479,7 +2071,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-27,20"
+    "stress5": "-27,20",
+    "ticker": "FTEG.DE",
+    "prix": "22.55"
   },
   {
     "isin": "IE0009F7UB30",
@@ -1489,7 +2083,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "21,70"
+    "stress5": "21,70",
+    "ticker": "FTEG.DE",
+    "prix": "22.55",
+    "perf3": "30.0",
+    "perf1": "12.2"
   },
   {
     "isin": "IE000AGFZM58",
@@ -1499,7 +2097,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-15,07"
+    "stress5": "-15,07",
+    "ticker": "HIEU.DE",
+    "prix": "22.55",
+    "perf3": "30.0",
+    "perf1": "12.2"
   },
   {
     "isin": "IE000CPG9HG3",
@@ -1509,7 +2111,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "21,30"
+    "stress5": "21,30",
+    "ticker": "3DVY.DE",
+    "prix": "22.55",
+    "perf3": "30.0",
+    "perf1": "12.2"
   },
   {
     "isin": "IE000CR424L6",
@@ -1519,7 +2125,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CBUD.DE",
+    "prix": "5.65",
+    "perf3": "30.0",
+    "perf1": "12.2"
   },
   {
     "isin": "IE000DB78H45",
@@ -1529,7 +2139,10 @@ window.PEA_ETFS = [
     "perf5": "20,49",
     "emetteur": "Invesco",
     "pays": "IE",
-    "stress5": "-20,44"
+    "stress5": "-20,44",
+    "ticker": "JRZC.SW",
+    "prix": "33.05",
+    "perf1": "22.0"
   },
   {
     "isin": "IE000DXIJHF2",
@@ -1539,7 +2152,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-18,90"
+    "stress5": "-18,90",
+    "ticker": "JRZC.SW",
+    "prix": "33.05",
+    "perf1": "22.0"
   },
   {
     "isin": "IE000E9XXE77",
@@ -1549,7 +2165,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "MCTD.DE",
+    "prix": "6.37",
+    "perf1": "20.8"
   },
   {
     "isin": "IE000FOSCLU1",
@@ -1559,7 +2178,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "5IF0.DE",
+    "prix": "5.31",
+    "perf1": "5.1"
   },
   {
     "isin": "IE000HH3SU50",
@@ -1569,7 +2191,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "6RF0.DE",
+    "prix": "5.31",
+    "perf1": "5.1"
   },
   {
     "isin": "IE000IAXNM41",
@@ -1579,7 +2204,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "DFNC.DE",
+    "prix": "5.31",
+    "perf1": "5.1"
   },
   {
     "isin": "IE000IMGE5W5",
@@ -1589,7 +2217,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Franklin Templeton",
     "pays": "IE",
-    "stress5": "-12,98"
+    "stress5": "-12,98",
+    "ticker": "QDGH.DE",
+    "prix": "8.43",
+    "perf3": "74.3",
+    "perf1": "23.8"
   },
   {
     "isin": "IE000JEZ2VB3",
@@ -1599,7 +2231,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "QDGH.DE",
+    "prix": "8.43",
+    "perf3": "74.3",
+    "perf1": "23.8"
   },
   {
     "isin": "IE000LXEN6X4",
@@ -1609,7 +2245,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ES50.DE",
+    "prix": "8.43",
+    "perf3": "74.3",
+    "perf1": "23.8"
   },
   {
     "isin": "IE000MAO75G5",
@@ -1619,7 +2259,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CEBZ.DE",
+    "prix": "6.86",
+    "perf1": "21.5"
   },
   {
     "isin": "IE000OV4XWA3",
@@ -1629,7 +2272,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-100,00"
+    "stress5": "-100,00",
+    "ticker": "NTSZ.DE",
+    "prix": "28.35",
+    "perf1": "20.7"
   },
   {
     "isin": "IE000PYEKKW0",
@@ -1639,7 +2285,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CEML.DE",
+    "prix": "5.71",
+    "perf1": "20.7"
   },
   {
     "isin": "IE000QOLLXO2",
@@ -1649,7 +2298,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "JSDE.DE",
+    "prix": "30.76",
+    "perf1": "20.7"
   },
   {
     "isin": "IE000SAXJ1M1",
@@ -1659,7 +2311,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "15,16"
+    "stress5": "15,16",
+    "ticker": "SY7D.DE",
+    "prix": "14.87",
+    "perf1": "13.1"
   },
   {
     "isin": "IE000ST40PX8",
@@ -1669,7 +2324,10 @@ window.PEA_ETFS = [
     "perf5": "21,69",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "-28,20"
+    "stress5": "-28,20",
+    "ticker": "ECTA.DE",
+    "prix": "6.13",
+    "perf1": "20.4"
   },
   {
     "isin": "IE000U3XZQN5",
@@ -1679,7 +2337,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ECTA.DE",
+    "prix": "6.13",
+    "perf1": "20.4"
   },
   {
     "isin": "IE000VCBWFL8",
@@ -1689,7 +2350,10 @@ window.PEA_ETFS = [
     "perf5": "19,61",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-16,80"
+    "stress5": "-16,80",
+    "ticker": "ED3F.DE",
+    "prix": "15.79",
+    "perf1": "0.6"
   },
   {
     "isin": "IE000VKFA2D2",
@@ -1699,7 +2363,10 @@ window.PEA_ETFS = [
     "perf5": "19,15",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-17,50"
+    "stress5": "-17,50",
+    "ticker": "ED3F.DE",
+    "prix": "15.79",
+    "perf1": "0.6"
   },
   {
     "isin": "IE000WRQ9RR1",
@@ -1709,7 +2376,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "47,85"
+    "stress5": "47,85",
+    "ticker": "ED3F.DE",
+    "prix": "15.79",
+    "perf1": "0.6"
   },
   {
     "isin": "IE000XERHYF0",
@@ -1719,7 +2389,10 @@ window.PEA_ETFS = [
     "perf5": "22,89",
     "emetteur": "",
     "pays": "NL",
-    "stress5": "-21,80"
+    "stress5": "-21,80",
+    "ticker": "ECTD.DE",
+    "prix": "5.82",
+    "perf1": "19.2"
   },
   {
     "isin": "IE000YASIPS3",
@@ -1729,7 +2402,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "IE",
-    "stress5": "-19,45"
+    "stress5": "-19,45",
+    "ticker": "ECTD.DE",
+    "prix": "5.82",
+    "perf3": "51.4",
+    "perf1": "19.2"
   },
   {
     "isin": "IE000ZQF1PE1",
@@ -1739,7 +2416,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ECTD.DE",
+    "prix": "5.82",
+    "perf3": "51.4",
+    "perf1": "19.2"
   },
   {
     "isin": "IE00B02KXL92",
@@ -1749,7 +2430,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IQQM.DE",
+    "prix": "89.7",
+    "perf3": "51.4",
+    "perf1": "18.6"
   },
   {
     "isin": "IE00B02KXM00",
@@ -1759,7 +2444,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IQQS.DE",
+    "prix": "53.11",
+    "perf3": "32.2",
+    "perf1": "16.3"
   },
   {
     "isin": "IE00B0M63284",
@@ -1769,7 +2458,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IQQP.DE",
+    "prix": "30.45",
+    "perf3": "30.2",
+    "perf1": "1.3"
   },
   {
     "isin": "IE00B14X4N27",
@@ -1779,7 +2472,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IQQU.DE",
+    "prix": "55.29",
+    "perf3": "45.0",
+    "perf1": "19.1"
   },
   {
     "isin": "IE00B1XNH568",
@@ -1789,7 +2486,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "2B7V.DE",
+    "prix": "40.38",
+    "perf3": "48.6",
+    "perf1": "20.3"
   },
   {
     "isin": "IE00B1YZSC51",
@@ -1799,7 +2500,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IQQY.DE",
+    "prix": "40.38",
+    "perf3": "48.6",
+    "perf1": "20.3"
   },
   {
     "isin": "IE00B23D8X81",
@@ -1809,7 +2514,11 @@ window.PEA_ETFS = [
     "perf5": "23,12",
     "emetteur": "Invesco",
     "pays": "IE",
-    "stress5": "-17,97"
+    "stress5": "-17,97",
+    "ticker": "SXRJ.DE",
+    "prix": "365.85",
+    "perf3": "39.3",
+    "perf1": "11.6"
   },
   {
     "isin": "IE00B3VWMM18",
@@ -1819,7 +2528,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SXRJ.DE",
+    "prix": "365.85",
+    "perf3": "39.3",
+    "perf1": "11.6"
   },
   {
     "isin": "IE00B4K48X80",
@@ -1829,7 +2542,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EUNK.DE",
+    "prix": "104.56",
+    "perf3": "48.6",
+    "perf1": "20.4"
   },
   {
     "isin": "IE00B4K6B022",
@@ -1839,7 +2556,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-21,59"
+    "stress5": "-21,59",
+    "ticker": "H4ZA.DE",
+    "prix": "67.16",
+    "perf3": "56.6",
+    "perf1": "20.4"
   },
   {
     "isin": "IE00B4M7GH52",
@@ -1849,7 +2570,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IBCJ.DE",
+    "prix": "34.0",
+    "perf3": "106.5",
+    "perf1": "33.2"
   },
   {
     "isin": "IE00B52VJ196",
@@ -1859,7 +2584,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IUSK.DE",
+    "prix": "77.13",
+    "perf3": "23.7",
+    "perf1": "10.1"
   },
   {
     "isin": "IE00B53L4X51",
@@ -1869,7 +2598,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SXRY.DE",
+    "prix": "258.4",
+    "perf3": "104.9",
+    "perf1": "34.5"
   },
   {
     "isin": "IE00B53L3W79",
@@ -1879,7 +2612,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SXRT.DE",
+    "prix": "244.8",
+    "perf3": "52.7",
+    "perf1": "20.4"
   },
   {
     "isin": "IE00B53QG562",
@@ -1889,7 +2626,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SXR7.DE",
+    "prix": "243.95",
+    "perf3": "54.0",
+    "perf1": "20.5"
   },
   {
     "isin": "IE00B5BD5K76",
@@ -1899,7 +2640,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-17,46"
+    "stress5": "-17,46",
+    "ticker": "H4ZE.DE",
+    "prix": "22.32",
+    "perf3": "51.1",
+    "perf1": "20.1"
   },
   {
     "isin": "IE00B86MWN23",
@@ -1909,7 +2654,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "EUN0.DE",
+    "prix": "74.51",
+    "perf3": "37.8",
+    "perf1": "11.2"
   },
   {
     "isin": "IE00B8X9NY41",
@@ -1919,7 +2668,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "59,70"
+    "stress5": "59,70",
+    "ticker": "FTGE.DE",
+    "prix": "65.32",
+    "perf3": "73.9",
+    "perf1": "25.3"
   },
   {
     "isin": "IE00B910VR50",
@@ -1929,7 +2682,11 @@ window.PEA_ETFS = [
     "perf5": "20,32",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-19,00"
+    "stress5": "-19,00",
+    "ticker": "IS3H.DE",
+    "prix": "79.91",
+    "perf3": "68.1",
+    "perf1": "20.3"
   },
   {
     "isin": "IE00BCLWRD08",
@@ -1939,7 +2696,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IS3H.DE",
+    "prix": "79.91",
+    "perf3": "68.1",
+    "perf1": "20.3"
   },
   {
     "isin": "IE00BCLWRF22",
@@ -1949,7 +2710,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IS3G.DE",
+    "prix": "77.33",
+    "perf3": "54.0",
+    "perf1": "20.8"
   },
   {
     "isin": "IE00BDF16007",
@@ -1959,7 +2724,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-14,89"
+    "stress5": "-14,89",
+    "ticker": "EEIP.DE",
+    "prix": "25.3",
+    "perf3": "40.7",
+    "perf1": "11.6"
   },
   {
     "isin": "IE00BDF16114",
@@ -1969,7 +2738,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-15,78"
+    "stress5": "-15,78",
+    "ticker": "WTD7.DE",
+    "prix": "25.3",
+    "perf3": "40.7",
+    "perf1": "11.6"
   },
   {
     "isin": "IE00BDGN9Z19",
@@ -1979,7 +2752,11 @@ window.PEA_ETFS = [
     "perf5": "17,42",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-21,70"
+    "stress5": "-21,70",
+    "ticker": "FEUD.DE",
+    "prix": "10.15",
+    "perf3": "57.6",
+    "perf1": "22.0"
   },
   {
     "isin": "IE00BF2B0L69",
@@ -1989,7 +2766,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "UBS",
     "pays": "IE",
-    "stress5": "-12,98"
+    "stress5": "-12,98",
+    "ticker": "FEUD.DE",
+    "prix": "10.15",
+    "perf3": "57.6",
+    "perf1": "22.0"
   },
   {
     "isin": "IE00BF2FL590",
@@ -1999,7 +2780,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "20,50"
+    "stress5": "20,50",
+    "ticker": "FEUD.DE",
+    "prix": "10.15",
+    "perf3": "57.6",
+    "perf1": "22.0"
   },
   {
     "isin": "IE00BF450720",
@@ -2009,7 +2794,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "DMFC.SW",
+    "prix": "10.15",
+    "perf3": "57.6",
+    "perf1": "22.0"
   },
   {
     "isin": "IE00BF4G7183",
@@ -2019,7 +2808,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "JREE.DE",
+    "prix": "55.96",
+    "perf3": "46.5",
+    "perf1": "21.2"
   },
   {
     "isin": "IE00BFD26097",
@@ -2029,7 +2822,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "21,30"
+    "stress5": "21,30",
+    "ticker": "IPXE.DE",
+    "prix": "11.19",
+    "perf3": "55.5",
+    "perf1": "20.0"
   },
   {
     "isin": "IE00BFMNHK08",
@@ -2039,7 +2836,11 @@ window.PEA_ETFS = [
     "perf5": "18,24",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-17,20"
+    "stress5": "-17,20",
+    "ticker": "SLMA.DE",
+    "prix": "11.19",
+    "perf3": "55.5",
+    "perf1": "20.0"
   },
   {
     "isin": "IE00BFNM3B99",
@@ -2049,7 +2850,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SLMA.DE",
+    "prix": "11.19",
+    "perf3": "55.5",
+    "perf1": "20.0"
   },
   {
     "isin": "IE00BFNM3C07",
@@ -2059,7 +2864,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SLMB.DE",
+    "prix": "9.13",
+    "perf3": "55.5",
+    "perf1": "20.0"
   },
   {
     "isin": "IE00BFNM3D14",
@@ -2069,7 +2878,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "10.98",
+    "perf3": "51.5",
+    "perf1": "19.5"
   },
   {
     "isin": "IE00BFNM3F38",
@@ -2079,7 +2891,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.94",
+    "perf3": "51.4",
+    "perf1": "19.6"
   },
   {
     "isin": "IE00BFWFPX50",
@@ -2089,7 +2904,10 @@ window.PEA_ETFS = [
     "perf5": "22,28",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-24,60"
+    "stress5": "-24,60",
+    "prix": "9.53",
+    "perf3": "61.3",
+    "perf1": "23.4"
   },
   {
     "isin": "IE00BFXR5V83",
@@ -2099,7 +2917,10 @@ window.PEA_ETFS = [
     "perf5": "19,00",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "-18,00"
+    "stress5": "-18,00",
+    "prix": "9.53",
+    "perf3": "61.3",
+    "perf1": "23.4"
   },
   {
     "isin": "IE00BG0J9Y53",
@@ -2109,7 +2930,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "9.53",
+    "perf3": "61.3",
+    "perf1": "23.4"
   },
   {
     "isin": "IE00BG13YJ64",
@@ -2119,7 +2943,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "10.48",
+    "perf3": "72.9",
+    "perf1": "19.6"
   },
   {
     "isin": "IE00BG13YG34",
@@ -2129,7 +2956,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.19",
+    "perf3": "29.1",
+    "perf1": "15.0"
   },
   {
     "isin": "IE00BG13YK79",
@@ -2139,7 +2969,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "7.48",
+    "perf3": "26.8",
+    "perf1": "8.5"
   },
   {
     "isin": "IE00BG13YH41",
@@ -2149,7 +2982,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.53",
+    "perf3": "73.9",
+    "perf1": "31.6"
   },
   {
     "isin": "IE00BG13YL86",
@@ -2159,7 +2995,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.73",
+    "perf3": "66.1",
+    "perf1": "24.5"
   },
   {
     "isin": "IE00BG13YZ23",
@@ -2169,7 +3008,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IPRE.DE",
+    "prix": "11.21",
+    "perf3": "67.2",
+    "perf1": "21.2"
   },
   {
     "isin": "IE00BGDPWW94",
@@ -2179,7 +3022,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IPRE.DE",
+    "prix": "8.02",
+    "perf3": "26.4",
+    "perf1": "12.0"
   },
   {
     "isin": "IE00BGDQ0L74",
@@ -2189,7 +3036,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IPRE.DE",
+    "prix": "4.92",
+    "perf3": "34.5",
+    "perf1": "2.6"
   },
   {
     "isin": "IE00BGV5VM45",
@@ -2199,7 +3050,10 @@ window.PEA_ETFS = [
     "perf5": "19,22",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-18,60"
+    "stress5": "-18,60",
+    "prix": "8.97",
+    "perf3": "81.4",
+    "perf1": "38.1"
   },
   {
     "isin": "IE00BHZPHZ28",
@@ -2209,7 +3063,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.97",
+    "perf3": "81.4",
+    "perf1": "38.1"
   },
   {
     "isin": "IE00BHZPJ015",
@@ -2219,7 +3076,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "10.37",
+    "perf3": "54.1",
+    "perf1": "19.5"
   },
   {
     "isin": "IE00BHZPJ676",
@@ -2229,7 +3089,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "7.06",
+    "perf3": "44.5",
+    "perf1": "17.4"
   },
   {
     "isin": "IE00BHZPJ783",
@@ -2239,7 +3102,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "9.76",
+    "perf3": "49.0",
+    "perf1": "20.3"
   },
   {
     "isin": "IE00BK5H8015",
@@ -2249,7 +3115,10 @@ window.PEA_ETFS = [
     "perf5": "19,36",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-17,00"
+    "stress5": "-17,00",
+    "prix": "12.52",
+    "perf3": "69.0",
+    "perf1": "22.3"
   },
   {
     "isin": "IE00BKBF6616",
@@ -2259,7 +3128,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "12.52",
+    "perf3": "69.0",
+    "perf1": "22.3"
   },
   {
     "isin": "IE00BKLTRN76",
@@ -2269,7 +3141,10 @@ window.PEA_ETFS = [
     "perf5": "18,61",
     "emetteur": "UBS",
     "pays": "IE",
-    "stress5": "-18,00"
+    "stress5": "-18,00",
+    "prix": "8.92",
+    "perf3": "35.3",
+    "perf1": "13.3"
   },
   {
     "isin": "IE00BKSBGT50",
@@ -2279,7 +3154,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "FIL (Fidelity)",
     "pays": "IE",
-    "stress5": "-17,50"
+    "stress5": "-17,50",
+    "prix": "8.92",
+    "perf3": "35.3",
+    "perf1": "13.3"
   },
   {
     "isin": "IE00BKVL7D31",
@@ -2289,7 +3167,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.92",
+    "perf3": "35.3",
+    "perf1": "13.3"
   },
   {
     "isin": "IE00BKWQ0D84",
@@ -2389,7 +3270,10 @@ window.PEA_ETFS = [
     "perf5": "17,02",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-14,90"
+    "stress5": "-14,90",
+    "prix": "21.41",
+    "perf3": "50.5",
+    "perf1": "23.8"
   },
   {
     "isin": "IE00BKWQ0P07",
@@ -2399,7 +3283,11 @@ window.PEA_ETFS = [
     "perf5": "17,93",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-17,10"
+    "stress5": "-17,10",
+    "ticker": "HSXU.DE",
+    "prix": "21.41",
+    "perf3": "50.5",
+    "perf1": "23.8"
   },
   {
     "isin": "IE00BKWQ0Q14",
@@ -2409,7 +3297,11 @@ window.PEA_ETFS = [
     "perf5": "19,26",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "HSXU.DE",
+    "prix": "21.41",
+    "perf3": "50.5",
+    "perf1": "23.8"
   },
   {
     "isin": "IE00BKY55W78",
@@ -2419,7 +3311,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "HSXU.DE",
+    "prix": "21.41",
+    "perf3": "50.5",
+    "perf1": "23.8"
   },
   {
     "isin": "IE00BKY58625",
@@ -2429,7 +3325,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "HSXU.DE",
+    "prix": "17.08",
+    "perf3": "30.5",
+    "perf1": "22.0"
   },
   {
     "isin": "IE00BL6K8C82",
@@ -2439,7 +3339,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CBUA.DE",
+    "prix": "7.26",
+    "perf3": "41.9",
+    "perf1": "17.0"
   },
   {
     "isin": "IE00BL6K8D99",
@@ -2449,7 +3353,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "7.29",
+    "perf3": "46.3",
+    "perf1": "14.3"
   },
   {
     "isin": "IE00BMDBMG37",
@@ -2459,7 +3366,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "150.42",
+    "perf3": "30.4",
+    "perf1": "9.8"
   },
   {
     "isin": "IE00BMDPBY65",
@@ -2469,7 +3379,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Franklin Templeton",
     "pays": "IE",
-    "stress5": "-16,13"
+    "stress5": "-16,13",
+    "ticker": "ESIS.DE",
+    "prix": "6.23",
+    "perf3": "15.0",
+    "perf1": "10.6"
   },
   {
     "isin": "IE00BMW42181",
@@ -2479,7 +3393,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ESIS.DE",
+    "prix": "6.23",
+    "perf3": "15.0",
+    "perf1": "10.6"
   },
   {
     "isin": "IE00BMW42074",
@@ -2489,7 +3407,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ESIS.DE",
+    "prix": "5.15",
+    "perf3": "7.0",
+    "perf1": "6.5"
   },
   {
     "isin": "IE00BMW42520",
@@ -2499,7 +3421,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "8.17",
+    "perf3": "67.5",
+    "perf1": "11.2"
   },
   {
     "isin": "IE00BMW42298",
@@ -2509,7 +3434,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "5.08",
+    "perf3": "-12.6",
+    "perf1": "-7.9"
   },
   {
     "isin": "IE00BMW42306",
@@ -2519,7 +3447,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ESIE.DE",
+    "prix": "14.43",
+    "perf3": "124.6",
+    "perf1": "31.0"
   },
   {
     "isin": "IE00BMW42413",
@@ -2529,7 +3461,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ESIE.DE",
+    "prix": "9.55",
+    "perf3": "68.4",
+    "perf1": "48.3"
   },
   {
     "isin": "IE00BMW42637",
@@ -2539,7 +3475,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "ESIE.DE",
+    "prix": "13.56",
+    "perf3": "61.0",
+    "perf1": "51.4"
   },
   {
     "isin": "IE00BMYDM919",
@@ -2549,7 +3489,11 @@ window.PEA_ETFS = [
     "perf5": "24,41",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "-18,30"
+    "stress5": "-18,30",
+    "ticker": "AW11.DE",
+    "prix": "20.44",
+    "perf3": "52.0",
+    "perf1": "22.5"
   },
   {
     "isin": "IE00BN4PXC48",
@@ -2559,7 +3503,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "UBS",
     "pays": "IE",
-    "stress5": "-17,00"
+    "stress5": "-17,00",
+    "ticker": "AW11.DE",
+    "prix": "20.44",
+    "perf3": "52.0",
+    "perf1": "22.5"
   },
   {
     "isin": "IE00BNC1G699",
@@ -2569,7 +3517,11 @@ window.PEA_ETFS = [
     "perf5": "19,53",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-22,50"
+    "stress5": "-22,50",
+    "ticker": "HPAE.DE",
+    "prix": "24.42",
+    "perf3": "42.5",
+    "perf1": "17.2"
   },
   {
     "isin": "IE00BNKF6C99",
@@ -2579,7 +3531,11 @@ window.PEA_ETFS = [
     "perf5": "20,15",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "HPAE.DE",
+    "prix": "24.42",
+    "perf3": "42.5",
+    "perf1": "17.2"
   },
   {
     "isin": "IE00BP2C0316",
@@ -2589,7 +3545,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-17,37"
+    "stress5": "-17,37",
+    "ticker": "HPAE.DE",
+    "prix": "24.42",
+    "perf3": "42.5",
+    "perf1": "17.2"
   },
   {
     "isin": "IE00BQN1K562",
@@ -2599,7 +3559,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "1034.9",
+    "perf3": "28.5",
+    "perf1": "12.2"
   },
   {
     "isin": "IE00BQN1K786",
@@ -2609,7 +3572,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "1356.0",
+    "perf3": "70.5",
+    "perf1": "16.4"
   },
   {
     "isin": "IE00BQN1KC32",
@@ -2619,7 +3585,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "967.2",
+    "perf3": "41.1",
+    "perf1": "12.0"
   },
   {
     "isin": "IE00BQN1K901",
@@ -2629,7 +3598,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "1174.8",
+    "perf3": "73.2",
+    "perf1": "28.0"
   },
   {
     "isin": "IE00BQZJBX31",
@@ -2639,7 +3611,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-15,26"
+    "stress5": "-15,26",
+    "prix": "1405.4",
+    "perf3": "37.2",
+    "perf1": "20.5"
   },
   {
     "isin": "IE00BQZJC527",
@@ -2649,7 +3624,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,06"
+    "stress5": "-16,06",
+    "prix": "1849.6",
+    "perf3": "24.2",
+    "perf1": "6.0"
   },
   {
     "isin": "IE00BSPLC298",
@@ -2659,7 +3637,10 @@ window.PEA_ETFS = [
     "perf5": "13,82",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "949.85",
+    "perf3": "42.2",
+    "perf1": "18.9"
   },
   {
     "isin": "IE00BSPLC306",
@@ -2669,7 +3650,10 @@ window.PEA_ETFS = [
     "perf5": "23,43",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "prix": "949.85",
+    "perf3": "42.2",
+    "perf1": "18.9"
   },
   {
     "isin": "IE00BVDPJP67",
@@ -2679,7 +3663,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SXR9.DE",
+    "prix": "949.85",
+    "perf3": "42.2",
+    "perf1": "18.9"
   },
   {
     "isin": "IE00BVXBH163",
@@ -2689,7 +3677,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,42"
+    "stress5": "-16,42",
+    "ticker": "SXR9.DE",
+    "prix": "31.73",
+    "perf3": "44.2",
+    "perf1": "17.8"
   },
   {
     "isin": "IE00BWK1SP74",
@@ -2699,7 +3691,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SXR9.DE",
+    "prix": "10.17",
+    "perf3": "44.8",
+    "perf1": "16.6"
   },
   {
     "isin": "IE00BWZN1T31",
@@ -2709,7 +3705,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "14.8",
+    "perf3": "61.8",
+    "perf1": "23.2"
   },
   {
     "isin": "IE00BYQCZQ89",
@@ -2719,7 +3718,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-17,11"
+    "stress5": "-17,11",
+    "prix": "1827.7",
+    "perf3": "32.8",
+    "perf1": "14.8"
   },
   {
     "isin": "IE00BYSX4176",
@@ -2729,7 +3731,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "FIL (Fidelity)",
     "pays": "IE",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "HEDD.SW",
+    "prix": "42.83",
+    "perf3": "43.3",
+    "perf1": "17.3"
   },
   {
     "isin": "IE00BYQCZP72",
@@ -2739,7 +3745,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,36"
+    "stress5": "-16,36",
+    "ticker": "HEDD.SW",
+    "prix": "42.83",
+    "perf3": "43.3",
+    "perf1": "17.3"
   },
   {
     "isin": "IE00BYQCZX56",
@@ -2749,7 +3759,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,68"
+    "stress5": "-16,68",
+    "ticker": "HEDD.SW",
+    "prix": "31.96",
+    "perf3": "41.1",
+    "perf1": "16.2"
   },
   {
     "isin": "IE00BYQCZT11",
@@ -2759,7 +3773,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,43"
+    "stress5": "-16,43",
+    "ticker": "HEDD.SW",
+    "prix": "28.59",
+    "perf3": "29.2",
+    "perf1": "13.3"
   },
   {
     "isin": "IE00BYSX4283",
@@ -2769,7 +3787,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "FIL (Fidelity)",
     "pays": "IE",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "prix": "11.95",
+    "perf3": "66.4",
+    "perf1": "22.5"
   },
   {
     "isin": "IE00BYSX4408",
@@ -2779,7 +3800,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "11.95",
+    "perf3": "66.4",
+    "perf1": "22.5"
   },
   {
     "isin": "IE00BYTH5487",
@@ -2789,7 +3813,11 @@ window.PEA_ETFS = [
     "perf5": "13,42",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CEUD.DE",
+    "prix": "11.95",
+    "perf3": "66.4",
+    "perf1": "22.5"
   },
   {
     "isin": "IE00BYXPXK00",
@@ -2799,7 +3827,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CEUD.DE",
+    "prix": "11.95",
+    "perf3": "66.4",
+    "perf1": "22.5"
   },
   {
     "isin": "IE00BYXZ2585",
@@ -2809,7 +3841,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CEUD.DE",
+    "prix": "8.71",
+    "perf3": "43.4",
+    "perf1": "19.6"
   },
   {
     "isin": "IE00BYYHSM20",
@@ -2819,7 +3855,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "7.18",
+    "perf3": "43.4",
+    "perf1": "14.3"
   },
   {
     "isin": "IE00BZ0PKT83",
@@ -2829,7 +3868,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IBC0.DE",
+    "prix": "15.93",
+    "perf3": "70.5",
+    "perf1": "23.1"
   },
   {
     "isin": "IE00BZ0PKS76",
@@ -2839,7 +3882,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IBC0.DE",
+    "prix": "17.32",
+    "perf3": "67.1",
+    "perf1": "20.8"
   },
   {
     "isin": "IE00BZ0PKV06",
@@ -2849,7 +3896,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "IBC0.DE",
+    "prix": "13.15",
+    "perf3": "74.9",
+    "perf1": "27.6"
   },
   {
     "isin": "IE00BZ4BMM98",
@@ -2859,7 +3910,11 @@ window.PEA_ETFS = [
     "perf5": "19,05",
     "emetteur": "Invesco",
     "pays": "IE",
-    "stress5": "-15,96"
+    "stress5": "-15,96",
+    "ticker": "LYY7.DE",
+    "prix": "22.06",
+    "perf3": "21.0",
+    "perf1": "13.0"
   },
   {
     "isin": "IE00BZ56SY76",
@@ -2869,7 +3924,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-17,34"
+    "stress5": "-17,34",
+    "ticker": "LYY7.DE",
+    "prix": "22.06",
+    "perf3": "21.0",
+    "perf1": "13.0"
   },
   {
     "isin": "IE00BZ56TQ67",
@@ -2879,7 +3938,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,95"
+    "stress5": "-16,95",
+    "ticker": "LYY7.DE",
+    "prix": "28.72",
+    "perf3": "22.7",
+    "perf1": "12.7"
   },
   {
     "isin": "LU0252633754",
@@ -2889,7 +3952,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,80"
+    "stress5": "-21,80",
+    "ticker": "LYY7.DE",
+    "prix": "228.35",
+    "perf3": "99.9",
+    "perf1": "4.7"
   },
   {
     "isin": "LU0252634307",
@@ -2899,7 +3966,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "LYY8.DE",
+    "prix": "265.0",
+    "perf3": "99.9",
+    "perf1": "3.7"
   },
   {
     "isin": "LU0274209237",
@@ -2919,7 +3990,10 @@ window.PEA_ETFS = [
     "perf5": "21,59",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-23,40"
+    "stress5": "-23,40",
+    "prix": "789.45",
+    "perf3": "-26.6",
+    "perf1": "-3.8"
   },
   {
     "isin": "LU0274211480",
@@ -2929,7 +4003,10 @@ window.PEA_ETFS = [
     "perf5": "21,77",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-23,20"
+    "stress5": "-23,20",
+    "prix": "789.45",
+    "perf3": "-26.6",
+    "perf1": "-3.8"
   },
   {
     "isin": "LU0274212538",
@@ -2939,7 +4016,10 @@ window.PEA_ETFS = [
     "perf5": "28,63",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-24,00"
+    "stress5": "-24,00",
+    "prix": "789.45",
+    "perf3": "-26.6",
+    "perf1": "-3.8"
   },
   {
     "isin": "LU0292095535",
@@ -2949,7 +4029,10 @@ window.PEA_ETFS = [
     "perf5": "19,43",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-18,80"
+    "stress5": "-18,80",
+    "prix": "789.45",
+    "perf3": "-26.6",
+    "perf1": "-3.8"
   },
   {
     "isin": "LU0292106241",
@@ -2959,7 +4042,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "789.45",
+    "perf3": "-26.6",
+    "perf1": "-3.8"
   },
   {
     "isin": "LU0292106753",
@@ -2969,7 +4055,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "445.2",
+    "perf3": "-27.6",
+    "perf1": "-17.3"
   },
   {
     "isin": "LU0322250712",
@@ -2979,7 +4068,10 @@ window.PEA_ETFS = [
     "perf5": "31,14",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-22,70"
+    "stress5": "-22,70",
+    "prix": "24190.0",
+    "perf3": "87.5",
+    "perf1": "-1.8"
   },
   {
     "isin": "LU0322253906",
@@ -2989,7 +4081,10 @@ window.PEA_ETFS = [
     "perf5": "20,24",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-21,40"
+    "stress5": "-21,40",
+    "prix": "24190.0",
+    "perf3": "87.5",
+    "perf1": "-1.8"
   },
   {
     "isin": "LU0328475792",
@@ -2999,7 +4094,10 @@ window.PEA_ETFS = [
     "perf5": "19,12",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-17,90"
+    "stress5": "-17,90",
+    "prix": "24190.0",
+    "perf3": "87.5",
+    "perf1": "-1.8"
   },
   {
     "isin": "LU0380865021",
@@ -3009,7 +4107,10 @@ window.PEA_ETFS = [
     "perf5": "22,05",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-23,40"
+    "stress5": "-23,40",
+    "prix": "24190.0",
+    "perf3": "87.5",
+    "perf1": "-1.8"
   },
   {
     "isin": "LU0411075376",
@@ -3019,7 +4120,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "24190.0",
+    "perf3": "87.5",
+    "perf1": "-1.8"
   },
   {
     "isin": "LU0599612842",
@@ -3029,7 +4133,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "308.8",
+    "perf3": "45.7",
+    "perf1": "9.8"
   },
   {
     "isin": "LU0599613147",
@@ -3039,7 +4146,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "MFDD.DE",
+    "prix": "155.9",
+    "perf3": "40.3",
+    "perf1": "13.8"
   },
   {
     "isin": "LU0838782315",
@@ -3049,7 +4160,10 @@ window.PEA_ETFS = [
     "perf5": "20,16",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-23,20"
+    "stress5": "-23,20",
+    "ticker": "MFDD.DE",
+    "prix": "250.5",
+    "perf1": "20.1"
   },
   {
     "isin": "LU0846194776",
@@ -3059,7 +4173,10 @@ window.PEA_ETFS = [
     "perf5": "20,11",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-21,90"
+    "stress5": "-21,90",
+    "ticker": "MFDD.DE",
+    "prix": "250.5",
+    "perf1": "20.1"
   },
   {
     "isin": "LU0908501132",
@@ -3069,7 +4186,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,50"
+    "stress5": "-19,50",
+    "ticker": "MFDD.DE",
+    "prix": "250.5",
+    "perf3": "49.6",
+    "perf1": "20.1"
   },
   {
     "isin": "LU0908500753",
@@ -3079,7 +4200,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,90"
+    "stress5": "-17,90",
+    "ticker": "LYP6.DE",
+    "prix": "317.15",
+    "perf3": "49.6",
+    "perf1": "21.4"
   },
   {
     "isin": "LU0908501058",
@@ -3089,7 +4214,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,50"
+    "stress5": "-19,50",
+    "ticker": "LGQG.DE",
+    "prix": "366.95",
+    "perf3": "49.6",
+    "perf1": "20.6"
   },
   {
     "isin": "LU0959210781",
@@ -3099,7 +4228,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,10"
+    "stress5": "-16,10",
+    "prix": "14.0",
+    "perf3": "49.6",
+    "perf1": "13.3"
   },
   {
     "isin": "LU0959210278",
@@ -3109,7 +4241,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,10"
+    "stress5": "-16,10",
+    "prix": "141.6",
+    "perf3": "53.6",
+    "perf1": "13.3"
   },
   {
     "isin": "LU1127514245",
@@ -3189,7 +4324,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-18,96"
+    "stress5": "-18,96",
+    "prix": "123.9",
+    "perf3": "52.4",
+    "perf1": "20.8"
   },
   {
     "isin": "LU1377382368",
@@ -3199,7 +4337,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "STXH.DE",
+    "prix": "123.9",
+    "perf3": "52.4",
+    "perf1": "20.8"
   },
   {
     "isin": "LU1377382442",
@@ -3209,7 +4351,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "STXH.DE",
+    "prix": "123.9",
+    "perf3": "52.4",
+    "perf1": "20.8"
   },
   {
     "isin": "LU1437015735",
@@ -3219,7 +4365,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "ticker": "STXH.DE",
+    "prix": "123.9",
+    "perf3": "52.4",
+    "perf1": "20.8"
   },
   {
     "isin": "LU1574142243",
@@ -3229,7 +4379,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "STXH.DE",
+    "prix": "166.78",
+    "perf1": "20.6"
   },
   {
     "isin": "LU1598688189",
@@ -3239,7 +4392,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,60"
+    "stress5": "-18,60",
+    "ticker": "LGWT.DE",
+    "prix": "214.25",
+    "perf3": "57.6",
+    "perf1": "14.5"
   },
   {
     "isin": "LU1598689153",
@@ -3249,7 +4406,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,70"
+    "stress5": "-18,70",
+    "ticker": "LGWU.DE",
+    "prix": "438.9",
+    "perf3": "57.6",
+    "perf1": "14.1"
   },
   {
     "isin": "LU1598690169",
@@ -3259,7 +4420,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,60"
+    "stress5": "-18,60",
+    "ticker": "LGWS.DE",
+    "prix": "192.0",
+    "perf3": "57.6",
+    "perf1": "27.4"
   },
   {
     "isin": "LU1602144575",
@@ -3269,7 +4434,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,80"
+    "stress5": "-18,80",
+    "prix": "417.15",
+    "perf3": "57.6",
+    "perf1": "28.3"
   },
   {
     "isin": "LU1646360971",
@@ -3279,7 +4447,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,10"
+    "stress5": "-19,10",
+    "prix": "82.82",
+    "perf3": "59.9",
+    "perf1": "20.0"
   },
   {
     "isin": "LU1646361276",
@@ -3289,7 +4460,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,10"
+    "stress5": "-19,10",
+    "prix": "18.94",
+    "perf3": "59.6",
+    "perf1": "20.1"
   },
   {
     "isin": "LU1655103486",
@@ -3299,7 +4473,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "prix": "195.5",
+    "perf3": "36.5",
+    "perf1": "15.8"
   },
   {
     "isin": "LU1681040223",
@@ -3309,7 +4486,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "prix": "162.93",
+    "perf3": "49.2",
+    "perf1": "19.4"
   },
   {
     "isin": "LU1681041460",
@@ -3319,7 +4499,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,70"
+    "stress5": "-19,70",
+    "prix": "151.08",
+    "perf3": "76.0",
+    "perf1": "18.4"
   },
   {
     "isin": "LU1681041627",
@@ -3329,7 +4512,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-13,90"
+    "stress5": "-13,90",
+    "prix": "167.8",
+    "perf3": "37.0",
+    "perf1": "10.7"
   },
   {
     "isin": "LU1681041973",
@@ -3339,7 +4525,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,10"
+    "stress5": "-14,10",
+    "prix": "246.15",
+    "perf3": "57.5",
+    "perf1": "19.5"
   },
   {
     "isin": "LU1681041890",
@@ -3349,7 +4538,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,50"
+    "stress5": "-16,50",
+    "prix": "122.58",
+    "perf3": "23.1",
+    "perf1": "13.2"
   },
   {
     "isin": "LU1681042435",
@@ -3359,7 +4551,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,30"
+    "stress5": "-24,30",
+    "prix": "364.1",
+    "perf3": "27.6",
+    "perf1": "13.0"
   },
   {
     "isin": "LU1681042518",
@@ -3369,7 +4564,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,50"
+    "stress5": "-17,50",
+    "prix": "469.25",
+    "perf3": "78.2",
+    "perf1": "28.1"
   },
   {
     "isin": "LU1681042948",
@@ -3379,7 +4577,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,00"
+    "stress5": "-22,00",
+    "ticker": "X13Z.DE",
+    "prix": "919.95",
+    "perf3": "56.4",
+    "perf1": "19.0"
   },
   {
     "isin": "LU1681042864",
@@ -3389,7 +4591,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,60"
+    "stress5": "-22,60",
+    "ticker": "X13Z.DE",
+    "prix": "806.88",
+    "perf3": "54.4",
+    "perf1": "19.6"
   },
   {
     "isin": "LU1681042609",
@@ -3399,7 +4605,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "X13Z.DE",
+    "prix": "442.8",
+    "perf3": "48.6",
+    "perf1": "20.6"
   },
   {
     "isin": "LU1681044308",
@@ -3409,7 +4619,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,80"
+    "stress5": "-17,80",
+    "ticker": "X13Z.DE",
+    "prix": "85.13",
+    "perf3": "25.3",
+    "perf1": "6.0"
   },
   {
     "isin": "LU1681047079",
@@ -3419,7 +4633,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90"
+    "stress5": "-19,90",
+    "prix": "85.13",
+    "perf3": "25.3",
+    "perf1": "6.0"
   },
   {
     "isin": "LU1681046931",
@@ -3429,7 +4646,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90"
+    "stress5": "-19,90",
+    "prix": "147.22",
+    "perf3": "25.4",
+    "perf1": "6.2"
   },
   {
     "isin": "LU1681047319",
@@ -3439,7 +4659,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,70"
+    "stress5": "-20,70",
+    "prix": "101.54",
+    "perf3": "59.2",
+    "perf1": "19.5"
   },
   {
     "isin": "LU1681047236",
@@ -3449,7 +4672,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,70"
+    "stress5": "-20,70",
+    "prix": "168.44",
+    "perf3": "59.1",
+    "perf1": "19.5"
   },
   {
     "isin": "LU1681047400",
@@ -3459,7 +4685,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,50"
+    "stress5": "-24,50",
+    "prix": "191.8",
+    "perf3": "65.7",
+    "perf1": "18.6"
   },
   {
     "isin": "LU1737652310",
@@ -3469,7 +4698,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "prix": "82.96",
+    "perf3": "51.6",
+    "perf1": "20.9"
   },
   {
     "isin": "LU1753045332",
@@ -3479,7 +4711,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-16,38"
+    "stress5": "-16,38",
+    "ticker": "SELD.DE",
+    "prix": "24.25",
+    "perf1": "33.6"
   },
   {
     "isin": "LU1753045415",
@@ -3489,7 +4724,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-16,38"
+    "stress5": "-16,38",
+    "ticker": "SELD.DE",
+    "prix": "24.25",
+    "perf3": "224.9",
+    "perf1": "33.6"
   },
   {
     "isin": "LU1772333404",
@@ -3499,7 +4738,11 @@ window.PEA_ETFS = [
     "perf5": "18,56",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-17,70"
+    "stress5": "-17,70",
+    "ticker": "SELD.DE",
+    "prix": "24.25",
+    "perf3": "224.9",
+    "perf1": "33.6"
   },
   {
     "isin": "LU1812092168",
@@ -3509,7 +4752,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,20"
+    "stress5": "-17,20",
+    "ticker": "SELD.DE",
+    "prix": "24.25",
+    "perf3": "224.9",
+    "perf1": "33.6"
   },
   {
     "isin": "LU1829219390",
@@ -3519,7 +4766,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-30,10"
+    "stress5": "-30,10",
+    "ticker": "LBRE.DE",
+    "prix": "381.7",
+    "perf3": "224.9",
+    "perf1": "45.0"
   },
   {
     "isin": "LU1834983550",
@@ -3529,7 +4780,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,60"
+    "stress5": "-26,60",
+    "ticker": "LBRE.DE",
+    "prix": "130.92",
+    "perf1": "57.4"
   },
   {
     "isin": "LU1834983477",
@@ -3539,7 +4793,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-27,80"
+    "stress5": "-27,80",
+    "ticker": "LBNK.DE",
+    "prix": "72.21",
+    "perf1": "50.4"
   },
   {
     "isin": "LU1834983634",
@@ -3549,7 +4806,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,00"
+    "stress5": "-20,00",
+    "ticker": "LCHM.DE",
+    "prix": "198.14",
+    "perf1": "31.2"
   },
   {
     "isin": "LU1834986900",
@@ -3559,7 +4819,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,20"
+    "stress5": "-16,20",
+    "ticker": "LHTC.DE",
+    "prix": "154.58",
+    "perf1": "14.4"
   },
   {
     "isin": "LU1834985845",
@@ -3569,7 +4832,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,10"
+    "stress5": "-14,10",
+    "ticker": "LFOD.DE",
+    "prix": "95.67",
+    "perf1": "8.2"
   },
   {
     "isin": "LU1834987890",
@@ -3579,7 +4845,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-34,20"
+    "stress5": "-34,20",
+    "ticker": "LIGS.DE",
+    "prix": "150.8",
+    "perf1": "12.7"
   },
   {
     "isin": "LU1834987973",
@@ -3589,7 +4858,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90"
+    "stress5": "-19,90",
+    "ticker": "LIRU.DE",
+    "prix": "96.79",
+    "perf1": "17.0"
   },
   {
     "isin": "LU1834988518",
@@ -3599,7 +4871,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,70"
+    "stress5": "-26,70",
+    "ticker": "LTUG.DE",
+    "prix": "113.1",
+    "perf1": "22.2"
   },
   {
     "isin": "LU1834988278",
@@ -3609,7 +4884,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,60"
+    "stress5": "-24,60",
+    "ticker": "LOGS.DE",
+    "prix": "106.72",
+    "perf3": "39.7",
+    "perf1": "48.6"
   },
   {
     "isin": "LU1834988609",
@@ -3619,7 +4898,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,60"
+    "stress5": "-14,60",
+    "ticker": "LTCM.DE",
+    "prix": "50.52",
+    "perf3": "39.7",
+    "perf1": "13.2"
   },
   {
     "isin": "LU1834988781",
@@ -3629,7 +4912,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,20"
+    "stress5": "-24,20",
+    "ticker": "LTVL.DE",
+    "prix": "26.5",
+    "perf3": "39.7",
+    "perf1": "0.2"
   },
   {
     "isin": "LU1847674733",
@@ -3639,7 +4926,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "OP2E.DE",
+    "prix": "183.64",
+    "perf3": "39.7",
+    "perf1": "15.4"
   },
   {
     "isin": "LU1834988864",
@@ -3649,7 +4940,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "LUTI.DE",
+    "prix": "106.8",
+    "perf3": "22.9",
+    "perf1": "32.8"
   },
   {
     "isin": "LU1861137484",
@@ -3659,7 +4954,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,50"
+    "stress5": "-16,50",
+    "ticker": "PR1E.DE",
+    "prix": "91.14",
+    "perf3": "22.9",
+    "perf1": "6.6"
   },
   {
     "isin": "LU1920015366",
@@ -3669,7 +4968,11 @@ window.PEA_ETFS = [
     "perf5": "20,07",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "PR1E.DE",
+    "prix": "37.11",
+    "perf3": "53.7",
+    "perf1": "22.0"
   },
   {
     "isin": "LU1931974262",
@@ -3679,7 +4982,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "ticker": "PR1E.DE",
+    "prix": "37.11",
+    "perf3": "53.7",
+    "perf1": "22.0"
   },
   {
     "isin": "LU1931974429",
@@ -3689,7 +4996,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,00"
+    "stress5": "-19,00",
+    "prix": "3391.5",
+    "perf3": "42.1",
+    "perf1": "15.5"
   },
   {
     "isin": "LU1940199984",
@@ -3699,7 +5009,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,10"
+    "stress5": "-16,10",
+    "prix": "30.76",
+    "perf3": "41.3",
+    "perf1": "21.1"
   },
   {
     "isin": "LU1940199711",
@@ -3709,7 +5022,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,80"
+    "stress5": "-16,80",
+    "ticker": "10A9.DE",
+    "prix": "42.22",
+    "perf3": "43.4",
+    "perf1": "21.7"
   },
   {
     "isin": "LU1953137681",
@@ -3719,7 +5036,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-19,63"
+    "stress5": "-19,63",
+    "ticker": "10A9.DE",
+    "prix": "70.65",
+    "perf3": "24.0",
+    "perf1": "6.6"
   },
   {
     "isin": "LU2059756598",
@@ -3729,7 +5050,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,50"
+    "stress5": "-16,50",
+    "ticker": "10A9.DE",
+    "prix": "70.65",
+    "perf3": "24.0",
+    "perf1": "6.6"
   },
   {
     "isin": "LU2059756325",
@@ -3739,7 +5064,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-28,50"
+    "stress5": "-28,50",
+    "ticker": "10A9.DE",
+    "prix": "84.69",
+    "perf3": "57.5",
+    "perf1": "28.1"
   },
   {
     "isin": "LU2082996385",
@@ -3749,7 +5078,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,50"
+    "stress5": "-26,50",
+    "ticker": "E6BR.DE",
+    "prix": "158.2",
+    "perf1": "57.6"
   },
   {
     "isin": "LU2082996112",
@@ -3759,7 +5091,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-27,80"
+    "stress5": "-27,80",
+    "ticker": "INDA.DE",
+    "prix": "97.21",
+    "perf1": "50.2"
   },
   {
     "isin": "LU2082997359",
@@ -3769,7 +5104,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,10"
+    "stress5": "-14,10",
+    "ticker": "DFOP.DE",
+    "prix": "134.0",
+    "perf1": "7.2"
   },
   {
     "isin": "LU2082996542",
@@ -3779,7 +5117,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,00"
+    "stress5": "-20,00",
+    "ticker": "LYX4.DE",
+    "prix": "288.05",
+    "perf1": "31.7"
   },
   {
     "isin": "LU2082997516",
@@ -3789,7 +5130,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,20"
+    "stress5": "-16,20",
+    "ticker": "EHLT.DE",
+    "prix": "196.02",
+    "perf1": "14.5"
   },
   {
     "isin": "LU2082997789",
@@ -3799,7 +5143,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,90"
+    "stress5": "-22,90",
+    "ticker": "INDU.DE",
+    "prix": "203.55",
+    "perf1": "12.6"
   },
   {
     "isin": "LU2082997946",
@@ -3809,7 +5156,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90"
+    "stress5": "-19,90",
+    "ticker": "EGV1.DE",
+    "prix": "111.76",
+    "perf1": "17.2"
   },
   {
     "isin": "LU2082998167",
@@ -3819,7 +5169,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,60"
+    "stress5": "-24,60",
+    "ticker": "OIGS.DE",
+    "prix": "141.04",
+    "perf1": "48.7"
   },
   {
     "isin": "LU2082998837",
@@ -3829,7 +5182,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,70"
+    "stress5": "-26,70",
+    "ticker": "CSTA.DE",
+    "prix": "142.12",
+    "perf1": "20.9"
   },
   {
     "isin": "LU2082999058",
@@ -3839,7 +5195,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,60"
+    "stress5": "-14,60",
+    "ticker": "INDB.DE",
+    "prix": "67.6",
+    "perf3": "59.7",
+    "perf1": "9.0"
   },
   {
     "isin": "LU2082999132",
@@ -3849,7 +5209,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-33,30"
+    "stress5": "-33,30",
+    "ticker": "6TVL.DE",
+    "prix": "37.44",
+    "perf3": "59.7",
+    "perf1": "0.0"
   },
   {
     "isin": "LU2082999215",
@@ -3859,7 +5223,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "LUTL.DE",
+    "prix": "159.8",
+    "perf3": "59.7",
+    "perf1": "32.8"
   },
   {
     "isin": "LU2089238112",
@@ -3869,7 +5237,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,00"
+    "stress5": "-19,00",
+    "ticker": "LDAX.DE",
+    "prix": "38.55",
+    "perf3": "59.7",
+    "perf1": "21.6"
   },
   {
     "isin": "LU2089238039",
@@ -3879,7 +5251,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "ticker": "LDAX.DE",
+    "prix": "36.66",
+    "perf3": "52.2",
+    "perf1": "21.8"
   },
   {
     "isin": "LU2090062436",
@@ -3889,7 +5265,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,80"
+    "stress5": "-21,80",
+    "ticker": "LDAX.DE",
+    "prix": "85.13",
+    "perf3": "54.0",
+    "perf1": "4.4"
   },
   {
     "isin": "LU2090062600",
@@ -3899,7 +5279,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "LVDX.DE",
+    "prix": "19.98",
+    "perf3": "98.3",
+    "perf1": "3.0"
   },
   {
     "isin": "LU2130768844",
@@ -3909,7 +5293,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,50"
+    "stress5": "-17,50",
+    "ticker": "SRHE.DE",
+    "prix": "97.18",
+    "perf3": "41.9",
+    "perf1": "16.2"
   },
   {
     "isin": "LU2109787635",
@@ -3919,7 +5307,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,40"
+    "stress5": "-19,40",
+    "ticker": "SRHE.DE",
+    "prix": "108.38",
+    "perf3": "44.6",
+    "perf1": "18.1"
   },
   {
     "isin": "LU2182388582",
@@ -3929,7 +5321,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,70"
+    "stress5": "-18,70",
+    "ticker": "DECD.DE",
+    "prix": "93.66",
+    "perf3": "42.4",
+    "perf1": "14.5"
   },
   {
     "isin": "LU2195226068",
@@ -3939,7 +5335,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,60"
+    "stress5": "-20,60",
+    "ticker": "DECD.DE",
+    "prix": "41.9",
+    "perf3": "59.3",
+    "perf1": "14.8"
   },
   {
     "isin": "LU2240851688",
@@ -3949,7 +5349,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,40"
+    "stress5": "-20,40",
+    "ticker": "DECD.DE",
+    "prix": "90.99",
+    "perf3": "60.3",
+    "perf1": "11.6"
   },
   {
     "isin": "LU2446381555",
@@ -3959,7 +5363,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "AHYI.DE",
+    "prix": "612.6",
+    "perf3": "47.0",
+    "perf1": "20.2"
   },
   {
     "isin": "LU2572256662",
@@ -3969,7 +5377,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,80"
+    "stress5": "-18,80",
+    "ticker": "AHYI.DE",
+    "prix": "612.6",
+    "perf3": "47.0",
+    "perf1": "20.2"
   },
   {
     "isin": "LU2572257470",
@@ -3979,7 +5391,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,60"
+    "stress5": "-18,60",
+    "ticker": "X026.DE",
+    "prix": "61.67",
+    "perf3": "42.6",
+    "perf1": "13.0"
   },
   {
     "isin": "LU2581375156",
@@ -3989,7 +5405,11 @@ window.PEA_ETFS = [
     "perf5": "18,93",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "AE5B.DE",
+    "prix": "134.98",
+    "perf3": "45.9",
+    "perf1": "19.2"
   },
   {
     "isin": "LU2608817958",
@@ -3999,7 +5419,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "AE5B.DE",
+    "prix": "134.98",
+    "perf3": "45.9",
+    "perf1": "19.2"
   },
   {
     "isin": "LU2611731667",
@@ -4009,7 +5433,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,30"
+    "stress5": "-22,30",
+    "ticker": "C007.DE",
+    "prix": "26.3",
+    "perf3": "10.7",
+    "perf1": "5.9"
   },
   {
     "isin": "LU2611731741",
@@ -4019,7 +5447,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "C001.DE",
+    "prix": "186.9",
+    "perf3": "32.0",
+    "perf1": "4.8"
   },
   {
     "isin": "LU2611732046",
@@ -4029,7 +5461,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,50"
+    "stress5": "-21,50",
+    "ticker": "C001.DE",
+    "prix": "186.9",
+    "perf3": "32.0",
+    "perf1": "4.8"
   },
   {
     "isin": "LU2611732475",
@@ -4039,7 +5475,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,20"
+    "stress5": "-22,20",
+    "ticker": "C005.DE",
+    "prix": "140.06",
+    "perf3": "32.0",
+    "perf1": "3.0"
   },
   {
     "isin": "LU2611732558",
@@ -4049,7 +5489,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "CEUE.DE",
+    "prix": "14.93",
+    "perf1": "21.7"
   },
   {
     "isin": "LU2678230652",
@@ -4059,7 +5502,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "ticker": "CEUE.DE",
+    "prix": "14.93",
+    "perf1": "21.7"
   },
   {
     "isin": "LU2777377875",
@@ -4069,7 +5515,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "ticker": "CEUH.DE",
+    "prix": "25.96",
+    "perf1": "20.9"
   },
   {
     "isin": "LU2873560481",
@@ -4079,7 +5528,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,80"
+    "stress5": "-16,80",
+    "ticker": "CEUH.DE",
+    "prix": "25.96",
+    "perf1": "20.9"
   },
   {
     "isin": "LU2873560564",
@@ -4089,7 +5541,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,30"
+    "stress5": "-19,30",
+    "ticker": "MEUH.DE",
+    "prix": "26.89",
+    "perf1": "2.3"
   },
   {
     "isin": "LU2898088419",
@@ -4099,7 +5554,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SNTE.DE",
+    "prix": "104.17",
+    "perf1": "2.3"
   },
   {
     "isin": "LU2932780914",
@@ -4109,7 +5567,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,60"
+    "stress5": "-20,60",
+    "ticker": "EPAZ.DE",
+    "prix": "26.98",
+    "perf1": "17.3"
   },
   {
     "isin": "LU2997383372",
@@ -4119,7 +5580,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "0USE.DE",
+    "prix": "140.01",
+    "perf1": "22.9"
   },
   {
     "isin": "LU3038520774",
@@ -4129,7 +5593,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-27,20"
+    "stress5": "-27,20",
+    "ticker": "EDFS.DE",
+    "prix": "5.88",
+    "perf1": "6.3"
   },
   {
     "isin": "LU3046617984",
@@ -4139,7 +5606,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "MEUR.DE",
+    "prix": "121.82",
+    "perf1": "20.9"
   },
   {
     "isin": "LU3046618362",
@@ -4149,7 +5619,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SHTU.DE",
+    "prix": "111.82"
   },
   {
     "isin": "LU3046618446",
@@ -4159,7 +5631,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "SHTE.PA",
+    "prix": "113.22"
   },
   {
     "isin": "LU3047998896",
@@ -4169,7 +5643,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-32,73"
+    "stress5": "-32,73",
+    "ticker": "0EMU.PA",
+    "prix": "120.1"
   },
   {
     "isin": "LU3047998979",
@@ -4179,7 +5655,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-32,73"
+    "stress5": "-32,73",
+    "ticker": "0EMU.PA",
+    "prix": "120.1"
   },
   {
     "isin": "LU3061478973",
@@ -4189,7 +5667,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-25,40"
+    "stress5": "-25,40",
+    "ticker": "0EMU.PA",
+    "prix": "120.1"
   },
   {
     "isin": "LU3078637314",
@@ -4199,7 +5679,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "ticker": "0EMU.PA",
+    "prix": "120.1"
   },
   {
     "isin": "LU3086268573",
@@ -4209,7 +5691,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-17,81"
+    "stress5": "-17,81",
+    "ticker": "EUSC.PA",
+    "prix": "5.93"
   },
   {
     "isin": "LU3086388124",
@@ -4219,7 +5703,9 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,10"
+    "stress5": "-18,10",
+    "ticker": "EUSC.PA",
+    "prix": "5.93"
   },
   {
     "isin": "LU3121015484",
@@ -4229,7 +5715,9 @@ window.PEA_ETFS = [
     "perf5": "19,17",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-18,70"
+    "stress5": "-18,70",
+    "ticker": "SOVE.DE",
+    "prix": "5.8"
   },
   {
     "isin": "LU3121015567",
@@ -4239,7 +5727,11 @@ window.PEA_ETFS = [
     "perf5": "19,62",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-17,60"
+    "stress5": "-17,60",
+    "ticker": "SOVE.DE",
+    "prix": "5.8",
+    "perf3": "56.6",
+    "perf1": "17.2"
   },
   {
     "isin": "LU3180074463",
@@ -4249,7 +5741,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,20"
+    "stress5": "-19,20",
+    "ticker": "SOVE.DE",
+    "prix": "5.8",
+    "perf3": "56.6",
+    "perf1": "17.2"
   },
   {
     "isin": "LU3206583067",
@@ -4259,7 +5755,11 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,50"
+    "stress5": "-21,50",
+    "ticker": "C002.DE",
+    "prix": "5.14",
+    "perf3": "56.6",
+    "perf1": "17.2"
   },
   {
     "isin": "NL0010731816",
@@ -4269,7 +5769,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "-20,35"
+    "stress5": "-20,35",
+    "prix": "95.39",
+    "perf3": "56.6",
+    "perf1": "17.2"
   },
   {
     "isin": "NL0010408704",
@@ -4279,7 +5782,10 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "-15,97"
+    "stress5": "-15,97",
+    "prix": "42.25",
+    "perf3": "61.4",
+    "perf1": "24.4"
   },
   {
     "isin": "FR001400U5Q4",
