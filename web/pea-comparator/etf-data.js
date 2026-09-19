@@ -4302,7 +4302,7 @@ window.PEA_ETFS = [
     "stress5": "-21,30"
   },
   {
-    "isin": "FR0010892217",
+    "isin": "FR0010892216",
     "nom": "Amundi PEA Nasdaq-100 UCITS ETF Acc",
     "frais": "0,30",
     "sri": "5",
@@ -4312,7 +4312,7 @@ window.PEA_ETFS = [
     "stress5": "N/A"
   },
   {
-    "isin": "FR0013345896",
+    "isin": "FR0013345899",
     "nom": "Lyxor PEA Obligations Europe UCITS ETF Acc",
     "frais": "0,20",
     "sri": "2",
@@ -4322,7 +4322,7 @@ window.PEA_ETFS = [
     "stress5": "N/A"
   },
   {
-    "isin": "FR0014003HV4",
+    "isin": "FR0014003HV9",
     "nom": "Amundi PEA MSCI EM ex-China UCITS ETF Acc",
     "frais": "0,20",
     "sri": "4",
