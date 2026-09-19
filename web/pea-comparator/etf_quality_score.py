@@ -17,7 +17,7 @@ BONUS_PEA = 2
 BONUS_TER_BAS = 1
 MALUS_ENCOURS_FAIBLE = -5
 
-DECISIONS = [(74, "Achat"), (64, "Conserver"), (54, "Surveiller"), (44, "Remplacer"), (0, "Vendre")]
+DECISIONS = [(74, "Très bon"), (64, "Bon"), (54, "Moyen"), (44, "Faible"), (0, "Très faible")]
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "etf-data.js")

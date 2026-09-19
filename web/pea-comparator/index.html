@@ -5,7 +5,9 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"> <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.webmanifest">
+    
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
@@ -29,10 +31,10 @@
 <meta name="twitter:description" content="Comparez plus de 400 ETF référencés pour votre PEA, simulez vos intérêts composés et calculez votre trajectoire FIRE.">
 <meta name="twitter:image" content="https://alfredstudio.mooo.com/og-image.jpg">
 
-<script defer data-domain="alfredstudio.mooo.com" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Alfred Invest","description":"Plus de 400 ETF référencés, simulateurs financiers, guide FIRE","applicationCategory":"Finance","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 
-<link rel="stylesheet" href="/style.css?v=1789840448">
+<link rel="stylesheet" href="/style.css?v=1789888800">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
   </head>
 <body>
@@ -47,10 +49,11 @@
      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
    </button>
    <nav class="header-nav" id="headerNav" aria-label="Navigation principale">
-     <a href="#outils">Outils</a>
      <a href="#comparateur">ETF</a>
+     <a href="methodologie.html">Score Alfred</a>
+     <a href="#outils">Outils</a>
+     <a href="https://alfredstudio.mooo.com/blog">Insights</a>
      <a href="#faq">FAQ</a>
-     <a href="https://alfredstudio.mooo.com/blog">Blog</a>
    </nav>
  </div>
 </header>
@@ -89,6 +92,71 @@
      <div class="stat-card"><strong>0 €</strong><span>Frais de courtage sur l'outil</span></div>
    </div>
 </section>
+<section class="section container" id="comparateur">
+    <div class="section-header">
+      <h2>Tous les ETF PEA</h2>
+      <p>Plus de 400 ETF référencés. Filtrez, triez, comparez.</p>
+    </div>
+    <div class="etf-section">
+      <div class="watchlist-panel" id="watchlistPanel">
+        <span class="watchlist-panel-label">Watchlist</span>
+        <span id="watchlistItems"></span>
+      </div>
+      <div class="etf-filters">
+        <div class="etf-filter-group" style="flex:2;min-width:180px;">
+          <label>Recherche</label>
+          <input type="text" id="search" placeholder="Nom, ISIN, émetteur…" autocomplete="off" aria-label="Rechercher un ETF">
+
+</div>
+        <div class="etf-filter-group">
+          <label>Frais min %</label>
+          <input type="number" id="feesMin" placeholder="0" step="0.01" min="0">
+        </div>
+        <div class="etf-filter-group">
+          <label>Frais max %</label>
+          <input type="number" id="feesMax" placeholder="1" step="0.01" min="0">
+        </div>
+        <div class="etf-filter-group">
+          <label>Risque SRI</label>
+          <select id="sri"><option value="">Tous</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option></select>
+        </div>
+        <div class="etf-filter-group">
+          <label>Émetteur</label>
+          <select id="emetteur"><option value="">Tous</option></select>
+        </div>
+        <div class="etf-filter-actions">
+          <button class="etf-btn-sm" id="resetFilters">↺ Reset</button>
+          <button class="etf-btn-sm" id="shareFilters">Copier lien</button>
+        </div>
+      </div>
+      <div class="etf-stats">
+        <span><strong id="resultCount">0</strong> ETF trouvés</span>
+        <span id="dataUpdateBadge">Données mises à jour le 15/09/2026</span> <span id="dataSourceBadge" style="opacity:0.75">· Sources : DICI/PRIIPs, justETF</span>
+      </div>
+      <div class="etf-loader" id="etfLoader">
+        <div class="etf-loader-spinner"></div>
+        <span>Chargement des ETF…</span>
+      </div>
+      <div class="table-wrap">
+        <table id="etfTable">
+          <thead>
+            <tr>
+              <th class="sortable" data-col="isin">ISIN</th>
+              <th class="sortable" data-col="nom">Nom</th>
+              <th class="sortable" data-col="frais">Frais</th>
+              <th class="sortable" data-col="sri">SRI</th>
+              <th class="sortable" data-col="perf5">Perf 5A</th>
+              <th class="sortable" data-col="emetteur">Émetteur</th>
+              <th>PEA</th>
+              <th>Score <span class="score-info-trigger" id="scoreInfoTrigger" title="Comment le score est calculé ?" role="button" tabindex="0" aria-label="En savoir plus sur le Score Alfred">ⓘ</span></th><th>Détail</th>
+            </tr>
+          </thead>
+          <tbody id="etfBody"></tbody>
+        </table>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
 
 
 
@@ -108,9 +176,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg></div>
           <div class="tool-card-info">
             <h3>Comparer 2 ETF</h3>
-            <p>Côte à côte : frais, risque, performance</p>
+            <p>Côte à côte : frais, risque, performance</p><p class="tool-card-result"><strong>Resultat :</strong> Frais, risque et performance, cote a cote</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-compare');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -127,9 +195,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Top ETF par Indice et Secteur</h3>
-            <p>Les meilleurs ETF classés par catégorie selon le score Alfred</p>
+            <p>Les meilleurs ETF classés par catégorie selon le score Alfred</p><p class="tool-card-result"><strong>Resultat :</strong> Le classement des meilleurs ETF par theme</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-topetf');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form" style="text-align:center;padding:8px 0">
@@ -144,7 +212,7 @@
             <div style="display:flex;justify-content:center;gap:20px;margin-bottom:16px">
               <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">14</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Indices</div></div>
               <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">13</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Secteurs</div></div>
-              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">429</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">ETF notés</div></div>
+              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1" data-etf-count="1">429</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">ETF notés</div></div>
             </div>
             <a href="/top-etf.html" target="_blank" style="display:inline-block;text-decoration:none;padding:12px 28px;font-size:0.9rem;font-weight:700;border-radius:10px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;box-shadow:0 4px 12px rgba(13,148,136,0.25)">Voir le classement complet →</a>
           </div>
@@ -154,9 +222,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Mon allocation</h3>
-            <p>Portefeuille recommandé selon votre profil de risque</p>
+            <p>Portefeuille recommandé selon votre profil de risque</p><p class="tool-card-result"><strong>Resultat :</strong> Repartition conseillee + TER moyen selon votre profil</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-alloc');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -185,9 +253,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg></div>
           <div class="tool-card-info">
             <h3>PEA vs AV vs CTO</h3>
-            <p>Comparez les enveloppes fiscales sur le long terme</p>
+            <p>Comparez les enveloppes fiscales sur le long terme</p><p class="tool-card-result"><strong>Resultat :</strong> La meilleure enveloppe fiscale pour votre horizon</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-env');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -218,9 +286,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><path d="M17 6h6v6"></path></svg></div>
           <div class="tool-card-info">
             <h3>Intérêts composés</h3>
-            <p>Visualisez la puissance des intérêts composés</p>
+            <p>Visualisez la puissance des intérêts composés</p><p class="tool-card-result"><strong>Resultat :</strong> Capital final et gains nets sur votre horizon</p>
           </div>
-          <span class="tool-card-chevron" aria-hidden="true">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-compound');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron" aria-hidden="true">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -247,9 +315,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
           <div class="tool-card-info">
             <h3>Plan des 40 ans</h3>
-            <p>Votre plan retraite en 2 étapes : capital cible + chemin d'investissement</p>
+            <p>Votre plan retraite en 2 étapes : capital cible + chemin d'investissement</p><p class="tool-card-result"><strong>Resultat :</strong> Feuille de route vers votre objectif de capital</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-plan40');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -301,9 +369,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
           <div class="tool-card-info">
             <h3>Chemin vers 1 million</h3>
-            <p>Combien de temps pour devenir millionnaire ?</p>
+            <p>Combien de temps pour devenir millionnaire ?</p><p class="tool-card-result"><strong>Resultat :</strong> Le nombre d'annees pour atteindre 1 M EUR</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-million');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -325,9 +393,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Indépendance financière</h3>
-            <p>Quand pourrez-vous arrêter de travailler ?</p>
+            <p>Quand pourrez-vous arrêter de travailler ?</p><p class="tool-card-result"><strong>Resultat :</strong> Le capital necessaire selon la regle des 4 %</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-fire');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -365,9 +433,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
           <div class="tool-card-info">
             <h3>Impact des frais</h3>
-            <p>Visualisez ce que 1% de frais vous coûte vraiment</p>
+            <p>Visualisez ce que 1% de frais vous coûte vraiment</p><p class="tool-card-result"><strong>Resultat :</strong> Ce que les frais vous coutent sur 30 ans</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-fees');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -394,9 +462,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
           <div class="tool-card-info">
             <h3>Inflation</h3>
-            <p>Ce que votre épargne vaudra vraiment dans 20 ans</p>
+            <p>Ce que votre épargne vaudra vraiment dans 20 ans</p><p class="tool-card-result"><strong>Resultat :</strong> Pouvoir d'achat futur et perte de valeur</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-inflation');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -418,9 +486,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Consommation</h3>
-            <p>Combien pouvez-vous retirer chaque mois sur la durée choisie ?</p>
+            <p>Combien pouvez-vous retirer chaque mois sur la durée choisie ?</p><p class="tool-card-result"><strong>Resultat :</strong> Votre budget mensuel et annuel calcule</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-consumption');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -442,9 +510,9 @@
           <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
           <div class="tool-card-info">
             <h3>Plan de rattrapage</h3>
-            <p>Vous avez commencé tard ? Voici comment rattraper</p>
+            <p>Vous avez commencé tard ? Voici comment rattraper</p><p class="tool-card-result"><strong>Resultat :</strong> Les mensualites necessaires pour combler le retard</p>
           </div>
-          <span class="tool-card-chevron">▾</span>
+          <button class="tool-card-cta" type="button" onclick="ouvrirCarte('tc-catchup');event.preventDefault();event.stopPropagation();">Utiliser</button><span class="tool-card-chevron">▾</span>
         </div>
         <div class="tool-card-body">
           <div class="tool-form">
@@ -471,158 +539,13 @@
 
   
       <!-- 11. Plan 40 ans -->
-      <div class="tool-card" id="tc-plan40">
-        <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-          <div class="tool-card-info">
-            <h3>Plan des 40 ans</h3>
-            <p>Votre plan retraite en 2 étapes : capital cible + chemin d'investissement</p>
-          </div>
-          <span class="tool-card-chevron">▾</span>
-        </div>
-        <div class="tool-card-body">
-          <div class="tool-form">
-            <div style="background:#eaf2fc;border-radius:10px;padding:14px;margin-bottom:12px">
-              <strong style="font-size:0.85rem">Phase 1 : Quel revenu mensuel souhaitez-vous à la retraite ?</strong>
-            </div>
-            <label>Revenu mensuel souhaité (brut)</label>
-            <input type="range" id="p40-income" min="500" max="3000" step="50" value="1500" style="width:100%">
-            <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--muted)">
-              <span>500 €</span><span id="p40-income-value" style="font-weight:700;color:var(--accent)">1 500 €/mois</span><span>3 000 €</span>
-            </div>
-            <div style="margin-top:10px">
-              <label>Taux de retrait annuel</label>
-              <div style="display:flex;gap:6px;flex-wrap:wrap" id="p40-rate-options">
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="3">3 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="3.5">3,5 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--accent);color:white;border:1.5px solid var(--accent)" data-rate="4">4 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="4.5">4,5 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="5">5 %</button>
-              </div>
-            </div>
-            <div style="margin-top:10px;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center;color:white">
-              <p style="font-size:0.75rem;color:#b8b8b8;margin:0 0 4px 0">Capital nécessaire</p>
-              <p style="font-size:1.5rem;font-weight:700;margin:0" id="p40-target">450 000 €</p>
-            </div>
-            <div style="background:#eaf2fc;border-radius:10px;padding:14px;margin:16px 0 12px">
-              <strong style="font-size:0.85rem">Phase 2 : Construisez votre chemin sur 25 ans</strong>
-            </div>
-            <div class="tool-form-row">
-              <div><label>Capital de départ (€)</label><input type="number" id="p40-start" value="10000" min="0"></div>
-              <div><label>DCA mensuel (€)</label><input type="number" id="p40-dca" value="350" min="0"></div>
-            </div>
-            <div class="tool-form-row">
-              <div><label>Injection annuelle (€)</label><input type="number" id="p40-annual" value="0" min="0"></div>
-              <div><label>Rendement annualisé (%)</label><input type="number" id="p40-return" value="8" min="1" max="15" step="0.5"></div>
-            </div>
-            <button class="tool-btn" id="p40-calc">Calculer le plan</button>
-          </div>
-          <div class="tool-result" id="p40-result">
-            <div class="tool-result-item highlight"><span class="result-label">Capital 10 ans</span><span class="result-value" id="p40-y10">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Capital 20 ans</span><span class="result-value" id="p40-y20">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Capital 25 ans</span><span class="result-value" id="p40-y25">—</span></div>
-            <div class="tool-result-item"><span class="result-label">Objectif</span><span class="result-value" id="p40-goal">—</span></div>
-          </div>
-          <div class="tool-note" id="p40-status"></div>
-        </div>
-      </div>
+      
       <!-- 11. Top ETF Rankings -->
-      <div class="tool-card" id="tc-topetf">
-        <div class="tool-card-header">
-          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
-          <div class="tool-card-info">
-            <h3>Top ETF par Indice et Secteur</h3>
-            <p>Les meilleurs ETF classés par catégorie selon le score Alfred</p>
-          </div>
-          <span class="tool-card-chevron">▾</span>
-        </div>
-        <div class="tool-card-body">
-          <div class="tool-form" style="text-align:center;padding:8px 0">
-            <p style="color:#4a5b72;margin-bottom:16px;font-size:0.9rem;line-height:1.5">Découvrez les ETF les mieux notés dans chaque catégorie d’indice et secteur, avec le <strong style="color:#0d9488">score qualité Alfred</strong>.</p>
-            <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
-              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#16a34a;color:#fff">≥74 Achat</span>
-              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#2563eb;color:#fff">≥64 Conserver</span>
-              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#eab308;color:#000">≥54 Surveiller</span>
-              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#ea580c;color:#fff">≥44 Remplacer</span>
-              <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;background:#dc2626;color:#fff"><44 Vendre</span>
-            </div>
-            <div style="display:flex;justify-content:center;gap:20px;margin-bottom:16px">
-              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">14</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Indices</div></div>
-              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">13</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Secteurs</div></div>
-              <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">429</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">ETF notés</div></div>
-            </div>
-            <a href="/top-etf.html" target="_blank" style="display:inline-block;text-decoration:none;padding:12px 28px;font-size:0.9rem;font-weight:700;border-radius:10px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;box-shadow:0 4px 12px rgba(13,148,136,0.25)">Voir le classement complet →</a>
-          </div>
-        </div>
-      </div>
+      
 </div>
 
   <!-- ETF Comparator -->
-  <section class="section container" id="comparateur">
-    <div class="section-header">
-      <h2>Tous les ETF PEA</h2>
-      <p>Plus de 400 ETF référencés. Filtrez, triez, comparez.</p>
-    </div>
-    <div class="etf-section">
-      <div class="watchlist-panel" id="watchlistPanel">
-        <span class="watchlist-panel-label">Watchlist</span>
-        <span id="watchlistItems"></span>
-      </div>
-      <div class="etf-filters">
-        <div class="etf-filter-group" style="flex:2;min-width:180px;">
-          <label>Recherche</label>
-          <input type="text" id="search" placeholder="Nom, ISIN, émetteur…" autocomplete="off" aria-label="Rechercher un ETF">
-
-</div>
-        <div class="etf-filter-group">
-          <label>Frais min %</label>
-          <input type="number" id="feesMin" placeholder="0" step="0.01" min="0">
-        </div>
-        <div class="etf-filter-group">
-          <label>Frais max %</label>
-          <input type="number" id="feesMax" placeholder="1" step="0.01" min="0">
-        </div>
-        <div class="etf-filter-group">
-          <label>Risque SRI</label>
-          <select id="sri"><option value="">Tous</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option></select>
-        </div>
-        <div class="etf-filter-group">
-          <label>Émetteur</label>
-          <select id="emetteur"><option value="">Tous</option></select>
-        </div>
-        <div class="etf-filter-actions">
-          <button class="etf-btn-sm" id="resetFilters">↺ Reset</button>
-          <button class="etf-btn-sm" id="shareFilters">Copier lien</button>
-        </div>
-      </div>
-      <div class="etf-stats">
-        <span><strong id="resultCount">0</strong> ETF trouvés</span>
-        <span id="dataUpdateBadge">Données mises à jour le 15/09/2026</span>
-      </div>
-      <div class="etf-loader" id="etfLoader">
-        <div class="etf-loader-spinner"></div>
-        <span>Chargement des ETF…</span>
-      </div>
-      <div class="table-wrap">
-        <table id="etfTable">
-          <thead>
-            <tr>
-              <th class="sortable" data-col="isin">ISIN</th>
-              <th class="sortable" data-col="nom">Nom</th>
-              <th class="sortable" data-col="frais">Frais</th>
-              <th class="sortable" data-col="sri">SRI</th>
-              <th class="sortable" data-col="perf5">Perf 5A</th>
-              <th class="sortable" data-col="emetteur">Émetteur</th>
-              <th>PEA</th>
-              <th>Score <span class="score-info-trigger" id="scoreInfoTrigger" title="Comment le score est calculé ?" role="button" tabindex="0" aria-label="En savoir plus sur le Score Alfred">ⓘ</span></th><th>Détail</th>
-            </tr>
-          </thead>
-          <tbody id="etfBody"></tbody>
-        </table>
-      </div>
-      <div class="pagination" id="pagination"></div>
-    </div>
-  </section>
+  
 
   <!-- FAQ -->
   <!-- Derniers articles --> <section class="articles-section" id="articles">   <div class="section-head">     <h2>Dernières analyses</h2>     <a href="/blog" class="section-link">Tous les articles →</a>   </div>   <div class="articles-grid">     <a href="/blog/marche-du-18-09-2026-cac-40-s-p-500-etfs/" class="article-card"><span class="article-date">18/09/2026</span><h3>Marché du 18/09/2026 — CAC 40, S&amp;P 500, ETFs</h3><p>Les mouvements du jour et ce qu'ils signifient pour vos ETF.</p></a>     <a href="/blog/comment-construire-un-portefeuille-permanent-la-harry-browne-15-09/" class="article-card"><span class="article-date">15/09/2026</span><h3>Construire un portefeuille permanent à la Harry Browne</h3><p>L'allocation défensive qui traverse les cycles : or, actions, obligations, cash.</p></a>     <a href="/blog/l-impact-de-la-psychologie-sur-vos-d-cisions-d-investissement-14-09/" class="article-card"><span class="article-date">14/09/2026</span><h3>L'impact de la psychologie sur vos décisions d'investissement</h3><p>Biais comportementaux : comment ils vous coûtent de l'argent — et comment les contourner.</p></a>   </div> </section>
@@ -633,7 +556,7 @@
     </div>
     <div class="faq-grid">
       <details class="faq-item"><summary>Qu'est-ce qu'un ETF PEA ?</summary><p>Un ETF (Exchange Traded Fund) est un fonds indiciel coté en bourse. Les ETF éligibles PEA sont conformes à la réglementation française et bénéficient d'une fiscalité avantageuse (exonération d'impôt sur le revenu après 5 ans).</p></details>
-      <details class="faq-item"><summary>Quel est le meilleur ETF PEA ?</summary><p>Le MSCI World (DCAM d'Amundi, 0,20% de frais) est le plus recommandé pour une exposition diversifiée. Pour les marchés émergents, le PAEEM ou IS3N sont d'excellents compléments.</p></details>
+      <details class="faq-item"><summary>Quel ETF PEA choisir selon mon objectif ?</summary><p>Il n'existe pas de « meilleur » ETF en absolu : tout dépend de votre objectif. <strong>Exposition mondiale</strong> : Amundi MSCI World (DCAM) ou iShares Core MSCI World. <strong>États-Unis</strong> : ETF S&amp;P 500 ou Nasdaq. <strong>Europe</strong> : Euro Stoxx 50 ou MSCI Europe. <strong>Émergents</strong> : Amundi PEA Emergent (PAEEM) ou MSCI EM. <strong>Dividendes</strong> : ETF monde à distribution. <strong>Obligations</strong> : ETF obligataires éligibles selon réglementation. Comparez frais, encours et réplication via le Score Alfred.</p></details>
       <details class="faq-item"><summary>Quels sont les frais à surveiller ?</summary><p>Le TER (Total Expense Ratio) est le principal. Un bon ETF PEA a un TER entre 0,10% et 0,30%. Au-delà de 0,50%, l'impact sur le long terme devient significatif. Utilisez notre simulateur d'impact des frais.</p></details>
 
       <details class="faq-item"><summary>PEA ou Assurance-Vie ?</summary><p>Le PEA est plus avantageux fiscalement après 5 ans (17,2% de prélèvements sociaux uniquement). L'AV offre plus de flexibilité et permet d'investir dans des fonds non-ETF. Utilisez notre comparateur PEA vs AV.</p></details>
@@ -701,9 +624,9 @@
   if(si)si.addEventListener("input",function(){s();setTimeout(n,400)});
 })();
 </script>
-  <script src="etf-data.min.js?v=1789843510" defer></script>
-  <script src="etf-scores.js?v=1789834629" defer></script>
-  <script src="app.min.js?v=5526815120" defer></script>
+  <script src="etf-data.min.js?v=1789910001" defer></script>
+  <script src="etf-scores.js?v=1789848110" defer></script>
+  <script src="app.min.js?v=1789847806" defer></script>
 <script>document.addEventListener("click",function(e){var h=e.target.closest(".tool-card-header");if(h){var c=h.closest(".tool-card");if(c){c.classList.toggle("open")}}});</script>
 
 
@@ -991,7 +914,7 @@
 </script>
 
 <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Information cookies">
-  <p>Pas de cookies publicitaires. Analytics anonyme (Umami) — emails uniquement si tu t'inscris. <a href="/privacy.html">En savoir plus</a></p>
+  <p>Pas de cookies publicitaires. Analytics anonyme — emails uniquement si tu t'inscris. <a href="/privacy.html">En savoir plus</a></p>
   <button id="cookieOk" type="button">OK</button>
 </div>
 <script>

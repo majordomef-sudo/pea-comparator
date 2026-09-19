@@ -11,7 +11,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGCROEX03189",
-    "nom": "PROSPECTUS OF “EXPAT CROATIA CROBEX UCITS ETF”",
+    "nom": "“EXPAT CROATIA CROBEX UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -21,7 +21,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGGRASE06174",
-    "nom": "PROSPECTUS OF “EXPAT GREECE ASE UCITS ETF”",
+    "nom": "“EXPAT GREECE ASE UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -31,7 +31,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGCZPX003174",
-    "nom": "PROSPECTUS OF “EXPAT CZECH PX UCITS ETF”",
+    "nom": "“EXPAT CZECH PX UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -51,7 +51,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGMACMB06181",
-    "nom": "PROSPECTUS OF “EXPAT MACEDONIA MBI10 UCITS ETF”",
+    "nom": "“EXPAT MACEDONIA MBI10 UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -61,7 +61,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGROBET05176",
-    "nom": "PROSPECTUS OF “EXPAT ROMANIA BET UCITS ETF”",
+    "nom": "“EXPAT ROMANIA BET UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -71,7 +71,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGPLWIG04173",
-    "nom": "PROSPECTUS OF “EXPAT POLAND WIG20 UCITS ETF”",
+    "nom": "“EXPAT POLAND WIG20 UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -81,7 +81,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGSKSAX04187",
-    "nom": "PROSPECTUS OF “EXPAT SLOVAKIA SAX UCITS ETF”",
+    "nom": "“EXPAT SLOVAKIA SAX UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -95,7 +95,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGSLOBI02187",
-    "nom": "PROSPECTUS OF “EXPAT SLOVENIA SBI TOP UCITS ETF”",
+    "nom": "“EXPAT SLOVENIA SBI TOP UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -109,7 +109,7 @@ window.PEA_ETFS = [
   },
   {
     "isin": "BGSRBBE05183",
-    "nom": "PROSPECTUS OF “Expat Serbia BELEX15 UCITS ETF”",
+    "nom": "“Expat Serbia BELEX15 UCITS ETF”",
     "frais": "N/A",
     "sri": "?",
     "perf5": "N/A",
@@ -11241,5 +11241,34 @@ window.PEA_ETFS = [
     "domicile": "Jersey",
     "hedge": "Non couvert contre le risque de change",
     "peap": "Non"
+  }
+,
+  {
+    "isin": "IE00B4L5Y983",
+    "nom": "iShares Core MSCI World UCITS ETF",
+    "frais": "N/A",
+    "sri": "?",
+    "perf5": "N/A",
+    "emetteur": "iShares (BlackRock)",
+    "pays": "IE",
+    "stress5": "N/A",
+    "emetteur_full": "iShares (BlackRock)",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
+  },
+  {
+    "isin": "IE00B4L5YC18",
+    "nom": "iShares MSCI EM UCITS ETF USD (Acc)",
+    "frais": "0,18",
+    "sri": "4",
+    "perf5": "N/A",
+    "emetteur": "iShares (BlackRock)",
+    "pays": "IE",
+    "stress5": "N/A",
+    "emetteur_full": "iShares (BlackRock)",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   }
 ];
