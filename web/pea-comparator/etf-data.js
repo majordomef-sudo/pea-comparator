@@ -145,7 +145,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE0002635273",
@@ -171,7 +172,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE0002635281",
@@ -197,7 +199,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE0002635307",
@@ -223,7 +226,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE0005933931",
@@ -249,7 +253,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE0005933949",
@@ -275,7 +280,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE0005933956",
@@ -301,7 +307,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE0005933923",
@@ -327,7 +334,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE0005933972",
@@ -353,7 +361,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE0005933980",
@@ -379,7 +388,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE0005933964",
@@ -405,7 +415,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE0005933998",
@@ -431,7 +442,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE0006289309",
@@ -457,7 +469,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A0D8Q07",
@@ -483,7 +496,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A0D8Q23",
@@ -509,7 +523,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0D8Q49",
@@ -535,7 +550,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0D8QZ7",
@@ -561,7 +577,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0F5UG3",
@@ -587,7 +604,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A0F5UJ7",
@@ -613,7 +631,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0F5UK5",
@@ -639,7 +658,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H0744",
@@ -665,7 +685,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08F7",
@@ -691,7 +712,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08E0",
@@ -717,7 +739,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08G5",
@@ -743,7 +766,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08H3",
@@ -769,7 +793,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08J9",
@@ -795,7 +820,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08K7",
@@ -821,7 +847,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08L5",
@@ -847,7 +874,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08M3",
@@ -873,7 +901,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08N1",
@@ -899,7 +928,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08P6",
@@ -925,7 +955,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08Q4",
@@ -951,7 +982,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A0H08R2",
@@ -977,7 +1009,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0H08S0",
@@ -1003,7 +1036,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0Q4R02",
@@ -1029,7 +1063,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0Q4R28",
@@ -1055,7 +1090,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A0Q4R36",
@@ -1081,7 +1117,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A0Q4R69",
@@ -1107,7 +1144,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A2QP323",
@@ -1133,7 +1171,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A2QP331",
@@ -1159,7 +1198,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A2QP372",
@@ -1185,7 +1225,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A2QP349",
@@ -1211,7 +1252,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A2QP398",
@@ -1237,7 +1279,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A2QP380",
@@ -1263,7 +1306,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000A2QP4B6",
@@ -1289,7 +1333,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000A2QP4A8",
@@ -1315,7 +1360,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "DE000ETF9074",
@@ -1341,7 +1387,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000ETF9082",
@@ -1367,7 +1414,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000ETF9090",
@@ -1393,7 +1441,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0000021842",
@@ -1419,7 +1468,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "DE000ETF9603",
@@ -1445,7 +1495,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "Germany",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0007054358",
@@ -1471,7 +1522,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0007052782",
@@ -1497,7 +1549,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0007056841",
@@ -1523,7 +1576,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0007075494",
@@ -1549,7 +1603,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010010827",
@@ -1575,7 +1630,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010245514",
@@ -1601,7 +1657,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010251744",
@@ -1627,7 +1684,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010261198",
@@ -1653,7 +1711,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010315770",
@@ -1679,7 +1738,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010361683",
@@ -1705,7 +1765,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010375766",
@@ -1731,7 +1792,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010377028",
@@ -1757,7 +1819,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010405431",
@@ -1783,7 +1846,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010429068",
@@ -1809,7 +1873,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010435297",
@@ -1835,7 +1900,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010510800",
@@ -1861,7 +1927,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010524777",
@@ -1887,7 +1954,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010527275",
@@ -1913,7 +1981,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010655704",
@@ -1939,7 +2008,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010655712",
@@ -1965,7 +2035,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010655746",
@@ -1991,7 +2062,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010717090",
@@ -2017,7 +2089,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010790980",
@@ -2043,7 +2116,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010756114",
@@ -2069,7 +2143,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010821819",
@@ -2095,7 +2170,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0010930644",
@@ -2121,7 +2197,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011036268",
@@ -2147,7 +2224,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011042753",
@@ -2173,7 +2251,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011475078",
@@ -2199,7 +2278,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011550177",
@@ -2221,7 +2301,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0011550185",
@@ -2243,7 +2324,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0011550193",
@@ -2266,7 +2348,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0011550672",
@@ -2289,7 +2372,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0011550680",
@@ -2315,7 +2399,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0011660927",
@@ -2341,7 +2426,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011669845",
@@ -2367,7 +2453,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011720911",
@@ -2393,7 +2480,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011758085",
@@ -2419,7 +2507,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0011857234",
@@ -2445,7 +2534,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0012399772",
@@ -2471,7 +2561,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0012399806",
@@ -2497,7 +2588,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0012399731",
@@ -2523,7 +2615,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0012739431",
@@ -2549,7 +2642,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0012740983",
@@ -2575,7 +2669,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013041530",
@@ -2601,7 +2696,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013346681",
@@ -2627,7 +2723,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013380607",
@@ -2653,7 +2750,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013209921",
@@ -2679,7 +2777,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0013411980",
@@ -2705,7 +2804,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412004",
@@ -2731,7 +2831,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412012",
@@ -2757,7 +2858,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412038",
@@ -2783,7 +2885,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412020",
@@ -2809,7 +2912,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412269",
@@ -2835,7 +2939,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412285",
@@ -2861,7 +2966,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013412293",
@@ -2887,7 +2993,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013416716",
@@ -2909,7 +3016,8 @@ window.PEA_ETFS = [
     "repl_method": "Physically backed",
     "emetteur_full": "Amundi ETF",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0014002CH1",
@@ -2935,7 +3043,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0014002H76",
@@ -2961,7 +3070,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0014003FW1",
@@ -2987,7 +3097,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0014002CG3",
@@ -3013,7 +3124,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0014003IY1",
@@ -3039,7 +3151,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "FR0014003N93",
@@ -3065,7 +3178,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "FR001400KE06",
@@ -3090,7 +3204,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR001400KH45",
@@ -3115,7 +3230,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR001400ZGO4",
@@ -3140,7 +3256,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "FR0014015ZN2",
@@ -3165,7 +3282,8 @@ window.PEA_ETFS = [
     "repl_method": "Unfunded swap",
     "emetteur_full": "Amundi ETF",
     "domicile": "France",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "IE00000EF730",
@@ -3191,7 +3309,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00002ZKAP0",
@@ -3217,7 +3336,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Xtrackers",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00004PGEY9",
@@ -3243,7 +3363,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "J.P. Morgan",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0000BNORX6",
@@ -3266,7 +3387,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "J.P. Morgan",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0001JH5CB4",
@@ -3291,7 +3413,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Xtrackers",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0002A3VE77",
@@ -3316,7 +3439,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Janus Henderson",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0002Z12PN9",
@@ -3341,7 +3465,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Robeco",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0002Y8CX98",
@@ -3366,7 +3491,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "WisdomTree",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0003UN5CT1",
@@ -3391,7 +3517,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "J.P. Morgan",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0005HNE843",
@@ -3414,7 +3541,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "WisdomTree",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00064TWYK9",
@@ -3438,7 +3566,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "J.P. Morgan",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00067X7JX0",
@@ -3462,7 +3591,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Invesco",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0006PTRUI8",
@@ -3487,7 +3617,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0007WLHX89",
@@ -3513,7 +3644,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Robeco",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00082MOBL9",
@@ -3539,7 +3671,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Global X",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0008470928",
@@ -3565,7 +3698,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0008471009",
@@ -3591,7 +3725,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "IE0008F9FCT2",
@@ -3616,7 +3751,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0008GRJRO8",
@@ -3640,7 +3776,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "State Street",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE0009F7UB30",
@@ -3665,7 +3802,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "First Trust",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000AGFZM58",
@@ -3691,7 +3829,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "HSBC ETF",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000CPG9HG3",
@@ -3716,7 +3855,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "First Trust",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000CR424L6",
@@ -3742,7 +3882,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000DB78H45",
@@ -3766,7 +3907,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Invesco",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000DXIJHF2",
@@ -3791,7 +3933,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "J.P. Morgan",
     "domicile": "Ireland",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000E9XXE77",
@@ -3816,7 +3959,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000FOSCLU1",
@@ -3841,7 +3985,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "IE000HH3SU50",
@@ -3866,7 +4011,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000IAXNM41",
@@ -3891,7 +4037,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000IMGE5W5",
@@ -3917,7 +4064,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Franklin Templeton",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000JEZ2VB3",
@@ -3942,7 +4090,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency hedged"
+    "hedge": "Currency hedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000LXEN6X4",
@@ -3968,7 +4117,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000MAO75G5",
@@ -3993,7 +4143,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000OV4XWA3",
@@ -4017,7 +4168,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "WisdomTree",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "IE000PYEKKW0",
@@ -4042,7 +4194,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000QOLLXO2",
@@ -4067,7 +4220,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "J.P. Morgan",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000SAXJ1M1",
@@ -4092,7 +4246,8 @@ window.PEA_ETFS = [
     "repl_method": "Swap-based",
     "emetteur_full": "Global X",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000ST40PX8",
@@ -4117,7 +4272,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Legal & General (LGIM)",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000U3XZQN5",
@@ -4142,7 +4298,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000VCBWFL8",
@@ -4167,7 +4324,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Xtrackers",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Oui"
   },
   {
     "isin": "IE000VKFA2D2",
@@ -4191,7 +4349,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Xtrackers",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000WRQ9RR1",
@@ -4216,7 +4375,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Global X",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000XERHYF0",
@@ -4241,7 +4401,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "Robeco",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000YASIPS3",
@@ -4267,7 +4428,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "BNP Paribas Easy",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE000ZQF1PE1",
@@ -4293,7 +4455,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00B02KXL92",
@@ -4319,7 +4482,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00B02KXM00",
@@ -4345,7 +4509,8 @@ window.PEA_ETFS = [
     "repl_method": "Optimized sampling",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00B0M63284",
@@ -4371,7 +4536,8 @@ window.PEA_ETFS = [
     "repl_method": "Full replication",
     "emetteur_full": "iShares",
     "domicile": "Ireland",
-    "hedge": "Currency unhedged"
+    "hedge": "Currency unhedged",
+    "peap": "Non"
   },
   {
     "isin": "IE00B14X4N27",
@@ -4385,7 +4551,20 @@ window.PEA_ETFS = [
     "ticker": "IQQU.DE",
     "prix": "55.29",
     "perf3": "45.0",
-    "perf1": "19.1"
+    "perf1": "19.1",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juin 2006",
+    "indice": "MSCI Europe ex UK",
+    "volatilite": "13,04%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B1XNH568",
@@ -4399,7 +4578,20 @@ window.PEA_ETFS = [
     "ticker": "2B7V.DE",
     "prix": "40.38",
     "perf3": "48.6",
-    "perf1": "20.3"
+    "perf1": "20.3",
+    "encours_mio": 162.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 juillet 2007",
+    "indice": "FTSE MIB",
+    "volatilite": "15,09%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B1YZSC51",
@@ -4413,7 +4605,20 @@ window.PEA_ETFS = [
     "ticker": "IQQY.DE",
     "prix": "40.38",
     "perf3": "48.6",
-    "perf1": "20.3"
+    "perf1": "20.3",
+    "encours_mio": 10.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 juillet 2007",
+    "indice": "MSCI Europe",
+    "volatilite": "12,21%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B23D8X81",
@@ -4427,7 +4632,20 @@ window.PEA_ETFS = [
     "ticker": "SXRJ.DE",
     "prix": "365.85",
     "perf3": "39.3",
-    "perf1": "11.6"
+    "perf1": "11.6",
+    "encours_mio": 33.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "19 novembre 2007",
+    "indice": "RAFI Fundamental Europe",
+    "volatilite": "10,85%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Invesco",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B3VWMM18",
@@ -4441,7 +4659,20 @@ window.PEA_ETFS = [
     "ticker": "SXRJ.DE",
     "prix": "365.85",
     "perf3": "39.3",
-    "perf1": "11.6"
+    "perf1": "11.6",
+    "encours_mio": 850.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "1 juillet 2009",
+    "indice": "MSCI EMU Small Cap",
+    "volatilite": "13,45%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B4K48X80",
@@ -4455,7 +4686,20 @@ window.PEA_ETFS = [
     "ticker": "EUNK.DE",
     "prix": "104.56",
     "perf3": "48.6",
-    "perf1": "20.4"
+    "perf1": "20.4",
+    "encours_mio": 15.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 septembre 2009",
+    "indice": "MSCI Europe",
+    "volatilite": "12,23%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B4K6B022",
@@ -4469,7 +4713,20 @@ window.PEA_ETFS = [
     "ticker": "H4ZA.DE",
     "prix": "67.16",
     "perf3": "56.6",
-    "perf1": "20.4"
+    "perf1": "20.4",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "5 octobre 2009",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "15,03%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "HSBC ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00B4M7GH52",
@@ -4483,7 +4740,20 @@ window.PEA_ETFS = [
     "ticker": "IBCJ.DE",
     "prix": "34.0",
     "perf3": "106.5",
-    "perf1": "33.2"
+    "perf1": "33.2",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "21 janvier 2011",
+    "indice": "MSCI Poland",
+    "volatilite": "21,35%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B52VJ196",
@@ -4497,7 +4767,20 @@ window.PEA_ETFS = [
     "ticker": "IUSK.DE",
     "prix": "77.13",
     "perf3": "23.7",
-    "perf1": "10.1"
+    "perf1": "10.1",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 février 2011",
+    "indice": "MSCI Europe SRI Select Reduced Fossil Fuels",
+    "volatilite": "12,74%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B53L4X51",
@@ -4511,7 +4794,20 @@ window.PEA_ETFS = [
     "ticker": "SXRY.DE",
     "prix": "258.4",
     "perf3": "104.9",
-    "perf1": "34.5"
+    "perf1": "34.5",
+    "encours_mio": 427.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "26 janvier 2010",
+    "indice": "FTSE MIB",
+    "volatilite": "15,38%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B53L3W79",
@@ -4525,7 +4821,20 @@ window.PEA_ETFS = [
     "ticker": "SXRT.DE",
     "prix": "244.8",
     "perf3": "52.7",
-    "perf1": "20.4"
+    "perf1": "20.4",
+    "encours_mio": 7.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "26 janvier 2010",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "15,32%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00B53QG562",
@@ -4539,7 +4848,20 @@ window.PEA_ETFS = [
     "ticker": "SXR7.DE",
     "prix": "243.95",
     "perf3": "54.0",
-    "perf1": "20.5"
+    "perf1": "20.5",
+    "encours_mio": 6.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 janvier 2010",
+    "indice": "MSCI EMU",
+    "volatilite": "14,17%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00B5BD5K76",
@@ -4553,7 +4875,20 @@ window.PEA_ETFS = [
     "ticker": "H4ZE.DE",
     "prix": "22.32",
     "perf3": "51.1",
-    "perf1": "20.1"
+    "perf1": "20.1",
+    "encours_mio": 353.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "1 juin 2010",
+    "indice": "MSCI Europe",
+    "volatilite": "12,03%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "HSBC ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B86MWN23",
@@ -4567,7 +4902,20 @@ window.PEA_ETFS = [
     "ticker": "EUN0.DE",
     "prix": "74.51",
     "perf3": "37.8",
-    "perf1": "11.2"
+    "perf1": "11.2",
+    "encours_mio": 904.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "30 novembre 2012",
+    "indice": "MSCI Europe Minimum Volatility",
+    "volatilite": "8,62%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00B8X9NY41",
@@ -4581,7 +4929,20 @@ window.PEA_ETFS = [
     "ticker": "FTGE.DE",
     "prix": "65.32",
     "perf3": "73.9",
-    "perf1": "25.3"
+    "perf1": "25.3",
+    "encours_mio": 108.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "21 octobre 2014",
+    "indice": "Nasdaq AlphaDEX® Eurozone",
+    "volatilite": "13,55%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "First Trust",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00B910VR50",
@@ -4595,7 +4956,20 @@ window.PEA_ETFS = [
     "ticker": "IS3H.DE",
     "prix": "79.91",
     "perf3": "68.1",
-    "perf1": "20.3"
+    "perf1": "20.3",
+    "encours_mio": 355.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 janvier 2013",
+    "indice": "MSCI EMU",
+    "volatilite": "14,25%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BCLWRD08",
@@ -4609,7 +4983,20 @@ window.PEA_ETFS = [
     "ticker": "IS3H.DE",
     "prix": "79.91",
     "perf3": "68.1",
-    "perf1": "20.3"
+    "perf1": "20.3",
+    "encours_mio": 551.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "13 septembre 2013",
+    "indice": "MSCI EMU Mid Cap",
+    "volatilite": "11,22%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BCLWRF22",
@@ -4623,7 +5010,20 @@ window.PEA_ETFS = [
     "ticker": "IS3G.DE",
     "prix": "77.33",
     "perf3": "54.0",
-    "perf1": "20.8"
+    "perf1": "20.8",
+    "encours_mio": 161.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "13 septembre 2013",
+    "indice": "MSCI EMU Large Cap",
+    "volatilite": "14,94%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BDF16007",
@@ -4637,7 +5037,20 @@ window.PEA_ETFS = [
     "ticker": "EEIP.DE",
     "prix": "25.3",
     "perf3": "40.7",
-    "perf1": "11.6"
+    "perf1": "11.6",
+    "encours_mio": 44.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "3 novembre 2016",
+    "indice": "WisdomTree Europe High Dividend",
+    "volatilite": "10,15%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BDF16114",
@@ -4651,7 +5064,20 @@ window.PEA_ETFS = [
     "ticker": "WTD7.DE",
     "prix": "25.3",
     "perf3": "40.7",
-    "perf1": "11.6"
+    "perf1": "11.6",
+    "encours_mio": 35.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "3 novembre 2016",
+    "indice": "WisdomTree Europe SmallCap Dividend",
+    "volatilite": "11,29%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BDGN9Z19",
@@ -4665,7 +5091,20 @@ window.PEA_ETFS = [
     "ticker": "FEUD.DE",
     "prix": "10.15",
     "perf3": "57.6",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 12.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "8 novembre 2016",
+    "indice": "MSCI EMU Select Screened",
+    "volatilite": "14,14%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BF2B0L69",
@@ -4679,7 +5118,20 @@ window.PEA_ETFS = [
     "ticker": "FEUD.DE",
     "prix": "10.15",
     "perf3": "57.6",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 544.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 septembre 2017",
+    "indice": "LibertyQ European Dividend",
+    "volatilite": "8,36%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Franklin Templeton",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BF2FL590",
@@ -4693,7 +5145,20 @@ window.PEA_ETFS = [
     "ticker": "FEUD.DE",
     "prix": "10.15",
     "perf3": "57.6",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 19.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "16 août 2018",
+    "indice": "Nasdaq AlphaDEX® Eurozone",
+    "volatilite": "13,55%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "First Trust",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BF450720",
@@ -4707,7 +5172,20 @@ window.PEA_ETFS = [
     "ticker": "DMFC.SW",
     "prix": "10.15",
     "perf3": "57.6",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 11.0,
+    "encours_devise": "EUR",
+    "devise": "CHF",
+    "distribution": "Capitalisation",
+    "date_creation": "28 septembre 2017",
+    "indice": "STOXX Developed World Equity Factor Screened (CHF Hedged)",
+    "volatilite": "11,86%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BF4G7183",
@@ -4721,7 +5199,20 @@ window.PEA_ETFS = [
     "ticker": "JREE.DE",
     "prix": "55.96",
     "perf3": "46.5",
-    "perf1": "21.2"
+    "perf1": "21.2",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "10 octobre 2018",
+    "indice": "JP Morgan Europe Research Enhanced Index Equity Active",
+    "volatilite": "12,35%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "J.P. Morgan",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BFD26097",
@@ -4735,7 +5226,20 @@ window.PEA_ETFS = [
     "ticker": "IPXE.DE",
     "prix": "11.19",
     "perf3": "55.5",
-    "perf1": "20.0"
+    "perf1": "20.0",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "22 juin 2021",
+    "indice": "IPOX® 100 Europe",
+    "volatilite": "16,99%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "First Trust",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BFMNHK08",
@@ -4749,7 +5253,20 @@ window.PEA_ETFS = [
     "ticker": "SLMA.DE",
     "prix": "11.19",
     "perf3": "55.5",
-    "perf1": "20.0"
+    "perf1": "20.0",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "8 mai 2018",
+    "indice": "MSCI Europe Low Carbon SRI Selection",
+    "volatilite": "12,78%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BFNM3B99",
@@ -4763,7 +5280,20 @@ window.PEA_ETFS = [
     "ticker": "SLMA.DE",
     "prix": "11.19",
     "perf3": "55.5",
-    "perf1": "20.0"
+    "perf1": "20.0",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "19 octobre 2018",
+    "indice": "MSCI EMU Screened",
+    "volatilite": "14,06%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BFNM3C07",
@@ -4777,7 +5307,20 @@ window.PEA_ETFS = [
     "ticker": "SLMB.DE",
     "prix": "9.13",
     "perf3": "55.5",
-    "perf1": "20.0"
+    "perf1": "20.0",
+    "encours_mio": 615.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "19 octobre 2018",
+    "indice": "MSCI EMU Screened",
+    "volatilite": "14,06%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BFNM3D14",
@@ -4790,7 +5333,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "10.98",
     "perf3": "51.5",
-    "perf1": "19.5"
+    "perf1": "19.5",
+    "encours_mio": 4.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "19 octobre 2018",
+    "indice": "MSCI Europe Screened",
+    "volatilite": "12,76%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BFNM3F38",
@@ -4803,7 +5359,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.94",
     "perf3": "51.4",
-    "perf1": "19.6"
+    "perf1": "19.6",
+    "encours_mio": 482.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "19 octobre 2018",
+    "indice": "MSCI Europe Screened",
+    "volatilite": "12,71%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BFWFPX50",
@@ -4816,7 +5385,20 @@ window.PEA_ETFS = [
     "stress5": "-24,60",
     "prix": "9.53",
     "perf3": "61.3",
-    "perf1": "23.4"
+    "perf1": "23.4",
+    "encours_mio": 326.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "15 août 2018",
+    "indice": "S&P Communication Services Select Sector Daily Capped 35/20",
+    "volatilite": "17,10%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BFXR5V83",
@@ -4829,7 +5411,20 @@ window.PEA_ETFS = [
     "stress5": "-18,00",
     "prix": "9.53",
     "perf3": "61.3",
-    "perf1": "23.4"
+    "perf1": "23.4",
+    "encours_mio": 453.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "8 octobre 2018",
+    "indice": "Solactive Core Developed Markets Europe ex UK Large & Mid Cap",
+    "volatilite": "13,06%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Legal & General (LGIM)",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BG0J9Y53",
@@ -4842,7 +5437,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "9.53",
     "perf3": "61.3",
-    "perf1": "23.4"
+    "perf1": "23.4",
+    "encours_mio": 262.0,
+    "encours_devise": "EUR",
+    "devise": "GBP",
+    "distribution": "Distribution",
+    "date_creation": "30 mai 2018",
+    "indice": "MSCI EMU (GBP Hedged)",
+    "volatilite": "14,69%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BG13YJ64",
@@ -4855,7 +5463,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "10.48",
     "perf3": "72.9",
-    "perf1": "19.6"
+    "perf1": "19.6",
+    "encours_mio": 39.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 février 2018",
+    "indice": "MSCI Europe Momentum",
+    "volatilite": "16,30%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BG13YG34",
@@ -4868,7 +5489,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.19",
     "perf3": "29.1",
-    "perf1": "15.0"
+    "perf1": "15.0",
+    "encours_mio": 30.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 février 2018",
+    "indice": "MSCI Europe Sector Neutral Quality",
+    "volatilite": "11,62%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BG13YK79",
@@ -4881,7 +5515,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "7.48",
     "perf3": "26.8",
-    "perf1": "8.5"
+    "perf1": "8.5",
+    "encours_mio": 24.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 février 2018",
+    "indice": "MSCI Europe Minimum Volatility",
+    "volatilite": "8,50%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BG13YH41",
@@ -4894,7 +5541,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.53",
     "perf3": "73.9",
-    "perf1": "31.6"
+    "perf1": "31.6",
+    "encours_mio": 122.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 février 2018",
+    "indice": "MSCI Europe Enhanced Value",
+    "volatilite": "13,43%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BG13YL86",
@@ -4907,7 +5567,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.73",
     "perf3": "66.1",
-    "perf1": "24.5"
+    "perf1": "24.5",
+    "encours_mio": 218.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 février 2018",
+    "indice": "STOXX Developed Europe Equity Factor Screened",
+    "volatilite": "11,53%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BG13YZ23",
@@ -4921,7 +5594,20 @@ window.PEA_ETFS = [
     "ticker": "IPRE.DE",
     "prix": "11.21",
     "perf3": "67.2",
-    "perf1": "21.2"
+    "perf1": "21.2",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Distribution",
+    "date_creation": "21 février 2018",
+    "indice": "STOXX US Equity Factor Screened",
+    "volatilite": "12,29%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BGDPWW94",
@@ -4935,7 +5621,20 @@ window.PEA_ETFS = [
     "ticker": "IPRE.DE",
     "prix": "8.02",
     "perf3": "26.4",
-    "perf1": "12.0"
+    "perf1": "12.0",
+    "encours_mio": 193.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 décembre 2018",
+    "indice": "MSCI Europe SRI Select Reduced Fossil Fuels",
+    "volatilite": "12,71%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BGDQ0L74",
@@ -4949,7 +5648,20 @@ window.PEA_ETFS = [
     "ticker": "IPRE.DE",
     "prix": "4.92",
     "perf3": "34.5",
-    "perf1": "2.6"
+    "perf1": "2.6",
+    "encours_mio": 187.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 décembre 2018",
+    "indice": "FTSE EPRA/NAREIT Developed Europe",
+    "volatilite": "14,95%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BGV5VM45",
@@ -4962,7 +5674,20 @@ window.PEA_ETFS = [
     "stress5": "-18,60",
     "prix": "8.97",
     "perf3": "81.4",
-    "perf1": "38.1"
+    "perf1": "38.1",
+    "encours_mio": 638.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "14 janvier 2019",
+    "indice": "S&P Europe Ex-UK LargeMidCap",
+    "volatilite": "17,36%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BHZPHZ28",
@@ -4975,7 +5700,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.97",
     "perf3": "81.4",
-    "perf1": "38.1"
+    "perf1": "38.1",
+    "encours_mio": 419.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "8 mars 2019",
+    "indice": "MSCI EMU ESG Enhanced Focus CTB",
+    "volatilite": "14,02%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BHZPJ015",
@@ -4988,7 +5726,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "10.37",
     "perf3": "54.1",
-    "perf1": "19.5"
+    "perf1": "19.5",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 avril 2019",
+    "indice": "MSCI EMU ESG Enhanced Focus CTB",
+    "volatilite": "14,28%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BHZPJ676",
@@ -5001,7 +5752,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "7.06",
     "perf3": "44.5",
-    "perf1": "17.4"
+    "perf1": "17.4",
+    "encours_mio": 4.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 mars 2019",
+    "indice": "MSCI Europe ESG Enhanced Focus CTB",
+    "volatilite": "12,29%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BHZPJ783",
@@ -5014,7 +5778,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "9.76",
     "perf3": "49.0",
-    "perf1": "20.3"
+    "perf1": "20.3",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 avril 2019",
+    "indice": "MSCI Europe ESG Enhanced Focus CTB",
+    "volatilite": "12,44%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BK5H8015",
@@ -5027,7 +5804,20 @@ window.PEA_ETFS = [
     "stress5": "-17,00",
     "prix": "12.52",
     "perf3": "69.0",
-    "perf1": "22.3"
+    "perf1": "22.3",
+    "encours_mio": 591.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "30 septembre 2019",
+    "indice": "STOXX® Europe 600 SRI",
+    "volatilite": "12,83%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKBF6616",
@@ -5040,7 +5830,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "12.52",
     "perf3": "69.0",
-    "perf1": "22.3"
+    "perf1": "22.3",
+    "encours_mio": 836.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "5 juin 2019",
+    "indice": "MSCI EMU (USD Hedged)",
+    "volatilite": "13,12%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BKLTRN76",
@@ -5053,7 +5856,20 @@ window.PEA_ETFS = [
     "stress5": "-18,00",
     "prix": "8.92",
     "perf3": "35.3",
-    "perf1": "13.3"
+    "perf1": "13.3",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 septembre 2019",
+    "indice": "MSCI ACWI Select Climate 500 Europe Subset",
+    "volatilite": "11,87%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Legal & General (LGIM)",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKSBGT50",
@@ -5066,7 +5882,20 @@ window.PEA_ETFS = [
     "stress5": "-17,50",
     "prix": "8.92",
     "perf3": "35.3",
-    "perf1": "13.3"
+    "perf1": "13.3",
+    "encours_mio": 103.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 mai 2020",
+    "indice": "Fidelity Europe Equity Research Enhanced",
+    "volatilite": "12,50%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Fidelity ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKVL7D31",
@@ -5079,7 +5908,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.92",
     "perf3": "35.3",
-    "perf1": "13.3"
+    "perf1": "13.3",
+    "encours_mio": 29.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 avril 2020",
+    "indice": "MSCI Europe Minimum Volatility Advanced Select",
+    "volatilite": "9,32%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0D84",
@@ -5089,7 +5931,20 @@ window.PEA_ETFS = [
     "perf5": "14,36",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-13,80"
+    "stress5": "-13,80",
+    "encours_mio": 142.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Consumer Staples 20/35 Capped",
+    "volatilite": "15,07%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0C77",
@@ -5099,7 +5954,20 @@ window.PEA_ETFS = [
     "perf5": "18,63",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-26,50"
+    "stress5": "-26,50",
+    "encours_mio": 127.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Consumer Discretionary 20/35 Capped",
+    "volatilite": "19,18%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0H23",
@@ -5109,7 +5977,20 @@ window.PEA_ETFS = [
     "perf5": "17,30",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-16,30"
+    "stress5": "-16,30",
+    "encours_mio": 568.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Health Care 20/35 Capped",
+    "volatilite": "16,90%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0F09",
@@ -5119,7 +6000,20 @@ window.PEA_ETFS = [
     "perf5": "30,17",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-26,30"
+    "stress5": "-26,30",
+    "encours_mio": 592.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Energy 20/35 Capped",
+    "volatilite": "23,57%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0G16",
@@ -5129,7 +6023,20 @@ window.PEA_ETFS = [
     "perf5": "32,80",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-22,70"
+    "stress5": "-22,70",
+    "encours_mio": 824.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Financials 20/35 Capped",
+    "volatilite": "17,04%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0J47",
@@ -5139,7 +6046,20 @@ window.PEA_ETFS = [
     "perf5": "24,28",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-21,80"
+    "stress5": "-21,80",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Industrials 20/35 Capped",
+    "volatilite": "19,39%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0L68",
@@ -5149,7 +6069,20 @@ window.PEA_ETFS = [
     "perf5": "20,63",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-19,20"
+    "stress5": "-19,20",
+    "encours_mio": 106.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Materials 20/35 Capped",
+    "volatilite": "17,44%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0K51",
@@ -5159,7 +6092,20 @@ window.PEA_ETFS = [
     "perf5": "24,91",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-26,30"
+    "stress5": "-26,30",
+    "encours_mio": 166.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Information Technology 20/35 Capped",
+    "volatilite": "27,50%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0M75",
@@ -5169,7 +6115,20 @@ window.PEA_ETFS = [
     "perf5": "17,84",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
-    "stress5": "-18,40"
+    "stress5": "-18,40",
+    "encours_mio": 284.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Small Cap",
+    "volatilite": "12,66%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0N82",
@@ -5182,7 +6141,20 @@ window.PEA_ETFS = [
     "stress5": "-14,90",
     "prix": "21.41",
     "perf3": "50.5",
-    "perf1": "23.8"
+    "perf1": "23.8",
+    "encours_mio": 58.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Communication Services 20/35 Capped",
+    "volatilite": "14,98%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0P07",
@@ -5196,7 +6168,20 @@ window.PEA_ETFS = [
     "ticker": "HSXU.DE",
     "prix": "21.41",
     "perf3": "50.5",
-    "perf1": "23.8"
+    "perf1": "23.8",
+    "encours_mio": 643.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe Utilities 20/35 Capped",
+    "volatilite": "15,07%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKWQ0Q14",
@@ -5210,7 +6195,20 @@ window.PEA_ETFS = [
     "ticker": "HSXU.DE",
     "prix": "21.41",
     "perf3": "50.5",
-    "perf1": "23.8"
+    "perf1": "23.8",
+    "encours_mio": 391.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 décembre 2014",
+    "indice": "MSCI Europe",
+    "volatilite": "12,06%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKY55W78",
@@ -5224,7 +6222,20 @@ window.PEA_ETFS = [
     "ticker": "HSXU.DE",
     "prix": "21.41",
     "perf3": "50.5",
-    "perf1": "23.8"
+    "perf1": "23.8",
+    "encours_mio": 19.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "4 juin 2020",
+    "indice": "FTSE Developed Europe ESG Low Carbon Select",
+    "volatilite": "13,50%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "HSBC ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BKY58625",
@@ -5238,7 +6249,20 @@ window.PEA_ETFS = [
     "ticker": "HSXU.DE",
     "prix": "17.08",
     "perf3": "30.5",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 56.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "21 avril 2022",
+    "indice": "FTSE Developed Europe ex UK ESG Low Carbon Select",
+    "volatilite": "13,30%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "HSBC ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BL6K8C82",
@@ -5252,7 +6276,20 @@ window.PEA_ETFS = [
     "ticker": "CBUA.DE",
     "prix": "7.26",
     "perf3": "41.9",
-    "perf1": "17.0"
+    "perf1": "17.0",
+    "encours_mio": 186.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "27 juillet 2021",
+    "indice": "MSCI Europe Climate Paris Aligned Benchmark Select",
+    "volatilite": "12,95%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BL6K8D99",
@@ -5265,7 +6302,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "7.29",
     "perf3": "46.3",
-    "perf1": "14.3"
+    "perf1": "14.3",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "27 juillet 2021",
+    "indice": "MSCI EMU Climate Paris Aligned Benchmark Select",
+    "volatilite": "14,35%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BMDBMG37",
@@ -5278,7 +6328,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "150.42",
     "perf3": "30.4",
-    "perf1": "9.8"
+    "perf1": "9.8",
+    "encours_mio": 22.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "10 novembre 2020",
+    "indice": "MSCI Europe SRI Select Reduced Fossil Fuels",
+    "volatilite": "13,06%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMDPBY65",
@@ -5292,7 +6355,20 @@ window.PEA_ETFS = [
     "ticker": "ESIS.DE",
     "prix": "6.23",
     "perf3": "15.0",
-    "perf1": "10.6"
+    "perf1": "10.6",
+    "encours_mio": 42.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "29 juillet 2020",
+    "indice": "STOXX® Europe 600 Paris-Aligned",
+    "volatilite": "12,94%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Franklin Templeton",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMW42181",
@@ -5306,7 +6382,20 @@ window.PEA_ETFS = [
     "ticker": "ESIS.DE",
     "prix": "6.23",
     "perf3": "15.0",
-    "perf1": "10.6"
+    "perf1": "10.6",
+    "encours_mio": 850.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 novembre 2020",
+    "indice": "MSCI Europe Health Care 20/35 Capped",
+    "volatilite": "17,10%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMW42074",
@@ -5320,7 +6409,20 @@ window.PEA_ETFS = [
     "ticker": "ESIS.DE",
     "prix": "5.15",
     "perf3": "7.0",
-    "perf1": "6.5"
+    "perf1": "6.5",
+    "encours_mio": 471.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 novembre 2020",
+    "indice": "MSCI Europe Consumer Staples 20/35 Capped",
+    "volatilite": "15,28%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMW42520",
@@ -5333,7 +6435,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "8.17",
     "perf3": "67.5",
-    "perf1": "11.2"
+    "perf1": "11.2",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "14 mai 2021",
+    "indice": "MSCI Europe Industrials 20/35 Capped",
+    "volatilite": "19,57%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMW42298",
@@ -5346,7 +6461,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "5.08",
     "perf3": "-12.6",
-    "perf1": "-7.9"
+    "perf1": "-7.9",
+    "encours_mio": 93.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 novembre 2020",
+    "indice": "MSCI Europe Consumer Discretionary 20/35 Capped",
+    "volatilite": "19,13%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMW42306",
@@ -5360,7 +6488,20 @@ window.PEA_ETFS = [
     "ticker": "ESIE.DE",
     "prix": "14.43",
     "perf3": "124.6",
-    "perf1": "31.0"
+    "perf1": "31.0",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 novembre 2020",
+    "indice": "MSCI Europe Financials 20/35 Capped",
+    "volatilite": "17,18%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMW42413",
@@ -5374,7 +6515,20 @@ window.PEA_ETFS = [
     "ticker": "ESIE.DE",
     "prix": "9.55",
     "perf3": "68.4",
-    "perf1": "48.3"
+    "perf1": "48.3",
+    "encours_mio": 237.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 novembre 2020",
+    "indice": "MSCI Europe Information Technology 20/35 Capped",
+    "volatilite": "27,80%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BMW42637",
@@ -5388,7 +6542,20 @@ window.PEA_ETFS = [
     "ticker": "ESIE.DE",
     "prix": "13.56",
     "perf3": "61.0",
-    "perf1": "51.4"
+    "perf1": "51.4",
+    "encours_mio": 280.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 novembre 2020",
+    "indice": "MSCI Europe Energy 20/35 Capped",
+    "volatilite": "23,66%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BMYDM919",
@@ -5402,7 +6569,20 @@ window.PEA_ETFS = [
     "ticker": "AW11.DE",
     "prix": "20.44",
     "perf3": "52.0",
-    "perf1": "22.5"
+    "perf1": "22.5",
+    "encours_mio": 379.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "15 avril 2021",
+    "indice": "FTSE Developed Europe ex UK All Cap ex CW ex TC ex REITS Dividend Growth with Quality",
+    "volatilite": "10,93%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "Legal & General (LGIM)",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BN4PXC48",
@@ -5416,7 +6596,20 @@ window.PEA_ETFS = [
     "ticker": "AW11.DE",
     "prix": "20.44",
     "perf3": "52.0",
-    "perf1": "22.5"
+    "perf1": "22.5",
+    "encours_mio": 17.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "26 février 2021",
+    "indice": "Solactive UBS Climate Aware Global Developed Equity CTB",
+    "volatilite": "10,45%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "UBS ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BNC1G699",
@@ -5430,7 +6623,20 @@ window.PEA_ETFS = [
     "ticker": "HPAE.DE",
     "prix": "24.42",
     "perf3": "42.5",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 34.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "21 janvier 2021",
+    "indice": "MSCI EMU Low Carbon SRI Selection",
+    "volatilite": "13,91%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BNKF6C99",
@@ -5444,7 +6650,20 @@ window.PEA_ETFS = [
     "ticker": "HPAE.DE",
     "prix": "24.42",
     "perf3": "42.5",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 7.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "29 juin 2021",
+    "indice": "STOXX Europe Total Market Leaders",
+    "volatilite": "13,56%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BP2C0316",
@@ -5458,7 +6677,20 @@ window.PEA_ETFS = [
     "ticker": "HPAE.DE",
     "prix": "24.42",
     "perf3": "42.5",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 36.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 août 2021",
+    "indice": "MSCI Europe Climate Paris Aligned",
+    "volatilite": "13,02%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "HSBC ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BQN1K562",
@@ -5471,7 +6703,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "1034.9",
     "perf3": "28.5",
-    "perf1": "12.2"
+    "perf1": "12.2",
+    "encours_mio": 584.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 janvier 2015",
+    "indice": "MSCI Europe Sector Neutral Quality",
+    "volatilite": "11,40%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BQN1K786",
@@ -5484,7 +6729,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "1356.0",
     "perf3": "70.5",
-    "perf1": "16.4"
+    "perf1": "16.4",
+    "encours_mio": 715.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 janvier 2015",
+    "indice": "MSCI Europe Momentum",
+    "volatilite": "16,48%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BQN1KC32",
@@ -5497,7 +6755,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "967.2",
     "perf3": "41.1",
-    "perf1": "12.0"
+    "perf1": "12.0",
+    "encours_mio": 34.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 janvier 2015",
+    "indice": "MSCI Europe Mid Cap Equal Weighted",
+    "volatilite": "11,13%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BQN1K901",
@@ -5510,7 +6781,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "1174.8",
     "perf3": "73.2",
-    "perf1": "28.0"
+    "perf1": "28.0",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 janvier 2015",
+    "indice": "MSCI Europe Enhanced Value",
+    "volatilite": "13,45%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BQZJBX31",
@@ -5523,7 +6807,20 @@ window.PEA_ETFS = [
     "stress5": "-15,26",
     "prix": "1405.4",
     "perf3": "37.2",
-    "perf1": "20.5"
+    "perf1": "20.5",
+    "encours_mio": 190.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "21 octobre 2014",
+    "indice": "WisdomTree Europe High Dividend",
+    "volatilite": "10,18%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BQZJC527",
@@ -5536,7 +6833,20 @@ window.PEA_ETFS = [
     "stress5": "-16,06",
     "prix": "1849.6",
     "perf3": "24.2",
-    "perf1": "6.0"
+    "perf1": "6.0",
+    "encours_mio": 50.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "21 octobre 2014",
+    "indice": "WisdomTree Europe SmallCap Dividend",
+    "volatilite": "11,85%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BSPLC298",
@@ -5549,7 +6859,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "949.85",
     "perf3": "42.2",
-    "perf1": "18.9"
+    "perf1": "18.9",
+    "encours_mio": 828.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 février 2015",
+    "indice": "MSCI Europe Small Cap Value Weighted",
+    "volatilite": "13,10%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BSPLC306",
@@ -5562,7 +6885,20 @@ window.PEA_ETFS = [
     "stress5": "-17,40",
     "prix": "949.85",
     "perf3": "42.2",
-    "perf1": "18.9"
+    "perf1": "18.9",
+    "encours_mio": 82.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 février 2015",
+    "indice": "MSCI Europe Value Exposure Select",
+    "volatilite": "12,67%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BVDPJP67",
@@ -5576,7 +6912,20 @@ window.PEA_ETFS = [
     "ticker": "SXR9.DE",
     "prix": "949.85",
     "perf3": "42.2",
-    "perf1": "18.9"
+    "perf1": "18.9",
+    "encours_mio": 206.0,
+    "encours_devise": "EUR",
+    "devise": "GBP",
+    "distribution": "Distribution",
+    "date_creation": "31 mars 2015",
+    "indice": "MSCI Europe ex UK (GBP Hedged)",
+    "volatilite": "13,23%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BVXBH163",
@@ -5590,7 +6939,20 @@ window.PEA_ETFS = [
     "ticker": "SXR9.DE",
     "prix": "31.73",
     "perf3": "44.2",
-    "perf1": "17.8"
+    "perf1": "17.8",
+    "encours_mio": 31.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Distribution",
+    "date_creation": "18 mai 2015",
+    "indice": "WisdomTree Europe Equity (USD Hedged)",
+    "volatilite": "13,01%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BWK1SP74",
@@ -5604,7 +6966,20 @@ window.PEA_ETFS = [
     "ticker": "SXR9.DE",
     "prix": "10.17",
     "perf3": "44.8",
-    "perf1": "16.6"
+    "perf1": "16.6",
+    "encours_mio": 192.0,
+    "encours_devise": "EUR",
+    "devise": "CHF",
+    "distribution": "Capitalisation",
+    "date_creation": "29 mai 2015",
+    "indice": "MSCI EMU (CHF Hedged)",
+    "volatilite": "14,42%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BWZN1T31",
@@ -5617,7 +6992,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "14.8",
     "perf3": "61.8",
-    "perf1": "23.2"
+    "perf1": "23.2",
+    "encours_mio": 262.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "30 juin 2015",
+    "indice": "MSCI EMU (USD Hedged)",
+    "volatilite": "13,31%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYQCZQ89",
@@ -5630,7 +7018,20 @@ window.PEA_ETFS = [
     "stress5": "-17,11",
     "prix": "1827.7",
     "perf3": "32.8",
-    "perf1": "14.8"
+    "perf1": "14.8",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "GBP",
+    "distribution": "Distribution",
+    "date_creation": "2 novembre 2015",
+    "indice": "WisdomTree Europe Equity (GBP Hedged)",
+    "volatilite": "15,44%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYSX4176",
@@ -5644,7 +7045,20 @@ window.PEA_ETFS = [
     "ticker": "HEDD.SW",
     "prix": "42.83",
     "perf3": "43.3",
-    "perf1": "17.3"
+    "perf1": "17.3",
+    "encours_mio": 30.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "9 septembre 2019",
+    "indice": "Fidelity Europe Quality Income",
+    "volatilite": "11,58%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Fidelity ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYQCZP72",
@@ -5658,7 +7072,20 @@ window.PEA_ETFS = [
     "ticker": "HEDD.SW",
     "prix": "42.83",
     "perf3": "43.3",
-    "perf1": "17.3"
+    "perf1": "17.3",
+    "encours_mio": 50.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "1 novembre 2016",
+    "indice": "WisdomTree Europe Equity (USD Hedged)",
+    "volatilite": "13,41%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYQCZX56",
@@ -5672,7 +7099,20 @@ window.PEA_ETFS = [
     "ticker": "HEDD.SW",
     "prix": "31.96",
     "perf3": "41.1",
-    "perf1": "16.2"
+    "perf1": "16.2",
+    "encours_mio": 10.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "2 novembre 2015",
+    "indice": "WisdomTree Europe Equity",
+    "volatilite": "14,70%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYQCZT11",
@@ -5686,7 +7126,20 @@ window.PEA_ETFS = [
     "ticker": "HEDD.SW",
     "prix": "28.59",
     "perf3": "29.2",
-    "perf1": "13.3"
+    "perf1": "13.3",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "CHF",
+    "distribution": "Capitalisation",
+    "date_creation": "2 février 2016",
+    "indice": "WisdomTree Europe Equity (CHF Hedged)",
+    "volatilite": "15,62%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYSX4283",
@@ -5699,7 +7152,20 @@ window.PEA_ETFS = [
     "stress5": "-17,40",
     "prix": "11.95",
     "perf3": "66.4",
-    "perf1": "22.5"
+    "perf1": "22.5",
+    "encours_mio": 37.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "30 octobre 2017",
+    "indice": "Fidelity Europe Quality Income",
+    "volatilite": "11,17%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Fidelity ETF",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYSX4408",
@@ -5712,7 +7178,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "11.95",
     "perf3": "66.4",
-    "perf1": "22.5"
+    "perf1": "22.5",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "GBP",
+    "distribution": "Capitalisation",
+    "date_creation": "29 novembre 2017",
+    "indice": "Fidelity Europe Quality Income (GBP Hedged)",
+    "volatilite": "11,58%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Fidelity ETF",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYTH5487",
@@ -5726,7 +7205,20 @@ window.PEA_ETFS = [
     "ticker": "CEUD.DE",
     "prix": "11.95",
     "perf3": "66.4",
-    "perf1": "22.5"
+    "perf1": "22.5",
+    "encours_mio": 6.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "4 mars 2022",
+    "indice": "MSCI Europe Climate Paris Aligned",
+    "volatilite": "13,90%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYXPXK00",
@@ -5740,7 +7232,20 @@ window.PEA_ETFS = [
     "ticker": "CEUD.DE",
     "prix": "11.95",
     "perf3": "66.4",
-    "perf1": "22.5"
+    "perf1": "22.5",
+    "encours_mio": 28.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "21 avril 2017",
+    "indice": "STOXX Developed World Equity Factor Screened (EUR Hedged)",
+    "volatilite": "11,09%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BYXZ2585",
@@ -5754,7 +7259,20 @@ window.PEA_ETFS = [
     "ticker": "CEUD.DE",
     "prix": "8.71",
     "perf3": "43.4",
-    "perf1": "19.6"
+    "perf1": "19.6",
+    "encours_mio": 508.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "28 avril 2017",
+    "indice": "MSCI EMU",
+    "volatilite": "13,89%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BYYHSM20",
@@ -5767,7 +7285,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "7.18",
     "perf3": "43.4",
-    "perf1": "14.3"
+    "perf1": "14.3",
+    "encours_mio": 822.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "12 juin 2017",
+    "indice": "MSCI Europe High Dividend Yield Advanced Select",
+    "volatilite": "10,14%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BZ0PKT83",
@@ -5781,7 +7312,20 @@ window.PEA_ETFS = [
     "ticker": "IBC0.DE",
     "prix": "15.93",
     "perf3": "70.5",
-    "perf1": "23.1"
+    "perf1": "23.1",
+    "encours_mio": 751.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "4 septembre 2015",
+    "indice": "STOXX Developed World Equity Factor Screened",
+    "volatilite": "10,40%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BZ0PKS76",
@@ -5795,7 +7339,20 @@ window.PEA_ETFS = [
     "ticker": "IBC0.DE",
     "prix": "17.32",
     "perf3": "67.1",
-    "perf1": "20.8"
+    "perf1": "20.8",
+    "encours_mio": 101.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "4 septembre 2015",
+    "indice": "STOXX US Equity Factor Screened",
+    "volatilite": "12,17%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BZ0PKV06",
@@ -5809,7 +7366,20 @@ window.PEA_ETFS = [
     "ticker": "IBC0.DE",
     "prix": "13.15",
     "perf3": "74.9",
-    "perf1": "27.6"
+    "perf1": "27.6",
+    "encours_mio": 658.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "4 septembre 2015",
+    "indice": "STOXX Developed Europe Equity Factor Screened",
+    "volatilite": "11,80%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "iShares",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "IE00BZ4BMM98",
@@ -5823,7 +7393,20 @@ window.PEA_ETFS = [
     "ticker": "LYY7.DE",
     "prix": "22.06",
     "perf3": "21.0",
-    "perf1": "13.0"
+    "perf1": "13.0",
+    "encours_mio": 587.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 janvier 2016",
+    "indice": "EURO iSTOXX® High Dividend Low Volatility 50",
+    "volatilite": "9,61%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Invesco",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BZ56SY76",
@@ -5837,7 +7420,20 @@ window.PEA_ETFS = [
     "ticker": "LYY7.DE",
     "prix": "22.06",
     "perf3": "21.0",
-    "perf1": "13.0"
+    "perf1": "13.0",
+    "encours_mio": 9.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "3 novembre 2016",
+    "indice": "WisdomTree Eurozone Quality Dividend Growth",
+    "volatilite": "16,14%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "IE00BZ56TQ67",
@@ -5851,7 +7447,20 @@ window.PEA_ETFS = [
     "ticker": "LYY7.DE",
     "prix": "28.72",
     "perf3": "22.7",
-    "perf1": "12.7"
+    "perf1": "12.7",
+    "encours_mio": 40.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "29 juin 2016",
+    "indice": "WisdomTree Eurozone Quality Dividend Growth",
+    "volatilite": "16,11%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Irlande",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0252633754",
@@ -5865,7 +7474,20 @@ window.PEA_ETFS = [
     "ticker": "LYY7.DE",
     "prix": "228.35",
     "perf3": "99.9",
-    "perf1": "4.7"
+    "perf1": "4.7",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "1 juin 2006",
+    "indice": "DAX®",
+    "volatilite": "15,65%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0252634307",
@@ -5879,7 +7501,20 @@ window.PEA_ETFS = [
     "ticker": "LYY8.DE",
     "prix": "265.0",
     "perf3": "99.9",
-    "perf1": "3.7"
+    "perf1": "3.7",
+    "encours_mio": 180.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "1 juin 2006",
+    "indice": "LevDAX® (2x)",
+    "volatilite": "31,27%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0274209237",
@@ -5889,7 +7524,20 @@ window.PEA_ETFS = [
     "perf5": "19,20",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-21,80"
+    "stress5": "-21,80",
+    "encours_mio": 7.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "10 janvier 2007",
+    "indice": "MSCI Europe",
+    "volatilite": "12,88%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0274211217",
@@ -5902,7 +7550,20 @@ window.PEA_ETFS = [
     "stress5": "-23,40",
     "prix": "789.45",
     "perf3": "-26.6",
-    "perf1": "-3.8"
+    "perf1": "-3.8",
+    "encours_mio": 5.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "4 janvier 2007",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "20,10%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0274211480",
@@ -5915,7 +7576,20 @@ window.PEA_ETFS = [
     "stress5": "-23,20",
     "prix": "789.45",
     "perf3": "-26.6",
-    "perf1": "-3.8"
+    "perf1": "-3.8",
+    "encours_mio": 6.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "10 janvier 2007",
+    "indice": "DAX®",
+    "volatilite": "15,64%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0274212538",
@@ -5928,7 +7602,20 @@ window.PEA_ETFS = [
     "stress5": "-24,00",
     "prix": "789.45",
     "perf3": "-26.6",
-    "perf1": "-3.8"
+    "perf1": "-3.8",
+    "encours_mio": 100.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "4 janvier 2007",
+    "indice": "FTSE MIB",
+    "volatilite": "26,14%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0292095535",
@@ -5941,7 +7628,20 @@ window.PEA_ETFS = [
     "stress5": "-18,80",
     "prix": "789.45",
     "perf3": "-26.6",
-    "perf1": "-3.8"
+    "perf1": "-3.8",
+    "encours_mio": 767.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "1 juin 2007",
+    "indice": "EURO STOXX® Quality Dividend 50",
+    "volatilite": "9,88%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0292106241",
@@ -5954,7 +7654,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "789.45",
     "perf3": "-26.6",
-    "perf1": "-3.8"
+    "perf1": "-3.8",
+    "encours_mio": 160.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 juin 2007",
+    "indice": "ShortDAX®",
+    "volatilite": "15,69%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0292106753",
@@ -5967,7 +7680,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "445.2",
     "perf3": "-27.6",
-    "perf1": "-17.3"
+    "perf1": "-17.3",
+    "encours_mio": 30.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 juin 2007",
+    "indice": "EURO STOXX® 50 Short",
+    "volatilite": "15,45%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0322250712",
@@ -5980,7 +7706,20 @@ window.PEA_ETFS = [
     "stress5": "-22,70",
     "prix": "24190.0",
     "perf3": "87.5",
-    "perf1": "-1.8"
+    "perf1": "-1.8",
+    "encours_mio": 268.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 janvier 2008",
+    "indice": "LPX Major Market®",
+    "volatilite": "19,80%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0322253906",
@@ -5993,7 +7732,20 @@ window.PEA_ETFS = [
     "stress5": "-21,40",
     "prix": "24190.0",
     "perf3": "87.5",
-    "perf1": "-1.8"
+    "perf1": "-1.8",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "17 janvier 2008",
+    "indice": "MSCI Europe Small Cap",
+    "volatilite": "13,42%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage optimisé",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0328475792",
@@ -6006,7 +7758,20 @@ window.PEA_ETFS = [
     "stress5": "-17,90",
     "prix": "24190.0",
     "perf3": "87.5",
-    "perf1": "-1.8"
+    "perf1": "-1.8",
+    "encours_mio": 4.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "20 janvier 2009",
+    "indice": "STOXX® Europe 600",
+    "volatilite": "12,15%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0380865021",
@@ -6019,7 +7784,20 @@ window.PEA_ETFS = [
     "stress5": "-23,40",
     "prix": "24190.0",
     "perf3": "87.5",
-    "perf1": "-1.8"
+    "perf1": "-1.8",
+    "encours_mio": 6.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "29 août 2008",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "15,37%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0411075376",
@@ -6032,7 +7810,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "24190.0",
     "perf3": "87.5",
-    "perf1": "-1.8"
+    "perf1": "-1.8",
+    "encours_mio": 55.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 mars 2010",
+    "indice": "LevDAX® (2x)",
+    "volatilite": "31,25%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0599612842",
@@ -6045,7 +7836,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "308.8",
     "perf3": "45.7",
-    "perf1": "9.8"
+    "perf1": "9.8",
+    "encours_mio": 17.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "3 février 2012",
+    "indice": "Ossiam Europe ESG Machine Learning",
+    "volatilite": "9,62%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0599613147",
@@ -6059,7 +7863,20 @@ window.PEA_ETFS = [
     "ticker": "MFDD.DE",
     "prix": "155.9",
     "perf3": "40.3",
-    "perf1": "13.8"
+    "perf1": "13.8",
+    "encours_mio": 207.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 mai 2011",
+    "indice": "STOXX® Europe 600 ESG Broad Market Equal Weight",
+    "volatilite": "12,29%",
+    "replication": "Physique",
+    "repl_method": "Échantillonnage",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0838782315",
@@ -6072,7 +7889,20 @@ window.PEA_ETFS = [
     "stress5": "-23,20",
     "ticker": "MFDD.DE",
     "prix": "250.5",
-    "perf1": "20.1"
+    "perf1": "20.1",
+    "encours_mio": 539.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "28 novembre 2012",
+    "indice": "DAX® ESG Screened",
+    "volatilite": "16,08%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0846194776",
@@ -6085,7 +7915,20 @@ window.PEA_ETFS = [
     "stress5": "-21,90",
     "ticker": "MFDD.DE",
     "prix": "250.5",
-    "perf1": "20.1"
+    "perf1": "20.1",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "28 novembre 2012",
+    "indice": "MSCI EMU",
+    "volatilite": "20,20%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0908501132",
@@ -6099,7 +7942,20 @@ window.PEA_ETFS = [
     "ticker": "MFDD.DE",
     "prix": "250.5",
     "perf3": "49.6",
-    "perf1": "20.1"
+    "perf1": "20.1",
+    "encours_mio": 169.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "16 mai 2013",
+    "indice": "MSCI EMU ESG Broad CTB Select",
+    "volatilite": "14,55%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0908500753",
@@ -6113,7 +7969,20 @@ window.PEA_ETFS = [
     "ticker": "LYP6.DE",
     "prix": "317.15",
     "perf3": "49.6",
-    "perf1": "21.4"
+    "perf1": "21.4",
+    "encours_mio": 20.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "3 avril 2013",
+    "indice": "STOXX® Europe 600",
+    "volatilite": "12,17%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0908501058",
@@ -6127,7 +7996,20 @@ window.PEA_ETFS = [
     "ticker": "LGQG.DE",
     "prix": "366.95",
     "perf3": "49.6",
-    "perf1": "20.6"
+    "perf1": "20.6",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "3 avril 2013",
+    "indice": "MSCI EMU ESG Broad CTB Select",
+    "volatilite": "14,45%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU0959210781",
@@ -6140,7 +8022,20 @@ window.PEA_ETFS = [
     "stress5": "-16,10",
     "prix": "14.0",
     "perf3": "49.6",
-    "perf1": "13.3"
+    "perf1": "13.3",
+    "encours_mio": 16.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "5 août 2021",
+    "indice": "S&P Euro High Yield Dividend Aristocrats Screened",
+    "volatilite": "10,24%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU0959210278",
@@ -6153,7 +8048,20 @@ window.PEA_ETFS = [
     "stress5": "-16,10",
     "prix": "141.6",
     "perf3": "53.6",
-    "perf1": "13.3"
+    "perf1": "13.3",
+    "encours_mio": 29.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "19 août 2013",
+    "indice": "S&P Euro High Yield Dividend Aristocrats Screened",
+    "volatilite": "10,11%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1127514245",
@@ -6163,7 +8071,20 @@ window.PEA_ETFS = [
     "perf5": "22,65",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-21,60"
+    "stress5": "-21,60",
+    "encours_mio": 326.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "31 mars 2015",
+    "indice": "MSCI EMU (USD Hedged)",
+    "volatilite": "13,25%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1184092051",
@@ -6173,7 +8094,20 @@ window.PEA_ETFS = [
     "perf5": "20,69",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-17,40"
+    "stress5": "-17,40",
+    "encours_mio": 300.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "27 février 2015",
+    "indice": "MSCI Europe (USD Hedged)",
+    "volatilite": "12,60%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1215828218",
@@ -6183,7 +8117,20 @@ window.PEA_ETFS = [
     "perf5": "19,08",
     "emetteur": "Xtrackers (DWS)",
     "pays": "IE",
-    "stress5": "-21,60"
+    "stress5": "-21,60",
+    "encours_mio": 114.0,
+    "encours_devise": "EUR",
+    "devise": "CHF",
+    "distribution": "Capitalisation",
+    "date_creation": "30 juin 2015",
+    "indice": "MSCI EMU (CHF Hedged)",
+    "volatilite": "15,06%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1221100792",
@@ -6193,7 +8140,20 @@ window.PEA_ETFS = [
     "perf5": "22,69",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-22,90"
+    "stress5": "-22,90",
+    "encours_mio": 13.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "13 janvier 2016",
+    "indice": "DAX® ESG Screened (USD Hedged)",
+    "volatilite": "14,31%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1221102491",
@@ -6203,7 +8163,20 @@ window.PEA_ETFS = [
     "perf5": "19,68",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "-22,80"
+    "stress5": "-22,80",
+    "encours_mio": 15.0,
+    "encours_devise": "EUR",
+    "devise": "CHF",
+    "distribution": "Capitalisation",
+    "date_creation": "13 janvier 2016",
+    "indice": "DAX® ESG Screened (CHF Hedged)",
+    "volatilite": "15,83%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1291098827",
@@ -6213,7 +8186,20 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-20,44"
+    "stress5": "-20,44",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 février 2016",
+    "indice": "MSCI EMU Select Filtered Min TE",
+    "volatilite": "14,31%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1291099718",
@@ -6223,7 +8209,20 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
-    "stress5": "-17,81"
+    "stress5": "-17,81",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 février 2016",
+    "indice": "MSCI Europe Select Filtered Min TE",
+    "volatilite": "12,38%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1291101555",
@@ -6236,7 +8235,20 @@ window.PEA_ETFS = [
     "stress5": "-18,96",
     "prix": "123.9",
     "perf3": "52.4",
-    "perf1": "20.8"
+    "perf1": "20.8",
+    "encours_mio": 306.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "19 février 2016",
+    "indice": "MSCI Europe Small Cap SRI S-Series PAB 5% Capped",
+    "volatilite": "12,98%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1377382368",
@@ -6250,7 +8262,20 @@ window.PEA_ETFS = [
     "ticker": "STXH.DE",
     "prix": "123.9",
     "perf3": "52.4",
-    "perf1": "20.8"
+    "perf1": "20.8",
+    "encours_mio": 398.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "2 juin 2017",
+    "indice": "Low Carbon 100 Europe PAB",
+    "volatilite": "12,26%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1377382442",
@@ -6264,7 +8289,20 @@ window.PEA_ETFS = [
     "ticker": "STXH.DE",
     "prix": "123.9",
     "perf3": "52.4",
-    "perf1": "20.8"
+    "perf1": "20.8",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "21 juin 2023",
+    "indice": "Low Carbon 100 Europe PAB",
+    "volatilite": "11,90%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1437015735",
@@ -6278,7 +8316,20 @@ window.PEA_ETFS = [
     "ticker": "STXH.DE",
     "prix": "123.9",
     "perf3": "52.4",
-    "perf1": "20.8"
+    "perf1": "20.8",
+    "encours_mio": 4.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "29 juin 2016",
+    "indice": "MSCI Europe",
+    "volatilite": "12,12%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1574142243",
@@ -6291,7 +8342,20 @@ window.PEA_ETFS = [
     "stress5": "-17,30",
     "ticker": "STXH.DE",
     "prix": "166.78",
-    "perf1": "20.6"
+    "perf1": "20.6",
+    "encours_mio": 55.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "12 avril 2017",
+    "indice": "STOXX® Europe 600 (EUR Hedged)",
+    "volatilite": "11,88%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1598688189",
@@ -6305,7 +8369,20 @@ window.PEA_ETFS = [
     "ticker": "LGWT.DE",
     "prix": "214.25",
     "perf3": "57.6",
-    "perf1": "14.5"
+    "perf1": "14.5",
+    "encours_mio": 88.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "1 avril 2005",
+    "indice": "MSCI Europe Growth",
+    "volatilite": "15,08%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1598689153",
@@ -6319,7 +8396,20 @@ window.PEA_ETFS = [
     "ticker": "LGWU.DE",
     "prix": "438.9",
     "perf3": "57.6",
-    "perf1": "14.1"
+    "perf1": "14.1",
+    "encours_mio": 594.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "31 mars 2005",
+    "indice": "MSCI EMU Small Cap ESG Broad CTB Select",
+    "volatilite": "13,22%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1598690169",
@@ -6333,7 +8423,20 @@ window.PEA_ETFS = [
     "ticker": "LGWS.DE",
     "prix": "192.0",
     "perf3": "57.6",
-    "perf1": "27.4"
+    "perf1": "27.4",
+    "encours_mio": 261.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "1 avril 2005",
+    "indice": "MSCI EMU Value",
+    "volatilite": "12,41%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1602144575",
@@ -6346,7 +8449,20 @@ window.PEA_ETFS = [
     "stress5": "-18,80",
     "prix": "417.15",
     "perf3": "57.6",
-    "perf1": "28.3"
+    "perf1": "28.3",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 septembre 2008",
+    "indice": "MSCI EMU ESG Selection P-Series 5% Issuer Capped",
+    "volatilite": "14,72%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1646360971",
@@ -6359,7 +8475,20 @@ window.PEA_ETFS = [
     "stress5": "-19,10",
     "prix": "82.82",
     "perf3": "59.9",
-    "perf1": "20.0"
+    "perf1": "20.0",
+    "encours_mio": 755.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "6 août 2003",
+    "indice": "MSCI EMU",
+    "volatilite": "14,22%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1646361276",
@@ -6372,7 +8501,20 @@ window.PEA_ETFS = [
     "stress5": "-19,10",
     "prix": "18.94",
     "perf3": "59.6",
-    "perf1": "20.1"
+    "perf1": "20.1",
+    "encours_mio": 607.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "6 février 2020",
+    "indice": "MSCI EMU",
+    "volatilite": "14,20%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1655103486",
@@ -6385,7 +8527,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "prix": "195.5",
     "perf3": "36.5",
-    "perf1": "15.8"
+    "perf1": "15.8",
+    "encours_mio": 211.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "10 novembre 2017",
+    "indice": "Bloomberg PAB Europe DM ex Eurozone Large & Mid Cap",
+    "volatilite": "12,71%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681040223",
@@ -6398,7 +8553,20 @@ window.PEA_ETFS = [
     "stress5": "-17,60",
     "prix": "162.93",
     "perf3": "49.2",
-    "perf1": "19.4"
+    "perf1": "19.4",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "22 septembre 2009",
+    "indice": "STOXX® Europe 600 ESG+",
+    "volatilite": "13,09%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681041460",
@@ -6411,7 +8579,20 @@ window.PEA_ETFS = [
     "stress5": "-19,70",
     "prix": "151.08",
     "perf3": "76.0",
-    "perf1": "18.4"
+    "perf1": "18.4",
+    "encours_mio": 130.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "22 mai 2016",
+    "indice": "MSCI Europe Momentum",
+    "volatilite": "16,41%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681041627",
@@ -6424,7 +8605,20 @@ window.PEA_ETFS = [
     "stress5": "-13,90",
     "prix": "167.8",
     "perf3": "37.0",
-    "perf1": "10.7"
+    "perf1": "10.7",
+    "encours_mio": 81.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "26 février 2009",
+    "indice": "MSCI Europe Minimum Volatility",
+    "volatilite": "8,40%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681041973",
@@ -6437,7 +8631,20 @@ window.PEA_ETFS = [
     "stress5": "-14,10",
     "prix": "246.15",
     "perf3": "57.5",
-    "perf1": "19.5"
+    "perf1": "19.5",
+    "encours_mio": 492.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "26 février 2009",
+    "indice": "MSCI Europe High Dividend Yield",
+    "volatilite": "9,66%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681041890",
@@ -6450,7 +8657,20 @@ window.PEA_ETFS = [
     "stress5": "-16,50",
     "prix": "122.58",
     "perf3": "23.1",
-    "perf1": "13.2"
+    "perf1": "13.2",
+    "encours_mio": 249.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "22 mai 2016",
+    "indice": "MSCI Europe Quality",
+    "volatilite": "12,50%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681042435",
@@ -6463,7 +8683,20 @@ window.PEA_ETFS = [
     "stress5": "-24,30",
     "prix": "364.1",
     "perf3": "27.6",
-    "perf1": "13.0"
+    "perf1": "13.0",
+    "encours_mio": 170.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "26 février 2009",
+    "indice": "MSCI Europe Growth",
+    "volatilite": "15,04%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681042518",
@@ -6476,7 +8709,20 @@ window.PEA_ETFS = [
     "stress5": "-17,50",
     "prix": "469.25",
     "perf3": "78.2",
-    "perf1": "28.1"
+    "perf1": "28.1",
+    "encours_mio": 372.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "26 février 2009",
+    "indice": "MSCI Europe Value",
+    "volatilite": "10,82%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681042948",
@@ -6490,7 +8736,20 @@ window.PEA_ETFS = [
     "ticker": "X13Z.DE",
     "prix": "919.95",
     "perf3": "56.4",
-    "perf1": "19.0"
+    "perf1": "19.0",
+    "encours_mio": 154.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "17 juin 2010",
+    "indice": "MSCI USA ESG Selection P-Series 5% Issuer Capped",
+    "volatilite": "14,29%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1681042864",
@@ -6504,7 +8763,20 @@ window.PEA_ETFS = [
     "ticker": "X13Z.DE",
     "prix": "806.88",
     "perf3": "54.4",
-    "perf1": "19.6"
+    "perf1": "19.6",
+    "encours_mio": 559.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "4 décembre 2008",
+    "indice": "MSCI USA ESG Selection P-Series 5% Issuer Capped",
+    "volatilite": "14,21%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1681042609",
@@ -6518,7 +8790,20 @@ window.PEA_ETFS = [
     "ticker": "X13Z.DE",
     "prix": "442.8",
     "perf3": "48.6",
-    "perf1": "20.6"
+    "perf1": "20.6",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 septembre 2008",
+    "indice": "MSCI Europe ESG Broad CTB Select",
+    "volatilite": "12,43%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681044308",
@@ -6532,7 +8817,20 @@ window.PEA_ETFS = [
     "ticker": "X13Z.DE",
     "prix": "85.13",
     "perf3": "25.3",
-    "perf1": "6.0"
+    "perf1": "6.0",
+    "encours_mio": 620.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "15 décembre 2009",
+    "indice": "MSCI Europe ex Switzerland ESG Broad CTB Select",
+    "volatilite": "12,99%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1681047079",
@@ -6545,7 +8843,20 @@ window.PEA_ETFS = [
     "stress5": "-19,90",
     "prix": "85.13",
     "perf3": "25.3",
-    "perf1": "6.0"
+    "perf1": "6.0",
+    "encours_mio": 36.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "12 avril 2010",
+    "indice": "CAC 40® ESG",
+    "volatilite": "15,14%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1681046931",
@@ -6558,7 +8869,20 @@ window.PEA_ETFS = [
     "stress5": "-19,90",
     "prix": "147.22",
     "perf3": "25.4",
-    "perf1": "6.2"
+    "perf1": "6.2",
+    "encours_mio": 678.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "28 février 2003",
+    "indice": "CAC 40® ESG",
+    "volatilite": "15,25%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1681047319",
@@ -6571,7 +8895,20 @@ window.PEA_ETFS = [
     "stress5": "-20,70",
     "prix": "101.54",
     "perf3": "59.2",
-    "perf1": "19.5"
+    "perf1": "19.5",
+    "encours_mio": 948.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "29 juin 2010",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "15,40%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1681047236",
@@ -6584,7 +8921,20 @@ window.PEA_ETFS = [
     "stress5": "-20,70",
     "prix": "168.44",
     "perf3": "59.1",
-    "perf1": "19.5"
+    "perf1": "19.5",
+    "encours_mio": 4.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 septembre 2008",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "15,40%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1681047400",
@@ -6597,7 +8947,20 @@ window.PEA_ETFS = [
     "stress5": "-24,50",
     "prix": "191.8",
     "perf3": "65.7",
-    "perf1": "18.6"
+    "perf1": "18.6",
+    "encours_mio": 52.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "15 octobre 2015",
+    "indice": "EURO STOXX® 50",
+    "volatilite": "16,05%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1737652310",
@@ -6610,7 +8973,20 @@ window.PEA_ETFS = [
     "stress5": "-17,60",
     "prix": "82.96",
     "perf3": "51.6",
-    "perf1": "20.9"
+    "perf1": "20.9",
+    "encours_mio": 453.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "19 décembre 2017",
+    "indice": "MSCI Europe",
+    "volatilite": "12,09%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1753045332",
@@ -6623,7 +8999,20 @@ window.PEA_ETFS = [
     "stress5": "-16,38",
     "ticker": "SELD.DE",
     "prix": "24.25",
-    "perf1": "33.6"
+    "perf1": "33.6",
+    "encours_mio": 88.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "15 février 2019",
+    "indice": "MSCI Europe SRI S-Series PAB 5% Capped",
+    "volatilite": "12,68%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1753045415",
@@ -6637,7 +9026,20 @@ window.PEA_ETFS = [
     "ticker": "SELD.DE",
     "prix": "24.25",
     "perf3": "224.9",
-    "perf1": "33.6"
+    "perf1": "33.6",
+    "encours_mio": 102.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "13 mars 2018",
+    "indice": "MSCI Europe SRI S-Series PAB 5% Capped",
+    "volatilite": "12,77%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1772333404",
@@ -6651,7 +9053,20 @@ window.PEA_ETFS = [
     "ticker": "SELD.DE",
     "prix": "24.25",
     "perf3": "224.9",
-    "perf1": "33.6"
+    "perf1": "33.6",
+    "encours_mio": 12.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "21 juin 2018",
+    "indice": "STOXX® Europe 600 (EUR Hedged)",
+    "volatilite": "11,83%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1812092168",
@@ -6665,7 +9080,20 @@ window.PEA_ETFS = [
     "ticker": "SELD.DE",
     "prix": "24.25",
     "perf3": "224.9",
-    "perf1": "33.6"
+    "perf1": "33.6",
+    "encours_mio": 611.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "25 octobre 2006",
+    "indice": "STOXX® Europe Select Dividend 30",
+    "volatilite": "11,51%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1829219390",
@@ -6679,7 +9107,20 @@ window.PEA_ETFS = [
     "ticker": "LBRE.DE",
     "prix": "381.7",
     "perf3": "224.9",
-    "perf1": "45.0"
+    "perf1": "45.0",
+    "encours_mio": 6.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 décembre 2013",
+    "indice": "EURO STOXX® Banks",
+    "volatilite": "23,11%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834983550",
@@ -6692,7 +9133,20 @@ window.PEA_ETFS = [
     "stress5": "-26,60",
     "ticker": "LBRE.DE",
     "prix": "130.92",
-    "perf1": "57.4"
+    "perf1": "57.4",
+    "encours_mio": 537.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 août 2006",
+    "indice": "STOXX® Europe 600 Basic Resources",
+    "volatilite": "27,35%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834983477",
@@ -6705,7 +9159,20 @@ window.PEA_ETFS = [
     "stress5": "-27,80",
     "ticker": "LBNK.DE",
     "prix": "72.21",
-    "perf1": "50.4"
+    "perf1": "50.4",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 août 2006",
+    "indice": "STOXX® Europe 600 Banks",
+    "volatilite": "21,57%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834983634",
@@ -6718,7 +9185,20 @@ window.PEA_ETFS = [
     "stress5": "-20,00",
     "ticker": "LCHM.DE",
     "prix": "198.14",
-    "perf1": "31.2"
+    "perf1": "31.2",
+    "encours_mio": 24.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Basic Materials 30-15",
+    "volatilite": "18,38%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834986900",
@@ -6731,7 +9211,20 @@ window.PEA_ETFS = [
     "stress5": "-16,20",
     "ticker": "LHTC.DE",
     "prix": "154.58",
-    "perf1": "14.4"
+    "perf1": "14.4",
+    "encours_mio": 818.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 août 2006",
+    "indice": "STOXX® Europe 600 Health Care",
+    "volatilite": "16,64%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834985845",
@@ -6744,7 +9237,20 @@ window.PEA_ETFS = [
     "stress5": "-14,10",
     "ticker": "LFOD.DE",
     "prix": "95.67",
-    "perf1": "8.2"
+    "perf1": "8.2",
+    "encours_mio": 57.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Consumer Staples 30-15",
+    "volatilite": "15,10%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834987890",
@@ -6757,7 +9263,20 @@ window.PEA_ETFS = [
     "stress5": "-34,20",
     "ticker": "LIGS.DE",
     "prix": "150.8",
-    "perf1": "12.7"
+    "perf1": "12.7",
+    "encours_mio": 403.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Industrials 30-15",
+    "volatilite": "18,71%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834987973",
@@ -6770,7 +9289,20 @@ window.PEA_ETFS = [
     "stress5": "-19,90",
     "ticker": "LIRU.DE",
     "prix": "96.79",
-    "perf1": "17.0"
+    "perf1": "17.0",
+    "encours_mio": 137.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 août 2006",
+    "indice": "STOXX® Europe 600 Insurance",
+    "volatilite": "13,53%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834988518",
@@ -6783,7 +9315,20 @@ window.PEA_ETFS = [
     "stress5": "-26,70",
     "ticker": "LTUG.DE",
     "prix": "113.1",
-    "perf1": "22.2"
+    "perf1": "22.2",
+    "encours_mio": 200.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "18 août 2006",
+    "indice": "STOXX® Europe 600 Technology",
+    "volatilite": "24,17%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834988278",
@@ -6797,7 +9342,20 @@ window.PEA_ETFS = [
     "ticker": "LOGS.DE",
     "prix": "106.72",
     "perf3": "39.7",
-    "perf1": "48.6"
+    "perf1": "48.6",
+    "encours_mio": 270.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 octobre 2006",
+    "indice": "STOXX® Europe 600 Energy Screened+",
+    "volatilite": "17,91%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1834988609",
@@ -6811,7 +9369,20 @@ window.PEA_ETFS = [
     "ticker": "LTCM.DE",
     "prix": "50.52",
     "perf3": "39.7",
-    "perf1": "13.2"
+    "perf1": "13.2",
+    "encours_mio": 37.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 août 2006",
+    "indice": "STOXX® Europe 600 Telecommunications",
+    "volatilite": "16,83%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834988781",
@@ -6825,7 +9396,20 @@ window.PEA_ETFS = [
     "ticker": "LTVL.DE",
     "prix": "26.5",
     "perf3": "39.7",
-    "perf1": "0.2"
+    "perf1": "0.2",
+    "encours_mio": 78.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Consumer Discretionary 30-15",
+    "volatilite": "18,23%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1847674733",
@@ -6839,7 +9423,20 @@ window.PEA_ETFS = [
     "ticker": "OP2E.DE",
     "prix": "183.64",
     "perf3": "39.7",
-    "perf1": "15.4"
+    "perf1": "15.4",
+    "encours_mio": 217.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "31 août 2018",
+    "indice": "Bloomberg PAB Eurozone DM Large & Mid Cap",
+    "volatilite": "14,90%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1834988864",
@@ -6853,7 +9450,20 @@ window.PEA_ETFS = [
     "ticker": "LUTI.DE",
     "prix": "106.8",
     "perf3": "22.9",
-    "perf1": "32.8"
+    "perf1": "32.8",
+    "encours_mio": 192.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 août 2006",
+    "indice": "STOXX® Europe 600 Utilities",
+    "volatilite": "15,15%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1861137484",
@@ -6867,7 +9477,20 @@ window.PEA_ETFS = [
     "ticker": "PR1E.DE",
     "prix": "91.14",
     "perf3": "22.9",
-    "perf1": "6.6"
+    "perf1": "6.6",
+    "encours_mio": 946.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "11 septembre 2018",
+    "indice": "MSCI Europe SRI Filtered PAB",
+    "volatilite": "12,89%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1920015366",
@@ -6881,7 +9504,20 @@ window.PEA_ETFS = [
     "ticker": "PR1E.DE",
     "prix": "37.11",
     "perf3": "53.7",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 31.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "24 avril 2025",
+    "indice": "MSCI EMU",
+    "volatilite": "14,28%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1931974262",
@@ -6895,7 +9531,20 @@ window.PEA_ETFS = [
     "ticker": "PR1E.DE",
     "prix": "37.11",
     "perf3": "53.7",
-    "perf1": "22.0"
+    "perf1": "22.0",
+    "encours_mio": 264.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "30 janvier 2019",
+    "indice": "Solactive GBS Developed Markets Europe Large & Mid Cap",
+    "volatilite": "12,32%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1931974429",
@@ -6908,7 +9557,20 @@ window.PEA_ETFS = [
     "stress5": "-19,00",
     "prix": "3391.5",
     "perf3": "42.1",
-    "perf1": "15.5"
+    "perf1": "15.5",
+    "encours_mio": 81.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "30 janvier 2019",
+    "indice": "Solactive GBS Developed Markets Eurozone Large & Mid Cap",
+    "volatilite": "14,43%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU1940199984",
@@ -6921,7 +9583,20 @@ window.PEA_ETFS = [
     "stress5": "-16,10",
     "prix": "30.76",
     "perf3": "41.3",
-    "perf1": "21.1"
+    "perf1": "21.1",
+    "encours_mio": 70.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "7 mai 2021",
+    "indice": "MSCI Europe ESG Selection P-Series 5% Issuer Capped (EUR Hedged)",
+    "volatilite": "12,53%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1940199711",
@@ -6935,7 +9610,20 @@ window.PEA_ETFS = [
     "ticker": "10A9.DE",
     "prix": "42.22",
     "perf3": "43.4",
-    "perf1": "21.7"
+    "perf1": "21.7",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 février 2019",
+    "indice": "MSCI Europe ESG Selection P-Series 5% Issuer Capped",
+    "volatilite": "12,87%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU1953137681",
@@ -6949,7 +9637,20 @@ window.PEA_ETFS = [
     "ticker": "10A9.DE",
     "prix": "70.65",
     "perf3": "24.0",
-    "perf1": "6.6"
+    "perf1": "6.6",
+    "encours_mio": 134.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "27 septembre 2019",
+    "indice": "MSCI EMU SRI S-Series PAB 5% Capped",
+    "volatilite": "13,15%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2059756598",
@@ -6963,7 +9664,20 @@ window.PEA_ETFS = [
     "ticker": "10A9.DE",
     "prix": "70.65",
     "perf3": "24.0",
-    "perf1": "6.6"
+    "perf1": "6.6",
+    "encours_mio": 44.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 octobre 2019",
+    "indice": "MSCI Europe SRI Filtered PAB",
+    "volatilite": "12,98%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2059756325",
@@ -6977,7 +9691,20 @@ window.PEA_ETFS = [
     "ticker": "10A9.DE",
     "prix": "84.69",
     "perf3": "57.5",
-    "perf1": "28.1"
+    "perf1": "28.1",
+    "encours_mio": 306.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "23 octobre 2019",
+    "indice": "MSCI EMU ESG Selection P-Series 5% Issuer Capped",
+    "volatilite": "14,72%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082996385",
@@ -6990,7 +9717,20 @@ window.PEA_ETFS = [
     "stress5": "-26,50",
     "ticker": "E6BR.DE",
     "prix": "158.2",
-    "perf1": "57.6"
+    "perf1": "57.6",
+    "encours_mio": 57.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juillet 2020",
+    "indice": "STOXX® Europe 600 Basic Resources",
+    "volatilite": "27,35%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082996112",
@@ -7003,7 +9743,20 @@ window.PEA_ETFS = [
     "stress5": "-27,80",
     "ticker": "INDA.DE",
     "prix": "97.21",
-    "perf1": "50.2"
+    "perf1": "50.2",
+    "encours_mio": 112.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "24 septembre 2020",
+    "indice": "STOXX® Europe 600 Banks",
+    "volatilite": "21,58%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082997359",
@@ -7016,7 +9769,20 @@ window.PEA_ETFS = [
     "stress5": "-14,10",
     "ticker": "DFOP.DE",
     "prix": "134.0",
-    "perf1": "7.2"
+    "perf1": "7.2",
+    "encours_mio": 33.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Consumer Staples 30-15",
+    "volatilite": "15,12%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082996542",
@@ -7029,7 +9795,20 @@ window.PEA_ETFS = [
     "stress5": "-20,00",
     "ticker": "LYX4.DE",
     "prix": "288.05",
-    "perf1": "31.7"
+    "perf1": "31.7",
+    "encours_mio": 13.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Basic Materials 30-15",
+    "volatilite": "18,37%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082997516",
@@ -7042,7 +9821,20 @@ window.PEA_ETFS = [
     "stress5": "-16,20",
     "ticker": "EHLT.DE",
     "prix": "196.02",
-    "perf1": "14.5"
+    "perf1": "14.5",
+    "encours_mio": 67.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juillet 2020",
+    "indice": "STOXX® Europe 600 Health Care",
+    "volatilite": "16,62%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082997789",
@@ -7055,7 +9847,20 @@ window.PEA_ETFS = [
     "stress5": "-22,90",
     "ticker": "INDU.DE",
     "prix": "203.55",
-    "perf1": "12.6"
+    "perf1": "12.6",
+    "encours_mio": 31.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Industrials 30-15",
+    "volatilite": "18,71%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082997946",
@@ -7068,7 +9873,20 @@ window.PEA_ETFS = [
     "stress5": "-19,90",
     "ticker": "EGV1.DE",
     "prix": "111.76",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 33.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "3 septembre 2020",
+    "indice": "STOXX® Europe 600 Insurance",
+    "volatilite": "13,53%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082998167",
@@ -7081,7 +9899,20 @@ window.PEA_ETFS = [
     "stress5": "-24,60",
     "ticker": "OIGS.DE",
     "prix": "141.04",
-    "perf1": "48.7"
+    "perf1": "48.7",
+    "encours_mio": 41.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juillet 2020",
+    "indice": "STOXX® Europe 600 Energy Screened+",
+    "volatilite": "17,91%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2082998837",
@@ -7094,7 +9925,20 @@ window.PEA_ETFS = [
     "stress5": "-26,70",
     "ticker": "CSTA.DE",
     "prix": "142.12",
-    "perf1": "20.9"
+    "perf1": "20.9",
+    "encours_mio": 35.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "3 septembre 2020",
+    "indice": "STOXX® Europe 600 Technology",
+    "volatilite": "24,17%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082999058",
@@ -7108,7 +9952,20 @@ window.PEA_ETFS = [
     "ticker": "INDB.DE",
     "prix": "67.6",
     "perf3": "59.7",
-    "perf1": "9.0"
+    "perf1": "9.0",
+    "encours_mio": 8.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "24 septembre 2020",
+    "indice": "STOXX® Europe 600 Telecommunications",
+    "volatilite": "16,80%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082999132",
@@ -7122,7 +9979,20 @@ window.PEA_ETFS = [
     "ticker": "6TVL.DE",
     "prix": "37.44",
     "perf3": "59.7",
-    "perf1": "0.0"
+    "perf1": "0.0",
+    "encours_mio": 12.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "20 juin 2024",
+    "indice": "STOXX® Europe 600 Industry Consumer Discretionary 30-15",
+    "volatilite": "18,18%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2082999215",
@@ -7136,7 +10006,20 @@ window.PEA_ETFS = [
     "ticker": "LUTL.DE",
     "prix": "159.8",
     "perf3": "59.7",
-    "perf1": "32.8"
+    "perf1": "32.8",
+    "encours_mio": 25.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juillet 2020",
+    "indice": "STOXX® Europe 600 Utilities",
+    "volatilite": "15,14%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2089238112",
@@ -7150,7 +10033,20 @@ window.PEA_ETFS = [
     "ticker": "LDAX.DE",
     "prix": "38.55",
     "perf3": "59.7",
-    "perf1": "21.6"
+    "perf1": "21.6",
+    "encours_mio": 172.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "15 janvier 2020",
+    "indice": "Solactive GBS Developed Markets Eurozone Large & Mid Cap",
+    "volatilite": "14,34%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2089238039",
@@ -7164,7 +10060,20 @@ window.PEA_ETFS = [
     "ticker": "LDAX.DE",
     "prix": "36.66",
     "perf3": "52.2",
-    "perf1": "21.8"
+    "perf1": "21.8",
+    "encours_mio": 296.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "15 janvier 2020",
+    "indice": "Solactive GBS Developed Markets Europe Large & Mid Cap",
+    "volatilite": "12,23%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2090062436",
@@ -7178,7 +10087,20 @@ window.PEA_ETFS = [
     "ticker": "LDAX.DE",
     "prix": "85.13",
     "perf3": "54.0",
-    "perf1": "4.4"
+    "perf1": "4.4",
+    "encours_mio": 81.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juillet 2020",
+    "indice": "DAX®",
+    "volatilite": "15,65%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2090062600",
@@ -7192,7 +10114,20 @@ window.PEA_ETFS = [
     "ticker": "LVDX.DE",
     "prix": "19.98",
     "perf3": "98.3",
-    "perf1": "3.0"
+    "perf1": "3.0",
+    "encours_mio": 16.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 juillet 2020",
+    "indice": "LevDAX® (2x)",
+    "volatilite": "31,29%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2130768844",
@@ -7206,7 +10141,20 @@ window.PEA_ETFS = [
     "ticker": "SRHE.DE",
     "prix": "97.18",
     "perf3": "41.9",
-    "perf1": "16.2"
+    "perf1": "16.2",
+    "encours_mio": 100.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 juin 2020",
+    "indice": "MSCI Europe Climate Paris Aligned Filtered",
+    "volatilite": "12,74%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2109787635",
@@ -7220,7 +10168,20 @@ window.PEA_ETFS = [
     "ticker": "SRHE.DE",
     "prix": "108.38",
     "perf3": "44.6",
-    "perf1": "18.1"
+    "perf1": "18.1",
+    "encours_mio": 117.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "10 mars 2020",
+    "indice": "MSCI EMU SRI Filtered PAB",
+    "volatilite": "12,94%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2182388582",
@@ -7234,7 +10195,20 @@ window.PEA_ETFS = [
     "ticker": "DECD.DE",
     "prix": "93.66",
     "perf3": "42.4",
-    "perf1": "14.5"
+    "perf1": "14.5",
+    "encours_mio": 281.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 juin 2020",
+    "indice": "MSCI EMU Climate Paris Aligned Filtered",
+    "volatilite": "14,60%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2195226068",
@@ -7248,7 +10222,20 @@ window.PEA_ETFS = [
     "ticker": "DECD.DE",
     "prix": "41.9",
     "perf3": "59.3",
-    "perf1": "14.8"
+    "perf1": "14.8",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "6 juillet 2020",
+    "indice": "S&P Eurozone LargeMidCap Net Zero 2050 Paris-Aligned ESG",
+    "volatilite": "15,50%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2240851688",
@@ -7262,7 +10249,20 @@ window.PEA_ETFS = [
     "ticker": "DECD.DE",
     "prix": "90.99",
     "perf3": "60.3",
-    "perf1": "11.6"
+    "perf1": "11.6",
+    "encours_mio": 48.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "24 novembre 2020",
+    "indice": "MSCI EMU Screened",
+    "volatilite": "14,56%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2446381555",
@@ -7276,7 +10276,20 @@ window.PEA_ETFS = [
     "ticker": "AHYI.DE",
     "prix": "612.6",
     "perf3": "47.0",
-    "perf1": "20.2"
+    "perf1": "20.2",
+    "encours_mio": 5.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "31 août 2022",
+    "indice": "Euronext ESG Eurozone Biodiversity Leaders PAB",
+    "volatilite": "14,97%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2572256662",
@@ -7290,7 +10303,20 @@ window.PEA_ETFS = [
     "ticker": "AHYI.DE",
     "prix": "612.6",
     "perf3": "47.0",
-    "perf1": "20.2"
+    "perf1": "20.2",
+    "encours_mio": 112.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Distribution",
+    "date_creation": "1 septembre 2008",
+    "indice": "Dow Jones Industrial Average",
+    "volatilite": "12,52%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2572257470",
@@ -7304,7 +10330,20 @@ window.PEA_ETFS = [
     "ticker": "X026.DE",
     "prix": "61.67",
     "perf3": "42.6",
-    "perf1": "13.0"
+    "perf1": "13.0",
+    "encours_mio": 205.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "10 mars 2023",
+    "indice": "MSCI Europe Small Cap ESG Broad CTB Select",
+    "volatilite": "12,66%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2581375156",
@@ -7318,7 +10357,20 @@ window.PEA_ETFS = [
     "ticker": "AE5B.DE",
     "prix": "134.98",
     "perf3": "45.9",
-    "perf1": "19.2"
+    "perf1": "19.2",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "8 mars 2023",
+    "indice": "STOXX® Europe 600",
+    "volatilite": "12,19%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2608817958",
@@ -7332,7 +10384,20 @@ window.PEA_ETFS = [
     "ticker": "AE5B.DE",
     "prix": "134.98",
     "perf3": "45.9",
-    "perf1": "19.2"
+    "perf1": "19.2",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "24 mai 2023",
+    "indice": "MSCI Europe Climate Action",
+    "volatilite": "12,76%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2611731667",
@@ -7346,7 +10411,20 @@ window.PEA_ETFS = [
     "ticker": "C007.DE",
     "prix": "26.3",
     "perf3": "10.7",
-    "perf1": "5.9"
+    "perf1": "5.9",
+    "encours_mio": 184.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "7 décembre 2023",
+    "indice": "MDAX® ESG+",
+    "volatilite": "17,52%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2611731741",
@@ -7360,7 +10438,20 @@ window.PEA_ETFS = [
     "ticker": "C001.DE",
     "prix": "186.9",
     "perf3": "32.0",
-    "perf1": "4.8"
+    "perf1": "4.8",
+    "encours_mio": 84.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "7 décembre 2023",
+    "indice": "DivDAX®",
+    "volatilite": "13,82%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2611732046",
@@ -7374,7 +10465,20 @@ window.PEA_ETFS = [
     "ticker": "C001.DE",
     "prix": "186.9",
     "perf3": "32.0",
-    "perf1": "4.8"
+    "perf1": "4.8",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "21 août 2008",
+    "indice": "DAX®",
+    "volatilite": "15,64%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2611732475",
@@ -7388,7 +10492,20 @@ window.PEA_ETFS = [
     "ticker": "C005.DE",
     "prix": "140.06",
     "perf3": "32.0",
-    "perf1": "3.0"
+    "perf1": "3.0",
+    "encours_mio": 163.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "7 décembre 2023",
+    "indice": "SDAX®",
+    "volatilite": "17,22%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2611732558",
@@ -7401,7 +10518,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "ticker": "CEUE.DE",
     "prix": "14.93",
-    "perf1": "21.7"
+    "perf1": "21.7",
+    "encours_mio": 136.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "21 mars 2024",
+    "indice": "EURO STOXX® Select Dividend 30",
+    "volatilite": "11,15%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2678230652",
@@ -7414,7 +10544,20 @@ window.PEA_ETFS = [
     "stress5": "-17,30",
     "ticker": "CEUE.DE",
     "prix": "14.93",
-    "perf1": "21.7"
+    "perf1": "21.7",
+    "encours_mio": 18.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "2 novembre 2023",
+    "indice": "MSCI Europe ESG Broad CTB Select",
+    "volatilite": "12,47%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2777377875",
@@ -7427,7 +10570,20 @@ window.PEA_ETFS = [
     "stress5": "-17,40",
     "ticker": "CEUH.DE",
     "prix": "25.96",
-    "perf1": "20.9"
+    "perf1": "20.9",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "20 mars 2024",
+    "indice": "Low Carbon 100 Europe PAB",
+    "volatilite": "11,90%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2873560481",
@@ -7440,7 +10596,20 @@ window.PEA_ETFS = [
     "stress5": "-16,80",
     "ticker": "CEUH.DE",
     "prix": "25.96",
-    "perf1": "20.9"
+    "perf1": "20.9",
+    "encours_mio": 61.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "24 octobre 2024",
+    "indice": "MSCI Europe ESG Broad CTB Select (EUR Hedged)",
+    "volatilite": "12,19%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2873560564",
@@ -7453,7 +10622,20 @@ window.PEA_ETFS = [
     "stress5": "-19,30",
     "ticker": "MEUH.DE",
     "prix": "26.89",
-    "perf1": "2.3"
+    "perf1": "2.3",
+    "encours_mio": 171.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "24 octobre 2024",
+    "indice": "STOXX® Europe 600 (USD Hedged)",
+    "volatilite": "11,21%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2898088419",
@@ -7466,7 +10648,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "ticker": "SNTE.DE",
     "prix": "104.17",
-    "perf1": "2.3"
+    "perf1": "2.3",
+    "encours_mio": 291.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "10 décembre 2024",
+    "indice": "Solactive €STR +8.5 Daily",
+    "volatilite": "0,20%",
+    "replication": "Synthétique",
+    "repl_method": "Basée sur swap",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU2932780914",
@@ -7479,7 +10674,20 @@ window.PEA_ETFS = [
     "stress5": "-20,60",
     "ticker": "EPAZ.DE",
     "prix": "26.98",
-    "perf1": "17.3"
+    "perf1": "17.3",
+    "encours_mio": 460.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "20 novembre 2024",
+    "indice": "S&P Eurozone LargeMidCap Net Zero 2050 Paris-Aligned ESG",
+    "volatilite": "15,48%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU2997383372",
@@ -7492,7 +10700,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "ticker": "0USE.DE",
     "prix": "140.01",
-    "perf1": "22.9"
+    "perf1": "22.9",
+    "encours_mio": 788.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "11 avril 2025",
+    "indice": "S&P 500®",
+    "volatilite": "12,30%",
+    "replication": "Synthétique",
+    "repl_method": "Basée sur swap",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3038520774",
@@ -7505,7 +10726,20 @@ window.PEA_ETFS = [
     "stress5": "-27,20",
     "ticker": "EDFS.DE",
     "prix": "5.88",
-    "perf1": "6.3"
+    "perf1": "6.3",
+    "encours_mio": 547.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 mai 2025",
+    "indice": "STOXX Europe Total Market Defense Capped",
+    "volatilite": "26,82%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3046617984",
@@ -7518,7 +10752,20 @@ window.PEA_ETFS = [
     "stress5": "N/A",
     "ticker": "MEUR.DE",
     "prix": "121.82",
-    "perf1": "20.9"
+    "perf1": "20.9",
+    "encours_mio": 169.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "17 juin 2025",
+    "indice": "MSCI Europe",
+    "volatilite": "12,45%",
+    "replication": "Synthétique",
+    "repl_method": "Basée sur swap",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU3046618362",
@@ -7530,7 +10777,20 @@ window.PEA_ETFS = [
     "pays": "FR",
     "stress5": "N/A",
     "ticker": "SHTU.DE",
-    "prix": "111.82"
+    "prix": "111.82",
+    "encours_mio": 2.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "29 juillet 2025",
+    "indice": "Ossiam Shiller Barclays CAPE® US Sector Tilted",
+    "volatilite": "10,98%",
+    "replication": "Synthétique",
+    "repl_method": "Basée sur swap",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3046618446",
@@ -7542,7 +10802,20 @@ window.PEA_ETFS = [
     "pays": "FR",
     "stress5": "N/A",
     "ticker": "SHTE.PA",
-    "prix": "113.22"
+    "prix": "113.22",
+    "encours_mio": 18.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "29 juillet 2025",
+    "indice": "Ossiam Shiller Barclays CAPE® US Sector Tilted",
+    "volatilite": "11,02%",
+    "replication": "Synthétique",
+    "repl_method": "Basée sur swap",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3047998896",
@@ -7554,7 +10827,20 @@ window.PEA_ETFS = [
     "pays": "LU",
     "stress5": "-32,73",
     "ticker": "0EMU.PA",
-    "prix": "120.1"
+    "prix": "120.1",
+    "encours_mio": 521.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "19 mai 2025",
+    "indice": "Bloomberg Europe Defense Select",
+    "volatilite": "26,62%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU3047998979",
@@ -7566,7 +10852,20 @@ window.PEA_ETFS = [
     "pays": "LU",
     "stress5": "-32,73",
     "ticker": "0EMU.PA",
-    "prix": "120.1"
+    "prix": "120.1",
+    "encours_mio": 11.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "19 mai 2025",
+    "indice": "Bloomberg Europe Defense Select",
+    "volatilite": "26,49%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU3061478973",
@@ -7578,7 +10877,20 @@ window.PEA_ETFS = [
     "pays": "LU",
     "stress5": "-25,40",
     "ticker": "0EMU.PA",
-    "prix": "120.1"
+    "prix": "120.1",
+    "encours_mio": 40.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "12 août 2025",
+    "indice": "STOXX Europe Total Market Defence Space and Cybersecurity Innovation",
+    "volatilite": "24,25%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Xtrackers",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3078637314",
@@ -7590,7 +10902,20 @@ window.PEA_ETFS = [
     "pays": "LU",
     "stress5": "N/A",
     "ticker": "0EMU.PA",
-    "prix": "120.1"
+    "prix": "120.1",
+    "encours_mio": 44.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "7 août 2025",
+    "indice": "MSCI EMU",
+    "volatilite": "14,19%",
+    "replication": "Synthétique",
+    "repl_method": "Basée sur swap",
+    "emetteur_full": "Ossiam",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU3086268573",
@@ -7602,7 +10927,19 @@ window.PEA_ETFS = [
     "pays": "LU",
     "stress5": "-17,81",
     "ticker": "EUSC.PA",
-    "prix": "5.93"
+    "prix": "5.93",
+    "encours_mio": 114.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "16 octobre 2025",
+    "indice": "MSCI Europe",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "BNP Paribas Easy",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3086388124",
@@ -7614,7 +10951,20 @@ window.PEA_ETFS = [
     "pays": "LU",
     "stress5": "-18,10",
     "ticker": "EUSC.PA",
-    "prix": "5.93"
+    "prix": "5.93",
+    "encours_mio": 637.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "9 septembre 2025",
+    "indice": "MSCI Europe Screened Select ex Thermal Coal",
+    "volatilite": "12,58%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3121015484",
@@ -7626,7 +10976,19 @@ window.PEA_ETFS = [
     "pays": "IE",
     "stress5": "-18,70",
     "ticker": "SOVE.DE",
-    "prix": "5.8"
+    "prix": "5.8",
+    "encours_mio": 4.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 novembre 2025",
+    "indice": "State Street Europe Small Cap Screened Equity Fund",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3121015567",
@@ -7640,7 +11002,19 @@ window.PEA_ETFS = [
     "ticker": "SOVE.DE",
     "prix": "5.8",
     "perf3": "56.6",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 3.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "25 novembre 2025",
+    "indice": "State Street Europe Screened Enhanced Equity Fund",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "State Street",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "LU3180074463",
@@ -7654,7 +11028,19 @@ window.PEA_ETFS = [
     "ticker": "SOVE.DE",
     "prix": "5.8",
     "perf3": "56.6",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 30.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "6 novembre 2025",
+    "indice": "Euronext European Strategic Autonomy",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "LU3206583067",
@@ -7668,7 +11054,19 @@ window.PEA_ETFS = [
     "ticker": "C002.DE",
     "prix": "5.14",
     "perf3": "56.6",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 9.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "11 décembre 2025",
+    "indice": "DAX®",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "Luxembourg",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "NL0010731816",
@@ -7681,7 +11079,20 @@ window.PEA_ETFS = [
     "stress5": "-20,35",
     "prix": "95.39",
     "perf3": "56.6",
-    "perf1": "17.2"
+    "perf1": "17.2",
+    "encours_mio": 87.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "1 octobre 2014",
+    "indice": "Solactive European Equal Weight Screened",
+    "volatilite": "13,94%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "VanEck",
+    "domicile": "Pays-Bas",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "NL0010408704",
@@ -7694,7 +11105,20 @@ window.PEA_ETFS = [
     "stress5": "-15,97",
     "prix": "42.25",
     "perf3": "61.4",
-    "perf1": "24.4"
+    "perf1": "24.4",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Distribution",
+    "date_creation": "13 mai 2013",
+    "indice": "Solactive World Equal Weight Screened",
+    "volatilite": "11,15%",
+    "replication": "Physique",
+    "repl_method": "Réplication complète",
+    "emetteur_full": "VanEck",
+    "domicile": "Pays-Bas",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   },
   {
     "isin": "FR001400U5Q4",
@@ -7704,7 +11128,20 @@ window.PEA_ETFS = [
     "perf5": "12,50",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,30"
+    "stress5": "-17,30",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "4 mars 2025",
+    "indice": "MSCI World",
+    "volatilite": "10,49%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "France",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "FR0011871128",
@@ -7714,7 +11151,20 @@ window.PEA_ETFS = [
     "perf5": "15,30",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,30"
+    "stress5": "-21,30",
+    "encours_mio": 1.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "20 mai 2014",
+    "indice": "S&P 500®",
+    "volatilite": "12,39%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "France",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "FR0010892216",
@@ -7724,7 +11174,20 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "encours_mio": 207.0,
+    "encours_devise": "EUR",
+    "devise": "EUR",
+    "distribution": "Capitalisation",
+    "date_creation": "8 juin 2010",
+    "indice": "Nasdaq 100®",
+    "volatilite": "0,00%",
+    "replication": "Synthétique",
+    "repl_method": "Swap non financé",
+    "emetteur_full": "Amundi ETF",
+    "domicile": "France",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Oui"
   },
   {
     "isin": "FR0013345899",
@@ -7764,6 +11227,19 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "JE",
-    "stress5": "N/A"
+    "stress5": "N/A",
+    "encours_mio": 6.0,
+    "encours_devise": "EUR",
+    "devise": "USD",
+    "distribution": "Capitalisation",
+    "date_creation": "24 avril 2007",
+    "indice": "Gold",
+    "volatilite": "25,68%",
+    "replication": "Physique",
+    "repl_method": "Physiquement garanti",
+    "emetteur_full": "WisdomTree",
+    "domicile": "Jersey",
+    "hedge": "Non couvert contre le risque de change",
+    "peap": "Non"
   }
 ];
