@@ -31,7 +31,7 @@
 <script defer data-domain="alfredstudio.mooo.com" src="https://alfredstudio.mooo.com/analytics/js/script.js"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Alfred Invest","description":"Plus de 400 ETF référencés, simulateurs financiers, guide FIRE","applicationCategory":"Finance","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 
-<link rel="stylesheet" href="/style.css?v=1789744100">
+<link rel="stylesheet" href="/style.css?v=1789804741">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
   </head>
 <body>
@@ -42,7 +42,10 @@
      <img src="/alfred-mark.svg" alt="Alfred" class="logo-img">
      <span class="brand-name">Alfred</span>
    </a>
-   <nav class="header-nav" aria-label="Navigation principale">
+   <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="headerNav">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+   </button>
+   <nav class="header-nav" id="headerNav" aria-label="Navigation principale">
      <a href="#outils">Outils</a>
      <a href="#comparateur">ETF</a>
      <a href="#faq">FAQ</a>
@@ -77,14 +80,14 @@
   <!-- Simulators -->
   <section class="section container" id="outils">
     <div class="section-header">
-      <h2> Outils Financiers</h2>
+      <h2>Outils Financiers</h2>
       <p>Cliquez sur un outil pour l'utiliser. Calculs instantanés et gratuits.</p>
     </div>
     <div class="tools-grid">
       <!-- 1. Compound Interest -->
       <div class="tool-card" id="tc-compound">
         <div class="tool-card-header" role="button" tabindex="0" aria-expanded="false" aria-label="Ouvrir l'outil">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><path d="M17 6h6v6"></path></svg></div>
           <div class="tool-card-info">
             <h3>Intérêts composés</h3>
             <p>Visualisez la puissance des intérêts composés</p>
@@ -116,7 +119,7 @@
       <!-- 2. FIRE -->
       <div class="tool-card" id="tc-fire">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Indépendance financière</h3>
             <p>Quand pourrez-vous arrêter de travailler ?</p>
@@ -155,7 +158,7 @@
       <!-- 3. Fee Impact -->
       <div class="tool-card" id="tc-fees">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
           <div class="tool-card-info">
             <h3>Impact des frais</h3>
             <p>Visualisez ce que 1% de frais vous coûte vraiment</p>
@@ -187,7 +190,7 @@
       <!-- 4. PEA vs AV vs CTO -->
       <div class="tool-card" id="tc-env">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg></div>
           <div class="tool-card-info">
             <h3>PEA vs AV vs CTO</h3>
             <p>Comparez les enveloppes fiscales sur le long terme</p>
@@ -210,7 +213,7 @@
             <div class="tool-result-item highlight"><span class="result-label">PEA</span><span class="result-value" id="env-pea">—</span></div>
             <div class="tool-result-item"><span class="result-label">Assurance-Vie</span><span class="result-value" id="env-av">—</span></div>
             <div class="tool-result-item"><span class="result-label">CTO</span><span class="result-value" id="env-cto">—</span></div>
-            <div class="tool-result-item"><span class="result-label"> Gagnant</span><span class="result-value" id="env-winner">—</span></div>
+            <div class="tool-result-item"><span class="result-label">Gagnant</span><span class="result-value" id="env-winner">—</span></div>
           </div>
           <canvas id="env-chart" style="width:100%;height:280px;margin-top:12px;border-radius:8px;"></canvas>
         </div>
@@ -219,7 +222,7 @@
       <!-- 5. Allocation -->
       <div class="tool-card" id="tc-alloc">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Mon allocation</h3>
             <p>Portefeuille recommandé selon votre profil de risque</p>
@@ -230,9 +233,9 @@
           <div class="tool-form">
             <label>Profil de risque</label>
             <select id="alloc-profile">
-              <option value="offensif"> Offensif (10-30 ans)</option>
-              <option value="equilibre"> Équilibré (5-15 ans)</option>
-              <option value="defensif"> Défensif (0-5 ans)</option>
+              <option value="offensif">Offensif (10-30 ans)</option>
+              <option value="equilibre">Équilibré (5-15 ans)</option>
+              <option value="defensif">Défensif (0-5 ans)</option>
             </select>
             <div class="tool-form-row">
               <div><label>Capital initial (€)</label><input type="number" id="alloc-init" value="5000" min="0"></div>
@@ -253,7 +256,7 @@
       <!-- 6. Catch-up -->
       <div class="tool-card" id="tc-catchup">
         <div class="tool-card-header">
-          <div class="tool-card-icon">⏰</div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
           <div class="tool-card-info">
             <h3>Plan de rattrapage</h3>
             <p>Vous avez commencé tard ? Voici comment rattraper</p>
@@ -284,7 +287,7 @@
       <!-- 7. Inflation -->
       <div class="tool-card" id="tc-inflation">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
           <div class="tool-card-info">
             <h3>Inflation</h3>
             <p>Ce que votre épargne vaudra vraiment dans 20 ans</p>
@@ -311,7 +314,7 @@
       <!-- 8. Path to 1M -->
       <div class="tool-card" id="tc-million">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
           <div class="tool-card-info">
             <h3>Chemin vers 1 million</h3>
             <p>Combien de temps pour devenir millionnaire ?</p>
@@ -338,7 +341,7 @@
       <!-- 9. Consumption -->
       <div class="tool-card" id="tc-consumption">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Consommation</h3>
             <p>Combien pouvez-vous retirer chaque mois sur la durée choisie ?</p>
@@ -365,7 +368,7 @@
       <!-- 10. Compare 2 ETFs -->
       <div class="tool-card" id="tc-compare">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg></div>
           <div class="tool-card-info">
             <h3>Comparer 2 ETF</h3>
             <p>Côte à côte : frais, risque, performance</p>
@@ -390,7 +393,7 @@
       <!-- 11. Plan 40 ans -->
       <div class="tool-card" id="tc-plan40">
         <div class="tool-card-header">
-          <div class="tool-card-icon" style="background:#fef3c7"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
           <div class="tool-card-info">
             <h3>Plan des 40 ans</h3>
             <p>Votre plan retraite en 2 étapes : capital cible + chemin d'investissement</p>
@@ -404,17 +407,17 @@
             </div>
             <label>Revenu mensuel souhaité (brut)</label>
             <input type="range" id="p40-income" min="500" max="3000" step="50" value="1500" style="width:100%">
-            <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-secondary)">
+            <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--muted)">
               <span>500 €</span><span id="p40-income-value" style="font-weight:700;color:var(--accent)">1 500 €/mois</span><span>3 000 €</span>
             </div>
             <div style="margin-top:10px">
               <label>Taux de retrait annuel</label>
               <div style="display:flex;gap:6px;flex-wrap:wrap" id="p40-rate-options">
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--text);border:1.5px solid var(--border)" data-rate="3">3 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--text);border:1.5px solid var(--border)" data-rate="3.5">3,5 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="3">3 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="3.5">3,5 %</button>
                 <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--accent);color:white;border:1.5px solid var(--accent)" data-rate="4">4 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--text);border:1.5px solid var(--border)" data-rate="4.5">4,5 %</button>
-                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--text);border:1.5px solid var(--border)" data-rate="5">5 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="4.5">4,5 %</button>
+                <button class="tool-btn" style="flex:1;padding:8px;font-size:0.78rem;background:var(--bg);color:var(--ink);border:1.5px solid var(--border)" data-rate="5">5 %</button>
               </div>
             </div>
             <div style="margin-top:10px;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center;color:white">
@@ -442,10 +445,11 @@
           </div>
           <div class="tool-note" id="p40-status"></div>
         </div>
-            <!-- 11. Top ETF Rankings -->
+      </div>
+      <!-- 11. Top ETF Rankings -->
       <div class="tool-card" id="tc-topetf">
         <div class="tool-card-header">
-          <div class="tool-card-icon"></div>
+          <div class="tool-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
           <div class="tool-card-info">
             <h3>Top ETF par Indice et Secteur</h3>
             <p>Les meilleurs ETF classés par catégorie selon le score Alfred</p>
@@ -467,7 +471,7 @@
               <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">13</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">Secteurs</div></div>
               <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#0d9488;line-height:1">429</div><div style="font-size:0.65rem;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-top:2px">ETF notés</div></div>
             </div>
-            <a href="/top-etf.html" target="_blank" style="display:inline-block;text-decoration:none;padding:12px 28px;font-size:0.9rem;font-weight:700;border-radius:10px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;box-shadow:0 4px 12px rgba(13,148,136,0.25)"> Voir le classement complet →</a>
+            <a href="/top-etf.html" target="_blank" style="display:inline-block;text-decoration:none;padding:12px 28px;font-size:0.9rem;font-weight:700;border-radius:10px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;box-shadow:0 4px 12px rgba(13,148,136,0.25)">Voir le classement complet →</a>
           </div>
         </div>
       </div>
@@ -476,12 +480,12 @@
   <!-- ETF Comparator -->
   <section class="section container" id="comparateur">
     <div class="section-header">
-      <h2> Tous les ETF PEA</h2>
+      <h2>Tous les ETF PEA</h2>
       <p>Plus de 400 ETF référencés. Filtrez, triez, comparez.</p>
     </div>
     <div class="etf-section">
       <div class="watchlist-panel" id="watchlistPanel">
-        <span class="watchlist-panel-label"> Watchlist</span>
+        <span class="watchlist-panel-label">Watchlist</span>
         <span id="watchlistItems"></span>
       </div>
       <div class="etf-filters">
@@ -508,7 +512,7 @@
         </div>
         <div class="etf-filter-actions">
           <button class="etf-btn-sm" id="resetFilters">↺ Reset</button>
-          <button class="etf-btn-sm" id="shareFilters"> Copier lien</button>
+          <button class="etf-btn-sm" id="shareFilters">Copier lien</button>
         </div>
       </div>
       <div class="etf-stats">
@@ -541,9 +545,9 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section container">
+  <section class="section container" id="faq">
     <div class="section-header">
-      <h2> Questions fréquentes</h2>
+      <h2>Questions fréquentes</h2>
     </div>
     <div class="faq-grid">
       <details class="faq-item"><summary>Qu'est-ce qu'un ETF PEA ?</summary><p>Un ETF (Exchange Traded Fund) est un fonds indiciel coté en bourse. Les ETF éligibles PEA sont conformes à la réglementation française et bénéficient d'une fiscalité avantageuse (exonération d'impôt sur le revenu après 5 ans).</p></details>
@@ -569,7 +573,7 @@
   <!-- Newsletter -->
   <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
     <div class="newsletter-box">
-      <h2 id="newsletter-title"> La newsletter Alfred</h2>
+      <h2 id="newsletter-title">La newsletter Alfred</h2>
       <p class="newsletter-sub">1 email par semaine : 1 ETF décodé, 1 erreur d'investisseur à éviter, les données macro qui comptent. Gratuit, désinscription en 1 clic.</p>
       <form id="newsletterForm" class="newsletter-form" novalidate>
         <div class="newsletter-row">
@@ -598,8 +602,8 @@
   <p class="footer-disclaimer">Avertissement : Les outils, simulateurs et scores fournis sur Alfred Invest le sont à titre exclusivement pédagogique et informatif. Ils ne constituent en aucun cas un conseil en investissement ou une incitation à acheter/vendre des instruments financiers. Investir comporte des risques, notamment de perte en capital.</p>
 </footer>
 
-<div class="toast hidden" id="toast" aria-live="polite" role="status"> ISIN copié !</div>
-<div class="modal-overlay" id="etfModal"><div class="modal"><div class="modal-header"><h3 id="modalTitle"></h3><button class="modal-close" id="modalClose"></button></div><div class="modal-body" id="modalBody"></div></div></div>
+<div class="toast hidden" id="toast" aria-live="polite" role="status">ISIN copié !</div>
+<div class="modal-overlay" id="etfModal"><div class="modal"><div class="modal-header"><h3 id="modalTitle"></h3><button class="modal-close" id="modalClose">✕</button></div><div class="modal-body" id="modalBody"></div></div></div>
 
 <script>
 (function(){
@@ -618,68 +622,7 @@
   <script src="app.min.js?v=5526815120" defer></script>
 <script>document.addEventListener("click",function(e){var h=e.target.closest(".tool-card-header");if(h){var c=h.closest(".tool-card");if(c){c.classList.toggle("open");console.log("Toggled:",c.id);}}});</script>
 
-<!-- Lead capture popup -->
-<div class="modal-overlay" id="leadModal">
-  <div class="modal" style="max-width:400px">
-    <div class="modal-header">
-      <h3> Guide ETF gratuit</h3>
-      <button class="modal-close" id="leadClose"></button>
-    </div>
-    <div class="modal-body" style="text-align:center">
-      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:16px">Recevez les meilleurs ETF PEA du moment et nos conseils exclusifs directement par email.</p>
-      <div class="tool-form">
-        <input type="email" id="leadEmail" placeholder="votre@email.com" style="width:100%;padding:12px;border:1.5px solid var(--border);border-radius:8px;font-size:0.9rem;font-family:var(--font)">
-        <button class="tool-btn" id="leadSubmit" style="width:100%">Recevoir le guide →</button>
-      </div>
-      <p style="font-size:0.7rem;color:var(--text-tertiary);margin-top:12px">Pas de spam. Désabonnement en 1 clic.</p>
-      <p id="leadSuccess" style="display:none;color:var(--green);font-weight:700;font-size:0.9rem"> Merci ! Votre email a été enregistré.</p>
-    </div>
-  </div>
-</div>
 
-<script>
-(function() {
-  var shown = localStorage.getItem('lead_shown');
-  if (!shown) {
-    setTimeout(function() {
-      var modal = document.getElementById('leadModal');
-      if (modal) {
-        modal.classList.add('active');
-        document.getElementById('leadClose').addEventListener('click', function() {
-          modal.classList.remove('active');
-          localStorage.setItem('lead_shown', 'true');
-        });
-        document.getElementById('leadSubmit').addEventListener('click', function() {
-          var email = document.getElementById('leadEmail').value.trim();
-          if (email && email.includes('@')) {
-            // Store locally
-            var leads = JSON.parse(localStorage.getItem('pea_leads') || '[]');
-            leads.push({ email: email, date: new Date().toISOString(), source: 'pea-comparator' });
-            localStorage.setItem('pea_leads', JSON.stringify(leads));
-            document.getElementById('leadSuccess').style.display = 'block';
-            document.getElementById('leadSubmit').disabled = true;
-            document.getElementById('leadEmail').disabled = true;
-            // Also try to send to a webhook if available
-            try {
-              fetch('/api/lead', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({email:email,source:'pea-comparator'}) });
-            } catch(e) {}
-            setTimeout(function() { modal.classList.remove('active'); }, 2000);
-          } else {
-            alert('Email invalide');
-          }
-        });
-        // Close on overlay click
-        modal.addEventListener('click', function(e) {
-          if (e.target === modal) {
-            modal.classList.remove('active');
-            localStorage.setItem('lead_shown', 'true');
-          }
-        });
-      }
-    }, 8000); // Show after 8 seconds
-  }
-})();
-</script>
 
 
 <script>
@@ -736,10 +679,10 @@
     var diff = finalVal - targetCapital;
     var status = '';
     if (diff >= 0) {
-      status = ' Objectif atteint en 25 ans ! Dépassement de ' + fmt(diff);
+      status = 'Objectif atteint en 25 ans ! Dépassement de ' + fmt(diff);
     } else {
       var needed = targetCapital - finalVal;
-      status = ' Il manque ' + fmt(needed) + ' pour atteindre l’objectif. Augmentez votre DCA ou le rendement.';
+      status = 'Il manque ' + fmt(needed) + ' pour atteindre l’objectif. Augmentez votre DCA ou le rendement.';
     }
     var stEl = document.getElementById('p40-status');
     if (stEl) stEl.textContent = status;
@@ -827,7 +770,7 @@
         selectedRate = parseFloat(btn.dataset.rate);
         rateOptions.querySelectorAll('.tool-btn').forEach(function(b) {
           b.style.background = 'var(--bg)';
-          b.style.color = 'var(--text)';
+          b.style.color = 'var(--ink)';
           b.style.borderColor = 'var(--border)';
         });
         btn.style.background = 'var(--accent)';
@@ -905,28 +848,28 @@
 <div class="modal-overlay" id="scoreModal">
   <div class="modal" style="max-width:520px">
     <div class="modal-header">
-      <h3> Score Alfred - Méthodologie</h3>
-      <button class="modal-close" id="scoreModalClose"></button>
+      <h3>Score Alfred - Méthodologie</h3>
+      <button class="modal-close" id="scoreModalClose">✕</button>
     </div>
     <div class="modal-body" style="font-size:0.85rem;line-height:1.65">
       <p style="margin-bottom:12px">Le <strong>Score Alfred</strong> (0-100) évalue la qualité globale d'un ETF éligible PEA selon 4 critères pondérés :</p>
-      <div style="background:var(--bg-tertiary);border-radius:8px;padding:16px;margin-bottom:12px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong> Frais (TER)</strong><span style="font-weight:700;color:var(--green-500)">40%</span></div>
-        <div style="font-size:0.78rem;color:var(--text-secondary)">Plus le TER est bas, meilleur est le score. Pondération forte car les frais impactent directement la performance long terme.</div>
+      <div style="background:var(--bg);border-radius:8px;padding:16px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong>Frais (TER)</strong><span style="font-weight:700;color:var(--gain)">40%</span></div>
+        <div style="font-size:0.78rem;color:var(--muted)">Plus le TER est bas, meilleur est le score. Pondération forte car les frais impactent directement la performance long terme.</div>
       </div>
-      <div style="background:var(--bg-tertiary);border-radius:8px;padding:16px;margin-bottom:12px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong> Encours (Actifs sous gestion)</strong><span style="font-weight:700;color:var(--blue-500)">25%</span></div>
-        <div style="font-size:0.78rem;color:var(--text-secondary)">Un encours élevé indique un ETF mature, liquide et plébiscité par les investisseurs.</div>
+      <div style="background:var(--bg);border-radius:8px;padding:16px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong>Encours (Actifs sous gestion)</strong><span style="font-weight:700;color:var(--blue-500)">25%</span></div>
+        <div style="font-size:0.78rem;color:var(--muted)">Un encours élevé indique un ETF mature, liquide et plébiscité par les investisseurs.</div>
       </div>
-      <div style="background:var(--bg-tertiary);border-radius:8px;padding:16px;margin-bottom:12px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong> Liquidité</strong><span style="font-weight:700;color:var(--orange-500)">20%</span></div>
-        <div style="font-size:0.78rem;color:var(--text-secondary)">Basée sur le spread bid-ask et les volumes échangés. Liquidité élevée = spreads serrés.</div>
+      <div style="background:var(--bg);border-radius:8px;padding:16px;margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong>Liquidité</strong><span style="font-weight:700;color:var(--orange-500)">20%</span></div>
+        <div style="font-size:0.78rem;color:var(--muted)">Basée sur le spread bid-ask et les volumes échangés. Liquidité élevée = spreads serrés.</div>
       </div>
-      <div style="background:var(--bg-tertiary);border-radius:8px;padding:16px;margin-bottom:16px">
-        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong> Tracking Error</strong><span style="font-weight:700;color:#a855f7">15%</span></div>
-        <div style="font-size:0.78rem;color:var(--text-secondary)">Écart entre la performance ETF et son indice. Un écart faible = bonne réplication.</div>
+      <div style="background:var(--bg);border-radius:8px;padding:16px;margin-bottom:16px">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong>Tracking Error</strong><span style="font-weight:700;color:#a855f7">15%</span></div>
+        <div style="font-size:0.78rem;color:var(--muted)">Écart entre la performance ETF et son indice. Un écart faible = bonne réplication.</div>
       </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:0.78rem;color:var(--text-secondary)">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;font-size:0.78rem;color:var(--muted)">
         <strong>Grille :</strong> ≥74 <span style="color:#28a745">Achat</span> | 64-73 <span style="color:#007bff">Conserver</span> | 54-63 <span style="color:#ffc107">Surveiller</span> | 44-53 <span style="color:#fd7e14">Remplacer</span> | &lt;44 <span style="color:#dc3545">Vendre</span>
       </div>
     </div>
@@ -964,7 +907,7 @@
 </script>
 
 <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Information cookies">
-  <p> Pas de cookies publicitaires. Analytics anonyme (Umami) — emails uniquement si tu t'inscris. <a href="/privacy.html">En savoir plus</a></p>
+  <p>Pas de cookies publicitaires. Analytics anonyme (Umami) — emails uniquement si tu t'inscris. <a href="/privacy.html">En savoir plus</a></p>
   <button id="cookieOk" type="button">OK</button>
 </div>
 <script>
@@ -979,18 +922,20 @@ var msg=document.getElementById('newsletterMsg');var btn=document.getElementById
 f.addEventListener('submit',function(e){
   e.preventDefault();
   var hp=document.getElementById('newsletterHp');
-  if(hp&&hp.value){msg.textContent=' Merci !';f.reset();return;}
+  if(hp&&hp.value){msg.textContent='Merci !';f.reset();return;}
   var em=document.getElementById('newsletterEmail').value.trim();
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){msg.textContent=' Email invalide';msg.style.color='#ef4444';return;}
-  if(!document.getElementById('newsletterConsent').checked){msg.textContent=' Merci d'accepter la politique de confidentialité';msg.style.color='#ef4444';return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){msg.textContent='Email invalide';msg.style.color='#ef4444';return;}
+  if(!document.getElementById('newsletterConsent').checked){msg.textContent=' Merci d’accepter la politique de confidentialité';msg.style.color='#ef4444';return;}
   btn.disabled=true;btn.textContent='Envoi…';msg.textContent='';
   fetch('/api/newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,source:'site-footer'})})
     .then(function(r){return r.json();})
-    .then(function(d){if(d&&d.success){msg.textContent=' Bienvenue à bord ! Vérifie ta boîte mail.';msg.style.color='#10b981';f.reset();}else{msg.textContent=' '+(d.error||'Erreur');msg.style.color='#ef4444';}})
-    .catch(function(){msg.textContent=' Erreur réseau, réessaie.';msg.style.color='#ef4444';})
-    .finally(function(){btn.disabled=false;btn.textContent='S'abonner →';});
+    .then(function(d){if(d&&d.success){msg.textContent=' Bienvenue à bord ! Vérifie ta boîte mail.';msg.style.color='#10b981';f.reset();}else{msg.textContent=(d.error||'Erreur');msg.style.color='#ef4444';}})
+    .catch(function(){msg.textContent='Erreur réseau, réessaie.';msg.style.color='#ef4444';})
+    .finally(function(){btn.disabled=false;btn.textContent='S’abonner →';});
 });})();
 </script>
 
+
+<script>(function(){var t=document.getElementById('navToggle'),n=document.getElementById('headerNav');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});n.addEventListener('click',function(e){if(e.target.tagName=== 'A'){n.classList.remove('open');t.setAttribute('aria-expanded','false');}});})();</script>
 </body>
 </html>
