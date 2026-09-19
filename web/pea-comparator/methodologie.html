@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Méthodologie du Score Alfred — Alfred Invest</title>
+<meta name="description" content="Comment le Score Alfred est calculé : formule détaillée, normalisation, sources, fréquence de mise à jour et limites. Transparence totale.">
+<link rel="stylesheet" href="/style.css">
+<style>
+  body { font-family: var(--font, system-ui); background: var(--bg, #f8fafc); color: var(--text-primary, #0f172a); margin: 0; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.2rem; margin-top: 28px; border-bottom: 2px solid var(--teal, #0d9488); padding-bottom: 4px; }
+  .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px 18px; margin: 14px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { border: 1px solid #dbe2ea; padding: 8px 10px; text-align: left; }
+  th { background: #f1f5f9; }
+  code { background: #eef2f7; padding: 1px 5px; border-radius: 4px; font-size: .85em; }
+  .note { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 10px 14px; border-radius: 6px; }
+  .disc { background: #fce7f3; border-left: 4px solid #db2777; padding: 10px 14px; border-radius: 6px; }
+  .back { display:inline-block; margin-bottom:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">&larr; Retour à l'accueil</a>
+  <h1>Méthodologie du Score Alfred</h1>
+  <p>Le Score Alfred évalue la <strong>qualité structurelle</strong> d'un ETF sur 100 points. Il reflète la robustesse du produit (indice, coûts, émetteur, encours), pas une prédiction de performance.</p>
+  <div class="disc"><strong>Avertissement :</strong> ce score est un <strong>signal indicatif</strong>, pas un conseil financier personnalisé. Il ne prend pas en compte votre situation, votre horizon ni votre tolérance au risque. Les décisions vous appartiennent.</div>
+
+  <h2>1. Composantes et pondération</h2>
+  <div class="card">
+  <table>
+    <tr><th>Critère</th><th>Pondération</th><th>Mesuré par</th></tr>
+    <tr><td>Qualité de l'indice</td><td>0–25 pts</td><td>Type d'indice (monde, large cap, thèmes, indice de référence)</td></tr>
+    <tr><td>Réplication</td><td>0–20 pts</td><td>Par défaut 12/20 (pas de tracking difference réelle disponible)</td></tr>
+    <tr><td>Coûts (TER)</td><td>0–15 pts</td><td>Ongoing costs déclarés, sinon champ frais, sinon 0,30 % par défaut</td></tr>
+    <tr><td>Solidité du fonds</td><td>0–15 pts</td><td>Encours (AUM) en millions €</td></tr>
+    <tr><td>Émetteur</td><td>0–10 pts</td><td>Note par famille d'émetteur (Amundi, BlackRock/iShares, HSBC, BNP…)</td></tr>
+    <tr><td>Potentiel futur</td><td>0–15 pts</td><td>Présence de thèmes de long terme dans le libellé</td></tr>
+    <tr><td colspan="2"><strong>Total de base</strong></td><td><strong>100 pts</strong> (plafonné)</td></tr>
+  </table>
+  </div>
+
+  <h2>2. Détail du calcul</h2>
+  <div class="card">
+    <p><strong>Indice (0–25) :</strong> +12 si monde/global/MSCl World/monde · +6 si large cap · +6 si IA · +4 semi-conducteurs · +5 robotique · +3 énergie · +2 si core/ESG · +6 si indice de référence (MSCI, STOXX, S&amp;P, Nasdaq). Plafonné à 25.</p>
+    <p><strong>Réplication (0–20) :</strong> fixé à 12 par défaut — la différence de suivi (tracking difference) réelle n'est pas disponible dans les données actuelles.</p>
+    <p><strong>Coûts (0–15) :</strong> TER &lt; 0,10 % → 15 · &lt; 0,20 % → 14 · &lt; 0,30 % → 12 · &lt; 0,40 % → 10 · &lt; 0,60 % → 6 · sinon 3.</p>
+    <p><strong>Solidité (0–15) :</strong> encours ≥ 5 Md€ → 14 · ≥ 1 Md€ → 12 · ≥ 300 M€ → 10 · ≥ 100 M€ → 8 · sinon 6. <em>Malus −5 si encours &lt; 100 M€.</em></p>
+    <p><strong>Émetteur (0–10) :</strong> familles « top » → 10 · « bonnes » → 8 · « moyennes » → 6 · autres → 5.</p>
+    <p><strong>Futur (0–15) :</strong> IA/data +3 · robotique +3 · énergie propre +3 · cyber +2 · spatial +2 · métaux/matières +2 · minimum 8 pour les ETF larges (monde/global/core).</p>
+    <p><strong>Bonus :</strong> +2 si éligible PEA · +1 si TER &lt; 0,20 %.</p>
+  </div>
+
+  <h2>3. Normalisation</h2>
+  <div class="card">
+    <p>Le total (base + bonus − malus) est <strong>borné entre 0 et 100</strong>. Chaque composante est plafonnée à son maximum. Aucune composante ne peut dépasser sa pondération, donc le score est comparable entre ETF.</p>
+  </div>
+
+  <h2>4. Sources des données</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Coûts, encours, émetteur, SRI :</strong> documents d'information clés (DICI/PRIIPs) et données publiques des fonds, agrégées dans le référentiel interne <code>dic_etf_data_v2.json</code>.</li>
+      <li><strong>Référentiel ETF :</strong> liste construite à partir des fonds référencés (435+ ETF, dont les ETF éligibles PEA).</li>
+      <li>Les champs « N/A » ne sont jamais inventés : ils déclenchent les valeurs par défaut décrites en section 2.</li>
+    </ul>
+  </div>
+
+  <h2>5. Fréquence de mise à jour</h2>
+  <div class="card">
+    <p>Le score est <strong>recalculé automatiquement chaque dimanche</strong> (pipeline <code>etf_quality_score.py</code>), puis déployé sur le site. Les données sources sont rafraîchies lors de la collecte. Dernière mise à jour : <strong>15/09/2026</strong>.</p>
+  </div>
+
+  <h2>6. Gestion des données manquantes et extrêmes</h2>
+  <div class="card">
+    <ul>
+      <li><strong>TER manquant :</strong> hypothèse prudente de 0,30 % (score 12/15).</li>
+      <li><strong>Encours manquant :</strong> note neutre 12/15 — ni bonifié ni pénalisé.</li>
+      <li><strong>Tracking difference absente :</strong> réplication fixée à 12/20 (position neutre).</li>
+      <li><strong>Valeurs extrêmes :</strong> chaque composante est plafonnée (ex. : un TER à 0,05 % ne dépasse pas 15/15) ; le total est borné à 100.</li>
+    </ul>
+  </div>
+
+  <h2>7. Limites du score</h2>
+  <div class="card">
+    <ul>
+      <li>Il ne mesure <strong>pas</strong> la performance passée ni la volatilité future : c'est un score de qualité structurelle, pas un score de rendement.</li>
+      <li>La réplication est forfaitaire (12/20) faute de tracking difference réelle — dès qu'une source fiable sera disponible, cette composante deviendra dynamique.</li>
+      <li>L'éligibilité PEA (bonus) reflète l'état de la réglementation à la date des données.</li>
+      <li>La pondération actuelle (<strong>indice 25 / réplication 20 / coûts 15 / solidité 15 / émetteur 10 / futur 15</strong>) est une version 1. Une évolution vers la cible TER 40 % / encours 25 % / liquidité 20 % / tracking error 15 % est prévue pour la v2.</li>
+      <li>Le score ne remplace jamais une analyse complète ni un conseil adapté à votre situation.</li>
+    </ul>
+  </div>
+
+  <h2>8. Lisible critère par critère</h2>
+  <div class="card">
+    <p>Pour chaque ETF, cliquez sur une ligne du comparateur : la fiche affiche la note globale, et le détail des composantes est fourni quand disponible. Le détail complet critère par critère est en cours de déploiement.</p>
+  </div>
+</div>
+</body>
+</html>
