@@ -1,3 +1,5 @@
+// Alfred Invest — données ETF (source unique, générée depuis etf-data.min.js prod)
+// 435 ETF — mise à jour 2026-09-19
 window.PEA_ETFS = [
   {
     "isin": "BG9000011163",
@@ -114,560 +116,400 @@ window.PEA_ETFS = [
     "nom": "iShares STOXX Europe Select Dividend 30 UCITS ETF (DE) (le « Fonds »), ISIN : DE0002635299, est autorisé en Allemagne et élaboré par",
     "frais": "0,31",
     "sri": "4",
-    "perf5": "83.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 25.85,
-    "perf1": "33.2",
-    "perf3": "92.5",
-    "ticker": "EXSH.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0002635273",
     "nom": "iShares DivDAX® UCITS ETF (DE) (the “Fund”), ISIN: DE0002635273, is authorised in Germany and manufactured by BlackRock Asset",
     "frais": "0,31",
     "sri": "4",
-    "perf5": "35.3",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 23.0,
-    "perf1": "8.2",
-    "perf3": "32.5",
-    "ticker": "EXSB.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0002635281",
     "nom": "iShares EURO STOXX Select Dividend 30 UCITS ETF (DE) (le « Fonds ») EUR Dist (la « Catégorie d'unités »), ISIN : DE0002635281, est",
     "frais": "0,31",
     "sri": "4",
-    "perf5": "58.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 23.34,
-    "perf1": "23.1",
-    "perf3": "79.4",
-    "ticker": "EXSG.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0002635307",
     "nom": "iShares STOXX Europe 600 UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE0002635307, is authorised in Germany and",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "55.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 63.96,
-    "perf1": "20.1",
-    "perf3": "50.1",
-    "ticker": "EXSA.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933931",
     "nom": "iShares Core DAX® UCITS ETF (DE) (the “Fund”), EUR Accu (the \"Unit Class\"), ISIN: DE0005933931, is authorised in Germany and",
     "frais": "0,16",
     "sri": "4",
-    "perf5": "52.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 0.95,
-    "perf1": "3.1",
-    "perf3": "52.0",
-    "ticker": "EXS1.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933949",
     "nom": "iShares STOXX Europe 600 Top 20 UCITS ETF (DE) (the “Fund”), ISIN: DE0005933949, is authorised in Germany and manufactured by",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "72.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 54.92,
-    "perf1": "26.2",
-    "perf3": "49.6",
-    "ticker": "EXW3.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933956",
     "nom": "iShares Core EURO STOXX 50 UCITS ETF (DE) (the “Fund”), ISIN: DE0005933956, is authorised in Germany and manufactured by BlackRock",
     "frais": "0,09",
     "sri": "4",
-    "perf5": "71.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 63.46,
-    "perf1": "20.4",
-    "perf3": "55.0",
-    "ticker": "EXW1.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933923",
     "nom": "iShares MDAX® UCITS ETF (DE) (the “Fund”), EUR Accu (the \"Unit Class\"), ISIN: DE0005933923, is authorised in Germany and manufactured",
     "frais": "0,51",
     "sri": "4",
-    "perf5": "-13.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 258.8,
-    "perf1": "0.7",
-    "perf3": "10.1",
-    "ticker": "EXS3.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933972",
     "nom": "iShares TecDAX® UCITS ETF (DE) (the “Fund”), EUR Accu (the \"Unit Class\"), ISIN: DE0005933972, is authorised in Germany and",
     "frais": "0,51",
     "sri": "4",
-    "perf5": "-4.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 32.98,
-    "perf1": "-2.9",
-    "perf3": "11.8",
-    "ticker": "EXS2.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933980",
     "nom": "iShares STOXX Europe Large 200 UCITS ETF (DE) (le « Fonds »), ISIN : DE0005933980, est autorisé en Allemagne et élaboré par BlackRock",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "64.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 0.95,
-    "perf1": "21.4",
-    "perf3": "51.9",
-    "ticker": "EXSC.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933964",
     "nom": "iShares SLI UCITS ETF (DE) (the “Fund”), ISIN: DE0005933964, is authorised in Germany and manufactured by BlackRock Asset",
     "frais": "0,51",
     "sri": "4",
-    "perf5": "42.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 160.0,
-    "perf1": "16.2",
-    "perf3": "37.7",
-    "ticker": "EXI1.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0005933998",
     "nom": "iShares STOXX Europe Mid 200 UCITS ETF (DE) (le « Fonds »), ISIN : DE0005933998, est autorisé en Allemagne et élaboré par BlackRock",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "31.9",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 66.93,
-    "perf1": "16.3",
-    "perf3": "47.8",
-    "ticker": "EXSD.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE0006289309",
     "nom": "iShares EURO STOXX Banks 30-15 UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE0006289309, is authorised in Germany",
     "frais": "0,51",
     "sri": "5",
-    "perf5": "300.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 28.73,
-    "perf1": "49.2",
-    "perf3": "212.0",
-    "ticker": "EXX1.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0D8Q07",
     "nom": "iShares EURO STOXX UCITS ETF (DE) (the “Fund”), ISIN: DE000A0D8Q07, is authorised in Germany and manufactured by BlackRock Asset",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "61.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 0.95,
-    "perf1": "20.0",
-    "perf3": "55.6",
-    "ticker": "EXSI.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0D8Q23",
     "nom": "iShares ATX UCITS ETF (DE) (le « Fonds »), ISIN : DE000A0D8Q23, est autorisé en Allemagne et élaboré par BlackRock Asset Management",
     "frais": "0,32",
     "sri": "4",
-    "perf5": "112.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 68.7,
-    "perf1": "44.4",
-    "perf3": "121.3",
-    "ticker": "EXXX.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0D8Q49",
     "nom": "iShares Dow Jones U.S. Select Dividend UCITS ETF (DE) (le « Fonds »), ISIN : DE000A0D8Q49, est autorisé en Allemagne et élaboré par",
     "frais": "0,31",
     "sri": "4",
-    "perf5": "60.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 101.4,
-    "perf1": "25.5",
-    "perf3": "45.2",
-    "ticker": "EXX5.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0D8QZ7",
     "nom": "iShares STOXX Europe Small 200 UCITS ETF (DE) (le « Fonds »), ISIN : DE000A0D8QZ7, est autorisé en Allemagne et élaboré par BlackRock",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "14.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 0.95,
-    "perf1": "14.7",
-    "perf3": "37.2",
-    "ticker": "EXSE.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0F5UG3",
     "nom": "iShares Dow Jones Eurozone Leaders Screened UCITS ETF (DE) (the “Fund”), ISIN: DE000A0F5UG3, is authorised in Germany and",
     "frais": "0,41",
     "sri": "4",
-    "perf5": "66.2",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 23.17,
-    "perf1": "18.2",
-    "perf3": "62.1",
-    "ticker": "EXXV.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0F5UJ7",
     "nom": "iShares STOXX Europe 600 Banks UCITS ETF (DE) (the “Fund”), ISIN: DE000A0F5UJ7, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "286.3",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 40.26,
-    "perf1": "51.1",
-    "perf3": "198.7",
-    "ticker": "EXV1.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0F5UK5",
     "nom": "iShares STOXX Europe 600 Basic Resources UCITS ETF (DE) (the “Fund”), ISIN: DE000A0F5UK5, is authorised in Germany and",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "49.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "prix": 76.59,
-    "perf1": "56.3",
-    "perf3": "52.3",
-    "ticker": "EXV6.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H0744",
     "nom": "iShares Dow Jones Asia Pacific Select Dividend 50 UCITS ETF (DE) (le « Fonds »), ISIN : DE000A0H0744, est autorisé en Allemagne et",
     "frais": "0,31",
     "sri": "4",
-    "perf5": "76.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXXW.DE",
-    "perf3": "68.8",
-    "perf1": "33.6",
-    "prix": 32.38
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08F7",
     "nom": "iShares STOXX Europe 600 Construction & Materials UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08F7, is authorised in Germany and",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "45.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV8.DE",
-    "perf3": "44.1",
-    "perf1": "1.7",
-    "prix": 86.44
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08E0",
     "nom": "iShares STOXX Europe 600 Chemicals UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08E0, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "5.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV7.DE",
-    "perf3": "8.5",
-    "perf1": "6.0",
-    "prix": 124.38
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08G5",
     "nom": "iShares STOXX Europe 600 Financial Services UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08G5, is authorised in Germany and",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "42.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH2.DE",
-    "perf3": "65.5",
-    "perf1": "12.0",
-    "prix": 96.03
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08H3",
     "nom": "iShares STOXX Europe 600 Food & Beverage UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08H3, is authorised in Germany and",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "-11.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH3.DE",
-    "perf3": "-8.6",
-    "perf1": "5.6",
-    "prix": 65.09
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08J9",
     "nom": "iShares STOXX Europe 600 Industrial Goods & Services UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08J9, is authorised in Germany and",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "62.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH4.DE",
-    "perf3": "64.3",
-    "perf1": "13.8",
-    "prix": 116.78
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08K7",
     "nom": "iShares STOXX Europe 600 Insurance UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08K7, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "111.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH5.DE",
-    "perf3": "87.2",
-    "perf1": "17.6",
-    "prix": 54.37
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08L5",
     "nom": "iShares STOXX Europe 600 Media UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08L5, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "22.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH6.DE",
-    "perf3": "10.8",
-    "perf1": "-11.6",
-    "prix": 32.8
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08M3",
     "nom": "iShares STOXX Europe 600 Oil & Gas UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08M3, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "152.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH1.DE",
-    "perf3": "78.1",
-    "perf1": "48.9",
-    "prix": 53.84
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08N1",
     "nom": "iShares STOXX Europe 600 Personal & Household Goods UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08N1, is authorised in Germany and",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "2.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH7.DE",
-    "perf3": "-1.5",
-    "perf1": "2.3",
-    "prix": 95.83
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08P6",
     "nom": "iShares STOXX Europe 600 Retail UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08P6, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "13.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH8.DE",
-    "perf3": "35.7",
-    "perf1": "15.5",
-    "prix": 46.3
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08Q4",
     "nom": "iShares STOXX Europe 600 Technology UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE000A0H08Q4, is authorised in",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "28.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV3.DE",
-    "perf3": "37.0",
-    "perf1": "20.8",
-    "prix": 93.69
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08R2",
     "nom": "iShares STOXX Europe 600 Telecommunications UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08R2, is authorised in Germany and",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "36.2",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV2.DE",
-    "perf3": "58.8",
-    "perf1": "11.1",
-    "prix": 26.7
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0H08S0",
     "nom": "iShares STOXX Europe 600 Travel & Leisure UCITS ETF (DE) (the “Fund”), ISIN: DE000A0H08S0, is authorised in Germany and",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "12.2",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV9.DE",
-    "perf3": "18.0",
-    "perf1": "0.6",
-    "prix": 24.61
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0Q4R02",
     "nom": "iShares STOXX Europe 600 Utilities UCITS ETF (DE) (the “Fund”), ISIN: DE000A0Q4R02, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "77.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH9.DE",
-    "perf3": "67.8",
-    "perf1": "32.5",
-    "prix": 59.11
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0Q4R28",
     "nom": "iShares STOXX Europe 600 Automobiles & Parts UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE000A0Q4R28, is",
     "frais": "0,46",
     "sri": "5",
-    "perf5": "-20.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV5.DE",
-    "perf3": "-25.4",
-    "perf1": "-18.9",
-    "prix": 39.06
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0Q4R36",
     "nom": "iShares STOXX Europe 600 Health Care UCITS ETF (DE) (the “Fund”), ISIN: DE000A0Q4R36, is authorised in Germany and manufactured by",
     "frais": "0,46",
     "sri": "4",
-    "perf5": "20.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXV4.DE",
-    "perf3": "13.3",
-    "perf1": "11.9",
-    "prix": 114.68
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A0Q4R69",
     "nom": "iShares DAX® ESG UCITS ETF (DE) (the “Fund”), ISIN: DE000A0Q4R69, is authorised in Germany and manufactured by BlackRock Asset",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "51.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXIA.DE",
-    "perf3": "53.7",
-    "perf1": "5.3",
-    "prix": 7.93
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP323",
     "nom": "iShares TecDAX® UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE000A2QP323, is authorised in Germany and",
     "frais": "0,51",
     "sri": "4",
-    "perf5": "-4.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXIB.DE",
-    "perf3": "11.8",
-    "perf1": "-2.8",
-    "prix": 5.11
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP331",
     "nom": "iShares Core DAX® UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE000A2QP331, is authorised in Germany and",
     "frais": "0,16",
     "sri": "4",
-    "perf5": "52.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXIC.DE",
-    "perf3": "51.9",
-    "perf1": "3.1",
-    "prix": 7.13
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP372",
@@ -677,22 +519,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXI4.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP349",
     "nom": "iShares MDAX® UCITS ETF (DE) (the “Fund”), EUR Dist (the \"Unit Class\"), ISIN: DE000A2QP349, is authorised in Germany and manufactured",
     "frais": "0,51",
     "sri": "4",
-    "perf5": "-13.9",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXID.DE",
-    "perf3": "9.8",
-    "perf1": "0.6",
-    "prix": 4.44
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP398",
@@ -702,8 +539,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXH0.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP380",
@@ -713,8 +549,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXI0.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP4B6",
@@ -724,11 +559,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXIE.DE",
-    "perf3": "nan",
-    "perf1": "nan",
-    "prix": 7.76
+    "stress5": "N/A"
   },
   {
     "isin": "DE000A2QP4A8",
@@ -738,95 +569,67 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "DE",
-    "stress5": "N/A",
-    "ticker": "EXHG.DE",
-    "perf3": "nan",
-    "perf1": "nan",
-    "prix": 4.57
+    "stress5": "N/A"
   },
   {
     "isin": "DE000ETF9074",
     "nom": "Amundi MDAX ESG II UCITS ETF - Dist",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "-12.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,30",
-    "ticker": "E907.DE",
-    "perf3": "11.1",
-    "perf1": "5.1",
-    "prix": 154.08
+    "stress5": "-22,30"
   },
   {
     "isin": "DE000ETF9082",
     "nom": "Amundi TecDAX UCITS ETF - Dist",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "-4.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,20",
-    "ticker": "E908.DE",
-    "perf3": "14.6",
-    "perf1": "-2.5",
-    "prix": 26.95
+    "stress5": "-21,20"
   },
   {
     "isin": "DE000ETF9090",
     "nom": "Amundi DAX 50 ESG II UCITS ETF - Dist",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "47.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,20",
-    "ticker": "E909.DE",
-    "perf3": "52.9",
-    "perf1": "8.2",
-    "prix": 51.72
+    "stress5": "-21,20"
   },
   {
     "isin": "FR0000021842",
     "nom": "Amundi BEL 20 UCITS ETF Dist",
     "frais": "0,50",
     "sri": "4",
-    "perf5": "44.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,30",
-    "ticker": "BEL.BR",
-    "perf3": "63.0",
-    "perf1": "26.5",
-    "prix": 86.35
+    "stress5": "-18,30"
   },
   {
     "isin": "DE000ETF9603",
     "nom": "Amundi STOXX Europe 600 ESG II UCITS ETF - Dist",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "52.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30",
-    "ticker": "E960.DE",
-    "perf3": "48.1",
-    "perf1": "19.5",
-    "prix": 65.04
+    "stress5": "-17,30"
   },
   {
     "isin": "FR0007054358",
     "nom": "AMUNDI EURO STOXX 50 II UCITS ETF Acc",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "71.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,70",
-    "ticker": "LYSX.DE",
-    "perf3": "52.5",
-    "perf1": "20.4",
-    "prix": 71.52
+    "stress5": "-20,70"
   },
   {
     "isin": "FR0007052782",
@@ -836,22 +639,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,80",
-    "ticker": "LYY.DE"
+    "stress5": "-19,80"
   },
   {
     "isin": "FR0007056841",
     "nom": "Amundi Dow Jones Industrial Average UCITS ETF Dist",
     "frais": "0,50",
     "sri": "4",
-    "perf5": "62.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,00",
-    "ticker": "DJAM.DE",
-    "perf3": "47.4",
-    "perf1": "21.3",
-    "prix": 463.4
+    "stress5": "-18,00"
   },
   {
     "isin": "FR0007075494",
@@ -861,8 +659,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-33,80",
-    "ticker": "L8IF.DE"
+    "stress5": "-33,80"
   },
   {
     "isin": "FR0010010827",
@@ -872,78 +669,57 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,40",
-    "ticker": "LYMK.DE"
+    "stress5": "-22,40"
   },
   {
     "isin": "FR0010245514",
     "nom": "AMUNDI Japan TOPIX II UCITS ETF EUR Dist",
     "frais": "0,45",
     "sri": "4",
-    "perf5": "55.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-26,20",
-    "ticker": "LYY4.DE",
-    "perf3": "52.5",
-    "perf1": "28.2",
-    "prix": 214.29
+    "stress5": "-26,20"
   },
   {
     "isin": "FR0010251744",
     "nom": "Amundi IBEX 35 UCITS ETF Dist",
     "frais": "0,29",
     "sri": "4",
-    "perf5": "161.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,20",
-    "ticker": "LYXIB.MC",
-    "perf3": "134.4",
-    "perf1": "40.4",
-    "prix": 206.7
+    "stress5": "-19,20"
   },
   {
     "isin": "FR0010261198",
     "nom": "Amundi MSCI Europe UCITS ETF Acc",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "57.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,60",
-    "ticker": "LYY5.DE",
-    "perf3": "47.5",
-    "perf1": "20.4",
-    "prix": 246.2
+    "stress5": "-17,60"
   },
   {
     "isin": "FR0010315770",
     "nom": "Amundi MSCI World Swap II UCITS ETF Dist",
     "frais": "0,28",
     "sri": "4",
-    "perf5": "71.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,20",
-    "ticker": "LYYA.DE",
-    "perf3": "58.7",
-    "perf1": "22.0",
-    "prix": 422.22
+    "stress5": "-17,20"
   },
   {
     "isin": "FR0010361683",
     "nom": "Amundi MSCI India Swap UCITS ETF EUR Acc",
     "frais": "0,83",
     "sri": "4",
-    "perf5": "16.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,20",
-    "ticker": "LYMD.DE",
-    "perf3": "4.9",
-    "perf1": "-9.4",
-    "prix": 25.23
+    "stress5": "-17,20"
   },
   {
     "isin": "FR0010375766",
@@ -953,8 +729,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,90",
-    "ticker": "NK4G.DE"
+    "stress5": "-18,90"
   },
   {
     "isin": "FR0010377028",
@@ -964,39 +739,27 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-29,00",
-    "ticker": "LYJPN.SW",
-    "perf3": "52.5",
-    "perf1": "15.8",
-    "prix": 24200.0
+    "stress5": "-29,00"
   },
   {
     "isin": "FR0010405431",
     "nom": "Amundi MSCI Greece UCITS ETF Dist",
     "frais": "0,45",
     "sri": "5",
-    "perf5": "219.1",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-24,20",
-    "ticker": "LYMH.DE",
-    "perf3": "114.3",
-    "perf1": "29.3",
-    "prix": 2.8
+    "stress5": "-24,20"
   },
   {
     "isin": "FR0010429068",
     "nom": "Amundi MSCI Emerging Markets Swap II UCITS ETF EUR Acc",
     "frais": "0,54",
     "sri": "4",
-    "perf5": "44.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,90",
-    "ticker": "LYM7.DE",
-    "perf3": "58.8",
-    "perf1": "35.2",
-    "prix": 18.24
+    "stress5": "-17,90"
   },
   {
     "isin": "FR0010435297",
@@ -1006,50 +769,37 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,40",
-    "ticker": "LNY4.DE"
+    "stress5": "-18,40"
   },
   {
     "isin": "FR0010510800",
     "nom": "Amundi EUR Overnight Return UCITS ETF Acc",
     "frais": "0,10",
     "sri": "1",
-    "perf5": "10.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A",
-    "ticker": "L8I3.DE",
-    "perf3": "8.9",
-    "perf1": "2.1",
-    "prix": 114.15
+    "stress5": "N/A"
   },
   {
     "isin": "FR0010524777",
     "nom": "Amundi MSCI New Energy UCITS ETF Dist",
     "frais": "0,60",
     "sri": "5",
-    "perf5": "1.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,70",
-    "ticker": "LYM9.DE",
-    "perf3": "26.7",
-    "perf1": "52.1",
-    "prix": 42.72
+    "stress5": "-21,70"
   },
   {
     "isin": "FR0010527275",
     "nom": "Amundi MSCI Water UCITS ETF Dist",
     "frais": "0,60",
     "sri": "4",
-    "perf5": "24.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-14,90",
-    "ticker": "LYM8.DE",
-    "perf3": "26.9",
-    "perf1": "5.0",
-    "prix": 70.86
+    "stress5": "-14,90"
   },
   {
     "isin": "FR0010655704",
@@ -1059,22 +809,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,80",
-    "ticker": "X13J.DE"
+    "stress5": "-22,80"
   },
   {
     "isin": "FR0010655712",
     "nom": "AMUNDI ETF DAX UCITS ETF DR",
     "frais": "0,10",
     "sri": "4",
-    "perf5": "53.4",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,90",
-    "ticker": "CG1G.DE",
-    "perf3": "50.3",
-    "perf1": "2.8",
-    "prix": 443.55
+    "stress5": "-21,90"
   },
   {
     "isin": "FR0010655746",
@@ -1084,129 +829,94 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,20",
-    "ticker": "AMES.DE",
-    "perf1": "nan",
-    "prix": 506.0
+    "stress5": "-19,20"
   },
   {
     "isin": "FR0010717090",
     "nom": "Amundi MSCI EMU High Dividend UCITS ETF Acc",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "56.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-16,00",
-    "ticker": "18M2.DE",
-    "perf3": "44.3",
-    "perf1": "21.8",
-    "prix": 213.8
+    "stress5": "-16,00"
   },
   {
     "isin": "FR0010790980",
     "nom": "Amundi Stoxx Europe 50 UCITS ETF Acc",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "70.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,40",
-    "ticker": "AE50.DE",
-    "perf3": "45.5",
-    "perf1": "23.1",
-    "prix": 152.42
+    "stress5": "-17,40"
   },
   {
     "isin": "FR0010756114",
     "nom": "Amundi MSCI World Ex EMU UCITS ETF Acc",
     "frais": "0,35",
     "sri": "4",
-    "perf5": "71.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-18,00",
-    "ticker": "ACM9.DE",
-    "perf3": "58.3",
-    "perf1": "21.9",
-    "prix": 720.2
+    "stress5": "-18,00"
   },
   {
     "isin": "FR0010821819",
     "nom": "Amundi MSCI Europe ex EMU ESG Selection UCITS ETF Acc",
     "frais": "0,30",
     "sri": "?",
-    "perf5": "38.4",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-15,80",
-    "ticker": "540H.DE",
-    "perf3": "29.0",
-    "perf1": "10.4",
-    "prix": 418.15
+    "stress5": "-15,80"
   },
   {
     "isin": "FR0010930644",
     "nom": "Amundi Global Hydrogen UCITS ETF Acc",
     "frais": "0,45",
     "sri": "5",
-    "perf5": "234.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-26,00",
-    "ticker": "AMEE.DE",
-    "perf3": "115.6",
-    "perf1": "43.7",
-    "prix": 724.1
+    "stress5": "-26,00"
   },
   {
     "isin": "FR0011036268",
     "nom": "Amundi IBEX 35 Doble Inverso Diario (-2x) UCITS ETF Acc",
     "frais": "0,60",
     "sri": "6",
-    "perf5": "-87.4",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A",
-    "ticker": "2INVE.MC",
-    "perf3": "-81.3",
-    "perf1": "-50.6",
-    "prix": 0.28
+    "stress5": "N/A"
   },
   {
     "isin": "FR0011042753",
     "nom": "Amundi IBEX 35 Doble Apalancado Diario (2x) UCITS ETF Acc",
     "frais": "0,40",
     "sri": "6",
-    "perf5": "411.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A",
-    "ticker": "IBEXA.MC",
-    "perf3": "354.7",
-    "perf1": "86.1",
-    "prix": 81.5
+    "stress5": "N/A"
   },
   {
     "isin": "FR0011475078",
     "nom": "AMUNDI Japan TOPIX II UCITS ETF EUR Hedged Dist",
     "frais": "0,45",
     "sri": "4",
-    "perf5": "137.8",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-30,30",
-    "ticker": "JPNH.DE",
-    "perf3": "92.9",
-    "perf1": "39.8",
-    "prix": 333.9
+    "stress5": "-30,30"
   },
   {
     "isin": "FR0011550177",
     "nom": "BNP PARIBAS EASY S&P 500 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class USD C (FR0011550177)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "153,61",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-22,13"
@@ -1226,7 +936,7 @@ window.PEA_ETFS = [
     "nom": "BNP PARIBAS EASY STOXX EUROPE 600 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class EUR C (FR0011550193)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "104,09",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-17,94"
@@ -1236,7 +946,7 @@ window.PEA_ETFS = [
     "nom": "BNP PARIBAS EASY STOXX EUROPE 600 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class EUR C/D (FR0011550672)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "104,09",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-17,94"
@@ -1246,7 +956,7 @@ window.PEA_ETFS = [
     "nom": "BNP PARIBAS EASY S&P 500 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class USD C/D (FR0011550680)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "153,61",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-22,13"
@@ -1259,8 +969,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80",
-    "ticker": "DJAB.DE"
+    "stress5": "-17,80"
   },
   {
     "isin": "FR0011669845",
@@ -1270,22 +979,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80",
-    "ticker": "WLDU.DE"
+    "stress5": "-17,80"
   },
   {
     "isin": "FR0011720911",
     "nom": "Amundi MSCI China A UCITS ETF Acc",
     "frais": "0,35",
     "sri": "4",
-    "perf5": "-3.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-23,40",
-    "ticker": "CNAA.DE",
-    "perf3": "20.8",
-    "perf1": "22.6",
-    "prix": 170.92
+    "stress5": "-23,40"
   },
   {
     "isin": "FR0011758085",
@@ -1295,8 +999,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,10",
-    "ticker": "ITAMID.DE"
+    "stress5": "-20,10"
   },
   {
     "isin": "FR0011857234",
@@ -1306,9 +1009,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,70",
-    "ticker": "MD4X.DE",
-    "prix": 150.14
+    "stress5": "-22,70"
   },
   {
     "isin": "FR0012399772",
@@ -1318,8 +1019,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,80",
-    "ticker": "NK4B.DE"
+    "stress5": "-20,80"
   },
   {
     "isin": "FR0012399806",
@@ -1329,8 +1029,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,50",
-    "ticker": "LYQ4.DE"
+    "stress5": "-20,50"
   },
   {
     "isin": "FR0012399731",
@@ -1340,18 +1039,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,70",
-    "ticker": "MSEC.SW",
-    "perf3": "nan",
-    "perf1": "nan",
-    "prix": 210.0
+    "stress5": "-20,70"
   },
   {
     "isin": "FR0012739431",
     "nom": "BNP PARIBAS EASY EURO STOXX 50 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class EUR C (FR0012739431)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "102,50",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-20,87"
@@ -1361,7 +1056,7 @@ window.PEA_ETFS = [
     "nom": "BNP PARIBAS EASY EURO STOXX 50 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class EUR C/D (FR0012740983)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "102,50",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-20,87"
@@ -1371,7 +1066,7 @@ window.PEA_ETFS = [
     "nom": "BNP PARIBAS EASY S&P 500 UCITS ETF, a sub-fund of BNP PARIBAS EASY FR, share class EUR H (FR0013041530)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "362,59",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "FR",
     "stress5": "-21,35"
@@ -1381,14 +1076,10 @@ window.PEA_ETFS = [
     "nom": "AMUNDI PEA EURO Court Terme UCITS ETF - Acc",
     "frais": "0,25",
     "sri": "1",
-    "perf5": "-11.6",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "N/A",
-    "ticker": "OBLI.PA",
-    "perf3": "11.0",
-    "perf1": "2.1",
-    "prix": 9.77
+    "stress5": "N/A"
   },
   {
     "isin": "FR0013380607",
@@ -1398,8 +1089,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-31,80",
-    "ticker": "VOOP.DE"
+    "stress5": "-31,80"
   },
   {
     "isin": "FR0013209921",
@@ -1409,65 +1099,47 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-33,70",
-    "ticker": "WLXU.DE",
-    "prix": 248.1
+    "stress5": "-33,70"
   },
   {
     "isin": "FR0013411980",
     "nom": "Amundi PEA Japon (TOPIX) UCITS ETF EUR Acc",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "58.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-26,70",
-    "ticker": "PTPXE.PA",
-    "perf3": "57.2",
-    "perf1": "29.0",
-    "prix": 37.72
+    "stress5": "-26,70"
   },
   {
     "isin": "FR0013412004",
     "nom": "Type: Units of Amundi PEA Amerique Latine (MSCI Emerging Latin America) Selection UCITS ETF, a UCITS (Undertaking for Collective Investment in",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "58.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-19,60",
-    "ticker": "PALAT.PA",
-    "perf3": "29.1",
-    "perf1": "39.0",
-    "prix": 28.24
+    "stress5": "-19,60"
   },
   {
     "isin": "FR0013412012",
     "nom": "Amundi PEA Asie Emergente (MSCI Emerging Asia) Screened UCITS ETF",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "52.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,60",
-    "ticker": "PAASI.PA",
-    "perf3": "76.8",
-    "perf1": "40.1",
-    "prix": 37.82
+    "stress5": "-20,60"
   },
   {
     "isin": "FR0013412038",
     "nom": "Amundi PEA MSCI Europe UCITS ETF Acc",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "57.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,60",
-    "ticker": "PCEU.PA",
-    "perf3": "51.3",
-    "perf1": "20.3",
-    "prix": 39.74
+    "stress5": "-17,60"
   },
   {
     "isin": "FR0013412020",
@@ -1484,14 +1156,10 @@ window.PEA_ETFS = [
     "nom": "Amundi PEA US Tech Screened UCITS ETF - Acc",
     "frais": "0,30",
     "sri": "5",
-    "perf5": "105.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-28,80",
-    "ticker": "PANX.PA",
-    "perf3": "91.7",
-    "perf1": "31.9",
-    "prix": 77.35
+    "stress5": "-28,80"
   },
   {
     "isin": "FR0013412285",
@@ -1508,14 +1176,20 @@ window.PEA_ETFS = [
     "nom": "Amundi PEA S&P 500 Screened UCITS ETF - EUR Hedged Acc",
     "frais": "0,28",
     "sri": "4",
-    "perf5": "52.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,40",
-    "ticker": "P500H.PA",
-    "perf3": "58.2",
-    "perf1": "16.3",
-    "prix": 46.76
+    "stress5": "-22,40"
+  },
+  {
+    "isin": "FR0013416716",
+    "nom": "Amundi Physical Gold ETC (C)",
+    "frais": "0,12",
+    "sri": "?",
+    "perf5": "N/A",
+    "emetteur": "Amundi",
+    "pays": "FR",
+    "stress5": "N/A"
   },
   {
     "isin": "FR0014002CH1",
@@ -1525,8 +1199,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-14,90",
-    "ticker": "WATC.DE"
+    "stress5": "-14,90"
   },
   {
     "isin": "FR0014002H76",
@@ -1536,8 +1209,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,40",
-    "ticker": "MIBA.DE"
+    "stress5": "-22,40"
   },
   {
     "isin": "FR0014003FW1",
@@ -1547,11 +1219,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,60",
-    "ticker": "PABV.DE",
-    "perf3": "70.0",
-    "perf1": "21.3",
-    "prix": 75.36
+    "stress5": "-21,60"
   },
   {
     "isin": "FR0014002CG3",
@@ -1561,8 +1229,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-21,70",
-    "ticker": "NRJC.DE"
+    "stress5": "-21,70"
   },
   {
     "isin": "FR0014003IY1",
@@ -1572,22 +1239,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,20",
-    "ticker": "BUN1.DE"
+    "stress5": "-17,20"
   },
   {
     "isin": "FR0014003N93",
     "nom": "Amundi MSCI World Swap II UCITS ETF EUR Hedged Acc",
     "frais": "0,28",
     "sri": "4",
-    "perf5": "58.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80",
-    "ticker": "WLDHC.PA",
-    "perf3": "61.4",
-    "perf1": "17.2",
-    "prix": 16.7
+    "stress5": "-17,80"
   },
   {
     "isin": "FR001400KE06",
@@ -1597,10 +1259,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-13,90",
-    "ticker": "COSE.PA",
-    "perf1": "7.9",
-    "prix": 11.18
+    "stress5": "-13,90"
   },
   {
     "isin": "FR001400KH45",
@@ -1610,10 +1269,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-20,10",
-    "ticker": "USVE.PA",
-    "perf1": "25.2",
-    "prix": 14.3
+    "stress5": "-20,10"
   },
   {
     "isin": "FR001400ZGO4",
@@ -1623,10 +1279,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-17,80",
-    "ticker": "PEMS.PA",
-    "perf1": "35.0",
-    "prix": 7.2
+    "stress5": "-17,80"
   },
   {
     "isin": "FR0014015ZN2",
@@ -1636,9 +1289,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "FR",
-    "stress5": "-22,70",
-    "ticker": "MD4C.DE",
-    "prix": 5.63
+    "stress5": "-22,70"
   },
   {
     "isin": "IE00000EF730",
@@ -1648,10 +1299,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "EUEE.AS",
-    "perf1": "21.2",
-    "prix": 7.58
+    "stress5": "N/A"
   },
   {
     "isin": "IE00002ZKAP0",
@@ -1671,11 +1319,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-19,00",
-    "ticker": "JREZ.DE",
-    "perf3": "58.5",
-    "perf1": "23.6",
-    "prix": 45.4
+    "stress5": "-19,00"
   },
   {
     "isin": "IE0000BNORX6",
@@ -1685,9 +1329,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30",
-    "ticker": "JEEA.DE",
-    "prix": 26.8
+    "stress5": "-17,30"
   },
   {
     "isin": "IE0001JH5CB4",
@@ -1727,10 +1369,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-24,16",
-    "ticker": "EUDF.DE",
-    "perf1": "5.5",
-    "prix": 31.34
+    "stress5": "-24,16"
   },
   {
     "isin": "IE0003UN5CT1",
@@ -1740,10 +1379,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30",
-    "ticker": "JESE.DE",
-    "perf1": "20.8",
-    "prix": 32.02
+    "stress5": "-17,30"
   },
   {
     "isin": "IE0005HNE843",
@@ -1753,9 +1389,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,89",
-    "ticker": "VYEU.DE",
-    "prix": 30.44
+    "stress5": "-16,89"
   },
   {
     "isin": "IE00064TWYK9",
@@ -1765,9 +1399,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30",
-    "ticker": "JEEP.DE",
-    "prix": 25.82
+    "stress5": "-17,30"
   },
   {
     "isin": "IE00067X7JX0",
@@ -1787,10 +1419,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "MCTA.DE",
-    "perf1": "20.9",
-    "prix": 6.69
+    "stress5": "N/A"
   },
   {
     "isin": "IE0007WLHX89",
@@ -1810,9 +1439,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "17,81",
-    "ticker": "EVSD.DE",
-    "prix": 19.42
+    "stress5": "17,81"
   },
   {
     "isin": "IE0008470928",
@@ -1822,25 +1449,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "EUN1.DE",
-    "perf3": "46.4",
-    "perf1": "35.0",
-    "prix": 55.58
+    "stress5": "N/A"
   },
   {
     "isin": "IE0008471009",
     "nom": "iShares Core EURO STOXX 50 UCITS ETF EUR (Dist) (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE0008471009, is authorised in Ireland",
     "frais": "0,10",
     "sri": "4",
-    "perf5": "71.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "EUN2.DE",
-    "perf3": "52.7",
-    "perf1": "20.4",
-    "prix": 64.54
+    "stress5": "N/A"
   },
   {
     "isin": "IE0008F9FCT2",
@@ -1850,17 +1469,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IEUC.SW",
-    "perf1": "18.2",
-    "prix": 6.9
+    "stress5": "N/A"
   },
   {
     "isin": "IE0008GRJRO8",
     "nom": "State Street SPDR S&P Europe Defense Vision UCITS ETF (\"Fund\")",
     "frais": "N/A",
     "sri": "5",
-    "perf5": "61,81",
+    "perf5": "N/A",
     "emetteur": "State Street (SPDR)",
     "pays": "IE",
     "stress5": "-27,20"
@@ -1873,8 +1489,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "21,70",
-    "ticker": "FTEG.DE"
+    "stress5": "21,70"
   },
   {
     "isin": "IE000AGFZM58",
@@ -1884,8 +1499,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-15,07",
-    "ticker": "HIEU.DE"
+    "stress5": "-15,07"
   },
   {
     "isin": "IE000CPG9HG3",
@@ -1895,9 +1509,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "21,30",
-    "ticker": "3DVY.DE",
-    "prix": 22.55
+    "stress5": "21,30"
   },
   {
     "isin": "IE000CR424L6",
@@ -1907,11 +1519,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "CBUD.DE",
-    "perf3": "30.0",
-    "perf1": "12.2",
-    "prix": 5.65
+    "stress5": "N/A"
   },
   {
     "isin": "IE000DB78H45",
@@ -1931,10 +1539,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-18,90",
-    "ticker": "JRZC.SW",
-    "perf1": "22.0",
-    "prix": 33.05
+    "stress5": "-18,90"
   },
   {
     "isin": "IE000E9XXE77",
@@ -1944,10 +1549,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "MCTD.DE",
-    "perf1": "20.8",
-    "prix": 6.37
+    "stress5": "N/A"
   },
   {
     "isin": "IE000FOSCLU1",
@@ -1957,8 +1559,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "5IF0.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE000HH3SU50",
@@ -1968,8 +1569,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "6RF0.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE000IAXNM41",
@@ -1979,17 +1579,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "DFNC.DE",
-    "perf1": "5.1",
-    "prix": 5.31
+    "stress5": "N/A"
   },
   {
     "isin": "IE000IMGE5W5",
     "nom": "Franklin European Quality Dividend UCITS ETF",
     "frais": "N/A",
     "sri": "3",
-    "perf5": "210,00",
+    "perf5": "N/A",
     "emetteur": "Franklin Templeton",
     "pays": "IE",
     "stress5": "-12,98"
@@ -2002,8 +1599,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "QDGH.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE000LXEN6X4",
@@ -2013,11 +1609,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "ES50.DE",
-    "perf3": "74.3",
-    "perf1": "23.8",
-    "prix": 8.43
+    "stress5": "N/A"
   },
   {
     "isin": "IE000MAO75G5",
@@ -2027,10 +1619,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "CEBZ.DE",
-    "perf1": "21.5",
-    "prix": 6.86
+    "stress5": "N/A"
   },
   {
     "isin": "IE000OV4XWA3",
@@ -2040,9 +1629,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-100,00",
-    "ticker": "NTSZ.DE",
-    "prix": 28.35
+    "stress5": "-100,00"
   },
   {
     "isin": "IE000PYEKKW0",
@@ -2052,9 +1639,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "CEML.DE",
-    "prix": 5.71
+    "stress5": "N/A"
   },
   {
     "isin": "IE000QOLLXO2",
@@ -2064,10 +1649,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30",
-    "ticker": "JSDE.DE",
-    "perf1": "20.7",
-    "prix": 30.76
+    "stress5": "-17,30"
   },
   {
     "isin": "IE000SAXJ1M1",
@@ -2077,10 +1659,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "15,16",
-    "ticker": "SY7D.DE",
-    "perf1": "13.1",
-    "prix": 14.87
+    "stress5": "15,16"
   },
   {
     "isin": "IE000ST40PX8",
@@ -2100,10 +1679,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "ECTA.DE",
-    "perf1": "20.4",
-    "prix": 6.13
+    "stress5": "N/A"
   },
   {
     "isin": "IE000VCBWFL8",
@@ -2133,10 +1709,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "47,85",
-    "ticker": "ED3F.DE",
-    "perf1": "0.6",
-    "prix": 15.79
+    "stress5": "47,85"
   },
   {
     "isin": "IE000XERHYF0",
@@ -2153,7 +1726,7 @@ window.PEA_ETFS = [
     "nom": "BNP PARIBAS EASY II MSCI Europe PAB UCITS ETF, a sub-fund of BNP PARIBAS EASY II ICAV, share class: EUR Acc (IE000YASIPS3)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "180,00",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "IE",
     "stress5": "-19,45"
@@ -2166,66 +1739,47 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "ECTD.DE",
-    "perf1": "19.2",
-    "prix": 5.82
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B02KXL92",
     "nom": "iShares EURO STOXX Mid UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00B02KXL92, is authorised in Ireland and",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "41.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IQQM.DE",
-    "perf3": "51.4",
-    "perf1": "18.6",
-    "prix": 89.7
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B02KXM00",
     "nom": "iShares EURO STOXX Small UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00B02KXM00, is authorised in Ireland and",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "25.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IQQS.DE",
-    "perf3": "32.2",
-    "perf1": "16.3",
-    "prix": 53.11
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B0M63284",
     "nom": "iShares European Property Yield UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00B0M63284, is authorised in Ireland and",
     "frais": "0,40",
     "sri": "5",
-    "perf5": "-23.2",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IQQP.DE",
-    "perf3": "30.2",
-    "perf1": "1.3",
-    "prix": 30.45
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B14X4N27",
     "nom": "iShares MSCI Europe ex-UK UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00B14X4N27, is authorised in Ireland and",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "50.2",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IQQU.DE",
-    "perf3": "45.0",
-    "perf1": "19.1",
-    "prix": 55.29
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B1XNH568",
@@ -2235,22 +1789,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "2B7V.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B1YZSC51",
     "nom": "iShares Core MSCI Europe UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00B1YZSC51, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "58.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IQQY.DE",
-    "perf3": "48.6",
-    "perf1": "20.3",
-    "prix": 40.38
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B23D8X81",
@@ -2267,154 +1816,110 @@ window.PEA_ETFS = [
     "nom": "iShares MSCI EMU Small Cap UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B3VWMM18, is authorised in Ireland and",
     "frais": "0,58",
     "sri": "4",
-    "perf5": "31.2",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "SXRJ.DE",
-    "perf3": "39.3",
-    "perf1": "11.6",
-    "prix": 365.85
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B4K48X80",
     "nom": "iShares Core MSCI Europe UCITS ETF EUR (Acc) (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B4K48X80, is authorised in Ireland",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "58.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "EUNK.DE",
-    "perf3": "48.6",
-    "perf1": "20.4",
-    "prix": 104.56
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B4K6B022",
     "nom": "HSBC EURO STOXX 50 UCITS ETF",
     "frais": "0,05",
     "sri": "4",
-    "perf5": "76.4",
+    "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-21,59",
-    "ticker": "H4ZA.DE",
-    "perf3": "56.6",
-    "perf1": "20.4",
-    "prix": 67.16
+    "stress5": "-21,59"
   },
   {
     "isin": "IE00B4M7GH52",
     "nom": "iShares MSCI Poland UCITS ETF (the “Fund”), USD Accu (the \"Share Class\"), ISIN: IE00B4M7GH52, is authorised in Ireland and",
     "frais": "0,74",
     "sri": "5",
-    "perf5": "106.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IBCJ.DE",
-    "perf3": "106.5",
-    "perf1": "33.2",
-    "prix": 34.0
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B52VJ196",
     "nom": "iShares MSCI Europe SRI UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B52VJ196, is authorised in Ireland and",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "22.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IUSK.DE",
-    "perf3": "23.7",
-    "perf1": "10.1",
-    "prix": 77.13
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B53L4X51",
     "nom": "iShares FTSE MIB UCITS ETF EUR (Acc) (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B53L4X51, is authorised in Ireland and",
     "frais": "0,33",
     "sri": "4",
-    "perf5": "149.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "SXRY.DE",
-    "perf3": "104.9",
-    "perf1": "34.5",
-    "prix": 258.4
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B53L3W79",
     "nom": "iShares Core EURO STOXX 50 UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B53L3W79, is authorised in Ireland and",
     "frais": "0,10",
     "sri": "4",
-    "perf5": "72.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "SXRT.DE",
-    "perf3": "52.7",
-    "perf1": "20.4",
-    "prix": 244.8
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B53QG562",
     "nom": "iShares Core MSCI EMU UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B53QG562, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "62.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "SXR7.DE",
-    "perf3": "54.0",
-    "perf1": "20.5",
-    "prix": 243.95
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B5BD5K76",
     "nom": "HSBC MSCI EUROPE UCITS ETF",
     "frais": "0,10",
     "sri": "4",
-    "perf5": "61.6",
+    "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-17,46",
-    "ticker": "H4ZE.DE",
-    "perf3": "51.1",
-    "perf1": "20.1",
-    "prix": 22.32
+    "stress5": "-17,46"
   },
   {
     "isin": "IE00B86MWN23",
     "nom": "iShares Edge MSCI Europe Minimum Volatility UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00B86MWN23, is authorised",
     "frais": "0,25",
     "sri": "3",
-    "perf5": "35.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "EUN0.DE",
-    "perf3": "37.8",
-    "perf1": "11.2",
-    "prix": 74.51
+    "stress5": "N/A"
   },
   {
     "isin": "IE00B8X9NY41",
     "nom": "First Trust Eurozone AlphaDEX® UCITS ETF",
     "frais": "0,65",
     "sri": "?",
-    "perf5": "67.6",
+    "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "59,70",
-    "ticker": "FTGE.DE",
-    "perf3": "73.9",
-    "perf1": "25.3",
-    "prix": 65.32
+    "stress5": "59,70"
   },
   {
     "isin": "IE00B910VR50",
@@ -2431,28 +1936,20 @@ window.PEA_ETFS = [
     "nom": "iShares MSCI EMU Mid Cap UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BCLWRD08, is authorised in Ireland and",
     "frais": "0,49",
     "sri": "4",
-    "perf5": "54.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IS3H.DE",
-    "perf3": "68.1",
-    "perf1": "20.3",
-    "prix": 79.91
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BCLWRF22",
     "nom": "iShares MSCI EMU Large Cap UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BCLWRF22, is authorised in Ireland and",
     "frais": "0,49",
     "sri": "4",
-    "perf5": "61.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IS3G.DE",
-    "perf3": "54.0",
-    "perf1": "20.8",
-    "prix": 77.33
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BDF16007",
@@ -2462,22 +1959,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-14,89",
-    "ticker": "EEIP.DE"
+    "stress5": "-14,89"
   },
   {
     "isin": "IE00BDF16114",
     "nom": "WisdomTree Europe SmallCap Dividend UCITS ETF Acc",
     "frais": "0,38",
     "sri": "4",
-    "perf5": "28.2",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-15,78",
-    "ticker": "WTD7.DE",
-    "perf3": "40.7",
-    "perf1": "11.6",
-    "prix": 25.3
+    "stress5": "-15,78"
   },
   {
     "isin": "IE00BDGN9Z19",
@@ -2494,7 +1986,7 @@ window.PEA_ETFS = [
     "nom": "Franklin European Quality Dividend UCITS ETF",
     "frais": "N/A",
     "sri": "3",
-    "perf5": "210,00",
+    "perf5": "N/A",
     "emetteur": "UBS",
     "pays": "IE",
     "stress5": "-12,98"
@@ -2507,8 +1999,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "20,50",
-    "ticker": "FEUD.DE"
+    "stress5": "20,50"
   },
   {
     "isin": "IE00BF450720",
@@ -2518,25 +2009,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "DMFC.SW",
-    "perf3": "57.6",
-    "perf1": "22.0",
-    "prix": 10.15
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BF4G7183",
     "nom": "JPM Europe Research Enhanced Index Equity Active UCITS ETF - EUR (acc)",
     "frais": "0,24",
     "sri": "4",
-    "perf5": "58.3",
+    "perf5": "N/A",
     "emetteur": "JPMorgan",
     "pays": "IE",
-    "stress5": "-17,30",
-    "ticker": "JREE.DE",
-    "perf3": "46.5",
-    "perf1": "21.2",
-    "prix": 55.96
+    "stress5": "-17,30"
   },
   {
     "isin": "IE00BFD26097",
@@ -2546,8 +2029,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
-    "stress5": "21,30",
-    "ticker": "IPXE.DE"
+    "stress5": "21,30"
   },
   {
     "isin": "IE00BFMNHK08",
@@ -2564,54 +2046,40 @@ window.PEA_ETFS = [
     "nom": "iShares MSCI EMU Screened UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BFNM3B99, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "58.9",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "SLMA.DE",
-    "perf3": "55.5",
-    "perf1": "20.0",
-    "prix": 11.19
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BFNM3C07",
     "nom": "iShares MSCI EMU Screened UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BFNM3C07, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "58.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "SLMB.DE",
-    "perf3": "55.5",
-    "perf1": "20.0",
-    "prix": 9.13
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BFNM3D14",
     "nom": "iShares MSCI Europe Screened UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BFNM3D14, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "55.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "51.5",
-    "perf1": "19.5",
-    "prix": 10.98
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BFNM3F38",
     "nom": "iShares MSCI Europe Screened UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BFNM3F38, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "55.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "51.4",
-    "perf1": "19.6",
-    "prix": 8.94
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BFWFPX50",
@@ -2638,118 +2106,90 @@ window.PEA_ETFS = [
     "nom": "iShares Core MSCI EMU UCITS ETF (the “Fund”), Hedged GBP Dist (the \"Share Class\"), ISIN: IE00BG0J9Y53, is authorised in Ireland and",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "79.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "61.3",
-    "perf1": "23.4",
-    "prix": 9.53
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BG13YJ64",
     "nom": "iShares Edge MSCI Europe Momentum Factor UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BG13YJ64, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "73.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "72.9",
-    "perf1": "19.6",
-    "prix": 10.48
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BG13YG34",
     "nom": "iShares Edge MSCI Europe Quality Factor UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BG13YG34, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "33.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "29.1",
-    "perf1": "15.0",
-    "prix": 8.19
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BG13YK79",
     "nom": "iShares Edge MSCI Europe Minimum Volatility UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BG13YK79, is authorised in",
     "frais": "0,25",
     "sri": "3",
-    "perf5": "22.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "26.8",
-    "perf1": "8.5",
-    "prix": 7.48
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BG13YH41",
     "nom": "iShares Edge MSCI Europe Value Factor UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BG13YH41, is authorised in Ireland",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "102.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "73.9",
-    "perf1": "31.6",
-    "prix": 8.53
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BG13YL86",
     "nom": "iShares STOXX Europe Equity Multifactor UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BG13YL86, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "70.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "66.1",
-    "perf1": "24.5",
-    "prix": 8.73
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BG13YZ23",
     "nom": "iShares STOXX USA Equity Multifactor UCITS ETF (the “Fund”), USD Dist (the \"Share Class\"), ISIN: IE00BG13YZ23, is authorised in Ireland",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "72.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "67.2",
-    "perf1": "21.2",
-    "prix": 11.21
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BGDPWW94",
     "nom": "iShares MSCI Europe SRI UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BGDPWW94, is authorised in Ireland and",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "22.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "26.4",
-    "perf1": "12.0",
-    "prix": 8.02
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BGDQ0L74",
     "nom": "iShares European Property Yield UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BGDQ0L74, is authorised in Ireland and",
     "frais": "0,40",
     "sri": "5",
-    "perf5": "-23.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "ticker": "IPRE.DE",
-    "perf3": "34.5",
-    "perf1": "2.6",
-    "prix": 4.92
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BGV5VM45",
@@ -2766,52 +2206,40 @@ window.PEA_ETFS = [
     "nom": "iShares MSCI EMU CTB Enhanced ESG UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BHZPHZ28, is authorised in Ireland",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "62.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "81.4",
-    "perf1": "38.1",
-    "prix": 8.97
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BHZPJ015",
     "nom": "iShares MSCI EMU CTB Enhanced ESG UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BHZPJ015, is authorised in Ireland",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "55.7",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "54.1",
-    "perf1": "19.5",
-    "prix": 10.37
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BHZPJ676",
     "nom": "iShares MSCI Europe CTB Enhanced ESG UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BHZPJ676, is authorised in Ireland",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "54.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "44.5",
-    "perf1": "17.4",
-    "prix": 7.06
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BHZPJ783",
     "nom": "iShares MSCI Europe CTB Enhanced ESG UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BHZPJ783, is authorised in",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "49.3",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "49.0",
-    "perf1": "20.3",
-    "prix": 9.76
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BK5H8015",
@@ -2828,13 +2256,10 @@ window.PEA_ETFS = [
     "nom": "iShares Core MSCI EMU UCITS ETF (the “Fund”), Hedged USD Accu (the \"Share Class\"), ISIN: IE00BKBF6616, is authorised in Ireland and",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "82.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "69.0",
-    "perf1": "22.3",
-    "prix": 12.52
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BKLTRN76",
@@ -2851,7 +2276,7 @@ window.PEA_ETFS = [
     "nom": "FIDELITY EUROPE EQUITY RESEARCH ENHANCED UCITS ETF ACC (IE00BKSBGT50)",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "360,00",
+    "perf5": "N/A",
     "emetteur": "FIL (Fidelity)",
     "pays": "IE",
     "stress5": "-17,50"
@@ -2861,13 +2286,10 @@ window.PEA_ETFS = [
     "nom": "iShares Edge MSCI Europe Minimum Volatility Advanced UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BKVL7D31, is",
     "frais": "0,25",
     "sri": "3",
-    "perf5": "29.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "35.3",
-    "perf1": "13.3",
-    "prix": 8.92
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BKWQ0D84",
@@ -2994,13 +2416,10 @@ window.PEA_ETFS = [
     "nom": "HSBC EUROPE SCREENED EQUITY UCITS ETF",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "59.2",
+    "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "50.5",
-    "perf1": "23.8",
-    "prix": 21.41
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BKY58625",
@@ -3010,11 +2429,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "30.5",
-    "perf1": "22.0",
-    "prix": 17.08,
-    "ticker": "HSXU.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BL6K8C82",
@@ -3024,44 +2439,34 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "prix": 7.26,
-    "ticker": "CBUA.DE",
-    "perf3": "41.9",
-    "perf1": "17.0"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BL6K8D99",
     "nom": "iShares MSCI EMU Paris-Aligned Climate UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BL6K8D99, is authorised in",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "41.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "46.3",
-    "perf1": "14.3",
-    "prix": 7.29
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMDBMG37",
     "nom": "iShares MSCI Europe SRI UCITS ETF (the “Fund”), USD Accu (the \"Share Class\"), ISIN: IE00BMDBMG37, is authorised in Ireland and",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "17.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "30.4",
-    "perf1": "9.8",
-    "prix": 150.42
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMDPBY65",
     "nom": "Franklin STOXX Europe 600 Paris Aligned Climate UCITS ETF",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "540,00",
+    "perf5": "N/A",
     "emetteur": "Franklin Templeton",
     "pays": "IE",
     "stress5": "-16,13"
@@ -3071,13 +2476,10 @@ window.PEA_ETFS = [
     "nom": "iShares MSCI Europe Health Care Sector UCITS ETF (le « Fonds ») EUR Accu (la « Catégorie d’actions »), ISIN : IE00BMW42181, est",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "30.5",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "15.0",
-    "perf1": "10.6",
-    "prix": 6.23
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMW42074",
@@ -3087,63 +2489,47 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "7.0",
-    "perf1": "6.5",
-    "prix": 5.15,
-    "ticker": "ESIS.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMW42520",
     "nom": "iShares MSCI Europe Industrials Sector UCITS ETF (le « Fonds ») EUR Accu (la « Catégorie d’actions »), ISIN : IE00BMW42520, est autorisé",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "78.9",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "67.5",
-    "perf1": "11.2",
-    "prix": 8.17
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMW42298",
     "nom": "iShares MSCI Europe Consumer Discretionary Sector UCITS ETF (le « Fonds ») EUR Accu (la « Catégorie d’actions »), ISIN : IE00BMW42298",
     "frais": "0,18",
     "sri": "5",
-    "perf5": "-5.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "-12.6",
-    "perf1": "-7.9",
-    "prix": 5.08
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMW42306",
     "nom": "iShares MSCI Europe Financials Sector UCITS ETF (le « Fonds ») EUR Accu (la « Catégorie d’actions »), ISIN : IE00BMW42306, est autorisé",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "179.1",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "124.6",
-    "perf1": "31.0",
-    "prix": 14.43
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMW42413",
     "nom": "iShares MSCI Europe Information Technology Sector UCITS ETF (le « Fonds ») EUR Accu (la « Catégorie d’actions »), ISIN : IE00BMW42413",
     "frais": "0,18",
     "sri": "5",
-    "perf5": "65.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "68.4",
-    "perf1": "48.3",
-    "prix": 9.55
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMW42637",
@@ -3153,11 +2539,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "61.0",
-    "perf1": "51.4",
-    "prix": 13.56,
-    "ticker": "ESIE.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BMYDM919",
@@ -3174,14 +2556,10 @@ window.PEA_ETFS = [
     "nom": "UBS (Irl) ETF Plc is an umbrella investment company with variable capital and segregated liability between sub-funds incorporated in Ireland",
     "frais": "0,19",
     "sri": "4",
-    "perf5": "62.7",
+    "perf5": "N/A",
     "emetteur": "UBS",
     "pays": "IE",
-    "stress5": "-17,00",
-    "prix": 20.44,
-    "ticker": "AW11.DE",
-    "perf3": "52.0",
-    "perf1": "22.5"
+    "stress5": "-17,00"
   },
   {
     "isin": "IE00BNC1G699",
@@ -3208,92 +2586,70 @@ window.PEA_ETFS = [
     "nom": "HSBC MSCI EUROPE CLIMATE PARIS ALIGNED UCITS ETF",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "44.6",
+    "perf5": "N/A",
     "emetteur": "HSBC",
     "pays": "IE",
-    "stress5": "-17,37",
-    "perf3": "42.5",
-    "perf1": "17.2",
-    "prix": 24.42,
-    "ticker": "HPAE.DE"
+    "stress5": "-17,37"
   },
   {
     "isin": "IE00BQN1K562",
     "nom": "iShares Edge MSCI Europe Quality Factor UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BQN1K562, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "34.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "28.5",
-    "perf1": "12.2",
-    "prix": 1034.9
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BQN1K786",
     "nom": "iShares Edge MSCI Europe Momentum Factor UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BQN1K786, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "70.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "70.5",
-    "perf1": "16.4",
-    "prix": 1356.0
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BQN1KC32",
     "nom": "iShares MSCI Europe Mid-Cap Equal Weight UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BQN1KC32, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "33.8",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "41.1",
-    "perf1": "12.0",
-    "prix": 967.2
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BQN1K901",
     "nom": "iShares Edge MSCI Europe Value Factor UCITS ETF (the “Fund”), EUR Accu (the \"Share Class\"), ISIN: IE00BQN1K901, is authorised in",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "104.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "73.2",
-    "perf1": "28.0",
-    "prix": 1174.8
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BQZJBX31",
     "nom": "WisdomTree Europe Equity Income UCITS ETF",
     "frais": "0,29",
     "sri": "4",
-    "perf5": "42.9",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-15,26",
-    "perf3": "37.2",
-    "perf1": "20.5",
-    "prix": 1405.4
+    "stress5": "-15,26"
   },
   {
     "isin": "IE00BQZJC527",
     "nom": "WisdomTree Europe SmallCap Dividend UCITS ETF",
     "frais": "0,38",
     "sri": "4",
-    "perf5": "6.4",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,06",
-    "perf3": "24.2",
-    "perf1": "6.0",
-    "prix": 1849.6
+    "stress5": "-16,06"
   },
   {
     "isin": "IE00BSPLC298",
@@ -3320,26 +2676,20 @@ window.PEA_ETFS = [
     "nom": "iShares MSCI Europe ex-UK GBP Hedged UCITS ETF (Dist) (the “Fund”), GBP Dist (the \"Share Class\"), ISIN: IE00BVDPJP67, is authorised in",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "46.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "42.2",
-    "perf1": "18.9",
-    "prix": 949.85
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BVXBH163",
     "nom": "WisdomTree Europe Equity UCITS ETF - USD Hedged",
     "frais": "0,58",
     "sri": "4",
-    "perf5": "66.9",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,42",
-    "perf3": "44.2",
-    "perf1": "17.8",
-    "prix": 31.73
+    "stress5": "-16,42"
   },
   {
     "isin": "IE00BWK1SP74",
@@ -3349,44 +2699,34 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "44.8",
-    "perf1": "16.6",
-    "prix": 10.17,
-    "ticker": "SXR9.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BWZN1T31",
     "nom": "iShares MSCI EMU USD Hedged UCITS ETF (Acc) (the “Fund”), USD Accu (the \"Share Class\"), ISIN: IE00BWZN1T31, is authorised in Ireland",
     "frais": "0,38",
     "sri": "4",
-    "perf5": "83.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "61.8",
-    "perf1": "23.2",
-    "prix": 14.8
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BYQCZQ89",
     "nom": "WisdomTree Europe Equity UCITS ETF - GBP Hedged",
     "frais": "0,35",
     "sri": "4",
-    "perf5": "40.6",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-17,11",
-    "perf3": "32.8",
-    "perf1": "14.8",
-    "prix": 1827.7
+    "stress5": "-17,11"
   },
   {
     "isin": "IE00BYSX4176",
     "nom": "FIDELITY EUROPE QUALITY INCOME UCITS ETF INC (IE00BYSX4176)",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "320,00",
+    "perf5": "N/A",
     "emetteur": "FIL (Fidelity)",
     "pays": "IE",
     "stress5": "-17,40"
@@ -3396,26 +2736,20 @@ window.PEA_ETFS = [
     "nom": "WisdomTree Europe Equity UCITS ETF - USD Hedged Acc",
     "frais": "0,58",
     "sri": "4",
-    "perf5": "65.8",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,36",
-    "perf3": "43.3",
-    "perf1": "17.3",
-    "prix": 42.83
+    "stress5": "-16,36"
   },
   {
     "isin": "IE00BYQCZX56",
     "nom": "WisdomTree Europe Equity UCITS ETF - EUR Acc",
     "frais": "0,32",
     "sri": "4",
-    "perf5": "49.6",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,68",
-    "perf3": "41.1",
-    "perf1": "16.2",
-    "prix": 31.96
+    "stress5": "-16,68"
   },
   {
     "isin": "IE00BYQCZT11",
@@ -3425,18 +2759,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,43",
-    "perf3": "29.2",
-    "perf1": "13.3",
-    "prix": 28.59,
-    "ticker": "HEDD.SW"
+    "stress5": "-16,43"
   },
   {
     "isin": "IE00BYSX4283",
     "nom": "FIDELITY EUROPE QUALITY INCOME UCITS ETF ACC (IE00BYSX4283)",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "320,00",
+    "perf5": "N/A",
     "emetteur": "FIL (Fidelity)",
     "pays": "IE",
     "stress5": "-17,40"
@@ -3446,7 +2776,7 @@ window.PEA_ETFS = [
     "nom": "FIDELITY EUROPE QUALITY INCOME UCITS ETF GBP HEDGED ACC (IE00BYSX4408)",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "690,00",
+    "perf5": "N/A",
     "emetteur": "",
     "pays": "IE",
     "stress5": "N/A"
@@ -3466,13 +2796,10 @@ window.PEA_ETFS = [
     "nom": "iShares STOXX World Equity Multifactor UCITS ETF (the “Fund”), Hedged EUR Accu (the \"Share Class\"), ISIN: IE00BYXPXK00, is authorised",
     "frais": "0,33",
     "sri": "4",
-    "perf5": "58.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "66.4",
-    "perf1": "22.5",
-    "prix": 11.95
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BYXZ2585",
@@ -3482,49 +2809,37 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf1": "19.6",
-    "prix": 8.71,
-    "ticker": "CEUD.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BYYHSM20",
     "nom": "iShares MSCI Europe Quality Dividend Advanced UCITS ETF (the “Fund”), EUR Dist (the \"Share Class\"), ISIN: IE00BYYHSM20, is authorised",
     "frais": "0,28",
     "sri": "4",
-    "perf5": "63.4",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "43.4",
-    "perf1": "14.3",
-    "prix": 7.18
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BZ0PKT83",
     "nom": "iShares STOXX World Equity Multifactor UCITS ETF (the “Fund”), USD Accu (the \"Share Class\"), ISIN: IE00BZ0PKT83, is authorised in",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "69.0",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "70.5",
-    "perf1": "23.1",
-    "prix": 15.93
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BZ0PKS76",
     "nom": "iShares STOXX USA Equity Multifactor UCITS ETF (the “Fund”), USD Accu (the \"Share Class\"), ISIN: IE00BZ0PKS76, is authorised in Ireland",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "72.6",
+    "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "67.1",
-    "perf1": "20.8",
-    "prix": 17.32
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BZ0PKV06",
@@ -3534,11 +2849,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "BlackRock (iShares)",
     "pays": "IE",
-    "stress5": "N/A",
-    "perf3": "74.9",
-    "perf1": "27.6",
-    "prix": 13.15,
-    "ticker": "IBC0.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "IE00BZ4BMM98",
@@ -3555,26 +2866,20 @@ window.PEA_ETFS = [
     "nom": "WisdomTree Eurozone Quality Dividend Growth UCITS ETF -",
     "frais": "0,29",
     "sri": "4",
-    "perf5": "18.6",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-17,34",
-    "perf3": "21.0",
-    "perf1": "13.0",
-    "prix": 22.06
+    "stress5": "-17,34"
   },
   {
     "isin": "IE00BZ56TQ67",
     "nom": "WisdomTree Eurozone Quality Dividend Growth UCITS ETF -",
     "frais": "0,29",
     "sri": "4",
-    "perf5": "15.4",
+    "perf5": "N/A",
     "emetteur": "WisdomTree",
     "pays": "IE",
-    "stress5": "-16,95",
-    "perf3": "22.7",
-    "perf1": "12.7",
-    "prix": 28.72
+    "stress5": "-16,95"
   },
   {
     "isin": "LU0252633754",
@@ -3584,24 +2889,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,80",
-    "perf1": "4.7",
-    "prix": 228.35,
-    "ticker": "LYY7.DE"
+    "stress5": "-21,80"
   },
   {
     "isin": "LU0252634307",
     "nom": "Amundi LevDax Daily (2x) leveraged UCITS ETF Acc",
     "frais": "0,35",
     "sri": "6",
-    "perf5": "84.1",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "N/A",
-    "ticker": "LYY8.DE",
-    "perf3": "99.9",
-    "perf1": "3.7",
-    "prix": 265.0
+    "stress5": "N/A"
   },
   {
     "isin": "LU0274209237",
@@ -3658,26 +2956,20 @@ window.PEA_ETFS = [
     "nom": "Xtrackers ShortDAX Daily Swap UCITS ETF",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "-33.9",
+    "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A",
-    "perf3": "-26.6",
-    "perf1": "-3.8",
-    "prix": 789.45
+    "stress5": "N/A"
   },
   {
     "isin": "LU0292106753",
     "nom": "Xtrackers Euro Stoxx 50 Short Daily Swap UCITS ETF",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "-41.3",
+    "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A",
-    "perf3": "-27.6",
-    "perf1": "-17.3",
-    "prix": 445.2
+    "stress5": "N/A"
   },
   {
     "isin": "LU0322250712",
@@ -3724,39 +3016,30 @@ window.PEA_ETFS = [
     "nom": "Xtrackers LevDAX Daily Swap UCITS ETF",
     "frais": "0,35",
     "sri": "6",
-    "perf5": "89.4",
+    "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
-    "stress5": "N/A",
-    "perf3": "87.5",
-    "perf1": "-1.8",
-    "prix": 24190.0
+    "stress5": "N/A"
   },
   {
     "isin": "LU0599612842",
     "nom": "OSSIAM EUROPE ESG MACHINE LEARNING - UCITS ETF 1C (EUR)",
     "frais": "0,65",
     "sri": "?",
-    "perf5": "31.6",
+    "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A",
-    "perf3": "45.7",
-    "perf1": "9.8",
-    "prix": 308.8
+    "stress5": "N/A"
   },
   {
     "isin": "LU0599613147",
     "nom": "OSSIAM STOXX EUROPE 600 ESG EQUAL WEIGHT NR - UCITS ETF 1C (EUR)",
     "frais": "0,30",
     "sri": "?",
-    "perf5": "27.0",
+    "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A",
-    "perf3": "40.3",
-    "perf1": "13.8",
-    "prix": 155.9
+    "stress5": "N/A"
   },
   {
     "isin": "LU0838782315",
@@ -3786,10 +3069,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,50",
-    "perf1": "20.1",
-    "prix": 250.5,
-    "ticker": "MFDD.DE"
+    "stress5": "-19,50"
   },
   {
     "isin": "LU0908500753",
@@ -3799,10 +3079,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,90",
-    "perf1": "21.4",
-    "prix": 317.15,
-    "ticker": "LYP6.DE"
+    "stress5": "-17,90"
   },
   {
     "isin": "LU0908501058",
@@ -3812,36 +3089,27 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,50",
-    "perf1": "20.6",
-    "prix": 366.95,
-    "ticker": "LGQG.DE"
+    "stress5": "-19,50"
   },
   {
     "isin": "LU0959210781",
     "nom": "Amundi S&P Eurozone Dividend Aristocrat Screened UCITS ETF Acc",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "39.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,10",
-    "perf3": "49.6",
-    "perf1": "13.3",
-    "prix": 14.0
+    "stress5": "-16,10"
   },
   {
     "isin": "LU0959210278",
     "nom": "Amundi S&P Eurozone Dividend Aristocrat Screened UCITS ETF Dist",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "42.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,10",
-    "perf3": "53.6",
-    "perf1": "13.3",
-    "prix": 141.6
+    "stress5": "-16,10"
   },
   {
     "isin": "LU1127514245",
@@ -3898,7 +3166,7 @@ window.PEA_ETFS = [
     "nom": "MSCI EMU Min TE, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU1291098827)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "817,65",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-20,44"
@@ -3908,7 +3176,7 @@ window.PEA_ETFS = [
     "nom": "MSCI Europe Min TE, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU1291099718)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "540,11",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-17,81"
@@ -3918,7 +3186,7 @@ window.PEA_ETFS = [
     "nom": "MSCI Europe Small Caps SRI PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU1291101555)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "567,66",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-18,96"
@@ -3928,7 +3196,7 @@ window.PEA_ETFS = [
     "nom": "Low Carbon 100 Europe PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU1377382368)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "965,94",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-17,40"
@@ -3938,7 +3206,7 @@ window.PEA_ETFS = [
     "nom": "Low Carbon 100 Europe PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Distribution (LU1377382442)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "965,94",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-17,40"
@@ -3948,13 +3216,10 @@ window.PEA_ETFS = [
     "nom": "Amundi Core MSCI Europe UCITS ETF",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "59.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60",
-    "perf3": "52.4",
-    "perf1": "20.8",
-    "prix": 123.9
+    "stress5": "-17,60"
   },
   {
     "isin": "LU1574142243",
@@ -3964,10 +3229,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30",
-    "perf1": "20.6",
-    "prix": 166.78,
-    "ticker": "STXH.DE"
+    "stress5": "-17,30"
   },
   {
     "isin": "LU1598688189",
@@ -3977,10 +3239,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,60",
-    "perf1": "14.5",
-    "prix": 214.25,
-    "ticker": "LGWT.DE"
+    "stress5": "-18,60"
   },
   {
     "isin": "LU1598689153",
@@ -3990,10 +3249,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,70",
-    "perf1": "14.1",
-    "prix": 438.9,
-    "ticker": "LGWU.DE"
+    "stress5": "-18,70"
   },
   {
     "isin": "LU1598690169",
@@ -4003,192 +3259,147 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,60",
-    "perf1": "27.4",
-    "prix": 192.0,
-    "ticker": "LGWS.DE"
+    "stress5": "-18,60"
   },
   {
     "isin": "LU1602144575",
     "nom": "Amundi MSCI EMU ESG Selection - UCITS ETF DR - EUR",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "60.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,80",
-    "perf3": "57.6",
-    "perf1": "28.3",
-    "prix": 417.15
+    "stress5": "-18,80"
   },
   {
     "isin": "LU1646360971",
     "nom": "Amundi Core MSCI EMU UCITS ETF Dist",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "63.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,10",
-    "perf3": "59.9",
-    "perf1": "20.0",
-    "prix": 82.82
+    "stress5": "-19,10"
   },
   {
     "isin": "LU1646361276",
     "nom": "Amundi Core MSCI EMU UCITS ETF Acc",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "63.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,10",
-    "perf3": "59.6",
-    "perf1": "20.1",
-    "prix": 18.94
+    "stress5": "-19,10"
   },
   {
     "isin": "LU1655103486",
     "nom": "OSSIAM BLOOMBERG EUROPE ex EUROZONE PAB NR - UCITS ETF 1C (EUR)",
     "frais": "0,17",
     "sri": "?",
-    "perf5": "46.8",
+    "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A",
-    "perf3": "36.5",
-    "perf1": "15.8",
-    "prix": 195.5
+    "stress5": "N/A"
   },
   {
     "isin": "LU1681040223",
     "nom": "Amundi STOXX Europe 600 ESG UCITS ETF Acc",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "52.6",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60",
-    "perf3": "49.2",
-    "perf1": "19.4",
-    "prix": 162.93
+    "stress5": "-17,60"
   },
   {
     "isin": "LU1681041460",
     "nom": "Amundi MSCI Europe Momentum Factor UCITS ETF EUR Acc",
     "frais": "0,23",
     "sri": "4",
-    "perf5": "67.1",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,70",
-    "perf3": "76.0",
-    "perf1": "18.4",
-    "prix": 151.08
+    "stress5": "-19,70"
   },
   {
     "isin": "LU1681041627",
     "nom": "AMUNDI MSCI EUROPE MINIMUM VOLATILITY FACTOR UCITS ETF - EUR",
     "frais": "0,23",
     "sri": "3",
-    "perf5": "34.4",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-13,90",
-    "perf3": "37.0",
-    "perf1": "10.7",
-    "prix": 167.8
+    "stress5": "-13,90"
   },
   {
     "isin": "LU1681041973",
     "nom": "Amundi MSCI Europe High Dividend Factor UCITS ETF EUR Acc",
     "frais": "0,23",
     "sri": "3",
-    "perf5": "76.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,10",
-    "perf3": "57.5",
-    "perf1": "19.5",
-    "prix": 246.15
+    "stress5": "-14,10"
   },
   {
     "isin": "LU1681041890",
     "nom": "AMUNDI MSCI EUROPE QUALITY FACTOR UCITS ETF - EUR",
     "frais": "0,23",
     "sri": "4",
-    "perf5": "20.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,50",
-    "perf3": "23.1",
-    "perf1": "13.2",
-    "prix": 122.58
+    "stress5": "-16,50"
   },
   {
     "isin": "LU1681042435",
     "nom": "AMUNDI MSCI EUROPE GROWTH UCITS ETF Acc",
     "frais": "0,35",
     "sri": "?",
-    "perf5": "23.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,30",
-    "perf3": "27.6",
-    "perf1": "13.0",
-    "prix": 364.1
+    "stress5": "-24,30"
   },
   {
     "isin": "LU1681042518",
     "nom": "AMUNDI MSCI EUROPE VALUE FACTOR UCITS ETF - EUR",
     "frais": "0,23",
     "sri": "4",
-    "perf5": "97.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,50",
-    "perf3": "78.2",
-    "perf1": "28.1",
-    "prix": 469.25
+    "stress5": "-17,50"
   },
   {
     "isin": "LU1681042948",
     "nom": "Amundi PEA MSCI USA ESG Selection UCITS ETF - USD",
     "frais": "0,35",
     "sri": "4",
-    "perf5": "62.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,00",
-    "perf3": "56.4",
-    "perf1": "19.0",
-    "prix": 919.95
+    "stress5": "-22,00"
   },
   {
     "isin": "LU1681042864",
     "nom": "Amundi PEA MSCI USA ESG Selection UCITS ETF - EUR",
     "frais": "0,35",
     "sri": "4",
-    "perf5": "64.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,60",
-    "perf3": "54.4",
-    "perf1": "19.6",
-    "prix": 806.88
+    "stress5": "-22,60"
   },
   {
     "isin": "LU1681042609",
     "nom": "Amundi MSCI Europe ESG Broad Transition UCITS ETF EUR Acc",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "53.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30",
-    "perf3": "48.6",
-    "perf1": "20.6",
-    "prix": 442.8
+    "stress5": "-17,30"
   },
   {
     "isin": "LU1681044308",
@@ -4198,93 +3409,74 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,80",
-    "ticker": "X13Z.DE"
+    "stress5": "-17,80"
   },
   {
     "isin": "LU1681047079",
     "nom": "AMUNDI CAC 40 ESG UCITS ETF",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "44.1",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90",
-    "perf3": "25.3",
-    "perf1": "6.0",
-    "prix": 85.13
+    "stress5": "-19,90"
   },
   {
     "isin": "LU1681046931",
     "nom": "AMUNDI CAC 40 ESG UCITS ETF",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "44.1",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90",
-    "perf3": "25.4",
-    "perf1": "6.2",
-    "prix": 147.22
+    "stress5": "-19,90"
   },
   {
     "isin": "LU1681047319",
     "nom": "Amundi Core Euro STOXX 50 UCITS ETF EUR Dist",
     "frais": "0,09",
     "sri": "4",
-    "perf5": "74.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,70",
-    "perf3": "59.2",
-    "perf1": "19.5",
-    "prix": 101.54
+    "stress5": "-20,70"
   },
   {
     "isin": "LU1681047236",
     "nom": "Amundi Core Euro STOXX 50 UCITS ETF EUR Acc",
     "frais": "0,09",
     "sri": "4",
-    "perf5": "73.9",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,70",
-    "perf3": "59.1",
-    "perf1": "19.5",
-    "prix": 168.44
+    "stress5": "-20,70"
   },
   {
     "isin": "LU1681047400",
     "nom": "Amundi Core Euro STOXX 50 UCITS ETF USD Acc",
     "frais": "0,09",
     "sri": "5",
-    "perf5": "68.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,50",
-    "perf3": "65.7",
-    "perf1": "18.6",
-    "prix": 191.8
+    "stress5": "-24,50"
   },
   {
     "isin": "LU1737652310",
     "nom": "Amundi Core MSCI Europe UCITS ETF",
     "frais": "0,12",
     "sri": "4",
-    "perf5": "58.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60",
-    "perf3": "51.6",
-    "perf1": "20.9",
-    "prix": 82.96
+    "stress5": "-17,60"
   },
   {
     "isin": "LU1753045332",
     "nom": "MSCI Europe SRI PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU1753045332)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "109,02",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-16,38"
@@ -4294,7 +3486,7 @@ window.PEA_ETFS = [
     "nom": "MSCI Europe SRI PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Distribution (LU1753045415)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "109,02",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-16,38"
@@ -4317,23 +3509,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,20",
-    "perf1": "33.6",
-    "prix": 24.25,
-    "ticker": "SELD.DE"
+    "stress5": "-17,20"
   },
   {
     "isin": "LU1829219390",
     "nom": "Amundi Euro Stoxx Banks UCITS ETF Acc",
     "frais": "0,30",
     "sri": "5",
-    "perf5": "317.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-30,10",
-    "perf3": "224.9",
-    "perf1": "45.0",
-    "prix": 381.7
+    "stress5": "-30,10"
   },
   {
     "isin": "LU1834983550",
@@ -4343,10 +3529,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,60",
-    "perf1": "57.4",
-    "prix": 130.92,
-    "ticker": "LBRE.DE"
+    "stress5": "-26,60"
   },
   {
     "isin": "LU1834983477",
@@ -4356,10 +3539,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-27,80",
-    "perf1": "50.4",
-    "prix": 72.21,
-    "ticker": "LBNK.DE"
+    "stress5": "-27,80"
   },
   {
     "isin": "LU1834983634",
@@ -4369,10 +3549,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,00",
-    "perf1": "31.2",
-    "prix": 198.14,
-    "ticker": "LCHM.DE"
+    "stress5": "-20,00"
   },
   {
     "isin": "LU1834986900",
@@ -4382,10 +3559,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,20",
-    "perf1": "14.4",
-    "prix": 154.58,
-    "ticker": "LHTC.DE"
+    "stress5": "-16,20"
   },
   {
     "isin": "LU1834985845",
@@ -4395,10 +3569,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,10",
-    "perf1": "8.2",
-    "prix": 95.67,
-    "ticker": "LFOD.DE"
+    "stress5": "-14,10"
   },
   {
     "isin": "LU1834987890",
@@ -4408,10 +3579,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-34,20",
-    "perf1": "12.7",
-    "prix": 150.8,
-    "ticker": "LIGS.DE"
+    "stress5": "-34,20"
   },
   {
     "isin": "LU1834987973",
@@ -4421,10 +3589,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90",
-    "perf1": "17.0",
-    "prix": 96.79,
-    "ticker": "LIRU.DE"
+    "stress5": "-19,90"
   },
   {
     "isin": "LU1834988518",
@@ -4434,10 +3599,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,70",
-    "perf1": "22.2",
-    "prix": 113.1,
-    "ticker": "LTUG.DE"
+    "stress5": "-26,70"
   },
   {
     "isin": "LU1834988278",
@@ -4447,10 +3609,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,60",
-    "perf1": "48.6",
-    "prix": 106.72,
-    "ticker": "LOGS.DE"
+    "stress5": "-24,60"
   },
   {
     "isin": "LU1834988609",
@@ -4460,10 +3619,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,60",
-    "perf1": "13.2",
-    "prix": 50.52,
-    "ticker": "LTCM.DE"
+    "stress5": "-14,60"
   },
   {
     "isin": "LU1834988781",
@@ -4473,24 +3629,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,20",
-    "perf1": "0.2",
-    "prix": 26.5,
-    "ticker": "LTVL.DE"
+    "stress5": "-24,20"
   },
   {
     "isin": "LU1847674733",
     "nom": "OSSIAM BLOOMBERG EUROZONE PAB NR - UCITS ETF 1C (EUR)",
     "frais": "0,17",
     "sri": "?",
-    "perf5": "44.2",
+    "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A",
-    "prix": 183.64,
-    "ticker": "OP2E.DE",
-    "perf3": "39.7",
-    "perf1": "15.4"
+    "stress5": "N/A"
   },
   {
     "isin": "LU1834988864",
@@ -4500,23 +3649,17 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,40",
-    "perf1": "32.8",
-    "prix": 106.8,
-    "ticker": "LUTI.DE"
+    "stress5": "-17,40"
   },
   {
     "isin": "LU1861137484",
     "nom": "Amundi MSCI Europe SRI Climate Paris Aligned UCITS ETF",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "21.1",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,50",
-    "perf3": "22.9",
-    "perf1": "6.6",
-    "prix": 91.14
+    "stress5": "-16,50"
   },
   {
     "isin": "LU1920015366",
@@ -4533,60 +3676,47 @@ window.PEA_ETFS = [
     "nom": "Amundi Prime Europe UCITS ETF",
     "frais": "0,05",
     "sri": "4",
-    "perf5": "59.6",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60",
-    "ticker": "PR1E.DE",
-    "perf3": "53.7",
-    "perf1": "22.0",
-    "prix": 37.11
+    "stress5": "-17,60"
   },
   {
     "isin": "LU1931974429",
     "nom": "AMUNDI PRIME EUROZONE - UCITS ETF DR",
     "frais": "0,05",
     "sri": "4",
-    "perf5": "50.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,00",
-    "perf3": "42.1",
-    "perf1": "15.5",
-    "prix": 3391.5
+    "stress5": "-19,00"
   },
   {
     "isin": "LU1940199984",
     "nom": "Amundi MSCI Europe ESG Selection UCITS ETF EUR Hedged Acc",
     "frais": "0,25",
     "sri": "4",
-    "perf5": "44.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,10",
-    "perf3": "41.3",
-    "perf1": "21.1",
-    "prix": 30.76
+    "stress5": "-16,10"
   },
   {
     "isin": "LU1940199711",
     "nom": "Amundi MSCI Europe ESG Selection UCITS ETF Acc",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "46.8",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,80",
-    "perf3": "43.4",
-    "perf1": "21.7",
-    "prix": 42.22
+    "stress5": "-16,80"
   },
   {
     "isin": "LU1953137681",
     "nom": "MSCI EMU SRI PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU1953137681)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "126,86",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-19,63"
@@ -4596,13 +3726,10 @@ window.PEA_ETFS = [
     "nom": "Amundi MSCI Europe SRI Climate Paris Aligned UCITS ETF",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "22.6",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,50",
-    "perf3": "24.0",
-    "perf1": "6.6",
-    "prix": 70.65
+    "stress5": "-16,50"
   },
   {
     "isin": "LU2059756325",
@@ -4612,11 +3739,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-28,50",
-    "perf3": "57.5",
-    "perf1": "28.1",
-    "prix": 84.69,
-    "ticker": "10A9.DE"
+    "stress5": "-28,50"
   },
   {
     "isin": "LU2082996385",
@@ -4626,10 +3749,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,50",
-    "perf1": "57.6",
-    "prix": 158.2,
-    "ticker": "E6BR.DE"
+    "stress5": "-26,50"
   },
   {
     "isin": "LU2082996112",
@@ -4639,10 +3759,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-27,80",
-    "perf1": "50.2",
-    "prix": 97.21,
-    "ticker": "INDA.DE"
+    "stress5": "-27,80"
   },
   {
     "isin": "LU2082997359",
@@ -4652,10 +3769,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,10",
-    "perf1": "7.2",
-    "prix": 134.0,
-    "ticker": "DFOP.DE"
+    "stress5": "-14,10"
   },
   {
     "isin": "LU2082996542",
@@ -4665,10 +3779,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,00",
-    "perf1": "31.7",
-    "prix": 288.05,
-    "ticker": "LYX4.DE"
+    "stress5": "-20,00"
   },
   {
     "isin": "LU2082997516",
@@ -4678,10 +3789,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,20",
-    "perf1": "14.5",
-    "prix": 196.02,
-    "ticker": "EHLT.DE"
+    "stress5": "-16,20"
   },
   {
     "isin": "LU2082997789",
@@ -4691,10 +3799,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,90",
-    "perf1": "12.6",
-    "prix": 203.55,
-    "ticker": "INDU.DE"
+    "stress5": "-22,90"
   },
   {
     "isin": "LU2082997946",
@@ -4704,10 +3809,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,90",
-    "prix": 111.76,
-    "ticker": "EGV1.DE",
-    "perf1": "17.2"
+    "stress5": "-19,90"
   },
   {
     "isin": "LU2082998167",
@@ -4717,10 +3819,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-24,60",
-    "prix": 141.04,
-    "ticker": "OIGS.DE",
-    "perf1": "48.7"
+    "stress5": "-24,60"
   },
   {
     "isin": "LU2082998837",
@@ -4730,10 +3829,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-26,70",
-    "prix": 142.12,
-    "ticker": "CSTA.DE",
-    "perf1": "20.9"
+    "stress5": "-26,70"
   },
   {
     "isin": "LU2082999058",
@@ -4743,10 +3839,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-14,60",
-    "prix": 67.6,
-    "ticker": "INDB.DE",
-    "perf1": "9.0"
+    "stress5": "-14,60"
   },
   {
     "isin": "LU2082999132",
@@ -4756,10 +3849,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-33,30",
-    "perf1": "0.0",
-    "prix": 37.44,
-    "ticker": "6TVL.DE"
+    "stress5": "-33,30"
   },
   {
     "isin": "LU2082999215",
@@ -4769,138 +3859,104 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,40",
-    "prix": 159.8,
-    "ticker": "LUTL.DE",
-    "perf1": "32.8"
+    "stress5": "-17,40"
   },
   {
     "isin": "LU2089238112",
     "nom": "AMUNDI PRIME EUROZONE - UCITS ETF DR",
     "frais": "0,05",
     "sri": "4",
-    "perf5": "64.5",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,00",
-    "perf3": "59.7",
-    "perf1": "21.6",
-    "prix": 38.55
+    "stress5": "-19,00"
   },
   {
     "isin": "LU2089238039",
     "nom": "Amundi Prime Europe UCITS ETF",
     "frais": "0,05",
     "sri": "4",
-    "perf5": "59.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,60",
-    "perf3": "52.2",
-    "perf1": "21.8",
-    "prix": 36.66
+    "stress5": "-17,60"
   },
   {
     "isin": "LU2090062436",
     "nom": "Amundi DAX II UCITS ETF Dist",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "54.8",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,80",
-    "perf3": "54.0",
-    "perf1": "4.4",
-    "prix": 85.13,
-    "ticker": "LDAX.DE"
+    "stress5": "-21,80"
   },
   {
     "isin": "LU2090062600",
     "nom": "Amundi LevDax Daily (2x) leveraged UCITS ETF Dist",
     "frais": "0,35",
     "sri": "6",
-    "perf5": "83.0",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "N/A",
-    "prix": 19.98,
-    "ticker": "LVDX.DE",
-    "perf3": "98.3",
-    "perf1": "3.0"
+    "stress5": "N/A"
   },
   {
     "isin": "LU2130768844",
     "nom": "Amundi MSCI Europe Climate Paris Aligned UCITS ETF Acc",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "43.3",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,50",
-    "perf3": "41.9",
-    "perf1": "16.2",
-    "prix": 97.18
+    "stress5": "-17,50"
   },
   {
     "isin": "LU2109787635",
     "nom": "Amundi MSCI EMU SRI Climate Paris Aligned - UCITS ETF DR",
     "frais": "0,18",
     "sri": "4",
-    "perf5": "40.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,40",
-    "prix": 108.38,
-    "ticker": "SRHE.DE",
-    "perf3": "44.6",
-    "perf1": "18.1"
+    "stress5": "-19,40"
   },
   {
     "isin": "LU2182388582",
     "nom": "Amundi MSCI EMU Climate Paris Aligned UCITS ETF Acc",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "38.8",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,70",
-    "perf3": "42.4",
-    "perf1": "14.5",
-    "prix": 93.66
+    "stress5": "-18,70"
   },
   {
     "isin": "LU2195226068",
     "nom": "Amundi S&P Eurozone Climate Paris Aligned UCITS ETF Acc",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "55.6",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,60",
-    "perf3": "59.3",
-    "perf1": "14.8",
-    "prix": 41.9
+    "stress5": "-20,60"
   },
   {
     "isin": "LU2240851688",
     "nom": "AMUNDI DAX 50 ESG UCITS ETF DR - EUR",
     "frais": "0,15",
     "sri": "4",
-    "perf5": "53.7",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,40",
-    "prix": 90.99,
-    "ticker": "DECD.DE",
-    "perf3": "60.3",
-    "perf1": "11.6"
+    "stress5": "-20,40"
   },
   {
     "isin": "LU2446381555",
     "nom": "ESG Eurozone Biodiversity Leaders PAB, un compartiment de BNP PARIBAS EASY, action : UCITS ETF Capitalisation (LU2446381555)",
     "frais": "0,35",
     "sri": "4",
-    "perf5": "19968,81",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "N/A"
@@ -4913,11 +3969,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,80",
-    "perf3": "47.0",
-    "perf1": "20.2",
-    "prix": 612.6,
-    "ticker": "AHYI.DE"
+    "stress5": "-18,80"
   },
   {
     "isin": "LU2572257470",
@@ -4927,11 +3979,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,60",
-    "perf3": "42.6",
-    "perf1": "13.0",
-    "prix": 61.67,
-    "ticker": "X026.DE"
+    "stress5": "-18,60"
   },
   {
     "isin": "LU2581375156",
@@ -4951,32 +3999,24 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30",
-    "prix": 134.98,
-    "ticker": "AE5B.DE",
-    "perf3": "45.9",
-    "perf1": "19.2"
+    "stress5": "-17,30"
   },
   {
     "isin": "LU2611731667",
     "nom": "Amundi MDAX ESG UCITS ETF Dist",
     "frais": "0,30",
     "sri": "4",
-    "perf5": "-8.2",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,30",
-    "prix": 26.3,
-    "ticker": "C007.DE",
-    "perf3": "10.7",
-    "perf1": "5.9"
+    "stress5": "-22,30"
   },
   {
     "isin": "LU2611731741",
     "nom": "AMUNDI DIVDAX UCITS ETF DIST",
     "frais": "0,25",
     "sri": "?",
-    "perf5": "220,00",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
     "stress5": "N/A"
@@ -4989,10 +4029,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,50",
-    "perf1": "4.8",
-    "prix": 186.9,
-    "ticker": "C001.DE"
+    "stress5": "-21,50"
   },
   {
     "isin": "LU2611732475",
@@ -5002,18 +4039,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-22,20",
-    "prix": 140.06,
-    "ticker": "C005.DE",
-    "perf3": "32.0",
-    "perf1": "3.0"
+    "stress5": "-22,20"
   },
   {
     "isin": "LU2611732558",
     "nom": "Amundi Euro STOXX Select Dividend30 UCITS ETF Dist",
     "frais": "0,25",
     "sri": "?",
-    "perf5": "540,00",
+    "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
     "stress5": "N/A"
@@ -5026,17 +4059,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-17,30",
-    "prix": 14.93,
-    "ticker": "CEUE.DE",
-    "perf1": "21.7"
+    "stress5": "-17,30"
   },
   {
     "isin": "LU2777377875",
     "nom": "Low Carbon 100 Europe PAB, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF SD Distribution (LU2777377875)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "965,94",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-17,40"
@@ -5049,10 +4079,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-16,80",
-    "perf1": "20.9",
-    "prix": 25.96,
-    "ticker": "CEUH.DE"
+    "stress5": "-16,80"
   },
   {
     "isin": "LU2873560564",
@@ -5062,9 +4089,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,30",
-    "prix": 26.89,
-    "ticker": "MEUH.DE"
+    "stress5": "-19,30"
   },
   {
     "isin": "LU2898088419",
@@ -5074,10 +4099,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A",
-    "perf1": "2.3",
-    "prix": 104.17,
-    "ticker": "SNTE.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "LU2932780914",
@@ -5087,10 +4109,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-20,60",
-    "perf1": "17.3",
-    "prix": 26.98,
-    "ticker": "EPAZ.DE"
+    "stress5": "-20,60"
   },
   {
     "isin": "LU2997383372",
@@ -5100,10 +4119,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A",
-    "perf1": "22.9",
-    "prix": 140.01,
-    "ticker": "0USE.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "LU3038520774",
@@ -5113,10 +4129,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-27,20",
-    "prix": 5.88,
-    "ticker": "EDFS.DE",
-    "perf1": "6.3"
+    "stress5": "-27,20"
   },
   {
     "isin": "LU3046617984",
@@ -5126,10 +4139,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A",
-    "perf1": "20.9",
-    "prix": 121.82,
-    "ticker": "MEUR.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "LU3046618362",
@@ -5139,9 +4149,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A",
-    "prix": 111.82,
-    "ticker": "SHTU.DE"
+    "stress5": "N/A"
   },
   {
     "isin": "LU3046618446",
@@ -5151,16 +4159,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "N/A",
-    "prix": 113.22,
-    "ticker": "SHTE.PA"
+    "stress5": "N/A"
   },
   {
     "isin": "LU3047998896",
     "nom": "Bloomberg Europe Defense, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU3047998896)",
     "frais": "N/A",
     "sri": "5",
-    "perf5": "413,98",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-32,73"
@@ -5170,7 +4176,7 @@ window.PEA_ETFS = [
     "nom": "Bloomberg Europe Defense, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Distribution (LU3047998979)",
     "frais": "N/A",
     "sri": "5",
-    "perf5": "413,98",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-32,73"
@@ -5180,7 +4186,7 @@ window.PEA_ETFS = [
     "nom": "Xtrackers Europe Defence Technologies UCITS ETF",
     "frais": "0,15",
     "sri": "5",
-    "perf5": "61,88",
+    "perf5": "N/A",
     "emetteur": "Xtrackers (DWS)",
     "pays": "LU",
     "stress5": "-25,40"
@@ -5193,16 +4199,14 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Expat Asset Management",
     "pays": "LU",
-    "stress5": "N/A",
-    "prix": 120.1,
-    "ticker": "0EMU.PA"
+    "stress5": "N/A"
   },
   {
     "isin": "LU3086268573",
     "nom": "MSCI Europe, a sub-fund of BNP PARIBAS EASY, share class: UCITS ETF Capitalisation (LU3086268573)",
     "frais": "N/A",
     "sri": "4",
-    "perf5": "787,80",
+    "perf5": "N/A",
     "emetteur": "BNP Paribas",
     "pays": "LU",
     "stress5": "-17,81"
@@ -5215,9 +4219,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-18,10",
-    "prix": 5.93,
-    "ticker": "EUSC.PA"
+    "stress5": "-18,10"
   },
   {
     "isin": "LU3121015484",
@@ -5247,9 +4249,7 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-19,20",
-    "prix": 5.8,
-    "ticker": "SOVE.DE"
+    "stress5": "-19,20"
   },
   {
     "isin": "LU3206583067",
@@ -5259,35 +4259,27 @@ window.PEA_ETFS = [
     "perf5": "N/A",
     "emetteur": "Amundi",
     "pays": "LU",
-    "stress5": "-21,50",
-    "prix": 5.14,
-    "ticker": "C002.DE"
+    "stress5": "-21,50"
   },
   {
     "isin": "NL0010731816",
     "nom": "Name of Product:            VanEck European Equal Weight Screened UCITS ETF (\"Product\"/\"PRIIP\")",
     "frais": "0,40",
     "sri": "4",
-    "perf5": "64.8",
+    "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "-20,35",
-    "perf3": "56.6",
-    "perf1": "17.2",
-    "prix": 95.39
+    "stress5": "-20,35"
   },
   {
     "isin": "NL0010408704",
     "nom": "Name of Product:            VanEck World Equal Weight Screened UCITS ETF (\"Product\"/\"PRIIP\")",
     "frais": "0,20",
     "sri": "4",
-    "perf5": "64.5",
+    "perf5": "N/A",
     "emetteur": "",
     "pays": "FR",
-    "stress5": "-15,97",
-    "perf3": "61.4",
-    "perf1": "24.4",
-    "prix": 42.25
+    "stress5": "-15,97"
   },
   {
     "isin": "FR001400U5Q4",
@@ -5308,5 +4300,55 @@ window.PEA_ETFS = [
     "emetteur": "Amundi",
     "pays": "FR",
     "stress5": "-21,30"
+  },
+  {
+    "isin": "FR0010892217",
+    "nom": "Amundi PEA Nasdaq-100 UCITS ETF Acc",
+    "frais": "0,30",
+    "sri": "5",
+    "perf5": "N/A",
+    "emetteur": "Amundi",
+    "pays": "FR",
+    "stress5": "N/A"
+  },
+  {
+    "isin": "FR0013345896",
+    "nom": "Lyxor PEA Obligations Europe UCITS ETF Acc",
+    "frais": "0,20",
+    "sri": "2",
+    "perf5": "N/A",
+    "emetteur": "Lyxor (Amundi)",
+    "pays": "FR",
+    "stress5": "N/A"
+  },
+  {
+    "isin": "FR0014003HV4",
+    "nom": "Amundi PEA MSCI EM ex-China UCITS ETF Acc",
+    "frais": "0,20",
+    "sri": "4",
+    "perf5": "N/A",
+    "emetteur": "Amundi",
+    "pays": "FR",
+    "stress5": "N/A"
+  },
+  {
+    "isin": "FR0013412280",
+    "nom": "Amundi MSCI World SRI Climate Paris Aligned UCITS ETF Acc",
+    "frais": "0,25",
+    "sri": "4",
+    "perf5": "N/A",
+    "emetteur": "Amundi",
+    "pays": "FR",
+    "stress5": "N/A"
+  },
+  {
+    "isin": "JE00B1VS3770",
+    "nom": "WisdomTree Physical Swiss Gold ETC",
+    "frais": "0,39",
+    "sri": "5",
+    "perf5": "N/A",
+    "emetteur": "WisdomTree",
+    "pays": "JE",
+    "stress5": "N/A"
   }
 ];
