@@ -42,17 +42,17 @@
 <header class="main-header">
  <div class="header-container">
    <a href="/" class="brand-logo">
-     <img src="/alfred-mark.svg" alt="Alfred" class="logo-img">
-     <span class="brand-name">Alfred</span>
+     <img src="/alfred-mark.svg" alt="Alfred Invest" class="logo-img">
+     <span class="brand-name">Alfred Invest</span>
    </a>
    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="headerNav">
      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
    </button>
    <nav class="header-nav" id="headerNav" aria-label="Navigation principale">
      <a href="#comparateur">ETF</a>
-     <a href="methodologie.html">Score Alfred</a>
+     <a href="/methodologie">Score Alfred</a>
      <a href="#outils">Outils</a>
-     <a href="https://alfredstudio.mooo.com/blog">Insights</a>
+     <a href="https://alfredstudio.mooo.com/blog">Blog</a>
      <a href="#faq">FAQ</a>
    </nav>
  </div>
@@ -125,13 +125,13 @@
           <select id="emetteur"><option value="">Tous</option></select>
         </div>
         <div class="etf-filter-actions">
-          <button class="etf-btn-sm" id="resetFilters">↺ Reset</button>
-          <button class="etf-btn-sm" id="shareFilters">Copier lien</button>
+          <button class="etf-btn-sm" id="resetFilters">↺ Réinitialiser</button>
+          <button class="etf-btn-sm" id="shareFilters">Copier le lien</button>
         </div>
       </div>
       <div class="etf-stats">
-        <span><strong id="resultCount">0</strong> ETF trouvés</span>
-        <span id="dataUpdateBadge">Données mises à jour le 15/09/2026</span> <span id="dataSourceBadge" style="opacity:0.75">· Sources : DICI/PRIIPs, justETF</span>
+        <span><strong id="resultCount">437</strong> ETF référencés</span>
+        <span id="dataUpdateBadge">Données mises à jour le 20/09/2026</span> <span id="dataSourceBadge" style="opacity:0.75">· Sources : DICI/PRIIPs, justETF</span>
       </div>
       <div class="etf-loader" id="etfLoader">
         <div class="etf-loader-spinner"></div>
@@ -162,7 +162,7 @@
 
   
 
-  <!-- Score Alfred --> <section class="score-section" id="score">   <div class="section-head">     <h2>Le <span>Score Alfred</span> : chaque ETF noté sur 100</h2>     <p>Un score transparent, décomposé et expliqué. Un point de départ pour votre analyse — jamais une vérité absolue.</p>   </div>   <div class="score-pillars">     <div class="pillar-card"><div class="pillar-top"><strong>Frais (TER)</strong><span class="pillar-weight">40%</span></div><div class="pillar-bar"><span style="width:40%"></span></div><p>Le TER pèse directement sur la performance long terme. Plus il est bas, meilleur est le score.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Encours</strong><span class="pillar-weight">25%</span></div><div class="pillar-bar"><span style="width:25%"></span></div><p>Un encours élevé signale un ETF mature, liquide et adopté par les investisseurs.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Liquidité</strong><span class="pillar-weight">20%</span></div><div class="pillar-bar"><span style="width:20%"></span></div><p>Spreads bid-ask et volumes échangés. Une liquidité élevée réduit le coût d'entrée et de sortie.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Tracking Error</strong><span class="pillar-weight">15%</span></div><div class="pillar-bar"><span style="width:15%"></span></div><p>L'écart entre la performance de l'ETF et celle de son indice. Un écart faible = une réplication fidèle.</p></div>   </div>   <div class="score-legend">     <span class="legend-item"><i class="legend-dot" style="background:#28a745"></i>Très bon (74+)</span>     <span class="legend-item"><i class="legend-dot" style="background:#007bff"></i>Bon (64-73)</span>     <span class="legend-item"><i class="legend-dot" style="background:#ffc107"></i>Moyen (54-63)</span>     <span class="legend-item"><i class="legend-dot" style="background:#fd7e14"></i>Faible (44-53)</span>     <span class="legend-item"><i class="legend-dot" style="background:#dc3545"></i>Très faible (<44)</span>     <button class="score-more" onclick="document.getElementById('scoreModal').classList.add('active')">Voir la méthodologie complète →</button>   </div>   <p class="score-note">Le Score Alfred est un indicateur pédagogique calculé à partir de données publiques. Il ne constitue ni une recommandation d'achat ni un conseil financier personnalisé.</p> </section>
+  <!-- Score Alfred --> <section class="score-section" id="score">   <div class="section-head">     <h2>Le <span>Score Alfred</span> : chaque ETF noté sur 100</h2>     <p>Un score transparent, décomposé et expliqué. Un point de départ pour votre analyse — jamais une vérité absolue.</p>   </div>   <div class="score-pillars">     <div class="pillar-card"><div class="pillar-top"><strong>Frais (TER)</strong><span class="pillar-weight">40%</span></div><div class="pillar-bar"><span style="width:40%"></span></div><p>Le TER pèse directement sur la performance long terme. Plus il est bas, meilleur est le score.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Encours</strong><span class="pillar-weight">25%</span></div><div class="pillar-bar"><span style="width:25%"></span></div><p>Un encours élevé signale un ETF mature, liquide et adopté par les investisseurs.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Liquidité</strong><span class="pillar-weight">20%</span></div><div class="pillar-bar"><span style="width:20%"></span></div><p>Spreads bid-ask et volumes échangés. Une liquidité élevée réduit le coût d'entrée et de sortie.</p></div>     <div class="pillar-card"><div class="pillar-top"><strong>Tracking Error</strong><span class="pillar-weight">15%</span></div><div class="pillar-bar"><span style="width:15%"></span></div><p>L'écart entre la performance de l'ETF et celle de son indice. Un écart faible = une réplication fidèle.</p></div>   </div>   <div class="score-legend">     <span class="legend-item"><i class="legend-dot" style="background:#28a745"></i>Très bon (74+)</span>     <span class="legend-item"><i class="legend-dot" style="background:#007bff"></i>Bon (64-73)</span>     <span class="legend-item"><i class="legend-dot" style="background:#ffc107"></i>Moyen (54-63)</span>     <span class="legend-item"><i class="legend-dot" style="background:#fd7e14"></i>Faible (44-53)</span>     <span class="legend-item"><i class="legend-dot" style="background:#dc3545"></i>Très faible (<44)</span>     <a href="/methodologie" class="score-more">Voir la méthodologie complète →</a>   </div>   <p class="score-note">Le Score Alfred est un indicateur pédagogique calculé à partir de données publiques. Il ne constitue ni une recommandation d'achat ni un conseil financier personnalisé.</p> </section>
   <!-- Simulators -->
   <section class="section container" id="outils">
     <div class="section-header">
@@ -548,7 +548,7 @@
   
 
   <!-- FAQ -->
-  <!-- Derniers articles --> <section class="articles-section" id="articles">   <div class="section-head">     <h2>Dernières analyses</h2>     <a href="/blog" class="section-link">Tous les articles →</a>   </div>   <div class="articles-grid">     <a href="/blog/marche-du-18-09-2026-cac-40-s-p-500-etfs/" class="article-card"><span class="article-date">18/09/2026</span><h3>Marché du 18/09/2026 — CAC 40, S&amp;P 500, ETFs</h3><p>Les mouvements du jour et ce qu'ils signifient pour vos ETF.</p></a>     <a href="/blog/comment-construire-un-portefeuille-permanent-la-harry-browne-15-09/" class="article-card"><span class="article-date">15/09/2026</span><h3>Construire un portefeuille permanent à la Harry Browne</h3><p>L'allocation défensive qui traverse les cycles : or, actions, obligations, cash.</p></a>     <a href="/blog/l-impact-de-la-psychologie-sur-vos-d-cisions-d-investissement-14-09/" class="article-card"><span class="article-date">14/09/2026</span><h3>L'impact de la psychologie sur vos décisions d'investissement</h3><p>Biais comportementaux : comment ils vous coûtent de l'argent — et comment les contourner.</p></a>   </div> </section>
+  <!-- Derniers articles --> <section class="articles-section" id="articles">   <div class="section-head">     <h2>Dernières analyses</h2>     <a href="/blog" class="section-link">Tous les articles →</a>   </div>   <div class="articles-grid">     <a href="/bonus-pea.html" class="article-card"><span class="article-date">Pédagogie</span><h3>Sélection pédagogique : 5 ETF PEA à connaître</h3><p>MSCI World, S&amp;P 500, émergents, Nasdaq-100 : frais, SRI et Score Alfred comparés.</p></a>     <a href="/blog/comment-construire-un-portefeuille-permanent-la-harry-browne-15-09/" class="article-card"><span class="article-date">15/09/2026</span><h3>Construire un portefeuille permanent à la Harry Browne</h3><p>L'allocation défensive qui traverse les cycles : or, actions, obligations, cash.</p></a>     <a href="/blog/l-impact-de-la-psychologie-sur-vos-d-cisions-d-investissement-14-09/" class="article-card"><span class="article-date">14/09/2026</span><h3>L'impact de la psychologie sur vos décisions d'investissement</h3><p>Biais comportementaux : comment ils vous coûtent de l'argent — et comment les contourner.</p></a>   </div> </section>
   <!-- Pourquoi Alfred --> <section class="why-section" id="pourquoi">   <div class="section-head">     <h2>Pourquoi Alfred est différent</h2>     <p>Pas un énième comparateur : une plateforme pensée pour la décision.</p>   </div>   <div class="why-grid">     <div class="why-item"><strong>Un score décomposé et transparent</strong><p>Chaque note sur 100 s'explique critère par critère : frais, encours, liquidité, tracking error. Rien de caché.</p></div>     <div class="why-item"><strong>Des données sourcées et datées</strong><p>Chaque jeu de données affiche sa date de mise à jour et ses sources. Aucune donnée inventée, jamais.</p></div>     <div class="why-item"><strong>Gratuit, sans compte, sans piège</strong><p>Tous les outils sont libres d'accès. Aucune inscription, aucun email obligatoire, aucune revente de données.</p></div>     <div class="why-item"><strong>Pédagogie d'abord</strong><p>Alfred informe et outille. Il ne vend pas de conseil personnalisé : les décisions vous appartiennent.</p></div>   </div> </section>
   <section class="section container" id="faq">
     <div class="section-header">
@@ -584,7 +584,7 @@
         </div>
         <label class="newsletter-consent">
           <input type="checkbox" id="newsletterConsent" required>
-          <span>J'accepte de recevoir la newsletter et j'ai lu la <a href="/privacy.html">politique de confidentialité</a>.</span>
+          <span>J'accepte de recevoir la newsletter et j'ai lu la <a href="/politique-de-confidentialite">politique de confidentialité</a>.</span>
         </label>
         <p class="newsletter-msg" id="newsletterMsg" role="status" aria-live="polite"></p>
       </form>
@@ -595,16 +595,23 @@
 
 
 <footer class="footer" role="contentinfo">
-  <p>Alfred Invest &copy; 2026 — Outils gratuits pour votre liberté financière.</p>
+  <p class="footer-brand"><strong>Alfred Invest</strong> — Comparateur ETF PEA gratuit, outils financiers et analyses pédagogiques.</p>
   <div class="footer-links" role="navigation" aria-label="Liens utiles">
-    <a href="https://alfredstudio.mooo.com/blog">Blog</a>
-    <a href="https://refnocode.trade.re/pgbqgk3f" target="_blank" rel="noopener" data-umami-event="affiliation-click" data-umami-location="footer">Trade Republic</a>
-    <a href="https://www.youtube.com/@alfred-studio?sub_confirmation=1" target="_blank" rel="noopener" data-umami-event="youtube-click" data-umami-location="footer">YouTube</a>
-    <a href="https://t.me/AlfredETFBot" target="_blank" rel="noopener">Bot Telegram</a>
-    <a href="/privacy.html">Confidentialité</a>
-    <a href="/tos.html">CGU</a>
+    <a href="/">Comparateur ETF</a>
+    <a href="/top-etf.html">Top ETF par indice</a>
+    <a href="/blog">Blog</a>
+    <a href="/methodologie">Méthodologie</a>
   </div>
+  <div class="footer-links footer-legal" role="navigation" aria-label="Liens légaux">
+    <a href="/mentions-legales">Mentions légales</a>
+    <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+    <a href="/cgu">CGU</a>
+    <a href="/avertissement-investissement">Avertissement investissement</a>
+    <a href="/affiliation">Affiliation</a>
+  </div>
+  <p class="footer-data">Données ETF mises à jour le 20/09/2026 · Sources : DICI/PRIIPs, justETF · 437 ETF référencés · 12 outils</p>
   <p class="footer-disclaimer">Avertissement : Les outils, simulateurs et scores fournis sur Alfred Invest le sont à titre exclusivement pédagogique et informatif. Ils ne constituent en aucun cas un conseil en investissement ou une incitation à acheter/vendre des instruments financiers. Investir comporte des risques, notamment de perte en capital.</p>
+  <p class="footer-affiliation">Affiliation : ce site peut percevoir une rémunération si vous ouvrez un compte via l'un de nos liens partenaires (Trade Republic), sans frais supplémentaires pour vous. <a href="/affiliation">En savoir plus</a>.</p>
 </footer>
 
 <div class="toast hidden" id="toast" aria-live="polite" role="status">ISIN copié !</div>
@@ -624,8 +631,8 @@
   if(si)si.addEventListener("input",function(){s();setTimeout(n,400)});
 })();
 </script>
-  <script src="etf-data.min.js?v=1790000001" defer></script>
-  <script src="etf-scores.js?v=1790000002" defer></script>
+  <script src="etf-data.min.js?v=1789898438" defer></script>
+  <script src="etf-scores.js?v=1789898439" defer></script>
   <script src="app.min.js?v=1790000003" defer></script>
 <script>document.addEventListener("click",function(e){var h=e.target.closest(".tool-card-header");if(h){var c=h.closest(".tool-card");if(c){c.classList.toggle("open")}}});</script>
 
@@ -914,7 +921,7 @@
 </script>
 
 <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Information cookies">
-  <p>Pas de cookies publicitaires. Analytics anonyme — emails uniquement si tu t'inscris. <a href="/privacy.html">En savoir plus</a></p>
+  <p>Pas de cookies publicitaires. Analytics anonyme — emails uniquement si tu t'inscris. <a href="/politique-de-confidentialite">En savoir plus</a></p><p style="text-align:center;margin-top:14px"><a href="/methodologie">Voir la méthode complète, les sources et les limites →</a></p>
   <button id="cookieOk" type="button">OK</button>
 </div>
 <script>
