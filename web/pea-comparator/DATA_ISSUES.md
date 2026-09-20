@@ -33,3 +33,8 @@ Note : la mission suggérait FR0011871110 pour Amundi PEA Nasdaq-100 ; ce code n
 ## 7. Labels de score
 - Aucun libellé Achat/Vendre/Conserver/Surveiller/Remplacer retrouvé dans les pages servies (index, top-etf, bonus, app.min.js). Un fichier annexe `etf-score-integration.js` (non chargé) contenait encore ces labels : purgé.
 
+
+## 8. Ponderation du Score Alfred (ecart mission vs code)
+- La mission specifiait TER 40 / encours 25 / liquidite 20 / tracking 15.
+- Le code reel (etf-scores.js, methodologie.html) calcule : Qualite de l indice 25 / Replication 20 / Couts TER 15 / Solidite 15 / Emetteur 10 / Potentiel futur 15 = 100 pts.
+- Decision : conserver la ponderation reelle du code (coherence calcul/affichage). Modifier la ponderation demanderait de recalculer les 437 scores.

@@ -52,3 +52,41 @@ index.html · top-etf.html · bonus-pea.html · methodologie.html · 404.html ·
 ## Preview / déploiement
 - Le site est déployé en direct : https://alfredstudio.mooo.com/ (nginx /var/www/html). Pas de preview séparé ; chaque changement a été vérifié via curl sur le domaine HTTPS (codes 200, contenu attendu).
 
+## Lot B (P1) — publié le 2026-09-20
+
+### B1 — URL architecture propre
+- 437 fiches statiques /etf/{ISIN}/index.html générées depuis le dataset (nom, ISIN, frais, SRI, perf, émetteur, indice, encours, Score Alfred détaillé, disclaimer, footer légal, canonical + OG). Données jamais affichées quand N/A ou "?".
+- Hub /etf/ + 12 pages /outils/{slug}/ (+ hub /outils/) avec canonical + OG + CTA "Ouvrir l'outil".
+- Redirection JS des anciennes ancres #etf-ISIN vers /etf/{ISIN}/ sur index.html et top-etf.html.
+- Table ETF : ISIN cliquable vers la fiche /etf/{ISIN}/ (app.min.js).
+- top-etf.html : 113 liens ../index.html#etf-ISIN remplacés par /etf/{ISIN}/ ; 7 ISIN tronqués réparés via match dataset ou retirés.
+- Sitemap : 462 URLs (index, top-etf, bonus, methodologie, outils x13, etf x437, a-propos, pages légales x5).
+
+### B2 — Mobile & watchlist
+- Table ETF responsive : cartes sur mobile (<700px) via data-lab sur chaque cellule + CSS, filtres sticky.
+- Note watchlist : "Sauvegardé sur cet appareil (localStorage) — jamais transmis."
+- Date de MAJ data unifiée 20/09/2026 (constante DATA_UPDATE_DATE dans app.min.js, était 15/09).
+
+### B3 — Méthodologie
+- Date cohérente (20/09/2026) + nouvelle section "9. Historique des changements".
+- Pondérations réelles du code conservées (indice 25 / réplication 20 / coûts 15 / solidité 15 / émetteur 10 / futur 15 = 100) : la mission suggérait TER 40/encours 25/liquidité 20/tracking 15 mais cela ne correspond pas au calcul réel du Score Alfred — écart documenté dans DATA_ISSUES.md.
+
+### B4 — À propos
+- /a-propos créé : mission, "ce que nous ne faisons pas" (pas CIF), identité éditeur en TODO_LEGAL, footer légal, canonical + OG. Lien ajouté au footer index + sitemap.
+
+### B5 — FAQ + schema
+- FAQ homepage : 4 → 12 questions (réplication physique vs synthétique, éligibilité PEA, capitalisant vs distribuant, tracking difference vs TER, nombre d'ETF en PEA, Score Alfred, "Alfred Invest est-il un conseiller ?", sources).
+- JSON-LD FAQPage ajouté dans le head de la homepage.
+
+### B6 — Affiliation
+- /affiliation conforme : fonctionnement, partenaire actuel (Trade Republic), "vous ne payez pas plus", indépendance éditoriale.
+- Vérifié : aucune promesse de "comparateur de courtiers" dans les HTML/JS du site.
+
+## URLs touchées (Lot B)
+/etf/* (437 fiches) · /etf/ · /outils/* (13) · /a-propos · / · /top-etf.html · /methodologie · /affiliation · sitemap.xml
+
+## Risques restants
+- Données frais/encours anciennes pour certains ETF (passe de fraîcheur justETF recommandée).
+- FR0010892216 (Amundi PEA Nasdaq-100) validé par match dataset justETF mais pas par émetteur : confirmation humaine souhaitée.
+- Ghost non purgé tant que les unpublish ne sont pas faits (clé Admin API à régénérer).
+- Les pages /outils/{slug} décrivent l'outil et renvoient vers la home : pas de duplication du code JS des calculateurs (voulu).
