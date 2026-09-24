@@ -1,0 +1,113 @@
+#!/bin/bash
+# Pipeline d'analyse Euromillions - Version v4 (Évolutionnaire) - AMÉLIORÉ
+# Cycle d'amélioration continue : logging + notifications + robustesse
+
+set -uo pipefail  # Pas de set -e (on veut continuer même si une étape échoue)
+
+WORKSPACE="/home/ubuntu/.openclaw/workspace/euromillions"
+PYTHON_BIN="/usr/bin/python3"
+LOG_FILE="/home/ubuntu/output/logs/euromillions_pipeline.log"
+ERROR_LOG="/home/ubuntu/output/logs/euromillions_errors.log"
+mkdir -p "/home/ubuntu/output/logs"
+exec 9>"$WORKSPACE/.pipeline.lock"
+flock -n 9 || { echo "Pipeline déjà en cours"; exit 75; }
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
+}
+
+error() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] ❌ ERREUR: $1" | tee -a "$ERROR_LOG"
+}
+
+log "=== Pipeline Euromillions v4 (Évolutionnaire) ==="
+log "Démarrage..."
+
+# Source secrets pour notification Telegram
+source ~/.secrets/env 2>/dev/null || log "⚠️  Secrets non chargés (notifications désactivées)"
+
+PERF_LOG="/home/ubuntu/output/logs/euromillions_perf.log"
+
+measure_step() {
+    local step_name="$1"
+    local start_time="$2"
+    local end_time=$(date +%s%N)
+    local duration=$(echo "scale=3; ($end_time - $start_time) / 1000000000" | bc 2>/dev/null || echo "0")
+    echo "$step_name:${duration}s" >> "$PERF_LOG"
+}
+
+FAILURES=0
+
+# 1. Mise à jour des données historiques
+log "📡 Étape 1/5: Mise à jour des données..."
+STEP_START=$(date +%s%N)
+if $PYTHON_BIN $WORKSPACE/update_data.py >> "$LOG_FILE" 2>> "$ERROR_LOG"; then
+    log "✅ Données mises à jour"
+else
+    error "Étape 1 échouée"
+    FAILURES=$((FAILURES+1))
+fi
+
+# 2. Statistiques avancées
+echo "" >> "$LOG_FILE"
+log "📊 Étape 2/5: Statistiques avancées..."
+measure_step "update_data" $STEP_START
+STEP_START=$(date +%s%N)
+if $PYTHON_BIN $WORKSPACE/advanced_stats.py >> "$LOG_FILE" 2>> "$ERROR_LOG"; then
+    log "✅ Statistiques calculées"
+else
+    error "Étape 2 échouée"
+    FAILURES=$((FAILURES+1))
+fi
+
+# 3. Évaluation & Évolution
+echo "" >> "$LOG_FILE"
+log "🧬 Étape 3/5: Évaluation & Évolution..."
+measure_step "advanced_stats" $STEP_START
+STEP_START=$(date +%s%N)
+if $PYTHON_BIN $WORKSPACE/evaluate_performance.py >> "$LOG_FILE" 2>> "$ERROR_LOG"; then
+    log "✅ Évaluation terminée"
+else
+    error "Étape 3 échouée"
+    FAILURES=$((FAILURES+1))
+fi
+
+# 4. Analyse et prédiction
+echo "" >> "$LOG_FILE"
+log "🔮 Étape 4/5: Analyse & Prédiction..."
+measure_step "evaluate_performance" $STEP_START
+STEP_START=$(date +%s%N)
+if $PYTHON_BIN $WORKSPACE/analyze_v2.py >> "$LOG_FILE" 2>> "$ERROR_LOG"; then
+    log "✅ Analyse terminée"
+else
+    error "Étape 4 échouée"
+    FAILURES=$((FAILURES+1))
+fi
+
+# 5. Notification Telegram (utilise maintenant le module partagé)
+echo "" >> "$LOG_FILE"
+log "📬 Étape 5/5: Notification Telegram..."
+measure_step "analyze_v2" $STEP_START
+STEP_START=$(date +%s%N)
+if $PYTHON_BIN $WORKSPACE/notify_telegram.py >> "$LOG_FILE" 2>> "$ERROR_LOG"; then
+    log "✅ Notification envoyée"
+else
+    error "Étape 5 échouée"
+    FAILURES=$((FAILURES+1))
+fi
+measure_step "notify_telegram" $STEP_START
+
+# Résumé
+echo "" >> "$LOG_FILE"
+if [ $FAILURES -eq 0 ]; then
+    log "🎉 Pipeline terminé avec succès (0 échec)"
+else
+    log "⚠️  Pipeline terminé avec $FAILURES échec(s) — voir $ERROR_LOG"
+fi
+
+# Copier last_analysis.txt dans les logs pour référence
+if [ -f "$WORKSPACE/last_analysis.txt" ]; then
+    cp "$WORKSPACE/last_analysis.txt" "/home/ubuntu/output/logs/euromillions_last_analysis.txt"
+fi
+
+exit $FAILURES

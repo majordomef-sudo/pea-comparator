@@ -1,0 +1,15 @@
+{
+  "n_draws": 935,
+  "first_date": "2017-09-12",
+  "last_date": "2026-08-25",
+  "evolve_every": 100,
+  "eval_window": 20,
+  "generation_atteinte": 9,
+  "avg_best_hits_evolved": 2.0995,
+  "avg_best_hits_control": 2.1037,
+  "advantage_evolved_vs_control": -0.0043,
+  "ci_low": -0.0171,
+  "ci_high": 0.0086,
+  "p_value": 0.6175,
+  "expected_random_best_hits": 0.8333
+}

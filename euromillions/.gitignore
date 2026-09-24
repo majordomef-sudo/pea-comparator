@@ -1,0 +1,21 @@
+# Euromillions — regles d'exclusion git
+# Versionnes : le CODE, les DONNEES SOURCE (history.csv) et l'etat d'evolution.
+# Exclus : artefacts regenerables, caches, sauvegardes locales, venv.
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.pipeline.lock
+
+backups/
+*.bak
+*.bak_*
+*.restaure_tmp
+
+venv/
+
+# etat volatil regenere a chaque run
+predictions_log.json
+analysis_results.json
+last_analysis.txt
+advanced_stats.pkl

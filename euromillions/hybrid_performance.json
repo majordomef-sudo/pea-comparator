@@ -1,0 +1,566 @@
+{
+  "history": [
+    {
+      "date": "2026-07-31",
+      "predicted_balls": [
+        3,
+        23,
+        27,
+        44,
+        50
+      ],
+      "predicted_stars": [
+        3,
+        9
+      ],
+      "actual_balls": [
+        5,
+        7,
+        24,
+        30,
+        49
+      ],
+      "actual_stars": [
+        10,
+        11
+      ],
+      "ball_hits": 0,
+      "star_hits": 0,
+      "total_hits": 0
+    },
+    {
+      "date": "2026-08-04",
+      "predicted_balls": [
+        19,
+        27,
+        29,
+        46,
+        50
+      ],
+      "predicted_stars": [
+        8,
+        9
+      ],
+      "actual_balls": [
+        10,
+        24,
+        25,
+        31,
+        45
+      ],
+      "actual_stars": [
+        4,
+        5
+      ],
+      "ball_hits": 0,
+      "star_hits": 0,
+      "total_hits": 0
+    },
+    {
+      "date": "2026-08-07",
+      "predicted_balls": [
+        10,
+        27,
+        29,
+        42,
+        44
+      ],
+      "predicted_stars": [
+        8,
+        12
+      ],
+      "actual_balls": [
+        25,
+        30,
+        34,
+        46,
+        50
+      ],
+      "actual_stars": [
+        1,
+        12
+      ],
+      "ball_hits": 0,
+      "star_hits": 1,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-08-11",
+      "predicted_balls": [
+        3,
+        13,
+        33,
+        34,
+        42
+      ],
+      "predicted_stars": [
+        1,
+        3
+      ],
+      "actual_balls": [
+        26,
+        29,
+        35,
+        38,
+        47
+      ],
+      "actual_stars": [
+        1,
+        2
+      ],
+      "ball_hits": 0,
+      "star_hits": 1,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-05-01",
+      "predicted_balls": [
+        3,
+        25,
+        32,
+        44,
+        47
+      ],
+      "predicted_stars": [
+        3,
+        4
+      ],
+      "actual_balls": [
+        3,
+        9,
+        42,
+        46,
+        47
+      ],
+      "actual_stars": [
+        1,
+        11
+      ],
+      "ball_hits": 2,
+      "star_hits": 0,
+      "total_hits": 2
+    },
+    {
+      "date": "2026-06-23",
+      "predicted_balls": [
+        18,
+        24,
+        29,
+        37,
+        39
+      ],
+      "predicted_stars": [
+        5,
+        12
+      ],
+      "actual_balls": [
+        3,
+        33,
+        36,
+        45,
+        46
+      ],
+      "actual_stars": [
+        5,
+        6
+      ],
+      "ball_hits": 0,
+      "star_hits": 1,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-07-14",
+      "predicted_balls": [
+        10,
+        13,
+        21,
+        34,
+        44
+      ],
+      "predicted_stars": [
+        6,
+        9
+      ],
+      "actual_balls": [
+        10,
+        19,
+        37,
+        42,
+        47
+      ],
+      "actual_stars": [
+        9,
+        12
+      ],
+      "ball_hits": 1,
+      "star_hits": 1,
+      "total_hits": 2
+    },
+    {
+      "date": "2026-07-21",
+      "predicted_balls": [
+        3,
+        11,
+        17,
+        42,
+        50
+      ],
+      "predicted_stars": [
+        3,
+        9
+      ],
+      "actual_balls": [
+        2,
+        3,
+        8,
+        28,
+        39
+      ],
+      "actual_stars": [
+        2,
+        11
+      ],
+      "ball_hits": 1,
+      "star_hits": 0,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-08-14",
+      "predicted_balls": [
+        22,
+        34,
+        39,
+        47,
+        50
+      ],
+      "predicted_stars": [
+        2,
+        8
+      ],
+      "actual_balls": [
+        5,
+        29,
+        39,
+        48,
+        49
+      ],
+      "actual_stars": [
+        4,
+        8
+      ],
+      "ball_hits": 1,
+      "star_hits": 1,
+      "total_hits": 2
+    },
+    {
+      "date": "2026-08-18",
+      "predicted_balls": [
+        7,
+        15,
+        22,
+        29,
+        40
+      ],
+      "predicted_stars": [
+        8,
+        12
+      ],
+      "actual_balls": [
+        3,
+        9,
+        38,
+        40,
+        50
+      ],
+      "actual_stars": [
+        6,
+        10
+      ],
+      "ball_hits": 1,
+      "star_hits": 0,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-08-21",
+      "predicted_balls": [
+        5,
+        18,
+        20,
+        29,
+        36
+      ],
+      "predicted_stars": [
+        1,
+        12
+      ],
+      "actual_balls": [
+        10,
+        14,
+        15,
+        19,
+        45
+      ],
+      "actual_stars": [
+        4,
+        12
+      ],
+      "ball_hits": 0,
+      "star_hits": 1,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-08-25",
+      "predicted_balls": [
+        5,
+        12,
+        18,
+        22,
+        41
+      ],
+      "predicted_stars": [
+        3,
+        5
+      ],
+      "actual_balls": [
+        8,
+        16,
+        30,
+        47,
+        48
+      ],
+      "actual_stars": [
+        4,
+        9
+      ],
+      "ball_hits": 0,
+      "star_hits": 0,
+      "total_hits": 0
+    },
+    {
+      "date": "2026-08-28",
+      "predicted_balls": [
+        14,
+        18,
+        22,
+        24,
+        30
+      ],
+      "predicted_stars": [
+        4,
+        10
+      ],
+      "actual_balls": [
+        7,
+        14,
+        28,
+        42,
+        45
+      ],
+      "actual_stars": [
+        6,
+        9
+      ],
+      "ball_hits": 1,
+      "star_hits": 0,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-09-01",
+      "predicted_balls": [
+        2,
+        30,
+        33,
+        44,
+        47
+      ],
+      "predicted_stars": [
+        5,
+        9
+      ],
+      "actual_balls": [
+        2,
+        10,
+        23,
+        37,
+        47
+      ],
+      "actual_stars": [
+        3,
+        5
+      ],
+      "ball_hits": 2,
+      "star_hits": 1,
+      "total_hits": 3
+    },
+    {
+      "date": "2026-09-04",
+      "predicted_balls": [
+        8,
+        13,
+        18,
+        26,
+        33
+      ],
+      "predicted_stars": [
+        5,
+        8
+      ],
+      "actual_balls": [
+        11,
+        12,
+        19,
+        27,
+        46
+      ],
+      "actual_stars": [
+        4,
+        12
+      ],
+      "ball_hits": 0,
+      "star_hits": 0,
+      "total_hits": 0
+    },
+    {
+      "date": "2026-09-08",
+      "predicted_balls": [
+        9,
+        13,
+        16,
+        23,
+        41
+      ],
+      "predicted_stars": [
+        9,
+        10
+      ],
+      "actual_balls": [
+        13,
+        17,
+        33,
+        35,
+        39
+      ],
+      "actual_stars": [
+        7,
+        12
+      ],
+      "ball_hits": 1,
+      "star_hits": 0,
+      "total_hits": 1
+    },
+    {
+      "date": "2026-09-11",
+      "predicted_balls": [
+        1,
+        6,
+        24,
+        29,
+        39
+      ],
+      "predicted_stars": [
+        4,
+        5
+      ],
+      "actual_balls": [
+        1,
+        7,
+        15,
+        39,
+        50
+      ],
+      "actual_stars": [
+        1,
+        11
+      ],
+      "ball_hits": 2,
+      "star_hits": 0,
+      "total_hits": 2
+    },
+    {
+      "date": "2026-09-15",
+      "predicted_balls": [
+        7,
+        37,
+        42,
+        45,
+        47
+      ],
+      "predicted_stars": [
+        6,
+        10
+      ],
+      "actual_balls": [
+        10,
+        16,
+        18,
+        22,
+        28
+      ],
+      "actual_stars": [
+        6,
+        10
+      ],
+      "ball_hits": 0,
+      "star_hits": 2,
+      "total_hits": 2
+    },
+    {
+      "date": "2026-09-18",
+      "predicted_balls": [
+        4,
+        10,
+        20,
+        39,
+        40
+      ],
+      "predicted_stars": [
+        4,
+        6
+      ],
+      "actual_balls": [
+        8,
+        17,
+        25,
+        30,
+        44
+      ],
+      "actual_stars": [
+        2,
+        3
+      ],
+      "ball_hits": 0,
+      "star_hits": 0,
+      "total_hits": 0
+    },
+    {
+      "date": "2026-09-22",
+      "predicted_balls": [
+        7,
+        24,
+        33,
+        44,
+        47
+      ],
+      "predicted_stars": [
+        2,
+        6
+      ],
+      "actual_balls": [
+        13,
+        14,
+        16,
+        44,
+        50
+      ],
+      "actual_stars": [
+        10,
+        12
+      ],
+      "ball_hits": 1,
+      "star_hits": 0,
+      "total_hits": 1
+    }
+  ],
+  "total_draws": 20,
+  "total_hits": 22
+}
