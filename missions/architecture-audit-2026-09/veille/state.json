@@ -1,0 +1,68 @@
+{
+  "composio": {
+    "head": "b2f5098b28e9bfe1f0c2255b94adea7c5c2fa022",
+    "tags": [
+      "zero-data-retention",
+      "zdr-readiness",
+      "white-labeling-consolidation",
+      "vitest-4.0.0-rc.117",
+      "versioning-example@0.1.5"
+    ],
+    "seen": "2026-09-28"
+  },
+  "openhands": {
+    "head": "fd9145958e9e93bfbad3252fce7a69493e61215a",
+    "tags": [
+      "xingyaoww-patch-1",
+      "ws-ws-ws-ws",
+      "ws-readiness",
+      "ws-metrics-all-buckets",
+      "ws-alt"
+    ],
+    "seen": "2026-09-28"
+  },
+  "swe-agent": {
+    "head": "3ea751c087f32b16e039a2233dd6eefecef325d5",
+    "tags": [
+      "v1.1.0",
+      "v1.0.1",
+      "v1.0.0",
+      "v0.7.0",
+      "v0.7"
+    ],
+    "seen": "2026-09-28"
+  },
+  "pydanticai": {
+    "head": "69eb81bde23c8db52ee8617217bdaf46bf0468df",
+    "tags": [
+      "xsearch-model-agnostic",
+      "wrap-hooks-full-lifecycle",
+      "wrap-entire-run",
+      "workspaces-sprites",
+      "workspaces-modal"
+    ],
+    "seen": "2026-09-28"
+  },
+  "mem0": {
+    "head": "94c3fe9f238f3dbf29c9ce98643bd71eb13077cd",
+    "tags": [
+      "zapier-mem0",
+      "zapier-add-memory-user-id-required",
+      "youneshima-patch-2",
+      "youneshima-patch-1",
+      "vitest-cves"
+    ],
+    "seen": "2026-09-28"
+  },
+  "qdrant": {
+    "head": "235c6401093fef17e1a952d9a14a9e62ac12557e",
+    "tags": [
+      "wasm-with-demo",
+      "wasm-edge-poc",
+      "wal-parking-lot",
+      "wal-multi-pin-followups",
+      "wal-inspector"
+    ],
+    "seen": "2026-09-28"
+  }
+}
