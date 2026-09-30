@@ -1,0 +1,70 @@
+# Niche: Zen Escape (méditation, relaxation)
+name: "Zen_Escape"
+display_name: "Zen Escape — Méditation & Relaxation"
+emoji: "🌿"
+
+script:
+  tone: "apaisant, poétique, immersif"
+  pacing: "lent, respirations, silences"
+  hooks:
+    - pattern: "invitation"
+      template: "Fermez les yeux. Imaginez {scene}. Vous y êtes."
+    - pattern: "sensory"
+      template: "Écoutez. Le {sound}. Le calme. Rien d'autre n'existe."
+    - pattern: "escape"
+      template: "{time} secondes pour vous évader. Laissez vos soucis derrière vous."
+  cta_variants:
+    - "🌿 Respirez. Suivez pour plus d'évasion."
+    - "🧘 Un moment de calme par jour. Abonnez-vous."
+    - "✨ La sérénité en 60 secondes. Activez la cloche."
+  word_count: "15-25 mots"
+  forbidden: ["cliquez", "achetez", "urgent"]
+
+visuals:
+  style: "nature, lumineux, pastel, slow motion"
+  subjects: ["forêts brumeuses", "couchers de soleil", "vagues", "montagnes", "feuilles"]
+  avoid: ["ville", "foule", "écrans", "chiffres"]
+  overlay_style: "léger, blanc, fonte sérif"
+
+voice:
+  voice_a: "fr-FR-RemyMultilingualNeural"
+  rate: "-10%"
+  energy: "doux, murmuré"
+
+captions:
+  style: "fade doux, fonte manuscrite"
+  position: "center"
+
+music:
+  mood: "ambient nature, pad doux, sans rythme"
+  volume: 0.25
+  loop_track: "bgm_ambient.wav"
+
+video:
+  clip_count: 3
+  clip_duration: 10
+  aspect_ratio: "9:16"
+  resolution: "1080×1920"
+  subscribe_screen: 2.5
+  watermark: true
+  transitions: ["fade", "dissolve"]
+
+thumbnail:
+  style: "clair, vert/bleu pastel, textes blancs"
+  text_position: "center"
+
+hashtags:
+  default: "#méditation #relaxation #zen #calme #bienêtre #nature #pleineconscience"
+  searchable: ["méditation", "relaxation", "zen"]
+
+research:
+  enabled: false
+
+weekly_schedule:
+  monday: "Pleine conscience"
+  tuesday: "Nature"
+  wednesday: "Respiration"
+  thursday: "Paysages sonores"
+  friday: "Voyage immobile"
+  saturday: "Gratitude"
+  sunday: "Neurofinance"

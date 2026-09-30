@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+import json, subprocess, sys, time as _t, os
+from pathlib import Path
+
+WS = Path("/home/ubuntu/.openclaw/workspace")
+QPATH = WS / "output" / "pipeline_ideas.json"
+ORCH = WS / "pipeline/pipeline_orchestrator.py"
+LOGDIR = Path("/home/ubuntu/output/logs")
+LOGDIR.mkdir(parents=True, exist_ok=True)
+LF = LOGDIR / ("pipeline_queue_" + _t.strftime("%Y%m%d") + ".log")
+
+def log(m):
+    t = _t.strftime("%Y-%m-%d %H:%M:%S")
+    l = "[" + t + "] " + m
+    with open(LF, "a") as f:
+        f.write(l + "\n")
+    print(l)
+
+def load():
+    with open(QPATH) as f:
+        return json.load(f)
+
+def save(q):
+    tmp = QPATH.with_suffix(QPATH.suffix + ".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(q, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, QPATH)
+
+def nxt(q):
+    # Recuperer les executions running abandonnees depuis plus de 2 heures.
+    now = _t.time()
+    for item in q:
+        if item.get("status") != "running":
+            continue
+        try:
+            from datetime import datetime
+            started = datetime.fromisoformat(item.get("started_at", "").replace("Z", "+00:00")).timestamp()
+        except (TypeError, ValueError):
+            started = 0
+        if not started or now - started > 7200:
+            item["status"] = "failed"
+            item["error"] = "Execution running abandonnee depuis plus de 2 heures"
+            item["failed_at"] = _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime())
+            item["retries"] = item.get("retries", 0) + 1
+    # Priorité aux pending, puis aux failed (retry après cooldown)
+    pending = [i for i in q if i.get("status") == "pending"]
+    if pending:
+        return min(pending, key=lambda x: x.get("priority", 999))
+    # Auto-retry failed ideas after 6h cooldown (max 2 retries)
+    now = _t.time()
+    failed = []
+    for i in q:
+        if i.get("status") == "failed":
+            retries = i.get("retries", 0)
+            # Skip if max retries reached
+            if retries >= 2:
+                continue
+            # Check cooldown: retry after 6h
+            ft = i.get("failed_at", 0)
+            if isinstance(ft, str):
+                try:
+                    from datetime import datetime
+                    ft = datetime.fromisoformat(ft.replace('Z','+00:00')).timestamp()
+                except:
+                    ft = 0
+            if now - ft > 21600:  # 6h
+                failed.append(i)
+    if failed:
+        return min(failed, key=lambda x: x.get("priority", 999))
+    return None
+
+def chk():
+    # Cherche dans output/ et output/archive/ (l'orchestrateur archive apres upload)
+    dirs = [Path("/home/ubuntu/output"), Path("/home/ubuntu/output/archive")]
+    td = _t.strftime("%Y%m%d")
+    for d in dirs:
+        for f in sorted(d.glob("PROD_" + td + "_*.mp4"), reverse=True):
+            if _t.time() - f.stat().st_mtime < 900:
+                return True
+    # Fallback: verifier aussi le retour de l'orchestrateur
+    return False
+
+def main():
+    q = load()
+    i = nxt(q)
+    if not i:
+        log("Aucune idee pending")
+        sys.exit(0)
+    iid = i["id"]
+    it = i["title"]
+    i["status"] = "running"
+    i["started_at"] = _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime())
+    i.pop("error", None)
+    save(q)
+    log("Idee #" + str(iid) + ": " + it)
+    cmd = ["python3", "-u", str(ORCH), "--topic", it, "--auto"]
+    log("Lancement orchestrateur: " + " ".join(cmd))
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
+        with open(LF, "a") as f:
+            f.write(r.stdout)
+            if r.stderr:
+                f.write("\n[STDERR]\n" + r.stderr)
+    except subprocess.TimeoutExpired as te:
+        log("TIMEOUT apres 1800s")
+        partial = te.stdout or ""
+        if isinstance(partial, bytes):
+            partial = partial.decode(errors="replace")
+        if partial:
+            with open(LF, "a") as f:
+                f.write("\n[PARTIAL STDOUT AVANT TIMEOUT]\n" + partial[-8000:] + "\n")
+        lines = [l for l in partial.splitlines() if l.strip()][-3:]
+        log("Dernieres lignes avant timeout: " + " | ".join(lines) if lines else "Aucune sortie")
+        i["status"] = "failed"
+        i["error"] = "Timeout 1800s"
+        i["retries"] = i.get("retries", 0) + 1
+        i["failed_at"] = _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime())
+        save(q)
+        sys.exit(1)
+    ok = r.returncode == 0 and "[YOUTUBE_UPLOAD_OK]" in r.stdout and ("youtube.com" in r.stdout or "youtu.be" in r.stdout)
+    if ok:
+        upload_line = next(line for line in r.stdout.splitlines() if line.startswith("[YOUTUBE_UPLOAD_OK] "))
+        i["status"] = "done"
+        i["youtube_url"] = upload_line.split(" ", 1)[1].strip()
+        i["completed_at"] = _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime())
+        i.pop("error", None)
+        i.pop("failed_at", None)
+        save(q)
+        log("Idee #" + str(iid) + " done")
+    else:
+        i["retries"] = i.get("retries", 0) + 1
+        i["status"] = "failed"
+        i["error"] = (r.stderr[-300:] if r.stderr else r.stdout[-300:] if r.stdout else "Aucune sortie disponible")
+        i["failed_at"] = _t.strftime("%Y-%m-%dT%H:%M:%SZ", _t.gmtime())
+        save(q)
+        log("Echec idee #" + str(iid) + " (retry " + str(i["retries"]) + "/2)")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

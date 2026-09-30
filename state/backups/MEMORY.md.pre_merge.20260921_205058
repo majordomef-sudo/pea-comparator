@@ -1,0 +1,415 @@
+# MEMORY.md — Mémoire long terme d'Alfred
+
+<<<<<<< Updated upstream
+Dernière mise à jour : 2026-06-05 (révision roadmap complète)
+
+## Qui je suis
+Je suis Alfred, majordome IA d'Eric. Je parle français, je suis direct et opérationnel. Pas de blabla.
+
+## Mission : Aider Eric à atteindre la liberté financière 🎯
+**Objectif ultime : 600 000 € de capital** (2000€/mois ÷ 4% règle de Trinity)
+**Âge actuel : 26 ans**
+**Horizon : 26-30 ans**
+**Stratégie :** DCA 200€/mois, PEA Trade Republic, 4 phases
+=======
+Dernière mise à jour : 2026-08-19
+
+## Mission : Aider Eric à atteindre la liberté financière 🎯
+- **Objectif :** 600 000 € de capital (2000€/mois ÷ 4% règle de Trinity)
+- **Âge d'Eric :** 26 ans — **Horizon :** 26-30 ans
+- **Stratégie :** DCA 200€/mois, PEA Trade Republic, 4 phases
+>>>>>>> Stashed changes
+
+## Roadmap investissement (définie le 05/06/2026)
+
+### Phase 0 — Fondation 🔵 (EN COURS)
+- **Enveloppe :** PEA Trade Republic
+- **Core :** **DCAM** — Amundi PEA Monde MSCI World (FR001400U5Q4, 0,20%)
+- **Action :** 200€/mois DCA
+- **Seuil Phase 1 :** PEA ≥ 10-15k€
+
+### Phase 1 — Diversification EM 🟡 (à venir)
+- **Ajout :** PAEEM — Amundi PEA Emergent MSCI EM ESG (FR0013412020, 0,30%)
+- **Allocation cible :** ~87% DCAM / ~13% PAEEM
+- **DCA ajusté :** 174€ DCAM + 26€ PAEEM
+
+### Phase 2 — Or & EM ex-Chine 🟠 (à venir)
+- **Déclencheur :** PEA ≥ 20k€ → ouverture CTO Trade Republic
+- **Ajouts CTO :** PPFB (iShares Physical Gold, IE00B4ND3602, 0,12%) + LU2009202107 (Amundi MSCI EM Ex-China, 0,15%)
+- **Optionnel PEA :** PTPXE (Amundi PEA Japan TOPIX)
+
+### Phase 3 — Obligations & AV 🔴 (à venir)
+- **Déclencheur :** Total portefeuille ≥ 30k€ → ouverture AV Linxea
+- **Ajout AV :** IE00BDBRDM35 (iShares Core Global Agg Bond EUR Hdg, 0,10%)
+
+### Allocation finale cible
+- 65% MSCI World / 10% EM ESG / 10% EM ex-Chine / 10% Or / 5% Obligations
+- **TER moyen pondéré :** ~0,20%
+
+### Projection
+- 200€/mois × 30 ans = 72 000€ investis
+- À 7%/an → 245 417€ | À 10%/an → 417 557€
+- **Besoins pour 600k€ :** ~350€/mois à 7% sur 30 ans, ou 200€/mois à 10%/an sur 30 ans + apports ponctuels
+
+<<<<<<< Updated upstream
+### Portefeuille 70/25/5 (variante diversification)
+Référence : `docs/investissement/` — allocation complète 13 lignes avec SCPI, Crypto, Smart Beta.
+
+## Les leviers de revenus que je construis et optimise
+
+| Levier | Statut | Potentiel |
+|--------|--------|-----------|
+| 📺 YouTube Neuro-Finance | ✅ Pipeline actif (lun-sam 18h) | Monétisation → AdSense (1000 abonnés min.) |
+| 🖥️ Comparateur PEA + calculateurs | ✅ Lancé + 🚧 V2 | Affiliation Trade Republic + leads |
+| 🤖 Bot Telegram public | 🚧 En construction | Viralité + affiliation courtiers |
+| 📝 Articles/SEO finance | 💡 À lancer | Trafic organique → affiliation |
+
+## Ma bibliothèque d'investissement (14 fichiers reçus le 05/06/2026)
+
+```
+📂 docs/investissement/
+   roadmap_eric.md              → Synthèse complète de la roadmap
+   
+Les 14 documents source sont dans media/inbound/ :
+   BONUSE_* + roadmap_investissement_eric.pdf
+   
+Couvre : ETF PEA/non-PEA, SCPI, Private Equity, Or, Crypto, Obligataires,
+         Fonds datés, Calculateurs (frais, FIRE, 1M, enveloppes fiscales),
+         Stratégie multi-actifs (16 classes), Allocation 70/25/5
+```
+
+## Ce que j'ai fait (05/06/2026)
+- ✅ Reçu et analysé 14 fichiers d'investissement d'Eric
+- ✅ Sauvé la roadmap complète dans `docs/investissement/roadmap_eric.md`
+- ✅ Mis à jour MEMORY.md avec la vraie stratégie (Trade Republic, DCAM, 4 phases)
+- ✅ Priorités définies : portefeuille perso → simulateurs site → YouTube → bot Telegram
+- ✅ Prochaine action : ajouter les calculateurs interactifs au comparateur PEA
+
+## Mon humain
+- **Nom :** Eric (majordomef@gmail.com)
+- **Localisation :** France (UTC+2)
+- **Profil :** Développeur/homelab avancé, VPS OVH Ubuntu (57.129.120.7)
+- **Style :** Direct, va droit au but, n'aime pas répéter le contexte
+- **Âge :** 26 ans
+- **Objectif :** Liberté financière (600k€)
+
+## Projets actifs
+
+### Pipeline vidéo Neuro-Finance (mise à jour 2026-05-27)
+- **Pipeline unique :** `nightly_orchestrator.py` (prod) — pipeline test obsolète
+- **Plus de LTX :** clips piochés aléatoirement dans la réserve `~/output/raw_clips/`
+- **Montage 2 passes :** PASS 1 → PASS 2 avec `-movflags +faststart` (optimisé streaming)
+- **Modèle script :** **Gemma-4** (fallback DeepSeek-chat), word count 24-35 mots
+- **TTS rate : -5%** (Remy ralenti, ton posé — audit 08/05 confirmé)
+- **Validation post-encodage :** ffprobe vérifie 1920×1080 + codec après chaque rendu
+- **Data check renforcé :** cherche `%`, euros, millions, milliards (plus de simple regex `\d+`)
+- **Check /tmp :** bloque si espace < 1 Go avant encodage
+- **Code mort retiré :** `DEFAULT_DESC_TEMPLATE` supprimé
+- **Audit expert** (v4-pro, 08/05) : score **44/60** (+6 pts)
+- **Validation bloquante :** langue interdite, guru-score, data chiffrée
+- **Prompt renforcé** + **PHONETIC_FIXES** (comportemental, algorithme, etc.)
+- **Upload non-fatale :** si YouTube refuse, warning Telegram + sauvegarde
+- **Lock file (flock)**, **Protection dimanche**, **Anti-titre-dupliqué automatisé**, **Token check**, **Dead man's switch** — tous actifs
+- **Cron :** lun-sam 18h Paris
+
+### Comparateur PEA + Calculateurs (nouveau — 02/06, V2 en cours)
+- Site statique dans `web/pea-comparator/`
+- 429 ETF PEA indexés, filtrables par frais, SRI, émetteur
+- Lien affiliation Trade Republic intégré
+- 🚧 V2 : ajout des calculateurs (intérêts composés, FIRE, impact frais, enveloppes)
+- Objectif : trafic SEO → leads → commission
+=======
+## Les leviers de revenus
+
+| Levier | Statut | Potentiel |
+|--------|--------|-----------|
+| 📺 YouTube Neuro-Finance | ✅ Pipeline actif (TOUS LES JOURS 18h Paris — 1 vidéo/jour) | Monétisation → AdSense |
+| 🖥️ Comparateur PEA | ✅ Lancé + 10 calculateurs | Affiliation Trade Republic + leads |
+| 🤖 Bot Telegram public | 🚧 En construction | Viralité + affiliation courtiers |
+| 📝 Articles/SEO finance | 💡 À lancer | Trafic organique → affiliation |
+
+
+## Projets actifs
+
+### Pipeline vidéo Neuro-Finance
+- **Pipeline :** cron TOUS LES JOURS 16h UTC (18h Paris) — 1 vidéo/jour
+- **Script génération :** DeepSeek V4 Flash 0731 (fallback Gemma 4 31B), 4 segments de 38-55 mots
+- **Clips :** piochés aléatoirement dans `~/output/raw_clips/`
+- **Montage :** 2 passes (PASS 1 → PASS 2 +faststart)
+- **TTS :** `fr-FR-RemyMultilingualNeural` (rate -5%)
+- **Validations :** ffprobe 1920×1080, data check, espace /tmp > 1 Go
+- **Sécurités :** flock, anti-titre-dupliqué, dead man's switch
+
+### Comparateur PEA + Calculateurs
+- **Site :** `web/pea-comparator/` — 429 ETF PEA, 10 calculateurs
+- **Structure :** Header → Outils Financiers (10) → Top ETF → 429 ETF → FAQ → Footer
+- **Architecture :** HTML + script.js + script.min.js + calc_functions.js + etf-data.min.js
+- **Déploiement :** nginx root `/var/www/html/`
+- **Cache-busting :** hash fixe `v=1784966542`
+- **Objectif :** trafic SEO → affiliation Trade Republic
+>>>>>>> Stashed changes
+
+### Contenu YouTube en réserve (idées tirées des docs investissement)
+- "J'ai 26 ans, 200€/mois, voici mon plan pour être libre" → Storytime viral
+- "PEA vs AV vs CTO : le match fiscal" → Comparatif
+- "L'impact CACHÉ des frais (exemple 156 855€)" → Choc
+- "La règle de la moitié du chemin vers 1M€" → Éducatif
+- "4 phases pour l'indépendance financière" → Série
+
+<<<<<<< Updated upstream
+### Rapport matinal (8h Telegram)
+- Stats YouTube (abonnés, vues, top vidéo, niche leader)
+- Solde LTX : tracking manuel via state/ltx_balance.json
+- Consommation OpenRouter (daily + monthly)
+- Prochaine niche planifiée
+
+### Pipeline Test (obsolète — archive)
+- `nightly_test_orchestrator.py` en archive, plus utilisé
+- Voix Remy : `fr-FR-RemyMultilingualNeural` — stable et validée
+
+=======
+>>>>>>> Stashed changes
+### Projet Euromillions
+- **Pipeline v4 Évolutionnaire :** 100 stratégies génétiques, 7 modules de probabilité
+- **Audit & Nettoyage :** Pipeline audité, ML RandomForest supprimé (530 MB), 6 scripts nettoyés
+- **Cron :** Mardi et vendredi à 12:00 UTC (14:00 Paris)
+- **Cycle :** Scraping → Évaluation fitness → Évolution → Prédictions → Rapport Telegram
+
+### Infrastructure Alfred
+- OpenClaw + OpenRouter sur VPS OVH
+<<<<<<< Updated upstream
+- **Documentation technique :** `/home/ubuntu/.openclaw/workspace/docs/homelab/`
+- Model-router : Routage dynamique (Routine/Standard/Expert) cf. `TOOLS.md`
+- Bot Telegram connecté
+
+## Décisions importantes
+- **Chaîne YouTube :** 11 abonnés, 1 571 vues totales, 25 vidéos (au 03/06)
+- **Top vidéo :** "L'Erreur qui coûte le plus cher : L'Inaction" (207 vues)
+- **🔴 Audit YouTube 27/05 :** Score **48/100** — bugs thumbnail, ConvertKit, PERFORMANCE.md — CORRIGÉS
+- **Modèle default :** `openrouter/deepseek/deepseek-v4-flash`
+  - Fallback 1 : `openrouter/google/gemma-4-31b-it`
+  - Fallback 2 (expert) : `openrouter/deepseek/deepseek-v4-pro`
+  - `deepseek/deepseek-v4-flash` sans prefix pour appels API directs dans scripts
+- Clause de livraison obligatoire pour sub-agents
+- Base stratégique 2026 intégrée (`STRATEGY_2026.md`)
+
+## TikTok cross-posting (abandonné)
+- API TikTok Content Posting demandée (30/04) — toujours pas approuvé (27/05)
+- Abandon probable après 36 jours d'attente
+=======
+- **Model router :** DeepSeek V4 Flash 0731 (défaut), DeepSeek V4 Pro (complexe), Gemma 4 31B (fallback)
+- **Nocturne Memory :** port 8898 (MCP SSE, remplace Mem0)
+- **Bot Telegram :** connecté
+
+## Décisions clés
+- **Chaîne YouTube :** @alfred-studio, 25+ vidéos
+- **Modèle default :** `deepseek/deepseek-v4-flash-0731` | **Pro :** `deepseek/deepseek-v4-pro` | **Fallback :** `google/gemma-4-31b-it`
+- **Clause livraison obligatoire** pour sub-agents
+>>>>>>> Stashed changes
+
+## Finances & patrimoine
+- **PEA :** Trade Republic (DCAM, 200€/mois)
+- **Framework :** Gavekal + Taleb (4 buckets : or, cash, équités, convexité/BTC)
+- **Bitcoin :** Cold storage
+<<<<<<< Updated upstream
+- **Objectif :** 600 000 € (2000€/mois à 4%)
+- **Suivi :** Manuel via la roadmap 4 phases
+
+## Vacances
+- Lac de Serre-Ponçon, semaine du 14 juillet
+
+## Comportement
+- **Mission #1 :** Tout ce que je fais est orienté vers un seul objectif — générer le max de revenus pour Eric afin d'atteindre les 600 000 €.
+- **Style :** Réponses rapides et directes, sans blabla
+- **Autonomie :** Ne pas attendre qu'Eric relance. Agir, corriger, envoyer le résultat directement. Anticiper les étapes suivantes. L'informer, pas lui demander la permission.
+- **Priorisation :** Tout projet qui rapporte de l'argent (ou qui y contribue indirectement) passe avant le reste.
+- **Proactivité :** Après chaque session, vérifier les prochaines actions programmées et avancer sans attendre.
+=======
+
+## Système d'auto-amélioration
+
+| Horaire UTC | Script | Fonction |
+|-------------|--------|----------|
+| */30 6-22 | `scripts/end_of_session.py` | Extraction leçons + patterns d'erreurs |
+| 23:00 | `scripts/daily_memory_update.py` | Met à jour métriques dans MEMORY.md |
+| 08:00 | `scripts/auto_reflection.py` | Détection patterns récurrents → alertes |
+| 02:00 | `scripts/stats_youtube_nightly.py` | Stats YouTube auto (token OAuth) |
+| 02:30 | `scripts/veille_concurrence.py` | Veille concurrence chaînes finance/IA |
+| 03:30 | `scripts/auto_diagnostic.py` | Auto-diagnostic logs pipeline, disque |
+| 04:00 | `scripts/revenue_audit.py` | Audit revenus → `state/revenue_audit/latest.json` + Telegram |
+| 04:30 | `scripts/seo_tracker.py` | Suivi SEO positions mots-clés |
+
+## Leçons apprises (juillet 2026)
+
+### PEA Comparator
+- Heredoc bash corrompt le HTML > 40 KB — toujours utiliser Python
+- Ne jamais `git checkout HEAD` sans backup
+- Event delegation > querySelectorAll pour sites avec gros scripts
+- Toujours copier TOUS les fichiers JS (pas seulement HTML)
+- Design visuel à l'aveugle = catastrophe — demander screenshot
+- Quand Eric approuve, s'arrêter — ne pas continuer à itérer
+- Vérifier les 3 fichiers (HTML+CSS+JS) après un rollback
+- `etf-data.min.js` expose `window.PEA_ETFS`
+
+### Pipeline vidéo
+- Hook analysis réparé le 30/07 : whisper import cassé → toutes les vidéos notées 6.0/10 fixe
+- A/B testing initié : test chiffre choc vs question
+- Pipeline path corrigé : `nightly_orchestrator` → `pipeline_orchestrator`
+
+### Infrastructure
+- 6 scripts cron nocturnes existent dans `workspace/scripts/`
+- Les chemins de fichiers doivent être vérifiés systématiquement (causes de 70% des bugs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Skills (août 2026) — inspiré de NVIDIA/skills
+- Chaque skill agent doit avoir un frontmatter normalisé (name/version/description/compatibility/tags/allowed-tools) — template dans `skills/_template/SKILL.md.template`
+- **Gap :** nos skills n'ont pas de validation/benchmark objectif → ajouter un mini-benchmark par skill clé (pipeline vidéo, PEA Comparator) pour détecter régressions
+- Le contenu NVIDIA (CUDA/robotique) est inutile pour nos projets ; ne copier que l'infrastructure skills
+
+## Metriques (2026-08-19 23:00)
+- Site: 5/5 pages OK
+- Trafic 24h: 638 hits, 127 visiteurs
+- Trafic 7j: 7204 hits, 628 visiteurs
+- YouTube: 16 abos, 46 vues
+
+### Watchdog (2026-08-20)
+- Fix: vps_watchdog.py n'était pas exécutable (Permission denied depuis ~20j, 975 erreurs). chmod +x appliqué.
+- Fix: checks Mem0 (mort) remplacés par nocturne_memory (port 8898) — plus de fausses alertes.
+- Service mémoire actif = nocturne_memory (systemd alfred-memory.service désactivé, ne pas relancer).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Metriques (2026-09-20 23:00)
+- Site: 4/5 pages OK
+- Trafic 24h: 984 hits, 130 visiteurs
+- Trafic 7j: 7831 hits, 653 visiteurs
+- YouTube: N/A abos, N/A vues
+
+## Projet Macro Gave (methode corrigee 2026-08-24)
+- **Methode:** quadrant classe vs moyenne de CYCLE 7 ANS (croissance PIB YoY + inflation HICP Eurostat), PAS a des seuils absolus. Backtest 4/4 valide.
+- **Refs reelles (API Eurostat):** croissance mean7y=1.14pct (actuel 0.9, 2026-Q2) ; inflation mean7y=3.20pct (actuel 2.0, 2025-12).
+- **Verdict reel:** Q4 (croissance basse + inflation basse). Transition 0/100.
+- **Acces externe:** PMI S&P, Brent ICE, TTF = cles payantes; reste seed en attendant API libre.
+
+
+## Incident pipeline 2026-08-25 (YouTube OAuth)
+- 2e jour consecutif d'echec du pipeline 16:00 (24 et 25/08) : token OAuth YouTube corrompu (client_secret manquant, ~/.secrets/youtube_token.json).
+- Fix applique : reparation token (corrompu archive: youtube_token.json.corrompu_20260825) + patch robustesse upload.py (_inject_client_secret, 16:42).
+- Valide 20:45 UTC : oauth_check OK, token renouvele.
+- Upload manuel de la video du jour (PROD_20260825_1610) reussi -> https://www.youtube.com/watch?v=Y81mCpdXqX0
+- Note : creds.to_json() ne stocke PAS client_secret; _inject_client_secret() le re-injecte a chaque upload. Ne pas remplacer ce patch.
+
+## Lecon Euromillions (2026-08-28) — chantier CLOS
+- Backtest evolutionnaire 935 tirages (2017-2026) refait 2x : resultats IDENTIQUES (evolue 2.0995 vs controle 2.1037, avantage -0.0043, p=0.62) -> protocole reproductible, pas d'artefact.
+- Verdict def. : l'evolution ne bat PAS la population figee, et personne ne bat le hasard. Aucun signal predictif exploitable.
+- Mode production = uniforme maintenu. NE PAS rouvrir ce chantier (prochain run = meme conclusion).
+- Livre quand meme : evolution_backtest.py (eval historique + fitness relative + comparaison evolue/controle), antifoule.py (grilles anti-partage >31), hybride v2 par VOTE bagging dans analyze_v2.py.
+- Le SEUL edge reel = anti-foule (numeros impopulaires -> gains moins partages) -> argument produit bot/SEO.
+- Fichiers d'archivage : euromillions/backups/runs_20260828/
+
+## Heartbeat 2026-08-29 — Pipeline vidéo dégradé
+- Neuro-finance daily (16h UTC) : 6 échecs sur les 8 derniers runs (exit=1), dont 2 TIMEOUT 1800s (08-21, 08-28). Runs OK : 08-26, 08-27.
+- 08-28 : pas de vidéo produite/publiée (orchestrateur bloqué >1800s).
+- À diagnostiquer avant run 16h du 29/08 : étape de blocage orchestrateur (probable génération image / appel LLM / ffmpeg).
+
+## Incident 2026-09-03 — Fact-check boucle + fix root cause
+- 3 echecs pipeline neurofinance (04:00 idees #16, 04:28 #17, 04:50 #18 avant patch) sur le MEME blocage : "Fact-check refuse apres 3 tentatives" — memes symptomes que le 28/08.
+- **Root cause trouvee :** ask_llm() dans pipeline/pipeline_orchestrator.py n'envoyait le parametre reasoning:exclude qu'au modele DeepSeek V4 Pro. Le modele principal deepseek-v4-flash-0731 est un modele reasoning -> il mettait son brouillon dans le champ reasoning et renvoyait content=None ("Reponse vide") -> fallback Gemma -> scripts qualite degradee -> fact-check bouclait 3x et plantait.
+- **Fix :** ligne 221, condition etendue de m == deepseek-pro a "deepseek" in m (reasoning.exclude + response_format json s'applique a TOUS les modeles DeepSeek). Backup: pipeline_orchestrator.py.bak_factcheck_refus_20260903.
+- **Resultat :** relance a 04:50 -> idee #18 "Le vrai cout de jouer en bourse" = SUCCES. Fact-check valide au 2e essai, video PROD_20260903_0504 (71.6s, 1080x1920, score 84/100), upload YouTube OK -> https://youtu.be/-HnrFydthbA , cross-post Zernio LinkedIn OK. Idee marquee done.
+- **Lecon :** tout modele deepseek (flash/pro) doit recevoir reasoning.exclude sinon content=None. NE PAS reverter ce patch.
+
+## Heartbeat 2026-09-10 — Pipeline vidéo dégradé (3 échecs, 0 vidéo)
+- Aucune vidéo PROD le 10/09 : 3 echecs consecutifs (succes la veille, idee #25 exit=0).
+  1. 04:00 UTC idee #26 "Ce que vous croyez risqué ne l'est pas" -> exit=1 apres 1235s.
+  2. 05:15 UTC retry #26 -> exit=1 apres 885s : "Fact-check refuse apres 3 tentatives : 5 problemes persistent" MALGRE 2 corrections automatiques deepseek (DATA-VALIDATION). Les 5 points restants sont des affirmations jugees non-sources/universelles (10% du revenu, "la discipline bat l'intuition", etc.) -> probable desaccord circulaire validateur/generateur (barre trop stricte ?), PAS le bug reasoning de 09-03 (patch toujours en place).
+  3. 07:22 UTC idee #27 "Votre compte-titres déteste votre perfectionnisme" -> TIMEOUT 1800s (meme symptome que le 28/08).
+- A diagnostiquer avant le run 04:00 UTC du 11/09 : boucle fact-check qui ne converge pas + etape de blocage >1800s.
+
+## Heartbeat 2026-09-11 — Pipeline récupéré, QA viralité en baisse
+- **Correction note 09-10 :** la video du 10/09 a FINALEMENT ete produite a 17:23 (PROD_20260910_1723) — la journee a fini avec 1 video, pas 0. Le run 16:00 a compense les 3 echecs du matin.
+- Run 04:00 du 11/09 (idee #29 "Le sentiment de controle vous rend aveugle au hasard") : SUCCESS exit=0 en 1457s. Video PROD_20260911_0413 (80.9s, 63MB→4MB compressee), QA 72/100.
+- Publication OK : YouTube https://www.youtube.com/watch?v=G0oMZs-kaDo + Zernio (linkedin). OAuth OK (patch client_secret toujours en place).
+- La boucle fact-check du 10/09 (non-convergence 04:00/05:15 + TIMEOUT 07:22) ne s'est PAS reproduite le 11/09 — plus besoin de diagnostic bloquant.
+- **Signal QUALITE (nouveau) :** QA video du 11/09 = 72/100 vs baseline 76.5/100 (87 videos), dont Viralite 9/20 et tendance "Degradation". Faiblesse viralite recurrente.
+- **1 seule amelioration prioritaire :** analyser le hook + chute (video-analysis) sur PROD_20260911_0413 pour remonter la Viralite (>12/20) avant les prochains runs.
+>>>>>>> Stashed changes
+
+## Pass 2 refonte site (2026-09-19) - 10 bugs corriges
+- Icones outils : 12 SVG lucide (24px stroke 1 #0F766E) remplaces, plus AUCUN emoji dans les tool-cards.
+- tool-card.open grid-column 1/-1 : simulateur ouvert = pleine rangee.
+- Tableau : CSS unifie en #etfTable (hover/sticky ne s appliquaient pas avant).
+- id=faq ajoute sur FAQ (lien header fonctionne).
+- Header <820px : vrai hamburger au lieu de la colonne full-width ; logo sans border-radius 50.
+- OG : nouveau og-image.jpg avec le A teal visible (ancien : 0 px teal).
+- leadModal supprime.
+- Trim des espaces de tete laisses par emoji (titres, toast, boutons, cookie).
+- Anciennes vars inline -> tokens :root actuels.
+- BUG STRUCTURE : carte topetf imbriquee dans plan40 (div manquant) cassee - corrige.
+- Cache-bust style.css v=1789804741.
+- Blog : title/meta_title/logo/icon -> Alfred, description UTF-8, nav sans /pea-comparator/, posts+footer assainis.
+- Deploye /var/www/html + push git main (commit 9934b54).
+
+## Heartbeat 2026-09-20 — Incident pipeline vidéo
+- Le pipeline 20260920 a echoue a 04:00 : la restructuration du 19/09 08:38 avait supprime les sources skills/video-analysis (analyze_video.py, modules) et vide skills/alfred_video_pipeline/ (PLAYBOOK/CHARTER/LEXICON/brand_icon).
+- Fix : import analyze_video rendu optionnel (fallback degrade + WARN) ; 4 fichiers bloquants restaures depuis /home/ubuntu/.openclaw/sandboxes/agent-main-f331f052/skills/alfred_video_pipeline/ (copies 2026-07-19). Backup orchestrateur : pipeline_orchestrator.py.bak_before_analyze_guard.*
+- Backfill relance 12:48 UTC (idee #41).
+- LECON : apres toute restructuration de skill, verifier imports de pipeline_orchestrator.py + assets alfred_video_pipeline avant le prochain run cron.
+- A FAIRE (non bloquant) : reconstruire analyze_video.py (seuls des .pyc subsistent, pas de source nulle part, hors git) pour re-activer l analyse auto.
+
+## Heartbeat 2026-09-21 — Incident pipeline vidéo (caption_burner manquant)
+- Echec idee #42 (Les soldes en bourse sont un piège) a 04:01 et 04:35 UTC : ModuleNotFoundError: No module named 'caption_burner' dans scene_composer.py (stage 5 composition).
+- Cause : caption_burner.py supprime du disque (restructuration du 19/09 ou cleanup pyc) ; seuls des .pyc stale (juil.) subsistaient. Non tracke dans l'index git.
+- Fix : restaure depuis git b7ba27a → skills/alfred_cron/caption_burner.py (692 lignes, 26021 octets). Import verifie + smoke test burn_ass_captions sur video 2s : OK (BURN_OK 29112 bytes).
+- Idee #42 remise a pending (backup output/pipeline_ideas.json.bak_20260921_pre_caption_fix) — la video du jour sera produite au prochain run cron (04:00 UTC).
+- LECON : quand un import pipeline echoue, verifier git log --all même si le fichier n'est pas dans l'index (git show <commit>:<path>) ; les pyc-only sans source ne s'importent pas.
+- NON BLOQUANT : MEMORY.md contient des marqueurs de conflit git non resolus en tete (<<<<<<< Updated upstream / Stashed changes) — a nettoyer lors d'une prochaine session.

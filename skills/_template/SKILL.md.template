@@ -1,0 +1,58 @@
+---
+name: <skill-name-slug>
+version: "<date-based e.g. 26.08.00>"
+description: |
+  <1-2 phrases: what it does + EXACT trigger conditions. "Use when user wants to X">
+license: <license>
+compatibility: |
+  <targets: which clients + required env: paths, tools, libs>
+metadata:
+  author: "<team or alias>"
+  github-url: "<source repo if any>"
+  tags:
+    - <tag1>
+    - <tag2>
+allowed-tools: <comma list of tools the skill may use>
+---
+
+# <Skill Title>
+
+## Purpose
+
+<1-3 sentences: what this skill accomplishes and the outcome it produces.>
+<Explicit workflow boundaries: what it OWNS vs what it HANDS OFF to another skill.>
+
+## Prerequisites
+
+- Access / tools needed
+- Environment / config expected (paths, secrets location, services)
+- Implicit assumptions
+
+## Workflow
+
+### Step 1 : <Name>
+1. Concrete action
+2. Concrete action
+
+> ⚠️ Watch out: <failure mode / gotcha>
+
+### Step 2 : <Name>
+
+## Output
+- **Output Type(s):** ...
+- **Output Format:** ...
+- **Exit criteria:** <what proves the skill completed its goal>
+
+## Validation (mini-benchmark)
+| Check | Pass criteria |
+|---|---|
+| Correctness | ... |
+| Discoverability (trigger) | ... |
+| Efficiency (no wasted calls) | ... |
+| Security (no secret leakage) | ... |
+| Regression guard | ... |
+
+## Maintenance
+- Last reviewed: <date>
+- Next review: <+30 days>
+- Status: active / deprecated / merged-into:<name>

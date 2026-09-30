@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-29",
+  "timestamp": "2026-07-29T04:00:04.029010",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "15",
+      "views": "4",
+      "vids": "4",
+      "last_title": "L'art de la sortie : maîtriser le cycle",
+      "last_views": "3",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": false,
+      "morning": false,
+      "us_pulse": false,
+      "last_signal": "28/07 06:00"
+    },
+    "infra": {
+      "disk_pct": 60,
+      "disk_total": "72G",
+      "disk_used": "43G",
+      "ram_used_pct": 29,
+      "nginx": "active",
+      "ghost_docker": "Up 46 hours"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-07-31"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 562,
+    "ips_24h": 112,
+    "hits_7d": 9390,
+    "ips_7d": 725
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "📈 Crons Alfred Trader incomplets",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

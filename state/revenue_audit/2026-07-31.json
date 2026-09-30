@@ -1,0 +1,57 @@
+{
+  "date": "2026-07-31",
+  "timestamp": "2026-07-31T04:00:03.840488",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "15",
+      "views": "20",
+      "vids": "6",
+      "last_title": "Le piège du cerveau qui ruine votre capital",
+      "last_views": "1",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "30/07 16:57"
+    },
+    "infra": {
+      "disk_pct": 63,
+      "disk_total": "72G",
+      "disk_used": "45G",
+      "ram_used_pct": 28,
+      "nginx": "active",
+      "ghost_docker": "Up 3 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-07-31"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 365,
+    "ips_24h": 111,
+    "hits_7d": 7261,
+    "ips_7d": 609
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

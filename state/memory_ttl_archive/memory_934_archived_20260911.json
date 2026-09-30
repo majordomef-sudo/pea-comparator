@@ -1,0 +1,10 @@
+{
+  "id": 934,
+  "content": "Les hooks nocturne_nudge.py et blog_writer.py ont été modifiés pour logger les coûts après chaque appel API",
+  "created_at": "2026-08-01 16:00:25.919660",
+  "node_uuid": "fe5bdaf6-2bfc-48ea-82de-9f84c4cb2dc4",
+  "archived_at": "2026-09-11T19:36:54.640927+00:00",
+  "type": "EPISODIC",
+  "ttl_days": 30,
+  "age_days": 41.2
+}

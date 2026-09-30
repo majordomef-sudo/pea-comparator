@@ -1,0 +1,11 @@
+=== Ghost Publication Report ===
+Date: 2026-07-05
+Title: Comparatif 2026 : ETF, Fonds, SCPI, Private Equity
+Slug: comparatif-etf-fonds-scpi-private-equity-2026
+Status: published
+URL: https://alfredstudio.mooo.com/blog/comparatif-etf-fonds-scpi-private-equity-2026/
+ID: 6a4a897350345000016c8238
+Tags: ETF, Investissement, SCPI, Private Equity, France
+Status Code: 201
+---
+✅ Article publié avec succès.

@@ -1,0 +1,72 @@
+{
+  "date": "2026-07-24",
+  "timestamp": "2026-07-24T04:00:03.883627",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 4,
+      "total": 4,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": 15,
+      "views": 80,
+      "vids": 1,
+      "last_title": "N/A",
+      "last_views": 0,
+      "last_likes": 0,
+      "pipeline_ok": true,
+      "last_orch": "23/07",
+      "pipeline_cron": true,
+      "est_watch_hours": 1.6,
+      "subs_pct_early": 3,
+      "subs_pct_full": 2,
+      "hours_pct_early": 0,
+      "hours_pct_full": 0,
+      "pot_rev_monthly_low": 0.4,
+      "pot_rev_monthly_high": 1.6
+    },
+    "alfred_trader": {
+      "crons_ok": false,
+      "morning": false,
+      "us_pulse": false,
+      "last_signal": "23/07 06:00"
+    },
+    "infra": {
+      "disk_pct": 57,
+      "disk_total": "72G",
+      "disk_used": "41G",
+      "ram_used_pct": 32,
+      "nginx": "active",
+      "ghost_docker": "Up 7 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "19/07 05:20"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    },
+    "affiliation": {
+      "tr_link_present": true,
+      "etf_links_count": 1
+    }
+  },
+  "traffic": {
+    "hits_24h": 2001,
+    "ips_24h": 187,
+    "hits_7d": 10683,
+    "ips_7d": 1008,
+    "top_referrers": "\"-\" (893) | dca08dcf.canary.invalid (1) | c9994ff1.canary.invalid (1)"
+  },
+  "fixes": [],
+  "actions": [
+    "📈 Crons Alfred Trader incomplets",
+    "🎯 Objectif 100 abonnés → mise en place stratégie cross-pub blog/YouTube",
+    "⏱️ Watch hours faibles (2h/3000h) — prioriser les formats longs >8min",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA → affiliation Trade Republic"
+  ],
+  "version": 4
+}

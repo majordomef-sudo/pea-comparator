@@ -1,0 +1,74 @@
+# Niche: Mind Vault (faits surprenants, culture G)
+name: "Mind_Vault"
+display_name: "Mind Vault — Culture G & Curiosités"
+emoji: "🧠"
+
+script:
+  tone: "surprenant, narratif, captivant"
+  pacing: "dense, une révélation toutes les 7 secondes"
+  hooks:
+    - pattern: "mind_blown"
+      template: "Ce que vous savez sur {topic} est faux. Voici la vérité."
+    - pattern: "did_you_know"
+      template: "Saviez-vous que {fact} ? Personne n'en parle."
+    - pattern: "paradox"
+      template: "{thing_a} existe. {thing_b} aussi. Les deux sont vrais. Comment ?"
+    - pattern: "hidden_story"
+      template: "L'histoire cachée derrière {something} va vous surprendre."
+  cta_variants:
+    - "🧠 Un fait, un jour. Suivez pour rester curieux."
+    - "💡 La connaissance rend libre. Abonnez-vous."
+    - "🔔 Activez la cloche pour votre dose quotidienne de curiosité."
+  word_count: "25-35 mots"
+  forbidden: ["like and subscribe", "cliquez sur j'aime"]
+
+visuals:
+  style: "sombre, violet/cyan, dynamique, data-rich"
+  subjects: ["archives", "documents anciens", "schémas", "cartes", "animaux", "espace"]
+  avoid: ["publicité", "bureau"]
+  overlay_style: "violet néon, fade-in"
+
+voice:
+  voice_a: "fr-FR-VivienneMultilingualNeural"
+  rate: "-3%"
+  energy: "enthousiaste, captivant"
+
+captions:
+  style: "fade-in progressif"
+  position: "lower_third"
+
+music:
+  mood: "mystérieux, intrigant, ambient"
+  volume: 0.15
+  loop_track: "bgm_mystery.wav"
+
+video:
+  clip_count: 3
+  clip_duration: 10
+  aspect_ratio: "9:16"
+  resolution: "1080×1920"
+  subscribe_screen: 2.5
+  watermark: true
+  transitions: ["fade", "dissolve", "zoomin", "pixelize"]
+
+thumbnail:
+  style: "sombre, texte violet/cyan, élément visuel choc"
+  text_position: "center"
+
+hashtags:
+  default: "#cultureg #curiosité #histoire #science #savoir #insolite #mindvault"
+  searchable: ["culture générale", "curiosités", "histoire insolite"]
+
+research:
+  enabled: true
+  sources: ["wikipedia", "scientific news", "history"]
+  refresh: "daily"
+
+weekly_schedule:
+  monday: "Histoire méconnue"
+  tuesday: "Science surprenante"
+  wednesday: "Curiosité du monde"
+  thursday: "Mythe ou réalité"
+  friday: "Découverte"
+  saturday: "Récap savoir"
+  sunday: "Neurofinance"

@@ -1,0 +1,1235 @@
+#!/usr/bin/env python3
+"""
+pipeline_orchestrator.py — Pipeline vidéo amélioré (inspiré OpenMontage)
+======================================================================
+Pipeline stage-based avec :
+  - STAGE 1 : SCRIPTS → LLM avec rotation de sujets
+  - STAGE 2 : PREFLIGHT → vérification capacités
+  - STAGE 3 : ASSETS → génération images (PiAPI) + overlays graphiques (Pillow)
+  - STAGE 4 : VOICEOVER → génération audio par segment
+  - STAGE 5 : COMPOSE → composition ffmpeg avec Ken Burns + overlays + sous-titres
+  - STAGE 6 : VALIDATION → verification dimensions, durée, codec
+  - STAGE 7 : UPLOAD → YouTube + Zernio (TikTok/LinkedIn)
+
+Utilise les modules du package pipeline/ :
+  - pipeline/preflight.py
+  - pipeline/asset_generator.py
+  - pipeline/scene_composer.py
+"""
+
+import os, sys, json, random, re, time, asyncio, shutil, difflib, subprocess
+from datetime import datetime
+from pathlib import Path
+from collections import defaultdict
+
+import requests, edge_tts
+
+# Ajouter les chemins pour les imports
+SCRIPT_DIR = Path(__file__).parent.resolve()
+WORKSPACE_DIR = SCRIPT_DIR.parent
+sys.path.insert(0, str(WORKSPACE_DIR))
+sys.path.insert(0, str(WORKSPACE_DIR / "skills" / "alfred_cron"))
+
+from pipeline.preflight import run_preflight, print_report, check_can_produce
+from pipeline.asset_generator import (
+    generate_scene_images,
+    create_title_card,
+    create_end_card,
+    create_overlay_sequence,
+    create_youtube_thumbnail,
+    load_secrets,
+)
+from pipeline.director import StageDirector
+
+try:
+    from tools.virality_scanner import scanner as virality_scanner
+except ImportError:
+    print("[WARN] tools.virality_scanner non trouvé — scanner viral désactivé")
+    class _DummyScanner:
+        @staticmethod
+        def scan_text_for_hooks(text):
+            return []
+        @staticmethod
+        def scan_video(video_path):
+            return {}
+        @staticmethod
+        def scan_text(text):
+            return []
+    virality_scanner = _DummyScanner()
+
+from pipeline.scene_composer import compose_final_video
+# Late-bound imports avec fallback silencieux
+try:
+    from caption_burner import make_ass_captions, burn_ass_captions, get_word_timings
+except ImportError:
+    def make_ass_captions(*a, **kw): raise ImportError("caption_burner non disponible")
+    def burn_ass_captions(*a, **kw): raise ImportError("caption_burner non disponible")
+    def get_word_timings(*a, **kw): return None
+    print("[WARN] caption_burner non trouvé — sous-titres désactivés")
+
+try:
+    from zernio_uploader import upload_video as zernio_upload_video
+except ImportError:
+    def zernio_upload_video(*a, **kw): return {"success": False, "error": "zernio_uploader non disponible"}
+    print("[WARN] zernio_uploader non trouvé — cross-post Zernio désactivé")
+
+# Analyse vidéo auto + apprentissage
+_ANALYSIS_PATH = str(WORKSPACE_DIR / "skills" / "video-analysis" / "scripts")
+_MODULES_PATH = str(WORKSPACE_DIR / "skills" / "video-analysis" / "scripts" / "modules")
+if _ANALYSIS_PATH not in sys.path:
+    sys.path.insert(0, _ANALYSIS_PATH)
+if _MODULES_PATH not in sys.path:
+    sys.path.insert(0, _MODULES_PATH)
+from analyze_video import analyze
+from learning import store_analysis, detect_patterns, generate_lessons, get_prompt_lessons
+
+
+# ── CONFIG ──────────────────────────────────────────────────────────
+
+SECRETS_ENV = Path.home() / ".secrets/env"
+WORKSPACE = Path(os.environ.get("ALFRED_WORKSPACE", str(Path.home() / ".openclaw" / "workspace")))
+PIPELINE_DIR = WORKSPACE / "skills/alfred_video_pipeline"
+
+PLAYBOOK_PATH = PIPELINE_DIR / "PLAYBOOK_NEURO_FINANCE.md"
+CHARTER_PATH = PIPELINE_DIR / "EDITORIAL_CHARTER_NEURO_FINANCE.md"
+LEXICON_PATH = PIPELINE_DIR / "SEMANTIC_LEXICON_NEURO_FINANCE.md"
+PERFORMANCE_MD = PIPELINE_DIR / "PERFORMANCE.md"
+
+UPLOAD_PY = WORKSPACE / "skills/youtube_upload/upload.py"
+
+RAW_CLIPS_ROOT = Path.home() / "output" / "raw_clips"
+CLIP_CACHE_FILE = WORKSPACE / "state" / "clip_db_cache.json"
+
+# Modèles LLM
+MODEL_MAIN = os.environ.get("MODEL_PIPELINE", "deepseek/deepseek-v4-flash")
+MODEL_FALLBACK = "google/gemma-4-26b-a4b-it"  # fallback si flash indisponible
+
+# Tags YouTube
+DEFAULT_TAGS = [
+    "Neuro-Finance", "finance comportementale", "biais cognitifs",
+    "investissement", "psychologie de l'argent", "éducation financière",
+    "cerveau et argent", "antifragilité", "probabilités", "risque"
+]
+DEFAULT_HASHTAGS = "\n#NeuroFinance #FinanceComportementale #Investissement #PEA #ETF #Bourse #Patrimoine #IndépendanceFinancière #PsychologieDeLArgent"
+
+RICH_DESC_TEMPLATE = """👋 {hook}
+
+💰 **Économisez sur vos frais d'investissement**
+📈 Comparez 429 ETF PEA et trouvez les moins chers → https://alfredstudio.mooo.com/pea-comparator/?utm_source=youtube&utm_medium=description&utm_campaign=neurofinance
+
+🎁 **Guide PDF gratuit : 5 Biais Cognitifs Qui Ruinent Votre Épargne**
+📥 Téléchargez-le ici → https://alfred-ai.kit.com/834d11787a
+
+💎 **Contenu exclusif chaque semaine**
+🔒 Analyse complète + roadmap 600k€ → https://alfredstudio.mooo.com/blog/?utm_source=youtube&utm_medium=description&utm_campaign=neurofinance
+
+🤖 **Un bot Telegram pour vos recherches ETF**
+🔍 Trouvez un ETF par ISIN en 2 secondes → https://t.me/AlfredETFBot
+
+🎯 Dans cette vidéo :
+{bullets}
+
+📊 Analyse des mécanismes financiers, stratégies d'investissement et décryptées par l'IA.
+
+**🔍 Mots-clés :** finance comportementale, investissement, PEA, ETF, épargne, capital, patrimoine, indépendance financière, gestion de patrimoine, marchés financiers, bourse, trading.
+
+👉 **Suivez-moi :**
+📺 YouTube : https://www.youtube.com/@alfred-studio
+🎵 TikTok : https://www.tiktok.com/@alfred.studio
+💼 LinkedIn : https://www.linkedin.com/in/alfred-studio
+
+🔔 Abonnez-vous pour ne rien rater.
+{hashtags}"""
+
+
+# ── HELPERS ─────────────────────────────────────────────────────────
+
+def send_telegram(msg):
+    print(f"[TG] {msg}")
+    secrets = load_secrets()
+    bt = secrets.get("TELEGRAM_BOT_TOKEN")
+    ci = secrets.get("TELEGRAM_CHAT_ID")
+    if bt and ci:
+        try:
+            requests.post(
+                f"https://api.telegram.org/bot{bt}/sendMessage",
+                data={"chat_id": ci, "text": msg}, timeout=10
+            )
+        except Exception as e:
+            print(f"[TG ERR] {e}")
+
+
+def ask_llm(prompt, model=MODEL_MAIN, max_tokens=1500):
+    """Appel LLM avec fallback automatique."""
+    secrets = load_secrets()
+    api_key = secrets.get("OPENROUTER_API_KEY")
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    models_to_try = [model] if model != MODEL_MAIN else [MODEL_MAIN, MODEL_FALLBACK]
+
+    for m in models_to_try:
+        for attempt in range(3):
+            try:
+                resp = requests.post(url, headers=headers, json={
+                    "model": m, "messages": [{"role": "user", "content": prompt}],
+                    "temperature": 0.7, "max_tokens": max_tokens
+                }, timeout=45)
+                if resp.status_code == 429:
+                    time.sleep(2 ** attempt + random.random())
+                    continue
+                resp.raise_for_status()
+                data = resp.json()
+                c = data["choices"][0]["message"]["content"]
+                match = re.search(r"```(?:json)?\s*(.*?)\s*```", c, re.DOTALL)
+                return (match.group(1) if match else c).strip(), m
+            except Exception as e:
+                if attempt == 2:
+                    print(f"[LLM] {m} failed: {e}")
+                    break
+                time.sleep(2 ** attempt)
+    raise Exception("Tous les modèles LLM ont échoué")
+
+
+def get_audio_duration(path):
+    r = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+        capture_output=True, text=True, check=True
+    )
+    return float(r.stdout.strip())
+
+
+# ── VALIDATION ──────────────────────────────────────────────────────
+
+GURU_BLACKLIST = [
+    "riche rapidement", "secret", "miracle", "liberté financière",
+    "astuce", "gagner gros", "methode miracle", "devenir riche"
+]
+
+FORBIDDEN_WORDS = [
+    "hedge fund", "smart money", "leverage", "criterion", "storytelling",
+    "dark pattern", "exit strategy", "deal", "trade", "trading", "trader",
+    "broker", "asset", "liability", "equity", "bond", "bull market",
+    "bear market", "spread", "swap", "default", "margin call", "portfolio",
+    "capital gain", "cash flow", "pricing", "risk premium", "overhead",
+    "fee", "rating", "investment bank", "private equity", "venture capital",
+    "high frequency", "algorithmic", "behavioral finance", "mispricing",
+    "volatility", "cognitive",
+    "dinero", "mercado", "inversion", "ganancia", "perdida", "riesgo",
+    "banco", "finanzas", "accion", "bono", "tasa", "negocio", "interes",
+    "inversor", "ahorro", "deuda",
+]
+
+PHONETIC_FIXES = {
+    "cognitive": "cognitif", "cognition": "cognition",
+    "behavioral": "comportemental", "algorithm": "algorithme",
+    "algorithmic": "algorithmique", "default": "défaut",
+    "leverage": "levier", "volatility": "volatilité",
+    "portfolio": "portefeuille", "equity": "capitaux",
+    "liability": "passif", "bond": "obligation",
+    "premium": "prime", "rating": "notation", "criterion": "critère",
+    "hedge fund": "fonds spéculatif", "smart money": "capitaux informés",
+    "storytelling": "récit", "dark pattern": "manipulation",
+    "exit strategy": "stratégie de sortie", "deal": "accord",
+    "trade": "échange", "trading": "transaction",
+    "trader": "opérateur", "broker": "courtier",
+    "asset": "actif", "bull market": "marché haussier",
+    "bear market": "marché baissier", "spread": "écart",
+    "swap": "échange", "margin call": "appel de marge",
+    "capital gain": "plus-value", "cash flow": "flux de trésorerie",
+    "pricing": "tarification", "risk premium": "prime de risque",
+    "overhead": "frais généraux", "fee": "commission",
+    "investment bank": "banque d'affaires",
+    "private equity": "capital-investissement", "venture capital": "capital-risque",
+    "high frequency": "haute fréquence",
+    "behavioral finance": "finance comportementale",
+    "mispricing": "erreur de prix",
+    # Corrections phonétiques TTS pour verbes français mal prononcés
+    "échouent": "font faillite",
+    "s'évanouissent": "disparaissent",
+    "disparaissent": "disparaissent",
+}
+
+
+
+def calculate_guru_score(text):
+    return sum(text.lower().count(t) for t in GURU_BLACKLIST)
+
+
+def contains_forbidden_words(text):
+    lower_text = text.lower()
+    for word in FORBIDDEN_WORDS:
+        if word in lower_text:
+            print(f"[LANG] mot interdit: '{word}'")
+            return True
+    return False
+
+
+# ── CLIP DATABASE (fallback si pas d'images générées) ──────────────
+
+
+
+def validate_script_data(segments, model=MODEL_MAIN):
+    """
+    Valide que les donnees chiffrees du script sont plausibles.
+    Utilise un LLM pour fact-checker chaque segment.
+    Retourne (is_valid, issues) ou issues est une liste de problemes detectes.
+    """
+    full_text = " ".join(s["text"] for s in segments)
+
+    prompt = (
+        "Tu es un fact-checker specialise en finance. Analyse ce script de video YouTube Shorts.\n"
+        "Liste UNIQUEMENT les donnees chiffrees qui te semblent EXAGEREES, FAUSSES ou TRES IMPROBABLES.\n"
+        "Pour chaque probleme : cite la phrase exacte, explique POURQUOI c'est douteux, et propose une valeur plus realiste.\n\n"
+        "REEGLE : Ne signale PAS les valeurs generales plausibles.\n"
+        "Exemples ACCEPTABLES : '73% des investisseurs particuliers perdent de l'argent' (vrai),\n"
+        "'En 10 ans, un ETF World a rapporte ~120%' (vrai), '50% des Francais epargnent moins de 100 euros par mois' (plausible).\n"
+        "Exemples A SIGNALER : '97% des gens gagnent a la bourse' (faux), '5000% de rendement en un an' (improbable).\n\n"
+        "Format de reponse (JSON UNIQUEMENT) :\n"
+        '{"valid": true/false, "issues": [{"segment": 1, "claim": "...", "reason": "...", "suggestion": "..."}]}\n'
+        "Renvoie valid=true et issues=[] si tout est correct.\n\n"
+        f"SCRIPT A ANALYSER :\n{full_text}"
+    )
+
+    try:
+        raw, _ = ask_llm(prompt, model=model, max_tokens=1000)
+        result = json.loads(raw)
+        if not isinstance(result, dict):
+            return True, []
+        issues = result.get("issues", [])
+        is_valid = result.get("valid", len(issues) == 0)
+        return is_valid, issues
+    except Exception as e:
+        print(f"[DATA-VALIDATION] Erreur LLM: {e}")
+        return True, []
+def build_clip_database(use_cache=True):
+    """Scan raw_clips/ avec cache JSON — fallback si PiAPI indisponible."""
+    if use_cache and CLIP_CACHE_FILE.exists():
+        try:
+            mtime_db = CLIP_CACHE_FILE.stat().st_mtime
+            newest_clip = max(
+                (p.stat().st_mtime for p in RAW_CLIPS_ROOT.rglob("*.mp4")), default=0
+            )
+            newest_dir = max(
+                (d.stat().st_mtime for d in RAW_CLIPS_ROOT.iterdir() if d.is_dir()), default=0
+            )
+            if max(newest_clip, newest_dir) <= mtime_db:
+                with open(CLIP_CACHE_FILE) as f:
+                    return json.load(f)
+        except Exception:
+            pass
+
+    topics = defaultdict(list)
+    pattern = re.compile(r"^(.+?)_v[1-4]\.mp4$")
+    for clip_path in sorted(RAW_CLIPS_ROOT.rglob("*.mp4")):
+        m = pattern.match(clip_path.name)
+        topic = m.group(1) if m else re.sub(r"(_v[1-4])?\.mp4$", "", clip_path.name)
+        topics[topic].append(str(clip_path))
+
+    date_topic_map = defaultdict(list)
+    for topic, clip_strs in topics.items():
+        for c_str in clip_strs:
+            c = Path(c_str)
+            date_dir = c.parent.name
+            date_topic_map[(date_dir, topic)].append(c_str)
+
+    sets = [{"topic": t, "date": d, "clips": clips, "size": len(clips)}
+            for (d, t), clips in sorted(date_topic_map.items())]
+
+    db = {"topics": dict(topics), "sets": sets, "total": sum(len(v) for v in topics.values())}
+
+    CLIP_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(CLIP_CACHE_FILE, "w") as f:
+        json.dump(db, f)
+    return db
+
+
+def smart_select_clips(clip_db, n=4):
+    """Sélectionne n clips avec priorité set cohérent — fallback."""
+    sets = clip_db.get("sets", [])
+    topics = clip_db["topics"]
+    if not topics:
+        raise Exception("Aucun clip disponible")
+
+    coherent = [s for s in sets if s["size"] >= n]
+    if coherent:
+        chosen = random.choice(coherent)
+        selected = sorted(chosen["clips"],
+                          key=lambda p: int(re.search(r"_v(\d+)\.mp4$", Path(p).name).group(1)))
+        return [Path(p) for p in selected], f"{chosen['topic']} ({chosen['date']})"
+
+    for t, clips in sorted(topics.items(), key=lambda x: -len(x[1])):
+        if len(clips) >= n:
+            selected = random.sample([Path(p) for p in clips], n)
+            return selected, f"{t} (multidate)"
+
+    all_clips = [(t, Path(c)) for t, clips in topics.items() for c in clips]
+    random.shuffle(all_clips)
+    seen, selected = set(), []
+    for t, c in all_clips:
+        if len(selected) >= n:
+            break
+        if c.name not in seen:
+            selected.append(c)
+            seen.add(c.name)
+    if len(selected) < n:
+        raise Exception(f"Pas assez de clips uniques ({len(selected)}/{n})")
+    return selected[:n], "mixed"
+
+
+# ── VOICEOVER ───────────────────────────────────────────────────────
+
+async def generate_voiceover_segment(text, out_path, seg_idx, voice="A"):
+    """Génère la voix pour un segment avec Remy (A) ou Vivienne (B)."""
+    clean = re.sub(r"[*_]", "", text)
+    for bad, good in PHONETIC_FIXES.items():
+        clean = re.sub(re.escape(bad), good, clean, flags=re.IGNORECASE)
+
+    voice_name = "fr-FR-HenriNeural" if voice == "A" else "fr-FR-DeniseNeural"
+    tmp_mp3 = out_path.parent / f"vo{seg_idx}.tmp.mp3"
+    comm = edge_tts.Communicate(clean, voice_name, rate="-5%")
+    await comm.save(str(tmp_mp3))
+
+    if not tmp_mp3.exists() or tmp_mp3.stat().st_size < 100:
+        return False
+
+    subprocess.run([
+        "ffmpeg", "-i", str(tmp_mp3),
+        "-acodec", "pcm_s16le", "-ar", "44100", "-ac", "2",
+        str(out_path), "-y", "-loglevel", "error"
+    ], check=True)
+    tmp_mp3.unlink()
+    return True
+
+
+# ── SUB-TOPICS ROTATION ────────────────────────────────────────────
+
+SUB_TOPICS = [
+    "Architecture des fonds spéculatifs et capitaux invisibles",
+    "Neurobiologie du cerveau d'un investisseur",
+    "Théorie des jeux appliquée aux marchés",
+    "Asymétrie d'information — pourquoi les riches s'enrichissent",
+    "Mécanismes de la dette et du levier financier",
+    "Mathématiques du risque — probabilités et espérance de gain",
+    "Pièges psychologiques de la finance comportementale",
+    "Récits des grandes fortunes historiques",
+    "Psychologie du luxe et coût du statut social",
+    "Stratégies de sortie — l'art de vendre au bon moment",
+]
+
+
+def pick_topic():
+    """Rotation de sujet avec historique. Sujet force si queue active."""
+    # Verifier si une idee est dans la queue
+    queue_override = Path("/tmp/alfred_next_topic.txt")
+    if queue_override.exists():
+        try:
+            topic = queue_override.read_text().strip()
+            queue_override.unlink()
+            print(f"[TOPIC] Queue override: {topic}")
+            return topic
+        except Exception as e:
+            print(f"[TOPIC] Queue override error: {e}")
+
+    used_file = WORKSPACE / "state" / "used_subtopics.json"
+    used = json.load(open(used_file)) if used_file.exists() else []
+    available = [t for t in SUB_TOPICS if t not in used[-5:]]
+    if not available:
+        available = SUB_TOPICS
+        used = []
+    chosen = random.choice(available)
+    used.append(chosen)
+    used_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(used_file, "w") as f:
+        json.dump(used[-10:], f)
+    return chosen
+
+
+# ── MAIN ────────────────────────────────────────────────────────────
+
+async def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Pipeline vidéo amélioré")
+    parser.add_argument("--preview", action="store_true", help="Skip YouTube upload")
+    parser.add_argument("--no-cache", action="store_true", help="Force rebuild clip DB")
+    parser.add_argument("--skip-image-gen", action="store_true",
+                        help="Skip PiAPI image generation, use clips")
+    args, _ = parser.parse_known_args()
+
+    # ── Lock file anti-pipelines concurrents ──
+    LOCK_FILE = Path(f"/tmp/alfred_pipeline.lock")
+    if LOCK_FILE.exists():
+        try:
+            old_pid = int(LOCK_FILE.read_text().strip())
+            os.kill(old_pid, 0)  # Vérifie si le process existe
+            send_telegram(f"⛔ Pipeline déjà en cours (PID {old_pid}). Skipping.")
+            print(f"[LOCK] Pipeline déjà en cours (PID {old_pid})")
+            return
+        except (OSError, ValueError, ProcessLookupError):
+            pass  # Lock stale
+    LOCK_FILE.write_text(str(os.getpid()))
+
+    PREVIEW_MODE = args.preview
+    tag = "PREVIEW" if PREVIEW_MODE else "PROD"
+    success = False
+
+    # Pas de publication le dimanche
+    today_weekday = datetime.now().weekday()
+    if not PREVIEW_MODE and today_weekday == 6:
+        send_telegram("⛔ Dimanche : pas de publication YouTube.")
+        print("[SKIP] Dimanche")
+        return
+
+    # ── PREFLIGHT ──
+    print("\n" + "=" * 50)
+    print("  STAGE 0 : PREFLIGHT")
+    print("=" * 50)
+    preflight = run_preflight()
+    print_report(preflight)
+
+    if not check_can_produce(preflight):
+        send_telegram(f"[{tag}] ❌ Preflight échoué : {'; '.join(preflight['blockers'])}")
+        return
+
+    print("[PREFLIGHT] Mode clips vidéo (réserve raw_clips)")
+
+    work_dir = Path(f"/tmp/alfred_pipeline_{int(time.time())}")
+    work_dir.mkdir(parents=True, exist_ok=True)
+    output_dir = Path.home() / "output"
+    archive_dir = output_dir / "archive"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    archive_dir.mkdir(parents=True, exist_ok=True)
+
+    # ── CONFIG LOAD (once) ──
+    _pipeline_config = {}
+    _config_path = SCRIPT_DIR / "pipeline_config.yaml"
+    try:
+        import yaml
+        if _config_path.exists():
+            _pipeline_config = yaml.safe_load(_config_path.read_text()) or {}
+    except Exception:
+        pass
+    _shorts_mode = _pipeline_config.get("video", {}).get("mode", "normal") == "shorts"
+    t_width = 1080 if _shorts_mode else 1920
+    t_height = 1920 if _shorts_mode else 1080
+
+    try:
+        # ════════════════════════════════════════════
+        # STAGE 1 : SCRIPT (LLM)
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 1 : SCRIPT")
+        print("=" * 50)
+
+        chosen_topic = pick_topic()
+        
+        # --- VIRALITY SCANNING (CLIPIFY LOGIC) ---
+        # On analyse le sujet pour suggérer des hooks "Reversal" au LLM
+        virality_hooks = virality_scanner.scan_text_for_hooks(chosen_topic)
+        hook_suggestion = ""
+        if virality_hooks:
+            best_hook = virality_hooks[0]['text']
+            hook_suggestion = f"Angle viral suggéré : '{best_hook}' (Score: {virality_hooks[0]['score']})"
+        # ----------------------------------------
+
+        charter = CHARTER_PATH.read_text(errors="ignore")[:1500] if CHARTER_PATH.exists() else ""
+        lexicon = LEXICON_PATH.read_text(errors="ignore")[:1000] if LEXICON_PATH.exists() else ""
+        playbook = PLAYBOOK_PATH.read_text(errors="ignore")[:2000] if PLAYBOOK_PATH.exists() else ""
+
+        LEARNING_INJECTION = get_prompt_lessons()
+        
+        # --- AGENTIC DIRECTIVE (OpenMontage) ---
+        director_info = StageDirector.get_directive("script")
+        directive_text = f"OBJECTIF : {director_info['goal']}\\nCRITÈRES : {', '.join(director_info['criteria'])}"
+        # ----------------------------------------
+
+        prompt = (
+            "Tu es un expert en Neuro-Finance.\n"
+            "RÈGLE ABSOLUE : Tous les textes des segments DOIVENT être 100%% en français. "
+            "ZÉRO mot d'anglais. ZÉRO mot d'espagnol.\n"
+            "Interdit : hedge fund, smart money, leverage, criterion, storytelling, "
+            "dark pattern, exit strategy, trade, trader, deal, portfolio, equity, bond, cognitive.\n"
+            "ORTHOGRAPHE : zéro faute. Accents obligatoires (é, è, ê, à, ù, ç, ô, î, û).\n\n"
+            f"Crée un script Short de 40s — 4 segments de 10s chacun.\n"
+            f"SUJET DU JOUR : {chosen_topic}\n"
+            f"CHARTE :\n{charter}\n\nLEXIQUE :\n{lexicon}\n\n"
+            f"PLAYBOOK :\n{playbook}\n\n"
+            f"DIRECTIVE DU RÉALISATEUR :\n{directive_text}\n\n"
+            f"SUGGESTION VIRALE : {hook_suggestion if hook_suggestion else 'Utilise un angle contre-intuitif.'}\n"
+            "--- FRAMEWORK DE VIRALITÉ (AI Youtube Shorts Generator) ---\n"
+            "Chaque segment DOIT activer AU MOINS UN de ces signaux viraux :\n"
+            "1. HOOK MOMENT — phrase qui crée une curiosité immédiate "
+            "('Le secret que personne ne vous dit...', 'Votre cerveau vous ment sur...')\n"
+            "2. OPINION BOMB — déclaration forte, contre-intuitive qui pousse à réagir\n"
+            "3. REVELATION — fait ou statistique surprenant qui change la perspective\n"
+            "4. CONFLIT/TENSION — problème affronté directement, dilemme\n"
+            "5. QUOTABLE ONE-LINER — phrase courte qui marche comme citation standalone\n"
+            "6. STORY PEAK — climax ou twist d'une anecdote\n"
+            "7. PRACTICAL VALUE — conseil concret applicable immédiatement\n"
+            "\n"
+            "--- STRATÉGIE DU HOOK ---\n"
+            "Segment 1 (ACCROCHE, 0-10s) : OBLIGATOIRE — commence PAR UN CHIFFRE CHOC.\n"
+            "Les 2 premiers mots DOIVENT être un pourcentage, un montant en euros, ou une statistique.\n"
+            "Exemples VALIDES : '83 pourcent des investisseurs...' / '2400 euros par an...' / '73 pourcent...'\n"
+            "Exemples INTERDITS : toute question, tout paradoxe, toute attaque de croyance — le chiffre d'abord.\n"
+            "Le HOOK doit interpeller PERSONNELLEMENT le spectateur (utilisez 'vous') APRÈS le chiffre.\n"
+            "\n"
+            "Chaque segment doit avoir :\n"
+            "- 'hook_sentence' : la phrase d'accroche qui fait arrêter le scroll\n"
+            "- 'virality_reason' : en une phrase, pourquoi ce segment va marcher\n"
+            "\n"
+            "--- FORMAT 2 VOIX ---\n"
+            "- Voix A (expert, didactique) : explications, données, science\n"
+            "- Voix B (contrepoint, provocateur) : questions, défis, punchlines\n"
+            "Structure :\n"
+            "- Segment 1 [voix B] : question provoquante ou paradoxe\n"
+            "- Segment 2 [voix A] : déconstruction scientifique, données, biais\n"
+            "- Segment 3 [voix A] : le système, la solution, la stratégie\n"
+            "- Segment 4 [voix B] : punchline qui boucle avec le hook\n\n"
+            "EXACTEMENT 45 mots par segment. Data chiffrée OBLIGATOIRE dans chaque segment "
+            "(pourcentage, euro, année, statistique). IMPORTANT : écris les nombres en CHIFFRES "
+            "pas en lettres (30% pas trente pourcent, 100€ pas cent euros, 2023 pas deux mille vingt-trois). "
+            "ZÉRO guru-speak.\n\n"
+            "En plus du script, ajoute un champ 'scenes' avec une description visuelle "
+            "pour chaque segment, style Pinterest/aesthetic :\n"
+            "- Scene 1 : ambiance liée au hook\n"
+            "- Scene 2 : data / science / abstrait\n"
+            "- Scene 3 : solution / architecture / système\n"
+            "- Scene 4 : conclusion / espace ouvert\n\n"
+            f"{LEARNING_INJECTION}"
+            "JSON UNIQUEMENT : {\"title\":\"...\",\"description\":\"...\","
+            "\"segments\":[{\"text\":\"...\",\"voice\":\"A\",\"duration\":10,\"scene\":\"...\","
+            "\"hook_sentence\":\"...\",\"virality_reason\":\"...\"}],"
+            "\"scenes\":[\"...\",\"...\",\"...\",\"...\"]}"
+        )
+
+        raw_script, model_used = ask_llm(prompt)
+
+        # Load recent titles for duplicate check
+        history_path = PIPELINE_DIR / "PROMPT_HISTORY.json"
+        recent_titles_list = []
+        if history_path.exists():
+            hist = json.load(open(history_path))
+            recent_titles_list = [h.get("title", "") for h in hist[-10:]]
+
+        # Validation avec retry (inclut titre dupliqué)
+        max_attempts = 3
+        retry_hints = [
+            "RAPPEL CRITIQUE : Tu n'as PAS inclus de chiffres dans les segments. "
+            "Chaque segment DOIT contenir au moins un pourcentage, un montant en euros, "
+            "ou une année.",
+            "URGENT : Toujours pas de chiffres. OBLIGATION : chaque segment doit avoir "
+            "un nombre. Exemple : 'En 10 ans...' / '73% des investisseurs...' / "
+            "'5000 euros de différence'",
+        ]
+        for attempt in range(max_attempts):
+            try:
+                script_data = json.loads(raw_script)
+                text = " ".join(s["text"] for s in script_data["segments"])
+                guru_score = calculate_guru_score(text)
+                lang_ok = not contains_forbidden_words(text)
+                has_data = bool(re.search(r"\d+", text))
+
+                # Title duplicate check
+                title = script_data["title"]
+                title_fresh = True
+                for old_t in recent_titles_list:
+                    ratio = difflib.SequenceMatcher(None, title.lower(), old_t.lower()).ratio()
+                    if ratio > 0.90:
+                        title_fresh = False
+                        print(f"[VALIDATION] Titre '{title}' trop proche de '{old_t}' ({ratio:.0%})")
+                        break
+            except (json.JSONDecodeError, KeyError):
+                if attempt < max_attempts - 1:
+                    raw_script, model_used = ask_llm(
+                        prompt + f"\n\n{retry_hints[min(attempt, len(retry_hints)-1)]}",
+                        MODEL_FALLBACK
+                    )
+                    continue
+                raise
+
+            violations = []
+            if not lang_ok:
+                violations.append("mots anglais/espagnol interdits")
+            if guru_score > 0:
+                violations.append(f"guru-speak (score={guru_score})")
+            if not has_data:
+                violations.append("data chiffrée obligatoire manquante")
+            if not title_fresh:
+                violations.append("titre trop similaire à une vidéo existante")
+
+            if not violations:
+                print(f"[VALIDATION] OK — attempt {attempt+1}/{max_attempts}")
+                break
+
+            if attempt < max_attempts - 1:
+                hints = " ; ".join(violations)
+                hint = retry_hints[min(attempt, len(retry_hints)-1)]
+                print(f"[RETRY {attempt+1}/{max_attempts}] {hints}")
+                # Ajouter une instruction anti-duplication si titre problématique
+                dup_hint = ""
+                if not title_fresh:
+                    dup_hint = "\nIMPORTANT : le titre choisi est déjà trop proche d'une vidéo existante. Trouve un angle COMPLÈTEMENT DIFFÉRENT et un titre original."
+                raw_script, model_used = ask_llm(
+                    prompt + f"\n\n{hint}{dup_hint}", model_used
+                )
+            else:
+                raise Exception(
+                    f"Script rejeté après {max_attempts} tentatives : {'; '.join(violations)}"
+                )
+
+        segments = script_data["segments"]
+
+        # Retry LLM si nombre de segments trop bas
+        if len(segments) < 3:
+            print(f"[RETRY] Seulement {len(segments)} segments — nouveau prompt LLM")
+            raw_script, model_used = ask_llm(
+                prompt + "\n\nURGENT : Le script doit contenir EXACTEMENT 4 segments. "
+                         "Tu n'en as fourni que trop peu. Assure-toi d'avoir 4 segments complets.",
+                MODEL_FALLBACK
+            )
+            script_data = json.loads(raw_script)
+            segments = script_data["segments"]
+
+        # Scène descriptions
+        scenes_descriptions = script_data.get("scenes", [s.get("scene", "") for s in segments])
+
+        # Description riche (format Eric approuvé)
+        hook = segments[0]['text'][:100] + "..."
+        seg_bullets = "\n".join(f"• {s['text'][:80]}..." for s in segments)
+        description = RICH_DESC_TEMPLATE.format(
+            hook=hook,
+            bullets=seg_bullets,
+            hashtags=DEFAULT_HASHTAGS
+        )
+
+        while len(segments) < 4:
+            segments.append({"text": "...", "duration": 10, "voice": "A", "scene": ""})
+        while len(scenes_descriptions) < 4:
+            scenes_descriptions.append("")
+        segments = segments[:4]
+        scenes_descriptions = scenes_descriptions[:4]
+
+        send_telegram(
+            f"🚀 Pipeline v2 lancé\n"
+            f"Sujet : {title}\n"
+            f"Guru : {guru_score} | LLM : {model_used}\n"
+            f"Mode : {'PREVIEW' if PREVIEW_MODE else 'Upload'}"
+        )
+
+
+        # STAGE 1b : DATA VALIDATION (fact-check)
+        # ────────────────────────────────────────────────────
+        print("\n" + "=" * 50)
+        print("  STAGE 1b : DATA VALIDATION — fact-check")
+        print("=" * 50)
+        is_data_valid, data_issues = validate_script_data(segments, model_used)
+        if data_issues:
+            print(f"[DATA-VALIDATION] ⚠️ {len(data_issues)} problème(s) détecté(s):")
+            for iss in data_issues[:3]:
+                print(f"  - Segment {iss.get("segment", "?")}: {iss.get("claim", "")[:60]} — {iss.get("reason", "")[:80]}")
+            print("[DATA-VALIDATION] ✅ Poursuite avec les données actuelles (pas de re-génération automatique)")
+        else:
+            print("[DATA-VALIDATION] ✅ Toutes les données semblent correctes")
+        send_telegram("✅ Script validé - aucune donnée suspecte")
+
+        # ════════════════════════════════════════════
+        # STAGE 2 : ASSETS (clips vidéo + overlays)
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 2 : ASSETS VISUELS")
+        print("=" * 50)
+
+        # Toujours sélectionner des clips vidéo de la réserve
+        clip_db = build_clip_database(use_cache=not args.no_cache)
+        selected_clips, clip_source = smart_select_clips(clip_db, n=len(segments))
+        print(f"[ASSETS] Clips sélectionnés ({clip_source}):")
+        for c in selected_clips:
+            print(f"  - {c.name}")
+
+        # Placeholder images pour overlay_plan (via Pillow)
+        placeholder_images = []
+        try:
+            from PIL import Image as PILImage
+            for i in range(len(segments)):
+                ph = work_dir / f"ph_{i+1:02d}.png"
+                PILImage.new("RGBA", (1920, 1080), (5, 8, 20, 255)).save(str(ph))
+                placeholder_images.append(ph)
+        except ImportError:
+            # Fallback ffmpeg
+            for i in range(len(segments)):
+                ph = work_dir / f"ph_{i+1:02d}.png"
+                subprocess.run([
+                    "ffmpeg", "-f", "lavfi", "-i",
+                    "color=c=0x050814:s=320x180:d=1",
+                    "-update", "1", str(ph),
+                    "-y", "-loglevel", "error"
+                ], check=True)
+                placeholder_images.append(ph)
+
+        # Titre card
+        title_card = work_dir / "title_card.png"
+        create_title_card(title, title_card, subtitle="NEURO-FINANCE")
+
+        # End card — détecter le mode (shorts vs normal) pour les bonnes dimensions
+        end_card = work_dir / "end_card.png"
+        try:
+            import yaml
+            config_path = SCRIPT_DIR / "pipeline_config.yaml"
+            if config_path.exists():
+                cfg = yaml.safe_load(config_path.read_text())
+                video_cfg = cfg.get("video", {})
+                ec_width = video_cfg.get("resolution", "1080x1920").split("x")[0]
+                ec_height = video_cfg.get("resolution", "1080x1920").split("x")[1]
+                create_end_card(end_card, width=int(ec_width), height=int(ec_height))
+            else:
+                create_end_card(end_card, width=1080, height=1920)
+        except Exception:
+            create_end_card(end_card, width=1080, height=1920)
+
+        # Thumbnail YouTube
+        thumbnail_path = work_dir / "thumbnail.png"
+        create_youtube_thumbnail(title, thumbnail_path)
+
+        # Overlay plan (stat cards, comparaisons) — utilise des placeholders
+        # car les images de fond ne sont pas statiques
+        overlay_plan = create_overlay_sequence(script_data, placeholder_images, work_dir)
+
+        print(f"[ASSETS] Clips: {len(selected_clips)} vidéos ({clip_source})")
+        print(f"[ASSETS] Titre: {title_card.name} | End: {end_card.name}")
+        print(f"[ASSETS] Overlays: {sum(len(s['overlays']) for s in overlay_plan['segments'])}")
+
+        # ════════════════════════════════════════════
+        # STAGE 3 : VOICEOVER
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 3 : VOICEOVER")
+        print("=" * 50)
+
+        seg_audio_paths = []
+        seg_durations = []
+
+        for i, seg in enumerate(segments):
+            wav_path = work_dir / f"vo{i+1}.wav"
+            voice_label = seg.get("voice", "A")
+            if await generate_voiceover_segment(seg["text"], wav_path, i + 1, voice_label):
+                dur = get_audio_duration(wav_path)
+                seg_audio_paths.append(wav_path)
+                seg_durations.append(dur)
+                print(f"  VO {i+1}: {dur:.1f}s | voix {voice_label}")
+            else:
+                # Silence fallback
+                subprocess.run([
+                    "ffmpeg", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+                    "-t", "10", str(wav_path), "-y", "-loglevel", "error"
+                ], check=True)
+                seg_audio_paths.append(wav_path)
+                seg_durations.append(10.0)
+                print(f"  VO {i+1}: SILENCE (fallback)")
+
+        # Normalisation audio -14dB LUFS (standard broadcast)
+        for i, wav_path in enumerate(seg_audio_paths):
+            norm_path = work_dir / f"vo{i+1}_norm.wav"
+            try:
+                subprocess.run([
+                    "ffmpeg", "-i", str(wav_path),
+                    "-af", "loudnorm=I=-14:LRA=1:TP=-1",
+                    str(norm_path), "-y", "-loglevel", "error"
+                ], check=True, timeout=60)
+                shutil.move(str(norm_path), str(wav_path))
+                print(f"  [LUFS] Segment {i+1}: normalisé à -14dB")
+            except Exception as lufs_e:
+                norm_path.unlink(missing_ok=True)
+                print(f"  [LUFS] Segment {i+1}: normalisation ignorée ({lufs_e})")
+
+        # Padding des segments trop courts
+        for i in range(len(seg_audio_paths)):
+            dur = seg_durations[i]
+            if dur < 9.0:
+                padded = work_dir / f"vo{i+1}_padded.wav"
+                target = max(dur, 10.0)
+                subprocess.run([
+                    "ffmpeg", "-i", str(seg_audio_paths[i]),
+                    "-af", f"apad=pad_dur={target - dur}",
+                    "-t", str(target),
+                    str(padded), "-y", "-loglevel", "error"
+                ], check=True)
+                shutil.move(str(padded), str(seg_audio_paths[i]))
+                seg_durations[i] = target
+
+        # Silence cutter pré-composition (sur chaque fichier audio individuel)
+        try:
+            from pipeline.tools.silence_cutter import cut_silence
+            for i, wav_path in enumerate(seg_audio_paths):
+                cut_path = work_dir / f"vo{i+1}_cut.wav"
+                if cut_silence(str(wav_path), str(cut_path),
+                               threshold="-50dB", min_duration=0.3,
+                               keep_first=0.3, keep_last=0.3):
+                    new_dur = get_audio_duration(str(cut_path))
+                    if new_dur > 3.0:
+                        removed = seg_durations[i] - new_dur
+                        shutil.move(str(cut_path), str(wav_path))
+                        seg_durations[i] = new_dur
+                        if removed > 0.1:
+                            print(f"[SILENCE CUT] Segment {i+1}: {removed:.1f}s supprimé → {new_dur:.1f}s")
+                    else:
+                        cut_path.unlink(missing_ok=True)
+                else:
+                    cut_path.unlink(missing_ok=True)
+        except ImportError as sc_e:
+            print(f"[SILENCE CUT] silence_cutter non disponible: {sc_e}")
+        except Exception as sc_e:
+            print(f"[SILENCE CUT] Erreur: {sc_e}")
+
+        # ════════════════════════════════════════════
+        # STAGE 4 : WORD TIMINGS (Whisper)
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 4 : WORD TIMINGS")
+        print("=" * 50)
+
+        # On récupère la durée du titre pour décaler les sous-titres (Titre = 3s par défaut)
+        # Sans cela, les sous-titres commencent à 0s alors que la voix commence après le titre.
+        TITLE_OFFSET = 3.0
+
+        # On force Whisper à analyser les fichiers audio RÉELS pour une synchro parfaite
+        # Whisper avec retry (3 tentatives)
+        word_timings = None
+        for wi in range(3):
+            try:
+                word_timings = get_word_timings(
+                    [str(p) for p in seg_audio_paths],
+                    [s["text"] for s in segments],
+                )
+                if word_timings is not None:
+                    break
+            except Exception as wh_e:
+                print(f"[WHISPER] Tentative {wi+1} échouée: {wh_e}")
+                word_timings = None
+
+        if word_timings is None:
+            print("[CRITICAL] Whisper a échoué. Les sous-titres seront approximatifs.")
+            send_telegram("⚠️ Warning: Synchro sous-titres approximative (Whisper failure)")
+        else:
+            print(f"[SYNC] Synchro mot-par-mot réussie via Whisper")
+
+        # Timings pour segments avec transitions
+        fadelen = 0.5
+        seg_times = []
+        for i in range(4):
+            # On ajoute TITLE_OFFSET pour aligner le texte sur la narration (après le titre)
+            seg_start = TITLE_OFFSET + sum(seg_durations[:i]) - i * fadelen
+            txt_start = seg_start
+            txt_end = seg_start + seg_durations[i]
+            seg_times.append((txt_start, txt_end))
+
+        # ASS captions
+        ass_path = work_dir / "captions.ass"
+        ass_content = make_ass_captions(
+            segments, seg_times,
+            word_timings=word_timings,
+            font_name="Montserrat", font_size=80
+        )
+        ass_path.write_text(ass_content, encoding="utf-8")
+        whisper_tag = "[WHISPER]" if word_timings else "[APPROX]"
+        print(f"{whisper_tag} ASS: {len(ass_content)} chars, {len(segments)} segments")
+
+        # ════════════════════════════════════════════
+        # STAGE 5 : COMPOSE (Ken Burns + overlays + transitions + ASS)
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 5 : COMPOSITION")
+        print("=" * 50)
+
+        # Dimensions depuis la config centrale (chargée en début de main)
+        print(f"[COMPOSE] Target Resolution: {t_width}x{t_height} ({'SHORTS' if _shorts_mode else 'NORMAL'})")
+
+        output_filename = f"PROD_{datetime.now().strftime('%Y%m%d_%H%M')}_{re.sub(r'[^a-zA-Z0-9_-]', '_', title)[:50]}.mp4"
+        output_path = str(output_dir / output_filename)
+
+        final_path = compose_final_video(
+            voiceover_paths=[str(p) for p in seg_audio_paths],
+            work_dir=work_dir,
+            output_path=output_path,
+            clip_paths=[str(p) for p in selected_clips],
+            overlay_plan=overlay_plan,
+            title_card=str(title_card) if title_card.exists() else None,
+            end_card=str(end_card) if end_card.exists() else None,
+            ass_path=str(ass_path) if ass_path.exists() else None,
+            width=t_width,
+            height=t_height
+        )
+
+        # ── SILENCE CUT — déjà fait par audio individuel (silence_cutter.py) ──
+        final_duration = get_audio_duration(final_path)
+        final_size = os.path.getsize(final_path) / (1024 * 1024)
+        print(f"[COMPOSE] Final: {final_duration:.1f}s | {final_size:.1f}MB")
+
+        # ── THUMBNAIL ──
+        thumb_path = work_dir / "thumbnail.png"
+        try:
+            create_youtube_thumbnail(title, thumb_path, channel_name="Alfred AI")
+            if thumb_path.exists():
+                print(f"[THUMB] Miniature créée: {thumb_path.name} ({thumb_path.stat().st_size // 1024} Ko)")
+            else:
+                thumb_path = None
+        except Exception as e:
+            print(f"[THUMB] Échec: {e}")
+            thumb_path = None
+
+        # Sauvegarder le script pour analyse future
+        script_archive_path = output_dir / f"script-{Path(output_filename).stem}.json"
+        with open(script_archive_path, "w") as f:
+            json.dump(script_data, f, indent=2, ensure_ascii=False)
+
+        # ════════════════════════════════════════════
+        # STAGE 5b : QA VIDEO (quality gate — inspiré OpenMontage)
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 5b : QA VIDEO — quality gate")
+        print("=" * 50)
+        try:
+            from pipeline.video_qa import run_video_qa
+            qa_report = run_video_qa(final_path)
+            print(f"[QA] Score: {qa_report['score']}/100 — {qa_report['summary']}")
+            for c in qa_report.get("checks", []):
+                status = "✅" if c.get("passed", False) else "❌"
+                detail = c.get("detail", c.get("issues", [""]))
+                if isinstance(detail, list):
+                    detail = "; ".join(detail)
+                print(f"  {status} {c['check']}: {detail}")
+
+            if not qa_report["passed"]:
+                msg = f"⚠️ QA Score: {qa_report['score']}/100 — Problèmes: {[c['check'] for c in qa_report['checks'] if not c.get('passed', False)]}"
+                send_telegram(msg)
+                print(f"[QA] {msg}")
+        except ImportError:
+            print("[QA] Module video_qa non disponible, skip")
+        except Exception as e:
+            print(f"[QA] Erreur: {e}")
+
+        # ════════════════════════════════════════════
+        # STAGE 5c : SHORTS CONVERSION (9:16)
+        # ════════════════════════════════════════════
+        # Convertit la vidéo 16:9 → 9:16 si le mode shorts est actif
+        # (config déjà chargée — cf. _shorts_mode en début de main)
+        if _shorts_mode:
+            print("\n" + "=" * 50)
+            print("  STAGE 5c : SHORTS CONVERSION 9:16")
+            print("=" * 50)
+            try:
+                from pipeline.tools.shorts_converter import landscape_to_shorts
+                shorts_path = final_path.replace(".mp4", "_shorts.mp4")
+                print(f"[Shorts] Conversion {final_path} → {shorts_path}")
+                if landscape_to_shorts(final_path, shorts_path, blur_strength=10):
+                    # Remplacer final_path par la version shorts
+                    old_path = final_path
+                    final_path = shorts_path
+                    # Nettoyer l'ancienne version
+                    if os.path.exists(old_path) and old_path != final_path:
+                        os.remove(old_path)
+                    print(f"[Shorts] ✅ Vidéo convertie: {os.path.basename(final_path)}")
+                else:
+                    print("[Shorts] ❌ Échec conversion, garde version originale")
+            except ImportError as e:
+                print(f"[Shorts] Module shorts_converter non disponible: {e}")
+            except Exception as e:
+                print(f"[Shorts] Erreur: {e}")
+
+        # ════════════════════════════════════════════
+        # STAGE 6 : ANALYSE VIDEO + APPRENTISSAGE
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 6 : ANALYSE VIDEO + APPRENTISSAGE")
+        print("=" * 50)
+
+        analysis_report = {}
+        analysis_msg = ""
+        try:
+            analysis_report = analyze(
+                video_path_str=final_path,
+                script_path_str=str(script_archive_path)
+            )
+            video_name = Path(final_path).stem
+            store_analysis(video_name, analysis_report)
+            patterns = detect_patterns()
+            lessons = generate_lessons()
+
+            scores = analysis_report.get("scores", {})
+            improvements = analysis_report.get("improvements", [])[:3]
+            imp_lines = "\n".join(f"  🔧 {i['action']} (+{i['impact']}pts)" for i in improvements)
+
+            analysis_msg = (
+                f"📊 ANALYSE VIDEO\n"
+                f"Score: {scores.get('global', '?')}/100\n"
+                f"  Technique: {scores.get('technical', 0)}/30\n"
+                f"  Contenu: {scores.get('content', 0)}/30\n"
+                f"  Audio: {scores.get('audio', 0)}/20\n"
+                f"  Viralité: {scores.get('virality', 0)}/20"
+            )
+            if imp_lines:
+                analysis_msg += f"\n🔝 Améliorations:\n{imp_lines}"
+            # 🔥 Viral moment detection (Whisper transcript → punchline scoring)
+            try:
+                import tempfile
+                sys.path.insert(0, str(WORKSPACE_DIR / "scripts"))
+                from find_viral_moments import find_moments
+                vt = tempfile.mkdtemp(prefix="viral_")
+                awav = os.path.join(vt, "audio.wav")
+                subprocess.run(["ffmpeg", "-y", "-i", final_path, "-vn", "-ar", "16000", "-ac", "1", "-f", "wav", awav],
+                             check=True, capture_output=True)
+                subprocess.run([sys.executable, "-m", "whisper", awav,
+                     "--model", "base", "--language", "fr",
+                     "--output_format", "json", "--word_timestamps", "True",
+                     "--output_dir", vt], check=True, capture_output=True)
+                vj = os.path.join(vt, "audio.json")
+                moments = find_moments(vj, top_n=3, min_dur=4, max_dur=12)
+                if moments:
+                    viral_score = max(m["score"] for m in moments)
+                    top_moment = moments[0]["text"][:60]
+                    analysis_msg += f"\n🔥 Viral: {viral_score:.0f}/100 — \"{top_moment}...\""
+                shutil.rmtree(vt, ignore_errors=True)
+            except Exception as ve:
+                analysis_msg += "\n🔥 Viral: analyse impossible"
+
+            if patterns.get("trend"):
+                analysis_msg += f"\n📈 Tendance: {patterns['trend']}"
+            analysis_msg += f"\n📊 Baseline: {patterns.get('avg_global', '?')}/100 sur {patterns.get('total_analyzed', 0)} vidéos"
+
+            print(f"[ANALYSE] {analysis_report.get('summary', '?')}")
+            print(f"[LEARNING] {len(lessons)} leçons actives")
+
+        except Exception as e:
+            print(f"[ANALYSE] Échec: {e}")
+            analysis_msg = f"⚠️ Analyse vidéo non disponible: {e}"
+
+        # ════════════════════════════════════════════
+        # STAGE 7 : UPLOAD
+        # ════════════════════════════════════════════
+        print("\n" + "=" * 50)
+        print("  STAGE 7 : UPLOAD")
+        print("=" * 50)
+
+        yt_url = None
+        if PREVIEW_MODE:
+            send_telegram(f"[PREVIEW] Prêt - {final_duration:.0f}s, {final_size:.0f}MB")
+            # Envoyer l'analyse même en preview
+            if analysis_msg:
+                send_telegram(analysis_msg)
+            if final_size < 48:
+                sec = load_secrets()
+                bt, ci = sec.get("TELEGRAM_BOT_TOKEN"), sec.get("TELEGRAM_CHAT_ID")
+                if bt and ci:
+                    with open(final_path, "rb") as f:
+                        requests.post(
+                            f"https://api.telegram.org/bot{bt}/sendVideo",
+                            data={"chat_id": ci, "caption": f"🎬 {title}"},
+                            files={"video": f}, timeout=180
+                        )
+            else:
+                send_telegram(f"Trop lourd pour Telegram ({final_size:.0f}MB)")
+        else:
+            playlist_id = "PLdwDhfX2NgAAuB6rWjAJpr4yETIM4_nmO"
+            tags_json = json.dumps(DEFAULT_TAGS)
+            upload_cmd = [
+                "python3", str(UPLOAD_PY),
+                final_path, title, description, playlist_id, tags_json,
+            ]
+            if thumb_path:
+                upload_cmd.extend(["--thumbnail", str(thumb_path)])
+            result = subprocess.run(
+                upload_cmd, capture_output=True, text=True, timeout=120
+            )
+            output = result.stdout.strip()
+
+            if "youtube.com" in output or "youtu.be" in output:
+                yt_url = output
+                # History save (avant archivage)
+                video_id = yt_url.split("/")[-1]
+                history_path = PIPELINE_DIR / "PROMPT_HISTORY.json"
+                history = json.load(open(history_path)) if history_path.exists() else []
+                history.append({
+                    "video_id": video_id, "niche": "NEURO_FINANCE",
+                    "title": title, "timestamp": datetime.now().isoformat(),
+                    "score": None, "mode": "PROD", "pipeline_version": "v2"
+                })
+                with open(history_path, "w") as f:
+
+                    json.dump(history, f, indent=2)
+            else:
+                err = result.stderr.strip()
+                if "uploadLimitExceeded" in err:
+                    send_telegram(f"⚠️ Vidéo prête mais limite quotidienne. Sauvegardée.")
+                else:
+                    raise Exception(f"Upload échoué: {err}")
+
+            # Zernio cross-post (AVANT archivage — le fichier doit exister)
+            if yt_url:
+                secrets = load_secrets()
+                if secrets.get("ZERNIO_API_KEY"):
+                    os.environ.setdefault("ZERNIO_API_KEY", secrets["ZERNIO_API_KEY"])
+                    if not os.path.exists(final_path):
+                        send_telegram("⚠️ Zernio : fichier vidéo introuvable - upload ignoré")
+                    else:
+                        try:
+                            zernio_result = zernio_upload_video(
+                                video_path=final_path,
+                                title=title,
+                                description=description,
+                                tags=DEFAULT_TAGS,
+                                platforms=["tiktok", "linkedin"]
+                            )
+                            if zernio_result.get("success"):
+                                send_telegram(f"✅ Zernio : publié sur {', '.join(zernio_result.get('platforms', []))}")
+                            else:
+                                err = zernio_result.get('error', 'erreur')
+                                if "No such file" in str(err):
+                                    send_telegram("⚠️ Zernio : fichier inaccessible pour l'upload")
+                                else:
+                                    send_telegram(f"⚠️ Zernio : {err}")
+                        except Exception as z_err:
+                            send_telegram(f"⚠️ Zernio : {z_err}")
+
+            # Archive (APRÈS Zernio — le fichier existe encore)
+            if yt_url:
+                archive_path = archive_dir / output_filename
+                shutil.move(final_path, str(archive_path))
+
+        # Rapport final Telegram avec analyse
+        report_lines = [f"[{tag}] ✅ {title} ({final_duration:.0f}s)"]
+        if yt_url:
+            report_lines.append(f"📺 {yt_url}")
+        # Ajouter l'analyse si disponible
+        if analysis_report and analysis_report.get("scores", {}).get("global", 0) > 0:
+            ascores = analysis_report["scores"]
+            report_lines.append(f"🏆 Score: {ascores['global']}/100 | "
+                               f"T{ascores['technical']} C{ascores['content']} "
+                               f"A{ascores['audio']} V{ascores['virality']}")
+        send_telegram("\n".join(report_lines))
+
+        # Envoyer le détail de l'analyse séparément pour ne pas noyer le message principal
+        if not PREVIEW_MODE and analysis_msg and "⚠️" not in analysis_msg[:2]:
+            send_telegram(analysis_msg)
+
+        print(f"\n[OK] Pipeline v2 terminé")
+        success = True
+
+    except Exception as e:
+        print(f"[FAIL] {e}")
+        send_telegram(f"[{tag}] ❌ {e}")
+
+    finally:
+        # Nettoyer le lock file
+        LOCK_FILE.unlink(missing_ok=True)
+
+        if not success:
+            fail_dir = WORKSPACE / "failures"
+            fail_dir.mkdir(parents=True, exist_ok=True)
+            recovery = fail_dir / f"failed_{datetime.now().strftime('%Y%m%d_%H%M')}_{work_dir.name}"
+            shutil.move(str(work_dir), str(recovery))
+        else:
+            shutil.rmtree(work_dir, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

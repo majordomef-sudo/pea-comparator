@@ -1,0 +1,1 @@
+Set OPENROUTER_API_KEY env var and rerun.

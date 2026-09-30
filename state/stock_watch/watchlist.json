@@ -1,0 +1,775 @@
+{
+  "watchlist": "Alfred Stock Watch - v1.0",
+  "generated": "2026-06-28",
+  "framework": "Gavekal (macro) + Taleb (convexité)",
+  "total": 100,
+  "sectors": {
+    "semiconducteurs_AI": {
+      "label": "🔬 Semi-conducteurs & AI Infrastructure",
+      "risk": "Growth",
+      "stocks": [
+        {
+          "ticker": "ASML",
+          "name": "ASML",
+          "country": "NL",
+          "pea": true,
+          "why": "Monopole EUV, chaque puce AI passe par eux"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "country": "US",
+          "pea": false,
+          "why": "Le fournisseur d'armes de la révolution AI"
+        },
+        {
+          "ticker": "IFX",
+          "name": "Infineon",
+          "country": "DE",
+          "pea": true,
+          "why": "Semi-conducteurs auto/industrie, électrification"
+        },
+        {
+          "ticker": "STM",
+          "name": "STMicroelectronics",
+          "country": "FR",
+          "pea": true,
+          "why": "Semi auto/industrie, repositionné AI, franco-italien"
+        },
+        {
+          "ticker": "AMAT",
+          "name": "Applied Materials",
+          "country": "US",
+          "pea": false,
+          "why": "Équipements semi-conducteurs, bénéficie du buildout AI"
+        },
+        {
+          "ticker": "LRCX",
+          "name": "Lam Research",
+          "country": "US",
+          "pea": false,
+          "why": "Équipements gravure, essentiel pour les puces avancées"
+        },
+        {
+          "ticker": "KLAC",
+          "name": "KLA Corporation",
+          "country": "US",
+          "pea": false,
+          "why": "Inspection wafers, quasi-monopole"
+        },
+        {
+          "ticker": "SOI",
+          "name": "Soitec",
+          "country": "FR",
+          "pea": true,
+          "why": "Matériaux semi-conducteurs de niche, position unique, marché porteur"
+        },
+        {
+          "ticker": "BESI",
+          "name": "BE Semiconductor",
+          "country": "NL",
+          "pea": true,
+          "why": "Équipements d'assemblage semi, bénéficie du packaging avancé"
+        },
+        {
+          "ticker": "ASM",
+          "name": "ASM International",
+          "country": "NL",
+          "pea": true,
+          "why": "Dépôt de couches minces, ALD, essentiel pour les puces 2nm+"
+        },
+        {
+          "ticker": "AMD",
+          "name": "AMD",
+          "country": "US",
+          "pea": false,
+          "why": "Concurrent NVIDIA, MI300/400, marché data center AI"
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "country": "US",
+          "pea": false,
+          "why": "Puces réseaux/data centers, ASIC custom AI"
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron",
+          "country": "US",
+          "pea": false,
+          "why": "Mémoire HBM (High Bandwidth Memory), essentiel AI"
+        },
+        {
+          "ticker": "TSM",
+          "name": "TSMC",
+          "country": "TW",
+          "pea": false,
+          "why": "Le fondeur mondial, fabrique les puces les plus avancées"
+        }
+      ]
+    },
+    "software_AI": {
+      "label": "💻 Software & AI Platforms",
+      "risk": "Growth",
+      "stocks": [
+        {
+          "ticker": "SAP",
+          "name": "SAP",
+          "country": "DE",
+          "pea": true,
+          "why": "ERP mondial, pivot AI + cloud, 300M users, valorisation faible vs US"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "country": "US",
+          "pea": false,
+          "why": "Azure + Copilot + OpenAI, le plus solide des géants tech"
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet (Google)",
+          "country": "US",
+          "pea": false,
+          "why": "Gemini AI, search moat, Waymo, PE historiquement bas"
+        },
+        {
+          "ticker": "META",
+          "name": "Meta",
+          "country": "US",
+          "pea": false,
+          "why": "ROI pub AI x2, Threads, buyback massif, PE 22"
+        },
+        {
+          "ticker": "DSY",
+          "name": "Dassault Systèmes",
+          "country": "FR",
+          "pea": true,
+          "why": "Jumeaux numériques, industrie 4.0, position unique mondiale"
+        },
+        {
+          "ticker": "PLTR",
+          "name": "Palantir",
+          "country": "US",
+          "pea": false,
+          "why": "AI défense/gouvernement, contrats massifs, très convexe"
+        },
+        {
+          "ticker": "CRM",
+          "name": "Salesforce",
+          "country": "US",
+          "pea": false,
+          "why": "CRM cloud, Agentforce AI, cash flow massif"
+        },
+        {
+          "ticker": "NOW",
+          "name": "ServiceNow",
+          "country": "US",
+          "pea": false,
+          "why": "ITSM/Workflow AI, croissance 20%+ par an"
+        },
+        {
+          "ticker": "OR",
+          "name": "Oracle",
+          "country": "US",
+          "pea": false,
+          "why": "Base de données + cloud, bénéficie du buildout AI infra"
+        },
+        {
+          "ticker": "CAP",
+          "name": "Capgemini",
+          "country": "FR",
+          "pea": true,
+          "why": "Conseil IT, AI transformation, bénéficie de l'adoption enterprise"
+        },
+        {
+          "ticker": "ATE",
+          "name": "Alten",
+          "country": "FR",
+          "pea": true,
+          "why": "Ingénierie R&D externalisée, AI boost, croissance régulière"
+        }
+      ]
+    },
+    "defense_aero": {
+      "label": "🛡️ Défense & Aérospatial",
+      "risk": "Cyclical Growth",
+      "stocks": [
+        {
+          "ticker": "RHM",
+          "name": "Rheinmetall",
+          "country": "DE",
+          "pea": true,
+          "why": "Munitions/armement, budget défense ×3, 10 ans de visibilité"
+        },
+        {
+          "ticker": "HO",
+          "name": "Thales",
+          "country": "FR",
+          "pea": true,
+          "why": "Cybersécurité, radar, défense, AI embarquée"
+        },
+        {
+          "ticker": "SAF",
+          "name": "Safran",
+          "country": "FR",
+          "pea": true,
+          "why": "Moteurs d'avion, duopole mondial CFM, backlog record"
+        },
+        {
+          "ticker": "AIR",
+          "name": "Airbus",
+          "country": "FR",
+          "pea": true,
+          "why": "Duopole Boeing, backlog 8600 avions, défense spatiale"
+        },
+        {
+          "ticker": "MTX",
+          "name": "Mtu Aero Engines",
+          "country": "DE",
+          "pea": true,
+          "why": "Moteurs d'avion allemands, maintenance cycle long"
+        },
+        {
+          "ticker": "BA",
+          "name": "Boeing",
+          "country": "US",
+          "pea": false,
+          "why": "Turnaround potentiel, backlog massif, duopole"
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX (Raytheon)",
+          "country": "US",
+          "pea": false,
+          "why": "Défense US, missiles, Pratt & Whitney"
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "country": "US",
+          "pea": false,
+          "why": "F-35, défense US, contrats pluriannuels"
+        },
+        {
+          "ticker": "GD",
+          "name": "General Dynamics",
+          "country": "US",
+          "pea": false,
+          "why": "Naval/terrestre défense, Gulfstream"
+        },
+        {
+          "ticker": "RKLB",
+          "name": "Rocket Lab",
+          "country": "US",
+          "pea": false,
+          "why": "New space, lancements fréquents, concurrence SpaceX, très convexe"
+        }
+      ]
+    },
+    "luxe_consommation": {
+      "label": "👑 Luxe & Consommation Premium",
+      "risk": "Defensive Growth",
+      "stocks": [
+        {
+          "ticker": "RMS",
+          "name": "Hermès",
+          "country": "FR",
+          "pea": true,
+          "why": "Moat ultime, croissance double chiffre même en crise, Taleb-compatible"
+        },
+        {
+          "ticker": "MC",
+          "name": "LVMH",
+          "country": "FR",
+          "pea": true,
+          "why": "Portefeuille 75 marques, pricing power, diversification géographique"
+        },
+        {
+          "ticker": "CDI",
+          "name": "Christian Dior",
+          "country": "FR",
+          "pea": true,
+          "why": "Contrôle LVMH en direct (via holding), dividende"
+        },
+        {
+          "ticker": "KER",
+          "name": "Kering",
+          "country": "FR",
+          "pea": true,
+          "why": "Gucci, Saint-Laurent, Balenciaga, turnaround en cours"
+        },
+        {
+          "ticker": "CFR",
+          "name": "Richemont",
+          "country": "CH",
+          "pea": true,
+          "why": "Cartier, Van Cleef, joaillerie, très forte demande"
+        },
+        {
+          "ticker": "NESN",
+          "name": "Nestlé",
+          "country": "CH",
+          "pea": true,
+          "why": "Consommation défensive, diversification mondiale, dividende stable"
+        },
+        {
+          "ticker": "DGE",
+          "name": "Diageo",
+          "country": "UK",
+          "pea": true,
+          "why": "Spiritueux premium, pricing power, consolidation du marché"
+        },
+        {
+          "ticker": "PEP",
+          "name": "PepsiCo",
+          "country": "US",
+          "pea": false,
+          "why": "Consommation défensive, snacks+boissons, dividende croissant"
+        },
+        {
+          "ticker": "COST",
+          "name": "Costco",
+          "country": "US",
+          "pea": false,
+          "why": "Distribution, modèle adhésion, croissance régulière, moat"
+        },
+        {
+          "ticker": "SBUX",
+          "name": "Starbucks",
+          "country": "US",
+          "pea": false,
+          "why": "Premium coffee, expansion internationale, turnaround"
+        },
+        {
+          "ticker": "MONC",
+          "name": "Moncler",
+          "country": "IT",
+          "pea": true,
+          "why": "Luxe outdoor, croissance forte Asie, marge élevée"
+        },
+        {
+          "ticker": "BRBY",
+          "name": "Burberry",
+          "country": "UK",
+          "pea": true,
+          "why": "Luxe britannique, turnaround, upside potentiel"
+        }
+      ]
+    },
+    "pharma_sante": {
+      "label": "💊 Pharma & Santé",
+      "risk": "Defensive",
+      "stocks": [
+        {
+          "ticker": "NOVO-B",
+          "name": "Novo Nordisk",
+          "country": "DK",
+          "pea": true,
+          "why": "Monopole obésité, Wegovy/Ozempic, blockbuster du siècle"
+        },
+        {
+          "ticker": "EL",
+          "name": "EssilorLuxottica",
+          "country": "FR",
+          "pea": true,
+          "why": "Monopole optique mondial, vieillissement démographique"
+        },
+        {
+          "ticker": "SAN",
+          "name": "Sanofi",
+          "country": "FR",
+          "pea": true,
+          "why": "Pipeline immunologie, Dupixent blockbuster, recentrage"
+        },
+        {
+          "ticker": "BIM",
+          "name": "BioMérieux",
+          "country": "FR",
+          "pea": true,
+          "why": "Diagnostique infectieux, moat technologique, croissance"
+        },
+        {
+          "ticker": "LLY",
+          "name": "Eli Lilly",
+          "country": "US",
+          "pea": false,
+          "why": "Concurrent direct Novo, Mounjaro/Zepbound, pipeline massif"
+        },
+        {
+          "ticker": "UNH",
+          "name": "UnitedHealth",
+          "country": "US",
+          "pea": false,
+          "why": "Assurance santé US, Optum, cash flow monstre"
+        },
+        {
+          "ticker": "ABBV",
+          "name": "AbbVie",
+          "country": "US",
+          "pea": false,
+          "why": "Immunologie, pipeline riche, dividende croissance"
+        },
+        {
+          "ticker": "JNJ",
+          "name": "Johnson & Johnson",
+          "country": "US",
+          "pea": false,
+          "why": "Pharma + médtech, valeur défensive, dividende stable"
+        },
+        {
+          "ticker": "MDT",
+          "name": "Medtronic",
+          "country": "US",
+          "pea": false,
+          "why": "Medtech, dispositifs médicaux, vieillissement"
+        }
+      ]
+    },
+    "energie_transition": {
+      "label": "⚡ Énergie & Transition",
+      "risk": "Mixed",
+      "stocks": [
+        {
+          "ticker": "SU",
+          "name": "Schneider Electric",
+          "country": "FR",
+          "pea": true,
+          "why": "Data centers, électrification, gestion énergie, croissance 2 chiffres"
+        },
+        {
+          "ticker": "ENR",
+          "name": "Siemens Energy",
+          "country": "DE",
+          "pea": true,
+          "why": "Réseaux électriques, turbines, transformation énergétique"
+        },
+        {
+          "ticker": "NEX",
+          "name": "Nexans",
+          "country": "FR",
+          "pea": true,
+          "why": "Câbles électriques/data centers, expansion, électrification"
+        },
+        {
+          "ticker": "VWS",
+          "name": "Vestas",
+          "country": "DK",
+          "pea": true,
+          "why": "Éolien leader mondial, +52% YTD, reprise des marges"
+        },
+        {
+          "ticker": "SHEL",
+          "name": "Shell",
+          "country": "UK",
+          "pea": true,
+          "why": "Supermajor, cash flow, buyback, dividende"
+        },
+        {
+          "ticker": "BP",
+          "name": "BP",
+          "country": "UK",
+          "pea": true,
+          "why": "Supermajor, transition, valeur décotée"
+        },
+        {
+          "ticker": "XOM",
+          "name": "ExxonMobil",
+          "country": "US",
+          "pea": false,
+          "why": "Supermajor US, production records, cash flow"
+        },
+        {
+          "ticker": "PLUG",
+          "name": "Plug Power",
+          "country": "US",
+          "pea": false,
+          "why": "Hydrogène, pari long terme, très convexe, haut risque"
+        },
+        {
+          "ticker": "ENPH",
+          "name": "Enphase",
+          "country": "US",
+          "pea": false,
+          "why": "Micro-onduleurs solaires, reprise du secteur"
+        },
+        {
+          "ticker": "TTE",
+          "name": "TotalEnergies",
+          "country": "FR",
+          "pea": true,
+          "why": "Cash machine, dividende 4%, hedge inflation, transition"
+        }
+      ]
+    },
+    "finance_assurance": {
+      "label": "🏦 Finance & Assurance",
+      "risk": "Cyclical Value",
+      "stocks": [
+        {
+          "ticker": "ACA",
+          "name": "Crédit Agricole",
+          "country": "FR",
+          "pea": true,
+          "why": "Banque de détail solide, gestion d'actifs, dividende"
+        },
+        {
+          "ticker": "GLE",
+          "name": "Société Générale",
+          "country": "FR",
+          "pea": true,
+          "why": "Value play, restructuration, upside si réussi"
+        },
+        {
+          "ticker": "BNP",
+          "name": "BNP Paribas",
+          "country": "FR",
+          "pea": true,
+          "why": "Banque européenne #1, diversification, dividende"
+        },
+        {
+          "ticker": "CS",
+          "name": "AXA",
+          "country": "FR",
+          "pea": true,
+          "why": "Assurance, cash flow, dividende, valeur défensive"
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan",
+          "country": "US",
+          "pea": false,
+          "why": "Banque US #1, Jamie Dimon, gestion ultra solide"
+        },
+        {
+          "ticker": "GS",
+          "name": "Goldman Sachs",
+          "country": "US",
+          "pea": false,
+          "why": "Banque d'affaires, trading, gestion d'actifs"
+        },
+        {
+          "ticker": "BLK",
+          "name": "BlackRock",
+          "country": "US",
+          "pea": false,
+          "why": "Gestion d'actifs #1 mondiale, ETF iShares, Aladdin"
+        },
+        {
+          "ticker": "BRK-B",
+          "name": "Berkshire Hathaway",
+          "country": "US",
+          "pea": false,
+          "why": "Buffett, portefeuille diversifié, cash pile record"
+        },
+        {
+          "ticker": "V",
+          "name": "Visa",
+          "country": "US",
+          "pea": false,
+          "why": "Paiements, duopole Mastercard, réseau mondial"
+        },
+        {
+          "ticker": "MA",
+          "name": "Mastercard",
+          "country": "US",
+          "pea": false,
+          "why": "Paiements, duopole Visa, croissance 15%+"
+        }
+      ]
+    },
+    "industrie_equipement": {
+      "label": "🏭 Industrie & Équipementiers",
+      "risk": "Cyclical",
+      "stocks": [
+        {
+          "ticker": "SGO",
+          "name": "Saint-Gobain",
+          "country": "FR",
+          "pea": true,
+          "why": "Matériaux construction, rénovation énergétique, position solide"
+        },
+        {
+          "ticker": "VIE",
+          "name": "Veolia",
+          "country": "FR",
+          "pea": true,
+          "why": "Eau, déchets, énergie, services essentiels, cash flow stable"
+        },
+        {
+          "ticker": "CAT",
+          "name": "Caterpillar",
+          "country": "US",
+          "pea": false,
+          "why": "Engins de chantier, data centers, mines, indicateur économique"
+        },
+        {
+          "ticker": "HON",
+          "name": "Honeywell",
+          "country": "US",
+          "pea": false,
+          "why": "Conglomérat industriel, aéro, automatisation, bâtiments"
+        },
+        {
+          "ticker": "GE",
+          "name": "GE Aerospace",
+          "country": "US",
+          "pea": false,
+          "why": "Moteurs d'avion, spin-off réussi, cash flow"
+        },
+        {
+          "ticker": "SIE",
+          "name": "Siemens",
+          "country": "DE",
+          "pea": true,
+          "why": "Conglomérat industriel allemand, automatisation, trains"
+        },
+        {
+          "ticker": "ABBN",
+          "name": "ABB",
+          "country": "CH",
+          "pea": true,
+          "why": "Robotique, automatisation, électrification"
+        }
+      ]
+    },
+    "midcaps_croissance": {
+      "label": "🚀 Mid-caps Croissance (convexité Taleb)",
+      "risk": "Growth/High Risk",
+      "stocks": [
+        {
+          "ticker": "UBI",
+          "name": "Ubisoft",
+          "country": "FR",
+          "pea": true,
+          "why": "Turnaround, portefeuille IP massif, Tencent/Guillemot"
+        },
+        {
+          "ticker": "PUB",
+          "name": "Publicis",
+          "country": "FR",
+          "pea": true,
+          "why": "Publicité #3 mondial, transformation data/AI, croissance"
+        },
+        {
+          "ticker": "LDO",
+          "name": "Leonardo",
+          "country": "IT",
+          "pea": true,
+          "why": "Défense italienne, hélicoptères, électronique, croissance"
+        },
+        {
+          "ticker": "LR",
+          "name": "Legrand",
+          "country": "FR",
+          "pea": true,
+          "why": "Équipement électrique, data centers, rénovation bâtiments"
+        },
+        {
+          "ticker": "IPN",
+          "name": "Ipsen",
+          "country": "FR",
+          "pea": true,
+          "why": "Pharma mid-cap, pipeline oncologie, croissance"
+        },
+        {
+          "ticker": "GET",
+          "name": "Getlink",
+          "country": "FR",
+          "pea": true,
+          "why": "Tunnel sous la Manche, cash flow stable, dividende"
+        },
+        {
+          "ticker": "SPIE",
+          "name": "Spie",
+          "country": "FR",
+          "pea": true,
+          "why": "Services multi-techniques, croissance régulière, industrie"
+        }
+      ]
+    },
+    "us_watchlist": {
+      "label": "🇺🇸 US Watchlist (CTO requis)",
+      "risk": "Mixed",
+      "stocks": [
+        {
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "country": "US",
+          "pea": false,
+          "why": "AWS + e-commerce, cash flow massif, AI via Bedrock"
+        },
+        {
+          "ticker": "AAPL",
+          "name": "Apple",
+          "country": "US",
+          "pea": false,
+          "why": "Écosystème verrouillé, services, buyback, valeur refug"
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla",
+          "country": "US",
+          "pea": false,
+          "why": "Électrique, robotaxi, Optimus, très convexe"
+        },
+        {
+          "ticker": "SPOT",
+          "name": "Spotify",
+          "country": "US",
+          "pea": false,
+          "why": "Audio streaming #1, marges en amélioration, croissance"
+        },
+        {
+          "ticker": "UBER",
+          "name": "Uber",
+          "country": "US",
+          "pea": false,
+          "why": "Mobilité + livraison, profitable pour la 1ère fois"
+        },
+        {
+          "ticker": "NFLX",
+          "name": "Netflix",
+          "country": "US",
+          "pea": false,
+          "why": "Streaming #1, monétisation comptes partagés, cash flow"
+        },
+        {
+          "ticker": "ADBE",
+          "name": "Adobe",
+          "country": "US",
+          "pea": false,
+          "why": "Créativité AI, Firefly, Creative Cloud, moat"
+        },
+        {
+          "ticker": "SHOP",
+          "name": "Shopify",
+          "country": "US",
+          "pea": false,
+          "why": "Commerce en ligne, AI pour les marchands, croissance"
+        },
+        {
+          "ticker": "SNOW",
+          "name": "Snowflake",
+          "country": "US",
+          "pea": false,
+          "why": "Data cloud, AI/ML sur données, croissance forte"
+        },
+        {
+          "ticker": "XYZ",
+          "name": "Block (ex-Square)",
+          "country": "US",
+          "pea": false,
+          "why": "Payments, Bitcoin, Cash App, ticker change from SQ"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "pea_eligible": 57,
+    "us_only": 43,
+    "french_companies": 38,
+    "sectors": 10
+  },
+  "next_steps": "Création agent de veille automatique scanning quotidien + alertes Telegram"
+}

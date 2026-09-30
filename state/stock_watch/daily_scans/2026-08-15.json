@@ -1,0 +1,2131 @@
+{
+  "timestamp": "2026-08-15T06:00:37.654103",
+  "stats": {
+    "total": 100,
+    "ok": 100,
+    "signals": 7,
+    "conviction_signals": 25
+  },
+  "signals": [
+    {
+      "type": "SELL_RSI",
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "change": -2.78,
+      "change_7d": 11.62,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Growth",
+      "message": "\ud83d\udfe0 Palantir (PLTR) : RSI 72.9 +12% 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "OR",
+      "name": "Oracle",
+      "change": 1.68,
+      "change_7d": 3.76,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Growth",
+      "message": "\ud83d\udfe0 Oracle (OR) : RSI 74.4 +4% 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "MDT",
+      "name": "Medtronic",
+      "change": 0.76,
+      "change_7d": 6.23,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Defensive",
+      "message": "\ud83d\udfe0 Medtronic (MDT) : RSI 76.6 +6% 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "BLK",
+      "name": "BlackRock",
+      "change": -0.77,
+      "change_7d": 3.93,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Cyclical Value",
+      "message": "\ud83d\udfe0 BlackRock (BLK) : RSI 77.8 +4% 7j"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "change": 0.22,
+      "pea": false,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 Apple (AAPL) : RSI 26.1 \u2014 oversold sur non-Core"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "change": -0.1,
+      "change_7d": 6.07,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Mixed",
+      "message": "\ud83d\udfe0 Netflix (NFLX) : RSI 72.9 +6% 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "change": -2.51,
+      "change_7d": 3.43,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vigilance",
+      "risk": "Mixed",
+      "message": "\ud83d\udd34 Snowflake (SNOW) : RSI 80.3 \u2014 sur-achat +3% en 7j"
+    }
+  ],
+  "conviction": {
+    "MU": {
+      "score": 60.1,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +1 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +4 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 0.6
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 4,
+          "weight": 1.0,
+          "confidence": 62,
+          "effective": 2.5
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 3,
+        "bears": 1,
+        "neutrals": 2
+      },
+      "ticker": "MU",
+      "name": "Micron",
+      "change_pct": 2.3,
+      "pea": false,
+      "catalyst": 1.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x), GEOPOLITICS (5x)",
+      "score_raw": 57.1,
+      "score_adjustment": 3.0
+    },
+    "GOOGL": {
+      "score": 63.1,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)",
+        "\ud83d\udd34 Momentum -2 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": -2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.1
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 2,
+        "neutrals": 3
+      },
+      "ticker": "GOOGL",
+      "name": "Alphabet (Google)",
+      "change_pct": -0.13,
+      "pea": false,
+      "catalyst": 4.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x)",
+      "score_raw": 51.1,
+      "score_adjustment": 12.0
+    },
+    "META": {
+      "score": 66.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)",
+        "\ud83d\udd34 Momentum -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.7
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -0.6
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 2,
+        "neutrals": 2
+      },
+      "ticker": "META",
+      "name": "Meta",
+      "change_pct": -0.86,
+      "pea": false,
+      "catalyst": 4.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x)",
+      "score_raw": 54.4,
+      "score_adjustment": 12.0
+    },
+    "DSY": {
+      "score": 67.3,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.7
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "DSY",
+      "name": "Dassault Syst\u00e8mes",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 4.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x)",
+      "score_raw": 55.3,
+      "score_adjustment": 12.0
+    },
+    "CRM": {
+      "score": 63.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +2 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -6 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -6,
+          "weight": 1.0,
+          "confidence": 74,
+          "effective": -3.1
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "change_pct": -2.56,
+      "pea": false,
+      "catalyst": 4.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x)",
+      "score_raw": 51.4,
+      "score_adjustment": 12.0
+    },
+    "CAP": {
+      "score": 66.5,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "CAP",
+      "name": "Capgemini",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 4.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x)",
+      "score_raw": 54.5,
+      "score_adjustment": 12.0
+    },
+    "ATE": {
+      "score": 64.0,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Technical -1 (pds 1.0)",
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -0.6
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 2,
+        "neutrals": 3
+      },
+      "ticker": "ATE",
+      "name": "Alten",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 4.0,
+      "news_reason": "catalyseur haussier : TECH_AI (12x)",
+      "score_raw": 52.0,
+      "score_adjustment": 12.0
+    },
+    "RHM": {
+      "score": 66.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -6 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -6,
+          "weight": 1.0,
+          "confidence": 74,
+          "effective": -3.1
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "RHM",
+      "name": "Rheinmetall",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 51.4,
+      "score_adjustment": 15
+    },
+    "HO": {
+      "score": 61.8,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -6 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)",
+        "\u26a0\ufe0f Risque medium: RSI \u00e9lev\u00e9/bas (71)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -6,
+          "weight": 1.0,
+          "confidence": 74,
+          "effective": -3.1
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 1,
+        "neutrals": 4
+      },
+      "ticker": "HO",
+      "name": "Thales",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 46.8,
+      "score_adjustment": 15
+    },
+    "SAF": {
+      "score": 66.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -6 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -6,
+          "weight": 1.0,
+          "confidence": 74,
+          "effective": -3.1
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "SAF",
+      "name": "Safran",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 51.4,
+      "score_adjustment": 15
+    },
+    "AIR": {
+      "score": 67.8,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 1,
+        "neutrals": 4
+      },
+      "ticker": "AIR",
+      "name": "Airbus",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 52.8,
+      "score_adjustment": 15
+    },
+    "MTX": {
+      "score": 61.8,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -6 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)",
+        "\u26a0\ufe0f Risque medium: RSI \u00e9lev\u00e9/bas (74)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -6,
+          "weight": 1.0,
+          "confidence": 74,
+          "effective": -3.1
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 1,
+        "neutrals": 4
+      },
+      "ticker": "MTX",
+      "name": "Mtu Aero Engines",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 46.8,
+      "score_adjustment": 15
+    },
+    "BA": {
+      "score": 70.2,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +1 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 0.6
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 3,
+        "bears": 1,
+        "neutrals": 2
+      },
+      "ticker": "BA",
+      "name": "Boeing",
+      "change_pct": 0.58,
+      "pea": false,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 55.2,
+      "score_adjustment": 15
+    },
+    "RTX": {
+      "score": 67.8,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +1 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Technical -1 (pds 1.0)",
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -0.6
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 0.6
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 2,
+        "neutrals": 2
+      },
+      "ticker": "RTX",
+      "name": "RTX (Raytheon)",
+      "change_pct": 1.47,
+      "pea": false,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 52.8,
+      "score_adjustment": 15
+    },
+    "LMT": {
+      "score": 71.0,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +2 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 3,
+        "bears": 1,
+        "neutrals": 2
+      },
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "change_pct": 1.78,
+      "pea": false,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 56.0,
+      "score_adjustment": 15
+    },
+    "GD": {
+      "score": 71.0,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +1 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.7
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 0.6
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 3,
+        "bears": 1,
+        "neutrals": 2
+      },
+      "ticker": "GD",
+      "name": "General Dynamics",
+      "change_pct": 0.72,
+      "pea": false,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 56.0,
+      "score_adjustment": 15
+    },
+    "RKLB": {
+      "score": 66.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +2 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -6 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -6,
+          "weight": 1.0,
+          "confidence": 74,
+          "effective": -3.1
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "change_pct": 0.19,
+      "pea": false,
+      "catalyst": 5,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x)",
+      "score_raw": 51.4,
+      "score_adjustment": 15
+    },
+    "ENR": {
+      "score": 62.6,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "ENR",
+      "name": "Siemens Energy",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 54.5,
+      "score_adjustment": 8.100000000000001
+    },
+    "SHEL": {
+      "score": 60.9,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 1,
+        "neutrals": 4
+      },
+      "ticker": "SHEL",
+      "name": "Shell",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 52.8,
+      "score_adjustment": 8.100000000000001
+    },
+    "BP": {
+      "score": 60.9,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 1,
+        "bears": 1,
+        "neutrals": 4
+      },
+      "ticker": "BP",
+      "name": "BP",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 52.8,
+      "score_adjustment": 8.100000000000001
+    },
+    "XOM": {
+      "score": 64.1,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +2 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +2 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 2,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.1
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 3,
+        "bears": 1,
+        "neutrals": 2
+      },
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "change_pct": 0.94,
+      "pea": false,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 56.0,
+      "score_adjustment": 8.100000000000001
+    },
+    "PLUG": {
+      "score": 62.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +4 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -5 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": -2.4
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 4,
+          "weight": 1.0,
+          "confidence": 62,
+          "effective": 2.5
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "PLUG",
+      "name": "Plug Power",
+      "change_pct": 0.87,
+      "pea": false,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 54.3,
+      "score_adjustment": 8.100000000000001
+    },
+    "ENPH": {
+      "score": 64.1,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +1 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.7
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 1,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 0.6
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 3,
+        "bears": 1,
+        "neutrals": 2
+      },
+      "ticker": "ENPH",
+      "name": "Enphase",
+      "change_pct": -0.74,
+      "pea": false,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 56.0,
+      "score_adjustment": 8.100000000000001
+    },
+    "TTE": {
+      "score": 63.4,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.7
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "TTE",
+      "name": "TotalEnergies",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 2.7,
+      "news_reason": "catalyseur haussier : GEOPOLITICS (5x), COMMODITY_OIL (1x)",
+      "score_raw": 55.3,
+      "score_adjustment": 8.100000000000001
+    },
+    "SPIE": {
+      "score": 62.199999999999996,
+      "verdict": "\u26aa Neutre",
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)"
+      ],
+      "risks": [
+        "\ud83d\udd34 Bear -3 (pds 1.0)",
+        "\ud83d\udd34 Value -1 (pds 1.0)"
+      ],
+      "agor_agents": [
+        {
+          "agent": "Technical",
+          "agent_key": "technical_agent",
+          "score": 3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": 1.7
+        },
+        {
+          "agent": "Bull",
+          "agent_key": "bull_agent",
+          "score": 5,
+          "weight": 1.0,
+          "confidence": 70,
+          "effective": 3.5
+        },
+        {
+          "agent": "Bear",
+          "agent_key": "bear_agent",
+          "score": -3,
+          "weight": 1.0,
+          "confidence": 55,
+          "effective": -1.2
+        },
+        {
+          "agent": "Value",
+          "agent_key": "value_agent",
+          "score": -1,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": -0.5
+        },
+        {
+          "agent": "Sentiment",
+          "agent_key": "sentiment_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        },
+        {
+          "agent": "Momentum",
+          "agent_key": "momentum_agent",
+          "score": 0,
+          "weight": 1.0,
+          "confidence": 50,
+          "effective": 0.0
+        }
+      ],
+      "agor_consensus": {
+        "bulls": 2,
+        "bears": 1,
+        "neutrals": 3
+      },
+      "ticker": "SPIE",
+      "name": "Spie",
+      "change_pct": NaN,
+      "pea": true,
+      "catalyst": 2.3,
+      "news_reason": "catalyseur haussier : TECH_AI (12x), TECH_SEMI (1x)",
+      "score_raw": 55.3,
+      "score_adjustment": 6.8999999999999995
+    }
+  },
+  "portfolio": {
+    "has_portfolio": false
+  },
+  "paper_trading": {
+    "initial_capital": 10000.0,
+    "cash": NaN,
+    "open_value": NaN,
+    "total_value": NaN,
+    "total_gain": NaN,
+    "total_gain_pct": NaN,
+    "open_positions": [
+      {
+        "ticker": "RHM",
+        "name": "Rheinmetall",
+        "entry_price": NaN,
+        "current_value": NaN,
+        "pnl_pct": NaN,
+        "days_held": 35
+      },
+      {
+        "ticker": "HO",
+        "name": "Thales",
+        "entry_price": NaN,
+        "current_value": NaN,
+        "pnl_pct": NaN,
+        "days_held": 21
+      },
+      {
+        "ticker": "AIR",
+        "name": "Airbus",
+        "entry_price": 206.05,
+        "current_value": NaN,
+        "pnl_pct": NaN,
+        "days_held": 20
+      },
+      {
+        "ticker": "XOM",
+        "name": "ExxonMobil",
+        "entry_price": 159.8,
+        "current_value": NaN,
+        "pnl_pct": 0.2,
+        "days_held": 3
+      },
+      {
+        "ticker": "PLUG",
+        "name": "Plug Power",
+        "entry_price": 2.22,
+        "current_value": NaN,
+        "pnl_pct": 4.5,
+        "days_held": 3
+      }
+    ],
+    "open_count": 5,
+    "total_trades": 8,
+    "winning_trades": 3,
+    "losing_trades": 3,
+    "win_rate": 37.5,
+    "avg_pnl_per_trade": NaN,
+    "best_trade": {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "entry_price": 74.48,
+      "quantity": NaN,
+      "cost": NaN,
+      "entry_date": "2026-08-05",
+      "entry_score": 72.1,
+      "reasons": [
+        "\ud83d\udfe2 Technical +1 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +4 (pds 1.0)"
+      ],
+      "catalyst": 5,
+      "target_tp1": 80.44,
+      "target_tp2": 93.1,
+      "stop_loss": 68.52,
+      "status": "open",
+      "exit_price": 82.83,
+      "exit_date": "2026-08-08",
+      "sell_reason": "take_profit_1",
+      "pnl": NaN,
+      "pnl_pct": 11.2,
+      "days_held": 3
+    },
+    "worst_trade": {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "entry_price": 105.75,
+      "quantity": 12.104,
+      "cost": 1280.0,
+      "entry_date": "2026-07-01",
+      "entry_score": 70.3,
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +3 (pds 1.0)"
+      ],
+      "catalyst": 5,
+      "target_tp1": 114.21,
+      "target_tp2": 132.19,
+      "stop_loss": 97.29,
+      "status": "open",
+      "exit_price": 93.09,
+      "exit_date": "2026-07-07",
+      "sell_reason": "stop_loss",
+      "pnl": -153.24,
+      "pnl_pct": -12.0,
+      "days_held": 6
+    }
+  },
+  "macro": {
+    "SPY": {
+      "label": "S&P 500",
+      "price": 776.34,
+      "change_pct": -0.2
+    },
+    "QQQ": {
+      "label": "Nasdaq",
+      "price": 731.07,
+      "change_pct": -0.14
+    },
+    "^VIX": {
+      "label": "VIX (volatilit\u00e9)",
+      "price": 14.25,
+      "change_pct": -2.6
+    },
+    "DX-Y.NYB": {
+      "label": "Dollar Index",
+      "price": 99.67,
+      "change_pct": -0.29
+    },
+    "^TNX": {
+      "label": "Taux 10 ans US",
+      "price": 4.7,
+      "change_pct": 1.19
+    },
+    "CL=F": {
+      "label": "P\u00e9trole (WTI)",
+      "price": 82.4,
+      "change_pct": 1.42
+    },
+    "GC=F": {
+      "label": "Or",
+      "price": 4380.4,
+      "change_pct": 0.38
+    },
+    "BTC-USD": {
+      "label": "Bitcoin",
+      "price": 63016.1,
+      "change_pct": -0.61
+    },
+    "^STOXX50E": {
+      "label": "EURO STOXX 50",
+      "price": 6539.59,
+      "change_pct": -0.09
+    }
+  },
+  "report": "\ud83d\udcca **Alfred Stock Watch \u2014 2026-08-15 06:00**\n\n**\ud83c\udf0d Macro :**\n   S&P 500: \ud83d\udd34 776.34 (-0.2%)\n   Nasdaq: \ud83d\udd34 731.07 (-0.1%)\n   VIX (volatilit\u00e9): \ud83d\udd34 14.25 (-2.6%)\n   Dollar Index: \ud83d\udd34 99.67 (-0.3%)\n   Taux 10 ans US: \ud83d\udfe2 4.7 (+1.2%)\n\n**\ud83d\udcb0 Paper Trading :** nan\u20ac (+nan%)\n   Cash: nan\u20ac | Win rate: 37.5% | Trades: 8\n   \ud83d\udd34 RHM: +nan% (J+35)\n   \ud83d\udd34 HO: +nan% (J+21)\n   \ud83d\udd34 AIR: +nan% (J+20)\n\n\ud83d\udfe2 **Recommandations du jour :**\n\u2022 **Lockheed Martin** (LMT): +1.8% \u2014 Score 71.0/100 \ud83c\uddfa\ud83c\uddf8\n   \ud83d\udfe2 catalyseur haussier : GEOPOLITICS (5x)\n   \u2705 \ud83d\udfe2 Technical +2 (pds 1.0)\n   \u2705 \ud83d\udfe2 Bull +5 (pds 1.0)\n   \u2705 \ud83d\udfe2 Momentum +2 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Bear -3 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Value -1 (pds 1.0)\n   Agents: \ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udd34\u26aa\u26aa (3B/1R/2N)\n   \ud83d\udcf0 Lockheed Martin Stock (LMT) Opinions on Analyst Price Target Upgrade - Quiver Quantitative\n\u2022 **General Dynamics** (GD): +0.7% \u2014 Score 71.0/100 \ud83c\uddfa\ud83c\uddf8\n   \ud83d\udfe2 catalyseur haussier : GEOPOLITICS (5x)\n   \u2705 \ud83d\udfe2 Technical +3 (pds 1.0)\n   \u2705 \ud83d\udfe2 Bull +5 (pds 1.0)\n   \u2705 \ud83d\udfe2 Momentum +1 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Bear -3 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Value -1 (pds 1.0)\n   Agents: \ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udd34\u26aa\u26aa (3B/1R/2N)\n   \ud83d\udcf0 GD vs. GE: Which Stock Is the Better Value Option? - Yahoo Finance\n\u2022 **Boeing** (BA): +0.6% \u2014 Score 70.2/100 \ud83c\uddfa\ud83c\uddf8\n   \ud83d\udfe2 catalyseur haussier : GEOPOLITICS (5x)\n   \u2705 \ud83d\udfe2 Technical +2 (pds 1.0)\n   \u2705 \ud83d\udfe2 Bull +5 (pds 1.0)\n   \u2705 \ud83d\udfe2 Momentum +1 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Bear -3 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Value -1 (pds 1.0)\n   Agents: \ud83d\udfe2\ud83d\udfe2\ud83d\udfe2\ud83d\udd34\u26aa\u26aa (3B/1R/2N)\n   \ud83d\udcf0 BAE Systems (LSE:BA.) Stock May Trade At A 9% Discount Despite THREADS Progress - Yahoo Finance\n\u2022 **Airbus** (AIR): +nan% \u2014 Score 67.8/100 \ud83c\uddea\ud83c\uddfa\n   \ud83d\udfe2 catalyseur haussier : GEOPOLITICS (5x)\n   \u2705 \ud83d\udfe2 Bull +5 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Bear -3 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Value -1 (pds 1.0)\n   Agents: \ud83d\udfe2\ud83d\udd34\u26aa\u26aa\u26aa\u26aa (1B/1R/4N)\n   \ud83d\udcf0 Apple Loop: iPhone 18 Pro Stock Warning, iOS Reveals New iPhones, MacBook Air Memory Issues - Forbes\n\u2022 **RTX (Raytheon)** (RTX): +1.5% \u2014 Score 67.8/100 \ud83c\uddfa\ud83c\uddf8\n   \ud83d\udfe2 catalyseur haussier : GEOPOLITICS (5x)\n   \u2705 \ud83d\udfe2 Bull +5 (pds 1.0)\n   \u2705 \ud83d\udfe2 Momentum +1 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Technical -1 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Bear -3 (pds 1.0)\n   \u26a0\ufe0f \ud83d\udd34 Value -1 (pds 1.0)\n   Agents: \ud83d\udfe2\ud83d\udfe2\ud83d\udd34\ud83d\udd34\u26aa\u26aa (2B/2R/2N)\n   \ud83d\udcf0 RTX (RTX) Stock May Be 3% Undervalued Despite Fresh Missile Defense Contract - Yahoo Finance\n\n\ud83d\udfe1 **1 alertes :**\n\u2022 \ud83d\udfe2 Apple (AAPL) : RSI 26.1 \u2014 oversold sur non-Core \ud83c\uddfa\ud83c\uddf8\n\n**\ud83d\udcc8 Top 5 hausses :**\n  SPOT : +2.9% \u00e0 512.82$\n  SPIE : +nan% \u00e0 nan$\n  GET : +nan% \u00e0 nan$\n  IPN : +nan% \u00e0 nan$\n  LR : +nan% \u00e0 nan$\n\n**\ud83d\udcc9 Top 5 baisses :**\n  MRVL : -0.1% \u00e0 222.02$\n  KLAC : -2.7% \u00e0 203.72$\n  SOI : +nan% \u00e0 nan$\n  BESI : +nan% \u00e0 nan$\n  ASM : +nan% \u00e0 nan$"
+}

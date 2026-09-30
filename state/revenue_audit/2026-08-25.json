@@ -1,0 +1,57 @@
+{
+  "date": "2026-08-25",
+  "timestamp": "2026-08-25T04:00:03.913823",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "16",
+      "views": "177",
+      "vids": "11",
+      "last_title": "Le secret bancaire sur vos placements",
+      "last_views": "35",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "24/08 06:00"
+    },
+    "infra": {
+      "disk_pct": 64,
+      "disk_total": "72G",
+      "disk_used": "46G",
+      "ram_used_pct": 28,
+      "nginx": "active",
+      "ghost_docker": "Up 4 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-08-25"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 813,
+    "ips_24h": 117,
+    "hits_7d": 5267,
+    "ips_7d": 668
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

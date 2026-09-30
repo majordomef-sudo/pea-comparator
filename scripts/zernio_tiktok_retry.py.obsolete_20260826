@@ -1,0 +1,29 @@
+import sys, json, os
+sys.path.insert(0, '/home/ubuntu/.openclaw/workspace')
+sys.path.insert(0, '/home/ubuntu/.openclaw/workspace/pipeline')
+sys.path.insert(0, '/home/ubuntu/.openclaw/workspace/skills/alfred_cron')
+MARKER = '/tmp/zernio_tiktok_done'
+if os.path.exists(MARKER):
+    print('DEJA FAIT - skip')
+    sys.exit(0)
+video = '/tmp/tmpdyh6mf5s_zernio.mp4'
+if not os.path.exists(video):
+    print('VIDEO ABSENTE - skip')
+    sys.exit(0)
+for line in open('/home/ubuntu/.secrets/env'):
+    line = line.strip()
+    if line.startswith('ZERNIO_API_KEY='):
+        os.environ['ZERNIO_API_KEY'] = line.split('=', 1)[1].strip(chr(34)).strip(chr(39))
+import zernio_uploader
+from config_loader import DEFAULT_TAGS, DEFAULT_HASHTAGS
+title = 'Le secret des investisseurs qui dorment sur leurs deux oreilles'
+h = DEFAULT_HASHTAGS if isinstance(DEFAULT_HASHTAGS, list) else []
+desc = title + chr(10) + ' '.join(h)
+print('RETRY TIKTOK SEUL', flush=True)
+res = zernio_uploader.upload_video(video_path=video, title=title, description=desc, tags=DEFAULT_TAGS, platforms=['tiktok'])
+print(json.dumps(res, ensure_ascii=False, indent=2), flush=True)
+if res.get('success') and 'tiktok' in res.get('platforms', []):
+    open(MARKER, 'w').write('ok')
+    print('TIKTOK PUBLIE')
+else:
+    print('TIKTOK ENCORE REFUSE - re-essai plus tard')

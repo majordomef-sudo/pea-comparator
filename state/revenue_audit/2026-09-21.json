@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-21",
+  "timestamp": "2026-09-21T04:00:06.856536",
+  "results": {
+    "site": {
+      "status": "⚠️",
+      "ok": 4,
+      "total": 5,
+      "failures": [
+        "Guide (404)"
+      ],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "17",
+      "views": "585",
+      "vids": "37",
+      "last_title": "Votre confiance vous rend aveugle",
+      "last_views": "11",
+      "last_likes": "0",
+      "pipeline_ok": true,
+      "last_orch": "19/09",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "19/09 08:38"
+    },
+    "infra": {
+      "disk_pct": 68,
+      "disk_total": "72G",
+      "disk_used": "49G",
+      "ram_used_pct": 34,
+      "nginx": "active",
+      "ghost_docker": "Up 40 hours"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-09-22"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 1330,
+    "ips_24h": 165,
+    "hits_7d": 7476,
+    "ips_7d": 689
+  },
+  "fixes": [],
+  "actions": [
+    "🔧 1 page(s) down — vérifier nginx",
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

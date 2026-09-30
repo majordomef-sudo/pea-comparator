@@ -1,0 +1,50 @@
+{
+  "patterns": [
+    {
+      "pattern": "Réduire les silences dans la voix-off",
+      "count": 26,
+      "frequency": "26/104 vidéos"
+    },
+    {
+      "pattern": "Augmenter le rythme de coupe",
+      "count": 18,
+      "frequency": "18/104 vidéos"
+    },
+    {
+      "pattern": "Ajouter un hook viral en ouverture",
+      "count": 11,
+      "frequency": "11/104 vidéos"
+    },
+    {
+      "pattern": "Ajouter un hook plus percutant dans les 5 premières secondes",
+      "count": 2,
+      "frequency": "2/104 vidéos"
+    },
+    {
+      "pattern": "Ajouter des données chiffrées",
+      "count": 2,
+      "frequency": "2/104 vidéos"
+    },
+    {
+      "pattern": "Réduire la durée de la vidéo",
+      "count": 2,
+      "frequency": "2/104 vidéos"
+    },
+    {
+      "pattern": "Corriger les black frames",
+      "count": 2,
+      "frequency": "2/104 vidéos"
+    }
+  ],
+  "trend": "📉 Dégradation",
+  "weak_modules": {},
+  "total_analyzed": 104,
+  "avg_global": 77.0,
+  "last_5_scores": [
+    84,
+    77,
+    83,
+    77,
+    74
+  ]
+}

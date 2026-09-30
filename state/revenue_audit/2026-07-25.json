@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-25",
+  "timestamp": "2026-07-25T04:00:03.574730",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "15",
+      "views": "0",
+      "vids": "1",
+      "last_title": "L'illusion de sécurité du Livret A",
+      "last_views": "3",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": false,
+      "morning": false,
+      "us_pulse": false,
+      "last_signal": "24/07 06:00"
+    },
+    "infra": {
+      "disk_pct": 58,
+      "disk_total": "72G",
+      "disk_used": "42G",
+      "ram_used_pct": 28,
+      "nginx": "active",
+      "ghost_docker": "Up 8 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-07-21"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 4297,
+    "ips_24h": 154,
+    "hits_7d": 13209,
+    "ips_7d": 972
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "📈 Crons Alfred Trader incomplets",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

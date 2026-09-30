@@ -1,0 +1,62 @@
+{
+  "date": "2026-07-26",
+  "timestamp": "2026-07-26T04:00:03.758866",
+  "results": {
+    "site": {
+      "status": "⚠️",
+      "ok": 3,
+      "total": 5,
+      "failures": [
+        "Blog (404)",
+        "A propos (404)"
+      ],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "15",
+      "views": "4",
+      "vids": "1",
+      "last_title": "L'illusion de sécurité du Livret A",
+      "last_views": "4",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": false,
+      "morning": false,
+      "us_pulse": false,
+      "last_signal": "25/07 06:00"
+    },
+    "infra": {
+      "disk_pct": 59,
+      "disk_total": "72G",
+      "disk_used": "42G",
+      "ram_used_pct": 29,
+      "nginx": "active",
+      "ghost_docker": "Up 9 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-07-21"
+    },
+    "ghost": {
+      "posts_published": "?",
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 493,
+    "ips_24h": 127,
+    "hits_7d": 12495,
+    "ips_7d": 941
+  },
+  "fixes": [],
+  "actions": [
+    "🔧 2 page(s) down — vérifier nginx",
+    "🎬 Cron pipeline YouTube manquant",
+    "📈 Crons Alfred Trader incomplets",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

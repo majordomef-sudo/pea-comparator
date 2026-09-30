@@ -1,0 +1,42 @@
+{
+ "built_at": "2026-09-30T04:00:06.032458+00:00",
+ "as_of": "2026-09-30",
+ "sources": {
+  "market": "Yahoo Finance (chart API)",
+  "macro": "Eurostat (HICP zone euro, PIB zone euro)",
+  "etf": "Base ETF PEA Alfred (web/pea-comparator)"
+ },
+ "data": {
+  "macro": {
+   "inflation_zone_euro": {
+    "value": 2.0,
+    "period": "2025-12"
+   },
+   "croissance_pib_zone_euro": {
+    "value": 1.2,
+    "period": "2026-Q2"
+   },
+   "taux_depot_bce": {
+    "value": 2.5,
+    "period": "2026-09-30"
+   }
+  },
+  "etf": {
+   "count_total": 437,
+   "count_with_fees": 373,
+   "avg_fee": 0.28,
+   "median_fee": 0.25,
+   "min_fee": 0.0,
+   "min_fee_name": "OSSIAM MSCI EMU - UCITS ETF 1C (EUR)",
+   "max_fee": 0.83,
+   "count_under_030": 253,
+   "count_under_020": 144
+  }
+ },
+ "stale": [
+  "market:MSCI World:skip",
+  "market:Or:skip",
+  "market:Brent:skip"
+ ],
+ "ok": true
+}

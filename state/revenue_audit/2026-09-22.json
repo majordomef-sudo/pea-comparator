@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-22",
+  "timestamp": "2026-09-22T04:00:04.741810",
+  "results": {
+    "site": {
+      "status": "⚠️",
+      "ok": 4,
+      "total": 5,
+      "failures": [
+        "Guide (404)"
+      ],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "17",
+      "views": "584",
+      "vids": "38",
+      "last_title": "Les soldes en bourse sont un piège",
+      "last_views": "2",
+      "last_likes": "0",
+      "pipeline_ok": true,
+      "last_orch": "19/09",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "19/09 08:38"
+    },
+    "infra": {
+      "disk_pct": 70,
+      "disk_total": "72G",
+      "disk_used": "50G",
+      "ram_used_pct": 41,
+      "nginx": "active",
+      "ghost_docker": "Up 2 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-09-22"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 791,
+    "ips_24h": 116,
+    "hits_7d": 6984,
+    "ips_7d": 676
+  },
+  "fixes": [],
+  "actions": [
+    "🔧 1 page(s) down — vérifier nginx",
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

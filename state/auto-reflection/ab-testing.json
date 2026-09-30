@@ -1,0 +1,88 @@
+{
+  "tests": [
+    {
+      "id": "ab_001",
+      "name": "Hook: variante A (question directe) vs variante B (constat + bascule vous)",
+      "started": "2026-07-30T16:51:00.927770",
+      "status": "running",
+      "videos_a": 2,
+      "videos_b": 2,
+      "results": {
+        "mesure": "averageViewPercentage (retention)",
+        "collecte_le": "2026-09-27",
+        "prospectif": {
+          "variante_A": null,
+          "variante_B": null,
+          "statut": "en attente : aucune video assignee n a encore de donnees de retention"
+        },
+        "retrospectif": {
+          "variante_A": {
+            "n": 5,
+            "pct_moyen": 37.7,
+            "pct_median": 35.2,
+            "duree_moy_s": 27.4,
+            "vues_moy": 15.2
+          },
+          "variante_B": {
+            "n": 2,
+            "pct_moyen": 12.0,
+            "pct_median": 18.9,
+            "duree_moy_s": 8.5,
+            "vues_moy": 102.0
+          },
+          "seuil_decision_pts": 5.0,
+          "min_videos_par_bras": 5,
+          "avertissement": "Retrospectif = quasi-experience, pas une assignation aleatoire. Correlation avec la portee possible. A confirmer par le prospectif."
+        }
+      },
+      "metric": "averageViewPercentage (retention YouTube Analytics, 90 j)",
+      "assignments": [
+        {
+          "date": "2026-09-27",
+          "variant": "A",
+          "title": "Le Piège de la Diversification",
+          "word_counts": [
+            17,
+            47,
+            50,
+            46
+          ]
+        },
+        {
+          "date": "2026-09-28",
+          "variant": "B",
+          "title": "Perdre vous pousse à acheter ce que vous n’oseriez jamais",
+          "word_counts": [
+            20,
+            49,
+            50,
+            48
+          ]
+        },
+        {
+          "date": "2026-09-29",
+          "variant": "A",
+          "title": "Pourquoi vos émotions détruisent votre patrimoine ?",
+          "word_counts": [
+            19,
+            49,
+            48,
+            48
+          ]
+        },
+        {
+          "date": "2026-09-30",
+          "variant": "B",
+          "title": "Ce chiffre qui vous rassure vide votre patrimoine en 20 ans",
+          "word_counts": [
+            20,
+            53,
+            52,
+            53
+          ]
+        }
+      ]
+    }
+  ],
+  "last_test": "ab_001"
+}

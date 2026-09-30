@@ -1,0 +1,10 @@
+{
+  "id": 745,
+  "content": "articles de blog ont été récupérés via l'API Ghost, 9 sont liés à des calculateurs, 3 calculateurs orphelins nécessitent des articles.",
+  "created_at": "2026-07-21 10:02:04.428205",
+  "node_uuid": "0045dedd-b17d-4d25-b195-791f4fd4e767",
+  "archived_at": "2026-09-11T19:36:54.637798+00:00",
+  "type": "EPISODIC",
+  "ttl_days": 30,
+  "age_days": 52.4
+}

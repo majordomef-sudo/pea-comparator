@@ -1,0 +1,10 @@
+{
+  "id": 970,
+  "content": "La solution a implémenté un logging des appels LLM directs via `model_router.py` et les hooks `nocturne_nudge.py` et `blog_writer.py`.",
+  "created_at": "2026-08-06 04:00:13.854826",
+  "node_uuid": "8ab8bee6-2909-4e0b-95fb-e7b7b5738011",
+  "archived_at": "2026-09-11T19:36:54.641733+00:00",
+  "type": "EPISODIC",
+  "ttl_days": 30,
+  "age_days": 36.7
+}

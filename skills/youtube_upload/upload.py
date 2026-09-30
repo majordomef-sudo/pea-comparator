@@ -16,7 +16,32 @@ SCOPES = [
 CLIENT_SECRETS = os.path.expanduser("~/.secrets/client_secrets.json")
 TOKEN_FILE = os.path.expanduser("~/.secrets/youtube_token.json")
 
+
+def _inject_client_secret():
+    """Complète client_secret dans le token s'il manque (fix robustesse)."""
+    import json
+    if not os.path.exists(TOKEN_FILE):
+        return
+    try:
+        data = json.load(open(TOKEN_FILE))
+    except Exception:
+        return
+    if data.get('client_secret'):
+        return
+    try:
+        cs = json.load(open(CLIENT_SECRETS)).get('installed', {}).get('client_secret')
+    except Exception:
+        cs = None
+    if cs:
+        data['client_secret'] = cs
+        tmp = TOKEN_FILE + '.tmp'
+        with open(tmp, 'w') as f:
+            json.dump(data, f)
+        os.replace(tmp, TOKEN_FILE)
+        print('[upload] client_secret injecté depuis client_secrets.json')
+
 def get_credentials():
+    _inject_client_secret()
     creds = None
     if os.path.exists(TOKEN_FILE):
         creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)

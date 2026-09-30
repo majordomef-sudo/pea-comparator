@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-05",
+  "timestamp": "2026-09-05T04:00:04.981215",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "16",
+      "views": "265",
+      "vids": "23",
+      "last_title": "Le piège fiscal de l'assurance vie",
+      "last_views": "0",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "04/09 06:00"
+    },
+    "infra": {
+      "disk_pct": 66,
+      "disk_total": "72G",
+      "disk_used": "47G",
+      "ram_used_pct": 30,
+      "nginx": "active",
+      "ghost_docker": "Up 2 weeks"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-09-08"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 2122,
+    "ips_24h": 132,
+    "hits_7d": 8962,
+    "ips_7d": 612
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

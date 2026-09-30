@@ -1,0 +1,22 @@
+{
+ "etf_base": {
+  "couverture_prix_pct": 92.2,
+  "total": 437,
+  "avec_prix": 403,
+  "derniere_verif": "2026-09-30T03:30:03.615697"
+ },
+ "clips": {
+  "total": 96,
+  "niches": {
+   "2026-04-24": 4,
+   "2026-04-25": 24,
+   "2026-04-26": 4,
+   "2026-04-30": 20,
+   "2026-05-02": 44,
+   "daily_spark": 0,
+   "mind_vault": 0,
+   "zen_escape": 0
+  },
+  "derniere_verif": "2026-09-30T03:30:03.619888"
+ }
+}

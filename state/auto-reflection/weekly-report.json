@@ -1,0 +1,37 @@
+{
+  "last_report": "2026-09-27T08:11:31.967727",
+  "period": "2026-09-21_to_2026-09-27",
+  "subscribers": 17,
+  "subscribers_week": 0,
+  "total_views": 600,
+  "views_week": 15,
+  "recent3": [
+    {
+      "id": "aUZ8jXlXC9c",
+      "title": "L'illusion du montage parfait",
+      "published": "2026-09-26T05:17:15Z",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "age_days": 1.121028755601852
+    },
+    {
+      "id": "v5K0dQfJEkk",
+      "title": "Ce que vous ne faites pas vous rapporte le plus",
+      "published": "2026-09-25T04:11:07Z",
+      "views": 8,
+      "likes": 0,
+      "comments": 0,
+      "age_days": 2.166954681527778
+    },
+    {
+      "id": "IXC1KvOrwso",
+      "title": "Votre cerveau transforme le hasard en comp\u00e9tence",
+      "published": "2026-09-24T19:28:13Z",
+      "views": 3,
+      "likes": 1,
+      "comments": 0,
+      "age_days": 2.530079681527778
+    }
+  ]
+}

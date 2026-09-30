@@ -1,0 +1,33 @@
+# Sujets vidéo Neuro-Finance - Eric 2026-07-22
+# 20 sujets en rotation via SUB_TOPICS dans pipeline_orchestrator.py
+
+## PEA & Bourse
+Pourquoi ton Livret A te fait perdre de l'argent chaque année ?
+PEA ou assurance vie : lequel ouvrir en premier ?
+Combien te coûtent vraiment 2% de frais de gestion sur 30 ans ?
+ETF Monde ou S&P 500 : lequel a le plus performé sur 10 ans ?
+Pourquoi attendre "le bon moment" pour investir te coûte cher ?
+
+## Épargne & budget
+Combien devrais-tu vraiment épargner chaque mois selon ton salaire ?
+Pourquoi la règle des 50/30/20 ne marche pas pour tout le monde ?
+Combien coûte un enfant jusqu'à ses 18 ans ?
+
+## Bitcoin & crypto
+Bitcoin en 2026 : protection contre l'inflation ou pari risqué ?
+Pourquoi les banques centrales surveillent le Bitcoin de près ?
+Faut-il mettre 1%, 5% ou 10% de son épargne en crypto ?
+
+## Retraite
+La règle des 4% pour arrêter de travailler : mythe ou réalité ?
+Combien faut-il avoir investi pour vivre de tes rentes ?
+Pourquoi ta pension sera plus faible que tu ne le penses ?
+
+## Patrimoine & erreurs
+Pourquoi tout miser sur un seul actif est dangereux ?
+Or, actions, cash : comment répartir son patrimoine en 2026 ?
+Pourquoi être riche n'est pas pareil que gagner beaucoup ?
+
+## Transmission
+Comment donner de l'argent à ton enfant sans qu'il y touche avant ses 18 ans ?
+Pourquoi ouvrir une assurance vie dès la naissance de ton enfant ?

@@ -1,0 +1,23 @@
+Catégorie,Nom,ISIN,Ticker,Prix,Frais (%),Encours (M€),Perf 3 ans (%),Volatilité 3 ans (%),Cap/Dist,PEA,AV
+ETF Action,SPDR MSCI All Country World Investable Market UCITS ETF,IE00B3YLTY66,IMIE,9.94,0.17,4321,13.92,10.22,Capitalisant,Non,-
+ETF Action,SPDR MSCI World UCITS ETF,IE00BFY0GT14,SPPW,40.17,0.12,14045,14.63,10.50,Capitalisant,Non,-
+ETF Action,Amundi Core S&P 500 Swap UCITS ETF,LU1135865084,SP5C,410.07,0.05,12456,15.70,12.07,Capitalisant,Non,-
+ETF Action,Amundi Core EURO STOXX 50 UCITS ETF,LU1681047236,C50,150.45,0.09,3381,12.14,10.57,Capitalisant,Oui,-
+ETF Action,iShares Core MSCI Emerging Markets IMI UCITS ETF,IE00BKM4GZ66,IS3N,40.36,0.18,30432,13.47,11.33,Capitalisant,Non,-
+ETF Action,Amundi PEA Nasdaq-100 UCITS ETF,FR0011871110,PUST,80.32,0.30,791,19.28,15.89,Capitalisant,Oui,-
+ETF Action,Amundi Euro Stoxx Banks UCITS ETF,LU1829219390,BNKE,305.30,0.30,4442,40.00,19.80,Capitalisant,Oui,-
+ETF Action,iShares Global Aerospace & Defence UCITS ETF,IE000U9ODG19,DFND,8.32,0.35,1361,26.24 (1an),17.60 (1an),Capitalisant,Non,-
+ETF Action,iShares Edge MSCI Europe Momentum Factor UCITS ETF,IE00BQN1K786,CEMR,14.78,0.25,694,16.87,10.04,Capitalisant,Non,-
+ETF Action,Amundi EURO STOXX 50 Daily (2x) Leveraged UCITS ETF,FR0010468983,LVE,70.12,0.40,196,17.97,21.57,Capitalisant,Oui,-
+ETN Crypto,21shares Bitcoin Core ETP,CH1199067674,CBTC,14.00,0.10,343,30.25,51.72,Capitalisant,Non,-
+ETN Crypto,21shares Crypto Basket Index ETP,CH0445689208,HODL,11.06,0.99,121,15.59,56.18,Capitalisant,Non,-
+ETC Or,Xtrackers Physical Gold EUR Hedged ETC,DE000A1EK0G3,XAD1,271.87,0.59,2008,28.36,15.14,Capitalisant,Non,Oui
+ETC Or,Amundi Physical Gold ETC,FR0013416716,GOLD,163.45,0.12,10518,29.80,13.78,Capitalisant,Non,Oui
+ETF Obligataire,iShares Core EUR Corporate Bond UCITS ETF,IE00B3F81R35,EUN5,118.26,0.09,8554,4.35,2.92,Distribuant,Non,-
+ETF Obligataire,iShares EUR Aggregate Bond ESG SRI UCITS ETF,IE00B3DKXQ41,EUN4,107.29,0.16,1587,2.62,4.02,Distribuant,Non,-
+Fonds Daté,SYCOYIELD 2030 RC,FR001400MCQ6,-,109.81,1.00 (courants),-,4.00 (1an),2.48 (1an),- (Échéance 2030),Non,-
+Fonds Daté,Mandarine Global Target 2030,LU2786374178,-,105.62,1.00 (courants),-,4.13 (1an),3.67 (1an),- (Échéance 2030),Non,-
+Private Equity,ODDO BHF Global Private Equity A1,FR001400ROU2,-,116.09,2.00 (gestion),55,6.70 (1an),- (risque 6/7),FCPR OUI,Non,-
+Private Equity,Ardian Access Solution A,FR001400AUA7,-,119.63,1.90 (gestion),415,5.45 (1an),- (risque 6/7),FCPR OUI,Non,-
+SCPI,NCAP CONTINENT,-,-,210.00,10.00 (souscription)+14.40% (gestion),65,- (TRI 5ans: NC),- (TO: 100%),Bureaux (TD 7.10%),Non,-
+SCPI,CORUM ORIGIN,-,-,1135.00,11.96 (souscription)+13.20% (gestion),3794,TRI 5ans: 5.31%,- (TO: 96.23%),Diversifiée (TD 6.50%),Non,-

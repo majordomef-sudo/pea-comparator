@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-28",
+  "timestamp": "2026-07-28T04:00:05.254718",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "15",
+      "views": "4",
+      "vids": "2",
+      "last_title": "Le prix caché de votre montre de luxe",
+      "last_views": "4",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": false,
+      "morning": false,
+      "us_pulse": false,
+      "last_signal": "27/07 06:00"
+    },
+    "infra": {
+      "disk_pct": 59,
+      "disk_total": "72G",
+      "disk_used": "43G",
+      "ram_used_pct": 32,
+      "nginx": "active",
+      "ghost_docker": "Up 22 hours"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-07-21"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 319,
+    "ips_24h": 124,
+    "hits_7d": 10980,
+    "ips_7d": 819
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "📈 Crons Alfred Trader incomplets",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

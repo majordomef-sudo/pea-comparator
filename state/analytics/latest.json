@@ -1,0 +1,78 @@
+{
+ "date": "2026-09-30",
+ "hits": 2261,
+ "hits_pages": 1931,
+ "visiteurs_uniques": 351,
+ "robots": 102,
+ "erreurs_4xx": 1733,
+ "erreurs_5xx": 0,
+ "mobile": 522,
+ "desktop": 1739,
+ "top_pages": [
+  {
+   "page": "/",
+   "vues": 389
+  },
+  {
+   "page": "/index.php",
+   "vues": 22
+  },
+  {
+   "page": "/.env",
+   "vues": 19
+  },
+  {
+   "page": "/login",
+   "vues": 19
+  },
+  {
+   "page": "/SDK/webLanguage",
+   "vues": 12
+  },
+  {
+   "page": "*",
+   "vues": 9
+  },
+  {
+   "page": "/.git/config",
+   "vues": 9
+  },
+  {
+   "page": "/.env.local",
+   "vues": 8
+  }
+ ],
+ "top_referrers": [
+  {
+   "domaine": "57.129.120.7",
+   "clics": 2
+  },
+  {
+   "domaine": "57.129.120.7:80",
+   "clics": 2
+  }
+ ],
+ "top_ua": [
+  {
+   "ua": "Mozilla/5.0 (iPod touch; CPU iPhone OS 11_2 like Mac OS X) AppleWebKit/604.4.7 (",
+   "n": 245
+  },
+  {
+   "ua": "Mozilla/4.0 (compatible; MSIE 6.0; MSIE 5.5; Windows NT 5.0) Opera 7.02 Bork-edi",
+   "n": 238
+  },
+  {
+   "ua": "Mozilla/5.0 (Linux; Android 4.4.2; ASUS_T00J Build/KVT49L) AppleWebKit/537.36 (K",
+   "n": 238
+  },
+  {
+   "ua": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.",
+   "n": 238
+  },
+  {
+   "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.",
+   "n": 238
+  }
+ ],
+ "total_lignes_parsees": 2261
+}

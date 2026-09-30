@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-03",
+  "timestamp": "2026-09-03T04:00:04.738822",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "16",
+      "views": "265",
+      "vids": "21",
+      "last_title": "La méthode des investisseurs qui ne perdent j",
+      "last_views": "3",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "02/09 06:00"
+    },
+    "infra": {
+      "disk_pct": 64,
+      "disk_total": "72G",
+      "disk_used": "46G",
+      "ram_used_pct": 28,
+      "nginx": "active",
+      "ghost_docker": "Up 13 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-09-04"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 789,
+    "ips_24h": 113,
+    "hits_7d": 7850,
+    "ips_7d": 618
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

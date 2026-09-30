@@ -1,0 +1,12 @@
+{
+  "rsi_oversold": 0.58,
+  "macd_bullish": 1.28,
+  "volume_spike": 1.98,
+  "dip_core": 1.04,
+  "pea_bonus": 1.7,
+  "price_target": 1.0,
+  "news_catalyst": 1.38,
+  "ma_bounce": 2.0,
+  "sector_trend": 0.7,
+  "convexity": 0.4
+}

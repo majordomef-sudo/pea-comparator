@@ -1,25 +1,19 @@
-# Actions en cours
+# Actions — Redirect
 
-## 🔴 Semaine 1 (05-06/06) ✅ FAIT
-- [x] Harmoniser MEMORY.md avec la roadmap réelle
-- [x] 3 calculateurs (intérêts composés, FIRE, impact frais) + chart frais
-- [x] Comparateur PEA/AV/CTO + chart enveloppes fiscales
-- [x] Outil allocation recommandée (offensif/équilibré/défensif)
-- [x] SEO complet (JSON-LD, FAQ, OG, Twitter Card, robots.txt, sitemap)
-- [x] Bot Telegram enrichi (/fire, /compound, recherche par nom, multi-résultats)
-- [x] 5 scripts vidéo finance prêts pour le pipeline YouTube
-- [ ] ⏳ **Déploiement :** Eric crée le repo GitHub ce soir
+<br>
 
-## 🟠 Semaine 2 (06-09/06)
-- [ ] Pusher le site sur GitHub dès que repo dispo
-- [ ] Configurer GitHub Pages ou déploiement
-- [ ] Lancer le bot Telegram enrichi
-- [ ] Planifier les 5 vidéos dans le pipeline YouTube
+Dernière mise à jour : 2026-08-19
 
-## 🟡 Semaine 3 (09-13/06)
-- [ ] Articles SEO finance personnelle
-- [ ] Améliorations continue du comparateur
-- [ ] Optimisation SEO avancée
+<br>
 
-## Bloqué par
-- ~~Repo GitHub pour déploiement du comparateur PEA (Eric fait ce soir)~~
+Ce fichier est conservé pour compatibilité.
+
+Les actions prioritaires sont désormais définies dans :
+
+- state/current_state.md
+
+Action actuellement prioritaire :
+
+- Exécuter un test complet preview :
+  python3 pipeline/pipeline_orchestrator.py --preview --skip-image-gen
+

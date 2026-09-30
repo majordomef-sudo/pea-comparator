@@ -1,0 +1,20 @@
+[
+  {
+    "fix": "auto_trim_silence",
+    "reason": "Pattern récurrent détecté",
+    "action": "Réduire automatiquement les silences audio",
+    "applied": false
+  },
+  {
+    "fix": "faster_cuts",
+    "reason": "Pattern récurrent détecté",
+    "action": "Réduire la durée moyenne des plans",
+    "applied": false
+  },
+  {
+    "fix": "stronger_hook",
+    "reason": "Pattern récurrent détecté",
+    "action": "Renforcer automatiquement le hook du segment 1",
+    "applied": true
+  }
+]

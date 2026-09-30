@@ -1,0 +1,121 @@
+{
+  "date": "2026-08-06T05:31:42.072421",
+  "indices": [
+    {
+      "nom": "CAC 40",
+      "symbole": "^FCHI",
+      "valeur": 8669.3,
+      "variation": 0.03,
+      "region": "FR",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "DAX",
+      "symbole": "^GDAXI",
+      "valeur": 26126.3,
+      "variation": -0.29,
+      "region": "DE",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "Euro Stoxx 50",
+      "symbole": "^STOXX50E",
+      "valeur": 6476.98,
+      "variation": -0.15,
+      "region": "EU",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "FTSE 100",
+      "symbole": "^FTSE",
+      "valeur": 10888.3,
+      "variation": 0.08,
+      "region": "UK",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "S&P 500",
+      "symbole": "^SPX",
+      "valeur": 7723.55,
+      "variation": -0.17,
+      "region": "US",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "Nasdaq",
+      "symbole": "^IXIC",
+      "valeur": 26363.44,
+      "variation": -0.83,
+      "region": "US",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "Dow Jones",
+      "symbole": "^DJI",
+      "valeur": 54349.12,
+      "variation": 0.49,
+      "region": "US",
+      "date": "2026-08-05"
+    },
+    {
+      "nom": "Bitcoin",
+      "symbole": "BTC-EUR",
+      "valeur": 56165.66,
+      "variation": 1.12,
+      "region": "CRYPTO",
+      "date": "2026-08-06"
+    }
+  ],
+  "etfs": [
+    {
+      "isin": "LU1681043599",
+      "nom": "Amundi MSCI World",
+      "ticker": "CW8",
+      "prix": 697.77,
+      "variation_mensuelle": 1.46,
+      "encours": null,
+      "categorie": null
+    },
+    {
+      "isin": "FR0010315770",
+      "nom": "BNP Easy MSCI World",
+      "ticker": "WLD",
+      "prix": 432.09,
+      "variation_mensuelle": 1.48,
+      "encours": null,
+      "categorie": null
+    },
+    {
+      "isin": "IE00B4L5Y983",
+      "nom": "iShares Core MSCI World",
+      "ticker": "IWDA",
+      "prix": 148.07,
+      "variation_mensuelle": 2.66,
+      "encours": null,
+      "categorie": null
+    },
+    {
+      "isin": "FR0010900076",
+      "nom": "Amundi PEA MSCI World",
+      "erreur": "Invalid ISIN number: FR0010900076"
+    }
+  ],
+  "news": [
+    {
+      "source": "boursorama",
+      "titre": "L'Iran dit s'être accordé avec Oman sur Ormuz, mais la réouverture dépendra de Washington"
+    },
+    {
+      "source": "boursorama",
+      "titre": "L'étage supérieur d'une fusée SpaceX s'est écrasé sur la Lune"
+    },
+    {
+      "source": "boursorama",
+      "titre": "Canicules, sécheresse, incendies: un plan \"global\" pour ne laisser aucun agriculteur \"seul\""
+    },
+    {
+      "source": "boursorama",
+      "titre": "Ingérences dans la présidentielle: Glucksmann et Tondelier accusent les plateformes étrangères"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "mesure": "averageViewPercentage (retention)",
+  "collecte_le": "2026-09-27",
+  "prospectif": {
+    "variante_A": null,
+    "variante_B": null,
+    "statut": "en attente : aucune video assignee n a encore de donnees de retention"
+  },
+  "retrospectif": {
+    "variante_A": {
+      "n": 5,
+      "pct_moyen": 37.7,
+      "pct_median": 35.2,
+      "duree_moy_s": 27.4,
+      "vues_moy": 15.2
+    },
+    "variante_B": {
+      "n": 2,
+      "pct_moyen": 12.0,
+      "pct_median": 18.9,
+      "duree_moy_s": 8.5,
+      "vues_moy": 102.0
+    },
+    "seuil_decision_pts": 5.0,
+    "min_videos_par_bras": 5,
+    "avertissement": "Retrospectif = quasi-experience, pas une assignation aleatoire. Correlation avec la portee possible. A confirmer par le prospectif."
+  }
+}

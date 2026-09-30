@@ -1,0 +1,390 @@
+{
+  "timestamp": "2026-07-30T16:57:57.706850",
+  "stats": {
+    "total": 100,
+    "ok": 100,
+    "signals": 24,
+    "conviction_signals": 0
+  },
+  "signals": [
+    {
+      "type": "STOP_LOSS",
+      "ticker": "STM",
+      "name": "STMicroelectronics",
+      "change": 6.36,
+      "change_7d": -21.7,
+      "pea": true,
+      "priority": "HIGH",
+      "action": "Vendre",
+      "risk": "Growth",
+      "message": "\u26a0\ufe0f STMicroelectronics (STM) : -22% en 7j (RSI 23.4) \u2192 stop loss"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "STM",
+      "name": "STMicroelectronics",
+      "change": 6.36,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 STMicroelectronics (STM) : RSI 23.4 \u2014 oversold sur non-Core"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "change": 6.88,
+      "pea": false,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 KLA Corporation (KLAC) : RSI 28.8 \u2014 oversold sur non-Core"
+    },
+    {
+      "type": "STOP_LOSS",
+      "ticker": "BESI",
+      "name": "BE Semiconductor",
+      "change": 4.22,
+      "change_7d": -20.4,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Vendre",
+      "risk": "Growth",
+      "message": "\u26a0\ufe0f BE Semiconductor (BESI) : -20% en 7j (RSI 28.1) \u2192 stop loss"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "BESI",
+      "name": "BE Semiconductor",
+      "change": 4.22,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 BE Semiconductor (BESI) : RSI 28.1 \u2014 oversold sur non-Core"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "change": 16.63,
+      "change_7d": 16.69,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Growth",
+      "message": "\ud83d\udfe0 Microsoft (MSFT) : RSI 74.4 +17% 7j"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "META",
+      "name": "Meta",
+      "change": -9.24,
+      "pea": false,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 Meta (META) : RSI 13.2 \u2014 oversold sur non-Core"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "ATE",
+      "name": "Alten",
+      "change": -4.95,
+      "change_7d": 34.25,
+      "pea": true,
+      "priority": "LOW",
+      "action": "Vigilance",
+      "risk": "Growth",
+      "message": "\ud83d\udd34 Alten (ATE) : RSI 83.7 \u2014 sur-achat +34% en 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "RHM",
+      "name": "Rheinmetall",
+      "change": -1.2,
+      "change_7d": 13.08,
+      "pea": true,
+      "priority": "LOW",
+      "action": "Vigilance",
+      "risk": "Cyclical Growth",
+      "message": "\ud83d\udd34 Rheinmetall (RHM) : RSI 81.7 \u2014 sur-achat +13% en 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "HO",
+      "name": "Thales",
+      "change": -0.86,
+      "change_7d": 7.28,
+      "pea": true,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Cyclical Growth",
+      "message": "\ud83d\udfe0 Thales (HO) : RSI 73.1 +7% 7j"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "KER",
+      "name": "Kering",
+      "change": -0.75,
+      "change_7d": 15.91,
+      "pea": true,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Defensive Growth",
+      "message": "\ud83d\udfe0 Kering (KER) : RSI 72.4 +16% 7j"
+    },
+    {
+      "type": "TAKE_PROFIT_RAPIDE",
+      "ticker": "KER",
+      "name": "Kering",
+      "change": -0.75,
+      "change_7d": 15.91,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Vendre 30%",
+      "risk": "Defensive Growth",
+      "message": "\ud83d\udcb0 Kering (KER) : +16% en 7j \u2192 prendre b\u00e9n\u00e9fices"
+    },
+    {
+      "type": "TAKE_PROFIT_RAPIDE",
+      "ticker": "BRBY",
+      "name": "Burberry",
+      "change": 0.08,
+      "change_7d": 13.66,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Vendre 30%",
+      "risk": "Defensive Growth",
+      "message": "\ud83d\udcb0 Burberry (BRBY) : +14% en 7j \u2192 prendre b\u00e9n\u00e9fices"
+    },
+    {
+      "type": "BUY_GOOD",
+      "ticker": "SAN",
+      "name": "Sanofi",
+      "change": -8.95,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Acheter si disponible",
+      "message": "\ud83d\udcc9 Sanofi (SAN) : -9% \u2014 opportunit\u00e9"
+    },
+    {
+      "type": "VOLUME_SPIKE",
+      "ticker": "SAN",
+      "name": "Sanofi",
+      "change": -8.95,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Surveiller",
+      "message": "\ud83d\udcca Sanofi (SAN) : volume \u00d72.31"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "ENPH",
+      "name": "Enphase",
+      "change": 3.79,
+      "pea": false,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 Enphase (ENPH) : RSI 28.4 \u2014 oversold sur non-Core"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "ACA",
+      "name": "Cr\u00e9dit Agricole",
+      "change": 2.26,
+      "change_7d": 2.99,
+      "pea": true,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Cyclical Value",
+      "message": "\ud83d\udfe0 Cr\u00e9dit Agricole (ACA) : RSI 74.1 +3% 7j"
+    },
+    {
+      "type": "VOLUME_SPIKE",
+      "ticker": "GLE",
+      "name": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+      "change": 5.71,
+      "pea": true,
+      "priority": "MEDIUM",
+      "action": "Surveiller",
+      "message": "\ud83d\udcca Soci\u00e9t\u00e9 G\u00e9n\u00e9rale (GLE) : volume \u00d72.09"
+    },
+    {
+      "type": "SELL_RSI",
+      "ticker": "MA",
+      "name": "Mastercard",
+      "change": 2.63,
+      "change_7d": 8.68,
+      "pea": false,
+      "priority": "LOW",
+      "action": "Vendre 30% si grosse position",
+      "risk": "Cyclical Value",
+      "message": "\ud83d\udfe0 Mastercard (MA) : RSI 74.0 +9% 7j"
+    },
+    {
+      "type": "BUY_OVERSOLD",
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "change": 2.97,
+      "pea": false,
+      "priority": "MEDIUM",
+      "action": "Surveiller pour achat",
+      "message": "\ud83d\udfe2 Caterpillar (CAT) : RSI 22.5 \u2014 oversold sur non-Core"
+    }
+  ],
+  "conviction": {},
+  "portfolio": {
+    "has_portfolio": false
+  },
+  "paper_trading": {
+    "initial_capital": 10000.0,
+    "cash": NaN,
+    "open_value": NaN,
+    "total_value": NaN,
+    "total_gain": NaN,
+    "total_gain_pct": NaN,
+    "open_positions": [
+      {
+        "ticker": "GD",
+        "name": "General Dynamics",
+        "entry_price": 364.55,
+        "current_value": 1069.97,
+        "pnl_pct": 4.5,
+        "days_held": 29
+      },
+      {
+        "ticker": "RHM",
+        "name": "Rheinmetall",
+        "entry_price": NaN,
+        "current_value": NaN,
+        "pnl_pct": NaN,
+        "days_held": 19
+      },
+      {
+        "ticker": "HO",
+        "name": "Thales",
+        "entry_price": NaN,
+        "current_value": NaN,
+        "pnl_pct": NaN,
+        "days_held": 5
+      },
+      {
+        "ticker": "AIR",
+        "name": "Airbus",
+        "entry_price": 206.05,
+        "current_value": NaN,
+        "pnl_pct": -1.0,
+        "days_held": 4
+      },
+      {
+        "ticker": "BA",
+        "name": "Boeing",
+        "entry_price": 214.01,
+        "current_value": NaN,
+        "pnl_pct": 3.0,
+        "days_held": 0
+      }
+    ],
+    "open_count": 5,
+    "total_trades": 5,
+    "winning_trades": 2,
+    "losing_trades": 3,
+    "win_rate": 40.0,
+    "avg_pnl_per_trade": 12.02,
+    "best_trade": {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "entry_price": 522.83,
+      "quantity": 3.0603,
+      "cost": 1600.02,
+      "entry_date": "2026-07-01",
+      "entry_score": 71.0,
+      "reasons": [
+        "\ud83d\udfe2 Technical +3 (pds 1.0)",
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +1 (pds 1.0)"
+      ],
+      "catalyst": 5,
+      "target_tp1": 564.66,
+      "target_tp2": 653.54,
+      "stop_loss": 481.0,
+      "status": "open",
+      "exit_price": 580.0,
+      "exit_date": "2026-07-28",
+      "sell_reason": "take_profit_1",
+      "pnl": 174.95,
+      "pnl_pct": 10.9,
+      "days_held": 27
+    },
+    "worst_trade": {
+      "ticker": "RKLB",
+      "name": "Rocket Lab",
+      "entry_price": 105.75,
+      "quantity": 12.104,
+      "cost": 1280.0,
+      "entry_date": "2026-07-01",
+      "entry_score": 70.3,
+      "reasons": [
+        "\ud83d\udfe2 Bull +5 (pds 1.0)",
+        "\ud83d\udfe2 Momentum +3 (pds 1.0)"
+      ],
+      "catalyst": 5,
+      "target_tp1": 114.21,
+      "target_tp2": 132.19,
+      "stop_loss": 97.29,
+      "status": "open",
+      "exit_price": 93.09,
+      "exit_date": "2026-07-07",
+      "sell_reason": "stop_loss",
+      "pnl": -153.24,
+      "pnl_pct": -12.0,
+      "days_held": 6
+    }
+  },
+  "macro": {
+    "SPY": {
+      "label": "S&P 500",
+      "price": 739.07,
+      "change_pct": 1.32
+    },
+    "QQQ": {
+      "label": "Nasdaq",
+      "price": 681.03,
+      "change_pct": 2.92
+    },
+    "^VIX": {
+      "label": "VIX (volatilit\u00e9)",
+      "price": 18.31,
+      "change_pct": -11.37
+    },
+    "DX-Y.NYB": {
+      "label": "Dollar Index",
+      "price": 100.0,
+      "change_pct": -0.79
+    },
+    "^TNX": {
+      "label": "Taux 10 ans US",
+      "price": 4.66,
+      "change_pct": 0.84
+    },
+    "CL=F": {
+      "label": "P\u00e9trole (WTI)",
+      "price": 83.87,
+      "change_pct": -0.7
+    },
+    "GC=F": {
+      "label": "Or",
+      "price": 4167.0,
+      "change_pct": 3.28
+    },
+    "BTC-USD": {
+      "label": "Bitcoin",
+      "price": 64769.02,
+      "change_pct": 1.35
+    },
+    "^STOXX50E": {
+      "label": "EURO STOXX 50",
+      "price": 6344.4,
+      "change_pct": 1.53
+    }
+  },
+  "report": "\ud83d\udcca **Alfred Stock Watch \u2014 2026-07-30 16:57**\n\n**\ud83c\udf0d Macro :**\n   S&P 500: \ud83d\udfe2 739.07 (+1.3%)\n   Nasdaq: \ud83d\udfe2 681.03 (+2.9%)\n   VIX (volatilit\u00e9): \ud83d\udd34 18.31 (-11.4%)\n   Dollar Index: \ud83d\udd34 100.0 (-0.8%)\n   Taux 10 ans US: \ud83d\udfe2 4.66 (+0.8%)\n\n**\ud83d\udcb0 Paper Trading :** nan\u20ac (+nan%)\n   Cash: nan\u20ac | Win rate: 40.0% | Trades: 5\n   \ud83d\udfe2 GD: +4.5% (J+29)\n   \ud83d\udd34 RHM: +nan% (J+19)\n   \ud83d\udd34 HO: +nan% (J+5)\n\n\ud83d\udd34 **2 SIGNALX HAUTE PRIORIT\u00c9 :**\n\u2022 **STMicroelectronics** (STM) : +6.4%\n   \u26a0\ufe0f STMicroelectronics (STM) : -22% en 7j (RSI 23.4) \u2192 stop loss \ud83c\uddea\ud83c\uddfa\n   \u2192 **Action :** Vendre\n\u2022 **Tesla** (TSLA) : +2.6%\n   \u26a0\ufe0f Tesla (TSLA) : -18% en 7j (RSI 13.3) \u2192 stop loss \ud83c\uddfa\ud83c\uddf8\n   \u2192 **Action :** Vendre\n\n**\ud83d\udd34 Signaux VENTE :**\n\u2022 \u26a0\ufe0f BE Semiconductor (BESI) : -20% en 7j (RSI 28.1) \u2192 stop loss | -20.4% en 7j \ud83c\uddea\ud83c\uddfa\n   \u2192 **Action :** Vendre\n\u2022 \ud83d\udcb0 Kering (KER) : +16% en 7j \u2192 prendre b\u00e9n\u00e9fices | +15.9% en 7j \ud83c\uddea\ud83c\uddfa\n   \u2192 **Action :** Vendre 30%\n\u2022 \ud83d\udcb0 Burberry (BRBY) : +14% en 7j \u2192 prendre b\u00e9n\u00e9fices | +13.7% en 7j \ud83c\uddea\ud83c\uddfa\n   \u2192 **Action :** Vendre 30%\n\n\ud83d\udfe1 **14 alertes :**\n\u2022 \ud83d\udfe2 STMicroelectronics (STM) : RSI 23.4 \u2014 oversold sur non-Core \ud83c\uddea\ud83c\uddfa\n\u2022 \ud83d\udfe2 KLA Corporation (KLAC) : RSI 28.8 \u2014 oversold sur non-Core \ud83c\uddfa\ud83c\uddf8\n\u2022 \u26a0\ufe0f BE Semiconductor (BESI) : -20% en 7j (RSI 28.1) \u2192 stop loss \ud83c\uddea\ud83c\uddfa\n\u2022 \ud83d\udfe2 BE Semiconductor (BESI) : RSI 28.1 \u2014 oversold sur non-Core \ud83c\uddea\ud83c\uddfa\n\u2022 \ud83d\udfe2 Meta (META) : RSI 13.2 \u2014 oversold sur non-Core \ud83c\uddfa\ud83c\uddf8\n  ... et 9 autres\n\n**\ud83d\udcc8 Top 5 hausses :**\n  LRCX : +17.9% \u00e0 297.55$\n  MSFT : +16.6% \u00e0 455.51$\n  MU : +16.1% \u00e0 858.0$\n  AMAT : +14.3% \u00e0 498.7$\n  AMD : +12.9% \u00e0 485.05$\n\n**\ud83d\udcc9 Top 5 baisses :**\n  META : -9.2% \u00e0 531.47$\n  SAN : -8.9% \u00e0 72.77$\n  ADBE : -6.1% \u00e0 247.32$\n  NOW : -5.7% \u00e0 109.18$\n  ATE : -5.0% \u00e0 75.85$"
+}

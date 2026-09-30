@@ -1,0 +1,59 @@
+{
+  "date": "2026-07-20T22:12:19.658439",
+  "posts": [
+    {
+      "title": "Guerre au Moyen-Orient: les derniers développements",
+      "source": "boursorama",
+      "engagement": 90,
+      "score": 45
+    },
+    {
+      "title": "Royaume-Uni: Andy Burnham dévoile son gouvernement, écartant les fidèles de Starmer",
+      "source": "boursorama",
+      "engagement": 80,
+      "score": 40
+    },
+    {
+      "title": "L'Iran dit faire face à une \"guerre totale\" avec les Etats-Unis",
+      "source": "boursorama",
+      "engagement": 70,
+      "score": 35
+    },
+    {
+      "title": "Canada: l'inflation ralentit en juin grâce à un recul du prix de l'essence",
+      "source": "boursorama",
+      "engagement": 60,
+      "score": 30
+    },
+    {
+      "title": "ETF: Further links:",
+      "source": "justetf",
+      "engagement": 50,
+      "score": 25
+    },
+    {
+      "title": "Le président gabonais Brice Oligui Nguéma entame une visite d'état de 3 jours en France",
+      "source": "boursorama",
+      "engagement": 40,
+      "score": 20
+    },
+    {
+      "title": "Amélioration sur le front des incendies dans le Var et en Corse",
+      "source": "boursorama",
+      "engagement": 30,
+      "score": 15
+    },
+    {
+      "title": "Inde : affrontements entre la police et des manifestants dénonçant les fraudes aux examens",
+      "source": "boursorama",
+      "engagement": 20,
+      "score": 10
+    },
+    {
+      "title": "Royaume-Uni: Burnham succède à Starmer à Downing Street",
+      "source": "boursorama",
+      "engagement": 10,
+      "score": 5
+    }
+  ]
+}

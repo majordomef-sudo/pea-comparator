@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-09-30T13:30:05.150393",
+  "events": {
+    "GEOPOLITICS": {
+      "count": 7,
+      "sectors_hit": {
+        "defense_aero": 7
+      },
+      "recent_titles": [
+        "Israeli officials say diverted flydubai incident may be attempted 'terror attack' - Reuters",
+        "Top real estate mogul issues stark warning as California buyers say 'enough is enough' on taxes - foxbusiness.com",
+        "Russia threatens nuclear strikes on Nato countries over Kaliningrad - Financial Times"
+      ]
+    },
+    "TECH_AI": {
+      "count": 16,
+      "sectors_hit": {
+        "software_AI": 16
+      },
+      "recent_titles": [
+        "Israeli officials say diverted flydubai incident may be attempted 'terror attack' - Reuters",
+        "A startup wants to build a massive nuclear-powered data center on public land in Utah - NPR",
+        "Spain protests: Evicted 87-year-old woman to return to Madrid home - Al Jazeera"
+      ]
+    },
+    "FINANCE": {
+      "count": 2,
+      "sectors_hit": {
+        "finance_assurance": 2
+      },
+      "recent_titles": [
+        "Russia threatens nuclear strikes on Nato countries over Kaliningrad - Financial Times",
+        "South Korea\u2019s AI-supercharged stock market is world\u2019s worst in third quarter - Financial Times"
+      ]
+    },
+    "INFLATION": {
+      "count": 4,
+      "sectors_hit": {
+        "finance_assurance": 4
+      },
+      "recent_titles": [
+        "US Consumer Spending Rises by Most in a Year, Core PCE Up 0.2% - Bloomberg.com",
+        "Dow futures gain 100 points after data shows inflation slowed last month: Live updates - CNBC",
+        "Dow Jones Futures Fall; Inflation Data, Micron Earnings Due Bloom Energy, AI Stocks Shrug Off Yields - Investor's Busine"
+      ]
+    },
+    "CONSUMPTION": {
+      "count": 2,
+      "sectors_hit": {
+        "luxe_consommation": 2
+      },
+      "recent_titles": [
+        "US Consumer Spending Rises by Most in a Year, Core PCE Up 0.2% - Bloomberg.com",
+        "Trump meets with AI execs, Treasury yields pressure stocks, Alaska's luxury push and more in Morning Squawk - CNBC"
+      ]
+    },
+    "TECH_CYBER": {
+      "count": 1,
+      "sectors_hit": {
+        "software_AI": 1
+      },
+      "recent_titles": [
+        "Cloudflare plans to issue quantum-safe TLS certificates - Ars Technica"
+      ]
+    },
+    "ENERGY_TRANSITION": {
+      "count": 1,
+      "sectors_hit": {
+        "energie_transition": 1
+      },
+      "recent_titles": [
+        "Microsoft releases Windows 11 version 26H2, calls it a \"predictable and low-disruption update\" with no compatibility con"
+      ]
+    },
+    "HEALTH_CRISIS": {
+      "count": 2,
+      "sectors_hit": {
+        "pharma_sante": 2
+      },
+      "recent_titles": [
+        "New mRNA flu vaccine for adults over 50 is 'more effective,' UW Medicine says - KOMO",
+        "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo - World Health Organization (WHO)"
+      ]
+    },
+    "MONETARY_POLICY": {
+      "count": 3,
+      "sectors_hit": {
+        "finance_assurance": 3
+      },
+      "recent_titles": [
+        "Stock Market Today: Treasury Yields Slip as Fed Hike Expectations Moderate \u2014 Live Updates - WSJ",
+        "China's inside man at the Fed, OpenAI debuts Dots, an IPO trend and more in Morning Squawk - CNBC",
+        "India benchmark shares log worst month since March as oil, global rate hikes spark outflows - Reuters"
+      ]
+    },
+    "COMMODITY_OIL": {
+      "count": 1,
+      "sectors_hit": {
+        "energie_transition": 1
+      },
+      "recent_titles": [
+        "Markets News, Sept. 29, 2026: Stocks End Lower for 2nd Straight Day as Treasury Yields Rise Further; Oil Prices Slip - I"
+      ]
+    }
+  }
+}

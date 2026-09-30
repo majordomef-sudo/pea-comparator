@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-20",
+  "timestamp": "2026-09-20T04:00:04.219273",
+  "results": {
+    "site": {
+      "status": "⚠️",
+      "ok": 4,
+      "total": 5,
+      "failures": [
+        "Guide (404)"
+      ],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "N/A",
+      "views": "N/A",
+      "vids": "N/A",
+      "last_title": "N/A",
+      "last_views": "N/A",
+      "last_likes": "N/A",
+      "pipeline_ok": true,
+      "last_orch": "19/09",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "19/09 08:38"
+    },
+    "infra": {
+      "disk_pct": 67,
+      "disk_total": "72G",
+      "disk_used": "48G",
+      "ram_used_pct": 30,
+      "nginx": "active",
+      "ghost_docker": "Up 16 hours"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-09-22"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 984,
+    "ips_24h": 130,
+    "hits_7d": 7831,
+    "ips_7d": 653
+  },
+  "fixes": [],
+  "actions": [
+    "🔧 1 page(s) down — vérifier nginx",
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-07-21",
+  "timestamp": "2026-07-21T19:57:43.239588",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 4,
+      "total": 4,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": 15,
+      "views": 54,
+      "vids": 23,
+      "last_title": "Neurobiologie du cerveau d'un investisseur",
+      "last_views": 0,
+      "last_likes": 0,
+      "pipeline_ok": true,
+      "last_orch": "21/07",
+      "pipeline_cron": true,
+      "est_watch_hours": 1.1,
+      "subs_pct_early": 3,
+      "subs_pct_full": 2,
+      "hours_pct_early": 0,
+      "hours_pct_full": 0,
+      "pot_rev_monthly_low": 0.3,
+      "pot_rev_monthly_high": 1.1
+    },
+    "alfred_trader": {
+      "crons_ok": false,
+      "morning": false,
+      "us_pulse": false,
+      "last_signal": "21/07 10:55"
+    },
+    "infra": {
+      "disk_pct": 54,
+      "disk_total": "72G",
+      "disk_used": "39G",
+      "ram_used_pct": 30,
+      "nginx": "active",
+      "ghost_docker": "Up 4 days"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "19/07 05:20"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    },
+    "affiliation": {
+      "tr_link_present": true,
+      "etf_links_count": 1
+    }
+  },
+  "traffic": {
+    "hits_24h": 1935,
+    "ips_24h": 229,
+    "hits_7d": 11859,
+    "ips_7d": 1051,
+    "top_referrers": "\"-\" (646) | 930bf5c3.canary.invalid (1)"
+  },
+  "fixes": [],
+  "actions": [
+    "📈 Crons Alfred Trader incomplets",
+    "🎯 Objectif 100 abonnés → mise en place stratégie cross-pub blog/YouTube",
+    "⏱️ Watch hours faibles (1h/3000h) — prioriser les formats longs >8min",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA → affiliation Trade Republic"
+  ],
+  "version": 4
+}

@@ -1,0 +1,474 @@
+[
+  {
+    "video": "PROD_20260807_0936_Le_pi_ge_c_r_bral_qui_ruine_votre_capital_shorts.mp4",
+    "timestamp": "2026-08-07T09:41:09.842943",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 55.9
+  },
+  {
+    "video": "PROD_20260807_1608_La_Math_matique_du_Risque_shorts.mp4",
+    "timestamp": "2026-08-07T16:13:54.636885",
+    "hook_score": 8.0,
+    "hook_pattern": "contraire",
+    "frame_count": 20,
+    "duration": 71.3
+  },
+  {
+    "video": "PROD_20260810_1043_Pourquoi_votre_cerveau_ruine_votre_capital_shorts.mp4",
+    "timestamp": "2026-08-10T10:48:15.691698",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 61.0
+  },
+  {
+    "video": "PROD_20260810_1453_La_Psychologie_de_l_Accumulation_Historique_shorts.mp4",
+    "timestamp": "2026-08-10T14:58:46.082778",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 139.2
+  },
+  {
+    "video": "PROD_20260811_0623_Le_pi_ge_du_dilemme_du_prisonnier_sur_les_march_s_shorts.mp4",
+    "timestamp": "2026-08-11T06:27:12.146139",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 113.4
+  },
+  {
+    "video": "PROD_20260811_0639_Le_pi_ge_c_r_bral_qui_ruine_votre_capital_shorts.mp4",
+    "timestamp": "2026-08-11T06:43:28.702128",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 61.0
+  },
+  {
+    "video": "PROD_20260811_1227_Le_vrai_co_t_de_jouer_en_bourse_shorts.mp4",
+    "timestamp": "2026-08-11T12:32:18.719224",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 61.0
+  },
+  {
+    "video": "PROD_20260811_1639_L_Architecture_des_Capitaux_Invisibles_shorts.mp4",
+    "timestamp": "2026-08-11T16:44:18.848506",
+    "hook_score": 8.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 61.0
+  },
+  {
+    "video": "PROD_20260816_2048_Pourquoi_un_gros_salaire_ne_fait_pas_la_richesse___shorts.mp4",
+    "timestamp": "2026-08-16T20:52:52.950097",
+    "hook_score": 8.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 61.0
+  },
+  {
+    "video": "PROD_20260819_1955_Le_Pi_ge_du_Levier_Financier.mp4",
+    "timestamp": "2026-08-19T20:00:59.871740",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 69.4
+  },
+  {
+    "video": "PROD_20260819_2038_L__quilibre_de_Nash_sur_les_March_s.mp4",
+    "timestamp": "2026-08-19T20:44:06.657095",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 66.9
+  },
+  {
+    "video": "PROD_20260819_2058_Strat_gies_de_sortie___l_art_de_vendre_au_bon_mome.mp4",
+    "timestamp": "2026-08-19T21:04:24.496865",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 69.1
+  },
+  {
+    "video": "PROD_20260822_2051_Pi_ges_psychologiques_de_la_finance_comportemental.mp4",
+    "timestamp": "2026-08-22T20:56:58.308280",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 64.6
+  },
+  {
+    "video": "PROD_20260822_2110_Votre_cerveau_vous_ment_sur_l_argent.mp4",
+    "timestamp": "2026-08-22T21:16:45.938239",
+    "hook_score": 7.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 79.5
+  },
+  {
+    "video": "PROD_20260823_0608_Le_secret_bancaire_sur_vos_placements.mp4",
+    "timestamp": "2026-08-23T06:14:07.807161",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 69.2
+  },
+  {
+    "video": "PROD_20260825_1610_Le_secret_des_investisseurs_qui_dorment_sur_leurs_.mp4",
+    "timestamp": "2026-08-25T16:16:49.675262",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 68.6,
+    "retention_pct": 19.28,
+    "retention_score": 2.7,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260826_1613_Le_pi_ge_des_influenceurs_finance.mp4",
+    "timestamp": "2026-08-26T16:19:34.727344",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 72.4,
+    "retention_pct": 148.72,
+    "retention_score": 10.0,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260827_1604_V_rifier_vos_comptes_20_fois_par_jour.mp4",
+    "timestamp": "2026-08-27T16:10:35.846710",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 67.0,
+    "retention_pct": 68.48,
+    "retention_score": 9.1,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260829_1606_Pourquoi_vous_achetez_au_plus_haut_et_vendez_au_pl.mp4",
+    "timestamp": "2026-08-29T16:15:33.599337",
+    "hook_score": 9.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 69.0
+  },
+  {
+    "video": "PROD_20260830_0407_La_science_du_rendement.mp4",
+    "timestamp": "2026-08-30T04:14:43.815457",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 68.6,
+    "retention_pct": 59.07,
+    "retention_score": 8.2,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260831_0417_Le_pi_ge_du_prix_bas.mp4",
+    "timestamp": "2026-08-31T04:25:38.282794",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 65.9
+  },
+  {
+    "video": "PROD_20260901_0407_Le_pi_ge_invisible_des_frais.mp4",
+    "timestamp": "2026-09-01T04:15:27.562496",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 68.0
+  },
+  {
+    "video": "PROD_20260902_0403_La_m_thode_des_investisseurs_qui_ne_perdent_jamais.mp4",
+    "timestamp": "2026-09-02T04:13:13.297854",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 76.2,
+    "retention_pct": 95.79,
+    "retention_score": 9.1,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260903_0504_Le_co_t_cach__des_march_s_financiers.mp4",
+    "timestamp": "2026-09-03T05:12:36.421283",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 71.6
+  },
+  {
+    "video": "PROD_20260904_0415_Le_pi_ge_fiscal_de_l_assurance_vie.mp4",
+    "timestamp": "2026-09-04T04:23:23.113559",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 73.6,
+    "retention_pct": 55.14,
+    "retention_score": 8.2,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260905_0450_Votre_intuition_financi_re_est_votre_pire_ennemie.mp4",
+    "timestamp": "2026-09-05T04:58:46.325459",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 75.1,
+    "retention_pct": 14.26,
+    "retention_score": 1.8,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260906_0408_Plus_vous_suivez_l_actualit___moins_vous_gagnez.mp4",
+    "timestamp": "2026-09-06T04:16:32.605250",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 77.2,
+    "retention_pct": 5.65,
+    "retention_score": 0.9,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260907_0407_L_inaction___Votre_meilleur_actif.mp4",
+    "timestamp": "2026-09-07T04:14:34.154709",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 67.2,
+    "retention_pct": 2.38,
+    "retention_score": 0.0,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260908_0404_Pourquoi_surveiller_les_cours_vous_appauvrit.mp4",
+    "timestamp": "2026-09-08T04:11:27.557046",
+    "hook_score": 7.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 68.9
+  },
+  {
+    "video": "PROD_20260909_0409_Pour__tre_riche__arr_tez_de_vouloir__tre_riche.mp4",
+    "timestamp": "2026-09-09T04:17:16.989067",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 74.1,
+    "retention_pct": 51.8,
+    "retention_score": 7.9,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260910_1723_Moins_vous_regardez_vos_actions__mieux_elles_se_po.mp4",
+    "timestamp": "2026-09-10T17:31:43.053576",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 64.4,
+    "retention_pct": 108.62,
+    "retention_score": 10.0,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260911_0413_Le_sentiment_de_contr_le_vous_rend_aveugle_au_hasa.mp4",
+    "timestamp": "2026-09-11T04:23:07.226558",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 80.9,
+    "retention_pct": 29.3,
+    "retention_score": 3.8,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260912_0524_Le_danger_des_salons_de_discussion.mp4",
+    "timestamp": "2026-09-12T05:32:28.269292",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 62.9,
+    "retention_pct": 5.0,
+    "retention_score": 0.4,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260913_0407_Choisir_de_ne_pas_choisir_est_une_d_cision_gagnant.mp4",
+    "timestamp": "2026-09-13T04:15:09.056059",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 67.9,
+    "retention_pct": 6.1,
+    "retention_score": 1.2,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260914_0418_Vos__motions_r_mun_rent_les_robots_de_bourse.mp4",
+    "timestamp": "2026-09-14T04:25:58.173267",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 72.2,
+    "retention_pct": 15.44,
+    "retention_score": 1.8,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260915_0503_La_meilleure_strat_gie_pourrait__tre_de_ne_rien_fa.mp4",
+    "timestamp": "2026-09-15T05:10:24.872744",
+    "hook_score": 7.0,
+    "hook_pattern": "contraire",
+    "frame_count": 20,
+    "duration": 70.6,
+    "retention_pct": 66.01,
+    "retention_score": 8.8,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260917_0410_Votre_patrimoine_d_teste_les_bonnes_nouvelles.mp4",
+    "timestamp": "2026-09-17T04:17:16.964422",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 68.2,
+    "retention_pct": 9.06,
+    "retention_score": 1.8,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260918_0415_Le_paradoxe_de_l_intelligence_financi_re.mp4",
+    "timestamp": "2026-09-18T04:22:45.438850",
+    "hook_score": 7.0,
+    "hook_pattern": "contraire",
+    "frame_count": 20,
+    "duration": 75.7,
+    "retention_pct": 16.65,
+    "retention_score": 2.1,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260919_0402_Votre_confiance_vous_rend_aveugle.mp4",
+    "timestamp": "2026-09-19T04:09:26.844004",
+    "hook_score": 7.0,
+    "hook_pattern": "contraire",
+    "frame_count": 20,
+    "duration": 74.0,
+    "retention_pct": 35.23,
+    "retention_score": 6.2,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260924_1735_Les_grandes_fortunes___le_mythe_cache_une_m_thode.mp4",
+    "timestamp": "2026-09-24T19:11:37.298126",
+    "hook_score": 7.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 82.9
+  },
+  {
+    "video": "PROD_20260924_1919_Votre_cerveau_transforme_le_hasard_en_comp_tence.mp4",
+    "timestamp": "2026-09-24T19:27:37.920860",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 69.5,
+    "retention_pct": 102.86,
+    "retention_score": 9.1,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260925_0403_Ce_que_vous_ne_faites_pas_vous_rapporte_le_plus.mp4",
+    "timestamp": "2026-09-25T04:10:22.493629",
+    "hook_score": 7.0,
+    "hook_pattern": "contraire",
+    "frame_count": 20,
+    "duration": 73.8,
+    "retention_pct": 28.51,
+    "retention_score": 3.3,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260926_0510_L_illusion_du_montage_parfait.mp4",
+    "timestamp": "2026-09-26T05:16:46.342224",
+    "hook_score": 7.0,
+    "hook_pattern": "chiffre_choc",
+    "frame_count": 20,
+    "duration": 66.2,
+    "retention_pct": 73.42,
+    "retention_score": 9.2,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260926_0641_Les_frais_invisibles_sont_votre_meilleur_alli__pou.mp4",
+    "timestamp": "2026-09-26T06:48:42.377245",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 66.5
+  },
+  {
+    "video": "PROD_20260927_0402_Les_ETF_synth_tiques_vont-ils_sortir_de_votre_PEA_.mp4",
+    "timestamp": "2026-09-27T04:08:37.367908",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 70.1,
+    "retention_pct": 28.1,
+    "retention_score": 2.9,
+    "retention_fiable": true
+  },
+  {
+    "video": "PROD_20260927_1121_Pourquoi_diversifier___l_exc_s_dilue_vos_gains.mp4",
+    "timestamp": "2026-09-27T11:29:18.879496",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 68.7
+  },
+  {
+    "video": "PROD_20260927_1200_Le_Pi_ge_de_la_Diversification.mp4",
+    "timestamp": "2026-09-27T12:07:32.084166",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 64.2,
+    "retention_pct": 54.0,
+    "retention_score": 8.3,
+    "retention_fiable": false
+  },
+  {
+    "video": "PROD_20260928_0402_Perdre_vous_pousse___acheter_ce_que_vous_n_oseriez.mp4",
+    "timestamp": "2026-09-28T04:08:51.419469",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 62.4
+  },
+  {
+    "video": "PROD_20260929_0403_Pourquoi_vos__motions_d_truisent_votre_patrimoine_.mp4",
+    "timestamp": "2026-09-29T04:09:42.419454",
+    "hook_score": 8.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 61.3
+  },
+  {
+    "video": "PROD_20260930_0402_Ce_chiffre_qui_vous_rassure_vide_votre_patrimoine_.mp4",
+    "timestamp": "2026-09-30T04:08:59.611346",
+    "hook_score": 7.0,
+    "hook_pattern": "montage_rapide",
+    "frame_count": 20,
+    "duration": 69.4
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-10",
+  "timestamp": "2026-09-10T04:00:04.899746",
+  "results": {
+    "site": {
+      "status": "✅",
+      "ok": 5,
+      "total": 5,
+      "failures": [],
+      "sitemap_ok": true
+    },
+    "youtube": {
+      "subs": "16",
+      "views": "278",
+      "vids": "28",
+      "last_title": "Pour être riche, arrêtez de vouloir être rich",
+      "last_views": "20",
+      "last_likes": "0",
+      "pipeline_ok": false,
+      "last_orch": "N/A",
+      "pipeline_cron": false
+    },
+    "alfred_trader": {
+      "crons_ok": true,
+      "morning": true,
+      "us_pulse": true,
+      "last_signal": "09/09 06:00"
+    },
+    "infra": {
+      "disk_pct": 65,
+      "disk_total": "72G",
+      "disk_used": "47G",
+      "ram_used_pct": 30,
+      "nginx": "active",
+      "ghost_docker": "Up 2 weeks"
+    },
+    "euromillions": {
+      "cron_ok": true,
+      "last_prediction": "2026-09-11"
+    },
+    "ghost": {
+      "posts_published": 12,
+      "ghost_up": true
+    }
+  },
+  "traffic": {
+    "hits_24h": 1785,
+    "ips_24h": 100,
+    "hits_7d": 10405,
+    "ips_7d": 562
+  },
+  "fixes": [],
+  "actions": [
+    "🎬 Cron pipeline YouTube manquant",
+    "💡 Priorité #1 : attirer du trafic vers le comparateur PEA -> affiliation Trade Republic"
+  ]
+}

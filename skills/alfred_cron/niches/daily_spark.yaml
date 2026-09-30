@@ -1,0 +1,72 @@
+# Niche: Daily Spark (inspiration, citations)
+name: "Daily_Spark"
+display_name: "Daily Spark — Inspiration Quotidienne"
+emoji: "✨"
+
+script:
+  tone: "inspirant, percutant, mémorable"
+  pacing: "rythmé, punchline toutes les 8 secondes"
+  hooks:
+    - pattern: "wisdom"
+      template: "Une citation qui a changé ma vision des choses : '{quote}'"
+    - pattern: "shift"
+      template: "Et si {common_belief} était la raison de votre stagnation ?"
+    - pattern: "truth_bomb"
+      template: "Personne ne vous le dit, mais {hard_truth}. Voilà pourquoi."
+    - pattern: "perspective"
+      template: "Arrêtez de {bad_habit}. Faites {good_habit} à la place."
+  cta_variants:
+    - "✨ Une dose d'inspiration par jour. Activez la cloche."
+    - "💡 Suivez pour plus de vérités qui dérangent."
+    - "🌱 Changez votre perspective. Abonnez-vous."
+  word_count: "20-30 mots"
+  forbidden: ["like and subscribe", "n'oubliez pas de"]
+
+visuals:
+  style: "lumineux, blanc/or, minimaliste, typo forte"
+  subjects: ["couchers de soleil", "paysages ouverts", "livres ouverts", "lumières", "ciels étoilés"]
+  avoid: ["foules", "bureau", "écrans"]
+  overlay_style: "dynamique, blanc, fonte sans-serif bold"
+
+voice:
+  voice_a: "fr-FR-RemyMultilingualNeural"
+  rate: "-3%"
+  energy: "inspiré, sincère"
+
+captions:
+  style: "fade élégant"
+  position: "lower_third"
+
+music:
+  mood: "uplift léger, cinématographique doux"
+  volume: 0.12
+  loop_track: "bgm_uplift.wav"
+
+video:
+  clip_count: 3
+  clip_duration: 10
+  aspect_ratio: "9:16"
+  resolution: "1080×1920"
+  subscribe_screen: 2.5
+  watermark: true
+  transitions: ["fade", "dissolve", "slideleft"]
+
+thumbnail:
+  style: "clair, texte blanc/gras, fond nature ou ciel"
+  text_position: "center"
+
+hashtags:
+  default: "#inspiration #motivation #sagesse #développementpersonnel #citation #daily"
+  searchable: ["inspiration", "motivation", "développement personnel"]
+
+research:
+  enabled: false
+
+weekly_schedule:
+  monday: "Citation de sage"
+  tuesday: "Vérité qui dérange"
+  wednesday: "Changement de perspective"
+  thursday: "Leçon de vie"
+  friday: "Réflexion"
+  saturday: "Message du week-end"
+  sunday: "Neurofinance"

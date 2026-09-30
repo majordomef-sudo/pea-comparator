@@ -1,0 +1,269 @@
+{
+  "github_scout": [
+    {
+      "learning": "Queries business-only (YouTube/SEO/affiliation/finance/mémoire) donnent de meilleurs résultats que les queries génériques",
+      "category": "insight",
+      "confidence": 0.8,
+      "source": "",
+      "timestamp": "2026-07-02T11:20:12.497297"
+    }
+  ],
+  "revenue_audit": [
+    {
+      "learning": "Vérifier les chemins de fichiers AVANT d'écrire le check (euromillions/ pas state/euromillions/)",
+      "category": "failure",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-02T11:20:12.499912"
+    },
+    {
+      "learning": "Le rapport doit etre formaté pour Telegram directement, sans re-résumé LLM qui introduit des bugs LaTeX",
+      "category": "insight",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-02T11:20:26.398973"
+    },
+    {
+      "id": "revenue_audit:3",
+      "learning": "2 pages down sur PEA Comparator (Comparateur 404, Guide 404) — vérifier nginx",
+      "category": "failure",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-04T04:00:33.574249",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:4",
+      "learning": "Comparateur PEA et Guide PEA en 404 — le site est en partie down, prioritairement à corriger pour l'affiliation Trade Republic",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-04T04:00:38.725414",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:5",
+      "learning": "Comparateur PEA toujours en 404 (4/5 pages OK) — problème nginx non résolu",
+      "category": "failure",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-05T04:00:38.704928",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:6",
+      "learning": "Trafic site ~44 vis/jour dépasse cible 15/j mais YouTube stagne (14 subs, 3 vues dernière vidéo) — la priorité trafic site semble porter ses fruits, mais YouTube nécessite une stratégie différente",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-05T04:00:48.231230",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:7",
+      "learning": "Comparateur PEA page en 301 (au lieu de 404) — toujours pas résolu, vérifier nginx",
+      "category": "failure",
+      "confidence": 0.85,
+      "source": "",
+      "timestamp": "2026-07-07T04:00:51.349661",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:8",
+      "learning": "Trafic site à 51 visiteurs/jour explose la cible 15/j, mais YouTube stagne à 14 subs. Priorité #1 identifiée : attirer trafic PEA Comparator pour affiliation Trade Republic",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-07T04:00:51.352155",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:9",
+      "learning": "Comparateur PEA page toujours en 301 (nginx non résolu) — 4/5 pages OK, persistant depuis plusieurs audits",
+      "category": "failure",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-08T04:00:36.733697",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:10",
+      "learning": "Trafic site PEA stable: ~1000 hits/jour, ~180 visiteurs uniques/jour — bon potentiel d'affiliation malgré page Comparateur cassée. Priorité réparer nginx pour convertir ce trafic.",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-08T04:00:48.465318",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:11",
+      "learning": "Problème PEA Comparator 301/404 résolu : 5/5 pages OK dans l'audit du 09/07. Vérifier si nginx a été corrigé ou si le problème était intermittent.",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-09T04:00:44.675456",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:12",
+      "learning": "PEA Comparator 5/5 pages OK maintenant (le problème 301/404 précédent semble résolu)",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-10T04:00:54.987612",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:13",
+      "learning": "YouTube cron pipeline manquant - à vérifier si le cron hebdo est bien configuré",
+      "category": "failure",
+      "confidence": 0.8,
+      "source": "",
+      "timestamp": "2026-07-10T04:00:54.996175",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:14",
+      "learning": "Alfred Trader crons (morning, US pulse) incomplets - vérifier configuration",
+      "category": "failure",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-10T04:00:55.017402",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:15",
+      "learning": "Page Comparateur PEA résolue — 5/5 pages OK (plus de 301/404). Problème nginx historique enfin corrigé.",
+      "category": "insight",
+      "confidence": 0.8,
+      "source": "",
+      "timestamp": "2026-07-11T04:01:37.105632",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:16",
+      "learning": "PEA Comparator 5/5 pages OK - problème nginx 301/404 enfin résolu",
+      "category": "insight",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-12T04:01:48.529410",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:17",
+      "learning": "YouTube pipeline cron toujours manquant — orch N/A, cron ❌. Persistant depuis plusieurs audits.",
+      "category": "failure",
+      "confidence": 0.9,
+      "source": "",
+      "timestamp": "2026-07-20T04:01:30.416037",
+      "related_to": [],
+      "tags": []
+    },
+    {
+      "id": "revenue_audit:18",
+      "learning": "Trafic site PEA dépasse les cibles (63vis/jour vs cible 15/jour). PEA Comparator 5/5 pages OK — problème nginx 301/404 enfin résolu. YouTube reste le point faible (1 vue sur dernière vidéo).",
+      "category": "insight",
+      "confidence": 0.7,
+      "source": "",
+      "timestamp": "2026-07-20T04:01:34.357946",
+      "related_to": [],
+      "tags": []
+    }
+  ],
+  "youtube_pipeline": [
+    {
+      "learning": "Parser les stats YouTube avec regex sur la ligne après l'emoji, pas avec .split()",
+      "category": "failure",
+      "confidence": 0.8,
+      "source": "",
+      "timestamp": "2026-07-02T11:20:26.364708"
+    }
+  ],
+  "alfred": [
+    {
+      "learning": "| Correction |",
+      "category": "failure",
+      "source": "auto-extracted",
+      "timestamp": "2026-08-01T05:00:01.275240",
+      "confidence": 0.7
+    },
+    {
+      "learning": "c'est que le CSS a maintenant DEUX design systems qui se marchent dessus (l'ancien green-500 et le nouveau teal). Je vais tout nettoyer et faire un vrai responsive mobile-first",
+      "category": "failure",
+      "source": "auto-extracted",
+      "timestamp": "2026-08-01T05:00:01.275233",
+      "confidence": 0.7
+    },
+    {
+      "learning": "— la section Hero est cassée dans l'HTML (balise section mal formée). Je vais :",
+      "category": "failure",
+      "source": "auto-extracted",
+      "timestamp": "2026-08-01T05:00:01.275194",
+      "confidence": 0.7
+    }
+  ],
+  "end_of_session": [
+    {
+      "learning": "Regex python avec backslashes ecrites dans heredoc => backslashes MANGLES par le JSON/bashe (. devient .) : utiliser des classes charactere [.] [?] [0-9] ou split() pur.",
+      "category": "lesson",
+      "source": "2026-09-19.md",
+      "timestamp": "2026-09-19T22:00:01.390332"
+    },
+    {
+      "learning": "pkill -f \"playwright\" = suicide (le pattern matche la propre commande) -> SIGTERM. Utiliser pattern[l] ou lister les PIDs d'abord.",
+      "category": "lesson",
+      "source": "2026-09-19.md",
+      "timestamp": "2026-09-19T22:00:01.390343"
+    },
+    {
+      "learning": "Balise tracker morte invisible au rendu mais 404 a chaque chargement -> le test des reponses >= 400 la revele.",
+      "category": "lesson",
+      "source": "2026-09-19.md",
+      "timestamp": "2026-09-19T22:00:01.390348"
+    },
+    {
+      "learning": "Analytics par logs nginx = zero JS injecte, zero cache-bust, RGPD-friendly, voit robots/scans.",
+      "category": "lesson",
+      "source": "2026-09-19.md",
+      "timestamp": "2026-09-19T22:00:01.390351"
+    },
+    {
+      "learning": "alfred_trader.py (cron 06:00) échouait : FileNotFoundError state/stock_watch/watchlist.json (supprimé par restructuration 19/09).",
+      "category": "failure",
+      "source": "2026-09-24.md",
+      "timestamp": "2026-09-24T19:00:01.623268"
+    },
+    {
+      "learning": "Fix : restauré depuis git 4b65a71 → 100 actions, 10 secteurs. Relancé scan → OK complet.",
+      "category": "failure",
+      "source": "2026-09-24.md",
+      "timestamp": "2026-09-24T19:00:01.623281"
+    },
+    {
+      "learning": "alfred_trader.py --us-pulse (cron 13:30) : la version git restaurée ne connaît PAS ce flag → échec « Usage ». Le git grep historique montre 0 occurrence de us-pulse dans TOUTES les versions git d'alfred_trader.py → l'option existait dans une version non commitée avant la restructuration (perdue).",
+      "category": "failure",
+      "source": "2026-09-24.md",
+      "timestamp": "2026-09-24T19:00:01.623286"
+    },
+    {
+      "learning": "Fix : patch minimal ajouté (--us-pulse → cmd_scan()), compilé OK, backup dans backups_model_v41/. Alternative possible : il faisait peut-être un scan ciblé US (13:30 UTC = ouverture US) — à affiner si Eric veut le vrai comportement historique.",
+      "category": "failure",
+      "source": "2026-09-24.md",
+      "timestamp": "2026-09-24T19:00:01.623289"
+    }
+  ]
+}

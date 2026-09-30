@@ -1,0 +1,316 @@
+pipeline:
+  name: alfred-neuro-finance
+  version: '3.0'
+  description: Pipeline de génération de vidéos YouTube Shorts — Finance comportementale
+  cron: 0 16 * * 1-6
+llm:
+  script_provider: openrouter/deepseek/deepseek-v4.1-flash
+  script_fallback: openrouter/google/gemma-4-31b-it
+  tts_voice: fr-FR-HenriNeural
+  tts_rate: -5%
+  tts_pitch: +0Hz
+script:
+  word_count_min: 38
+  word_count_max: 55
+  required_data_patterns:
+  - '%'
+  - million
+  - milliard
+  - euros
+  - '[0-9]+'
+  forbidden_terms:
+  - n'oubliez pas
+  - abonnez-vous
+  - likez
+  - cliquez
+  phonetic_fixes:
+  - - €
+    - euros
+  - - '%'
+    - pourcent
+video:
+  mode: shorts
+  resolution: 1080x1920
+  fps: 30
+  codec: libx264
+  audio_codec: aac
+  crf: 23
+  bitrate: 4M
+  min_duration_s: 60
+  max_duration_s: 85
+  min_clips: 4
+  max_clips: 4
+  clip_duration_s: 10
+  transition: fade
+  transition_duration: 0.3
+subscribe_overlay:
+  enabled: true
+  duration_s: 1.5
+  position: center
+  text: 🔔 Abonnez-vous
+  font_size: 48
+  color: white
+captions:
+  enabled: true
+  style: opus
+  words_per_cap: 3
+  active_word_scale: 108
+  font: Montserrat
+  font_size: 84
+  margin_v: 560
+  primary_color: '&H00FFFFFF'
+  active_color: "&H0023A6F5"
+  outline_color: "&H001A1A1A"
+clips:
+  pool_dir: ~/output/raw_clips
+  selection: random
+  pass1_args: -c:v libx264 -preset fast -crf 23 -c:a aac -b:a 128k
+  pass2_args: -c:v libx264 -preset slow -crf 18 -c:a aac -b:a 192k -movflags +faststart
+qa:
+  enabled: true
+  min_score: 80
+  black_threshold: 0.1
+  max_black_pct: 5.0
+  silence_threshold_db: -50.0
+  max_silence_pct: 15.0
+  max_silence_event_s: 2.0
+  intro_grace_s: 3.5
+  min_bitrate: 300000
+  check_before_upload: true
+  check_after_encode: true
+zernio:
+  enabled: true
+  platforms:
+  - tiktok
+  - linkedin
+  publish_now: true
+  hashtags:
+  - finance
+  - investissement
+  - patrimoine
+  - education financiere
+youtube:
+  enabled: true
+  category: Education
+  privacy: public
+  language: fr
+  playlist_id: PLdwDhfX2NgAAuB6rWjAJpr4yETIM4_nmO
+  default_tags:
+  - Neuro-Finance
+  - finance comportementale
+  - biais cognitifs
+  - investissement
+  - psychologie de l'argent
+  - éducation financière
+  - cerveau et argent
+  - antifragilité
+  - probabilités
+  - risque
+  default_hashtags: '
+
+    #NeuroFinance #FinanceComportementale #Investissement #PEA #ETF #Bourse #Patrimoine
+    #IndépendanceFinancière #PsychologieDeLArgent'
+output:
+  dir: ~/output/final_videos
+  temp_dir: /tmp/alfred_pipeline
+  keep_temp: false
+  format: mp4
+auto_reflection:
+  enabled: true
+  error_max_before_patch: 3
+  ab_test_model_enabled: true
+  weekly_improvement_max: 1
+budget:
+  max_clips_per_run: 4
+  max_retries_stage: 3
+  disk_min_free_gb: 1
+  disk_check_path: /tmp
+templates:
+  rich_description: '👋 {hook}
+
+
+    💰 **Économisez sur vos frais d''investissement**
+
+    📈 Comparez 429 ETF PEA et trouvez les moins chers → https://alfredstudio.mooo.com/pea-comparator/?utm_source=youtube&utm_medium=description&utm_campaign=neurofinance
+
+
+    🎁 **Guide PDF gratuit : 5 Biais Cognitifs Qui Ruinent Votre Épargne**
+
+    📥 Téléchargez-le ici → https://alfred-ai.kit.com/834d11787a
+
+
+    💎 **Contenu exclusif chaque semaine**
+
+    🔒 Analyse complète + roadmap 600k€ → https://alfredstudio.mooo.com/blog/?utm_source=youtube&utm_medium=description&utm_campaign=neurofinance
+
+
+    🤖 **Un bot Telegram pour vos recherches ETF**
+
+    🔍 Trouvez un ETF par ISIN en 2 secondes → https://t.me/AlfredETFBot
+
+
+    🎯 Dans cette vidéo :
+
+    {bullets}
+
+
+    📊 Analyse des mécanismes financiers, stratégies d''investissement et décryptées
+    par l''IA.
+
+
+    **🔍 Mots-clés :** finance comportementale, investissement, PEA, ETF, épargne,
+    capital, patrimoine, indépendance financière, gestion de patrimoine, marchés financiers,
+    bourse, trading.
+
+
+    👉 **Suivez-moi :**
+
+    📺 YouTube : https://www.youtube.com/@alfred-studio
+
+    🎵 TikTok : https://www.tiktok.com/@alfred.studio
+
+    💼 LinkedIn : https://www.linkedin.com/in/alfred-studio
+
+
+    🔔 Abonnez-vous pour ne rien rater.
+
+    {hashtags}'
+forbidden:
+  guru_blacklist:
+  - riche rapidement
+  - secret
+  - miracle
+  - liberté financière
+  - astuce
+  - gagner gros
+  - methode miracle
+  - devenir riche
+  forbidden_words:
+  - hedge fund
+  - smart money
+  - leverage
+  - criterion
+  - storytelling
+  - dark pattern
+  - exit strategy
+  - deal
+  - trade
+  - trading
+  - trader
+  - broker
+  - asset
+  - liability
+  - equity
+  - bond
+  - bull market
+  - bear market
+  - spread
+  - swap
+  - default
+  - margin call
+  - portfolio
+  - capital gain
+  - cash flow
+  - pricing
+  - risk premium
+  - overhead
+  - fee
+  - rating
+  - investment bank
+  - private equity
+  - venture capital
+  - high frequency
+  - algorithmic
+  - behavioral finance
+  - mispricing
+  - volatility
+  - cognitive
+  - dinero
+  - mercado
+  - inversion
+  - ganancia
+  - perdida
+  - riesgo
+  - banco
+  - finanzas
+  - accion
+  - bono
+  - tasa
+  - negocio
+  - interes
+  - inversor
+  - ahorro
+  - deuda
+phonetic_fixes:
+  cognitive: cognitif
+  cognition: cognition
+  behavioral: comportemental
+  algorithm: algorithme
+  algorithmic: algorithmique
+  default: défaut
+  leverage: levier
+  volatility: volatilité
+  portfolio: portefeuille
+  equity: capitaux
+  liability: passif
+  bond: obligation
+  premium: prime
+  rating: notation
+  criterion: critère
+  hedge fund: fonds spéculatif
+  smart money: capitaux informés
+  storytelling: récit
+  dark pattern: manipulation
+  exit strategy: stratégie de sortie
+  deal: accord
+  trade: échange
+  trading: transaction
+  trader: opérateur
+  broker: courtier
+  asset: actif
+  bull market: marché haussier
+  bear market: marché baissier
+  spread: écart
+  swap: échange
+  margin call: appel de marge
+  capital gain: plus-value
+  cash flow: flux de trésorerie
+  pricing: tarification
+  risk premium: prime de risque
+  overhead: frais généraux
+  fee: commission
+  investment bank: banque d'affaires
+  private equity: capital-investissement
+  venture capital: capital-risque
+  high frequency: haute fréquence
+  behavioral finance: finance comportementale
+  mispricing: erreur de prix
+  échouent: font faillite
+  s'évanouissent: disparaissent
+  disparaissent: disparaissent
+topics:
+  rotation:
+  - Architecture des fonds spéculatifs et capitaux invisibles
+  - Neurobiologie du cerveau d'un investisseur
+  - Théorie des jeux appliquée aux marchés
+  - Asymétrie d'information — pourquoi les riches s'enrichissent
+  - Mécanismes de la dette et du levier financier
+  - Mathématiques du risque — probabilités et espérance de gain
+  - Pièges psychologiques de la finance comportementale
+  - Récits des grandes fortunes historiques
+  - Psychologie du luxe et coût du statut social
+  - Stratégies de sortie — l'art de vendre au bon moment
+paths:
+  playbook: skills/alfred_video_pipeline/PLAYBOOK_NEURO_FINANCE.md
+  charter: skills/alfred_video_pipeline/EDITORIAL_CHARTER_NEURO_FINANCE.md
+  lexicon: skills/alfred_video_pipeline/SEMANTIC_LEXICON_NEURO_FINANCE.md
+  performance: skills/alfred_video_pipeline/PERFORMANCE.md
+  upload_script: skills/youtube_upload/upload.py
+  history: skills/alfred_video_pipeline/PROMPT_HISTORY.json
+  clip_cache: state/clip_db_cache.json
+  used_topics: state/used_subtopics.json
+analysis:
+  enabled: true
+  whisper_model: base
+  whisper_language: fr
+  enable_vision: true

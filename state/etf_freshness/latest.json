@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-30",
+  "checks": {
+    "declared_source": {
+      "date": "2026-09-20",
+      "age_jours": 10,
+      "role": "informatif"
+    },
+    "declared_live": {
+      "date": "2026-09-20",
+      "age_jours": 10,
+      "role": "informatif"
+    },
+    "referenced_data_files": [
+      "etf-data.min.js",
+      "etf-scores.js"
+    ],
+    "file_source_etf-data.min.js": {
+      "date": "2026-09-30",
+      "age_jours": 0
+    },
+    "file_live_etf-data.min.js": {
+      "date": "2026-09-30",
+      "age_jours": 0
+    },
+    "file_source_etf-scores.js": {
+      "date": "2026-09-30",
+      "age_jours": 0
+    },
+    "file_live_etf-scores.js": {
+      "date": "2026-09-30",
+      "age_jours": 0
+    },
+    "declared_lag_jours": -10,
+    "log_scraper_hebdo": {
+      "fichier": "etf_scraper_20260927.log",
+      "age_jours": 3
+    },
+    "log_fondamentaux_daily": {
+      "fichier": "etf_fundamentals_daily_20260930.log",
+      "age_jours": 0
+    },
+    "log_catchup": {
+      "fichier": "etf_peap_catchup_180253.log",
+      "age_jours": 11
+    }
+  },
+  "issues": [],
+  "statut": "FRAIS"
+}

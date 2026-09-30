@@ -1,0 +1,80 @@
+# .gitignore — workspace Alfred (cree le 2026-09-30)
+# Objectif : versionner le CODE et les CONFIGS, jamais les medias, les sorties de pipeline,
+# les sauvegardes ni les caches. Voir rapports/audit_git_2026-09-30.md
+
+# --- Secrets : jamais, sous aucun pretexte ---
+.secrets/
+*token*.json
+*.pem
+*.key
+id_rsa*
+
+# --- Sauvegardes de travail (le "._bak" qui pollue) ---
+*.bak
+*.bak_*
+*.backup
+*.backup_*
+*.old
+*.orig
+*~
+_backups_*/
+_backups*
+
+# --- Medias / binaires lourds (la cause des 2,4 Go de packs) ---
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.pkl
+*.pt
+*.onnx
+*.db
+*.sqlite*
+
+# --- Sorties de pipeline et d'analyse (regenerables) ---
+rapports/
+output/
+failures/
+archive/
+shots/
+results/
+audit_tmp/
+tmp_hooks/
+tmp/
+*.log
+*.jsonl
+
+# --- Caches ---
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+node_modules/
+.venv/
+venv/
+
+# --- Scratch de session ---
+.openclaw/tmp/
+.tmpjob/
+.trash/
+.coordinator/
+.arbor/sessions/
+
+# --- Dossiers de travail du site (copies de sauvegarde) ---
+web/pea-comparator/temp/
+web/pea-comparator/_backups*/
+web/backups_missions/
+
+*.bak.*
+*.bak-*
+*.bak[0-9]
+*_bak
+*.r1r5_bak

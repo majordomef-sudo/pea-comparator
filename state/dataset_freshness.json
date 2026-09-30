@@ -1,0 +1,27 @@
+{
+ "prc_hicp_minr": {
+  "derniere_periode": "2026-08",
+  "depuis": "2026-09-27T05:29:46.532780",
+  "derniere_verif": "2026-09-30T03:30:01.275374"
+ },
+ "namq_10_gdp": {
+  "derniere_periode": "2026-Q2",
+  "depuis": "2026-09-27T05:29:46.532780",
+  "derniere_verif": "2026-09-30T03:30:01.275374"
+ },
+ "ei_bssi_m_r2": {
+  "derniere_periode": "2026-09",
+  "depuis": "2026-09-30T03:30:01.275374",
+  "derniere_verif": "2026-09-30T03:30:01.275374"
+ },
+ "ecb_dfr": {
+  "derniere_periode": "2026-09-30",
+  "depuis": "2026-09-30T03:30:01.275374",
+  "derniere_verif": "2026-09-30T03:30:01.275374"
+ },
+ "prc_hicp_manr_FIGE_test": {
+  "derniere_periode": "2025-12",
+  "depuis": "2026-09-27T05:30:39.209245",
+  "derniere_verif": "2026-09-27T05:30:39.209245"
+ }
+}

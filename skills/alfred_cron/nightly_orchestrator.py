@@ -3,7 +3,7 @@
 nightly_orchestrator.py — Pipeline Neuro-Finance (PRODUCTION)
 =============================================================
 Pipeline calqué sur le test orchestrator (référence) :
-  - LLM deepseek-v4-flash (default), fallback Gemma-4
+  - LLM deepseek-v4.1-flash (default), fallback Gemma-4
   - 1 seul appel LLM (plus de boucle de review)
   - Validation bloquante : langue interdite, guru-speak, data chiffrée
   - TTS par segment (plus de fragmentation phrase par phrase)
@@ -54,7 +54,7 @@ AFFILIATION_PATH = PIPELINE_DIR / "AFFILIATION_DB.json"
 UPLOAD_PY = WORKSPACE / "skills/youtube_upload/upload.py"
 
 # Modèles
-MODEL_MAIN   = os.environ.get("MODEL_PIPELINE", "deepseek/deepseek-v4-flash")
+MODEL_MAIN   = os.environ.get("MODEL_PIPELINE", "deepseek/deepseek-v4.1-flash")
 MODEL_FALLBACK = "google/gemma-4-31b-it"  # fallback si deepseek down (coût ~équivalent)
 
 # Clip sources

@@ -1,0 +1,92 @@
+{
+  "reference_period": "2025-12",
+  "source_note": "Seed mis a jour avec vraies valeurs Eurostat API (HICP, decembre 2025). Croissance/energie/bce: voir sources live ou seed.",
+  "croissance": {
+    "pmi_composite": {
+      "value": 52,
+      "previous": 51.5,
+      "unit": "index",
+      "source": "S&P Global/HCOB",
+      "published": "2026-07-24"
+    },
+    "pmi_manufacturier": {
+      "value": 49.8,
+      "previous": 49.2,
+      "unit": "index",
+      "source": "S&P Global/HCOB",
+      "published": "2026-07-24"
+    },
+    "pmi_services": {
+      "value": 53.1,
+      "previous": 52.7,
+      "unit": "index",
+      "source": "S&P Global/HCOB",
+      "published": "2026-07-24"
+    }
+  },
+  "inflation": {
+    "inflation_globale": {
+      "value": 2.0,
+      "unit": "%",
+      "source": "Eurostat API (prc_hicp_manr)",
+      "published": "2025-12",
+      "previous": 2.1
+    },
+    "inflation_sous_jacente": {
+      "value": 2.3,
+      "unit": "%",
+      "source": "Eurostat API (TOT_X_NRG_FOOD)",
+      "published": "2025-12",
+      "previous": 2.4
+    },
+    "inflation_services": {
+      "value": 3.4,
+      "unit": "%",
+      "source": "Eurostat API (SERV)",
+      "published": "2025-12",
+      "previous": 3.5
+    },
+    "inflation_energie": {
+      "value": -1.9,
+      "unit": "%",
+      "source": "Eurostat API (NRG)",
+      "published": "2025-12",
+      "previous": -0.5
+    }
+  },
+  "energie": {
+    "brent": {
+      "value": 92,
+      "unit": "USD/baril",
+      "source": "marches petroliers",
+      "published": "2026-08-20"
+    },
+    "ttf": {
+      "value": 42,
+      "unit": "EUR/MWh",
+      "source": "marches gaz europe",
+      "published": "2026-08-20"
+    }
+  },
+  "bce": {
+    "taux_depot": {
+      "value": 2.25,
+      "unit": "%",
+      "source": "BCE",
+      "published": "2026-07-21"
+    },
+    "taux_refinancement": {
+      "value": 2.4,
+      "unit": "%",
+      "source": "BCE",
+      "published": "2026-07-21"
+    },
+    "stance": "pause"
+  },
+  "geo": {
+    "statut": "stable",
+    "events": [],
+    "source": "veille (a verifier manuellement)",
+    "published": "2026-08-20"
+  }
+}

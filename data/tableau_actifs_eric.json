@@ -1,0 +1,70 @@
+{
+  "source": "BONUS - Tableau ETF - Fonds - SCPI",
+  "date_import": "2026-07-05",
+  "categories": {
+    "etf_action": {
+      "titre": "ETF Action",
+      "description": "ETF actions large/ciblé",
+      "actifs": [
+        {"nom": "SPDR MSCI All Country World Investable Market UCITS ETF", "isin": "IE00B3YLTY66", "ticker": "IMIE", "prix": 9.94, "frais": 0.17, "encours_meur": 4321, "perf_ann_3a": 13.92, "volatilite_3a": 10.22, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "SPDR MSCI World UCITS ETF", "isin": "IE00BFY0GT14", "ticker": "SPPW", "prix": 40.17, "frais": 0.12, "encours_meur": 14045, "perf_ann_3a": 14.63, "volatilite_3a": 10.50, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "Amundi Core S&P 500 Swap UCITS ETF", "isin": "LU1135865084", "ticker": "SP5C", "prix": 410.07, "frais": 0.05, "encours_meur": 12456, "perf_ann_3a": 15.70, "volatilite_3a": 12.07, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "Amundi Core EURO STOXX 50 UCITS ETF", "isin": "LU1681047236", "ticker": "C50", "prix": 150.45, "frais": 0.09, "encours_meur": 3381, "perf_ann_3a": 12.14, "volatilite_3a": 10.57, "cap_dist": "Capitalisant", "pea": true},
+        {"nom": "iShares Core MSCI Emerging Markets IMI UCITS ETF", "isin": "IE00BKM4GZ66", "ticker": "IS3N", "prix": 40.36, "frais": 0.18, "encours_meur": 30432, "perf_ann_3a": 13.47, "volatilite_3a": 11.33, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "Amundi PEA Nasdaq-100 UCITS ETF", "isin": "FR0011871110", "ticker": "PUST", "prix": 80.32, "frais": 0.30, "encours_meur": 791, "perf_ann_3a": 19.28, "volatilite_3a": 15.89, "cap_dist": "Capitalisant", "pea": true},
+        {"nom": "Amundi Euro Stoxx Banks UCITS ETF", "isin": "LU1829219390", "ticker": "BNKE", "prix": 305.30, "frais": 0.30, "encours_meur": 4442, "perf_ann_3a": 40.00, "volatilite_3a": 19.80, "cap_dist": "Capitalisant", "pea": true},
+        {"nom": "iShares Global Aerospace & Defence UCITS ETF", "isin": "IE000U9ODG19", "ticker": "DFND", "prix": 8.32, "frais": 0.35, "encours_meur": 1361, "perf_ann_1a": 26.24, "volatilite_1a": 17.60, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "iShares Edge MSCI Europe Momentum Factor UCITS ETF", "isin": "IE00BQN1K786", "ticker": "CEMR", "prix": 14.78, "frais": 0.25, "encours_meur": 694, "perf_ann_3a": 16.87, "volatilite_3a": 10.04, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "Amundi EURO STOXX 50 Daily (2x) Leveraged UCITS ETF", "isin": "FR0010468983", "ticker": "LVE", "prix": 70.12, "frais": 0.40, "encours_meur": 196, "perf_ann_3a": 17.97, "volatilite_3a": 21.57, "cap_dist": "Capitalisant", "pea": true}
+      ]
+    },
+    "etn_crypto": {
+      "titre": "ETN Crypto",
+      "description": "Produits crypto cotés (ETN)",
+      "actifs": [
+        {"nom": "21shares Bitcoin Core ETP", "isin": "CH1199067674", "ticker": "CBTC", "prix": 14.00, "frais": 0.10, "encours_meur": 343, "perf_ann_3a": 30.25, "volatilite_3a": 51.72, "cap_dist": "Capitalisant", "pea": false},
+        {"nom": "21shares Crypto Basket Index ETP", "isin": "CH0445689208", "ticker": "HODL", "prix": 11.06, "frais": 0.99, "encours_meur": 121, "perf_ann_3a": 15.59, "volatilite_3a": 56.18, "cap_dist": "Capitalisant", "pea": false}
+      ]
+    },
+    "etc_or": {
+      "titre": "ETC Or",
+      "description": "Produits adossés à l'or (ETC)",
+      "actifs": [
+        {"nom": "Xtrackers Physical Gold EUR Hedged ETC", "isin": "DE000A1EK0G3", "ticker": "XAD1", "prix": 271.87, "frais": 0.59, "encours_meur": 2008, "perf_ann_3a": 28.36, "volatilite_3a": 15.14, "cap_dist": "Capitalisant", "av": true},
+        {"nom": "Amundi Physical Gold ETC", "isin": "FR0013416716", "ticker": "GOLD", "prix": 163.45, "frais": 0.12, "encours_meur": 10518, "perf_ann_3a": 29.80, "volatilite_3a": 13.78, "cap_dist": "Capitalisant", "av": true}
+      ]
+    },
+    "etf_obligataire": {
+      "titre": "ETF Obligataire / Fonds Monétaire",
+      "description": "ETF obligataires et fonds monétaires",
+      "actifs": [
+        {"nom": "iShares Core EUR Corporate Bond UCITS ETF", "isin": "IE00B3F81R35", "ticker": "EUN5", "prix": 118.26, "frais": 0.09, "encours_meur": 8554, "perf_ann_3a": 4.35, "volatilite_3a": 2.92, "cap_dist": "Distribuant", "pea": false},
+        {"nom": "iShares EUR Aggregate Bond ESG SRI UCITS ETF", "isin": "IE00B3DKXQ41", "ticker": "EUN4", "prix": 107.29, "frais": 0.16, "encours_meur": 1587, "perf_ann_3a": 2.62, "volatilite_3a": 4.02, "cap_dist": "Distribuant", "pea": false}
+      ]
+    },
+    "fond_date": {
+      "titre": "Fonds Datés",
+      "description": "Fonds à échéance déterminée (private debt)",
+      "actifs": [
+        {"nom": "SYCOYIELD 2030 RC", "isin": "FR001400MCQ6", "echeance": 2030, "prix": 109.81, "frais_souscription": 3.00, "frais_courants": 1.00, "perf_ann_1a": 4.00, "volatilite_1a": 2.48, "notation": "BB", "pea": false},
+        {"nom": "Mandarine Global Target 2030", "isin": "LU2786374178", "echeance": 2030, "prix": 105.62, "frais_souscription": 2.00, "frais_courants": 1.00, "perf_ann_1a": 4.13, "volatilite_1a": 3.67, "notation": "B+", "pea": false}
+      ]
+    },
+    "private_equity": {
+      "titre": "Private Equity",
+      "description": "Fonds de private equity avec FCPR",
+      "actifs": [
+        {"nom": "ODDO BHF Global Private Equity A1", "isin": "FR001400ROU2", "fcpr": true, "prix": 116.09, "encours_meur": 55, "frais_souscription": 5.00, "frais_gestion": 2.00, "perf_1a": 6.70, "risque": "6/7", "pea": false},
+        {"nom": "Ardian Access Solution A", "isin": "FR001400AUA7", "fcpr": true, "prix": 119.63, "encours_meur": 415, "frais_souscription": "NC", "frais_gestion": 1.90, "perf_1a": 5.45, "risque": "6/7", "pea": false}
+      ]
+    },
+    "scpi": {
+      "titre": "SCPI",
+      "description": "Sociétés Civiles de Placement Immobilier",
+      "actifs": [
+        {"nom": "NCAP CONTINENT", "localisation": "Étranger", "prix_souscription": 210.00, "frais_souscription": 10.00, "frais_gestion": 14.40, "capitalisation_meur": 65, "td_2025": 7.10, "tri_5a": null, "taux_occupation": 100.00, "type": "Bureaux"},
+        {"nom": "CORUM ORIGIN", "localisation": "Étranger / France", "prix_souscription": 1135.00, "frais_souscription": 11.96, "frais_gestion": 13.20, "capitalisation_meur": 3794, "td_2025": 6.50, "tri_5a": 5.31, "taux_occupation": 96.23, "type": "Diversifiée"}
+      ]
+    }
+  }
+}

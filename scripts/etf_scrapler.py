@@ -1,5 +1,5 @@
 """ETF Scrapler v2.6 - yfinance + Scrapling JustETF avec mapping ISIN → ticker"""
-import json, re, os, time
+import json, re, os, time, urllib.request
 from datetime import datetime
 from scrapling import Fetcher
 
@@ -75,6 +75,70 @@ def fetch_yahoo(isin, ticker=None):
         return {"error": str(e)[:80]}
 
 
+CACHE_PATH = os.path.join(WS, "state", "etf_ticker_cache.json")
+_YAHOO_CACHE = None
+
+
+def _cache_load():
+    """Cache ISIN -> ticker Yahoo. Evite de re-taper l'API de recherche a chaque run."""
+    global _YAHOO_CACHE
+    if _YAHOO_CACHE is None:
+        try:
+            _YAHOO_CACHE = json.load(open(CACHE_PATH, encoding="utf-8"))
+        except Exception:
+            _YAHOO_CACHE = {}
+    return _YAHOO_CACHE
+
+
+def _cache_save():
+    if _YAHOO_CACHE is None:
+        return
+    try:
+        os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+        with open(CACHE_PATH, "w", encoding="utf-8") as f:
+            json.dump(_YAHOO_CACHE, f, indent=1, ensure_ascii=False)
+    except Exception:
+        pass
+
+
+# Priorite des places : on veut le listing le plus liquide/le plus proche du PEA.
+_EXCH_PREF = {"PAR": 0, "AMS": 1, "MIL": 2, "GER": 3, "XETRA": 3, "FRA": 4,
+              "MAD": 5, "BRU": 6, "LSE": 7, "STU": 8, "SWX": 9, "LUX": 10}
+
+
+def resolve_ticker_yahoo(isin):
+    """ISIN -> ticker Yahoo via l'API de recherche publique.
+
+    Pourquoi : le mapping justETF -> suffixe (.DE par defaut) produit des
+    tickers faux pour beaucoup de fonds (EXH0.DE, DJAB.DE... == 404
+    "possibly delisted"). L'API de recherche Yahoo accepte un ISIN et renvoie
+    le VRAI symbole du listing (ESE.PA, ETZ.PA, GOLD.AS...). Verifie le
+    2026-09-27 sur 12 ISIN en echec : 12/12 resolus.
+    """
+    cache = _cache_load()
+    if isin in cache:
+        return cache[isin] or None
+    url = ("https://query1.finance.yahoo.com/v1/finance/search?q=" + isin +
+           "&quotesCount=8&newsCount=0")
+    best = None
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        data = json.loads(urllib.request.urlopen(req, timeout=20).read())
+        cands = [q for q in data.get("quotes", [])
+                 if q.get("symbol") and q.get("quoteType") in ("ETF", "EQUITY", "MUTUALFUND")]
+        if cands:
+            def rank(q):
+                ex = (q.get("exchange") or "").upper()
+                return (0 if q.get("quoteType") == "ETF" else 1, _EXCH_PREF.get(ex, 99))
+            cands.sort(key=rank)
+            best = cands[0]["symbol"]
+    except Exception:
+        return None if isin not in cache else cache[isin]
+    cache[isin] = best or ""
+    _cache_save()
+    return best
+
+
 def fetch_justetf(isin):
     """Fetch ETF ticker + name from JustETF using Scrapling.
     Returns ticker (Yahoo format) and name if found."""
@@ -142,19 +206,29 @@ def process(etf, idx, total):
     1. Try JustETF to get ticker + name
     2. Try yfinance with ticker to get perf5, prix, frais"""
     isin = etf["isin"]
-    if etf.get("perf5") not in ("N/A", "", None): return None
+    # On re-traite aussi les ETF qui ont un perf5 mais AUCUN prix : c'est
+    # exactement la population que l'ancien filtre laissait de cote pour
+    # toujours (18 ETF au 2026-09-27).
+    if etf.get("perf5") not in ("N/A", "", None) and etf.get("prix") not in (None, "", "N/A"):
+        return None
     skip_bg = ["BG"]
     if isin[:2] in skip_bg: return None
     print(f"  [{idx}/{total}] {isin} ", end="", flush=True)
 
-    # Step 1: Try JustETF to get ticker + name
+    # Step 0: resolution ISIN -> ticker Yahoo (source de verite du listing).
+    ticker = resolve_ticker_yahoo(isin)
+    if ticker and ticker != etf.get("ticker"):
+        etf["ticker"] = ticker
+        print(f"Yahoo->{ticker} ", end="")
+
+    # Step 1: JustETF en complement (nom, et ticker si Yahoo n'a rien donne)
     justetf_data = fetch_justetf(isin)
-    ticker = None
 
     if justetf_data and "error" not in justetf_data:
         updates = []
-        # Save ticker if found
-        if "ticker" in justetf_data and "ticker" not in etf:
+        # Ticker justETF seulement si Yahoo n'a rien resolu (sinon on ecrase
+        # un symbole valide -- c'est ce qui produisait les 404 .DE).
+        if "ticker" in justetf_data and not ticker:
             etf["ticker"] = justetf_data["ticker"]
             ticker = justetf_data["ticker"]
             updates.append("ticker")
@@ -172,6 +246,8 @@ def process(etf, idx, total):
 
     # Step 2: Try yfinance with ticker (or ISIN as last resort)
     yahoo_data = fetch_yahoo(isin, ticker=ticker)
+    if (not yahoo_data or "error" in yahoo_data) and ticker and etf.get("ticker") != ticker:
+        yahoo_data = fetch_yahoo(isin, ticker=etf.get("ticker"))
     if yahoo_data and "error" not in yahoo_data:
         updates = []
         for k in ["perf5", "perf3", "perf1", "prix", "frais", "nom"]:
@@ -333,8 +409,13 @@ def main():
             return
     else:
         valid = [e for e in etfs if e["isin"][:2] not in ("BG",)]
-        missing = [e for e in valid if e.get("perf5") in ("N/A", "", None)]
-        print(f"  {len(missing)} need perf5 (excluding BG)")
+        # Selection elargie : on reprend aussi les ETF qui ont un perf5 mais
+        # aucun prix (18 au 2026-09-27) -- sinon ils ne sont JAMAIS retentes
+        # et restent sans cotation a vie.
+        missing = [e for e in valid
+                   if e.get("perf5") in ("N/A", "", None)
+                   or e.get("prix") in (None, "", "N/A")]
+        print(f"  {len(missing)} a completer (perf5 ou prix manquant, hors BG)")
         batch = missing if args.refresh_all else missing[:args.batch]
     count = 0
     # ---- Passe fondamentaux (encours, devise, dist/cap, date, indice, vol) ----

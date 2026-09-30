@@ -1,0 +1,75 @@
+# Niche: Neuro-Finance (finance comportementale)
+name: "Neuro-Finance"
+display_name: "Neurobiologie de l'argent"
+emoji: "🧠"
+
+script:
+  tone: "expert, révélateur, un brin provocateur"
+  pacing: "rythmé, une révélation toutes les 10 secondes"
+  hooks:
+    - pattern: "paradox"
+      template: "Pourquoi votre cerveau {trait} — et ça vous coûte {cost}€ par an"
+    - pattern: "contrarian"
+      template: "Les experts vous disent d'{action}. Voilà pourquoi ils ont (presque) tort."
+    - pattern: "deep_reveal"
+      template: "Votre {something} vous sabote sans que vous le sachiez. Explication."
+    - pattern: "question"
+      template: "Pourquoi votre cerveau sous-estime les probabilités — explication neuro-scientifique."
+  cta_variants:
+    - "🔔 Abonnez-vous pour ne rien rater : tous les jours, une révélation sur la neurobiologie de l'argent."
+    - "📈 Suivez pour décoder les biais qui coûtent cher."
+    - "💡 Un cerveau averti en vaut deux. Abonnez-vous."
+  word_count: "24-35 mots"
+  forbidden: ["like and subscribe", "smash like", "cliquez sur le bouton"]
+
+visuals:
+  style: "sombre, orange néon, data-driven"
+  subjects: ["cerveau IRM", "graphiques bourse", "neurones", "chiffres animés"]
+  avoid: ["gens qui sourient", "bureau générique"]
+  overlay_style: "orange géant, typographie dynamique"
+
+voice:
+  voice_a: "fr-FR-RemyMultilingualNeural"  # expert
+  voice_b: "fr-FR-VivienneMultilingualNeural"  # contrepoint
+  rate: "-5%"
+  energy: "confiant, posé"
+
+captions:
+  style: "fade-in progressif"
+  position: "lower_third"
+
+music:
+  mood: "ambient finance, suspense léger"
+  volume: 0.15
+  loop_track: "bgm_finance.wav"
+
+video:
+  clip_count: 3
+  clip_duration: 10
+  aspect_ratio: "9:16"
+  resolution: "1080×1920"
+  subscribe_screen: 2.5
+  watermark: true
+  transitions: ["fade", "slideleft", "dissolve", "zoomin", "pixelize"]
+
+thumbnail:
+  style: "sombre, texte orange néon, chiffre choc"
+  text_position: "center"
+
+hashtags:
+  default: "#finance #investissement #neuroscience #cerveau #argent #psychologie"
+  searchable: ["finance comportementale", "biais cognitifs", "neurofinance"]
+
+research:
+  enabled: true
+  sources: ["indices boursiers", "taux Fed", "inflation"]
+  refresh: "daily"
+
+weekly_schedule:
+  monday: "Neurofinance"
+  tuesday: "Finance comportementale"
+  wednesday: "Économie comportementale"
+  thursday: "Neurofinance"
+  friday: "Biais cognitifs"
+  saturday: "Récap hebdo"
+  sunday: "Neurofinance"
