@@ -15,9 +15,9 @@
     var age = pf('catchup-age');
     var retire = pf('catchup-retire');
     var rate = pf('catchup-rate') / 100;
-    if (rate <= 0) { document.getElementById('catchup-result').innerHTML = '<span style="color:#dc2626">Rendement doit \u00eatre > 0</span>'; return; }
+    if (rate <= 0) { document.getElementById('catchup-result').innerHTML = '<span style="color:#F87171">Rendement doit \u00eatre > 0</span>'; return; }
     var years = retire - age;
-    if (years <= 0) { document.getElementById('catchup-result').innerHTML = '<span style="color:#dc2626">\u00c2ge retraite doit \u00eatre > \u00e2ge actuel</span>'; return; }
+    if (years <= 0) { document.getElementById('catchup-result').innerHTML = '<span style="color:#F87171">\u00c2ge retraite doit \u00eatre > \u00e2ge actuel</span>'; return; }
     var fvFactor = Math.pow(1 + rate, years);
     var needed = target - current * fvFactor;
     if (needed <= 0) {
@@ -46,7 +46,7 @@
     var current = pf('mil-current');
     var monthly = pf('mil-monthly');
     var rate = pf('mil-rate') / 100;
-    if (rate <= 0) { document.getElementById('mil-result').innerHTML = '<span style="color:#dc2626">Rendement doit \u00eatre > 0</span>'; return; }
+    if (rate <= 0) { document.getElementById('mil-result').innerHTML = '<span style="color:#F87171">Rendement doit \u00eatre > 0</span>'; return; }
     var target = 1000000;
     var years = 0;
     var val = current;
@@ -62,7 +62,7 @@
     var capital = pf('cons-capital');
     var rate = pf('cons-rate') / 100;
     var years = pf('cons-years');
-    if (rate <= 0 || years <= 0) { document.getElementById('cons-result').innerHTML = '<span style="color:#dc2626">Param\u00e8tres invalides</span>'; return; }
+    if (rate <= 0 || years <= 0) { document.getElementById('cons-result').innerHTML = '<span style="color:#F87171">Param\u00e8tres invalides</span>'; return; }
     var monthlyRate = rate / 12;
     var n = years * 12;
     var monthly = capital * monthlyRate / (1 - Math.pow(1 + monthlyRate, -n));
@@ -77,8 +77,8 @@
     var e1 = etfs.find(function(e) { return e.isin === isin1; });
     var e2 = etfs.find(function(e) { return e.isin === isin2; });
     var html = '';
-    if (!e1) html += '<p style="color:#dc2626">ETF ' + isin1 + ' non trouv\u00e9</p>';
-    if (!e2) html += '<p style="color:#dc2626">ETF ' + isin2 + ' non trouv\u00e9</p>';
+    if (!e1) html += '<p style="color:#F87171">ETF ' + isin1 + ' non trouv\u00e9</p>';
+    if (!e2) html += '<p style="color:#F87171">ETF ' + isin2 + ' non trouv\u00e9</p>';
     if (e1 && e2) {
       html = '<table style="width:100%;border-collapse:collapse;font-size:0.85rem">';
       html += '<tr><th style="text-align:left">Crit\u00e8re</th><th style="text-align:center">' + e1.nom + '</th><th style="text-align:center">' + e2.nom + '</th></tr>';
@@ -122,7 +122,7 @@
         '<div class="top-etf-rank">' + (i + 1) + '</div>' +
         '<div style="flex:1">' +
           '<h4>' + shortName + '</h4>' +
-          '<p>' + (e.isin || '') + ' \u00b7 Frais: ' + frais + ' \u00b7 Perf: <span style="color:' + (perfUp ? '#059669' : '#dc2626') + ';font-weight:700">' + perfStr + '</span></p>' +
+          '<p>' + (e.isin || '') + ' \u00b7 Frais: ' + frais + ' \u00b7 Perf: <span style="color:' + (perfUp ? '#4ADE80' : '#F87171') + ';font-weight:700">' + perfStr + '</span></p>' +
         '</div>' +
       '</div>';
     }).join('');

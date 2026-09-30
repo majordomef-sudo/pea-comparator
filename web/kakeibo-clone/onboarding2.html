@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Kakeibo · Onboarding 2</title>
+<meta name="color-scheme" content="only light">
+<meta name="darkreader-lock">
+<!-- Requis pour que Chrome/Android considère la page installable et déclenche
+     beforeinstallprompt (le vrai prompt natif du bouton Télécharger) : sans
+     manifest lié ICI (pas seulement sur index.html), l'événement ne part jamais
+     et le bouton retombait sur le message d'instructions générique. -->
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+:root{
+  color-scheme:only light;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ease-slide:cubic-bezier(0.32,0.72,0,1);
+  --ink:#141110;--sub:#a89e95;--bg:#f5f0e8;
+}
+html,body{background:#e8e2d6;color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;height:100%;}
+body{overflow:hidden;}
+.app{position:relative;height:100dvh;max-width:430px;margin:0 auto;overflow:hidden;
+  transition:height .22s var(--ease-slide);
+  box-shadow:0 0 40px rgba(61,53,48,0.18);
+  background:
+    radial-gradient(120% 55% at 50% -8%, rgba(201,168,122,0.30) 0%, rgba(201,168,122,0.10) 38%, transparent 62%),
+    #f5f0e8;
+  display:flex;flex-direction:column;}
+
+/* ═══ flux de saisie ═══ */
+#flow{display:flex;flex-direction:column;align-items:center;flex:1;min-height:0;
+  padding:calc(20px + env(safe-area-inset-top)) 22px 10px;
+  transition:opacity .45s ease,visibility 0s linear .45s;}
+/* visibility:hidden en plus de l'opacity:0 (avec le même délai que le fondu, pour ne
+   pas couper l'animation) : sur certains navigateurs/appareils l'écran récap (#fin,
+   position:absolute par-dessus) laissait quand même passer la rangée d'icônes de
+   progression de #flow au travers, opacity:0 seul ne suffisant pas à la faire
+   disparaître visuellement une fois le fondu terminé. */
+#flow.gone{opacity:0;visibility:hidden;pointer-events:none;}
+
+/* rangée d'icônes de progression */
+/* gap/taille réduits pour que la rangée tienne sur une ligne même avec
+   beaucoup de postes (11 désormais) */
+.dots{display:flex;gap:12px;margin-bottom:10px;flex-wrap:wrap;justify-content:center;max-width:340px;}
+.dot{width:var(--dotSize,32px);height:var(--dotSize,32px);border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#e9e2d6;flex-shrink:0;overflow:hidden;
+  transition:width .65s var(--ease-slide),height .65s var(--ease-slide),background .4s ease,transform .5s var(--ease-out),opacity .35s ease,margin .65s var(--ease-slide);}
+.dot svg{width:50%;height:50%;stroke:#b5aa9d;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s ease;}
+.dot.cur{transform:scale(1.18);}
+.dot.cur,.dot.done{background:var(--c);}
+.dot.cur svg,.dot.done svg{stroke:#fff;}
+/* le poste déjà rempli reste coloré mais s'efface un peu, pour que l'œil
+   aille d'abord vers celui en cours de remplissage */
+.dot.done{opacity:0.5;cursor:pointer;}
+.dot.done:active{transform:scale(0.88);opacity:0.8;}
+/* tant que le salaire n'est pas validé, la rangée est invisible : chaque
+   pastille garde sa place (mesurable) mais n'apparaît qu'en cascade, voir
+   revealDotsRow en JS */
+.dot.pending{opacity:0;transform:scale(0.3);pointer-events:none;}
+/* le poste dont l'icône vit actuellement sur la carte quitte la rangée :
+   largeur ramenée à 0 (les autres pastilles regagnent l'espace libéré et
+   grossissent un peu, voir --dotSize), marge négative pour absorber le gap */
+.dot.flying{width:0;height:0;opacity:0;margin:0 -6px;pointer-events:none;}
+
+/* donut : petit pendant la saisie (clavier ouvert), gros au repos (carte neuve, clavier fermé).
+   Agrandi de 104 -> 134px : la carte de saisie (.stage, voir compactStage) a été rétrécie
+   d'autant en hauteur (180 -> 150px) pour lui laisser la place, en ne mangeant que sur le
+   haut de la carte — son bas reste au même endroit, le total dots+donut+stage ne bouge pas. */
+.donutWrap{position:relative;width:134px;height:134px;margin:2px 0 12px;flex-shrink:0;
+  transition:width .5s var(--ease-slide),height .5s var(--ease-slide),margin-top .5s var(--ease-slide),
+    opacity .4s ease,transform .4s var(--ease-slide);}
+.donutWrap.big{width:172px;height:172px;}
+.donutWrap svg{width:100%;height:100%;transform:rotate(-90deg);}
+/* épaisseur proportionnelle à celle du donut final (#finDonutWrap : 15px sur
+   190px, ratio ~0,079) plutôt qu'une valeur fixe qui paraissait plus fine à
+   mesure que l'anneau grandit (11px sur 172px ne donnait que 0,064) */
+.donutWrap circle{fill:none;stroke-width:10.5px;}
+.donutWrap.big circle{stroke-width:13.5px;}
+.dTrack{stroke:#e7dfd0;}
+.dSeg{stroke-dasharray:0 100;stroke-linecap:butt;filter:url(#segGlow);
+  transition:stroke-dasharray 1.9s var(--ease-out),stroke .6s ease,stroke-width .25s var(--ease-out);}
+.dPct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:28px;font-weight:800;color:#7a6e65;font-variant-numeric:tabular-nums;
+  transition:font-size .5s var(--ease-slide),color .4s ease;}
+.donutWrap.big .dPct{font-size:34px;}
+/* petit "restant" sous le montant, révélé quand le donut passe du % de
+   célébration au reste du salaire (voir revealSalaryDonut) */
+.dRest{position:absolute;left:0;right:0;top:calc(50% + 12px);text-align:center;
+  font-size:10px;font-weight:700;color:#a89e95;letter-spacing:0.3px;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s ease,top .5s var(--ease-slide),font-size .5s var(--ease-slide);}
+.donutWrap.big .dRest{top:calc(50% + 17px);font-size:11.5px;}
+.dRest.on{opacity:1;}
+/* le donut n'existe pas encore tant que le salaire n'est pas validé : retiré
+   du flux (display:none), pas juste invisible, pour que l'écran d'intro se
+   centre sur toute la hauteur disponible sans une réserve d'espace fantôme */
+.donutWrap.hidden{display:none;}
+@keyframes donutPop{0%{transform:scale(0.6);}55%{transform:scale(1.08);}100%{transform:scale(1);}}
+.donutWrap.reveal{animation:donutPop .55s var(--ease-slide);}
+.card.salaryCard{display:none;}
+
+/* écran d'intro du salaire, façon question de l'onboarding "récit" (grande
+   question + input simple, sans donut) : on tape le montant comme on tapait
+   son âge, à même le fond (pas de pastille/carré derrière), même esprit que
+   l'écran de saisie de montant de l'app (index.html #amountScreenInput).
+   .salAmtWrap (l'anneau + le montant) est le SEUL enfant direct de
+   #salaryIntro à participer au centrage flex : c'est ce qui garantit que
+   l'anneau reste pile au centre de l'écran, quoi qu'il arrive au-dessus ou
+   en dessous de lui. Logo+question (au repos) et le message "Impressionnant !"
+   (à la validation) sont chacun un overlay absolute ANCRÉ SUR .salAmtWrap
+   (bottom:100% / top:100%) plutôt que des enfants flex normaux : ni l'un ni
+   l'autre n'influence donc jamais la taille ou le centrage du bloc qui
+   contient l'anneau. Tentatives précédentes qui ne marchaient pas : masquer
+   la question (display:none) pour "faire de la place" déplaçait l'anneau
+   (le centrage flex recalculait sur un contenu plus court) ; la garder en
+   flux mais mettre le message dans un écran séparé plus bas le faisait
+   atterrir loin de l'anneau (position dictée par la fin du bloc #salaryIntro
+   en flex:1, sans lien avec l'anneau lui-même). */
+#salaryIntro{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  flex:1;width:100%;max-width:340px;}
+#salaryIntro.gone{opacity:0;pointer-events:none;position:absolute;}
+/* logo + question au repos : ancrés juste au-dessus de l'anneau, jamais
+   dans le flux flex de #salaryIntro (voir commentaire ci-dessus). Simple
+   div, plus de fondu .pre indépendant : ils apparaissent avec le reste de
+   .salAmtWrap (qui, lui, garde .pre) en un seul fondu, plutôt qu'une
+   chorégraphie en deux temps qui n'apporte rien ici. */
+.salTopStack{position:absolute;left:50%;bottom:calc(100% + 22px);transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:22px;width:280px;}
+/* message "Impressionnant !" : même principe, ancré juste EN DESSOUS de
+   l'anneau (jamais au-dessus, à la place de la question) — voir la demande
+   explicite de garder le donut au centre et le texte de célébration en bas. */
+#salaryTransition{position:absolute;left:50%;top:calc(100% + 22px);transform:translateX(-50%);
+  width:280px;text-align:center;}
+#salaryTransition.gone{opacity:0;pointer-events:none;}
+
+/* Splash "Bienvenue dans Kakeibo" affiché en tout premier, par-dessus le
+   reste (déjà en train de se construire dessous) : simple fondu court avant
+   que l'écran du salaire ne joue sa propre entrée, pour familiariser
+   l'utilisateur avec l'icône de l'app dès la première seconde. */
+#welcomeScreen{position:absolute;inset:0;z-index:50;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:16px;
+  background:radial-gradient(120% 55% at 50% -8%, rgba(201,168,122,0.30) 0%, rgba(201,168,122,0.10) 38%, transparent 62%), #f5f0e8;
+  opacity:1;transition:opacity .35s ease;}
+#welcomeScreen.out{opacity:0;pointer-events:none;}
+#welcomeScreen img{width:88px;height:88px;border-radius:22px;box-shadow:0 6px 20px rgba(61,53,48,0.18);}
+#welcomeScreen .welcomeTitle{font-size:21px;font-weight:800;letter-spacing:-0.4px;color:#8a6d3b;text-align:center;}
+#welcomeScreen .welcomeTitleBrand{color:var(--ink);}
+#welcomeScreen .welcomeSub{font-size:14px;font-weight:600;color:#3d3530;text-align:center;max-width:260px;line-height:1.4;margin-top:-6px;}
+/* gros logo salaire au repos, au-dessus de la question : c'est lui qui vole
+   ensuite jusqu'à la rangée d'icônes une fois le salaire validé (voir
+   revealDotsRow), pas juste un décor qui s'efface */
+.salBigIcon{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#2e7d4f;flex-shrink:0;transition:transform .5s var(--ease-slide);}
+/* la question s'efface sur place (voir .salTopStack .salQ plus bas) mais
+   garde sa place réservée dans la colonne flex — sans ce glissement, l'icône
+   restait donc plantée au-dessus d'un vide, loin de l'anneau qui apparaît
+   juste en dessous. */
+.salBigIcon.down{transform:translateY(75px);}
+.salBigIcon svg{width:50%;height:50%;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.salQ{font-size:25px;font-weight:800;letter-spacing:-0.4px;line-height:1.3;text-align:center;color:var(--ink);}
+/* seule la question (pas l'icône à côté) s'efface à la validation, pour ne
+   pas laisser "Pour commencer, inscris ton salaire" affiché pendant la
+   célébration — l'icône, elle, reste visible jusqu'à son envol vers la
+   rangée (voir revealDotsRow). Fondu simple en JS (style.opacity direct),
+   pas le mécanisme .pre générique : ce dernier ne repère que les enfants
+   DIRECTS d'un conteneur passé à fadeInScreen/fadeOutChild, et .salQ est ici
+   niché dans .salTopStack (voir plus haut). */
+.salTopStack .salQ{transition:opacity .5s ease;}
+/* isolation:isolate crée un contexte d'empilement propre et local à ce
+   conteneur : le z-index du montant/de l'anneau ci-dessous se compare
+   alors seulement entre eux, sans dépendre d'un empilement hérité d'un
+   ancêtre (ex. .pre pendant sa transition d'entrée).
+   min-height:280px = le vrai correctif du débordement sur la question
+   au-dessus : .salAmtWrap ne mesurait que la hauteur du texte (~60px),
+   l'anneau (280px, centré dessus en absolute) débordait donc de ~110px
+   par-dessus ET par-dessous sans que le flex column (#salaryIntro, gap
+   22px) n'en tienne compte. Réserver la même hauteur que l'anneau force
+   le gap à s'appliquer par rapport à sa vraie taille visible. */
+.salAmtWrap{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;isolation:isolate;min-height:280px;
+  transition:min-height .5s var(--ease-slide);}
+/* spécificité id : .amt (partagée avec les cartes de dépenses) fixe color:var(--c),
+   qui vaudrait sinon la couleur d'encre par défaut ici (pas de --c ambiant) */
+/* taille réduite par rapport à l'écran de montant de l'app (64px) : un
+   salaire tient souvent sur 4 chiffres ("2000 €"), et l'anneau de
+   célébration qui l'entoure a besoin d'un peu de marge tout autour pour ne
+   pas le couper */
+#salaryInput.salAmt{border:none;background:none;outline:none;font-family:inherit;font-weight:800;font-size:48px;
+  color:#cbbf9e;width:1ch;min-width:1ch;text-align:center;caret-color:#2e7d4f;padding:0;
+  font-variant-numeric:tabular-nums;transition:color 0.15s;
+  position:relative;z-index:2;}
+#salaryInput.salAmt::placeholder{color:#cbbf9e;}
+/* gris tant qu'aucun chiffre n'est saisi, vert une fois un montant réel entré (voir le
+   listener 'input' plus bas), même logique que le montant grisé de l'app (index.html #amountScreenInput) */
+.salEur{font-size:48px;font-weight:800;color:#cbbf9e;transition:color 0.15s;position:relative;z-index:2;}
+/* anneau de célébration qui vient entourer le montant sans qu'il ne bouge :
+   départ à midi, tour complet dans le sens horaire, retour à midi.
+   z-index:1 explicite (avec isolation:isolate sur .salAmtWrap ci-dessus) :
+   sans ça, un absolute (même placé avant en DOM) peint quand même par-dessus
+   le texte statique du montant, qui se retrouvait écrit dessous l'anneau
+   au lieu d'au-dessus. */
+.salRing{position:absolute;left:50%;top:50%;width:280px;height:280px;z-index:1;
+  transform:translate(-50%,-50%) rotate(-90deg);pointer-events:none;}
+/* piste vide (réceptacle), visible dès le premier cadre — copie exacte de
+   .dTrack sous les .dSeg des pages suivantes, MÊME effet brillant (segGlow),
+   pas seulement la couleur : ça fait déjà "joli" avant la moindre saisie,
+   au lieu d'un espace nu ou d'un simple trait plat. */
+.salRing .dTrack{fill:none;stroke:#e7dfd0;stroke-width:13;filter:url(#segGlow);}
+/* épaisseur alignée sur celle du donut des pages suivantes (.donutWrap.big :
+   13.5px), effet brillant identique (.dSeg, même filtre #segGlow partagé) */
+/* var(--ease-slide), pas ease-out : le remplissage était plus dynamique/rapide
+   avec la courbe maison qu'avec un ease-out générique. Cette courbe est très
+   avancée en avant (à 40% du temps écoulé, le tracé est déjà à ~92% de son
+   parcours visuel, à 63% il est à ~98%) : les confettis ne doivent donc PAS
+   attendre transitionend (la vraie fin à 1,1s traîne ~400ms après que
+   l'anneau ait l'air fini) mais partir plus tôt, vers 63% du temps — voir
+   CONFETTI_DELAY_MS dans revealSalaryDonut. */
+.salRing .salProg{fill:none;stroke:#2e7d4f;stroke-width:13;stroke-linecap:butt;filter:url(#segGlow);
+  stroke-dasharray:0 100;transition:stroke-dasharray 1.1s var(--ease-slide);}
+/* le rond ne s'active qu'au moment du tracé (voir revealSalaryDonut en JS) :
+   un tracé de longueur 0 avec un bout arrondi se dessine quand même comme un
+   point, visible en permanence tant que rien n'a été saisi */
+.salRing .salProg.drawing{stroke-linecap:round;}
+
+/* confettis de la révélation du donut */
+.confetti{position:fixed;top:0;left:0;width:8px;height:8px;pointer-events:none;z-index:80;}
+
+/* icône volante : clone flottant qui parcourt le trajet rangée <-> carte (et
+   centre de l'écran <-> rangée pour le salaire). Un seul transform
+   (translate+scale) porte tout le trajet, voir flyIcon en JS. */
+.iconFly{position:fixed;top:0;left:0;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  z-index:70;pointer-events:none;transform-origin:top left;}
+.iconFly svg{width:50%;height:50%;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+/* scène des cartes : le .stage pilote la hauteur, .card la remplit entièrement (inset:0)
+   pour que ce soit bien la carte blanche entière qui grandisse/rétrécisse, pas la pastille du montant */
+.stage{position:relative;width:100%;max-width:340px;flex-shrink:0;height:180px;
+  transition:height .5s var(--ease-slide),margin-top .5s var(--ease-slide);}
+.card{position:absolute;inset:0;background:#fff;border-radius:24px;padding:20px;
+  box-shadow:0 10px 30px rgba(61,53,48,0.10);
+  transform:translateX(112%);opacity:0;visibility:hidden;
+  transition:transform .5s var(--ease-slide),opacity .38s ease,visibility 0s .5s;}
+.card.cur{transform:translateX(0);opacity:1;visibility:visible;transition:transform .5s var(--ease-slide),opacity .38s ease;}
+.card.past{transform:translateX(-112%);opacity:0;}
+/* état initial d'une carte neuve : la carte (donc .stage) est grande et haute, en-tête ancré
+   en haut ; la pastille du montant garde sa taille normale, juste centrée verticalement
+   dans l'espace restant via une marge auto (n'étire pas sa propre boîte) */
+.card.square{display:flex;flex-direction:column;}
+.card.square .amtWrap{margin-top:auto;margin-bottom:auto;}
+/* La grille de marques (Abonnements) doit remplir tout l'espace vertical
+   restant sous l'en-tête, comme la grille "quel jour du mois ?" plus bas
+   (même mécanique, voir .dayBlock.show) — la centrer comme .amtWrap (marge
+   auto haut/bas) laissait un grand vide blanc sous la rangée qui dépasse,
+   au lieu de laisser voir davantage de marques. */
+.card.square .brandBlock.show{display:flex;flex-direction:column;flex:1;min-height:0;margin-top:10px;}
+.card.square .brandGridWrap{flex:1;min-height:0;}
+
+.cSkip{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;
+  border:none;background:#f1ebe0;color:var(--sub);
+  font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;padding:6px;box-sizing:border-box;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s ease,transform .1s var(--ease-out);}
+.cSkip:active{background:#8b6914;transform:scale(0.9);}
+.cSkip svg{width:24px;height:17px;stroke:var(--sub);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;
+  transition:stroke .15s ease;}
+.cSkip:active svg{stroke:#fff;}
+/* Retour visuel piloté en JS (voir handler du tap) plutôt que le seul :active :
+   un tap réel relâche trop vite pour que :active tienne "plus longtemps", et
+   :active seul disparaît dès le doigt levé — cette classe reste posée tout le
+   temps voulu, indépendamment de la durée réelle du tap. */
+.cSkip.pressed{background:#8b6914;animation:cSkipZoom .28s ease;}
+.cSkip.pressed svg{stroke:#fff;}
+@keyframes cSkipZoom{0%{transform:scale(1);}35%{transform:scale(0.8);}65%{transform:scale(1.1);}100%{transform:scale(1);}}
+/* ── bouton Installer l'app (PWA) ── */
+/* Gros CTA doré posé DANS le flux de #flow, entre le donut de suivi et la
+   carte (.stage) : il participe au layout comme n'importe quel bloc, donc il
+   suit naturellement les repositionnements de la carte (clavier, hauteurs de
+   carte) sans synchronisation. Masqué en standalone (déjà installée), pendant
+   l'écran salaire (voir setCurrent) et après installation. */
+.dlWrap{position:relative;width:100%;max-width:340px;flex-shrink:0;margin:2px 0 14px;}
+.dlWrap.hid{display:none;}
+.dlBtn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;
+  border:none;border-radius:30px;padding:13px 18px;cursor:pointer;font-family:inherit;text-align:left;
+  background:linear-gradient(135deg,#c9a84c,#8b6914);color:#fff;
+  box-shadow:0 6px 18px -6px rgba(139,105,20,0.55);
+  transition:transform .12s var(--ease-out),box-shadow .2s ease;
+  animation:dlPulse 2.2s ease-in-out infinite;}
+.dlBtn:active{transform:scale(0.97);animation:none;}
+/* pulsation douce : léger gonflement + halo doré qui s'étend puis se dissout,
+   même esprit que kkFlagPulse dans l'app — attire l'œil sans clignoter. */
+@keyframes dlPulse{
+  0%{transform:scale(1);box-shadow:0 6px 18px -6px rgba(139,105,20,0.55),0 0 0 0 rgba(201,168,76,0.45);}
+  45%{transform:scale(1.025);box-shadow:0 6px 18px -6px rgba(139,105,20,0.55),0 0 0 12px rgba(201,168,76,0);}
+  100%{transform:scale(1);box-shadow:0 6px 18px -6px rgba(139,105,20,0.55),0 0 0 0 rgba(201,168,76,0);}
+}
+.dlBtn svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.dlBtn .dlT1{font-size:19px;font-weight:800;letter-spacing:-0.3px;line-height:1.15;}
+.dlBtn .dlT2{font-size:11.5px;font-weight:600;color:rgba(255,255,255,0.85);margin-top:2px;line-height:1.3;}
+.cRow{display:flex;align-items:center;gap:12px;}
+.cIcon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cIcon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.cName{font-size:17px;font-weight:800;}
+.cSub{font-size:12.5px;color:var(--sub);font-weight:600;margin-top:1px;}
+
+.amtWrap{display:flex;align-items:baseline;justify-content:center;gap:8px;
+  width:max-content;min-width:150px;max-width:100%;margin:10px auto 0;
+  background:#f7f1e6;border-radius:16px;padding:6px 16px 7px;
+  transition:padding .3s var(--ease-slide),margin .3s var(--ease-slide);}
+/* même typo que l'écran de montant de l'app : Inter 800, montant et € à la même taille.
+   Carte compacte (clavier ouvert, 150px de haut) : 34px, sinon padding 20 +
+   en-tête 44 + marge + pastille débordaient pile sur les 150px et la pastille
+   collait au bord bas de la carte, sans blanc. La carte carrée (au repos)
+   garde la grande taille via l'override .card.square plus bas. */
+.amt{border:none;background:none;outline:none;font-family:inherit;font-weight:800;font-size:34px;
+  color:var(--c);width:1ch;min-width:1ch;text-align:center;caret-color:var(--c);padding:0;
+  font-variant-numeric:tabular-nums;transition:font-size .3s var(--ease-slide);}
+.amt::placeholder{color:color-mix(in srgb,var(--c) 30%,#fff);}
+.eur{font-size:34px;font-weight:800;color:var(--c);transition:color .2s ease,font-size .3s var(--ease-slide);}
+.card.square .amtWrap{min-width:170px;padding:8px 20px 10px;}
+.card.square .amt, .card.square .eur{font-size:42px;}
+.amtWrap.empty .eur{color:color-mix(in srgb,var(--c) 30%,#fff);}
+/* montant masqué tant que la marque d'abonnement n'est pas choisie */
+.amtWrap.hideUntilBrand{display:none;}
+
+/* chips jour du mois / marque d'abonnement / fréquence / jour de semaine
+   (même mécanique de révélation) */
+.dayBlock, .brandBlock, .freqBlock, .weekdayBlock{margin-top:10px;opacity:0;transform:translateY(8px);pointer-events:none;
+  transition:opacity .35s ease,transform .35s var(--ease-out);}
+.dayBlock.show, .brandBlock.show, .freqBlock.show, .weekdayBlock.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+/* la grille "quel jour du mois ?" doit occuper tout l'espace vertical
+   restant dans la carte blanche (au lieu de rester collée en haut avec du
+   vide en dessous) : la carte passe en colonne flex, le bloc jour prend le
+   reste de la place, et les 5 rangées de la grille (7 colonnes, comme un
+   calendrier) se répartissent uniformément sur toute la hauteur dispo. */
+.card.hasDay{display:flex;flex-direction:column;}
+.dayBlock.show{display:flex;flex-direction:column;flex:1;min-height:0;}
+.chips.dayChips{flex:1;display:grid;grid-template-columns:repeat(7,1fr);align-content:space-between;justify-items:center;align-items:center;}
+/* une fois la marque choisie (ou le jour/fréquence non retenu) le bloc doit
+   sortir du flux (pas juste s'effacer) : sinon, encore présent en
+   display:block malgré opacity:0, il continue à réserver sa hauteur et pousse
+   le reste (ex. les puces de jour de semaine) sous la carte, hors de portée */
+.brandBlock.gone, .dayBlock.gone, .freqBlock.gone, .weekdayBlock.gone{display:none;}
+.dayQ{font-size:13px;font-weight:700;color:#7a6e65;margin-bottom:6px;text-align:center;}
+/* écran fréquence : plus d'air au-dessus (entre le rectangle de montant et la
+   question) et en-dessous (entre la question et les 3 cartes) que les autres
+   blocs de la même mécanique, qui restaient trop collés/centrés. */
+.freqBlock{margin-top:26px;}
+.freqBlock .dayQ{margin-bottom:16px;}
+/* grille des 31 jours resserrée (puces + espacements réduits) pour que la
+   carte soit moins haute et que le bouton Continuer reste visible sans
+   scroller sur les petits écrans. */
+.chips{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;}
+.chip{min-width:34px;height:34px;padding:0 7px;border-radius:17px;border:none;background:#f1ebe0;
+  font-family:inherit;font-size:14px;font-weight:700;color:#7a6e65;cursor:pointer;
+  transition:transform .15s var(--ease-out),background .2s ease,color .2s ease;}
+.chip:active{transform:scale(0.92);}
+.chip.sel{background:var(--c);color:#fff;}
+/* apparition en cascade des puces jour du calendrier ("Quel(s) jour(s) du
+   mois ?") au moment où le bloc se révèle — déclenchée en JS (popInDayChips)
+   qui (re)pose cette classe + un délai par puce, plutôt qu'une animation CSS
+   pure qui tournerait dès le rendu (masqué par le parent opacity:0) au lieu
+   de rejouer à chaque apparition du bloc. */
+@keyframes dayChipPop{0%{opacity:0;transform:translateY(5px) scale(0.75);}100%{opacity:1;transform:translateY(0) scale(1);}}
+.dayChips .chip.pop-in{animation:dayChipPop .3s var(--ease-out) both;}
+/* fréquence : 3 cartes carrées identiques (icône calendrier teintée + label),
+   plutôt que des puces texte — plus lisible pour un choix aussi structurant.
+   Chaque carte a son propre équivalent mensuel affiché juste en-dessous
+   (calculé dès l'affichage, pas seulement après sélection) : rien pour
+   "plusieurs fois par mois", ça dépend du nombre de jours cochés ensuite. */
+.freqCards{display:flex;gap:8px;align-items:flex-start;}
+.freqCardWrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;}
+.freqCard{position:relative;width:100%;aspect-ratio:1/1;display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-start;gap:7px;background:#f7f2ea;border:none;
+  border-radius:20px;padding:16px 4px 8px;cursor:pointer;font-family:inherit;
+  transition:background .2s ease,transform .15s var(--ease-out);}
+.freqCard:active{transform:scale(0.96);}
+.freqCard.sel{background:var(--c);}
+.freqCardIcon{width:38px;height:38px;border-radius:12px;flex-shrink:0;
+  background:color-mix(in srgb,var(--c) 20%,#fff);display:flex;align-items:center;
+  justify-content:center;transition:background .2s ease;}
+.freqCard.sel .freqCardIcon{background:rgba(255,255,255,0.22);}
+.freqCardIcon svg{width:60%;height:60%;stroke:var(--c);fill:none;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease;}
+.freqCard.sel .freqCardIcon svg{stroke:#fff;}
+.freqCardLabel{font-size:12px;font-weight:700;color:#7a6e65;text-align:center;
+  line-height:1.25;min-height:30px;display:flex;align-items:center;justify-content:center;transition:color .2s ease;}
+.freqCard.sel .freqCardLabel{color:#fff;}
+.freqCardCheck{position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 4px rgba(0,0,0,0.18);opacity:0;transform:scale(0.5);
+  transition:opacity .2s ease,transform .2s var(--ease-out);}
+.freqCard.sel .freqCardCheck{opacity:1;transform:scale(1);}
+.freqCardCheck svg{width:12px;height:12px;stroke:var(--c);fill:none;stroke-width:3.2;
+  stroke-linecap:round;stroke-linejoin:round;}
+.freqCardHint{font-size:10.5px;font-weight:700;color:#a89e95;text-align:center;min-height:13px;}
+/* jour(s) de la semaine : cartes (icône check + label), même langage visuel
+   que .freqCard, plutôt que les puces texte génériques — 7 chips en une
+   seule ligne se lisaient mal en petites pastilles rondes. Pas de badge
+   check séparé : la sélection se voit déjà au remplissage coloré de la
+   carte, un check en plus était redondant. Le rectangle blanc lui-même
+   s'allonge à ce moment-là (voir compactStage('freq') puis compactStage(true)
+   dans le handler de clic sur .freqCard) : les jours apparaissent en fondu
+   dans l'espace fraîchement ouvert, plutôt que de rester collés en haut
+   d'une carte déjà grande. */
+/* un peu plus bas que le reveal générique (margin-top:10px, voir plus haut) :
+   trop collées au commentaire €/mois du dessus sinon, l'alignement avec les
+   3 cartes de fréquence au-dessus paraissait de travers. Puces légèrement
+   réduites (aspect-ratio 0.78 -> 0.68) pour laisser respirer cet écart. */
+.weekdayBlock{margin-top:20px;}
+/* align-items:center (pas le stretch par défaut) : sinon le flex row étire toutes
+   les puces à la hauteur de la plus grande, et la puce sélectionnée ne "grandit"
+   plus visuellement puisque les autres grandissent avec elle. */
+.chips.weekdayChips{flex-wrap:nowrap;gap:6px;align-items:center;}
+.chip.weekdayChip{position:relative;flex:1;min-width:0;height:auto;aspect-ratio:1/0.68;padding:0;
+  border-radius:14px;background:#fff;border:1.5px solid #ece5d8;display:flex;
+  align-items:center;justify-content:center;
+  transition:background .2s ease,border-color .2s ease,transform .15s var(--ease-out),aspect-ratio .22s var(--ease-out);}
+.chip.weekdayChip:active{transform:scale(0.94);}
+.weekdayChipLabel{font-size:12px;font-weight:700;color:var(--c);transition:color .2s ease,background .2s ease;
+  padding:2px 8px;border-radius:20px;}
+/* sélectionné : grandit en hauteur (pas juste un fond coloré) pour bien voir
+   lesquels sont cochés d'un coup d'œil dans la rangée. */
+.chip.weekdayChip.sel{background:var(--c);border-color:var(--c);aspect-ratio:1/0.95;}
+/* juste le texte en blanc sur le fond déjà coloré de la puce, sans pastille
+   translucide derrière (rgba(255,255,255,0.18) + border-radius du label) :
+   ça dessinait une deuxième pilule visible par-dessus la première, deux
+   couleurs qui se chevauchaient au lieu d'une seule puce pleine. */
+.chip.weekdayChip.sel .weekdayChipLabel{color:#fff;}
+/* grille des marques d'abonnement : logo + nom + icône "+", façon grille
+   d'app store, plutôt que de petites puces texte peu lisibles à cinq.
+   Plafonnée en hauteur (9 marques ne tiennent pas sur 2 rangées) : on
+   scrolle dedans, avec un fondu haut/bas façon .scroll-fade-wrap (carousel
+   de comptes) mais vertical, activé/désactivé dynamiquement selon la
+   position de scroll (voir initBrandGridFade). */
+.brandGridWrap{position:relative;overflow:visible;}
+/* Encore réduit à 5px (après un premier passage à 12px, toujours trop) : la
+   rangée qui dépasse doit rester quasiment entière, jusqu'au bord du
+   rectangle blanc — le fondu n'est qu'un léger indice de scroll, pas un
+   masque qui mange le contenu. */
+.brandGridWrap::before,.brandGridWrap::after{content:'';position:absolute;left:0;right:0;height:5px;
+  pointer-events:none;z-index:2;opacity:0;transition:opacity .2s;}
+.brandGridWrap::before{top:0;background:linear-gradient(to bottom,#fff,rgba(255,255,255,0));}
+.brandGridWrap::after{bottom:0;background:linear-gradient(to top,#fff,rgba(255,255,255,0));}
+.brandGridWrap.fade-top::before{opacity:1;}
+.brandGridWrap.fade-bottom::after{opacity:1;}
+.brandGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  /* Remplit toute la hauteur que .brandGridWrap lui laisse (flex:1 sur le
+     wrapper et sur .brandBlock.show, voir plus haut) au lieu d'un plafond
+     fixe en pixels : un max-height codé en dur (224px) laissait un grand
+     vide blanc sous la grille dans une carte plus haute que ça, alors que
+     ce même espace pouvait montrer 1-2 marques de plus. Défile pour le
+     reste (18 marques ne tiennent jamais toutes), fade-top/fade-bottom
+     l'indiquent déjà. */
+  height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+  /* padding généreux sur les 4 côtés (2px→16px/14px) : la puce sélectionnée grossit
+     de 16% au tap (voir .brandChip.pulse) + un halo de 9px — sans cette marge, une
+     puce de la 1ère/dernière rangée OU de la 1ère/dernière colonne se faisait couper
+     par le bord du conteneur scrollable (haut/bas ET gauche/droite). */
+  padding:16px 14px;}
+.brandGrid::-webkit-scrollbar{display:none;}
+.brandChip{display:flex;flex-direction:column;align-items:center;gap:6px;
+  padding:10px 6px 8px;border-radius:16px;border:none;background:#f1ebe0;
+  font-family:inherit;cursor:pointer;position:relative;min-width:0;height:auto;
+  transition:transform .15s var(--ease-out),background .2s ease,opacity .2s ease;}
+.brandChip:active{transform:scale(0.94);}
+.brandChip img, .brandChip .bLogo{width:38px;height:38px;border-radius:10px;object-fit:contain;flex-shrink:0;}
+.brandChip .bName{font-size:11.5px;font-weight:700;color:#3d3530;line-height:1.15;text-align:center;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+/* un abonnement déjà ajouté reste coloré (comme au moment du tap), pas
+   juste le dernier sélectionné : .sel est exclusif (retiré de tous les
+   autres dès qu'on en choisit un nouveau), donc c'est bien .added qui doit
+   porter la couleur pour que TOUS les abonnements déjà ajoutés restent
+   visiblement "faits" plutôt que de retomber en beige neutre */
+.brandChip.added{background:var(--c);opacity:0.85;pointer-events:none;}
+.brandChip.added .bName{color:#fff;}
+/* confirmation visuelle au tap : la puce choisie pulse (léger bond + halo de
+   sa couleur) avant que le bloc de sélection ne s'efface, sinon .sel passe
+   quasi inaperçu (le bloc entier disparaît dans la foulée, voir handler de
+   clic plus bas qui retarde ce masquage le temps du pulse). */
+.brandChip.pulse{animation:chipPulse .5s var(--ease-out);}
+@keyframes chipPulse{
+  0%{transform:scale(1);box-shadow:0 0 0 0 color-mix(in srgb,var(--c) 55%,transparent);}
+  40%{transform:scale(1.16);box-shadow:0 0 0 9px color-mix(in srgb,var(--c) 0%,transparent);}
+  100%{transform:scale(1);box-shadow:0 0 0 0 color-mix(in srgb,var(--c) 0%,transparent);}
+}
+/* badge check */
+.check{position:absolute;bottom:14px;right:16px;width:34px;height:34px;border-radius:50%;
+  background:var(--c);display:flex;align-items:center;justify-content:center;
+  transform:scale(0.5);opacity:0;transition:transform .35s var(--ease-out),opacity .25s ease;}
+.check svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+.card.okd .check{transform:scale(1);opacity:1;}
+/* validation via le "Suivant" du clavier : le clavier se baisse quand même le
+   temps de passer à la carte suivante (voir finishStep), un simple badge en
+   coin passerait inaperçu pendant ce trou. Un rond vert centré et agrandi,
+   avec des confettis (spawnConfetti), rend ce moment satisfaisant plutôt que
+   bancal, et masque la coupure du clavier au lieu de la faire remarquer.
+   Le badge normal de la carte reste invisible pendant ce mode : c'est
+   #celebrateCheck (voir plus bas) qui prend le relais, un élément à part
+   plutôt qu'un enfant de .card, car .card a un transform (le glissement de
+   carte) et un position:fixed *interne* à un ancêtre transformé ne rejoint
+   jamais le vrai viewport, il reste ancré à cet ancêtre. */
+.card.celebrate .check{opacity:0;}
+
+/* badge de validation "celebrate", commun à toutes les cartes : ancré à une
+   distance fixe du bas de l'écran (pas mesuré depuis la carte), pour rester
+   toujours nettement sous elle, carte carrée/fraîche ou compacte, plutôt que
+   dépendre d'une hauteur de #stage qui bouge (fraîche/compacte) et anime sa
+   propre transition (mesurer pendant qu'elle tourne encore faisait parfois
+   atterrir le badge au milieu de l'écran, par-dessus la carte). */
+.celebrateCheck{position:fixed;left:50%;bottom:max(110px,calc(78px + env(safe-area-inset-bottom)));width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;z-index:65;
+  opacity:0;pointer-events:none;transform:translateX(-50%) scale(0.4);
+  transition:transform .45s var(--ease-slide),opacity .25s ease,width .45s var(--ease-slide),height .45s var(--ease-slide);}
+.celebrateCheck svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;
+  transition:width .45s var(--ease-slide),height .45s var(--ease-slide);}
+.celebrateCheck.on{opacity:1;}
+.celebrateCheck.big{width:96px;height:96px;transform:translateX(-50%) scale(1);}
+.celebrateCheck.big svg{width:45px;height:45px;}
+
+/* bouton valider : pillule comme les "Continuer" de l'app, visible dès qu'un montant est saisi */
+#valider{margin-top:16px;border:none;width:100%;max-width:340px;padding:17px;border-radius:30px;
+  background:#3fa970;color:#fff;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;
+  transition:transform .16s var(--ease-out),opacity .25s ease,background .3s ease;flex-shrink:0;}
+#valider:active{transform:scale(0.97);}
+#valider.off{opacity:0;pointer-events:none;transform:translateY(6px);}
+/* étape jour du mois : le bouton est déjà visible (pas de saisie clavier à
+   attendre comme pour le montant), mais grisé/désactivé tant qu'aucun jour
+   n'est choisi — même gris que le bouton "Continuer" désactivé de l'app. */
+#valider.disabled{background:#ece3d2 !important;color:#b9a47e !important;pointer-events:none;}
+
+/* ═══ finale ═══ */
+#fin{position:absolute;inset:0;display:flex;flex-direction:column;visibility:hidden;z-index:5;
+  /* padding-top : assez pour que #barIcons (les icônes de catégorie, positionnées
+     au-dessus de #barWrap) ne soient pas cropées par l'encoche/la barre de statut sur
+     un vrai téléphone (c'était le cas à 34px), sans pour autant les redescendre trop
+     bas — l'écart avec le haut de l'écran doit rester proche de celui des icônes de
+     progression (#dots) sur les autres écrans du parcours (padding-top de #flow :
+     10px + safe-area), pas les 70px précédents qui les enfonçaient trop. */
+  padding:calc(46px + env(safe-area-inset-top)) 24px calc(16px + env(safe-area-inset-bottom));
+  overflow-y:auto;-webkit-overflow-scrolling:touch;}
+#fin.on{visibility:visible;}
+
+#finDonutWrap{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);
+  width:190px;height:190px;opacity:0;
+  transition:opacity .4s ease,transform .6s var(--ease-slide),filter .5s ease;}
+#finDonutWrap.on{opacity:1;}
+#finDonutWrap.morph{opacity:0;transform:translate(-50%,-50%) scale(0.72);filter:blur(6px);}
+/* enfant direct (>) : #finSegIcon svg est aussi un descendant de #finDonutWrap
+   (finDonutWrap > finPct > finSegIcon > svg) donc un sélecteur non scopé
+   appliquait aussi cette rotation à l'icône de catégorie, la faisant
+   apparaître pivotée de 90°. Même scope pour la règle des cercles de
+   l'anneau juste en dessous : "#finDonutWrap circle" (non scopé) attrapait
+   aussi les <circle> DES ICÔNES (rond du billet de salaire, roues du caddie
+   et de la voiture, points du calendrier) — à stroke-width:15 dans leur
+   viewBox de 24 unités, chaque petit cercle devenait un énorme disque blanc
+   qui recouvrait l'icône (le "blob" blanc au centre du donut, capture
+   utilisateur à l'appui ; house/tv/bag/plate, sans cercle, étaient épargnées
+   d'où un bug en apparence aléatoire selon la catégorie). */
+#finDonutWrap > svg{width:100%;height:100%;transform:rotate(-90deg);}
+#finDonutWrap > svg circle{fill:none;stroke-width:15;}
+/* réceptacle : anneau plein toujours visible, sinon les parts colorées
+   semblaient se remplir "dans le vide" sans contour de référence. */
+.finTrack{stroke:#ece5d8;}
+/* même effet brillant que le donut de saisie (.dSeg) et l'anneau du salaire
+   (.salProg), pas le rendu plat de base — voir le filtre #segGlow. */
+#finSegs circle{stroke-linecap:butt;filter:url(#segGlow);}
+#finPct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  font-size:26px;font-weight:900;color:#141110;font-variant-numeric:tabular-nums;}
+/* icône de la catégorie en cours de remplissage : change en fondu à chaque
+   part suivante, synchronisé sur le même délai que le tracé de cette part. */
+#finSegIcon{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .18s ease;}
+#finSegIcon svg{width:55%;height:55%;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+/* barre de budget : reprend exactement .money-progress-track/.money-seg de la
+   page Calendrier de l'app (pilule beige, segments sans arrondi sauf aux
+   extrémités, fin séparateur clair entre segments). Un seul élément qui
+   voyage du centre de l'écran vers son emplacement final dans la carte. */
+#barWrap{position:relative;width:100%;margin-top:24px;}
+#barIcons{position:absolute;left:0;right:0;bottom:calc(100% + 8px);height:26px;pointer-events:none;}
+.barIcon{position:absolute;top:0;width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;transform:translateX(-50%);
+  box-shadow:0 1px 4px rgba(0,0,0,0.18);opacity:0;transition:opacity .3s ease,left .25s var(--ease-slide);}
+.barIcon.in{opacity:1;}
+.barIcon svg{width:60%;height:60%;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+#bar{display:flex;height:42px;border-radius:21px;overflow:hidden;width:100%;
+  background:#f0ebe2;box-shadow:inset 0 1px 3px rgba(61,53,48,0.08);
+  opacity:0;transition:transform .65s var(--ease-slide),opacity .4s ease;}
+#bar.on{opacity:1;}
+#bar div{height:100%;}
+#bar div+div{box-shadow:inset 1px 0 rgba(255,255,255,0.55);}
+
+/* récap chiffré au-dessus du calendrier : charges totales à gauche, épargne
+   restante à droite (vert clair, comme un solde positif), chacune avec son
+   montant et sa part du salaire. Même carte blanche que .calBox/.recapBox. */
+.finSummary{display:flex;background:#fff;border-radius:22px;box-shadow:0 1px 4px rgba(0,0,0,0.05);margin-top:12px;}
+.finSummary .stat{flex:1;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;}
+.finSummary .stat+.stat{border-left:1px solid #f1ebe0;}
+.finSummary .statLbl{font-size:10.5px;font-weight:700;color:#a89e95;text-transform:uppercase;letter-spacing:0.03em;text-align:center;}
+.finSummary .statAmt{font-size:19px;font-weight:800;color:#8b2020;font-variant-numeric:tabular-nums;}
+.finSummary .statPct{font-size:11.5px;font-weight:700;color:#8b2020;}
+.finSummary .stat.savings .statAmt,.finSummary .stat.savings .statPct{color:#3a6b4a;}
+
+/* contenu calendrier : même carte (.budget-month-card) et même grille
+   (renderUpcomingCalGrid) que la page Calendrier — rectangle blanc, cases
+   arrondies, badges d'icônes empilés (chips 4px, pas des ronds), montant du
+   jour (+/-, même convention couleur que l'app) toujours collé en bas de la
+   case, même quand il n'y a pas d'icône au-dessus. */
+.calBox{background:#fff;border-radius:22px;padding:14px 14px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);margin-top:12px;}
+.calGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.calHead{font-size:12px;font-weight:700;color:#a89e95;text-align:center;padding-bottom:4px;}
+.calDay{min-height:56px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  gap:2px;padding:5px 2px;border-radius:8px;position:relative;}
+.calDayTop{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.calDayNum{font-size:10.5px;font-weight:500;color:#3d3530;font-variant-numeric:tabular-nums;}
+.calDay.today{box-shadow:inset 0 0 0 2px rgba(201,168,76,0.75);}
+.calDay.today .calDayNum{font-weight:700;}
+.calBadges{position:relative;height:18px;}
+.calBadge{position:absolute;top:0;width:18px;height:18px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:scale(0.4);
+  transition:opacity .35s var(--ease-out),transform .35s var(--ease-out);}
+.calBadge.in{opacity:1;transform:scale(1);}
+.calBadge svg{width:10px;height:10px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;}
+.calDayAmt{min-height:9px;line-height:1;font-size:7.5px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
+
+/* récap des postes sous le calendrier : même carte blanche que .calBox,
+   une ligne par poste (icône/logo, nom, montant) */
+.recapBox{background:#fff;border-radius:22px;padding:6px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);margin-top:12px;}
+.recapRow{padding:10px 0;}
+.recapRow+.recapRow{border-top:1px solid #f1ebe0;}
+.recapTop{display:flex;align-items:center;gap:12px;}
+.recapIcon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.recapIcon svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+.recapIcon img, .recapIcon .brandIconEl{width:32px;height:32px;border-radius:50%;}
+.recapName{flex:1;font-size:14.5px;font-weight:700;color:var(--ink);}
+.recapAmtCol{display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+.recapAmt{font-size:14.5px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;}
+/* part du salaire de CE poste (montant/salaire, même dénominateur que
+   chargesPct plus haut) : couleur de la catégorie, pas de l'encre neutre —
+   c'est elle qui relie visuellement le chiffre à sa part sur le donut/la
+   barre juste au-dessus. */
+.recapPct{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;}
+/* Barre de proportion sous chaque poste, en plus du %, alignée sur le
+   texte (44px = largeur icône 32px + gap 12px) plutôt que sous l'icône. */
+.recapBarTrack{height:7px;background:#f1ebe0;border-radius:4px;margin:7px 0 0 44px;overflow:hidden;}
+.recapBarFill{height:100%;border-radius:4px;width:0;transition:width .6s var(--ease-out);}
+.recapMore{text-align:center;padding:9px 0 10px;font-size:15px;font-weight:800;color:#b5aa9d;letter-spacing:1px;}
+/* même bouton "Continuer" brun arrondi que le reste de l'app (voir #valider
+   ci-dessus) : margin-top fixe (pas auto) pour garantir un espace avec le
+   récap au-dessus même quand le contenu remplit tout l'écran. */
+#cta{margin-top:20px;flex-shrink:0;border:none;border-radius:30px;background:#8a6d3b;color:#fff;
+  font-family:inherit;font-size:16px;font-weight:700;padding:17px 22px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  transition:transform .16s var(--ease-out);}
+#cta:active{transform:scale(0.97);}
+/* flèche poussée à droite du bouton (justify-content:space-between ci-dessus)
+   et agrandie par rapport au texte, comme demandé */
+#ctaArrow{font-size:22px;font-weight:800;line-height:1;}
+
+/* apparition en cascade du contenu finale */
+.pre{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s var(--ease-out);}
+.pre.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+<!-- filtre de brillance réutilisé sur les segments remplis du donut de saisie
+     (voir .dSeg) : flou doux + calque net superposé, pour un halo de lumière
+     sans "faux volume" (ombres portées, dégradé de piste). -->
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <filter id="segGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
+<div class="app">
+
+  <div id="welcomeScreen">
+    <img class="pre" src="icons/icon-192.png" alt="">
+    <div class="welcomeTitle pre" id="welcomeTitle"></div>
+    <div class="welcomeSub pre" id="welcomeSub"></div>
+  </div>
+
+  <div id="flow">
+    <div class="dots" id="dots"></div>
+    <div class="donutWrap hidden">
+      <svg viewBox="0 0 120 120">
+        <circle class="dTrack" cx="60" cy="60" r="50" pathLength="100"/>
+        <g id="segs"></g>
+      </svg>
+      <div class="dPct" id="pct">0%</div>
+      <div class="dRest" id="pctRest">restant</div>
+    </div>
+    <div id="salaryIntro">
+      <div class="salAmtWrap pre">
+        <div class="salTopStack">
+          <div class="salBigIcon" id="salBigIcon"></div>
+          <div class="salQ">Pour commencer,<br>inscris ton salaire</div>
+        </div>
+        <svg class="salRing" viewBox="0 0 120 120">
+          <circle class="dTrack" cx="60" cy="60" r="50" pathLength="100"/>
+          <circle class="salProg" cx="60" cy="60" r="50" pathLength="100"/>
+        </svg>
+        <input id="salaryInput" class="salAmt amt" type="text" inputmode="decimal" enterkeyhint="next" placeholder="0" autocomplete="off"><span class="salEur">€</span>
+        <div id="salaryTransition" class="gone">
+          <div class="salQ pre" id="salaryTransitionMsg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dlWrap hid" id="dlWrap">
+      <button class="dlBtn" id="dlBtn" ontouchstart="">
+        <svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span><span class="dlT1">Installer l'app</span><br><span class="dlT2">Gère ton budget et suis ton patrimoine</span></span>
+      </button>
+    </div>
+    <div class="stage" id="stage"></div>
+    <div class="celebrateCheck" id="celebrateCheck"></div>
+    <button id="valider">Valider</button>
+  </div>
+
+  <div id="fin">
+    <div id="finDonutWrap">
+      <svg viewBox="0 0 120 120">
+        <circle class="finTrack" cx="60" cy="60" r="50" pathLength="100"/>
+        <g id="finSegs"></g>
+      </svg>
+      <div id="finPct"><div id="finSegIcon"></div><div id="finPctAmt">0 €</div></div>
+    </div>
+    <div id="barWrap">
+      <div id="barIcons"></div>
+      <div id="bar"></div>
+    </div>
+    <div class="finSummary pre" id="finSummary"></div>
+    <div class="calBox pre">
+      <div class="calGrid" id="calGrid"></div>
+    </div>
+    <div class="recapBox pre" id="recapBox"></div>
+    <button id="cta" class="pre"><span>Voir mon budget</span><span id="ctaArrow">→</span></button>
+    <!-- Zone invisible sous le CTA : lance la démo (?demo=1). Volontairement
+         indétectable pour un vrai visiteur — pas de texte, pas de curseur,
+         juste un pavé tapable de la même hauteur que le bouton juste au-dessus
+         (hauteur posée en JS, voir plus bas — plus simple à retrouver à la
+         volée qu'une valeur fixe qui ne correspond à rien de visible). -->
+    <div id="ctaDemo" style="flex-shrink:0;"></div>
+  </div>
+
+</div>
+<script>
+'use strict';
+
+/* ── Langue : kk_lang (préférence app) sinon langue du téléphone — même
+   mécanique que onboarding.html : tout téléphone non francophone voit
+   l'onboarding en anglais. ── */
+const _savedLang=(()=>{try{return window.localStorage.getItem('kk_lang');}catch(e){return null;}})();
+const LANG=_savedLang||(((navigator.language||'fr').toLowerCase().indexOf('fr')===0)?'fr':'en');
+document.documentElement.lang=LANG;
+const t=(fr,en)=>LANG==='fr'?fr:en;
+
+/* ── Funnel onboarding : chaque étape atteinte est envoyée (une seule fois
+   par session, dédup client + contrainte unique côté table) dans Supabase
+   onboarding_events, que le tableau de bord admin agrège en funnel. Purement
+   best-effort : jamais bloquant, silencieux si offline/adblock. La session
+   vit en sessionStorage pour qu'un simple reload ne recompte pas l'entrée. ── */
+const OB_SUPA_URL='https://ooyhuniazpbdqyzivwyp.supabase.co';
+const OB_SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9veWh1bmlhenBiZHF5eml2d3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMyMzU1NjYsImV4cCI6MjA5ODgxMTU2Nn0.Fz6UXf2VMPDJwXkjEIcU6j-lMcQiqjuYMSunHL70jHI';
+const OB_SID=(()=>{
+  const gen=()=> (window.crypto&&crypto.randomUUID) ? crypto.randomUUID()
+    : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0;return (c==='x'?r:(r&3|8)).toString(16);});
+  try{
+    let s=sessionStorage.getItem('kk_onb_sid');
+    if(!s){ s=gen(); sessionStorage.setItem('kk_onb_sid',s); }
+    return s;
+  }catch(e){ return gen(); }
+})();
+const _obSent={};
+function obTrack(step, idx){
+  if(_obSent[step]) return; _obSent[step]=1;
+  try{
+    // Pas de Prefer:resolution=ignore-duplicates : ON CONFLICT sous RLS le
+    // refuse (42501). Un doublon (retour arrière, reload) prend un 409 sur la
+    // contrainte unique (session_id, step), qu'on ignore : même résultat.
+    fetch(OB_SUPA_URL+'/rest/v1/onboarding_events',{
+      method:'POST', keepalive:true,
+      headers:{'Content-Type':'application/json', apikey:OB_SUPA_KEY,
+        Authorization:'Bearer '+OB_SUPA_KEY, Prefer:'return=minimal'},
+      body:JSON.stringify({session_id:OB_SID, step:step, step_index:idx, lang:LANG})
+    }).catch(()=>{});
+  }catch(e){}
+}
+
+/* ── icônes (traits blancs, style storyboard) ── */
+// tailles inline (%) calibrées à l'œil pour un poids visuel homogène entre
+// icônes : chaque dessin remplit différemment son viewBox 24x24 (ex. bag/
+// plate touchent presque les bords, house/cart laissent de la marge), donc
+// un même % pour tous les rendrait visiblement inégaux — c'était le cas de
+// bag/plate (sans style perso, donc réduits par défaut au % du conteneur,
+// ex. #finSegIcon svg{width:55%}), nettement plus petits/fins que les autres
+// une fois affichés côte à côte (donut final, icônes de catégorie qui
+// défilent) : recalibrés à 70% pour matcher le poids visuel du reste.
+const IC = {
+  house:'<svg viewBox="0 0 24 24" style="width:62%;height:62%;"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/></svg>',
+  cart:'<svg viewBox="0 0 24 24" style="width:58%;height:58%;"><circle cx="9" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6l2-8H6"/></svg>',
+  tv:'<svg viewBox="0 0 24 24" style="width:75%;height:75%;"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M9 21h6"/></svg>',
+  bolt:'<svg viewBox="0 0 24 24"><path d="M13 2 5 13.5h6L10.5 22 19 10h-6L13 2z"/></svg>',
+  car:'<svg viewBox="0 0 24 24" style="width:63%;height:63%;"><path d="M4 12.75 5.8 7.05A2 2 0 0 1 7.7 5.65h8.6a2 2 0 0 1 1.9 1.4L20 12.75"/><rect x="3" y="11.75" width="18" height="5" rx="1.6"/><circle cx="7.3" cy="17.05" r="1.3"/><circle cx="16.7" cy="17.05" r="1.3"/></svg>',
+  cash:'<svg viewBox="0 0 24 24" style="width:75%;height:75%;"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.2 12h.01M17.8 12h.01"/></svg>',
+  bag:'<svg viewBox="0 0 24 24" style="width:70%;height:70%;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
+  plate:'<svg viewBox="0 0 24 24" style="width:70%;height:70%;"><path d="M3 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3ZM21 15v7"/></svg>',
+  calendar:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><circle cx="8" cy="15" r="1.1"/><circle cx="12" cy="15" r="1.1"/><circle cx="16" cy="15" r="1.1"/></svg>',
+  check:'<svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>'
+};
+
+/* vrais logos Kakeibo (mêmes fichiers que EXPENSE_LOGOS dans index.html) pour
+   les marques d'abonnement qu'on a en stock ; les autres (ex. Spotify, pas
+   d'asset local) retombent sur une pastille colorée à l'initiale plutôt que
+   sur l'icône générique de la catégorie, pour rester identifiable dans la
+   grille au même titre que les vrais logos. */
+const BRAND_LOGOS = {
+  'Netflix':      {file:'icons/netflix.webp',      dark:true},
+  'Disney+':      {file:'icons/disneyplus.webp',   dark:false},
+  'Prime Video':  {file:'icons/primevideo.webp',   dark:false},
+  'Basic Fit':    {file:'icons/basicfit.webp',      dark:false},
+  'Fitness Park': {file:'icons/fitnesspark.webp',   dark:false},
+  'Spotify':      {file:'icons/spotify.jpg',        dark:true},
+  'YouTube Premium':{file:'icons/youtubepremium.jpg',dark:false},
+  'Apple Music':  {file:'icons/applemusic.jpg',     dark:false},
+  'Deezer':       {file:'icons/deezer.jpg',         dark:true},
+  'Amazon Prime':     {file:'icons/amazon-prime.png',      dark:false},
+  'PlayStation Plus': {file:'icons/playstation-plus.png',  dark:false},
+  'Xbox Game Pass':   {file:'icons/xbox-game-pass.png',    dark:false},
+  'iCloud+':          {file:'icons/icloud.png',            dark:false},
+  'Google One':       {file:'icons/google-one.png',        dark:false},
+  'Microsoft 365':    {file:'icons/microsoft-365.png',     dark:false},
+  'Crunchyroll':      {file:'icons/crunchyroll.png',       dark:false},
+  'Twitch':           {file:'icons/twitch.png',            dark:false},
+  'ChatGPT Plus':     {file:'icons/chatgpt.webp',           dark:false}
+};
+const BRAND_FALLBACK_COLORS = {};
+/* prix de base (France, tarif individuel standard) : évite de faire taper un
+   montant pour un abonnement, dont le prix est connu et rarement négocié. */
+const BRAND_PRICES = {
+  'Netflix':        14.99,
+  'Spotify':        12.14,
+  'Disney+':        10.99,
+  'Prime Video':     6.99,
+  'YouTube Premium':12.99,
+  'Apple Music':    10.99,
+  'Basic Fit':      24.99,
+  'Fitness Park':   30,
+  'Deezer':         11.99,
+  'Amazon Prime':     6.99,
+  'PlayStation Plus': 8.99,
+  'Xbox Game Pass':  14.99,
+  'iCloud+':          2.99,
+  'Google One':       1.99,
+  'Microsoft 365':    7.00,
+  'Crunchyroll':      6.49,
+  'Twitch':           5.99,
+  'ChatGPT Plus':    23.00
+};
+function brandIconHtml(brand, size, fallback){
+  const l = BRAND_LOGOS[brand];
+  if(l) return '<img src="'+l.file+'" alt="" style="width:'+size+'px;height:'+size+'px;border-radius:6px;object-fit:contain;background:'+(l.dark?'#000':'#fff')+';padding:2px;">';
+  const c = BRAND_FALLBACK_COLORS[brand];
+  if(c) return '<span class="bLogo" style="background:'+c+';color:#fff;display:inline-flex;align-items:center;justify-content:center;'+
+    'font-weight:800;font-family:inherit;font-size:'+Math.round(size*0.5)+'px;width:'+size+'px;height:'+size+'px;">'+brand[0]+'</span>';
+  return fallback||'';
+}
+
+const CATS = [
+  {id:'salary',    name:t('Salaire','Salary'),      sub:t('Montant mensuel net','Net monthly amount'), color:'#2e7d4f', icon:IC.cash, isIncome:true},
+  {id:'rent',      name:t('Loyer','Rent'),        sub:t('Montant mensuel','Monthly amount'), color:'#8b6914', icon:IC.house, askDay:true},
+  {id:'subs',      name:t('Abonnements','Subscriptions'),  sub:t('Montant mensuel','Monthly amount'), color:'#8b7cf6', icon:IC.tv, askDay:true,
+    pickBrand:true, brands:['Netflix','Spotify','Disney+','Prime Video','YouTube Premium','Apple Music','Basic Fit','Fitness Park','Deezer',
+      'Amazon Prime','PlayStation Plus','Xbox Game Pass','iCloud+','Google One','Microsoft 365','Crunchyroll','Twitch','ChatGPT Plus']},
+  {id:'transport', name:'Transport',    sub:t('Budget par mois','Monthly budget'), color:'#0055a4', icon:IC.car, askFreq:true},
+  {id:'groceries', name:t('Courses','Groceries'),      sub:t('Budget par mois','Monthly budget'), color:'#1fa896', icon:IC.cart, askFreq:true},
+  {id:'restaurant',name:'Restaurant',   sub:t('Budget par mois','Monthly budget'), color:'#c96a4e', icon:IC.plate, askFreq:true},
+  {id:'shopping',  name:'Shopping',     sub:t('Budget par mois','Monthly budget'), color:'#a8639e', icon:IC.bag, askFreq:true}
+];
+const DAYS = Array.from({length:31},(_,i)=>i+1);
+// fréquence : 'monthly' redirige vers le même calendrier DAYS (jour du mois,
+// sélection unique), 'weekly' vers WEEKDAYS (jour de semaine, lundi=0),
+// 'multi' vers le même calendrier DAYS mais en sélection multiple (voir
+// finale() : chaque jour coché devient une occurrence distincte du mois).
+const FREQS = [
+  {id:'monthly',  label:t('1 fois par mois','Once a month')},
+  {id:'weekly',   label:t('Chaque semaine','Every week')},
+  {id:'multi',    label:t('Plusieurs fois par mois','Several times a month')}
+];
+const WEEKDAYS = LANG==='fr' ? ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche']
+  : ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const N = CATS.length;
+
+/* ── état ── */
+let cur = 0;                       // index de la carte courante
+let phase = 'amount';              // 'amount' | 'day' | 'locked'
+let salary = 0;                    // dénominateur du donut (carte 1)
+let editReturn = null;             // {index,phase} : carte à retrouver après une édition via les icônes
+let flyingDot = null;              // index de la pastille actuellement "en vol"/posée sur la carte
+const results = [];                // {cat, amount, day}
+
+/* ── construction du DOM ── */
+const dots = document.getElementById('dots');
+const segs = document.getElementById('segs');
+const stage = document.getElementById('stage');
+CATS.forEach((c,i)=>{
+  const d = document.createElement('div');
+  d.className = 'dot pending'; d.style.setProperty('--c', c.color); d.innerHTML = c.icon;
+  dots.appendChild(d);
+
+  const s = document.createElementNS('http://www.w3.org/2000/svg','circle');
+  s.setAttribute('class','dSeg'); s.setAttribute('cx',60); s.setAttribute('cy',60);
+  s.setAttribute('r',50); s.setAttribute('pathLength',100);
+  s.setAttribute('stroke', c.color);
+  segs.appendChild(s);
+
+  const card = document.createElement('div');
+  card.className = 'card'+(c.isIncome?' salaryCard':''); card.style.setProperty('--c', c.color);
+  card.innerHTML = c.isIncome ? '' :
+    '<button class="cSkip" aria-label="'+t('Passer','Skip')+'" ontouchstart="">'+
+      '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>'+
+    '<div class="cRow"><div class="cIcon" style="background:'+c.color+'">'+c.icon+'</div>'+
+    '<div><div class="cName">'+c.name+'</div><div class="cSub">'+c.sub+'</div></div></div>'+
+    (c.pickBrand
+      ? '<div class="brandBlock show"><div class="brandGridWrap"><div class="chips brandGrid">'+
+        c.brands.map(b=>'<button class="chip brandChip" data-b="'+b+'">'+brandIconHtml(b,38)+
+          '<span class="bName">'+b+'</span></button>').join('')+
+        '</div></div>'+
+        '</div>'
+      : '')+
+    '<div class="amtWrap empty'+(c.pickBrand?' hideUntilBrand':'')+'"><input class="amt" type="text" inputmode="decimal" enterkeyhint="next" placeholder="0" autocomplete="off" style="width:1ch"><span class="eur">€</span></div>'+
+    (c.askDay
+      // gone pour pickBrand (Abonnements) seulement : sans ça ce dayBlock, encore
+      // invisible (opacity:0) mais toujours display:block/flex, se met à rivaliser
+      // avec brandBlock (flex:1, voir .card.square .brandBlock.show plus haut) pour
+      // la hauteur de la carte carrée — la grille de marques ne récupérait quasiment
+      // aucun espace en plus. Retiré à la sélection d'une marque (voir plus bas).
+      ? '<div class="dayBlock'+(c.pickBrand?' gone':'')+'"><div class="dayQ">'+t('Quel jour du mois ?','Which day of the month?')+'</div><div class="chips dayChips">'+
+        DAYS.map(d=>'<button class="chip" data-d="'+d+'">'+d+'</button>').join('')+
+        '</div></div>'
+      : '')+
+    (c.askFreq
+      ? '<div class="freqBlock"><div class="dayQ">'+t('À quelle fréquence ?','How often?')+'</div><div class="freqCards">'+
+        FREQS.map(f=>'<div class="freqCardWrap"><button class="freqCard" data-freq="'+f.id+'">'+
+          '<span class="freqCardCheck">'+IC.check+'</span>'+
+          '<span class="freqCardIcon">'+IC.calendar+'</span>'+
+          '<span class="freqCardLabel">'+f.label+'</span></button>'+
+          '<span class="freqCardHint"></span></div>').join('')+
+        '</div></div>'+
+        '<div class="dayBlock gone"><div class="dayQ">'+t('Quel jour du mois ?','Which day of the month?')+'</div><div class="chips dayChips">'+
+        DAYS.map(d=>'<button class="chip" data-d="'+d+'">'+d+'</button>').join('')+
+        '</div></div>'+
+        '<div class="weekdayBlock gone"><div class="chips weekdayChips">'+
+        WEEKDAYS.map((w,i)=>'<button class="chip weekdayChip" data-w="'+i+'"><span class="weekdayChipCheck">'+IC.check+'</span>'+
+          '<span class="weekdayChipLabel">'+w.slice(0,3)+'</span></button>').join('')+
+        '</div></div>'
+      : '')+
+    '<div class="check">'+IC.check+'</div>';
+  stage.appendChild(card);
+});
+// .card explicitement (pas stage.children) : garde-fou pour que tout élément
+// non-carte ajouté un jour dans #stage ne soit pas indexé comme une catégorie.
+const cards = [...stage.querySelectorAll('.card')];
+/* fondu haut/bas de la grille de marques, actif seulement quand il reste du
+   contenu à scroller dans cette direction (mêmes calculs que initScrollFade
+   dans index.html pour le carousel de comptes, transposés en vertical). */
+function initBrandGridFade(gridEl){
+  if(!gridEl) return;
+  const wrap = gridEl.parentElement;
+  if(!wrap || !wrap.classList.contains('brandGridWrap')) return;
+  const update = () => {
+    const atTop = gridEl.scrollTop <= 2;
+    const atBottom = gridEl.scrollTop + gridEl.clientHeight >= gridEl.scrollHeight - 2;
+    wrap.classList.toggle('fade-top', !atTop);
+    wrap.classList.toggle('fade-bottom', !atBottom && gridEl.scrollHeight > gridEl.clientHeight);
+  };
+  gridEl.addEventListener('scroll', update, {passive:true});
+  update();
+}
+cards.forEach(card => initBrandGridFade(card.querySelector('.brandGrid')));
+const dotEls = [...dots.children];
+const segEls = [...segs.children];
+const pctEl = document.getElementById('pct');
+const btnValider = document.getElementById('valider');
+const donutWrap = document.querySelector('.donutWrap');
+const salaryInput = document.getElementById('salaryInput');
+const salaryIntro = document.getElementById('salaryIntro');
+const salaryTransition = document.getElementById('salaryTransition');
+const salaryTransitionMsg = document.getElementById('salaryTransitionMsg');
+const flowEl = document.getElementById('flow');
+document.getElementById('salBigIcon').innerHTML = CATS[0].icon;
+document.getElementById('celebrateCheck').innerHTML = IC.check;
+
+/* Textes statiques du HTML traduits ici (le markup reste en français par
+   défaut, remplacé au chargement — même approche data-i18n-less que le reste
+   du fichier, tout passe par t()). */
+document.getElementById('welcomeTitle').innerHTML = t('Merci à toi d\'utiliser <span class="welcomeTitleBrand">Kakeibo</span> !','Thanks for using <span class="welcomeTitleBrand">Kakeibo</span>!');
+document.getElementById('welcomeSub').textContent = t('Suis ton budget, toutes tes dépenses, sans efforts.','Track your budget and every expense, effortlessly.');
+document.querySelector('.salTopStack .salQ').innerHTML = t('Pour commencer,<br>inscris ton salaire','To get started,<br>enter your salary');
+document.getElementById('pctRest').textContent = t('restant','left');
+document.querySelector('#dlBtn .dlT1').textContent = t("Installer l'app",'Install the app');
+document.querySelector('#dlBtn .dlT2').textContent = t('Gère ton budget et suis ton patrimoine','Manage your budget and track your wealth');
+document.querySelector('#cta > span:first-child').textContent = t('Voir mon budget','See my budget');
+btnValider.textContent = t('Valider','Confirm');
+
+/* Bouton "Télécharger" = installer la PWA (pas de store). Même mécanique
+   validée sur test-install.html : le tap ouvre l'invite d'installation NATIVE
+   du navigateur (avec le nom et l'icône de l'app, tirés du manifest) via
+   beforeinstallprompt capté en amont. iOS n'a aucun équivalent programmatique
+   (limitation Apple) : feuille d'instructions en 3 étapes, comme la page de
+   test. Masqué d'entrée en standalone, et après une installation confirmée. */
+(function(){
+  const btn = document.getElementById('dlBtn');
+  const wrap = document.getElementById('dlWrap');
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  window._dlAvailable = !isStandalone; // lu par setCurrent pour montrer/cacher le CTA avec la phase cartes
+  if(isStandalone){ wrap.classList.add('hid'); return; }
+  // Le SW doit être enregistré depuis CETTE page aussi (pas seulement index.html)
+  // pour que Chrome la juge installable et envoie beforeinstallprompt — certains
+  // Chrome l'exigent encore. Bonus : pré-cache les assets de l'app pendant l'onboarding.
+  if('serviceWorker' in navigator){ try{ navigator.serviceWorker.register('sw.js'); }catch(e){} }
+  window.addEventListener('beforeinstallprompt', e=>{ e.preventDefault(); window._dlPrompt = e; });
+  window.addEventListener('appinstalled', ()=>{ window._dlAvailable=false; wrap.classList.add('hid'); });
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+  function showIosSheet(){
+    let ov = document.getElementById('dlIosSheet');
+    if(ov) return;
+    ov = document.createElement('div'); ov.id = 'dlIosSheet';
+    ov.style.cssText = 'position:fixed;inset:0;background:rgba(20,18,14,0.55);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;';
+
+    const shareIcon = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
+    const kkImg = '<img src="icons/icon-192.png" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">';
+
+    // mini "capture d'écran" réutilisée par plusieurs étapes : barre du haut façon Safari + contenu libre
+    const mock = (inner)=>'<div style="background:#f7f3ea;border:1px solid #e8e0d0;border-radius:14px;padding:12px;margin-top:12px;">'+inner+'</div>';
+    const browserBar = '<div style="display:flex;align-items:center;gap:6px;background:#fff;border-radius:8px;padding:6px 10px;font-size:10.5px;color:#8a8075;margin-bottom:10px;">🔒 kakeibo.app</div>';
+
+    const step1 = mock(browserBar+
+      '<div style="display:flex;align-items:center;gap:8px;">'+
+        '<div style="width:30px;height:30px;border-radius:8px;overflow:hidden;flex-shrink:0;">'+kkImg+'</div>'+
+        '<div><div style="font-weight:800;font-size:12px;">Kakeibo</div><div style="font-size:10px;color:#a89e95;">'+t('Maîtrisez votre argent','Master your money')+'</div></div>'+
+      '</div>');
+
+    const step2 = mock('<div style="display:flex;align-items:center;justify-content:center;gap:14px;">'+
+      '<span style="font-size:15px;opacity:.35;">‹</span>'+
+      '<div style="width:26px;height:26px;border-radius:7px;background:#3a6b4a;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(58,107,74,0.18);">'+shareIcon+'</div>'+
+      '<span style="font-size:15px;opacity:.35;">›</span></div>');
+
+    const shareRow = (label,bold)=>'<div style="display:flex;align-items:center;justify-content:space-between;padding:9px 2px;'+(bold?'border:1.5px solid #3a6b4a;border-radius:9px;padding:8px 10px;background:rgba(58,107,74,0.06);':'border-bottom:1px solid #e8e0d0;')+'">'+
+      '<span style="font-size:11.5px;font-weight:'+(bold?'800':'600')+';color:'+(bold?'#3a6b4a':'#2b2620')+';">'+label+'</span>'+
+      '<span style="font-size:12px;color:'+(bold?'#3a6b4a':'#c3bbae')+';">'+(bold?'⊕':'⋯')+'</span></div>';
+
+    const step3 = mock(shareRow(t('Copier','Copy'),false)+shareRow(t('Sur l\'écran d\'accueil','Add to Home Screen'),true));
+    const step4 = step3;
+
+    const step5 = mock('<div style="display:flex;align-items:center;justify-content:space-between;font-size:10.5px;font-weight:700;color:#3a6b4a;margin-bottom:10px;">'+
+        '<span style="font-weight:600;color:#a89e95;">'+t('Annuler','Cancel')+'</span><span>'+t('Sur l\'écran d\'accueil','Add to Home')+'</span><span>'+t('Ajouter','Add')+'</span></div>'+
+      '<div style="display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid #e8e0d0;">'+
+        '<div style="width:24px;height:24px;border-radius:6px;overflow:hidden;flex-shrink:0;">'+kkImg+'</div>'+
+        '<span style="font-size:11.5px;font-weight:700;">Kakeibo</span></div>');
+
+    const step6 = mock('<div style="display:flex;gap:14px;">'+
+      Array.from({length:4}).map((_,i)=>i===0?
+        '<div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><div style="width:34px;height:34px;border-radius:9px;overflow:hidden;box-shadow:0 0 0 2px #3a6b4a;">'+kkImg+'</div><span style="font-size:8px;font-weight:700;">Kakeibo</span></div>'
+        :'<div style="width:34px;height:34px;border-radius:9px;background:#e8e0d0;"></div>'
+      ).join('')+
+      '</div>');
+
+    const steps = [
+      [t('Ouvrez Kakeibo','Open Kakeibo'), t('Ouvrez Kakeibo dans Safari.','Open Kakeibo in Safari.'), step1],
+      [t('Appuyez sur Partager','Tap Share'), t('Touchez l\'icône Partager en bas (ou en haut) de l\'écran.','Tap the Share icon at the bottom (or top) of the screen.'), step2],
+      [t('Faites défiler le menu','Scroll the menu'), t('Faites défiler les options vers le bas.','Scroll the options down.'), step3],
+      [t('Ajoutez sur l\'écran d\'accueil','Add to Home Screen'), t('Sélectionnez « Sur l\'écran d\'accueil ».','Select "Add to Home Screen".'), step4],
+      [t('Confirmez','Confirm'), t('Donnez un nom si vous le souhaitez, puis appuyez sur « Ajouter ».','Give it a name if you like, then tap "Add".'), step5],
+      [t('C\'est ajouté !','All set!'), t('Retrouvez l\'application Kakeibo sur votre écran d\'accueil.','Find the Kakeibo app on your home screen.'), step6],
+    ];
+
+    const stepHtml = steps.map((s,i)=>'<div style="margin-bottom:22px;">'+
+      '<div style="display:flex;align-items:center;gap:10px;margin-bottom:2px;">'+
+        '<div style="width:22px;height:22px;border-radius:50%;background:#3a6b4a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:800;flex-shrink:0;">'+(i+1)+'</div>'+
+        '<div style="font-weight:800;font-size:13.5px;">'+s[0]+'</div></div>'+
+      '<div style="font-size:12px;line-height:1.5;color:#6b6259;padding-left:32px;">'+s[1]+'</div>'+
+      '<div style="padding-left:32px;">'+s[2]+'</div></div>').join('');
+
+    ov.innerHTML = '<div style="width:100%;max-width:420px;max-height:88vh;background:#fdfbf6;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.3);display:flex;flex-direction:column;overflow:hidden;">'+
+      '<div style="flex:1;overflow-y:auto;padding:22px 20px 4px;">'+
+        '<div style="font-size:19px;font-weight:900;margin-bottom:4px;">'+t('Ajouter Kakeibo','Add Kakeibo')+' <span style="display:inline-block;width:20px;height:20px;border-radius:5px;overflow:hidden;vertical-align:-4px;">'+kkImg+'</span></div>'+
+        '<div style="font-size:15px;font-weight:800;margin-bottom:8px;">'+t('sur votre écran d\'accueil','to your home screen')+'</div>'+
+        '<div style="font-size:12px;color:#a89e95;margin-bottom:22px;">'+t('Installez Kakeibo comme une application pour y accéder en 1 clic, à tout moment.','Install Kakeibo as an app for one-tap access, anytime.')+'</div>'+
+        stepHtml+
+        '<div style="display:flex;align-items:center;gap:10px;background:rgba(58,107,74,0.08);border-radius:12px;padding:12px 14px;margin-bottom:16px;">'+
+          '<div style="width:22px;height:22px;border-radius:6px;overflow:hidden;flex-shrink:0;">'+kkImg+'</div>'+
+          '<div style="font-size:11.5px;line-height:1.45;color:#2b2620;">'+t('L\'icône de Kakeibo restera toujours à jour. Pas besoin de passer par l\'App Store !','Kakeibo\'s icon always stays up to date. No App Store needed!')+'</div>'+
+        '</div>'+
+      '</div>'+
+      '<div style="padding:14px 20px;border-top:1px solid #e8e0d0;">'+
+        '<button style="width:100%;padding:13px;border-radius:11px;background:#3a6b4a;border:none;color:#fff;font-weight:800;font-size:13.5px;cursor:pointer;font-family:inherit;">'+t('Fermer','Close')+'</button>'+
+      '</div></div>';
+    ov.addEventListener('click', ev=>{ if(ev.target===ov || ev.target.tagName==='BUTTON') ov.remove(); });
+    document.body.appendChild(ov);
+  }
+  btn.addEventListener('click', async e=>{
+    e.stopPropagation();
+    // Android/Chrome/desktop : l'invite native directe (icône + "Installer").
+    if(window._dlPrompt){
+      const p = window._dlPrompt; window._dlPrompt = null;
+      p.prompt();
+      try{ const choice = await p.userChoice; if(choice.outcome==='accepted'){ window._dlAvailable=false; wrap.classList.add('hid'); } }catch(err){}
+      return;
+    }
+    if(isIOS){ showIosSheet(); return; }
+    // beforeinstallprompt pas (encore) reçu : soit Chrome ne l'a pas encore
+    // émis (il peut tarder de quelques secondes), soit il a déjà été consommé.
+    let hint = document.getElementById('dlHint');
+    if(!hint){
+      hint = document.createElement('div'); hint.id = 'dlHint';
+      hint.style.cssText = 'position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);max-width:250px;'+
+        'background:#2a2420;color:#fff;font-size:12.5px;font-weight:600;line-height:1.5;padding:12px 14px;border-radius:12px;'+
+        'z-index:41;opacity:0;transition:opacity .25s ease;pointer-events:none;text-align:left;';
+      wrap.appendChild(hint);
+    }
+    hint.innerHTML = t('1. Ouvre le menu ⋮ du navigateur<br>2. "Installer l\'application"','1. Open the browser ⋮ menu<br>2. "Install app"');
+    hint.style.opacity = '1';
+    clearTimeout(hint._t);
+    hint._t = setTimeout(()=>{ hint.style.opacity = '0'; }, 4500);
+  });
+})();
+
+/* affiche le badge "celebrate" (position fixe en bas de l'écran, voir la
+   règle CSS .celebrateCheck : plus de mesure de la carte ici, justement pour
+   ne plus dépendre de sa hauteur variable/animée). */
+function celebrateCheckShow(color){
+  const el = document.getElementById('celebrateCheck');
+  el.style.background = color;
+  el.classList.add('on','big');
+  return el;
+}
+function celebrateCheckHide(){
+  document.getElementById('celebrateCheck').classList.remove('on','big');
+}
+
+/* fondu d'entrée/sortie franc (pas instantané) pour les écrans texte pleine
+   page de l'étape salaire (question initiale, puis message de transition) */
+// stagger : soit un nombre (délai uniforme entre chaque enfant, comportement
+// d'origine), soit un tableau de délais en ms (un par enfant, dans l'ordre du
+// DOM) pour faire apparaître certains enfants ensemble (délai identique).
+function fadeInScreen(el, stagger){
+  el.classList.remove('gone');
+  const kids = [...el.querySelectorAll(':scope > .pre')];
+  kids.forEach(k=>k.classList.remove('in'));
+  void el.offsetHeight;
+  const delayOf = Array.isArray(stagger) ? (i=>stagger[i]??0) : (i=>i*(stagger||500));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    kids.forEach((k,i)=>setTimeout(()=>k.classList.add('in'), delayOf(i)));
+  }));
+}
+function fadeOutScreen(el, cb){
+  el.querySelectorAll(':scope > .pre').forEach(k=>k.classList.remove('in'));
+  setTimeout(()=>{ el.classList.add('gone'); if(cb) cb(); }, 550);
+}
+
+/* ── helpers ── */
+// le salaire se tape dans l'écran d'intro, pas dans une carte
+const inputOf = i => i===0 ? salaryInput : cards[i].querySelector('.amt');
+// une carte à choix de marque (Abonnements) démarre en phase 'brand' tant
+// qu'aucune marque n'a été choisie (déductible de l'état du DOM, pas besoin
+// d'état séparé : la classe hideUntilBrand ne part qu'une fois choisie)
+const startPhase = i => (CATS[i].pickBrand && cards[i].querySelector('.amtWrap').classList.contains('hideUntilBrand')) ? 'brand' : 'amount';
+// tous les jours du mois en cours (numéro 1..nDays) correspondant à un jour de
+// semaine donné (0=lundi..6=dimanche) — sert à compter les occurrences réelles
+// d'un poste "chaque semaine" et à le placer dans le calendrier final.
+function weekdayDaysInMonth(weekday){
+  const now = new Date();
+  const nDays = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+  const out = [];
+  for(let d=1; d<=nDays; d++){ if(((new Date(now.getFullYear(),now.getMonth(),d).getDay())+6)%7 === weekday) out.push(d); }
+  return out;
+}
+// Nombre d'occurrences réelles ce mois-ci d'un poste "chaque semaine" (jours
+// de semaine cochés × leurs répétitions dans le mois) ou "plusieurs fois par
+// mois" (nombre de jours cochés) — sert à RÉPARTIR le budget mensuel sur le
+// calendrier, pas à le multiplier (voir monthlyAmount ci-dessous).
+function occurrenceCount(r){
+  return r.freq==='weekly' ? (r.weekdays||[]).reduce((s,wd)=>s+weekdayDaysInMonth(wd).length,0)
+    : r.freq==='multi' ? (r.days||[]).length
+    : 1;
+}
+// Le montant saisi est TOUJOURS un budget mensuel (voir le sous-titre "Budget
+// par mois"), quelle que soit la fréquence choisie : "chaque semaine" et
+// "plusieurs fois par mois" ne changent jamais ce total, ils déterminent
+// seulement comment il se répartit sur le calendrier (voir perOccurrenceAmount).
+// Avant, "chaque semaine" multipliait le montant par le nombre d'occurrences
+// (comme si le montant saisi était "celui de chaque fois") — contradictoire
+// avec le sous-titre et avec "plusieurs fois par mois", qui lui divisait déjà
+// correctement : les deux fréquences à occurrences multiples doivent se
+// comporter pareil.
+function monthlyAmount(r){
+  return r.amount;
+}
+// montant posé sur CHAQUE jour du calendrier : le budget mensuel réparti sur
+// le nombre d'occurrences réelles (1 pour "1 fois par mois", donc inchangé).
+function perOccurrenceAmount(r){
+  return r.amount/Math.max(1,occurrenceCount(r));
+}
+const parseAmt = v => { const n = parseFloat(String(v).replace(',','.').replace(/[^\d.]/g,'')); return isNaN(n)?0:n; };
+
+/* repeint tous les segments : parts = montant/salaire, posées bout à bout.
+   liveIdx/liveAmt = saisie en cours (avant validation). Retourne le total engagé. */
+function paintSegs(liveIdx, liveAmt){
+  let acc = 0;
+  CATS.forEach((c,i)=>{
+    if(c.isIncome) return;
+    let len = 0;
+    if(salary > 0){
+      if(results[i]){
+        // un résultat "Abonnements" est {cat, subs:[...]} plutôt que {cat, amount} ;
+        // voir monthlyAmount pour "chaque semaine"/"plusieurs fois par mois".
+        const amt = results[i].subs ? results[i].subs.reduce((s,x)=>s+x.amount,0) : monthlyAmount(results[i]);
+        len = amt/salary*100;
+      }
+      else if(i === liveIdx && liveAmt){ len = liveAmt/salary*100; }
+    }
+    len = Math.max(0, Math.min(len, 100-acc));
+    segEls[i].style.strokeDasharray = len+' '+(100-len);
+    segEls[i].style.strokeDashoffset = -acc;
+    /* un tracé de longueur 0 avec un bout arrondi se dessine quand même
+       comme un point : le rond ne doit s'activer qu'une fois le segment
+       réellement visible, sinon toutes les catégories encore à 0€ empilent
+       un point à la pointe du segment en cours */
+    segEls[i].style.strokeLinecap = len > 0 ? 'round' : 'butt';
+    acc += len;
+  });
+  return acc;
+}
+
+/* somme brute engagée (en €, pas en %) : même parcours que paintSegs mais
+   sans conversion en pourcentage ni plafond à 100, pour connaître le vrai
+   reste (qui peut devenir négatif si les dépenses dépassent le salaire). */
+function totalEngaged(liveIdx, liveAmt){
+  let sum = 0;
+  CATS.forEach((c,i)=>{
+    if(c.isIncome) return;
+    if(results[i]){
+      sum += results[i].subs ? results[i].subs.reduce((s,x)=>s+x.amount,0) : monthlyAmount(results[i]);
+    } else if(i === liveIdx && liveAmt){ sum += liveAmt; }
+  });
+  return sum;
+}
+const fmtRemaining = v => Math.round(v).toLocaleString(LANG==='fr'?'fr-FR':'en-US')+' €';
+
+/* taille du montant restant : suit la même échelle petit/grand que l'anneau
+   (.donutWrap.big), rétrécie encore si le nombre a beaucoup de chiffres. Une
+   taille fixe posée en JS écraserait sinon en permanence la règle CSS
+   ".donutWrap.big .dPct" (le style inline gagne toujours sur une classe), donc
+   c'est ici, et non plus dans la CSS seule, qu'on doit retrancher les deux. */
+function sizePctText(){
+  const big = donutWrap.classList.contains('big');
+  const base = big ? 34 : 28;
+  const len = String(Math.round(Math.abs(parseFloat(pctEl.dataset.val)||0))).length;
+  /* rétrécissement plus marqué qu'avant (0.75/0.55 -> 0.68/0.5) : à partir de
+     4-5 chiffres (fréquent avec le signe négatif + "restant", ex. "-10 345 €"),
+     le montant touchait presque les bords de l'anneau une fois celui-ci
+     agrandi (104 -> 172px) sans que ce palier ne suive. */
+  pctEl.style.fontSize = (len>=6?Math.round(base*0.5):len>=4?Math.round(base*0.68):base)+'px';
+}
+/* vert par défaut, orange dès la moitié du salaire engagée, rouge quand il
+   ne reste plus que 10 % (ou moins, dépenses > salaire). */
+function pctColor(remaining){
+  if(salary<=0) return '#2e7d4f';
+  const pctLeft = remaining/salary*100;
+  if(pctLeft<=10) return '#c05050';
+  if(pctLeft<=50) return '#c9822c';
+  return '#2e7d4f';
+}
+
+/* ── chorégraphie icône rangée <-> carte ──
+   L'icône de la catégorie actuellement "en jeu" (sur la carte, ou le gros
+   logo salaire au tout début) n'existe qu'à un seul endroit à la fois :
+   soit dans la rangée du haut, soit sur l'écran actif. Un clone flottant
+   fait le trajet visuel entre les deux ; pendant le vol, le point de départ
+   réel a déjà disparu et celui d'arrivée n'apparaît qu'à l'atterrissage. */
+
+/* clone flottant qui parcourt fromRect -> toRect en un seul transform
+   (translate+scale), façon "shared element transition". Trois options
+   partagées par tous les appels (retour dans la rangée, départ vers une
+   carte, arrivée du salaire) pour ne pas réécrire le même filet de sécurité
+   à chaque site d'appel :
+   - noScale : le clone garde la taille d'arrivée dès le départ (centré sur
+     le point de départ), seule la position bouge — pas de zoom "sur place".
+   - restOpacity : une fois arrivé et IMMOBILE, une pause (holdMs, "un peu
+     après", jamais pendant le déplacement) puis une 2e animation, séparée,
+     atténue le clone jusqu'à cette opacité. Une seule chose bouge à la fois.
+   - landEl/hideClass : à l'atterrissage, la vraie pastille prend le relais
+     par un remplacement SEC (transition:none) à l'opacité où le clone
+     vient de s'arrêter — jamais via la transition normale du .dot, qui
+     repartirait de son état masqué et rejouerait un fondu après coup. */
+function flyIcon(fromRect, toRect, color, iconHtml, duration, opts){
+  opts = opts || {};
+  const {noScale, restOpacity, holdMs=120, fadeMs=220, landEl, hideClass, onLand, trackEl,
+    easing='cubic-bezier(0.32,0.72,0,1)'} = opts;
+  const el = document.createElement('div');
+  el.className = 'iconFly';
+  el.style.background = color;
+  const w = noScale ? toRect.width : fromRect.width;
+  const h = noScale ? toRect.height : fromRect.height;
+  const startLeft = noScale ? fromRect.left+(fromRect.width-w)/2 : fromRect.left;
+  const startTop = noScale ? fromRect.top+(fromRect.height-h)/2 : fromRect.top;
+  el.style.left = startLeft+'px';
+  el.style.top = startTop+'px';
+  el.style.width = w+'px';
+  el.style.height = h+'px';
+  el.innerHTML = iconHtml;
+  document.body.appendChild(el);
+  const dx = toRect.left-startLeft, dy = toRect.top-startTop;
+  const sx = noScale ? 1 : (fromRect.width ? toRect.width/fromRect.width : 1);
+  const move = 'translate('+dx+'px,'+dy+'px) scale('+sx+')';
+
+  let landed = false;
+  const land = ()=>{
+    if(landed) return; landed = true;
+    el.remove();
+    if(landEl){
+      landEl.style.transition = 'none';
+      if(hideClass) landEl.classList.remove(hideClass);
+      landEl.style.opacity = '';
+      void landEl.offsetHeight;
+      landEl.style.transition = '';
+    }
+    if(onLand) onLand();
+  };
+
+  let fadeStarted = false;
+  const startFade = ()=>{
+    if(fadeStarted) return; fadeStarted = true;
+    if(restOpacity===undefined || restOpacity===1){ land(); return; }
+    setTimeout(()=>{
+      el.animate([{opacity:1},{opacity:restOpacity}], {duration:fadeMs, easing:'ease', fill:'forwards'})
+        .onfinish = land;
+      setTimeout(land, fadeMs+80);
+    }, holdMs);
+  };
+
+  /* déplacement piloté frame par frame plutôt qu'en une seule animation vers
+     des coordonnées figées : avec trackEl, la cible est relue à chaque frame
+     (getBoundingClientRect), donc le clone atterrit sur la position RÉELLE du
+     moment même si la mise en page bouge pendant le vol (fermeture du clavier
+     qui redimensionne le viewport sur mobile, carte qui glisse encore,
+     transition tardive...) au lieu de viser la position mesurée au départ et
+     de laisser la vraie icône réapparaître plus bas. Sans trackEl (ou si sa
+     mesure est inutilisable, rect vide ou élément mis à l'échelle par une
+     classe type .pending), la cible reste le toRect figé d'origine. */
+  if(!trackEl){
+    const moveAnim = el.animate(
+      [{transform:'translate(0,0) scale(1)'},{transform:move}],
+      {duration, easing, fill:'forwards'});
+    moveAnim.onfinish = startFade;
+    setTimeout(startFade, duration+60); // filet de sécurité si onfinish ne se déclenche pas
+    return;
+  }
+  el.style.transformOrigin = '0 0';
+  const liveTo = ()=>{
+    const r = trackEl.getBoundingClientRect();
+    return (r.width||r.height) ? r : toRect;
+  };
+  const t0 = performance.now();
+  (function step(now){
+    const p = Math.min(1,(now-t0)/duration), e = 1-Math.pow(1-p,3);
+    const target = liveTo();
+    const tw = noScale ? w : target.width;
+    const tLeft = noScale ? target.left+(target.width-tw)/2 : target.left;
+    const tTop = noScale ? target.top+(target.height-h)/2 : target.top;
+    const cx = startLeft+(tLeft-startLeft)*e, cy = startTop+(tTop-startTop)*e;
+    const s = 1+((w ? tw/w : 1)-1)*e;
+    el.style.transform = 'translate('+(cx-startLeft)+'px,'+(cy-startTop)+'px) scale('+s+')';
+    if(p<1) requestAnimationFrame(step); else startFade();
+  })(t0);
+  setTimeout(startFade, duration+120); // filet de sécurité si la boucle rAF est gelée (onglet masqué)
+}
+
+/* taille des pastilles selon le nombre visible dans la rangée : moins il y
+   en a (une est "en vol" vers une carte), plus les autres respirent. */
+function dotSizeFor(visible){
+  return Math.max(28, Math.min(40, 32+(N-Math.max(visible,1))*3));
+}
+function updateDotSize(){
+  const visible = dotEls.filter(d=>!d.classList.contains('flying') && !d.classList.contains('pending')).length;
+  dots.style.setProperty('--dotSize', dotSizeFor(visible)+'px');
+}
+
+/* échange la pastille "active" : celle qui revient (prevIndex, peut être
+   null) regagne la rangée pendant que celle qui part (nextIndex, peut être
+   null) rejoint sa carte. Les DEUX mutations DOM sont appliquées avant de
+   mesurer quoi que ce soit : mesurer la cible de l'une avant que l'autre
+   n'ait quitté/rejoint la rangée donnait une position fausse (l'espace
+   libéré ou repris par la seconde n'était pas encore pris en compte), d'où
+   un atterrissage décalé par rapport à la place réelle de la pastille. */
+function swapActiveDot(prevIndex, nextIndex){
+  const prevDot = prevIndex!==null ? dotEls[prevIndex] : null;
+  const prevIcon = prevIndex!==null ? cards[prevIndex].querySelector('.cIcon') : null;
+  const nextDot = nextIndex!==null ? dotEls[nextIndex] : null;
+  const nextIcon = nextIndex!==null ? cards[nextIndex].querySelector('.cIcon') : null;
+  if((prevIndex!==null && (!prevDot||!prevIcon)) || (nextIndex!==null && (!nextDot||!nextIcon))) return;
+
+  // 1. rects de départ, avant toute mutation : ceux des deux voyageuses, et
+  //    ceux de chaque pastille qui RESTE dans la rangée (pour le FLIP plus bas)
+  const prevFrom = prevIcon ? prevIcon.getBoundingClientRect() : null;
+  const nextFrom = nextDot ? nextDot.getBoundingClientRect() : null;
+  const rowFrom = dotEls.map(d =>
+    (d===prevDot || d===nextDot || d.classList.contains('pending') || d.classList.contains('flying'))
+      ? null : d.getBoundingClientRect());
+
+  // 2. les deux mutations d'abord, posées instantanément sur TOUTE la rangée
+  //    (transitions coupées puis restaurées dans la même passe, comme
+  //    squareStage) : si la pastille qui part rétrécissait encore pendant la
+  //    mesure, la rangée restait momentanément plus haute que sa mise en page
+  //    finale, tout ce qui la suit (donut, carte) était encore poussé plus
+  //    bas, et le clone atterrissait trop bas par rapport à l'icône réelle.
+  dotEls.forEach(d=>d.style.transition = 'none');
+  if(prevDot){ prevDot.classList.remove('flying'); prevDot.style.opacity = '0'; }
+  if(nextDot) nextDot.classList.add('flying');
+  updateDotSize();
+  void dots.offsetHeight;
+  // FLIP : la mise en page est finale (mesurable tout de suite), mais chaque
+  // pastille restante repart visuellement de son ancienne position (transform
+  // inverse posé pendant que les transitions sont encore coupées) puis GLISSE
+  // vers sa nouvelle place une fois les transitions restaurées — sans ça,
+  // elles se téléportaient sèchement quand une voyageuse libérait sa place.
+  const shifted = [];
+  dotEls.forEach((d,k)=>{
+    const from = rowFrom[k];
+    if(!from) return;
+    const now = d.getBoundingClientRect();
+    const dx = (from.left+from.width/2)-(now.left+now.width/2);
+    const dy = (from.top+from.height/2)-(now.top+now.height/2);
+    if(Math.abs(dx)<0.5 && Math.abs(dy)<0.5) return;
+    d.style.transform = 'translate('+dx+'px,'+dy+'px)';
+    shifted.push(d);
+  });
+  void dots.offsetHeight;
+  dotEls.forEach(d=>d.style.transition = '');
+  shifted.forEach(d=>d.style.transform = '');
+
+  // 3. les cibles sont mesurées maintenant que la rangée est déjà dans sa
+  //    mise en page finale
+  if(prevDot){
+    const prevTo = prevDot.getBoundingClientRect();
+    // pas de mise à l'échelle (noScale) : seule la position bouge, puis une
+    // pause avant l'atténuation vers l'opacité de repos (0.5 si "done")
+    const restOpacity = prevDot.classList.contains('done') ? 0.5 : 1;
+    flyIcon(prevFrom, prevTo, CATS[prevIndex].color, CATS[prevIndex].icon, 420,
+      {noScale:true, restOpacity, landEl:prevDot, trackEl:prevDot});
+  }
+  if(nextIcon){
+    // la carte vient de recevoir .cur (voir setCurrent) et glisse encore
+    // depuis sa position de départ hors écran : figer le glissement le
+    // temps de lire sa position finale, sinon la cible mesurée est celle,
+    // encore hors écran, du tout début du glissement
+    const nextCard = cards[nextIndex];
+    nextIcon.style.visibility = 'hidden';
+    nextCard.style.transition = 'none';
+    const to = nextIcon.getBoundingClientRect();
+    void nextCard.offsetHeight;
+    nextCard.style.transition = '';
+    flyIcon(nextFrom, to, CATS[nextIndex].color, CATS[nextIndex].icon, 480,
+      {trackEl:nextIcon, onLand:()=>{ nextIcon.style.visibility = ''; }});
+  }
+}
+
+/* révélation de la rangée une fois le salaire validé : le gros logo quitte
+   le centre de l'écran pour devenir la première pastille, puis toutes les
+   autres apparaissent en cascade rapide derrière lui. */
+function revealDotsRow(fromRect, cb){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+    dotEls.forEach(d=>d.classList.remove('pending'));
+    cb();
+    return;
+  }
+  /* la pastille cible est encore réduite (.pending, scale(0.3)) : la
+     mesurer telle quelle ferait rétrécir le clone jusqu'à devenir
+     imperceptible. On lit sa taille finale (sans .pending) instantanément,
+     sans transition, avant de la remasquer le temps du vol. */
+  const d0 = dotEls[0];
+  d0.style.transition = 'none';
+  d0.classList.remove('pending');
+  const d0Rect = d0.getBoundingClientRect();
+  d0.classList.add('pending');
+  void d0.offsetHeight;
+  d0.style.transition = '';
+  /* easing dédié, plus progressif que --ease-slide par défaut : sur ce vol
+     précis (longue diagonale centre -> coin haut-gauche + fort rétrécissement
+     72px -> ~32px), --ease-slide (cubic-bezier(0.32,0.72,0,1)) parcourait
+     ~72% de la distance ET du rétrécissement dans le premier tiers du temps,
+     puis rampait à peine le reste : perçu comme "il disparaît puis
+     réapparaît" plutôt que "il glisse". cubic-bezier(0.4,0,0.2,1) (courbe
+     "standard" Material, pensée pour des déplacements) répartit le
+     mouvement sur toute la durée, traçable à l'œil du début à la fin ;
+     durée un peu allongée (480 -> 650ms) pour laisser le temps de le suivre. */
+  flyIcon(fromRect, d0Rect, CATS[0].color, CATS[0].icon, 650,
+    {landEl:d0, hideClass:'pending', restOpacity:1, easing:'cubic-bezier(0.4,0,0.2,1)'});
+  dotEls.forEach((d,i)=>{
+    if(i===0) return;
+    setTimeout(()=>d.classList.remove('pending'), 480+i*70);
+  });
+  setTimeout(cb, 480+(dotEls.length-1)*70+380);
+}
+
+/* petite pluie de confettis (pas de lib externe) : quelques pastilles
+   colorées qui jaillissent du centre du donut, montent et s'estompent
+   (gravité inversée : +170 tombait vers le bas, -170 pousse vers le haut). */
+function spawnConfetti(fromEl){
+  const rect = (fromEl||donutWrap).getBoundingClientRect();
+  const cx = rect.left+rect.width/2, cy = rect.top+rect.height/2;
+  const colors = ['#3fa970','#1fa896','#8b7cf6','#eeaf3a','#4f8ef7','#2e7d4f'];
+  for(let i=0;i<22;i++){
+    const el = document.createElement('div');
+    el.className = 'confetti';
+    el.style.background = colors[i%colors.length];
+    el.style.borderRadius = (i%2?'50%':'2px');
+    el.style.left = cx+'px'; el.style.top = cy+'px';
+    document.body.appendChild(el);
+    const ang = Math.random()*Math.PI*2, dist = 60+Math.random()*130;
+    const dx = Math.cos(ang)*dist, dy = Math.sin(ang)*dist*0.6 - 40;
+    const rot = (Math.random()*520-260);
+    el.animate([
+      {transform:'translate(0,0) rotate(0deg)', opacity:1},
+      {transform:`translate(${dx}px, ${dy-170}px) rotate(${rot}deg)`, opacity:0}
+    ], {duration:1100+Math.random()*400, easing:'cubic-bezier(0.23,1,0.32,1)'})
+      .onfinish = ()=>el.remove();
+  }
+}
+/* les confettis d'une catégorie validée partaient 120ms après le badge de
+   validation, pendant que la part correspondante du donut (segEls[idx],
+   voir .dSeg plus haut) met en réalité 1.9s à se dessiner — même défaut de
+   délai fixe déjà corrigé sur l'anneau du salaire (voir revealSalaryDonut) :
+   les confettis tombaient largement avant que le donut n'ait fini de se
+   remplir. transitionend synchronise sur la vraie fin du tracé ; filet de
+   sécurité si la part fait 0% (dasharray ne change pas, transitionend ne se
+   déclenche jamais dans ce cas). */
+function spawnConfettiOnSegFill(idx, fromEl){
+  const seg = segEls[idx];
+  let done = false;
+  const fire = ()=>{ if(done) return; done = true; seg.removeEventListener('transitionend', onDone); spawnConfetti(fromEl); };
+  const onDone = (e)=>{ if(e.propertyName === 'stroke-dasharray') fire(); };
+  seg.addEventListener('transitionend', onDone);
+  setTimeout(fire, 2000);
+}
+/* après validation du salaire, on prend le temps : seule la question
+   s'efface (le montant, lui, reste bien en place, jamais remplacé) ; un
+   anneau vient l'entourer (départ à midi, tour complet dans le sens
+   horaire, retour à midi), et c'est SA fermeture qui déclenche les
+   confettis. Un message de satisfaction annonce ensuite la suite (les
+   dépenses du mois) avant, seulement alors, de griser l'anneau de suivi
+   (différent de celui-ci) et d'enchaîner vers Loyer via cb(). */
+function revealSalaryDonut(amount, cb){
+  /* Filet de dernier recours, EN PLUS de celui posé sur le transitionend de
+     l'anneau plus bas : celui-là ne couvre que CE maillon précis de la
+     chaîne (tracé -> message -> envol -> Loyer), mais un iPhone bloqué a
+     déjà montré qu'un seul maillon qui casse (transitionend qui ne part
+     jamais) peut laisser l'utilisateur coincé à vie sur cet écran, sans
+     aucun moyen de revenir en arrière. Si RIEN n'a fait avancer la séquence
+     après un délai très généreux (8s, largement au-dessus de la durée
+     normale ~3,5s), on saute directement à l'état final (anneau de suivi
+     plein, écran salaire masqué) et on appelle cb() nous-mêmes — mieux
+     qu'un blocage total même si l'animation de célébration a été sacrifiée
+     en route. cbCalled : garde partagée avec la fin normale de la séquence
+     (voir revealDotsRow(bigIconRect, cb) plus bas) pour ne jamais appeler
+     cb() deux fois si le filet et le chemin normal se chevauchent. */
+  let cbCalled = false;
+  const callCbOnce = ()=>{ if(cbCalled) return; cbCalled = true; cb(); };
+  setTimeout(()=>{
+    if(cbCalled) return;
+    salaryTransition.classList.add('gone');
+    salaryIntro.classList.add('gone');
+    donutWrap.classList.remove('big','hidden');
+    segEls[0].style.stroke = '#d9d2c3';
+    segEls[0].style.strokeWidth = 11;
+    segEls[0].style.strokeDasharray = '100 0';
+    pctEl.dataset.val = amount;
+    sizePctText();
+    pctEl.style.color = pctColor(amount);
+    pctEl.textContent = fmtRemaining(amount);
+    document.getElementById('pctRest').classList.add('on');
+    callCbOnce();
+  }, 8000);
+  // la question s'efface ; l'icône, elle, glisse vers le bas pour se
+  // rapprocher de l'anneau qui apparaît juste en dessous, au lieu de rester
+  // plantée au-dessus d'un vide. L'anneau lui-même ne bouge jamais :
+  // .salTopStack est un overlay absolute ancré sur .salAmtWrap (voir CSS),
+  // la disparition de la question ne change donc rien à sa taille/position.
+  document.querySelector('.salTopStack .salQ').style.opacity = '0';
+  document.getElementById('salBigIcon').classList.add('down');
+  setTimeout(()=>{
+    const ring = document.querySelector('.salRing .salProg');
+    ring.classList.add('drawing');
+    /* var(--ease-slide) (transition CSS de .salProg) est très avancée en
+       avant : à 63% de sa durée réelle (1,1s), le tracé est déjà à ~98% de
+       son parcours visuel. Les confettis partent donc à ce moment-là (0,63 *
+       1100 ≈ 700ms), pas à la fin technique (transitionend, ~400ms plus
+       tard) : sinon ils "sentent en retard" par rapport à un anneau déjà
+       visuellement fini. Le reste de la séquence (message, etc.) continue
+       lui d'attendre la vraie fin du tracé. */
+    const CONFETTI_DELAY_MS = 700;
+    setTimeout(()=>spawnConfetti(document.querySelector('.salAmtWrap')), CONFETTI_DELAY_MS);
+    /* toute la suite du parcours (message, envol du logo, passage à Loyer)
+       dépend de ce seul transitionend : s'il ne part jamais, l'utilisateur
+       est bloqué à vie sur cet écran. C'était le cas sur iPhone — WebKit ne
+       déclenche pas fiablement transitionend pour les propriétés SVG comme
+       stroke-dasharray (et le mode économie d'énergie peut sauter la
+       transition entièrement). Filet de sécurité par minuterie (durée de la
+       transition + marge), même principe que celui des icônes de la barre
+       finale, avec garde pour ne jamais dérouler la séquence deux fois si
+       l'événement finit par arriver quand même. */
+    let ringDone = false;
+    const onRingDone=(e)=>{
+      if(e && e.propertyName!=='stroke-dasharray')return;
+      if(ringDone) return;
+      ringDone = true;
+      ring.removeEventListener('transitionend',onRingDone);
+      salaryTransitionMsg.innerHTML = '<span style="color:#2e7d4f;font-size:34px;">'+t('Impressionnant !','Impressive!')+'</span>';
+      fadeInScreen(salaryTransition);
+      setTimeout(()=>{
+        fadeOutScreen(salaryTransition, ()=>{
+          // le gros logo est capturé puis masqué NET : son clone (voir
+          // revealDotsRow, lancé juste après) prend le relais immédiatement
+          // et glisse vers la rangée. Le laisser partir en fondu avec le
+          // reste de l'écran (fadeOutScreen(salaryIntro,...) juste en dessous,
+          // qui fait fondre .salAmtWrap et donc tout ce qu'il contient)
+          // superposait deux logos : le vrai qui s'estompait sur place
+          // pendant que le clone volait, perçu comme "il disparaît puis se
+          // replace". Seuls l'anneau et le montant partent en fondu derrière lui.
+          const bigIcon = document.getElementById('salBigIcon');
+          const bigIconRect = bigIcon.getBoundingClientRect();
+          bigIcon.style.visibility = 'hidden';
+          fadeOutScreen(salaryIntro, ()=>{
+            // l'anneau de suivi (celui du reste du parcours) apparaît déjà
+            // gris et plein : la célébration a eu lieu sur l'anneau ci-dessus,
+            // pas la peine de la rejouer ici
+            donutWrap.classList.remove('big','hidden');
+            segEls[0].style.stroke = '#d9d2c3';
+            segEls[0].style.strokeWidth = 11;
+            segEls[0].style.strokeDasharray = '100 0';
+            pctEl.dataset.val = amount;
+            sizePctText();
+            pctEl.style.color = pctColor(amount);
+            pctEl.textContent = fmtRemaining(amount);
+            document.getElementById('pctRest').classList.add('on');
+          });
+          revealDotsRow(bigIconRect, callCbOnce);
+        });
+      }, 1100);
+    };
+    ring.addEventListener('transitionend', onRingDone);
+    setTimeout(()=>onRingDone(), 1100+400); // filet iOS : durée de la transition (1,1s) + marge
+    ring.style.strokeDasharray = '100 0';
+  }, 550);
+}
+
+function countPct(to, el, dur){
+  el = el || pctEl; dur = dur || 600;
+  const from = parseInt(el.textContent)||0, t0 = performance.now();
+  (function tick(t){
+    const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3);
+    el.textContent = Math.round(from+(to-from)*e)+'%';
+    if(p<1) requestAnimationFrame(tick);
+  })(t0);
+}
+
+/* même principe que countPct mais compte un montant restant (salaire - engagé)
+   plutôt qu'un pourcentage : "from" est repris via data-val car textContent
+   contient déjà le symbole € et un séparateur de milliers, imparsables. */
+function countRemaining(to, el, dur){
+  el = el || pctEl; dur = dur || 600;
+  const from = parseFloat(el.dataset.val)||0, t0 = performance.now();
+  el.dataset.val = to;
+  if(el===pctEl) sizePctText();
+  el.style.color = pctColor(to);
+  (function tick(t){
+    const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3);
+    el.textContent = fmtRemaining(from+(to-from)*e);
+    if(p<1) requestAnimationFrame(tick);
+  })(t0);
+}
+
+/* carte neuve (rien saisi) : la carte entière (via .stage) est grande et centrée
+   verticalement, le donut est gros (clavier fermé, écran au repos). Dès qu'on tape
+   dedans (focusin), tout rétrécit vers le format compact habituel (clavier ouvert).
+   Si le clavier se referme sans validation (focusout), on regonfle carte + donut.
+   Le centrage vertical utilise des marges "auto" (calcul fiable par le flexbox)
+   converties en valeur px explicite, seule façon d'obtenir une transition animée :
+   "auto" n'est pas interpolable. */
+function squareStage(tall){
+  // "tall" (carte Abonnements, voir CATS[i].pickBrand) : même hauteur que les
+  // cartes à un seul montant (la grille de marques défile en interne pour le
+  // reste, voir .brandGrid) — une carte plus haute que ça poussait le bouton
+  // Continuer hors de l'écran sur mobile (overflow caché sur .app, rien n'y
+  // scrolle). On l'ancre juste sous le donut au lieu de la centrer (marge
+  // auto), pour éviter le grand vide au-dessus que laissait le centrage.
+  const h = Math.max(320, Math.min(420, document.querySelector('.app').clientHeight*0.5));
+  stage.style.transition = 'none';
+  stage.style.height = h+'px';
+  stage.style.marginTop = tall ? '4px' : 'auto';
+  /* le donut doit grossir dans la même passe instantanée que le stage :
+     sinon sa propre transition (.5s) continue de pousser le stage vers le
+     bas pendant un demi-seconde après que setCurrent a mesuré où l'icône
+     doit atterrir (voir swapActiveDot), et le clone atterrit décalé par
+     rapport à la position réelle, une fois le donut fini de grandir. */
+  donutWrap.style.transition = 'none';
+  donutWrap.classList.add('big');
+  void stage.offsetHeight;
+  // "auto" n'est pas interpolable : uniquement pertinent quand on centre
+  // (sinon marginTop est déjà une valeur px concrète, rien à résoudre).
+  if(!tall)stage.style.marginTop = getComputedStyle(stage).marginTop;
+  void stage.offsetHeight;
+  stage.style.transition = '';
+  donutWrap.style.transition = '';
+  sizePctText();
+}
+// Même géométrie finale que squareStage(), mais jouée AVEC la transition CSS
+// de .stage (au lieu de la couper) : utilisée quand la carte est déjà visible
+// et qu'on y revient après une interaction (ex. jour de prélèvement d'un
+// abonnement choisi) — un retour sec au format carré s'y voit comme une
+// téléportation, contrairement au premier passage sur une carte neuve (avant
+// tout rendu visible) où squareStage() doit rester instantané.
+function squareStageAnimated(tall){
+  const h = Math.max(320, Math.min(420, document.querySelector('.app').clientHeight*0.5));
+  let targetMarginTop;
+  const prevTransition = stage.style.transition;
+  if(tall){
+    targetMarginTop = '4px'; // valeur px concrète : rien à résoudre, la transition CSS l'anime directement
+  } else {
+    // "auto" n'est pas interpolable : on le résout en px sans jouer de transition,
+    // puis on rejoue le vrai changement (hauteur + marge concrète) transition active.
+    const prevMarginTop = stage.style.marginTop;
+    stage.style.transition = 'none';
+    stage.style.marginTop = 'auto';
+    void stage.offsetHeight;
+    targetMarginTop = getComputedStyle(stage).marginTop;
+    stage.style.marginTop = prevMarginTop;
+    void stage.offsetHeight;
+  }
+  stage.style.transition = prevTransition;
+  stage.style.height = h+'px';
+  stage.style.marginTop = targetMarginTop;
+  donutWrap.classList.add('big');
+  sizePctText();
+}
+// Cascade d'apparition des puces jour du calendrier à chaque révélation du
+// bloc (voir .dayChips .chip.pop-in) : une animation CSS pure tournerait dès
+// l'insertion dans le DOM, masquée par l'opacity:0 du parent, donc jamais
+// visible — on la relance ici en repartant de zéro (reflow forcé) avec un
+// délai croissant par puce, plafonné pour rester vif même sur 31 jours.
+function popInDayChips(dayBlock){
+  const chips = dayBlock.querySelectorAll('.dayChips .chip');
+  chips.forEach((chip,i)=>{
+    chip.classList.remove('pop-in');
+    void chip.offsetWidth;
+    chip.style.animationDelay = Math.min(i*10,220)+'ms';
+    chip.classList.add('pop-in');
+  });
+}
+function compactStage(hasDay){
+  stage.style.marginTop = '0px';
+  // Rétréci de 30px (180->150) par le haut : le donut juste au-dessus a
+  // grandi d'autant (voir .donutWrap), donc le bas de la carte ne bouge pas.
+  // hasDay (grille "quel jour du mois ?", 31 puces sur 5 rangées, voir DAYS,
+  // ou les puces "jour de la semaine") a besoin de nettement plus de
+  // hauteur, sinon la dernière rangée déborde de la carte blanche et
+  // chevauche le bouton Valider. Puces resserrées (voir .chip/.chips) :
+  // 380px suffit désormais, contre 420px avant, pour laisser le bouton
+  // Continuer visible sans scroller sur les petits écrans.
+  // 'freq' : juste après le montant, tant qu'aucune fréquence n'est choisie,
+  // seules les 3 cartes de fréquence (+ leur équivalent €/mois) sont
+  // affichées — un rectangle plus petit que 380px suffit, et grandit ensuite
+  // (transition height déjà posée sur .stage) au moment où soit le
+  // calendrier (mensuel/plusieurs fois), soit les jours de la semaine,
+  // apparaissent en fondu dedans.
+  stage.style.height = hasDay === 'freq' ? '330px' : (hasDay ? '380px' : '150px');
+  donutWrap.classList.remove('big');
+  sizePctText();
+}
+
+function setCurrent(i){
+  obTrack(CATS[i].id, i+1); // funnel : étape atteinte (welcome=0, salaire=1, ...)
+  cards.forEach((c,j)=>c.classList.toggle('cur', j===i));
+  dotEls.forEach((d,j)=>{ d.classList.toggle('cur', j===i); d.classList.toggle('done', j<i && !!results[j]); });
+  btnValider.style.background = CATS[i] ? CATS[i].color : '#3fa970';
+  btnValider.textContent = t('Valider','Confirm');
+  btnValider.classList.toggle('off', !parseAmt(inputOf(i).value));
+
+  const isIncomeCard = !!(CATS[i] && CATS[i].isIncome);
+  // Le bouton #valider est PARTAGÉ entre toutes les étapes et reste toujours
+  // dans le flux (.off ne fait que le rendre transparent, sans libérer sa
+  // place réservée en bas de #flow) — même invisible, sa hauteur influence
+  // l'espace dispo pour #salaryIntro au-dessus (flex:1). L'écran salaire n'en
+  // a de toute façon pas besoin : Entrée sur le clavier valide déjà (voir le
+  // listener 'keydown' plus bas). display:none le retire complètement du
+  // flux le temps de cette étape, au lieu de juste le rendre transparent.
+  btnValider.style.display = isIncomeCard ? 'none' : '';
+  /* le stage doit déjà être visible, ET la carte déjà dans sa mise en page
+     finale (carrée si neuve, compacte sinon), AVANT que swapActiveDot ne
+     mesure la position d'arrivée de l'icône cible : sinon la mesure se fait
+     sur l'ancienne taille/position (ou un rect vide juste après l'écran du
+     salaire, display:none), le clone atterrit au mauvais endroit, et
+     l'icône réelle apparaît ensuite ailleurs (plus bas) à sa vraie place.
+     squareStage() pose sa géométrie finale instantanément (transition
+     coupée puis restaurée dans la même passe), donc rien à attendre ici. */
+  if(!isIncomeCard){
+    stage.style.display = '';
+    // CTA "Installer l'app" visible pendant toute la phase cartes — sauf si
+    // l'app est déjà installée / le contexte est standalone (_dlAvailable).
+    document.getElementById('dlWrap').classList.toggle('hid', !window._dlAvailable);
+    const card = cards[i];
+    const fresh = !parseAmt(inputOf(i).value) && !card.classList.contains('hasDay');
+    card.classList.toggle('square', fresh);
+    if(fresh) squareStage(!!(CATS[i] && CATS[i].pickBrand)); else compactStage(card.classList.contains('hasDay'));
+  }
+
+  /* chorégraphie rangée <-> carte : la catégorie qui quitte le rôle "actif"
+     regagne sa pastille, celle qui le prend quitte la rangée. Le salaire
+     n'a pas de carte (voir revealSalaryDonut) et n'entre donc jamais dans
+     ce ballet ; les pastilles pas encore révélées (.pending) non plus. Les
+     deux mouvements (retour + départ) passent par le même appel pour que la
+     cible de celui qui revient tienne compte du départ de l'autre. */
+  const nextFlyingDot = (CATS[i] && !CATS[i].isIncome && dotEls[i] && !dotEls[i].classList.contains('pending')) ? i : null;
+  if(nextFlyingDot !== flyingDot){
+    swapActiveDot(flyingDot, nextFlyingDot);
+    flyingDot = nextFlyingDot;
+  }
+
+  if(isIncomeCard){
+    // écran d'intro du salaire, sans carte ni donut (celui-ci n'apparaît
+    // qu'après validation, voir revealSalaryDonut) : ni le stage (cartes de
+    // dépenses) ni le donut ni le CTA d'installation n'ont de raison d'être ici.
+    stage.style.display = 'none';
+    document.getElementById('dlWrap').classList.add('hid');
+    donutWrap.classList.add('hidden');
+    // au cas où on revient sur cette carte après une validation précédente
+    // (retour arrière) : l'anneau de célébration et la question doivent
+    // repartir de zéro (revealSalaryDonut avait effacé la question).
+    const salRingCircle = document.querySelector('.salRing .salProg');
+    salRingCircle.classList.remove('drawing');
+    salRingCircle.style.strokeDasharray = '0 100';
+    document.querySelector('.salTopStack .salQ').style.opacity = '';
+    document.getElementById('salBigIcon').classList.remove('down');
+    fadeInScreen(salaryIntro); // icône + question + anneau, un seul fondu (voir .salAmtWrap)
+    return;
+  }
+  salaryIntro.classList.add('gone');
+  salaryIntro.classList.remove('in');
+}
+/* Édition d'un poste déjà rempli : tap sur son icône (dot) dans la rangée du
+   haut. Remplace l'ancien bouton retour, qui effaçait tout depuis le poste
+   précédent : ici on ne touche qu'au poste choisi, et on revient ensuite
+   exactement là où l'utilisateur en était (voir finishEdit). Les Abonnements
+   sont exclus : leur montant est une somme de plusieurs marques, "changer le
+   montant" n'a pas de sens direct pour ce poste. */
+function editCategory(j){
+  if(phase === 'locked' || j === cur || CATS[j].isIncome || CATS[j].pickBrand || !results[j]) return;
+  if(editReturn === null) editReturn = {index:cur, phase:phase};
+  cards[j].classList.remove('past','okd','celebrate');
+  cur = j; phase = 'amount';
+  setCurrent(cur);
+  inputOf(cur).focus({preventScroll:true});
+  inputOf(cur).select();
+}
+dotEls.forEach((d,j)=>d.addEventListener('click', ()=>editCategory(j)));
+
+function finishEdit(entry, viaKb){
+  phase = 'locked';
+  results[cur] = entry;
+  const card = cards[cur];
+  card.classList.toggle('celebrate', !!viaKb);
+  card.classList.add('okd');
+  // paintSegs() DOIT tourner avant d'attacher le filet transitionend
+  // (spawnConfettiOnSegFill) : c'est lui qui pose la nouvelle valeur de
+  // stroke-dasharray et démarre donc la transition qu'on veut écouter.
+  paintSegs();
+  countRemaining(salary-totalEngaged());
+  if(viaKb){
+    btnValider.classList.add('off');
+    const badge = celebrateCheckShow(CATS[cur].color);
+    spawnConfettiOnSegFill(cur, badge);
+  } else {
+    btnValider.textContent = t('Super !','Great!');
+  }
+  if(document.activeElement) document.activeElement.blur();
+  const ret = editReturn; editReturn = null;
+  setTimeout(()=>{
+    card.classList.remove('celebrate');
+    celebrateCheckHide();
+    card.classList.add('past');
+    cur = ret.index; phase = ret.phase;
+    setCurrent(cur);
+    setTimeout(()=>{
+      if(cur === ret.index && phase === 'amount') inputOf(cur).focus({preventScroll:true});
+    }, 450);
+  }, 850);
+}
+
+/* ── validation d'une étape ── */
+function finishStep(entry, viaKb){
+  phase = 'locked';
+  results[cur] = entry;
+
+  if(CATS[cur].isIncome){
+    // pas de carte à glisser pour le salaire : l'écran d'intro s'efface, le
+    // donut se révèle (pop + confettis), grise, puis on enchaîne sur Loyer
+    salary = entry.amount;
+    if(document.activeElement) document.activeElement.blur();
+    btnValider.classList.add('off');
+    revealSalaryDonut(entry.amount, ()=>{
+      cur = 1; phase = startPhase(1); setCurrent(cur);
+      setTimeout(()=>{
+        if(cur === 1 && phase === 'amount') inputOf(1).focus({preventScroll:true});
+      }, 450);
+    });
+    return;
+  }
+
+  const card = cards[cur];
+  /* validée via "Suivant" au clavier : le clavier se baisse le temps de
+     passer à la carte suivante (voir commentaire plus bas) — un rond vert
+     centré + confettis rend ce trou satisfaisant au lieu de bancal, et le
+     bouton Valider (qui ne sert qu'à ceux qui tapotent) disparaît puisqu'il
+     n'a pas été utilisé. */
+  card.classList.toggle('celebrate', !!viaKb);
+  card.classList.add('okd');
+  // paintSegs() DOIT tourner avant d'attacher le filet transitionend
+  // (spawnConfettiOnSegFill) : c'est lui qui pose la nouvelle valeur de
+  // stroke-dasharray et démarre donc la transition qu'on veut écouter.
+  if(entry){
+    paintSegs();
+    countRemaining(salary-totalEngaged());
+  }
+  if(viaKb && entry){
+    btnValider.classList.add('off');
+    const badge = celebrateCheckShow(CATS[cur].color);
+    spawnConfettiOnSegFill(cur, badge);
+  } else {
+    btnValider.textContent = entry ? 'Super !' : 'Valider';
+  }
+
+  const next = cur+1;
+  /* le clavier ferme de toute façon (Samsung ignore enterkeyhint) : on le ferme
+     immédiatement pour que ça se passe pendant le glissement de carte */
+  if(document.activeElement) document.activeElement.blur();
+
+  setTimeout(()=>{
+    card.classList.remove('celebrate');
+    celebrateCheckHide();
+    card.classList.add('past');
+    if(next < N){
+      cur = next; phase = startPhase(next); setCurrent(cur);
+      /* réouverture automatique du clavier une fois la carte en place —
+         juste après la fin du glissement (.5s), pas ~2s après comme avant,
+         sauf si l'utilisateur a déjà agi — inutile tant qu'il faut d'abord
+         choisir une marque d'abonnement */
+      setTimeout(()=>{
+        if(cur === next && phase === 'amount') inputOf(cur).focus({preventScroll:true});
+      }, 450);
+    }
+    else finale();
+  }, 850);
+}
+
+function validate(viaKb){
+  if(phase === 'locked') return;
+  const c = CATS[cur], card = cards[cur];
+  // en phase "quel abonnement ?" avec au moins un déjà ajouté, il n'y a pas
+  // de montant à valider ici : Valider ("Continuer") clôt directement la
+  // boucle, plutôt que de faire le tour par un montant vide
+  if(phase === 'brand' && card._subs && card._subs.length){
+    finishStep({cat: c, subs: card._subs});
+    return;
+  }
+  // Abonnements : le montant n'est jamais tapé, c'est le prix de base de la
+  // marque (voir BRAND_PRICES) posé au tap de la puce, cf. handler 'brand'.
+  const amt = c.pickBrand ? (card._pendingAmt||0) : parseAmt(inputOf(cur).value);
+  if(!amt){ card.style.animation='none'; return; }
+  // étape montant -> jour (askDay, ex. Loyer/Abonnements) ou fréquence
+  // (askFreq, ex. Courses/Transport) : révèle le bloc suivant sans finir la carte.
+  if(phase === 'amount' && (c.askDay || c.askFreq)){
+    /* les chips n'ont pas besoin du clavier : fermeture immédiate */
+    if(document.activeElement) document.activeElement.blur();
+    card.classList.remove('square');
+    card.classList.add('hasDay');
+    compactStage(c.askFreq ? 'freq' : true);
+    if(c.askDay){
+      phase = 'day';
+      const _db = card.querySelector('.dayBlock');
+      _db.classList.add('show');
+      popInDayChips(_db);
+      btnValider.textContent = t('Choisis un jour','Pick a day');
+      btnValider.classList.remove('off');btnValider.classList.add('disabled');
+    } else {
+      phase = 'freq';
+      card.querySelector('.freqBlock').classList.add('show');
+      btnValider.textContent = t('Continuer','Continue');
+      btnValider.classList.remove('off');btnValider.classList.add('disabled');
+      /* rappel sous chaque carte, affiché dès l'affichage (pas besoin d'avoir
+         choisi la fréquence pour le voir) : le montant saisi est TOUJOURS le
+         budget mensuel (voir monthlyAmount) — "1 fois par mois"/"plusieurs fois
+         par mois" l'affichent donc tel quel, "chaque semaine" affiche son
+         équivalent hebdo (÷4, approximation simple avant que les jours cochés
+         ne soient connus — voir perOccurrenceAmount pour le calcul exact une
+         fois la fréquence choisie). */
+      card.querySelectorAll('.freqBlock .freqCardWrap').forEach(wrap=>{
+        const fq = wrap.querySelector('.freqCard').dataset.freq;
+        wrap.querySelector('.freqCardHint').textContent =
+          fq==='weekly' ? (Math.round(amt/4)+t(' €/semaine',' €/week')) : (amt+t(' €/mois',' €/month'));
+      });
+    }
+    return;
+  }
+  // étape fréquence -> jour du mois (mensuel/plusieurs fois) ou jour de
+  // semaine (chaque semaine) : le tap sur une carte de fréquence bascule
+  // déjà directement phase='day'/'weekday' (voir le handler de clic sur
+  // .freqCard), donc phase n'est plus jamais 'freq' ici.
+  const isMultiDay = phase==='day' && card.querySelector('.dayBlock').classList.contains('multi');
+  const day = (phase === 'day' && !isMultiDay) ? +card.querySelector('.dayBlock .chip.sel').dataset.d : null;
+  const days = isMultiDay ? [...card.querySelectorAll('.dayBlock .chip.sel')].map(b=>+b.dataset.d) : null;
+  if(isMultiDay && !days.length){ card.style.animation='none'; return; }
+  // "chaque semaine" : sélection multiple des jours de la semaine (ex. deux
+  // fois par semaine, lundi + jeudi), comme "plusieurs fois par mois" plus haut.
+  const weekdays = (phase === 'weekday') ? [...card.querySelectorAll('.weekdayBlock .chip.sel')].map(b=>+b.dataset.w) : null;
+  if(weekdays && !weekdays.length){ card.style.animation='none'; return; }
+  const freq = card._freq || (c.askDay ? 'monthly' : undefined);
+  const entry = {cat:c, amount:amt, day, freq};
+  if(weekdays) entry.weekdays = weekdays;
+  if(days) entry.days = days;
+  if(editReturn){ finishEdit(entry, viaKb); return; }
+  if(c.pickBrand){ addSubscriptionEntry(amt, day); return; }
+  finishStep(entry, viaKb);
+}
+
+/* Abonnements : après le montant + jour d'une marque, on ne passe PAS à la
+   catégorie suivante — on revient au choix de marque pour pouvoir en
+   ajouter d'autres (Netflix, puis Spotify, puis...), jusqu'à ce que
+   l'utilisateur tape "Continuer". */
+function addSubscriptionEntry(amt, day){
+  const c = CATS[cur], card = cards[cur];
+  const brand = c.name; // déjà mis à jour au choix de la marque (voir plus bas)
+  if(!card._subs) card._subs = [];
+  card._subs.push({brand, amount:amt, day});
+
+  // la puce elle-même (colorée, voir .brandChip.added) suffit à montrer ce
+  // qui est déjà ajouté : pas de liste récap séparée en dessous, ça prenait
+  // trop de place pour une info déjà visible dans la grille
+  const chip = card.querySelector('.brandChip[data-b="'+brand+'"]');
+  if(chip) chip.classList.add('added');
+
+  // remet le montant/jour à zéro pour la prochaine marque
+  const inp = inputOf(cur);
+  inp.value = ''; inp.style.width = '1ch';
+  card.querySelector('.amtWrap').classList.add('empty','hideUntilBrand');
+  card.classList.remove('hasDay');
+  // 'gone' reposé (pas juste 'show' retiré) : sinon ce dayBlock, encore présent en
+  // display:block/flex, recommence à voler de la hauteur au brandBlock (flex:1) de
+  // la carte carrée qu'on réaffiche juste en dessous — même raison que le template.
+  card.querySelector('.dayBlock').classList.remove('show');
+  card.querySelector('.dayBlock').classList.add('gone');
+  // un abonnement est déjà ajouté : Valider n'a plus rien à valider ici (le
+  // montant est vide, en attente d'une nouvelle marque), il sert plutôt à
+  // clore la boucle "encore un abonnement ?" — remplace l'ancien bouton
+  // "Continuer" séparé
+  btnValider.textContent = t('Continuer','Continue');
+  btnValider.classList.remove('off');
+
+  // retour à l'écran de choix (encore carré/centré, comme au tout premier arrivage) :
+  // l'icône de la carte redevient l'icône générique "Abonnements", le logo
+  // de la marque qu'on vient d'ajouter ne doit rester que le temps de SA saisie
+  CATS[cur].name = 'Abonnements'; // "Netflix" ne doit s'afficher que pendant SA saisie
+  card.querySelector('.cName').textContent = t('Abonnements','Subscriptions');
+  const cIcon = card.querySelector('.cIcon');
+  cIcon.innerHTML = c.icon;
+  cIcon.style.background = c.color;
+  phase = 'brand';
+  card.querySelector('.brandBlock').classList.remove('gone');
+  card.querySelector('.brandBlock').classList.add('show');
+  card.classList.add('square');
+  squareStageAnimated(true); // toujours la carte Abonnements ici (voir commentaire de la fonction)
+
+  // remplissage partiel du donut : somme de tout ce qui a déjà été ajouté ici
+  const total = card._subs.reduce((s,x)=>s+x.amount,0);
+  paintSegs(cur, total);
+  countRemaining(salary-totalEngaged(cur, total));
+}
+
+/* écouteurs délégués sur #flow (pas juste .stage) : le salaire se tape dans
+   #salaryInput, dans l'écran d'intro, hors de .stage. */
+/* tap dans la zone de texte : la carte carrée rétrécit vers le format compact
+   (l'écran d'intro du salaire, lui, reste fixe : pas de carte à rétrécir) */
+flowEl.addEventListener('focusin', e=>{
+  if(!e.target.classList.contains('amt') || cur===0) return;
+  const card = cards[cur];
+  if(card.classList.contains('square')){
+    card.classList.remove('square');
+    compactStage(false);
+  }
+});
+/* clavier fermé sans validation (tap ailleurs, bouton retour Android...) :
+   la carte regonfle. On ignore si une validation/le passage aux chips de
+   jour est en cours (phase déjà changée avant le blur). */
+flowEl.addEventListener('focusout', e=>{
+  if(!e.target.classList.contains('amt') || cur===0) return;
+  setTimeout(()=>{
+    if(phase !== 'amount') return;
+    if(document.activeElement === inputOf(cur)) return;
+    /* un montant déjà présent (ex : édition d'un poste via son icône, voir
+       editCategory) n'est jamais "carte neuve" : la regonfler ferait sortir
+       le bouton Valider de l'écran, sans bouton retour pour s'en sortir */
+    if(parseAmt(inputOf(cur).value)) return;
+    const card = cards[cur];
+    if(!card.classList.contains('square')){
+      card.classList.add('square');
+      squareStage();
+    }
+  }, 30);
+});
+
+btnValider.addEventListener('click', ()=>{
+  // retour visuel immédiat au tap : sur mobile, :active seul est trop
+  // capricieux (et la carte/l'écran peuvent disparaître trop vite pour le
+  // laisser jouer), donc un petit pressé garanti en JS avant de valider
+  btnValider.animate(
+    [{transform:'scale(1)'},{transform:'scale(0.94)'},{transform:'scale(1)'}],
+    {duration:220, easing:'cubic-bezier(0.23,1,0.32,1)'});
+  validate();
+});
+flowEl.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); validate(true); }});
+/* écran salaire : pas de bouton Valider visible (voir setCurrent), donc pas
+   de clavier avec touche Entrée sur iOS (pavé décimal = juste une coche qui
+   ferme le clavier sans envoyer de keydown 'Enter'). Cette coche ne fait
+   qu'un blur : on le détecte pour enchaîner nous-mêmes, comme le ferait Entrée. */
+salaryInput.addEventListener('blur', ()=>{
+  if(cur===0 && phase==='amount' && parseAmt(salaryInput.value)) validate(true);
+});
+flowEl.addEventListener('input', e=>{
+  if(!e.target.classList.contains('amt')) return;
+  const amt = parseAmt(e.target.value);
+  /* la pillule Valider n'apparaît qu'une fois un montant saisi */
+  btnValider.classList.toggle('off', !amt);
+  /* le champ grandit avec la saisie, la zone arrondie reste centrée */
+  e.target.style.width = Math.max(1, e.target.value.length)+'ch';
+  if(e.target===salaryInput){
+    /* grisé tant qu'aucun chiffre n'est saisi (comme le "0" placeholder de
+       l'app), vert une fois un montant réel entré */
+    const col = amt ? '#2e7d4f' : '#cbbf9e';
+    salaryInput.style.color = col;
+    document.querySelector('.salEur').style.color = col;
+  }
+  if(CATS[cur].isIncome) return;
+  /* petit zoom de la zone montant à chaque frappe */
+  e.target.closest('.amtWrap').classList.toggle('empty', !amt);
+  e.target.closest('.amtWrap').animate(
+    [{transform:'scale(1)'},{transform:'scale(1.05)'},{transform:'scale(1)'}],
+    {duration:180, easing:'cubic-bezier(0.23,1,0.32,1)'});
+  /* remplissage live du donut dès la frappe (+ abonnements déjà ajoutés
+     avant celui-ci, pour ne pas perdre leur part pendant la frappe) */
+  const priorSubs = (cards[cur]._subs||[]).reduce((s,x)=>s+x.amount,0);
+  paintSegs(cur, priorSubs+amt);
+  countRemaining(salary-totalEngaged(cur, priorSubs+amt), pctEl, 250);
+});
+flowEl.addEventListener('click', e=>{
+  const card = cards[cur];
+  const chip = e.target.closest('.chip');
+  const freqCard = e.target.closest('.freqCard');
+  if(chip && chip.classList.contains('brandChip') && phase==='brand'){
+    if(chip.classList.contains('added')) return; // déjà ajouté, on ne repasse pas dessus
+    card.querySelectorAll('.brandChip').forEach(b=>b.classList.remove('sel'));
+    chip.classList.add('sel');
+    chip.classList.remove('pulse');
+    void chip.offsetWidth;                     // relance l'animation même si déjà jouée sur cette puce
+    chip.classList.add('pulse');
+    /* retire la classe une fois le pulse terminé : sinon elle reste sur la
+       puce, et la prochaine fois que .brandBlock redevient visible (marque
+       suivante), l'animation CSS repart de zéro sur TOUTES les puces déjà
+       ajoutées qui l'ont encore — comme si on la retapait à chaque fois. */
+    setTimeout(()=>chip.classList.remove('pulse'), 500);
+    const brand = chip.dataset.b;
+    CATS[cur].name = brand;                    // affiché partout ensuite (carte, calendrier, liste)
+    card.querySelector('.cName').textContent = brand;
+    // l'icône générique de la carte (le poste "Abonnements") cède la place
+    // au vrai logo de la marque choisie, comme dans la grille de sélection
+    const cIcon = card.querySelector('.cIcon');
+    cIcon.innerHTML = brandIconHtml(brand, 38);
+    cIcon.style.background = '#fff';
+    // le prix est connu (BRAND_PRICES) : pas de montant à taper, on file
+    // directement au choix du jour de prélèvement
+    const amt = BRAND_PRICES[brand] || 0;
+    card._pendingAmt = amt;
+    // laisse le pulse se voir avant que le bloc entier ne s'efface
+    setTimeout(()=>{
+      card.querySelector('.brandBlock').classList.remove('show');
+      card.querySelector('.brandBlock').classList.add('gone');
+      phase = 'day';
+      card.classList.remove('square');
+      card.classList.add('hasDay');
+      compactStage(true);
+      // remove('gone') d'abord : ce dayBlock démarre 'gone' pour les cartes
+      // pickBrand (voir le template plus haut) — sans ça 'gone' (display:none)
+      // l'emporterait sur 'show' au même niveau de spécificité (déclaré après
+      // dans le CSS), et le calendrier resterait invisible après la marque choisie.
+      card.querySelector('.dayBlock').classList.remove('gone');
+      card.querySelector('.dayBlock').classList.add('show');
+      btnValider.textContent = t('Choisis un jour','Pick a day');
+      btnValider.classList.remove('off');btnValider.classList.add('disabled');
+      const priorSubs = (card._subs||[]).reduce((s,x)=>s+x.amount,0);
+      paintSegs(cur, priorSubs+amt);
+      countRemaining(salary-totalEngaged(cur, priorSubs+amt), pctEl, 250);
+    }, 260);
+    return;
+  }
+  /* fréquence : pas d'écran/carte séparé pour choisir le(s) jour(s) — dès le
+     tap sur une carte de fréquence, le rectangle blanc s'allonge (transition
+     height déjà posée sur .stage) et le picker correspondant apparaît en
+     fondu dans l'espace ainsi libéré, sans étape "Continuer" intermédiaire.
+     "Chaque semaine" garde les 3 cartes de fréquence visibles au-dessus des
+     jours (assez compact pour ça) ; "1 fois par mois"/"Plusieurs fois par
+     mois" les remplacent par le calendrier (31 jours, pas la place pour les
+     deux à la fois). */
+  if(freqCard && (phase==='freq' || phase==='weekday' || phase==='day')){
+    card.querySelectorAll('.freqCard.sel').forEach(b=>b.classList.remove('sel'));
+    freqCard.classList.add('sel');
+    const freq = freqCard.dataset.freq;
+    const alreadyGrown = phase !== 'freq';
+    const wdBlock = card.querySelector('.weekdayBlock');
+    const dayBlock = card.querySelector('.dayBlock');
+    card._freq = freq;
+    if(freq === 'weekly'){
+      phase = 'weekday';
+      /* redevient visible si on venait de "1 fois par mois"/"plusieurs fois
+         par mois" (qui, eux, le masquent pour laisser la place au calendrier). */
+      card.querySelector('.freqBlock').classList.remove('gone');
+      card.querySelector('.freqBlock').classList.add('show');
+      dayBlock.classList.add('gone');
+      dayBlock.classList.remove('show');
+      dayBlock.querySelectorAll('.chip.sel').forEach(b=>b.classList.remove('sel'));
+      if(!alreadyGrown) compactStage(true);
+      wdBlock.classList.remove('gone');
+      /* force le navigateur à peindre l'état de départ (opacity:0, juste
+         retiré de display:none) avant d'ajouter 'show' : sans ce reflow, les
+         deux changements de classe sont regroupés dans le même frame et la
+         transition CSS ne joue pas, le bloc apparaît d'un coup. Inutile si le
+         rectangle est déjà grand (on ne fait que remplacer le calendrier par
+         les jours de semaine, pas de fondu à rejouer sur .stage). */
+      if(!alreadyGrown) void wdBlock.offsetHeight;
+      wdBlock.classList.add('show');
+      const n = wdBlock.querySelectorAll('.chip.sel').length;
+      btnValider.textContent = n>0 ? (n+t(' jour',' day')+(n>1?'s':'')+t(' par semaine',' per week')) : t('Choisis un jour','Pick a day');
+      btnValider.classList.remove('off');
+      btnValider.classList.toggle('disabled', n===0);
+    } else {
+      phase = 'day';
+      wdBlock.classList.add('gone');
+      wdBlock.classList.remove('show');
+      wdBlock.querySelectorAll('.chip.sel').forEach(b=>b.classList.remove('sel'));
+      dayBlock.classList.toggle('multi', freq==='multi');
+      dayBlock.querySelector('.dayQ').textContent = freq==='multi' ? t('Quels jours du mois ?','Which days of the month?') : t('Quel jour du mois ?','Which day of the month?');
+      /* "1 fois par mois"/"plusieurs fois par mois" n'ont pas la place de
+         garder les 3 cartes de fréquence affichées en même temps que le
+         calendrier : le bloc fréquence sort du flux avant que le calendrier
+         n'apparaisse. */
+      card.querySelector('.freqBlock').classList.add('gone');
+      card.querySelector('.freqBlock').classList.remove('show');
+      if(!alreadyGrown) compactStage(true);
+      dayBlock.classList.remove('gone');
+      if(!alreadyGrown) void dayBlock.offsetHeight;
+      dayBlock.classList.add('show');
+      popInDayChips(dayBlock);
+      btnValider.classList.remove('off');
+      if(freq==='multi'){
+        const n = dayBlock.querySelectorAll('.chip.sel').length;
+        btnValider.textContent = n>0 ? (n+' jour'+(n>1?'s':'')+' par mois') : 'Choisis au moins un jour';
+        btnValider.classList.toggle('disabled', n===0);
+      } else {
+        btnValider.textContent = t('Choisis un jour','Pick a day');
+        btnValider.classList.add('disabled');
+      }
+    }
+    return;
+  }
+  /* "Plusieurs fois par mois" : le calendrier passe en sélection multiple —
+     chaque jour coché/décoché reste sur place (pas de validation auto, il
+     faut appuyer sur Valider une fois tous les jours choisis, contrairement
+     au jour unique du mensuel qui enchaîne directement). */
+  if(chip && phase==='day' && card.querySelector('.dayBlock').classList.contains('multi')){
+    chip.classList.toggle('sel');
+    const n = card.querySelectorAll('.dayBlock .chip.sel').length;
+    btnValider.textContent = n>0 ? (n+' jour'+(n>1?'s':'')+' par mois') : 'Choisis au moins un jour';
+    btnValider.classList.toggle('disabled', n===0);
+    btnValider.classList.remove('off');
+    return;
+  }
+  /* jour du mois (mensuel, sélection unique) : aucun jour pré-sélectionné —
+     le bouton Continuer démarre grisé ("Choisis un jour") et ne se colore
+     qu'au premier tap sur une puce ; il faut ensuite appuyer dessus pour
+     valider (pas d'enchaînement automatique, contrairement au jour de la
+     semaine ci-dessous). */
+  if(chip && phase==='day'){
+    const prevSel = chip.parentElement.querySelector('.sel');
+    if(prevSel) prevSel.classList.remove('sel');
+    chip.classList.add('sel');
+    btnValider.textContent = t('Le '+chip.dataset.d+' de chaque mois','On the '+chip.dataset.d+' each month');
+    btnValider.classList.remove('disabled','off');
+    return;
+  }
+  /* jour(s) de la semaine : sélection multiple (ex. lundi + jeudi pour deux
+     fois par semaine), même logique que "plusieurs fois par mois" — pas de
+     validation auto, juste le libellé du bouton qui reflète le nombre de
+     jours cochés (pas de message d'aide séparé sur le montant). */
+  if(chip && phase==='weekday'){
+    chip.classList.toggle('sel');
+    const wdBlock = card.querySelector('.weekdayBlock');
+    const n = wdBlock.querySelectorAll('.chip.sel').length;
+    btnValider.textContent = n>0 ? (n+t(' jour',' day')+(n>1?'s':'')+t(' par semaine',' per week')) : t('Choisis un jour','Pick a day');
+    btnValider.classList.toggle('disabled', n===0);
+    btnValider.classList.remove('off');
+    return;
+  }
+  const skipBtn = e.target.closest('.cSkip');
+  if(skipBtn && phase!=='locked'){
+    // finishStep() enchaîne aussitôt sur la transition de sortie de la carte —
+    // appelé dans le même tick que le tap, le fond marron/l'animation n'auraient
+    // jamais le temps d'être peints avant que la carte ne parte (même symptôme
+    // que le jour du mois qui ne se colorait pas avant la fermeture du bloc,
+    // cf. commit sur le calendrier d'abonnement). La classe .pressed (au lieu
+    // du seul :active, qui disparaît dès le doigt levé) pilote elle-même sa
+    // durée d'affichage (.28s, voir CSS) — mais finishStep() n'a pas besoin
+    // d'attendre la fin de CETTE animation-là pour enchaîner : juste assez
+    // pour que l'œil capte le début du changement (couleur + amorce du
+    // rebond) avant que la carte ne parte, sans ralentir la suite du flux.
+    skipBtn.classList.add('pressed');
+    // Si la saisie de l'étape courante est complète (le bouton Valider du bas
+    // est actionnable ET il y a bien un montant), la flèche agit comme lui —
+    // valider/continuer — au lieu de jeter la saisie en sautant la carte.
+    // Saisie incomplète (rien tapé, jour/fréquence pas choisis...) : vrai saut.
+    const _card=cards[cur];
+    const _amtOk = phase!=='amount'
+      || (CATS[cur].pickBrand ? (_card&&_card._pendingAmt>0) : parseAmt(inputOf(cur).value)>0);
+    const _btnReady = !btnValider.classList.contains('disabled') && !btnValider.classList.contains('off');
+    const _act = (_btnReady && _amtOk) ? ()=>validate() : ()=>finishStep(null);
+    setTimeout(_act, 100);
+    return;
+  }
+  /* tap n'importe où sur l'écran d'intro (salaire) ou la carte courante = focus du champ */
+  if(cur===0 && phase==='amount' && e.target.closest('#salaryIntro')){ inputOf(0).focus({preventScroll:true}); return; }
+  const cardEl = e.target.closest('.card');
+  if(cardEl === cards[cur] && phase === 'amount') inputOf(cur).focus({preventScroll:true});
+});
+
+/* le clavier doit pousser tout l'écran vers le haut (pas juste rester dessous) :
+   même technique que _attachKbTracker dans l'app (index.html) — on mesure
+   l'espace réellement visible au-dessus du clavier via visualViewport et on
+   y contraint la hauteur de .app, ce qui force tout le flex (dots, texte,
+   montant, bouton Valider) à se recaser dedans plutôt que de se faire
+   recouvrir. Plus fiable que compter sur le "resizes-content" du viewport
+   seul, qu'iOS ignore et qu'Android n'applique pas toujours à temps. */
+(function attachAppKbTracker(){
+  if(!window.visualViewport) return;
+  const app = document.querySelector('.app');
+  const onVV = ()=>{
+    const vv = window.visualViewport;
+    const kb = Math.max(0, window.innerHeight-(vv.height+vv.offsetTop));
+    app.style.height = kb>40 ? vv.height+'px' : '';
+  };
+  window.visualViewport.addEventListener('resize', onVV);
+  window.visualViewport.addEventListener('scroll', onVV);
+  onVV();
+})();
+
+/* Le splash de bienvenue (voir #welcomeScreen) s'affiche seul d'abord ;
+   setCurrent(0) n'est déclenché qu'au moment où il commence à s'effacer, pour
+   que l'icône salaire + "Pour commencer, inscris ton salaire" jouent leur
+   propre fondu d'entrée (fadeInScreen dans setCurrent) pendant que le splash
+   disparaît, au lieu d'être déjà visibles en dessous. */
+obTrack('welcome', 0); // funnel : arrivée sur l'onboarding (splash affiché)
+fadeInScreen(document.getElementById('welcomeScreen'), [0,200,1300]); // icône, puis titre, puis sous-texte (pause marquée avant le sous-texte)
+setTimeout(()=>{
+  const welcome = document.getElementById('welcomeScreen');
+  welcome.classList.add('out');
+  setCurrent(0);
+  setTimeout(()=>welcome.remove(), 350);
+}, 3000);
+
+/* ═══ finale : donut proportionnel → barre → calendrier ═══ */
+function finale(){
+  obTrack('finale', 8); // funnel : écran récap final atteint
+  const now = new Date();
+  const nDays = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+  // weekdayDaysInMonth/occurrenceCount : voir plus haut (partagés avec
+  // paintSegs/totalEngaged, pour que le total pendant la saisie et le
+  // calendrier final s'accordent toujours).
+  const done = results.filter(Boolean);
+  const expenses = done.filter(r=>!r.cat.isIncome);
+  // un résultat "Abonnements" est {cat, subs:[...]} : plusieurs marques
+  // partagent la même part de donut/barre (la couleur de la catégorie),
+  // mais chacune garde son propre nom/logo/jour pour le calendrier.
+  const expAmt = r => r.subs ? r.subs.reduce((s,x)=>s+x.amount,0) : monthlyAmount(r);
+  const totalExp = expenses.reduce((s,r)=>s+expAmt(r),0);
+  const denom = salary > 0 ? salary : totalExp;
+  const flow = document.getElementById('flow');
+  const fin = document.getElementById('fin');
+  const fw = document.getElementById('finDonutWrap');
+  const finSegs = document.getElementById('finSegs');
+  const bar = document.getElementById('bar');
+  const barIcons = document.getElementById('barIcons');
+
+  const dayItems = [];
+  expenses.forEach(r=>{
+    if(r.subs){
+      r.subs.forEach(s=>dayItems.push({name:s.brand, amount:s.amount, day:s.day, color:r.cat.color, logo:s.brand, icon:null, isIncome:false}));
+    } else if(r.freq==='weekly'){
+      // le budget mensuel réparti sur chaque occurrence réelle des jours de
+      // semaine cochés (voir perOccurrenceAmount) — une entrée calendrier
+      // distincte par occurrence.
+      const per = perOccurrenceAmount(r);
+      (r.weekdays||[]).forEach(wd=>{
+        weekdayDaysInMonth(wd).forEach(d=>dayItems.push({name:r.cat.name, amount:per, day:d, color:r.cat.color, logo:null, icon:r.cat.icon, isIncome:false}));
+      });
+    } else if(r.freq==='multi'){
+      // idem, réparti sur les jours cochés dans le calendrier.
+      const per = perOccurrenceAmount(r);
+      (r.days||[]).forEach(d=>dayItems.push({name:r.cat.name, amount:per, day:d, color:r.cat.color, logo:null, icon:r.cat.icon, isIncome:false}));
+    } else {
+      dayItems.push({name:r.cat.name, amount:r.amount, day:r.day, color:r.cat.color, logo:null, icon:r.cat.icon, isIncome:false});
+    }
+  });
+  // salaire affiché lui aussi dans le calendrier (montant en +), posé sur le
+  // 30 du mois comme les autres postes sans jour choisi (voir plus bas)
+  if(salary > 0){
+    dayItems.push({name:t('Salaire','Salary'), amount:salary, day:Math.min(30,nDays), color:'#2e7d4f', logo:null, icon:CATS[0].icon, isIncome:true});
+  }
+
+  try{ localStorage.setItem('kk_onb2', JSON.stringify({salary,
+    items: dayItems.map(r=>({name:r.name,amount:r.amount,day:r.day}))})); }catch(e){}
+
+  /* Fait apparaître ces postes dans "Dépenses récurrentes"/"Salaire" du mois
+     en cours dès l'entrée dans l'app, en remplaçant tout historique
+     kk_budget_months résiduel d'un run précédent de l'onboarding — mais sans
+     toucher ni aux comptes (kk_accs) ni aux transactions (kk_txns/kk_wealth)
+     déjà là : pour la démo TikTok, l'app doit pouvoir déjà contenir des
+     comptes/mouvements "vécus" après l'onboarding. Écrit sous une clé "en
+     attente" (kk_pending_onboarding_budget) plutôt que directement dans
+     kk_budget_months : si ce navigateur a déjà un compte invité d'une visite
+     précédente, index.html va d'abord PULL ses données cloud au chargement
+     (voir enterApp()), ce qui écraserait sinon cette écriture locale avant
+     même le premier rendu — index.html applique cette clé en attente une
+     fois ce pull terminé (voir _applyPendingOnboardingData). Un poste
+     "chaque semaine"/"plusieurs fois par mois" n'a pas d'équivalent récurrent
+     dans ce schéma (juste jour du mois + mois ou "tous les mois") : on pose
+     une entrée par occurrence réelle CE mois-ci (monthIdx figé) plutôt que
+     d'inventer un jour arbitraire "tous les mois". Un montant/jour unique
+     (loyer, abonnement, dépense mensuelle) reste lui vraiment récurrent
+     (monthIdx:-1).
+  */
+  try{
+    // Les montants saisis ici sont toujours en euros (€ affiché en dur dans
+    // tout l'onboarding), mais kk_budget_months stocke ses montants dans
+    // l'unité de base interne de l'app ("PHP", taux 1 — voir CURRENCIES dans
+    // index.html), convertie à l'affichage via toCurr/fromCurr selon la
+    // devise active. Sans cette conversion, un montant "5" est réinterprété
+    // comme 5 unités de base et affiché ~0€ une fois reconverti en euros.
+    const EUR_RATE = 0.01404;
+    const toBase = eur => eur/EUR_RATE;
+    // Les noms de poste d'ici ("Restaurant", "Transport", "Shopping",
+    // "Abonnements") n'existent pas tels quels dans les catégories de l'app
+    // (DEFAULT_CATS d'index.html : "Restaurants", "Transports en commun",
+    // "Shopping divers"...) : posés en `cat` sans traduction, l'app les
+    // traitait comme non catégorisés — pas d'icône, pastille "à compléter".
+    // Seul "Loyer" matchait par coïncidence. Chaque poste part donc vers sa
+    // vraie catégorie ; les marques d'abonnement vers la plus parlante.
+    const APP_CAT = {rent:'Loyer', transport:'Transports en commun', groceries:'Courses', restaurant:'Restaurants', shopping:'Shopping divers'};
+    const appCatOf = r => APP_CAT[r.cat.id] || r.cat.name;
+    const subCatOf = brand =>
+      (brand==='Basic Fit'||brand==='Fitness Park') ? 'Sport'
+      : (brand==='PlayStation Plus'||brand==='Xbox Game Pass') ? 'Jeux'
+      : (brand==='iCloud+'||brand==='Google One'||brand==='Microsoft 365'||brand==='ChatGPT Plus') ? 'Logiciels'
+      : 'Streaming';
+    const planned = [];
+    expenses.forEach(r=>{
+      if(r.subs){
+        r.subs.forEach(s=>planned.push({label:s.brand, amount:toBase(s.amount), day:s.day||1, monthIdx:-1, cat:subCatOf(s.brand), acc:''}));
+      } else if(r.freq==='weekly'){
+        const per = toBase(perOccurrenceAmount(r));
+        (r.weekdays||[]).forEach(wd=>{
+          weekdayDaysInMonth(wd).forEach(d=>planned.push({label:r.cat.name, amount:per, day:d, monthIdx:now.getMonth(), cat:appCatOf(r), acc:''}));
+        });
+      } else if(r.freq==='multi'){
+        const per = toBase(perOccurrenceAmount(r));
+        (r.days||[]).forEach(d=>planned.push({label:r.cat.name, amount:per, day:d, monthIdx:now.getMonth(), cat:appCatOf(r), acc:''}));
+      } else {
+        planned.push({label:r.cat.name, amount:toBase(r.amount), day:r.day||1, monthIdx:-1, cat:appCatOf(r), acc:''});
+      }
+    });
+    const baseSalary = toBase(salary);
+    // Le salaire ne part QUE dans le champ salary/salaryDay (comme le fait
+    // l'UI budget de l'app elle-même) : l'écrire AUSSI en bonus 'Salaire'
+    // le faisait apparaître deux fois le même jour sur le calendrier ET le
+    // double-comptait dans les revenus du mois (configuredIncome = salary +
+    // bonusTotal côté index.html).
+    const monthKey = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+    localStorage.setItem('kk_pending_onboarding_budget', JSON.stringify({[monthKey]:{salary:baseSalary, salaryDay:27, bonuses:[], planned}}));
+  }catch(e){}
+
+  flow.classList.add('gone');
+  fin.classList.add('on');
+  fin.scrollTop = 0; // #fin peut hériter un scroll résiduel de l'écran précédent : repart toujours du haut
+
+  /* donut en parts du salaire, tracé en balayage horaire ; le vide = reste à vivre.
+     Même mécanique que l'anneau du salaire (.salRing .salProg) : chaque part se
+     dessine réellement via une transition stroke-dasharray (même easing
+     --ease-slide), au lieu d'être révélée derrière un masque. Budget total
+     generous (2.2s pour un tour complet) et MIN_SEG_S : à 0.9s, une part de
+     15% n'aurait que ~135ms pour se dessiner sans ce plancher, trop court pour
+     être perçu comme un remplissage plutôt qu'un pop instantané. Chaque part
+     démarre après que la précédente a fini (délai cumulé = temps réel écoulé,
+     pas la position proportionnelle brute) pour rester strictement séquentiel
+     malgré cet allongement.
+     MIN_SEG_S doit aussi laisser le temps à l'icône du centre (#finSegIcon)
+     de finir son fondu : elle prend déjà 0,18s pour disparaître + 0,18s pour
+     réapparaître (voir plus bas) = 0,36s. À l'ancien plancher (0,35s), les
+     petites parts (Transport/Restaurant/Shopping, souvent sous les ~15% qui
+     tombent sur ce plancher) enchaînaient leur icône si vite que le fondu
+     de sortie de la suivante coupait celui d'entrée de la précédente en
+     plein milieu — rendu perçu comme une icône cassée/pas la bonne le temps
+     d'une frame plutôt qu'un simple clignotement. Plancher remonté à 0,5s
+     pour laisser un vrai temps de lecture (confirmé en simulant la
+     séquence avec une horloge JS virtuelle : chaque icône garde
+     maintenant ≥300ms pleinement visible avant le fondu suivant, contre un
+     chevauchement possible avant). */
+  const DONUT_FILL_S = 2.2;
+  const MIN_SEG_S = 0.5;
+  // Un bout rond dépasse la longueur mathématique du tracé de stroke-width/2
+  // de CHAQUE côté, converti ici en "% de pathLength" (r=50 -> circonférence
+  // réelle 2*π*50, mappée sur pathLength=100 : 1% = π px), soit ~2,4%. Sert
+  // de SEUIL (voir la boucle de tracé plus bas) : une part n'obtient des
+  // bouts ronds que si elle est assez longue (> 2× ce débordement) pour les
+  // absorber — en dessous, les caps sont plus gros que la part et bavent sur
+  // les voisines. Plus aucun raccourcissement de longueur nulle part : la
+  // dernière part (fermeture de la boucle) reste à bout plat sur sa vraie
+  // longueur, donc se referme pile à 100%.
+  const CAP_OVERSHOOT_PCT = (15/2) / (Math.PI*2*50/100);
+  let acc = 0, delay = 0;
+  // Icône affichée au centre du donut pendant que chaque part se dessine — un
+  // par part visible (+ l'épargne restante), consommé au bon délai plus bas.
+  const segIconQueue = [];
+  const addSeg = (color,len,icon)=>{
+    const dur = len > 0 ? Math.max(len/100*DONUT_FILL_S, MIN_SEG_S) : 0;
+    const s = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    s.setAttribute('cx',60); s.setAttribute('cy',60); s.setAttribute('r',50);
+    s.setAttribute('pathLength',100); s.setAttribute('stroke', color);
+    s.style.strokeDasharray = '0 100';
+    s.setAttribute('stroke-dashoffset', -acc);
+    // Bout plat tant que le tracé n'a pas commencé à se dessiner : à 0 de longueur,
+    // un bout arrondi se dessine quand même comme un point (même souci que paintSegs
+    // ci-dessus), donc TOUTES les parts pas encore engagées s'affichaient d'un coup
+    // en autant de points colorés dispersés sur le cercle, avant même que le
+    // remplissage n'atteigne leur position. Le rond n'est activé qu'au moment réel
+    // où le segment commence son tracé (voir le setTimeout plus bas).
+    s.style.strokeLinecap = 'butt';
+    s.style.transition = 'stroke-dasharray '+dur+'s var(--ease-slide) '+delay+'s';
+    finSegs.appendChild(s);
+    if(len>0)segIconQueue.push({delay,dur,color,icon,s,len});
+    acc += len; delay += dur;
+  };
+  expenses.forEach(r=>{
+    const len = Math.max(0, Math.min(expAmt(r)/denom*100, 100-acc));
+    addSeg(r.cat.color, len, r.cat.icon);
+  });
+  const chargesDrawS = delay; // durée du tracé des seules dépenses, avant l'épargne — voir countAmount plus bas
+  // Épargne restante : sans ça le donut s'arrêtait au total des charges et le
+  // reste du cercle restait vide — comme si le salaire au-delà des dépenses
+  // n'existait pas. Même vert que la part correspondante de la barre plus bas.
+  const savedAmt = Math.max(0, salary - totalExp);
+  addSeg('#3a6b4a', Math.max(0, 100-acc), CATS[0].icon);
+  const spentPct = Math.round(Math.min(acc,100));
+  const totalDrawS = delay;
+  const finSegIconEl = document.getElementById('finSegIcon');
+  segIconQueue.forEach(it=>{
+    setTimeout(()=>{
+      finSegIconEl.style.opacity = '0';
+      setTimeout(()=>{
+        finSegIconEl.style.background = it.color;
+        finSegIconEl.innerHTML = it.icon;
+        finSegIconEl.style.opacity = '1';
+      },180);
+    }, it.delay*1000);
+  });
+
+  /* barre positionnée à sa place finale dans le layout ; on la fait partir du centre via transform.
+     Composition des dépenses entre elles (dans l'ordre saisi, loyer en premier etc.), comme la
+     barre du calendrier de l'app, puis l'épargne restante (salaire - charges) en vert à droite. */
+  let barLeftPct = 0;
+  const barIconData = [];
+  expenses.forEach(r=>{
+    const d = document.createElement('div');
+    const wPct = expAmt(r)/denom*100;
+    d.style.width = wPct+'%'; d.style.background = r.cat.color;
+    bar.appendChild(d);
+    barIconData.push({leftPct: barLeftPct + wPct/2, color: r.cat.color, icon: r.cat.icon});
+    barLeftPct += wPct;
+  });
+  if(savedAmt > 0){
+    const d = document.createElement('div');
+    const savedWPct = savedAmt/denom*100;
+    d.style.width = savedWPct+'%'; d.style.background = '#3a6b4a';
+    bar.appendChild(d);
+    // icône salaire centrée sur la part épargne restante, même traitement que
+    // les icônes de catégorie (voir barIconData plus bas)
+    barIconData.push({leftPct: barLeftPct + savedWPct/2, color: '#3a6b4a', icon: CATS[0].icon});
+  }
+  /* icônes au-dessus du milieu de chaque part ; si deux tombent trop près l'une
+     de l'autre, on les empile un peu (comme les badges du calendrier plus bas). */
+  barIconData.forEach(it=>{
+    const b = document.createElement('div');
+    b.className = 'barIcon';
+    b.style.left = it.leftPct+'%';
+    b.style.background = it.color;
+    b.innerHTML = it.icon;
+    barIcons.appendChild(b);
+  });
+
+  /* récap chiffré : charges totales vs épargne restante, chacune avec sa
+     part du salaire (denom = salaire, ou total des charges si pas de salaire) */
+  const finSummary = document.getElementById('finSummary');
+  const chargesPct = Math.round(totalExp/denom*100);
+  const savedPct = Math.max(0, 100-chargesPct);
+  finSummary.innerHTML = `
+    <div class="stat">
+      <div class="statLbl">${t('Dépenses','Expenses')}</div>
+      <div class="statAmt">${Math.round(totalExp)} €</div>
+      <div class="statPct">${chargesPct}%</div>
+    </div>
+    <div class="stat savings">
+      <div class="statLbl">${t('Épargne','Savings')}</div>
+      <div class="statAmt">${Math.round(savedAmt)} €</div>
+      <div class="statPct">${savedPct}%</div>
+    </div>`;
+
+  /* calendrier du mois courant, semaine qui commence lundi : même grille et
+     même case de jour (chip d'icône 4px, pas un rond) que renderUpcomingCalGrid
+     dans l'app. Postes sans jour choisi (tout sauf les abonnements) : posés
+     sur la fin du mois (25, 26, 27, 28, 29…), les icônes/logos apparaîtront
+     une par une. */
+  const grid = document.getElementById('calGrid');
+  (LANG==='fr'?['L','M','M','J','V','S','D']:['M','T','W','T','F','S','S']).forEach(h=>{
+    const e = document.createElement('div'); e.className='calHead'; e.textContent=h; grid.appendChild(e);
+  });
+  const first = new Date(now.getFullYear(), now.getMonth(), 1);
+  const offset = (first.getDay()+6)%7;
+  const todayD = now.getDate();
+  for(let i=0;i<offset;i++) grid.appendChild(document.createElement('div'));
+  const dayBadgeEls = {};
+  const dayAmtEls = {};
+  for(let d=1;d<=nDays;d++){
+    const e = document.createElement('div'); e.className='calDay';
+    if(d===todayD) e.classList.add('today');
+    e.innerHTML = '<span class="calDayTop"><span class="calDayNum">'+d+'</span><span class="calBadges"></span></span><span class="calDayAmt"></span>';
+    grid.appendChild(e);
+    dayBadgeEls[d] = e.querySelector('.calBadges');
+    dayAmtEls[d] = e.querySelector('.calDayAmt');
+  }
+  const usedDays = new Set(dayItems.filter(r=>r.day).map(r=>r.day));
+  const pool = [...new Set([25,26,27,28,29,24,23,22,30,31,21].map(d=>Math.min(d,nDays)))];
+  let poolPtr = 0;
+  dayItems.forEach(r=>{
+    if(!r.day){
+      while(poolPtr<pool.length && usedDays.has(pool[poolPtr])) poolPtr++;
+      r.day = pool[poolPtr]; usedDays.add(r.day); poolPtr++;
+    }
+  });
+  // montant net du jour (charges en -, salaire en +), même convention couleur
+  // que renderUpcomingCalGrid dans l'app (vert #3a6b4a / rouge #c03030)
+  const fmtCalAmt = n => Math.round(Math.abs(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ')+'€';
+  const dayNet = {};
+  dayItems.forEach(r=>{ dayNet[r.day] = (dayNet[r.day]||0) + (r.isIncome ? r.amount : -r.amount); });
+  Object.entries(dayNet).forEach(([d,net])=>{
+    const el = dayAmtEls[d]; if(!el || Math.abs(net)<0.005) return;
+    const pos = net >= 0;
+    el.style.color = pos ? '#3a6b4a' : '#c03030';
+    el.textContent = (pos?'+':'-')+fmtCalAmt(net);
+  });
+  const badgeQueue = [];
+  // révélées dans l'ordre du calendrier (jour 1, 2, 3…) et non l'ordre de
+  // saisie des postes, pour balayer la grille de gauche à droite / haut en
+  // bas comme une lecture normale, plutôt que de sauter d'une rangée à
+  // l'autre au hasard de l'ordre des catégories.
+  [...dayItems].sort((a,b)=>a.day-b.day).forEach(r=>{
+    const container = dayBadgeEls[r.day]; if(!container) return;
+    const idx = container.children.length;
+    const b = document.createElement('span'); b.className='calBadge';
+    b.style.left = (idx*7)+'px'; b.style.zIndex = 10-idx;
+    if(r.logo && BRAND_LOGOS[r.logo]){ b.innerHTML = brandIconHtml(r.logo, 18); }
+    else { b.style.background = r.color; b.innerHTML = r.icon; }
+    container.appendChild(b);
+    container.style.width = (18+idx*7)+'px';
+    badgeQueue.push(b);
+  });
+
+  /* récap textuel sous le calendrier, façon liste "Loyer · 780€" : un poste
+     = une ligne (montant MENSUEL total, pas par occurrence), contrairement
+     à dayItems qui contient une entrée par occurrence calendrier pour les
+     postes hebdo/2 semaines. Plafonné pour ne pas pousser le CTA hors écran. */
+  const recapRows = [];
+  expenses.forEach(r=>{
+    if(r.subs) r.subs.forEach(s=>recapRows.push({name:s.brand, amount:s.amount, color:r.cat.color, logo:s.brand, icon:null}));
+    else recapRows.push({name:r.cat.name, amount:expAmt(r), color:r.cat.color, logo:null, icon:r.cat.icon});
+  });
+  // plus gros poste en premier, plutôt que l'ordre de saisie
+  recapRows.sort((a,b)=>b.amount-a.amount);
+  const recapBox = document.getElementById('recapBox');
+  const RECAP_MAX = 10;
+  const recapFills = [];
+  recapRows.slice(0, RECAP_MAX).forEach(r=>{
+    const row = document.createElement('div'); row.className = 'recapRow';
+    const iconHtml = (r.logo && BRAND_LOGOS[r.logo])
+      ? brandIconHtml(r.logo, 32)
+      : '<div class="recapIcon" style="background:'+r.color+'">'+r.icon+'</div>';
+    const pct = Math.round(r.amount/denom*100);
+    // montant et pourcentage dans la couleur de la catégorie (pas en noir) —
+    // seul le nom du poste reste en couleur neutre, pour rester lisible.
+    row.innerHTML = '<div class="recapTop">'+iconHtml+'<span class="recapName">'+r.name+'</span>'+
+      '<span class="recapAmtCol"><span class="recapAmt" style="color:'+r.color+'">'+Math.round(r.amount)+' €</span>'+
+      '<span class="recapPct" style="color:'+r.color+'">'+pct+'%</span></span></div>'+
+      '<div class="recapBarTrack"><div class="recapBarFill" style="background:'+r.color+'"></div></div>';
+    recapBox.appendChild(row);
+    recapFills.push({el:row.querySelector('.recapBarFill'), pct:Math.min(100,pct)});
+  });
+  // Barre à 0% à la création (voir .recapBarFill), remplie juste après pour que
+  // la transition width se joue au lieu de démarrer déjà pleine.
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    recapFills.forEach(f=>{ f.el.style.width = f.pct+'%'; });
+  }));
+  if(recapRows.length > RECAP_MAX){
+    const more = document.createElement('div'); more.className = 'recapMore'; more.textContent = '···';
+    recapBox.appendChild(more);
+  }
+
+  /* séquence */
+  const finPctEl = document.getElementById('finPctAmt');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    /* 1. le donut se dessine et compte jusqu'au total des charges (pas un
+       pourcentage), chaque part via sa propre transition stroke-dasharray
+       (posée à la création, voir plus haut) — même mécanique que l'anneau
+       du salaire. */
+    fw.classList.add('on');
+    const lastSeg = segIconQueue[segIconQueue.length-1];
+    segIconQueue.forEach(it=>{
+      it.s.style.strokeDasharray = it.len+' '+(100-it.len);
+      /* Caps ronds : un cap déborde de CAP_OVERSHOOT_PCT (~2,4% de
+         circonférence) de CHAQUE côté du tracé. Deux cas où ça casse tout
+         (capture utilisateur : salaire élevé + petites dépenses, paquet de
+         couleurs superposées en haut du donut) :
+         - micro-part (1-2%, plus petite que son propre débordement) : ses
+           deux caps se chevauchent déjà l'un l'autre et bavent par-dessus
+           les voisines. Bout plat en dessous du seuil CAP_OVERSHOOT_PCT —
+           tranches nettes, comme le donut de l'app. Seuil à 1×, pas 2× :
+           à 2×, une part "normale" mais modeste (ex. Abonnements, souvent
+           quelques % du salaire) tombait encore dessous et ressortait à
+           bout plat au milieu de parts rondes, incohérent alors qu'elle
+           n'a pas besoin de cette protection (ses propres caps ne se
+           chevauchent pas entre eux dès qu'elle dépasse 1×).
+         - la DERNIÈRE part (l'épargne, qui referme la boucle pile sur le
+           début de la première) : son cap avant déborde par-dessus le haut
+           du cercle à la fermeture, et son cap ARRIÈRE bave en arrière sur
+           la part précédente (fatal quand celle-ci est une micro-part
+           entièrement recouverte). Bout plat sur toute sa longueur : elle
+           part à ras de la précédente et se referme pile à 100%, à ras du
+           départ — aucun raccourcissement à compenser, aucun changement de
+           forme en cours de route (les caps ronds des voisines qu'elle
+           recouvre sont masqués par l'ordre de peinture, elle est dessinée
+           en dernier donc au-dessus). */
+      if(it !== lastSeg && it.len > CAP_OVERSHOOT_PCT)
+        setTimeout(()=>{it.s.style.strokeLinecap='round';},it.delay*1000);
+    });
+    const fillMs = totalDrawS*1000;
+    /* comme countPct/countRemaining (même easing), mais sans les effets de
+       bord pensés pour l'anneau du salaire (couleur, dataset) : juste un
+       montant en euros qui monte jusqu'au total des charges. Durée = seulement
+       le tracé des dépenses (chargesDrawS), pas le total incluant l'épargne
+       restante en vert : sinon le nombre continuait de grimper mollement
+       pendant que ce segment vert se dessinait, sans rapport avec lui. */
+    (function countAmount(to, el, dur){
+      const t0 = performance.now();
+      (function tick(t){
+        const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3);
+        el.textContent = fmtRemaining(to*e);
+        if(p<1) requestAnimationFrame(tick);
+      })(t0);
+    })(totalExp, finPctEl, chargesDrawS*1000);
+    /* 2. crossfade donut → barre (la barre part du centre de l'écran), une fois
+       le dessin des parts terminé (plus une courte pause pour le laisser respirer) */
+    setTimeout(()=>{
+      const barRect = bar.getBoundingClientRect();
+      const appRect = document.querySelector('.app').getBoundingClientRect();
+      const dy = (appRect.top + appRect.height*0.44) - (barRect.top + barRect.height/2);
+      bar.style.transition = 'none';
+      bar.style.transform = 'translateY('+dy+'px) scaleX(0.55)';
+      void bar.offsetHeight;
+      bar.style.transition = '';
+      fw.classList.add('morph');
+      bar.classList.add('on');
+
+      /* 3. la barre remonte vers son slot, le calendrier apparaît en cascade */
+      setTimeout(()=>{
+        bar.style.transform = 'translateY(0) scaleX(1)';
+        document.querySelectorAll('#fin .pre').forEach((el,i)=>{
+          setTimeout(()=>el.classList.add('in'), 260 + i*110);
+        });
+        /* icônes de la barre : révélées une fois qu'elle a VRAIMENT sa largeur
+           finale. getBoundingClientRect() reflète le scaleX en cours à tout
+           instant : la mesurer avant la fin de la transition (0.65s) donnait
+           une largeur encore rétrécie, donc des % convertis en px trop petits
+           — ça déclenchait l'anti-collision à tort (une icône loin à droite,
+           ex. Restaurant, se faisait coller aux précédentes au lieu de
+           rester à sa vraie position). On attend la fin réelle de la
+           transition transform (avec un filet de sécurité au cas où
+           transitionend ne se déclenche pas). Anti-collision : toujours sur
+           une seule ligne (pas de hauteur en plus) ; une icône trop proche de
+           la précédente se décale simplement à sa droite au lieu de se
+           chevaucher. */
+        const placeBarIcons = ()=>{
+          const icons = [...barIcons.children];
+          const barW = bar.getBoundingClientRect().width || 1;
+          const MIN_GAP = 26; // >= largeur icône (26px) : sinon deux icônes forcées l'une
+          const HALF = 13;    // contre l'autre se chevauchent quand même de quelques px.
+          const xs = icons.map(el=>parseFloat(el.style.left)/100*barW);
+          // Passe avant (gauche → droite) : pousse toute icône trop proche de la
+          // précédente vers la droite, comme avant.
+          for(let i=1;i<xs.length;i++){ if(xs[i]-xs[i-1]<MIN_GAP) xs[i]=xs[i-1]+MIN_GAP; }
+          // Passe arrière (droite → gauche) : sans elle, un groupe serré à gauche
+          // (ex. deux icônes très proches) traînait son décalage jusqu'aux icônes
+          // suivantes même quand celles-ci avaient largement la place d'être à leur
+          // vraie position — l'icône se "souvenait" du décalage au lieu de revenir
+          // au plus près de sa place naturelle dès que l'espace le permettait à
+          // nouveau. On ramène chaque icône aussi près que possible de sa position
+          // d'origine, sans recréer de chevauchement avec sa voisine de droite
+          // (déjà figée par la passe avant).
+          for(let i=xs.length-2;i>=0;i--){ if(xs[i+1]-xs[i]<MIN_GAP) xs[i]=xs[i+1]-MIN_GAP; }
+          // Ne jamais déborder du cadre de la barre (ex. Shopping poussé hors écran) :
+          // décale tout le groupe si le dernier dépasse à droite, puis ramène le
+          // premier dans le cadre si ça le fait sortir à gauche.
+          if(xs.length){
+            const overRight = xs[xs.length-1]-(barW-HALF);
+            if(overRight>0) for(let i=0;i<xs.length;i++) xs[i]-=overRight;
+            if(xs[0]<HALF){ const shift=HALF-xs[0]; for(let i=0;i<xs.length;i++) xs[i]+=shift; }
+          }
+          icons.forEach((el,i)=>{ el.style.left = xs[i]+'px'; el.classList.add('in'); });
+        };
+        let _barIconsPlaced = false;
+        bar.addEventListener('transitionend', function onBarTransEnd(e){
+          if(e.propertyName !== 'transform' || _barIconsPlaced) return;
+          _barIconsPlaced = true;
+          bar.removeEventListener('transitionend', onBarTransEnd);
+          placeBarIcons();
+        });
+        setTimeout(()=>{ if(!_barIconsPlaced){ _barIconsPlaced = true; placeBarIcons(); } }, 700);
+        /* les icônes des postes apparaissent une par une sur leur jour, une
+           fois le calendrier en place */
+        badgeQueue.forEach((b,i)=>{
+          setTimeout(()=>b.classList.add('in'), 450 + i*100);
+        });
+      }, 520);
+    }, fillMs + 600);
+  }));
+}
+
+document.getElementById('cta').addEventListener('click', (e)=>{
+  obTrack('app_open', 9); // funnel : clic "ouvrir l'app", fin du parcours
+  spawnConfetti(e.currentTarget);
+  setTimeout(()=>{ window.location.href = 'index.html?guest=1'; }, 550);
+});
+// Zone démo invisible sous le CTA (voir le div #ctaDemo) : l'app s'ouvre
+// pré-remplie de données fictives (compte invité neuf, ?demo=1/seedDemoData
+// dans index.html). Aucun indice visuel : seul qui sait qu'elle existe la
+// trouve, un vrai visiteur ne peut pas tomber dessus par accident d'autant
+// qu'il faut un double-tap. Sa hauteur suit celle du bouton juste au-dessus
+// (au lieu d'une valeur fixe arbitraire) : plus simple à retrouver puisqu'elle
+// correspond exactement à ce qu'on voit à l'écran.
+const _sizeCtaDemo=()=>{
+  const cta=document.getElementById('cta'),demo=document.getElementById('ctaDemo');
+  if(cta&&demo)demo.style.height=cta.offsetHeight+'px';
+};
+_sizeCtaDemo();
+window.addEventListener('resize',_sizeCtaDemo);
+let _demoTapT=0;
+document.getElementById('ctaDemo').addEventListener('click', ()=>{
+  const now=Date.now();
+  if(now-_demoTapT<600){
+    // finale() (déjà passée, forcément, pour arriver sur cet écran) a écrit
+    // le salaire/les dépenses récurrentes saisis dans kk_pending_onboarding_budget,
+    // en VRAI localStorage. Mais ?demo=1 côté index.html fait un localStorage.clear()
+    // avant de re-remplir un compte invité tout neuf (seedDemoData) : cette clé
+    // serait donc effacée avant même d'être lue. On la fait transiter par
+    // sessionStorage (pas touché par ce clear()) — index.html la réinjecte juste
+    // après son clear(), voir le bloc wantDemo dans boot(). Un run précédent de
+    // la démo écrase toujours l'ancien (une seule clé, pas d'accumulation).
+    try{
+      const pending=localStorage.getItem('kk_pending_onboarding_budget');
+      if(pending)sessionStorage.setItem('kk_demo_pending_onboarding_budget',pending);
+    }catch(e){}
+    window.location.href='index.html?demo=1';
+  }
+  _demoTapT=now;
+});
+
+</script>
+</body>
+</html>

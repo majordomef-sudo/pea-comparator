@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="stylesheet" href="/style.css?v=1789744102">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top ETF par Indice et Secteur | Alfred Invest</title>
-  <meta name="description" content="Top ETF PEA par indice et secteur : classement pédagogique selon le Score Alfred (frais, indice, émetteur, encours). Comparateur de 437 ETF éligibles PEA.">
+  <meta name="description" content="Top ETF PEA par indice et secteur : classement pédagogique selon le Score Alfred (frais, indice, réplication, émetteur, encours). 437 ETF éligibles PEA comparés.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alfredstudio.mooo.com/top-etf.html">
   <meta property="og:title" content="Top ETF par Indice et Secteur | Alfred Invest">
@@ -16,88 +14,1054 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
-
+  <link rel="stylesheet" href="/style.css?v=1789744102">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script defer data-domain="alfredstudio.mooo.com" src="/analytics/js/script.js"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-    h1 { font-size: 1.8em; margin-bottom: 8px; background: linear-gradient(135deg, #58a6ff, #da1a73); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    h2 { font-size: 1.4em; margin-top: 30px; margin-bottom: 4px; color: #58a6ff; }
-    h3 { font-size: 1em; margin: 16px 0 8px; color: #e6edf3; border-bottom: 1px solid #21262d; padding-bottom: 4px; }
-    p.subtitle { color: #8b949e; margin-bottom: 24px; }
-    .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 24px; padding: 12px 16px; background: #161b22; border-radius: 8px; border: 1px solid #30363d; }
-    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: #c9d1d9; }
-    .legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-    .category-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
-    .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-    .category-title { font-size: 1.05em; font-weight: 600; color: #e6edf3; }
-    .category-count { font-size: 0.85em; color: #8b949e; }
-    .category-desc { font-size: 0.85em; color: #8b949e; margin-bottom: 10px; }
-    .etf-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #21262d; }
-    .etf-row:last-child { border-bottom: none; }
-    .etf-rank { font-size: 0.8em; color: #8b949e; width: 24px; flex-shrink: 0; }
-    .etf-name { flex: 1; font-size: 0.9em; padding-right: 12px; }
-    .etf-name a { color: #e6edf3; text-decoration: none; }
-    .etf-name a:hover { color: #58a6ff; }
-    .etf-score { font-size: 0.95em; font-weight: 700; min-width: 52px; text-align: center; }
-    .etf-decision { font-size: 0.75em; min-width: 60px; text-align: right; color: #8b949e; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
-    .back-link { display: inline-block; margin-top: 30px; color: #58a6ff; text-decoration: none; font-size: 0.9em; }
-    .back-link:hover { text-decoration: underline; }
-    .section-toggle { margin: 20px 0 10px; display: flex; gap: 8px; flex-wrap: wrap; }
-    .section-btn { padding: 8px 16px; border: 1px solid #30363d; background: #161b22; color: #e6edf3; border-radius: 6px; cursor: pointer; font-size: 0.9em; }
-    .section-btn:hover { background: #1c2128; }
-    .section-btn.active { background: #1f6feb; border-color: #1f6feb; color: #fff; }
-    .section-content { display: block; }
-    .section-content.hidden { display: none; }
-  </style>
+  .top-hero{background:linear-gradient(180deg,#0F172A,#0A0E1A);border-bottom:1px solid var(--border);padding:48px 20px 34px;text-align:center}
+  .top-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-.02em;margin:14px 0 10px}
+  .top-hero h1 span{color:var(--gold-bright,#FBBF24)}
+  .top-hero .sub{color:var(--muted);max-width:660px;margin:0 auto;font-size:1.02rem}
+  .top-stats{display:flex;gap:14px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+  .top-stats div{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 20px;min-width:120px}
+  .top-stats strong{display:block;font-size:1.35rem;color:var(--gold-bright,#FBBF24);font-weight:800}
+  .top-stats span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .legend{display:flex;flex-wrap:wrap;gap:12px 16px;justify-content:center;margin:22px auto 0;padding:12px 16px;background:rgba(19,26,46,.85);border:1px solid var(--border);border-radius:12px;max-width:820px}
+  .legend-item{display:flex;align-items:center;gap:7px;font-size:.82rem;color:var(--ink)}
+  .legend-dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .tabs{display:flex;gap:10px;justify-content:center;margin:26px 0 6px;flex-wrap:wrap}
+  .tabs a{padding:9px 20px;border-radius:999px;border:1px solid var(--border);color:var(--ink);font-weight:600;font-size:.88rem;background:var(--surface)}
+  .tabs a:hover{border-color:var(--gold,#D4A843);color:var(--gold-bright,#FBBF24)}
+  .cat-grid{display:grid;gap:16px;grid-template-columns:1fr;margin-top:18px}
+  @media(min-width:900px){.cat-grid{grid-template-columns:1fr 1fr}}
+  .cat-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;display:flex;flex-direction:column}
+  .cat-card:hover{border-color:rgba(212,168,67,.45)}
+  .cat-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(212,168,67,.14)}
+  .cat-head h3{font-size:1.03rem;font-weight:800;color:var(--gold,#D4A843)}
+  .cat-head p{font-size:.78rem;color:var(--muted);margin-top:3px;line-height:1.45}
+  .cat-pill{flex-shrink:0;font-size:.72rem;font-weight:700;color:#F0D080;background:rgba(212,168,67,.14);border:1px solid rgba(212,168,67,.28);border-radius:999px;padding:3px 11px;white-space:nowrap}
+  .cat-row{display:grid;grid-template-columns:30px 1fr auto auto;gap:10px;align-items:center;padding:8px 6px;border-radius:10px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(148,163,184,.08)}
+  .cat-row:last-of-type{border-bottom:none}
+  .cat-row:hover{background:rgba(212,168,67,.07)}
+  .cat-rank{width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;background:rgba(148,163,184,.14);color:var(--muted)}
+  .cat-rank.r1{background:linear-gradient(135deg,#D4A843,#B8912E);color:#fff}
+  .cat-rank.r2{background:rgba(148,163,184,.35);color:#fff}
+  .cat-rank.r3{background:rgba(180,83,9,.55);color:#fff}
+  .cat-name{font-size:.87rem;font-weight:600;color:var(--ink);line-height:1.35}
+  .cat-score{font-weight:800;font-size:.9rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cat-score small{font-size:.68rem;color:var(--muted);font-weight:600}
+  .cat-score.t1,.cat-tag.t1{color:#34D399}.cat-tag.t1{background:rgba(52,211,153,.16)}
+  .cat-score.t2,.cat-tag.t2{color:#4ADE80}.cat-tag.t2{background:rgba(74,222,128,.16)}
+  .cat-score.t3,.cat-tag.t3{color:#FBBF24}.cat-tag.t3{background:rgba(251,191,36,.16)}
+  .cat-score.t4,.cat-tag.t4{color:#FB923C}.cat-tag.t4{background:rgba(249,115,22,.16)}
+  .cat-score.t5,.cat-tag.t5{color:#F87171}.cat-tag.t5{background:rgba(248,113,113,.16)}
+  .cat-tag{font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+  .cat-more{display:block;text-align:right;font-size:.78rem;color:#F0D080;margin-top:10px;text-decoration:none}
+  .cat-more:hover{text-decoration:underline}
+  .site-footer{background:#0B1423;border-top:1px solid rgba(212,168,67,.18);padding:26px 16px;font-size:.85rem;color:var(--muted);text-align:center;margin-top:40px}
+  .site-footer .container{max-width:960px}
+  .footer-brand{font-size:1rem;margin:0 0 10px;color:var(--ink)}
+  .footer-legal{font-size:.82rem;color:var(--muted);margin-bottom:10px;line-height:1.9}
+  .footer-legal a{color:#F0D080;text-decoration:none}
+  .footer-legal a:hover{text-decoration:underline}
+  .footer-data,.footer-disclaimer{font-size:.75rem;color:#7b8798;margin:4px 0;line-height:1.6}
+  .back-link{display:block;text-align:center;margin:26px 0 0;color:var(--muted);font-size:.86rem;text-decoration:none}
+  .back-link:hover{color:var(--gold,#D4A843)}
+  .cta-btn{display:inline-block;padding:13px 26px;border-radius:12px;background:linear-gradient(135deg,#D4A843,#B8912E);color:#0A0E1A;font-weight:800;text-decoration:none}
+</style>
 </head>
 <body>
-<div class="container">
-  <h1>Top ETF par Indice et Secteur</h1>
-  <p class="subtitle">Classement des ETF selon le score qualité Alfred Invest. Les scores reflètent la qualité de l’indice, les frais, la réplication, l’émetteur et le potentiel futur.</p>
-  
-  <div class="legend">
-    <div class="legend-item"><span class="legend-dot" style="background:#28a745"></span> ≥74 (Très bon)</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#007bff"></span> ≥64 (Bon)</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#ffc107"></span> ≥54 (Moyen)</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#fd7e14"></span> ≥44 (Faible)</div>
-    <div class="legend-item"><span class="legend-dot" style="background:#dc3545"></span> <44 (Très faible)</div>
-  </div>
-  
-  <div class="section-toggle">
-    <button class="section-btn active" onclick="showSection('index')" id="btn-index">Par Indice</button>
-    <button class="section-btn" onclick="showSection('sector')" id="btn-sector">Par Secteur</button>
-  </div>
-<div id="section-index" class="section-content"><div class="grid-2"><div class="category-card">  <div class="category-header">    <div class="category-title">MSCI World</div>    <div class="category-count">9 ETF</div>  </div>  <div class="category-desc">ETF qui suivent le MSCI World (grandes capitalisations mondiales)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/FR0014002CH1/">AMUNDI PEA MONDE (MSCI World) UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">64/100</div>    <div class="etf-decision"> Bon</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0010315770/">Amundi MSCI World Swap II UCITS ETF Dist</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/FR0011660927/">Amundi MSCI World Swap II UCITS ETF EUR Hedged Dist</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/FR0011669845/">Amundi MSCI World Swap II UCITS ETF USD Hedged Dist</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/FR0013209921/">Amundi MSCI World Ex EMU SRI Climate Paris Aligned UCIT</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">MSCI Europe</div>    <div class="category-count">92 ETF</div>  </div>  <div class="category-desc">ETF qui suivent le MSCI Europe (grandes capitalisations européennes)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42181/">iShares MSCI Europe Industrials Sector UCITS ETF (le « </a></div>    <div class="etf-score" style="color:#dc3545">63/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/IE00BMW42074/">iShares MSCI Europe Financials Sector UCITS ETF (le « F</a></div>    <div class="etf-score" style="color:#dc3545">63/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/IE000MAO75G5/">iShares Core MSCI Europe UCITS ETF (the “Fund”), EUR Ac</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE000U3XZQN5/">iShares MSCI Europe Climate Transition Aware UCITS ETF </a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE000ZQF1PE1/">iShares MSCI Europe Climate Transition Aware UCITS ETF </a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">STOXX Europe</div>    <div class="category-count">87 ETF</div>  </div>  <div class="category-desc">ETF qui suivent les indices STOXX (Europe 600, etc.)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU0908501132/">Amundi Core STOXX Europe 600 UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU2873560481/">Amundi Core STOXX Europe 600 UCITS ETF USD Hedged Acc</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/IE00BF450720/">iShares STOXX World Equity Multifactor UCITS ETF (the “</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00BYXPXK00/">iShares STOXX World Equity Multifactor UCITS ETF (the “</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE00BZ0PKT83/">iShares STOXX World Equity Multifactor UCITS ETF (the “</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">EURO STOXX 50</div>    <div class="category-count">20 ETF</div>  </div>  <div class="category-desc">ETF qui suivent l'EURO STOXX 50 (50 plus grandes capitalisations zone euro)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/DE0005933931/">iShares Core EURO STOXX 50 UCITS ETF (DE) (the “Fund”),</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/IE0008470928/">iShares Core EURO STOXX 50 UCITS ETF EUR (Dist) (the “F</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/IE000LXEN6X4/">iShares EURO STOXX 50 ESG UCITS ETF (the “Fund”), EUR A</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00B53L4X51/">iShares Core EURO STOXX 50 UCITS ETF (the “Fund”), EUR </a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/LU1681040223/">Amundi Core Euro STOXX 50 UCITS ETF EUR Dist</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">MSCI EMU</div>    <div class="category-count">39 ETF</div>  </div>  <div class="category-desc">ETF qui suivent le MSCI EMU (zone euro)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE0006PTRUI8/">iShares MSCI EMU Climate Transition Aware UCITS ETF (th</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/IE000E9XXE77/">iShares MSCI EMU Climate Transition Aware UCITS ETF (th</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/IE00B53QG562/">iShares Core MSCI EMU UCITS ETF (the “Fund”), EUR Accu </a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00BG0J9Y53/">iShares Core MSCI EMU UCITS ETF (the “Fund”), Hedged GB</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE00BHZPHZ28/">iShares MSCI EMU CTB Enhanced ESG UCITS ETF (the “Fund”</a></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">S&P 500</div>    <div class="category-count">8 ETF</div>  </div>  <div class="category-desc">ETF qui suivent le S&P 500 (500 plus grandes capitalisations US)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU2997383372/">OSSIAM S&P500 - UCITS ETF 1C (EUR)</a></div>    <div class="etf-score" style="color:#dc3545">61/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0011550177/">BNP PARIBAS EASY S&P 500 UCITS ETF - Action EUR C</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/FR0011871128/">Amundi PEA S&P 500 UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/FR0011550185/">BNP PARIBAS EASY S&P 500 UCITS ETF, a sub-fund of BNP P</a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/FR0011550193/">BNP PARIBAS EASY S&P 500 UCITS ETF, a sub-fund of BNP P</a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">Autre / Divers</div>    <div class="category-count">66 ETF</div>  </div>  <div class="category-desc">ETF divers (DAX, secteur pays, etc.)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU3046617984/">OSSIAM SHILLER BARCLAYS CAPE US SECTOR TILTED TR - UCIT</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU3046618362/">OSSIAM SHILLER BARCLAYS CAPE US SECTOR TILTED TR - UCIT</a></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/DE000A0Q4R02/">iShares DAX® ESG UCITS ETF (DE) (the “Fund”), ISIN: DE0</a></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00BN4PXC48/">UBS (Irl) ETF Plc is an umbrella investment company wit</a></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/LU2611731667/">Amundi Core DAX UCITS ETF Dist</a></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">MSCI Emergents</div>    <div class="category-count">6 ETF</div>  </div>  <div class="category-desc">ETF qui suivent les marchés émergents</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/FR0013411980/">Amundi PEA Asie Emergente (MSCI Emerging Asia) Screened</a></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0013412004/">Amundi PEA Emergent (MSCI Emerging) ESG Transition UCIT</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/FR0014002H76/">Amundi PEA Emergent (MSCI Emerging) ESG Transition UCIT</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/FR0013412012/">Type: Units of Amundi PEA Amerique Latine (MSCI Emergin</a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/FR0010429068/">Amundi MSCI Emerging Markets Swap II UCITS ETF EUR Acc</a></div>    <div class="etf-score" style="color:#dc3545">51/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">S&P USA / Monde</div>    <div class="category-count">8 ETF</div>  </div>  <div class="category-desc">ETF qui suivent d'autres indices S&P</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BGV5VM45/">Xtrackers S&P Europe ex UK UCITS ETF</a></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU2195226068/">Amundi S&P Eurozone Climate Paris Aligned UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU2932780914/">Amundi S&P Eurozone Climate Paris Aligned UCITS ETF Dis</a></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/LU0959210781/">Amundi S&P Eurozone Dividend Aristocrat Screened UCITS </a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/LU0959210278/">Amundi S&P Eurozone Dividend Aristocrat Screened UCITS </a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">Europe</div>    <div class="category-count">67 ETF</div>  </div>  <div class="category-desc">ETF européens divers (Prime, Ossiam, etc.)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU2898088419/">OSSIAM SERENITY EURO - UCITS ETF 1C (EUR)</a></div>    <div class="etf-score" style="color:#dc3545">56/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU1931974262/">Amundi Prime Europe UCITS ETF</a></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU1931974429/">AMUNDI PRIME EUROZONE - UCITS ETF DR</a></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/LU2089238112/">AMUNDI PRIME EUROZONE - UCITS ETF DR</a></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/LU2089238039/">Amundi Prime Europe UCITS ETF</a></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">Autre Monde</div>    <div class="category-count">5 ETF</div>  </div>  <div class="category-desc">ETF mondiaux ou globaux divers</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/NL0010408704/">Name of Product:            VanEck World Equal Weight S</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0007075494/">Amundi DJ Global Titans 50 UCITS ETF Dist</a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/FR0010930644/">Amundi Global Hydrogen UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00082MOBL9/">Global X European SuperDividend® UCITS ETF</a></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE000WRQ9RR1/">Global X Europe Focused Defence Tech UCITS ETF</a></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">MSCI (autre)</div>    <div class="category-count">12 ETF</div>  </div>  <div class="category-desc">ETF qui suivent d'autres indices MSCI (India, USA, etc.)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/FR0010361683/">Amundi MSCI India Swap UCITS ETF EUR Acc</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0010375766/">Amundi MSCI India Swap UCITS ETF USD Acc</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU1681041460/">Amundi PEA MSCI USA ESG Selection UCITS ETF - USD</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/LU1681041627/">Amundi PEA MSCI USA ESG Selection UCITS ETF - EUR</a></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/FR0011720911/">Amundi MSCI China A UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">Japon</div>    <div class="category-count">4 ETF</div>  </div>  <div class="category-desc">ETF qui suivent les indices japonais (TOPIX, Nikkei)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/FR0013412038/">Amundi PEA Japon (TOPIX) UCITS ETF EUR Acc</a></div>    <div class="etf-score" style="color:#dc3545">51/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0010245514/">AMUNDI Japan TOPIX II UCITS ETF EUR Dist</a></div>    <div class="etf-score" style="color:#dc3545">44/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/FR0010377028/">AMUNDI Japan TOPIX II UCITS ETF JPY Dist</a></div>    <div class="etf-score" style="color:#dc3545">44/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/FR0011475078/">AMUNDI Japan TOPIX II UCITS ETF EUR Hedged Dist</a></div>    <div class="etf-score" style="color:#dc3545">44/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">FTSE</div>    <div class="category-count">6 ETF</div>  </div>  <div class="category-desc">ETF qui suivent les indices FTSE (Italie, UK)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/FR0011758085/">Amundi FTSE Italia PMI PIR 2020 UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0010010827/">Amundi FTSE MIB UCITS ETF Dist</a></div>    <div class="etf-score" style="color:#dc3545">47/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/FR0014003FW1/">Amundi FTSE MIB UCITS ETF Acc</a></div>    <div class="etf-score" style="color:#dc3545">47/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00B1XNH568/">iShares FTSE MIB UCITS ETF EUR (Dist) (the “Fund”), EUR</a></div>    <div class="etf-score" style="color:#dc3545">47/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE00B53L3W79/">iShares FTSE MIB UCITS ETF EUR (Acc) (the “Fund”), EUR </a></div>    <div class="etf-score" style="color:#dc3545">47/100</div>    <div class="etf-decision"> Faible</div>  </div></div></div></div><div id="section-sector" class="section-content hidden"><div class="grid-2"><div class="category-card">  <div class="category-header">    <div class="category-title">INDUSTRIE</div>    <div class="category-count">25 ETF</div>  </div>  <div class="category-desc">ETF industriels (aérospatial, défense, manufacture)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42520/">iShares MSCI Europe Industrials Sector UCITS ETF (</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">63/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/DE0005933949/">iShares Core EURO STOXX 50 UCITS ETF (DE) (the “Fu</a><br><span style="font-size:0.75em;color:#8b949e;">EURO STOXX 50</span></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU1834983550/">AMUNDI STOXX EUROPE 600 INDUSTRIALS UCITS ETF Acc</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/LU2082996385/">Amundi STOXX Europe 600 Industrials UCITS ETF Dist</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/DE000A0Q4R28/">iShares DAX® ESG UCITS ETF (DE) (the “Fund”), ISIN</a><br><span style="font-size:0.75em;color:#8b949e;">Divers</span></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">FINANCE</div>    <div class="category-count">12 ETF</div>  </div>  <div class="category-desc">ETF financiers (banques, assurances, services financiers)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42298/">iShares MSCI Europe Financials Sector UCITS ETF (l</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">63/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/IE00BKWQ0D84/">State Street SPDR MSCI Europe Financials UCITS ETF</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">56/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/DE000A0H0744/">iShares STOXX Europe 600 Financial Services UCITS </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/LU1829219390/">Amundi Euro Stoxx Banks UCITS ETF Acc</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/LU1834983477/">Amundi STOXX Europe 600 Banks UCITS ETF Acc</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">ESG / CLIMAT</div>    <div class="category-count">59 ETF</div>  </div>  <div class="category-desc">ETF ESG, climat, transition énergétique, bas carbone</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/FR0013209921/">Amundi MSCI World Ex EMU SRI Climate Paris Aligned</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI World sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/FR0014002CG3/">Type: Units of AMUNDI MSCI WORLD CLIMATE PARIS ALI</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI World sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><span>iShares MSCI EMU Climate Transition Aware UCITS ET</span><br><span style="font-size:0.75em;color:#8b949e;">MSCI EMU</span></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><span>iShares MSCI EMU Climate Transition Aware UCITS ET</span><br><span style="font-size:0.75em;color:#8b949e;">MSCI EMU</span></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE000LXEN6X4/">iShares EURO STOXX 50 ESG UCITS ETF (the “Fund”),</a><br><span style="font-size:0.75em;color:#8b949e;">EURO STOXX 50</span></div>    <div class="etf-score" style="color:#dc3545">62/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">ENERGIE</div>    <div class="category-count">7 ETF</div>  </div>  <div class="category-desc">ETF énergétiques (pétrole, gaz, nucléaire, énergies renouvelables)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42306/">iShares MSCI Europe Energy Sector UCITS ETF (le « </a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">60/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU1834983634/">Amundi STOXX Europe 600 Energy Screened UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU2082996112/">Amundi STOXX Europe 600 Energy Screened UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00BKWQ0C77/">State Street SPDR MSCI Europe Energy UCITS ETF ("F</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">53/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/DE000A0H08F7/">iShares STOXX Europe 600 Oil & Gas UCITS ETF (DE) </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">49/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">MATERIAUX</div>    <div class="category-count">4 ETF</div>  </div>  <div class="category-desc">ETF matériaux de base (mining, métaux, chimie)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU1834986900/">Amundi STOXX Europe 600 Basic Materials UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU2082997359/">Amundi STOXX Europe 600 Basic Materials UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">58/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/IE00BKWQ0H23/">State Street SPDR MSCI Europe Materials UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">56/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/DE000A0H08E0/">iShares STOXX Europe 600 Construction & Materials </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">55/100</div>    <div class="etf-decision"> Moyen</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">TECHNOLOGIE</div>    <div class="category-count">9 ETF</div>  </div>  <div class="category-desc">ETF sectoriels technologiques (semi-conducteurs, logiciels, digital)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42413/">iShares MSCI Europe Information Technology Sector </a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU1834985845/">Amundi STOXX Europe 600 Technology UCITS ETF Acc</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU2082996542/">Amundi STOXX Europe 600 Technology UCITS ETF Dist</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE000WRQ9RR1/">Global X Europe Focused Defence Tech UCITS ETF</a><br><span style="font-size:0.75em;color:#8b949e;">Monde sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/IE00BKWQ0F09/">State Street SPDR MSCI Europe Technology UCITS ETF</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">SANTE</div>    <div class="category-count">5 ETF</div>  </div>  <div class="category-desc">ETF santé, biotech, pharma, medical</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42637/">iShares MSCI Europe Health Care Sector UCITS ETF (</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU1834987890/">Amundi STOXX Europe 600 Healthcare UCITS ETF Acc</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU2082997516/">Amundi STOXX Europe 600 Healthcare UCITS ETF Dist</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/IE00BKWQ0G16/">State Street SPDR MSCI Europe Health Care UCITS ET</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/DE000A0Q4R36/">iShares STOXX Europe 600 Health Care UCITS ETF (DE</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">49/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">CONSOMMATION</div>    <div class="category-count">12 ETF</div>  </div>  <div class="category-desc">ETF consommation (retail, distribution, luxe)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00BMW42074/">iShares MSCI Europe Consumer Staples Sector UCITS</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/IE00BMW42298/">iShares MSCI Europe Consumer Discretionary Sector</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">57/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/LU1753045332/">MSCI Europe SRI PAB, a sub-fund of BNP PARIBAS EAS</a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">54/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/LU1834987973/">Amundi STOXX Europe 600 Consumer Staples UCITS ETF</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/LU1834988518/">Amundi STOXX Europe 600 Consumer Discretionary UCI</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">DIVIDENDES</div>    <div class="category-count">33 ETF</div>  </div>  <div class="category-desc">ETF dividendes / haut rendement</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU1681041973/">Amundi MSCI Europe High Dividend Factor UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">56/100</div>    <div class="etf-decision"> Moyen</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/DE000A0H08G5/">iShares Dow Jones Asia Pacific Select Dividend 50 </a><br><span style="font-size:0.75em;color:#8b949e;">Divers</span></div>    <div class="etf-score" style="color:#dc3545">53/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/DE0002635299/">iShares STOXX Europe Select Dividend 30 UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#4</div>    <div class="etf-name"><a href="/etf/DE0002635273/">iShares EURO STOXX Select Dividend 30 UCITS ETF (D</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#5</div>    <div class="etf-name"><a href="/etf/DE000A2QP323/">iShares EURO STOXX Select Dividend 30 UCITS ETF (D</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">UTILITIES</div>    <div class="category-count">3 ETF</div>  </div>  <div class="category-desc">ETF services publics (électricité, eau, gaz)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU1834988278/">Amundi STOXX Europe 600 Utilities UCITS ETF Acc</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/LU2082997789/">Amundi STOXX Europe 600 Utilities UCITS ETF Dist</a><br><span style="font-size:0.75em;color:#8b949e;">STOXX sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">52/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#3</div>    <div class="etf-name"><a href="/etf/IE00BKWQ0J47/">State Street SPDR MSCI Europe Utilities UCITS ETF </a><br><span style="font-size:0.75em;color:#8b949e;">MSCI Europe sectoriel</span></div>    <div class="etf-score" style="color:#dc3545">50/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">IMMOBILIER</div>    <div class="category-count">2 ETF</div>  </div>  <div class="category-desc">ETF immobiliers (REITs, foncières)</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE00B0M63284/">iShares European Property Yield UCITS ETF (the “Fu</a><br><span style="font-size:0.75em;color:#8b949e;">Europe</span></div>    <div class="etf-score" style="color:#dc3545">44/100</div>    <div class="etf-decision"> Faible</div>  </div>  <div class="etf-row">    <div class="etf-rank">#2</div>    <div class="etf-name"><a href="/etf/IE00BGDQ0L74/">iShares European Property Yield UCITS ETF (the “Fu</a><br><span style="font-size:0.75em;color:#8b949e;">Europe</span></div>    <div class="etf-score" style="color:#dc3545">44/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">IA / ROBOTIQUE</div>    <div class="category-count">1 ETF</div>  </div>  <div class="category-desc">ETF intelligence artificielle, machine learning, robotique</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/LU0599612842/">OSSIAM EUROPE ESG MACHINE LEARNING - UCITS ETF 1C </a><br><span style="font-size:0.75em;color:#8b949e;">Europe</span></div>    <div class="etf-score" style="color:#dc3545">44/100</div>    <div class="etf-decision"> Faible</div>  </div></div><div class="category-card">  <div class="category-header">    <div class="category-title">CYBERSECURITE</div>    <div class="category-count">1 ETF</div>  </div>  <div class="category-desc">ETF cybersécurité</div>  <div class="etf-row">    <div class="etf-rank">#1</div>    <div class="etf-name"><a href="/etf/IE000ST40PX8/">Name of Fund: L&G Cyber Security Innovation UCITS </a><br><span style="font-size:0.75em;color:#8b949e;">Divers</span></div>    <div class="etf-score" style="color:#dc3545">39/100</div>    <div class="etf-decision"> Très faible</div>  </div></div></div></div>
-  <script>
-    function showSection(section) {
-      document.getElementById('section-index').classList.toggle('hidden', section !== 'index');
-      document.getElementById('section-sector').classList.toggle('hidden', section !== 'sector');
-      document.getElementById('btn-index').classList.toggle('active', section === 'index');
-      document.getElementById('btn-sector').classList.toggle('active', section === 'sector');
-    }
-  </script>
-  
-  <a href="/" class="back-link">&larr; Retour au comparateur ETF</a>
-</div>
+<header class="main-header">
+ <div class="header-container">
+   <a href="/" class="brand-logo">
+     <img src="/alfred-mark.svg" alt="Alfred Invest" class="logo-img">
+     <span class="brand-name">Alfred Invest</span>
+   </a>
+   <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="headerNav">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+   </button>
+   <nav class="header-nav" id="headerNav" aria-label="Navigation principale">
+     <a href="/#comparateur">ETF</a>
+     <a href="/methodologie">Score Alfred</a>
+     <a href="/#outils">Outils</a>
+     <a href="/test-15-signes.html">Test 15 signes</a>
+     <a href="/blog">Blog</a>
+     <a href="/#faq">FAQ</a>
+   </nav>
+ </div>
+</header>
+<main>
+  <section class="top-hero">
+    <span class="badge-pill">Classement pédagogique · Score Alfred</span>
+    <h1>Top ETF par <span>indice</span> et par <span>secteur</span></h1>
+    <p class="sub">Les ETF éligibles au PEA classés par Score Alfred, catégorie par catégorie. Le score mesure la <strong>structure</strong> d'un ETF (frais, indice, réplication, solidité, émetteur, potentiel) — jamais une performance future.</p>
+    <div class="top-stats">
+      <div><strong>437</strong><span>ETF PEA</span></div>
+      <div><strong>27</strong><span>Catégories</span></div>
+      <div><strong>610</strong><span>ETF classés</span></div>
+    </div>
+    <div class="legend">
+      <span class="legend-item"><span class="legend-dot" style="background:#34D399"></span>Très bon · 74+</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#4ADE80"></span>Bon · 64–73</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#FBBF24"></span>Moyen · 54–63</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#FB923C"></span>Faible · 44–53</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#F87171"></span>Très faible · &lt;44</span>
+    </div>
+    <div class="tabs">
+      <a href="#indices">Par indice (14)</a>
+      <a href="#secteurs">Par secteur (13)</a>
+    </div>
+  </section>
 
+  <div class="container">
+    <a href="/" class="back-link">&larr; Retour au comparateur ETF</a>
+
+    <h2 id="indices" style="margin-top:34px;font-size:1.3rem">Top ETF par indice</h2>
+    <p style="color:var(--muted);font-size:.88rem">Les 5 ETF les mieux notés de chaque famille d'indices (sur les 437 référencés).</p>
+    <div class="cat-grid">
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>Autre / Divers</h3><p>Indices larges mixtes (mondes, multi-régions, thématiques larges).</p></div>
+          <span class="cat-pill">67 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/DE0005933931/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares Core DAX® UCITS ETF (DE)</span>
+          <span class="cat-score t3">63<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU3046618362/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">OSSIAM SHILLER BARCLAYS CAPE US SECTOR TILTED TR - UCITS ETF…</span>
+          <span class="cat-score t3">61<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU3046618446/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">OSSIAM SHILLER BARCLAYS CAPE US SECTOR TILTED TR - UCITS ETF…</span>
+          <span class="cat-score t3">61<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BN4PXC48/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">UBS (Irl) ETF</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010510800/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi EUR Overnight Return UCITS ETF Acc</span>
+          <span class="cat-score t3">59<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 67 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>STOXX Europe</h3><p>Large, mid et small caps européennes, sans le Royaume-Uni.</p></div>
+          <span class="cat-pill">87 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BZ0PKT83/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares STOXX World Equity Multifactor UCITS ETF</span>
+          <span class="cat-score t2">70<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BF450720/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares STOXX World Equity Multifactor UCITS ETF</span>
+          <span class="cat-score t2">66<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BYXPXK00/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">iShares STOXX World Equity Multifactor UCITS ETF</span>
+          <span class="cat-score t2">66<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2873560564/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi Core STOXX Europe 600 UCITS ETF USD Hedged Acc</span>
+          <span class="cat-score t2">64<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834987890/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">AMUNDI STOXX EUROPE 600 INDUSTRIALS UCITS ETF Acc</span>
+          <span class="cat-score t2">64<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 87 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>EURO STOXX 50</h3><p>Les 50 plus grandes valeurs de la zone euro.</p></div>
+          <span class="cat-pill">20 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/DE0005933956/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares Core EURO STOXX 50 UCITS ETF (DE)</span>
+          <span class="cat-score t2">70<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE0008471009/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares Core EURO STOXX 50 UCITS ETF EUR (Dist)</span>
+          <span class="cat-score t2">69<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1681047319/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi Core Euro STOXX 50 UCITS ETF EUR Dist</span>
+          <span class="cat-score t2">66<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE000LXEN6X4/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">iShares EURO STOXX 50 ESG UCITS ETF</span>
+          <span class="cat-score t3">63<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE000SAXJ1M1/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Global X Euro Stoxx 50 Covered Call UCITS ETF</span>
+          <span class="cat-score t3">63<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 20 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>Europe</h3><p>Indices paneuropéens larges.</p></div>
+          <span class="cat-pill">67 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE000IAXNM41/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares Europe Defence UCITS ETF</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1377382368/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Low Carbon 100 Europe PAB</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU3047998896/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Bloomberg Europe Defense</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2898088419/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">OSSIAM SERENITY EURO - UCITS ETF 1C (EUR)</span>
+          <span class="cat-score t3">57<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1931974262/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi Prime Europe UCITS ETF</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 67 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>Autre Monde</h3><p>Indices monde alternatifs et régionaux.</p></div>
+          <span class="cat-pill">5 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/FR0007075494/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi DJ Global Titans 50 UCITS ETF Dist</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010930644/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi Global Hydrogen UCITS ETF Acc</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/NL0010408704/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">VanEck World Equal Weight Screened UCITS ETF…</span>
+          <span class="cat-score t3">57<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00082MOBL9/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Global X European SuperDividend® UCITS ETF</span>
+          <span class="cat-score t3">55<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE000WRQ9RR1/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Global X Europe Focused Defence Tech UCITS ETF</span>
+          <span class="cat-score t3">55<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>FTSE</h3><p>Indices FTSE (Royaume-Uni et mondes).</p></div>
+          <span class="cat-pill">6 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/FR0011758085/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi FTSE Italia PMI PIR 2020 UCITS ETF Acc</span>
+          <span class="cat-score t4">52<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010010827/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi FTSE MIB UCITS ETF Dist</span>
+          <span class="cat-score t4">52<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00B53L4X51/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">iShares FTSE MIB UCITS ETF EUR (Acc)</span>
+          <span class="cat-score t4">52<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00B1XNH568/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">iShares FTSE MIB UCITS ETF EUR (Dist)</span>
+          <span class="cat-score t4">50<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0014002H76/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi FTSE MIB UCITS ETF Acc</span>
+          <span class="cat-score t4">48<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 6 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>Japon</h3><p>Marché japonais, grandes capitalisations.</p></div>
+          <span class="cat-pill">4 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/FR0013411980/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi PEA Japon (TOPIX) UCITS ETF EUR Acc</span>
+          <span class="cat-score t4">52<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010377028/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">AMUNDI Japan TOPIX II UCITS ETF JPY Dist</span>
+          <span class="cat-score t4">46<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010245514/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">AMUNDI Japan TOPIX II UCITS ETF EUR Dist</span>
+          <span class="cat-score t4">44<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0011475078/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">AMUNDI Japan TOPIX II UCITS ETF EUR Hedged Dist</span>
+          <span class="cat-score t4">44<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>MSCI Europe</h3><p>Grandes et moyennes capitalisations européennes.</p></div>
+          <span class="cat-pill">92 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE000MAO75G5/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares Core MSCI Europe UCITS ETF</span>
+          <span class="cat-score t2">67<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BMW42520/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares MSCI Europe Industrials Sector UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BMW42306/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">iShares MSCI Europe Financials Sector UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1681044308/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi MSCI Europe ex Switzerland ESG Broad Transition UCITS…</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1737652310/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi Core MSCI Europe UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 92 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>MSCI World</h3><p>Grandes capitalisations mondiales, l&#x27;indice de référence d&#x27;un portefeuille diversifié.</p></div>
+          <span class="cat-pill">11 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/FR0010315770/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi MSCI World Swap II UCITS ETF Dist</span>
+          <span class="cat-score t1">78<small>/100</small></span>
+          <span class="cat-tag t1">Très bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0011660927/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi MSCI World Swap II UCITS ETF EUR Hedged Dist</span>
+          <span class="cat-score t1">74<small>/100</small></span>
+          <span class="cat-tag t1">Très bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0014003FW1/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Type: Units of AMUNDI MSCI WORLD CLIMATE PARIS ALIGNED…</span>
+          <span class="cat-score t1">74<small>/100</small></span>
+          <span class="cat-tag t1">Très bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0014003IY1/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi MSCI World Swap II UCITS ETF Acc</span>
+          <span class="cat-score t1">74<small>/100</small></span>
+          <span class="cat-tag t1">Très bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0014003N93/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi MSCI World Swap II UCITS ETF EUR Hedged Acc</span>
+          <span class="cat-score t1">74<small>/100</small></span>
+          <span class="cat-tag t1">Très bon</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 11 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>MSCI (autre)</h3><p>Autres variantes MSCI (small caps, secteurs, factoriels).</p></div>
+          <span class="cat-pill">12 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/LU1681042864/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi PEA MSCI USA ESG Selection UCITS ETF - EUR</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010361683/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi MSCI India Swap UCITS ETF EUR Acc</span>
+          <span class="cat-score t3">59<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1681042948/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi PEA MSCI USA ESG Selection UCITS ETF - USD</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0010375766/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi MSCI India Swap UCITS ETF USD Acc</span>
+          <span class="cat-score t3">57<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0011720911/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi MSCI China A UCITS ETF Acc</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 12 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>MSCI Emergents</h3><p>Marchés émergents : Asie, Amérique latine, EMEA.</p></div>
+          <span class="cat-pill">8 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/FR0013412012/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi PEA Asie Emergente (MSCI Emerging Asia) Screened UCITS…</span>
+          <span class="cat-score t2">64<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0013412020/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi PEA Emergent (MSCI Emerging) ESG Transition UCITS ETF…</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0014003HV9/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi PEA MSCI EM ex-China UCITS ETF Acc</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00B4L5YC18/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">iShares MSCI EM UCITS ETF USD (Acc)</span>
+          <span class="cat-score t3">57<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR001400ZGO4/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi PEA Emergent (MSCI Emerging) ESG Transition UCITS ETF…</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 8 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>MSCI EMU</h3><p>Zone euro, toutes capitalisations.</p></div>
+          <span class="cat-pill">39 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BHZPHZ28/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares MSCI EMU CTB Enhanced ESG UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BYXZ2585/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares Core MSCI EMU UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1646360971/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi Core MSCI EMU UCITS ETF Dist</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1646361276/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi Core MSCI EMU UCITS ETF Acc</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE000FOSCLU1/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">iShares MSCI EMU Paris-Aligned Climate UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 39 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>S&amp;P 500</h3><p>Les 500 plus grandes entreprises américaines.</p></div>
+          <span class="cat-pill">8 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/LU2997383372/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">OSSIAM S&amp;P500 - UCITS ETF 1C (EUR)</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0011550185/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">BNP PARIBAS EASY S&amp;P 500 UCITS ETF - Action EUR C</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0013412285/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi PEA S&amp;P 500 Screened UCITS ETF - Acc</span>
+          <span class="cat-score t3">62<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0011550177/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">BNP PARIBAS EASY S&amp;P 500 UCITS ETF</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0013041530/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">BNP PARIBAS EASY S&amp;P 500 UCITS ETF</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 8 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>S&amp;P USA / Monde</h3><p>Indices américains et mondiaux hors MSCI World classique.</p></div>
+          <span class="cat-pill">9 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BGV5VM45/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Xtrackers S&amp;P Europe ex UK UCITS ETF</span>
+          <span class="cat-score t3">62<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2932780914/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi S&amp;P Eurozone Climate Paris Aligned UCITS ETF Dist</span>
+          <span class="cat-score t3">62<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2195226068/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi S&amp;P Eurozone Climate Paris Aligned UCITS ETF Acc</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BFWFPX50/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">State Street SPDR S&amp;P U.S. Communication Services Select…</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU0959210781/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi S&amp;P Eurozone Dividend Aristocrat Screened UCITS ETF Acc</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 9 ETF de cette catégorie &rarr;</a>
+      </article>
+    </div>
+
+    <h2 id="secteurs" style="margin-top:44px;font-size:1.3rem">Top ETF par secteur</h2>
+    <p style="color:var(--muted);font-size:.88rem">Classement des ETF sectoriels et thématiques éligibles au PEA.</p>
+    <div class="cat-grid">
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>DIVIDENDES</h3><p>Stratégies à rendement : entreprises qui distribuent des dividendes élevés.</p></div>
+          <span class="cat-pill">33 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/LU1681041973/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi MSCI Europe High Dividend Factor UCITS ETF EUR Acc</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE0002635299/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares STOXX Europe Select Dividend 30 UCITS ETF (DE)</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BYYHSM20/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">iShares MSCI Europe Quality Dividend Advanced UCITS ETF</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE000A0H0744/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">iShares Dow Jones Asia Pacific Select Dividend 50 UCITS ETF…</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE0002635281/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">iShares EURO STOXX Select Dividend 30 UCITS ETF (DE)</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 33 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>INDUSTRIE</h3><p>Secteur industriel : biens d&#x27;équipement, transport, défense.</p></div>
+          <span class="cat-pill">25 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/DE0005933956/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares Core EURO STOXX 50 UCITS ETF (DE)</span>
+          <span class="cat-score t2">70<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BMW42520/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares MSCI Europe Industrials Sector UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834987890/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">AMUNDI STOXX EUROPE 600 INDUSTRIALS UCITS ETF Acc</span>
+          <span class="cat-score t2">64<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/DE000A0D8Q07/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">iShares EURO STOXX UCITS ETF (DE)</span>
+          <span class="cat-score t3">62<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082997789/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Industrials UCITS ETF Dist</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 25 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>FINANCE</h3><p>Banques, assurance, services financiers.</p></div>
+          <span class="cat-pill">12 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BMW42306/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares MSCI Europe Financials Sector UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BKWQ0G16/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">State Street SPDR MSCI Europe Financials UCITS ETF</span>
+          <span class="cat-score t3">62<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE000A0H08G5/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">iShares STOXX Europe 600 Financial Services UCITS ETF (DE)</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834987973/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Insurance UCITS ETF Acc</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082996112/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Banks UCITS ETF Dist</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 12 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>MATERIAUX</h3><p>Chimie, mines, matériaux de construction et métaux précieux (or).</p></div>
+          <span class="cat-pill">6 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/LU1834983634/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Basic Materials UCITS ETF Acc</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082996542/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Basic Materials UCITS ETF Dist</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BKWQ0L68/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">State Street SPDR MSCI Europe Materials UCITS ETF</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE000A0H08F7/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">iShares STOXX Europe 600 Construction &amp; Materials UCITS ETF…</span>
+          <span class="cat-score t3">60<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0013416716/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi Physical Gold ETC (C)</span>
+          <span class="cat-score t3">59<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 6 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>ENERGIE</h3><p>Pétrole, gaz et énergies de transition.</p></div>
+          <span class="cat-pill">7 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BMW42637/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares MSCI Europe Energy Sector UCITS ETF</span>
+          <span class="cat-score t2">64<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834988278/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Energy Screened UCITS ETF Acc</span>
+          <span class="cat-score t3">59<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BKWQ0F09/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">State Street SPDR MSCI Europe Energy UCITS ETF</span>
+          <span class="cat-score t3">59<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082998167/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Energy Screened UCITS ETF Dist</span>
+          <span class="cat-score t3">57<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE000A0H08M3/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">iShares STOXX Europe 600 Oil &amp; Gas UCITS ETF (DE)</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 7 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>TECHNOLOGIE</h3><p>Semiconducteurs, logiciels, matériel informatique.</p></div>
+          <span class="cat-pill">9 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BMW42413/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares MSCI Europe Information Technology Sector UCITS ETF</span>
+          <span class="cat-score t3">61<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834988518/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Technology UCITS ETF Acc</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE000WRQ9RR1/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Global X Europe Focused Defence Tech UCITS ETF</span>
+          <span class="cat-score t3">55<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082998837/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Technology UCITS ETF Dist</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BKWQ0K51/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">State Street SPDR MSCI Europe Technology UCITS ETF</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 9 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>SANTE</h3><p>Pharma, biotech, dispositifs médicaux.</p></div>
+          <span class="cat-pill">5 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BMW42181/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares MSCI Europe Health Care Sector UCITS ETF</span>
+          <span class="cat-score t3">63<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834986900/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Healthcare UCITS ETF Acc</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BKWQ0H23/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">State Street SPDR MSCI Europe Health Care UCITS ETF</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082997516/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Healthcare UCITS ETF Dist</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/DE000A0Q4R36/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">iShares STOXX Europe 600 Health Care UCITS ETF (DE)</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>ESG / CLIMAT</h3><p>Filtres environnementaux, sociaux et de gouvernance.</p></div>
+          <span class="cat-pill">59 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/FR0014003FW1/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Type: Units of AMUNDI MSCI WORLD CLIMATE PARIS ALIGNED…</span>
+          <span class="cat-score t1">74<small>/100</small></span>
+          <span class="cat-tag t1">Très bon</span>
+        </a>
+        <a class="cat-row" href="/etf/FR0013209921/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">Amundi MSCI World Ex EMU SRI Climate Paris Aligned UCITS ETF…</span>
+          <span class="cat-score t2">68<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BHZPHZ28/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">iShares MSCI EMU CTB Enhanced ESG UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1681044308/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi MSCI Europe ex Switzerland ESG Broad Transition UCITS…</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-row" href="/etf/IE000FOSCLU1/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">iShares MSCI EMU Paris-Aligned Climate UCITS ETF</span>
+          <span class="cat-score t2">65<small>/100</small></span>
+          <span class="cat-tag t2">Bon</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 59 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>CONSOMMATION</h3><p>Biens de consommation courante et discrétionnaire.</p></div>
+          <span class="cat-pill">12 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00BMW42074/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares MSCI Europe Consumer Staples Sector UCITS ETF</span>
+          <span class="cat-score t3">63<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BMW42298/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares MSCI Europe Consumer Discretionary Sector UCITS ETF</span>
+          <span class="cat-score t3">59<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1753045415/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">MSCI Europe SRI PAB</span>
+          <span class="cat-score t3">58<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834985845/">
+          <span class="cat-rank ">4</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Consumer Staples UCITS ETF Acc</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU1834988781/">
+          <span class="cat-rank ">5</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Consumer Discretionary UCITS ETF Acc</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-more" href="/#comparateur">Voir les 12 ETF de cette catégorie &rarr;</a>
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>CYBERSECURITE</h3><p>Sécurité informatique.</p></div>
+          <span class="cat-pill">1 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE000ST40PX8/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">L&amp;G Cyber Security Innovation UCITS ETF Website: www.lgim.com</span>
+          <span class="cat-score t5">39<small>/100</small></span>
+          <span class="cat-tag t5">Très faible</span>
+        </a>
+        
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>IMMOBILIER</h3><p>Sociétés et foncières immobilières.</p></div>
+          <span class="cat-pill">2 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/IE00B0M63284/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">iShares European Property Yield UCITS ETF</span>
+          <span class="cat-score t4">48<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BGDQ0L74/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">iShares European Property Yield UCITS ETF</span>
+          <span class="cat-score t4">46<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>UTILITIES</h3><p>Électricité, eau, gaz — secteurs défensifs.</p></div>
+          <span class="cat-pill">3 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/LU1834988864/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Utilities UCITS ETF Acc</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/IE00BKWQ0P07/">
+          <span class="cat-rank r2">2</span>
+          <span class="cat-name">State Street SPDR MSCI Europe Utilities UCITS ETF</span>
+          <span class="cat-score t3">56<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        <a class="cat-row" href="/etf/LU2082999215/">
+          <span class="cat-rank r3">3</span>
+          <span class="cat-name">Amundi STOXX Europe 600 Utilities UCITS ETF Dist</span>
+          <span class="cat-score t3">54<small>/100</small></span>
+          <span class="cat-tag t3">Moyen</span>
+        </a>
+        
+      </article>
+      <article class="cat-card">
+        <header class="cat-head">
+          <div><h3>IA / ROBOTIQUE</h3><p>Intelligence artificielle, automatisation, robotique.</p></div>
+          <span class="cat-pill">1 ETF</span>
+        </header>
+        <a class="cat-row" href="/etf/LU0599612842/">
+          <span class="cat-rank r1">1</span>
+          <span class="cat-name">OSSIAM EUROPE ESG MACHINE LEARNING - UCITS ETF 1C (EUR)</span>
+          <span class="cat-score t4">44<small>/100</small></span>
+          <span class="cat-tag t4">Faible</span>
+        </a>
+        
+      </article>
+    </div>
+
+    <div style="margin:36px 0 10px;text-align:center">
+      <a href="/" class="cta-btn">Comparer les 437 ETF →</a>
+      <p style="font-size:.74rem;color:var(--muted);margin-top:12px">Classement établi à partir des DICI/PRIIPs et des données justETF. Vérifiez toujours le DICI avant d'investir.</p>
+    </div>
+  </div>
+</main>
 <footer class="site-footer" role="contentinfo">
-  <p class="footer-brand"><strong>Alfred Invest</strong> — Comparateur ETF PEA gratuit et pédagogique.</p>
-  <nav class="footer-legal" aria-label="Liens légaux et informations">
-    <a href="/">Comparateur ETF</a> · <a href="/bonus-pea.html">Sélection pédagogique</a> · <a href="/blog">Blog</a> · <a href="/methodologie">Méthodologie</a> · <a href="/mentions-legales">Mentions légales</a> · <a href="/politique-de-confidentialite">Confidentialité</a> · <a href="/cgu">CGU</a> · <a href="/avertissement-investissement">Avertissement</a> · <a href="/affiliation">Affiliation</a>
-  </nav>
-  <p class="footer-data">Données ETF mises à jour le 20/09/2026 · Sources : DICI/PRIIPs, justETF · 437 ETF référencés</p>
-  <p class="footer-disclaimer">Contenu 100 % pédagogique. Ne constitue pas un conseil en investissement. Le Score Alfred est un indicateur structurel, pas une prédiction de performance.</p>
+  <div class="container">
+    <p class="footer-brand"><img src="/alfred-mark.svg" alt="" width="26" height="26" style="border-radius:7px;vertical-align:-7px;margin-right:8px"><strong>Alfred Invest</strong> — Comparateur ETF PEA gratuit et pédagogique.</p>
+    <nav class="footer-legal" aria-label="Liens légaux et informations">
+      <a href="/">Comparateur ETF</a> · <a href="/top-etf.html">Top ETF</a> · <a href="/bonus-pea.html">Sélection pédagogique</a> · <a href="/test-15-signes.html">Test 15 signes</a> · <a href="/blog">Blog</a> · <a href="/methodologie">Méthodologie</a> · <a href="/mentions-legales">Mentions légales</a> · <a href="/politique-de-confidentialite">Confidentialité</a> · <a href="/cgu">CGU</a> · <a href="/avertissement-investissement">Avertissement</a> · <a href="/affiliation">Affiliation</a>
+    </nav>
+    <p class="footer-data">Données ETF mises à jour le 25/09/2026 · Sources : DICI/PRIIPs, justETF · 437 ETF référencés · 27 catégories</p>
+    <p class="footer-disclaimer">Contenu 100 % pédagogique. Ne constitue pas un conseil en investissement. Le Score Alfred est un indicateur structurel (frais, indice, réplication, solidité, émetteur, potentiel), pas une prédiction de performance.</p>
+  </div>
 </footer>
-<style>
-.site-footer{background:#161b22;border-top:1px solid #30363d;padding:26px 16px;font-size:.85rem;color:#8b949e;text-align:center}
-.footer-brand{font-size:1rem;margin:0 0 10px}
-.footer-legal{font-size:.82rem;color:#8b949e;margin-bottom:10px}
-.footer-legal a{color:#58a6ff;text-decoration:none}
-.footer-legal a:hover{text-decoration:underline}
-.footer-data,.footer-disclaimer{font-size:.75rem;color:#6e7681;margin:4px 0}
-</style><script>window.addEventListener("load",function(){var h=location.hash;if(h&&h.indexOf("#etf-")===0){location.replace("/etf/"+h.slice(5)+"/")}});</script></body>
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){ document.getElementById('headerNav').classList.toggle('open'); });
+  window.addEventListener("load", function(){ var h = location.hash; if (h && h.indexOf("#etf-") === 0) { location.replace("/etf/" + h.slice(5) + "/"); } });
+</script>
+</body>
 </html>

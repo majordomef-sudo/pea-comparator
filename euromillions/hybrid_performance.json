@@ -559,8 +559,36 @@
       "ball_hits": 1,
       "star_hits": 0,
       "total_hits": 1
+    },
+    {
+      "date": "2026-09-25",
+      "predicted_balls": [
+        8,
+        9,
+        22,
+        33,
+        50
+      ],
+      "predicted_stars": [
+        1,
+        3
+      ],
+      "actual_balls": [
+        11,
+        12,
+        15,
+        38,
+        49
+      ],
+      "actual_stars": [
+        10,
+        12
+      ],
+      "ball_hits": 0,
+      "star_hits": 0,
+      "total_hits": 0
     }
   ],
-  "total_draws": 20,
+  "total_draws": 21,
   "total_hits": 22
 }

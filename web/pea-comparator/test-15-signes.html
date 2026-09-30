@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test — 15 signes que vous êtes sur le bon chemin en investissement | Alfred Invest</title>
+  <meta name="description" content="Un test simple en 15 signes pour faire le point sur vos finances, votre stratégie et votre comportement d'investisseur. Score sur 15, gratuit et immédiat.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alfredstudio.mooo.com/test-15-signes.html">
+  <meta property="og:title" content="Test — 15 signes que vous êtes sur le bon chemin en investissement">
+  <meta property="og:description" content="15 signes, 1 point chacun, score sur 15. Faites le point sur votre système financier en 3 minutes.">
+  <meta property="og:image" content="https://alfredstudio.mooo.com/og-image.jpg">
+  <meta property="og:url" content="https://alfredstudio.mooo.com/test-15-signes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <script defer data-domain="alfredstudio.mooo.com" src="/analytics/js/script.js"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;color:#f1f5f9;background:#0a0e1a;line-height:1.6;overflow-x:hidden;padding-bottom:96px}
+    .container{max-width:860px;margin:0 auto;padding:0 24px}
+    .header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,168,67,0.15)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;color:#f1f5f9;text-decoration:none}
+    .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,#d4a843,#b8912e);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;box-shadow:0 2px 8px rgba(212,168,67,0.25);flex-shrink:0}
+    .header .tagline{font-size:.8rem;color:#94a3b8}
+    .hero{background:linear-gradient(135deg,#0a0e1a,#1a1a2e,#F1F5F9);text-align:center;padding:56px 20px 32px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 300px at 50% 30%,rgba(212,168,67,0.1) 0%,transparent 70%);pointer-events:none}
+    .hero .container{position:relative;z-index:1}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);padding:6px 18px;border-radius:999px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,0.9);margin-bottom:16px}
+    .hero-badge-dot{width:6px;height:6px;background:#d4a843;border-radius:50%;display:inline-block}
+    .hero h1{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:900;letter-spacing:-.03em;line-height:1.12;margin-bottom:12px}
+    .hero h1 .highlight{background:linear-gradient(90deg,#fbbf24,#D4A843);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:clamp(.9rem,1.5vw,1.05rem);max-width:600px;margin:0 auto;opacity:.85}
+    .howto{background:rgba(212,168,67,0.07);border:1px solid rgba(212,168,67,0.18);border-radius:14px;padding:18px 22px;margin:28px auto 8px;font-size:.86rem;color:#cbd5e1}
+    .howto strong{color:#f0d080}
+    section.signs{padding:24px 0 8px}
+    .sign{display:flex;gap:16px;align-items:flex-start;background:#131a2e;border:1px solid rgba(212,168,67,0.12);border-radius:16px;padding:20px;margin-bottom:12px;cursor:pointer;transition:border-color .18s,background .18s,transform .18s}
+    .sign:hover{border-color:rgba(212,168,67,0.45);transform:translateY(-1px)}
+    .sign input{position:absolute;opacity:0;pointer-events:none}
+    .sign-num{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.25);color:#f0d080;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem}
+    .sign-body{flex:1;min-width:0}
+    .sign-title{display:block;font-weight:800;font-size:.98rem;margin-bottom:4px}
+    .sign-desc{display:block;font-size:.84rem;color:#94a3b8}
+    .sign-check{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:2px solid rgba(148,163,184,0.45);color:transparent;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;transition:all .18s}
+    .sign.on{border-color:#d4a843;background:rgba(212,168,67,0.08)}
+    .sign.on .sign-check{background:linear-gradient(135deg,#d4a843,#b8912e);border-color:transparent;color:#fff}
+    .sign.on .sign-num{background:linear-gradient(135deg,#d4a843,#b8912e);color:#fff}
+    .scorebar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(11,17,32,0.97);backdrop-filter:blur(16px);border-top:1px solid rgba(212,168,67,0.25);padding:12px 0}
+    .scorebar-inner{max-width:860px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .scoreval{font-weight:900;font-size:1.5rem;color:#fbbf24;white-space:nowrap}
+    .scoreval small{font-size:.85rem;color:#94a3b8;font-weight:700}
+    .progress{flex:1;min-width:120px;height:8px;border-radius:999px;background:rgba(148,163,184,0.2);overflow:hidden}
+    .progress span{display:block;height:100%;width:0%;background:linear-gradient(90deg,#d4a843,#fbbf24);transition:width .25s}
+    .verdict{font-size:.85rem;font-weight:700;color:#cbd5e1;flex-basis:100%}
+    .result{background:#F1F5F9;border:1px solid rgba(212,168,67,0.18);border-radius:20px;padding:28px;margin:32px 0;text-align:center}
+    .result h2{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:900;margin-bottom:10px;color:#fbbf24}
+    .result p{color:#cbd5e1;font-size:.9rem;max-width:620px;margin:0 auto}
+    .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:22px;text-align:left}
+    .tier{background:#131a2e;border:1px solid rgba(148,163,184,0.18);border-radius:14px;padding:16px;transition:all .2s}
+    .tier.active{border-color:#d4a843;box-shadow:0 0 0 2px rgba(212,168,67,0.18)}
+    .tier b{display:block;font-size:.8rem;color:#f0d080;margin-bottom:6px;letter-spacing:.02em}
+    .tier h3{font-size:.98rem;font-weight:800;margin-bottom:6px}
+    .tier p{font-size:.8rem;color:#94a3b8;margin:0}
+    .nl{background:linear-gradient(135deg,#F1F5F9,#1e293b);border-radius:20px;padding:32px 24px;margin:28px 0;text-align:center;position:relative;overflow:hidden}
+    .nl h2{font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:900;margin-bottom:8px}
+    .nl p{color:#cbd5e1;font-size:.88rem;margin-bottom:18px}
+    .nl form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .nl input[type=email]{flex:1;min-width:240px;max-width:340px;padding:13px 16px;border-radius:12px;border:1px solid rgba(148,163,184,0.35);background:#0a0e1a;color:#f1f5f9;font-size:.92rem;font-family:inherit}
+    .nl button{padding:13px 26px;border:none;border-radius:12px;background:linear-gradient(135deg,#d4a843,#b8912e);color:#fff;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit}
+    .nl button:hover{opacity:.92}
+    .nl-msg{margin-top:12px;font-size:.84rem;font-weight:700;min-height:20px}
+    .cta-main{text-align:center;padding:36px 24px;background:linear-gradient(135deg,#F1F5F9,#1e293b);border-radius:20px;margin:24px 0}
+    .cta-main h2{font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:900;margin-bottom:8px}
+    .cta-main p{color:#cbd5e1;font-size:.88rem;margin-bottom:16px}
+    .cta-button{display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#d4a843,#b8912e);color:#fff;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 4px 16px rgba(212,168,67,0.2)}
+    .disc{background:#2a1b0a;border:1px solid rgba(212,168,67,0.2);border-radius:12px;padding:18px;margin-top:24px}
+    .disc p{font-size:.78rem;color:#cbd5e1}
+    .footer{background:#0b1423;padding:32px 20px;text-align:center;font-size:.8rem;color:#94a3b8;line-height:1.9;margin-top:32px}
+    .footer a{color:#f0d080;text-decoration:none}
+    @media(max-width:600px){.header .tagline{display:none}.sign{padding:16px;gap:12px}.sign-num{width:34px;height:34px;font-size:.85rem}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo"><img src="/alfred-mark.svg" alt="Alfred Invest" style="width:34px;height:34px;border-radius:9px;flex-shrink:0"><span>Alfred Invest</span></a>
+      <p class="tagline">Test gratuit — 3 minutes</p>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <span class="hero-badge"><span class="hero-badge-dot"></span> Auto-évaluation</span>
+      <h1>15 signes que vous êtes sur <span class="highlight">le bon chemin</span> en investissement</h1>
+      <p>Un test simple pour faire le point sur vos finances, votre stratégie et votre comportement d'investisseur.</p>
+      <div class="howto">
+        <strong>Comment l'utiliser ?</strong> Cochez uniquement les signes que vous pouvez valider <em>aujourd'hui</em>. 1 signe = 1 point, score maximum : 15/15.
+      </div>
+    </div>
+  </div>
+
+  <section class="signs">
+    <div class="container">
+      <label class="sign" data-i="1">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">01</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous êtes sorti du mois au mois</span>
+          <span class="sign-desc">Vous n&#x27;attendez plus le prochain salaire pour respirer. Vous avez créé une première marge entre vos revenus et vos besoins.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="2">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">02</span>
+        <span class="sign-body">
+          <span class="sign-title">Votre gap de richesse est d&#x27;au moins 30 %</span>
+          <span class="sign-desc">Après vos dépenses obligatoires, il vous reste une vraie marge de manoeuvre. Repère simple : (revenus - dépenses obligatoires) / revenus.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="3">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">03</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous notez vos dépenses</span>
+          <span class="sign-desc">Vous savez ce qui entre et sort de votre système financier. Mesurer permet de comprendre, puis d&#x27;optimiser.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="4">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">04</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous avez constitué une épargne de sécurité</span>
+          <span class="sign-desc">Vous disposez d&#x27;une réserve dédiée aux imprévus, distincte de vos investissements. Selon votre situation, elle peut représenter plusieurs mois de dépenses ou de revenus.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="5">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">05</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous n&#x27;avez pas de crédit à la consommation ou de dette coûteuse</span>
+          <span class="sign-desc">Vous évitez de payer plus cher, à crédit, des biens qui perdent eux-mêmes de la valeur. Votre organisation financière absorbe davantage les projets et imprévus.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="6">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">06</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous avez commencé une chaîne d&#x27;investissement automatique</span>
+          <span class="sign-desc">Votre DCA est programmé, idéalement autour du versement du salaire. Chaque mois investi prolonge une chaîne que vous avez de moins en moins envie de briser.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="7">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">07</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous investissez que les marchés soient hauts ou bas</span>
+          <span class="sign-desc">Vous n&#x27;essayez pas de deviner le prochain sommet ou le prochain creux. Votre stratégie de long terme n&#x27;a pas besoin de prévoir les mouvements de court terme.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="8">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">08</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous êtes diversifié au-delà des actions</span>
+          <span class="sign-desc">Être exposé à des milliers d&#x27;actions ne signifie pas être diversifié entre les classes d&#x27;actifs. Votre patrimoine possède plusieurs moteurs de performance et de risque.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="9">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">09</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous êtes multi-actifs et multi-supports</span>
+          <span class="sign-desc">Votre stratégie ne dépend ni d&#x27;une seule classe d&#x27;actifs ni d&#x27;une seule enveloppe. Vous recherchez d&#x27;abord la robustesse, puis la simplicité.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="10">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">10</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous avez fixé une direction claire à vos placements</span>
+          <span class="sign-desc">Vous avez une idée du revenu patrimonial souhaité, du capital approximatif nécessaire et de l&#x27;horizon visé. Vous investissez vers une destination chiffrée.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="11">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">11</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous avez un fichier ou système de suivi</span>
+          <span class="sign-desc">Vous connaissez votre allocation cible, vos apports, votre DCA, l&#x27;évolution de votre patrimoine et le poids de vos différents actifs.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="12">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">12</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous passez le choc de -30 %</span>
+          <span class="sign-desc">Imaginez -30 % sur votre poche actions puis plusieurs années difficiles. Ce serait désagréable, mais votre allocation, votre horizon et votre plan resteraient supportables.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="13">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">13</span>
+        <span class="sign-body">
+          <span class="sign-title">Le bruit ne vous fait pas changer d&#x27;avis</span>
+          <span class="sign-desc">Une vidéo, une prédiction ou une anecdote ne suffit plus à bouleverser votre portefeuille. Vous distinguez les faits, les raisonnements solides et le simple bruit.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="14">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">14</span>
+        <span class="sign-body">
+          <span class="sign-title">Vous connaissez votre prochain palier et quand vous devriez l&#x27;atteindre</span>
+          <span class="sign-desc">10 000 EUR, 20 000 EUR, 50 000 EUR, 75 000 EUR, 150 000 EUR, 250 000 EUR... Vous connaissez votre prochaine étape et son horizon approximatif.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+      <label class="sign" data-i="15">
+        <input type="checkbox" class="sign-box">
+        <span class="sign-num">15</span>
+        <span class="sign-body">
+          <span class="sign-title">Votre patrimoine tourne et vous ne stressez pas</span>
+          <span class="sign-desc">Votre direction, votre allocation et votre DCA sont en place. Le système tourne en arrière-plan : vous vous intéressez à vos investissements sans être préoccupé par eux.</span>
+        </span>
+        <span class="sign-check" aria-hidden="true">✓</span>
+      </label>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="result" id="result">
+      <h2 id="result-title">Votre résultat : 0/15</h2>
+      <p id="result-text">Cochez les signes ci-dessus pour situer votre système financier.</p>
+      <div class="tiers">
+        <div class="tier" data-tier="low"><b>0 – 5 signes</b><h3>Votre système reste à construire</h3><p>Les fondations importantes manquent encore. Identifiez les signes non cochés et améliorez progressivement votre système.</p></div>
+        <div class="tier" data-tier="mid"><b>6 – 10 signes</b><h3>Vous êtes sur le bon chemin</h3><p>Les fondations sont là et votre trajectoire est clairement positive. Quelques éléments restent à renforcer.</p></div>
+        <div class="tier" data-tier="high"><b>11 – 15 signes</b><h3>Votre système est solide</h3><p>Stratégie structurée, cohérente et robuste. L'objectif : rester régulier, laisser le temps travailler, améliorer sans tout bouleverser.</p></div>
+      </div>
+      <p style="margin-top:20px;font-size:.82rem;color:#94a3b8">L'objectif n'est pas d'obtenir 15/15 immédiatement : le test sert à identifier les prochaines briques à renforcer.</p>
+    </div>
+
+    <div class="nl">
+      <h2>Recevez le test en PDF + la checklist mensuelle</h2>
+      <p>Un email, zéro spam. Vous recevez le test à imprimer et les mises à jour utiles pour construire votre système.</p>
+      <form id="nl-form" autocomplete="email">
+        <input type="email" id="nl-email" placeholder="votre@email.com" required>
+        <button type="submit">Recevoir le PDF</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+      <p style="margin-top:10px;font-size:.82rem"><a href="/test-15-signes.pdf" download style="color:#f0d080">ou t&eacute;l&eacute;charger directement le PDF</a></p>
+    </div>
+
+    <div class="cta-main">
+      <h2>Passez du test à l'action</h2>
+      <p>Comparez les 437 ETF eligibles au PEA, calculez vos intérêts composés et votre impact de frais.</p>
+      <a href="/" class="cta-button">Ouvrir le comparateur →</a>
+      <p style="font-size:.72rem;color:#64748b;margin-top:12px">Liens d'affiliation : si vous ouvrez un compte Trade Republic via ce site, Alfred Invest peut percevoir une commission, sans frais supplémentaires pour vous. <a href="/affiliation" style="color:#f0d080">Transparence</a></p>
+    </div>
+
+    <div class="disc">
+      <p><strong>Avertissement.</strong> Ce test est un outil pédagogique d'auto-évaluation. Il ne constitue ni un conseil en investissement, ni une recommandation personnalisée. Les performances passées ne préjugent pas des performances futures.</p>
+    </div>
+  </div>
+
+  <div class="scorebar">
+    <div class="scorebar-inner">
+      <div class="scoreval"><span id="score">0</span><small>/15</small></div>
+      <div class="progress"><span id="bar"></span></div>
+      <div class="verdict" id="verdict">Votre système reste à construire (0 – 5 signes)</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p><a href="/">Comparateur ETF PEA</a> &middot; <a href="/top-etf.html">Top ETF par indice</a> &middot; <a href="/methodologie">Méthodologie</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/mentions-legales">Mentions légales</a> &middot; <a href="/politique-de-confidentialite">Politique de confidentialité</a> &middot; <a href="/cgu">CGU</a> &middot; <a href="/avertissement-investissement">Avertissement</a> &middot; <a href="/affiliation">Affiliation</a></p>
+  </footer>
+
+  <script>
+  (function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.sign'));
+    var scoreEl = document.getElementById('score');
+    var barEl = document.getElementById('bar');
+    var verdictEl = document.getElementById('verdict');
+    var titleEl = document.getElementById('result-title');
+    var textEl = document.getElementById('result-text');
+    var tiers = document.querySelectorAll('.tier');
+
+    var TIERS = [
+      {max:5, key:'low', label:'Votre système reste à construire (0 – 5 signes)', title:'Votre système reste à construire', text:'Plusieurs fondations importantes manquent encore. Identifiez les signes que vous ne cochez pas encore et améliorez progressivement votre système.'},
+      {max:10, key:'mid', label:'Vous êtes sur le bon chemin (6 – 10 signes)', title:'Vous êtes sur le bon chemin', text:'Les fondations sont là : vous avez déjà structuré une bonne partie de vos finances et de votre stratégie. Quelques éléments restent à renforcer, mais la trajectoire est positive.'},
+      {max:15, key:'high', label:'Votre système est solide (11 – 15 signes)', title:'Votre système est solide', text:'Stratégie structurée, cohérente et suffisamment robuste pour fonctionner sur le long terme. L\'essentiel : rester régulier, laisser le temps travailler et améliorer le système sans le bouleverser.'}
+    ];
+
+    function update(){
+      var n = 0;
+      boxes.forEach(function(el){
+        var on = el.querySelector('input').checked;
+        el.classList.toggle('on', on);
+        if (on) n++;
+      });
+      scoreEl.textContent = n;
+      barEl.style.width = Math.round(n / 15 * 100) + '%';
+      var tier = TIERS[0];
+      for (var i = 0; i < TIERS.length; i++) { if (n <= TIERS[i].max) { tier = TIERS[i]; break; } }
+      verdictEl.textContent = tier.label;
+      titleEl.textContent = 'Votre résultat : ' + n + '/15 — ' + tier.title;
+      textEl.textContent = n === 0 ? 'Cochez les signes ci-dessus pour situer votre système financier.' : tier.text;
+      tiers.forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-tier') === tier.key); });
+      try { localStorage.setItem('alfred_test15', JSON.stringify(boxes.map(function(el){ return el.querySelector('input').checked; }))); } catch(e){}
+    }
+
+    boxes.forEach(function(el){
+      var input = el.querySelector('input');
+      input.addEventListener('change', update);
+    });
+
+    try {
+      var saved = JSON.parse(localStorage.getItem('alfred_test15') || 'null');
+      if (saved && saved.length === boxes.length) {
+        boxes.forEach(function(el, i){ el.querySelector('input').checked = !!saved[i]; });
+      }
+    } catch(e){}
+    update();
+
+    var form = document.getElementById('nl-form');
+    var msg = document.getElementById('nl-msg');
+    var email = document.getElementById('nl-email');
+    email.addEventListener('input', function(){ email.value = email.value.trim(); });
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var val = email.value.trim();
+      if (!val || val.indexOf('@') < 1) { msg.style.color = '#f87171'; msg.textContent = 'Email invalide.'; return; }
+      msg.style.color = '#cbd5e1'; msg.textContent = 'Envoi...';
+      fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email: val, source: 'test-15-signes' })
+      }).then(function(r){ return r.json().catch(function(){ return {}; }); })
+        .then(function(d){
+          if (d && (d.ok === true || d.success === true)) {
+            msg.style.color = '#4ade80'; msg.textContent = 'Inscrit ✅ Vérifiez votre boîte mail.';
+            form.reset();
+          } else {
+            msg.style.color = '#f0d080'; msg.textContent = (d && d.error) ? d.error : 'Inscription enregistrée, vérifiez votre email.';
+          }
+        }).catch(function(){ msg.style.color = '#f87171'; msg.textContent = 'Erreur réseau, réessayez.'; });
+    });
+  })();
+  </script>
+</body>
+</html>

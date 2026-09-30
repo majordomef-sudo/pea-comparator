@@ -1,0 +1,110 @@
+{
+ "updated": "2026-09-28 08:50",
+ "quadrant": "Q1",
+ "nom": "Point d'equilibre (Goldilocks)",
+ "confidence": 76,
+ "zone_indecise": true,
+ "bande": {
+  "croissance": 0.2,
+  "inflation": 0.2
+ },
+ "axes": {
+  "croissance": {
+   "valeur": 1.2,
+   "moyenne_7a": 1.204,
+   "periode": "2026-Q2",
+   "ecart_pp": -0.004,
+   "band": 0.2,
+   "classe": "neutre",
+   "age_jours": 90
+  },
+  "inflation": {
+   "valeur": 3.2,
+   "moyenne_7a": 3.325,
+   "periode": "2026-08",
+   "ecart_pp": -0.125,
+   "band": 0.2,
+   "classe": "neutre",
+   "age_jours": 28
+  }
+ },
+ "fraicheur": {
+  "age_max_jours": 90,
+  "seuil_jours": 180,
+  "perime": false,
+  "par_axe": {
+   "croissance": 90,
+   "inflation": 28
+  },
+  "message": "Donnee la plus ancienne : J+90."
+ },
+ "transition": 30,
+ "transition_label": "Surveillance",
+ "global": 76,
+ "scores": {
+  "croissance": 50,
+  "inflation": 90,
+  "energie": 68,
+  "bce": 90,
+  "geo": 90
+ },
+ "allocation": {
+  "level": "yellow",
+  "message": "Zone indecise (croissance, inflation dans la bande) : quadrant precedent conserve. Q1 - Point d'equilibre (Goldilocks) : Croissance au-dessus de sa tendance, inflation contenue. Actions et obligations portent le portefeuille : c'est le regime ou le risque est le mieux paye. Laisser composer. Dosage indicatif : actions 75% / obligations 15% / or 5% / matieres premieres 2% / cash 3%. Favorise : actions, obligations. Vigilance : indice de transition 30/100. ANALYTIQUE uniquement - aucune execution automatique."
+ },
+ "quadrants": {
+  "Q1": {
+   "nom": "Point d'equilibre (Goldilocks)",
+   "croissance": "haute",
+   "inflation": "basse",
+   "level": "green",
+   "favorise": [
+    "actions",
+    "obligations"
+   ],
+   "commentaire": "Croissance au-dessus de sa tendance, inflation contenue. Actions et obligations portent le portefeuille : c'est le regime ou le risque est le mieux paye. Laisser composer."
+  },
+  "Q2": {
+   "nom": "Boom inflationniste",
+   "croissance": "haute",
+   "inflation": "haute",
+   "level": "green",
+   "favorise": [
+    "matieres premieres",
+    "energie",
+    "valeur/cycliques",
+    "or",
+    "obligations indexees"
+   ],
+   "commentaire": "Croissance et inflation au-dessus de leur tendance. L'inflation recompense les actifs reels et penalise le nominal : surponderer or et matieres premieres, eviter la duration longue."
+  },
+  "Q3": {
+   "nom": "Stagflation",
+   "croissance": "basse",
+   "inflation": "haute",
+   "level": "red",
+   "favorise": [
+    "or",
+    "matieres premieres",
+    "cash",
+    "actifs reels"
+   ],
+   "commentaire": "Croissance sous sa tendance et inflation au-dessus : le pire quadrant pour un portefeuille classique, actions ET obligations souffrent en meme temps. Renforcer or, matieres premieres et cash."
+  },
+  "Q4": {
+   "nom": "Deflation / recession",
+   "croissance": "basse",
+   "inflation": "basse",
+   "level": "yellow",
+   "favorise": [
+    "obligations longues",
+    "cash",
+    "actions defensives et qualite"
+   ],
+   "commentaire": "Croissance et inflation sous leur tendance. La baisse des taux fait le travail : la duration devient l'amie du portefeuille, allonger les obligations et reduire l'or."
+  }
+ },
+ "analytique": true,
+ "methode": "Gavekal : quadrant croissance/inflation vs moyenne de cycle 7 ans",
+ "avertissement": "Indicateur analytique et pedagogique. Aucun ordre, aucune execution automatique. Ne constitue pas un conseil en investissement."
+}

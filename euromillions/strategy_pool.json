@@ -11,16 +11,16 @@
       "pool_size": 21
     },
     "seed": 61920,
-    "fitness": 0.125,
-    "total_hits": 11,
-    "draws_evaluated": 13,
+    "fitness": 0.12307692307692308,
+    "total_hits": 12,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
-    "ball_hits_total": 5,
+    "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_47_8271",
@@ -34,16 +34,16 @@
       "pool_size": 11
     },
     "seed": 61999,
-    "fitness": 0.13333333333333333,
-    "total_hits": 12,
-    "draws_evaluated": 13,
+    "fitness": 0.16153846153846155,
+    "total_hits": 14,
+    "draws_evaluated": 14,
     "generation": 2,
     "age": 3,
     "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_49_8581",
@@ -57,16 +57,16 @@
       "pool_size": 12
     },
     "seed": 12564,
-    "fitness": 0.12916666666666665,
-    "total_hits": 13,
-    "draws_evaluated": 13,
+    "fitness": 0.1576923076923077,
+    "total_hits": 15,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 8,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_64_8564",
@@ -80,16 +80,16 @@
       "pool_size": 18
     },
     "seed": 85739,
-    "fitness": 0.1875,
-    "total_hits": 14,
-    "draws_evaluated": 13,
+    "fitness": 0.19230769230769232,
+    "total_hits": 15,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 5,
-    "star_hits_total": 7,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.2916666666666667
+    "star_hits_total": 8,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.3076923076923077
   },
   {
     "id": "g_68_3291",
@@ -103,16 +103,16 @@
       "pool_size": 20
     },
     "seed": 18968,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 11,
-    "draws_evaluated": 13,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_70_6083",
@@ -126,16 +126,16 @@
       "pool_size": 15
     },
     "seed": 78459,
-    "fitness": 0.14583333333333334,
+    "fitness": 0.13461538461538464,
     "total_hits": 12,
-    "draws_evaluated": 13,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 5,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_71_3658",
@@ -149,16 +149,16 @@
       "pool_size": 13
     },
     "seed": 84375,
-    "fitness": 0.09166666666666667,
+    "fitness": 0.08461538461538462,
     "total_hits": 10,
-    "draws_evaluated": 13,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 6,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_73_8271",
@@ -172,16 +172,16 @@
       "pool_size": 23
     },
     "seed": 56076,
-    "fitness": 0.14166666666666666,
-    "total_hits": 13,
-    "draws_evaluated": 13,
+    "fitness": 0.16923076923076924,
+    "total_hits": 15,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 7,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_74_9960",
@@ -195,16 +195,16 @@
       "pool_size": 30
     },
     "seed": 68697,
-    "fitness": 0.14166666666666666,
-    "total_hits": 10,
-    "draws_evaluated": 13,
+    "fitness": 0.15,
+    "total_hits": 11,
+    "draws_evaluated": 14,
     "generation": 2,
     "age": 3,
     "ball_hits_total": 2,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.03333333333333333,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.03076923076923077,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_80_2043",
@@ -218,16 +218,16 @@
       "pool_size": 6
     },
     "seed": 57690,
-    "fitness": 0.14166666666666666,
-    "total_hits": 13,
-    "draws_evaluated": 13,
+    "fitness": 0.15000000000000002,
+    "total_hits": 14,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 7,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_81_1575",
@@ -241,16 +241,16 @@
       "pool_size": 15
     },
     "seed": 31366,
-    "fitness": 0.1125,
-    "total_hits": 11,
-    "draws_evaluated": 13,
+    "fitness": 0.13076923076923078,
+    "total_hits": 13,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
-    "ball_hits_total": 6,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "ball_hits_total": 7,
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_86_8716",
@@ -264,16 +264,16 @@
       "pool_size": 24
     },
     "seed": 27770,
-    "fitness": 0.11666666666666667,
-    "total_hits": 10,
-    "draws_evaluated": 13,
+    "fitness": 0.11538461538461539,
+    "total_hits": 11,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
-    "ball_hits_total": 4,
+    "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_87_9179",
@@ -287,16 +287,16 @@
       "pool_size": 15
     },
     "seed": 78350,
-    "fitness": 0.1125,
-    "total_hits": 11,
-    "draws_evaluated": 13,
+    "fitness": 0.12307692307692308,
+    "total_hits": 12,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 6,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_88_5324",
@@ -310,16 +310,16 @@
       "pool_size": 9
     },
     "seed": 11710,
-    "fitness": 0.10833333333333334,
-    "total_hits": 12,
-    "draws_evaluated": 13,
+    "fitness": 0.13846153846153847,
+    "total_hits": 14,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 8,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_92_5622",
@@ -333,16 +333,16 @@
       "pool_size": 8
     },
     "seed": 50496,
-    "fitness": 0.13333333333333333,
-    "total_hits": 12,
-    "draws_evaluated": 13,
+    "fitness": 0.16153846153846155,
+    "total_hits": 14,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_97_1878",
@@ -356,16 +356,16 @@
       "pool_size": 16
     },
     "seed": 11329,
-    "fitness": 0.11666666666666667,
-    "total_hits": 10,
-    "draws_evaluated": 13,
+    "fitness": 0.12692307692307692,
+    "total_hits": 11,
+    "draws_evaluated": 14,
     "generation": 1,
     "age": 3,
     "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_99_2653",
@@ -379,16 +379,16 @@
       "pool_size": 15
     },
     "seed": 92667,
-    "fitness": 0.15833333333333333,
-    "total_hits": 15,
-    "draws_evaluated": 13,
+    "fitness": 0.1653846153846154,
+    "total_hits": 16,
+    "draws_evaluated": 14,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 9,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_123_2661",
@@ -402,16 +402,16 @@
       "pool_size": 12
     },
     "seed": 77627,
-    "fitness": 0.05416666666666667,
-    "total_hits": 7,
-    "draws_evaluated": 13,
+    "fitness": 0.07692307692307693,
+    "total_hits": 9,
+    "draws_evaluated": 14,
     "generation": 1,
     "age": 3,
-    "ball_hits_total": 4,
-    "star_hits_total": 1,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.041666666666666664
+    "ball_hits_total": 5,
+    "star_hits_total": 2,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_128_9416",
@@ -425,16 +425,16 @@
       "pool_size": 24
     },
     "seed": 22589,
-    "fitness": 0.16666666666666666,
+    "fitness": 0.15384615384615385,
     "total_hits": 13,
-    "draws_evaluated": 13,
+    "draws_evaluated": 14,
     "generation": 1,
     "age": 3,
     "ball_hits_total": 5,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_129_2926",
@@ -448,16 +448,16 @@
       "pool_size": 15
     },
     "seed": 36206,
-    "fitness": 0.175,
-    "total_hits": 17,
-    "draws_evaluated": 13,
+    "fitness": 0.16923076923076924,
+    "total_hits": 18,
+    "draws_evaluated": 14,
     "generation": 4,
     "age": 3,
-    "ball_hits_total": 11,
+    "ball_hits_total": 12,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.18333333333333332,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.18461538461538463,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_144_8878",
@@ -471,16 +471,16 @@
       "pool_size": 29
     },
     "seed": 20516,
-    "fitness": 0.10416666666666666,
-    "total_hits": 10,
-    "draws_evaluated": 13,
+    "fitness": 0.10384615384615385,
+    "total_hits": 11,
+    "draws_evaluated": 14,
     "generation": 0,
     "age": 3,
-    "ball_hits_total": 5,
+    "ball_hits_total": 6,
     "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_200_3342",
@@ -494,16 +494,16 @@
       "pool_size": 28
     },
     "seed": 41372,
-    "fitness": 0.125,
-    "total_hits": 20,
-    "draws_evaluated": 18,
+    "fitness": 0.13461538461538464,
+    "total_hits": 21,
+    "draws_evaluated": 19,
     "generation": 0,
     "age": 7,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_99_7676",
@@ -517,16 +517,16 @@
       "pool_size": 13
     },
     "seed": 77372,
-    "fitness": 0.08333333333333333,
-    "total_hits": 18,
-    "draws_evaluated": 18,
+    "fitness": 0.11538461538461539,
+    "total_hits": 20,
+    "draws_evaluated": 19,
     "generation": 0,
     "age": 7,
     "ball_hits_total": 5,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_100_6963",
@@ -540,16 +540,16 @@
       "pool_size": 15
     },
     "seed": 68826,
-    "fitness": 0.10416666666666666,
-    "total_hits": 15,
-    "draws_evaluated": 16,
+    "fitness": 0.11538461538461539,
+    "total_hits": 16,
+    "draws_evaluated": 17,
     "generation": 2,
     "age": 5,
     "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_15_7400",
@@ -563,16 +563,16 @@
       "pool_size": 21
     },
     "seed": 19012,
-    "fitness": 0.125,
-    "total_hits": 16,
-    "draws_evaluated": 16,
+    "fitness": 0.15384615384615385,
+    "total_hits": 18,
+    "draws_evaluated": 17,
     "generation": 2,
     "age": 5,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_93_3735",
@@ -586,16 +586,16 @@
       "pool_size": 9
     },
     "seed": 36306,
-    "fitness": 0.14166666666666666,
+    "fitness": 0.13076923076923078,
     "total_hits": 16,
-    "draws_evaluated": 15,
+    "draws_evaluated": 16,
     "generation": 3,
     "age": 4,
     "ball_hits_total": 7,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_128_6487",
@@ -609,16 +609,16 @@
       "pool_size": 23
     },
     "seed": 28614,
-    "fitness": 0.1,
-    "total_hits": 14,
-    "draws_evaluated": 15,
+    "fitness": 0.13076923076923078,
+    "total_hits": 16,
+    "draws_evaluated": 16,
     "generation": 3,
     "age": 4,
     "ball_hits_total": 7,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_157_9111",
@@ -632,16 +632,16 @@
       "pool_size": 16
     },
     "seed": 47651,
-    "fitness": 0.09166666666666667,
-    "total_hits": 13,
-    "draws_evaluated": 15,
+    "fitness": 0.12307692307692308,
+    "total_hits": 15,
+    "draws_evaluated": 16,
     "generation": 0,
     "age": 4,
     "ball_hits_total": 6,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_103_9960",
@@ -655,16 +655,16 @@
       "pool_size": 14
     },
     "seed": 80188,
-    "fitness": 0.12916666666666665,
-    "total_hits": 21,
-    "draws_evaluated": 18,
+    "fitness": 0.13846153846153847,
+    "total_hits": 22,
+    "draws_evaluated": 19,
     "generation": 0,
     "age": 7,
     "ball_hits_total": 8,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_65_5031",
@@ -678,16 +678,16 @@
       "pool_size": 15
     },
     "seed": 44758,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 17,
-    "draws_evaluated": 15,
+    "draws_evaluated": 16,
     "generation": 3,
     "age": 4,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_85_1581",
@@ -701,16 +701,16 @@
       "pool_size": 21
     },
     "seed": 98591,
-    "fitness": 0.14166666666666666,
-    "total_hits": 16,
-    "draws_evaluated": 15,
+    "fitness": 0.13846153846153847,
+    "total_hits": 17,
+    "draws_evaluated": 16,
     "generation": 3,
     "age": 4,
-    "ball_hits_total": 7,
+    "ball_hits_total": 8,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_5_2453",
@@ -724,16 +724,16 @@
       "pool_size": 21
     },
     "seed": 58542,
-    "fitness": 0.125,
-    "total_hits": 12,
-    "draws_evaluated": 14,
+    "fitness": 0.13461538461538464,
+    "total_hits": 13,
+    "draws_evaluated": 15,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_9_2852",
@@ -747,16 +747,16 @@
       "pool_size": 7
     },
     "seed": 65782,
-    "fitness": 0.19166666666666665,
-    "total_hits": 17,
-    "draws_evaluated": 14,
+    "fitness": 0.19615384615384615,
+    "total_hits": 18,
+    "draws_evaluated": 15,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 8,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_17_3205",
@@ -770,16 +770,16 @@
       "pool_size": 12
     },
     "seed": 36127,
-    "fitness": 0.1625,
-    "total_hits": 15,
-    "draws_evaluated": 14,
+    "fitness": 0.1576923076923077,
+    "total_hits": 16,
+    "draws_evaluated": 15,
     "generation": 4,
     "age": 3,
-    "ball_hits_total": 7,
+    "ball_hits_total": 8,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_38_9320",
@@ -793,16 +793,16 @@
       "pool_size": 23
     },
     "seed": 88503,
-    "fitness": 0.15833333333333333,
+    "fitness": 0.14615384615384616,
     "total_hits": 16,
-    "draws_evaluated": 14,
+    "draws_evaluated": 15,
     "generation": 4,
     "age": 3,
     "ball_hits_total": 9,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_44_1029",
@@ -816,16 +816,16 @@
       "pool_size": 28
     },
     "seed": 33863,
-    "fitness": 0.15,
-    "total_hits": 12,
-    "draws_evaluated": 14,
+    "fitness": 0.1576923076923077,
+    "total_hits": 13,
+    "draws_evaluated": 15,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 3,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_156_8630",
@@ -839,16 +839,16 @@
       "pool_size": 24
     },
     "seed": 88165,
-    "fitness": 0.21250000000000002,
-    "total_hits": 24,
-    "draws_evaluated": 16,
+    "fitness": 0.2153846153846154,
+    "total_hits": 25,
+    "draws_evaluated": 17,
     "generation": 0,
     "age": 4,
     "ball_hits_total": 13,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.21666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.2,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_131_1685",
@@ -862,16 +862,16 @@
       "pool_size": 18
     },
     "seed": 4920,
-    "fitness": 0.11666666666666667,
+    "fitness": 0.1076923076923077,
     "total_hits": 14,
-    "draws_evaluated": 16,
+    "draws_evaluated": 17,
     "generation": 2,
     "age": 5,
     "ball_hits_total": 4,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_93_2325",
@@ -885,16 +885,16 @@
       "pool_size": 8
     },
     "seed": 93349,
-    "fitness": 0.11666666666666667,
+    "fitness": 0.1076923076923077,
     "total_hits": 14,
-    "draws_evaluated": 14,
+    "draws_evaluated": 15,
     "generation": 3,
     "age": 3,
     "ball_hits_total": 9,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_56_2233",
@@ -908,16 +908,16 @@
       "pool_size": 22
     },
     "seed": 15162,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 13,
-    "draws_evaluated": 15,
+    "draws_evaluated": 16,
     "generation": 3,
     "age": 4,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_1_3145",
@@ -931,16 +931,16 @@
       "pool_size": 30
     },
     "seed": 49799,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_2_8298",
@@ -954,16 +954,16 @@
       "pool_size": 30
     },
     "seed": 27349,
-    "fitness": 0.07083333333333333,
-    "total_hits": 7,
-    "draws_evaluated": 12,
+    "fitness": 0.08461538461538462,
+    "total_hits": 8,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 1,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.041666666666666664
+    "star_hits_total": 2,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_3_1213",
@@ -977,16 +977,16 @@
       "pool_size": 29
     },
     "seed": 12771,
-    "fitness": 0.14166666666666666,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.1576923076923077,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
-    "ball_hits_total": 7,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "ball_hits_total": 8,
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_4_5706",
@@ -1000,16 +1000,16 @@
       "pool_size": 16
     },
     "seed": 30660,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_5_5400",
@@ -1023,16 +1023,16 @@
       "pool_size": 15
     },
     "seed": 53726,
-    "fitness": 0.15416666666666667,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_6_7538",
@@ -1046,16 +1046,16 @@
       "pool_size": 20
     },
     "seed": 2866,
-    "fitness": 0.1125,
+    "fitness": 0.10384615384615385,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_7_5581",
@@ -1069,16 +1069,16 @@
       "pool_size": 18
     },
     "seed": 17784,
-    "fitness": 0.125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.15384615384615385,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_8_2432",
@@ -1092,16 +1092,16 @@
       "pool_size": 15
     },
     "seed": 87837,
-    "fitness": 0.16666666666666666,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.17307692307692307,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_9_2049",
@@ -1115,16 +1115,16 @@
       "pool_size": 8
     },
     "seed": 4533,
-    "fitness": 0.15833333333333333,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.18461538461538463,
+    "total_hits": 15,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 9,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_10_5774",
@@ -1138,16 +1138,16 @@
       "pool_size": 13
     },
     "seed": 83615,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.13076923076923078,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 6,
+    "ball_hits_total": 7,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_11_8049",
@@ -1161,16 +1161,16 @@
       "pool_size": 6
     },
     "seed": 76940,
-    "fitness": 0.18333333333333335,
+    "fitness": 0.16923076923076924,
     "total_hits": 13,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_12_4752",
@@ -1184,16 +1184,16 @@
       "pool_size": 23
     },
     "seed": 99160,
-    "fitness": 0.0875,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.1076923076923077,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 8,
-    "star_hits_total": 1,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.041666666666666664
+    "ball_hits_total": 9,
+    "star_hits_total": 2,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_13_9139",
@@ -1207,16 +1207,16 @@
       "pool_size": 11
     },
     "seed": 7343,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_14_8019",
@@ -1230,16 +1230,16 @@
       "pool_size": 15
     },
     "seed": 25228,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.1423076923076923,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_15_5951",
@@ -1253,16 +1253,16 @@
       "pool_size": 15
     },
     "seed": 44318,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_16_2231",
@@ -1276,16 +1276,16 @@
       "pool_size": 15
     },
     "seed": 92735,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_17_3442",
@@ -1299,16 +1299,16 @@
       "pool_size": 24
     },
     "seed": 82346,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_18_1253",
@@ -1322,16 +1322,16 @@
       "pool_size": 12
     },
     "seed": 67543,
-    "fitness": 0.075,
-    "total_hits": 6,
-    "draws_evaluated": 12,
+    "fitness": 0.1076923076923077,
+    "total_hits": 8,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_19_9067",
@@ -1345,16 +1345,16 @@
       "pool_size": 12
     },
     "seed": 11511,
-    "fitness": 0.10416666666666666,
+    "fitness": 0.09615384615384616,
     "total_hits": 8,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_20_2154",
@@ -1368,16 +1368,16 @@
       "pool_size": 24
     },
     "seed": 95324,
-    "fitness": 0.15833333333333333,
+    "fitness": 0.14615384615384616,
     "total_hits": 13,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 9,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_21_1744",
@@ -1391,16 +1391,16 @@
       "pool_size": 15
     },
     "seed": 79453,
-    "fitness": 0.1375,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.1653846153846154,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 9,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_22_4271",
@@ -1414,16 +1414,16 @@
       "pool_size": 8
     },
     "seed": 77484,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_23_2261",
@@ -1437,16 +1437,16 @@
       "pool_size": 23
     },
     "seed": 75755,
-    "fitness": 0.1125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_24_5532",
@@ -1460,16 +1460,16 @@
       "pool_size": 8
     },
     "seed": 21909,
-    "fitness": 0.1125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_25_5051",
@@ -1483,16 +1483,16 @@
       "pool_size": 16
     },
     "seed": 49666,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_26_3176",
@@ -1506,16 +1506,16 @@
       "pool_size": 28
     },
     "seed": 75436,
-    "fitness": 0.07916666666666666,
-    "total_hits": 5,
-    "draws_evaluated": 12,
+    "fitness": 0.09230769230769231,
+    "total_hits": 6,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 2,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.03333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.03076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_27_2830",
@@ -1529,16 +1529,16 @@
       "pool_size": 19
     },
     "seed": 85850,
-    "fitness": 0.0875,
-    "total_hits": 6,
-    "draws_evaluated": 12,
+    "fitness": 0.11923076923076924,
+    "total_hits": 8,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 3,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_28_2899",
@@ -1552,16 +1552,16 @@
       "pool_size": 15
     },
     "seed": 79446,
-    "fitness": 0.1375,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 4,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "ball_hits_total": 6,
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_29_2945",
@@ -1575,16 +1575,16 @@
       "pool_size": 27
     },
     "seed": 17057,
-    "fitness": 0.14583333333333334,
+    "fitness": 0.13461538461538464,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_30_2563",
@@ -1598,16 +1598,16 @@
       "pool_size": 9
     },
     "seed": 78786,
-    "fitness": 0.1375,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.14615384615384616,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 9,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_31_8067",
@@ -1621,16 +1621,16 @@
       "pool_size": 23
     },
     "seed": 48665,
-    "fitness": 0.09166666666666667,
+    "fitness": 0.08461538461538462,
     "total_hits": 8,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_32_7002",
@@ -1644,16 +1644,16 @@
       "pool_size": 10
     },
     "seed": 92644,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.1423076923076923,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_33_7698",
@@ -1667,16 +1667,16 @@
       "pool_size": 8
     },
     "seed": 76902,
-    "fitness": 0.125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.13461538461538464,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_34_5628",
@@ -1690,16 +1690,16 @@
       "pool_size": 13
     },
     "seed": 50322,
-    "fitness": 0.08333333333333333,
-    "total_hits": 7,
-    "draws_evaluated": 12,
+    "fitness": 0.11538461538461539,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_35_3942",
@@ -1713,16 +1713,16 @@
       "pool_size": 15
     },
     "seed": 33544,
-    "fitness": 0.1875,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.19230769230769232,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 7,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.2916666666666667
+    "star_hits_total": 8,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.3076923076923077
   },
   {
     "id": "g_36_1387",
@@ -1736,16 +1736,16 @@
       "pool_size": 15
     },
     "seed": 62975,
-    "fitness": 0.0875,
-    "total_hits": 6,
-    "draws_evaluated": 12,
+    "fitness": 0.11923076923076924,
+    "total_hits": 8,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 3,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_37_5234",
@@ -1759,16 +1759,16 @@
       "pool_size": 24
     },
     "seed": 90935,
-    "fitness": 0.075,
-    "total_hits": 6,
-    "draws_evaluated": 12,
+    "fitness": 0.07692307692307693,
+    "total_hits": 7,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
-    "ball_hits_total": 4,
+    "ball_hits_total": 5,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_38_5240",
@@ -1782,16 +1782,16 @@
       "pool_size": 15
     },
     "seed": 28570,
-    "fitness": 0.15833333333333333,
+    "fitness": 0.14615384615384616,
     "total_hits": 13,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 9,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_39_6016",
@@ -1805,16 +1805,16 @@
       "pool_size": 18
     },
     "seed": 38113,
-    "fitness": 0.09999999999999999,
+    "fitness": 0.09230769230769231,
     "total_hits": 6,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 2,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.03333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.03076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_40_3450",
@@ -1828,16 +1828,16 @@
       "pool_size": 18
     },
     "seed": 24593,
-    "fitness": 0.21666666666666667,
-    "total_hits": 14,
-    "draws_evaluated": 12,
+    "fitness": 0.21923076923076923,
+    "total_hits": 15,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 8,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.3333333333333333
+    "star_hits_total": 9,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.34615384615384615
   },
   {
     "id": "g_41_4049",
@@ -1851,16 +1851,16 @@
       "pool_size": 11
     },
     "seed": 28123,
-    "fitness": 0.1625,
+    "fitness": 0.15000000000000002,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_42_4299",
@@ -1874,16 +1874,16 @@
       "pool_size": 16
     },
     "seed": 92011,
-    "fitness": 0.10833333333333334,
+    "fitness": 0.1,
     "total_hits": 7,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 3,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_43_7630",
@@ -1897,16 +1897,16 @@
       "pool_size": 21
     },
     "seed": 41714,
-    "fitness": 0.17083333333333334,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.17692307692307693,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 3,
-    "star_hits_total": 7,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.2916666666666667
+    "star_hits_total": 8,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.3076923076923077
   },
   {
     "id": "g_44_9276",
@@ -1920,16 +1920,16 @@
       "pool_size": 16
     },
     "seed": 78750,
-    "fitness": 0.22916666666666669,
-    "total_hits": 17,
-    "draws_evaluated": 12,
+    "fitness": 0.23846153846153847,
+    "total_hits": 19,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
-    "ball_hits_total": 10,
-    "star_hits_total": 7,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.16666666666666666,
-    "fitness_stars": 0.2916666666666667
+    "ball_hits_total": 11,
+    "star_hits_total": 8,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.16923076923076924,
+    "fitness_stars": 0.3076923076923077
   },
   {
     "id": "g_45_3083",
@@ -1943,16 +1943,16 @@
       "pool_size": 29
     },
     "seed": 72686,
-    "fitness": 0.2,
+    "fitness": 0.18461538461538463,
     "total_hits": 15,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 9,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_46_9134",
@@ -1966,16 +1966,16 @@
       "pool_size": 21
     },
     "seed": 57360,
-    "fitness": 0.11666666666666667,
+    "fitness": 0.1076923076923077,
     "total_hits": 8,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_47_1365",
@@ -1989,16 +1989,16 @@
       "pool_size": 24
     },
     "seed": 86797,
-    "fitness": 0.125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.13461538461538464,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 2,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_48_1411",
@@ -2012,16 +2012,16 @@
       "pool_size": 8
     },
     "seed": 9854,
-    "fitness": 0.17083333333333334,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.17692307692307693,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_49_1929",
@@ -2035,16 +2035,16 @@
       "pool_size": 11
     },
     "seed": 35238,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_50_9643",
@@ -2058,16 +2058,16 @@
       "pool_size": 12
     },
     "seed": 61440,
-    "fitness": 0.15,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.1576923076923077,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_51_7298",
@@ -2081,16 +2081,16 @@
       "pool_size": 9
     },
     "seed": 24279,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.1423076923076923,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_52_8782",
@@ -2104,16 +2104,16 @@
       "pool_size": 20
     },
     "seed": 23885,
-    "fitness": 0.09583333333333333,
-    "total_hits": 7,
-    "draws_evaluated": 12,
+    "fitness": 0.12692307692307692,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_53_1963",
@@ -2127,16 +2127,16 @@
       "pool_size": 24
     },
     "seed": 7081,
-    "fitness": 0.10833333333333334,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.11923076923076924,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 3,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_54_8847",
@@ -2150,16 +2150,16 @@
       "pool_size": 15
     },
     "seed": 34904,
-    "fitness": 0.17083333333333334,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.17692307692307693,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_55_8036",
@@ -2173,16 +2173,16 @@
       "pool_size": 6
     },
     "seed": 7790,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_56_5686",
@@ -2196,16 +2196,16 @@
       "pool_size": 15
     },
     "seed": 43545,
-    "fitness": 0.10416666666666666,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.11538461538461539,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_57_8262",
@@ -2219,16 +2219,16 @@
       "pool_size": 15
     },
     "seed": 82705,
-    "fitness": 0.10416666666666666,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.11538461538461539,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_58_8274",
@@ -2242,16 +2242,16 @@
       "pool_size": 14
     },
     "seed": 51941,
-    "fitness": 0.15833333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.17307692307692307,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 4,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.25
+    "ball_hits_total": 5,
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_59_2488",
@@ -2265,16 +2265,16 @@
       "pool_size": 29
     },
     "seed": 15505,
-    "fitness": 0.17083333333333334,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.19615384615384615,
+    "total_hits": 15,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_60_7543",
@@ -2288,16 +2288,16 @@
       "pool_size": 12
     },
     "seed": 62161,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.15000000000000002,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "ball_hits_total": 7,
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_61_5668",
@@ -2311,16 +2311,16 @@
       "pool_size": 15
     },
     "seed": 62784,
-    "fitness": 0.11666666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.13461538461538464,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "ball_hits_total": 5,
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_62_4036",
@@ -2334,16 +2334,16 @@
       "pool_size": 16
     },
     "seed": 39137,
-    "fitness": 0.16666666666666666,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 2,
     "age": 0,
-    "ball_hits_total": 5,
+    "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_63_1740",
@@ -2357,16 +2357,16 @@
       "pool_size": 15
     },
     "seed": 26226,
-    "fitness": 0.15,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.1576923076923077,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 3,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_64_9238",
@@ -2380,16 +2380,16 @@
       "pool_size": 20
     },
     "seed": 23509,
-    "fitness": 0.14583333333333334,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.1423076923076923,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 5,
+    "ball_hits_total": 6,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_65_3572",
@@ -2403,16 +2403,16 @@
       "pool_size": 24
     },
     "seed": 42409,
-    "fitness": 0.15416666666666667,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 2,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_66_6471",
@@ -2426,16 +2426,16 @@
       "pool_size": 12
     },
     "seed": 96835,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.1423076923076923,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_67_9143",
@@ -2449,16 +2449,16 @@
       "pool_size": 29
     },
     "seed": 46745,
-    "fitness": 0.18333333333333335,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.18846153846153846,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 2,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_68_7677",
@@ -2472,16 +2472,16 @@
       "pool_size": 20
     },
     "seed": 90204,
-    "fitness": 0.15,
+    "fitness": 0.13846153846153847,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 3,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_69_3209",
@@ -2495,16 +2495,16 @@
       "pool_size": 14
     },
     "seed": 70666,
-    "fitness": 0.10416666666666666,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 1,
     "age": 0,
-    "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "ball_hits_total": 6,
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_70_2237",
@@ -2518,16 +2518,16 @@
       "pool_size": 15
     },
     "seed": 91808,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_71_6648",
@@ -2541,16 +2541,16 @@
       "pool_size": 29
     },
     "seed": 49794,
-    "fitness": 0.12916666666666665,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.13846153846153847,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_72_7379",
@@ -2564,16 +2564,16 @@
       "pool_size": 15
     },
     "seed": 65960,
-    "fitness": 0.09166666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.10384615384615385,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 3,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_73_9548",
@@ -2587,16 +2587,16 @@
       "pool_size": 11
     },
     "seed": 26477,
-    "fitness": 0.1,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.13846153846153847,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
-    "ball_hits_total": 7,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "ball_hits_total": 8,
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_74_1109",
@@ -2610,16 +2610,16 @@
       "pool_size": 16
     },
     "seed": 53670,
-    "fitness": 0.1,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.11923076923076924,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 7,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "ball_hits_total": 8,
+    "star_hits_total": 3,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_75_5367",
@@ -2633,16 +2633,16 @@
       "pool_size": 11
     },
     "seed": 41,
-    "fitness": 0.11666666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.12692307692307692,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_76_8904",
@@ -2656,16 +2656,16 @@
       "pool_size": 11
     },
     "seed": 65070,
-    "fitness": 0.15,
+    "fitness": 0.13846153846153847,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 8,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_77_2399",
@@ -2679,16 +2679,16 @@
       "pool_size": 8
     },
     "seed": 77885,
-    "fitness": 0.075,
-    "total_hits": 6,
-    "draws_evaluated": 12,
+    "fitness": 0.1076923076923077,
+    "total_hits": 8,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_78_3157",
@@ -2702,16 +2702,16 @@
       "pool_size": 13
     },
     "seed": 32426,
-    "fitness": 0.175,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.18076923076923077,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_79_4849",
@@ -2725,16 +2725,16 @@
       "pool_size": 23
     },
     "seed": 37736,
-    "fitness": 0.058333333333333334,
-    "total_hits": 4,
-    "draws_evaluated": 12,
+    "fitness": 0.07307692307692308,
+    "total_hits": 5,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 2,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.03333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 3,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.03076923076923077,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_80_9827",
@@ -2748,16 +2748,16 @@
       "pool_size": 24
     },
     "seed": 10352,
-    "fitness": 0.15833333333333333,
+    "fitness": 0.14615384615384616,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 4,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_81_1061",
@@ -2771,16 +2771,16 @@
       "pool_size": 18
     },
     "seed": 28673,
-    "fitness": 0.1125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_82_7703",
@@ -2794,16 +2794,16 @@
       "pool_size": 15
     },
     "seed": 36141,
-    "fitness": 0.15416666666666667,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.15000000000000002,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 6,
+    "ball_hits_total": 7,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_83_6211",
@@ -2817,16 +2817,16 @@
       "pool_size": 15
     },
     "seed": 57315,
-    "fitness": 0.1875,
-    "total_hits": 15,
-    "draws_evaluated": 12,
+    "fitness": 0.21153846153846154,
+    "total_hits": 17,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 10,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.16666666666666666,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.15384615384615385,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_84_6930",
@@ -2840,16 +2840,16 @@
       "pool_size": 15
     },
     "seed": 51513,
-    "fitness": 0.175,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.18076923076923077,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_85_9162",
@@ -2863,16 +2863,16 @@
       "pool_size": 15
     },
     "seed": 62727,
-    "fitness": 0.06666666666666667,
-    "total_hits": 5,
-    "draws_evaluated": 12,
+    "fitness": 0.08846153846153847,
+    "total_hits": 7,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 3,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.08333333333333333
+    "ball_hits_total": 4,
+    "star_hits_total": 3,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_86_9731",
@@ -2886,16 +2886,16 @@
       "pool_size": 26
     },
     "seed": 34925,
-    "fitness": 0.14166666666666666,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.15000000000000002,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_87_8429",
@@ -2909,16 +2909,16 @@
       "pool_size": 15
     },
     "seed": 48014,
-    "fitness": 0.15416666666666667,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_88_2920",
@@ -2932,16 +2932,16 @@
       "pool_size": 30
     },
     "seed": 31189,
-    "fitness": 0.15833333333333333,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.18461538461538463,
+    "total_hits": 15,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 9,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.15,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_89_9966",
@@ -2955,16 +2955,16 @@
       "pool_size": 30
     },
     "seed": 26105,
-    "fitness": 0.18333333333333335,
+    "fitness": 0.16923076923076924,
     "total_hits": 13,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_90_9790",
@@ -2978,16 +2978,16 @@
       "pool_size": 16
     },
     "seed": 47756,
-    "fitness": 0.15,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.14615384615384616,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 3,
+    "ball_hits_total": 4,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_91_7532",
@@ -3001,16 +3001,16 @@
       "pool_size": 30
     },
     "seed": 51963,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_92_7985",
@@ -3024,16 +3024,16 @@
       "pool_size": 19
     },
     "seed": 33859,
-    "fitness": 0.19166666666666665,
+    "fitness": 0.17692307692307693,
     "total_hits": 14,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_93_2208",
@@ -3047,16 +3047,16 @@
       "pool_size": 11
     },
     "seed": 49138,
-    "fitness": 0.13333333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 6,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "ball_hits_total": 7,
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_94_1774",
@@ -3070,16 +3070,16 @@
       "pool_size": 8
     },
     "seed": 91601,
-    "fitness": 0.12083333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.15000000000000002,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_95_1454",
@@ -3093,16 +3093,16 @@
       "pool_size": 8
     },
     "seed": 30120,
-    "fitness": 0.11666666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.14615384615384616,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_96_3602",
@@ -3116,16 +3116,16 @@
       "pool_size": 15
     },
     "seed": 9811,
-    "fitness": 0.15,
+    "fitness": 0.13846153846153847,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 8,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_97_9253",
@@ -3139,16 +3139,16 @@
       "pool_size": 9
     },
     "seed": 71294,
-    "fitness": 0.14166666666666666,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.1576923076923077,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 7,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "ball_hits_total": 8,
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_98_6578",
@@ -3162,16 +3162,16 @@
       "pool_size": 24
     },
     "seed": 32330,
-    "fitness": 0.11666666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.12692307692307692,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_99_1693",
@@ -3185,16 +3185,16 @@
       "pool_size": 20
     },
     "seed": 90438,
-    "fitness": 0.125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 5,
+    "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_100_1290",
@@ -3208,16 +3208,16 @@
       "pool_size": 11
     },
     "seed": 13766,
-    "fitness": 0.09583333333333333,
+    "fitness": 0.08846153846153847,
     "total_hits": 7,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 4,
     "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.125
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_101_1104",
@@ -3231,16 +3231,16 @@
       "pool_size": 12
     },
     "seed": 83700,
-    "fitness": 0.14583333333333334,
+    "fitness": 0.13461538461538464,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_102_3511",
@@ -3254,16 +3254,16 @@
       "pool_size": 10
     },
     "seed": 41625,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_103_2241",
@@ -3277,16 +3277,16 @@
       "pool_size": 13
     },
     "seed": 58836,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_104_9548",
@@ -3300,16 +3300,16 @@
       "pool_size": 28
     },
     "seed": 64248,
-    "fitness": 0.14583333333333334,
+    "fitness": 0.13461538461538464,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_105_2989",
@@ -3323,16 +3323,16 @@
       "pool_size": 28
     },
     "seed": 78224,
-    "fitness": 0.10833333333333334,
+    "fitness": 0.1,
     "total_hits": 7,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 3,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_106_7357",
@@ -3346,16 +3346,16 @@
       "pool_size": 17
     },
     "seed": 36528,
-    "fitness": 0.14583333333333331,
+    "fitness": 0.13461538461538464,
     "total_hits": 13,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 10,
     "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.16666666666666666,
-    "fitness_stars": 0.125
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.15384615384615385,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_107_8007",
@@ -3369,16 +3369,16 @@
       "pool_size": 15
     },
     "seed": 794,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_108_2023",
@@ -3392,16 +3392,16 @@
       "pool_size": 11
     },
     "seed": 62819,
-    "fitness": 0.14166666666666666,
+    "fitness": 0.13076923076923078,
     "total_hits": 11,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_109_7669",
@@ -3415,16 +3415,16 @@
       "pool_size": 6
     },
     "seed": 85319,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_110_9680",
@@ -3438,16 +3438,16 @@
       "pool_size": 18
     },
     "seed": 38920,
-    "fitness": 0.07916666666666666,
+    "fitness": 0.07307692307692308,
     "total_hits": 5,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 2,
     "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.03333333333333333,
-    "fitness_stars": 0.125
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.03076923076923077,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_111_1639",
@@ -3461,16 +3461,16 @@
       "pool_size": 16
     },
     "seed": 60464,
-    "fitness": 0.12916666666666665,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.14615384615384616,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 2,
     "age": 0,
-    "ball_hits_total": 8,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.125
+    "ball_hits_total": 9,
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.13846153846153847,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_112_2424",
@@ -3484,16 +3484,16 @@
       "pool_size": 8
     },
     "seed": 66173,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_113_8911",
@@ -3507,16 +3507,16 @@
       "pool_size": 29
     },
     "seed": 2966,
-    "fitness": 0.10416666666666666,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.11538461538461539,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 3,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_114_8414",
@@ -3530,16 +3530,16 @@
       "pool_size": 18
     },
     "seed": 44303,
-    "fitness": 0.09583333333333333,
-    "total_hits": 7,
-    "draws_evaluated": 12,
+    "fitness": 0.13461538461538464,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 4,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.125
+    "ball_hits_total": 5,
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_115_8485",
@@ -3553,16 +3553,16 @@
       "pool_size": 15
     },
     "seed": 99041,
-    "fitness": 0.15416666666666667,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_116_9762",
@@ -3576,16 +3576,16 @@
       "pool_size": 30
     },
     "seed": 87672,
-    "fitness": 0.125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.13461538461538464,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_117_5340",
@@ -3599,16 +3599,16 @@
       "pool_size": 15
     },
     "seed": 37178,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_118_4405",
@@ -3622,16 +3622,16 @@
       "pool_size": 23
     },
     "seed": 45805,
-    "fitness": 0.0625,
+    "fitness": 0.057692307692307696,
     "total_hits": 6,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 1,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.041666666666666664
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.038461538461538464
   },
   {
     "id": "g_119_6745",
@@ -3645,16 +3645,16 @@
       "pool_size": 9
     },
     "seed": 23706,
-    "fitness": 0.11666666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.12692307692307692,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_120_6953",
@@ -3668,16 +3668,16 @@
       "pool_size": 15
     },
     "seed": 90473,
-    "fitness": 0.15416666666666667,
+    "fitness": 0.1423076923076923,
     "total_hits": 11,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_121_8170",
@@ -3691,16 +3691,16 @@
       "pool_size": 13
     },
     "seed": 49984,
-    "fitness": 0.1,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.13076923076923078,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_122_2376",
@@ -3714,16 +3714,16 @@
       "pool_size": 11
     },
     "seed": 53165,
-    "fitness": 0.1125,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_123_6413",
@@ -3737,16 +3737,16 @@
       "pool_size": 15
     },
     "seed": 57816,
-    "fitness": 0.15416666666666667,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.16153846153846155,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_124_6130",
@@ -3760,16 +3760,16 @@
       "pool_size": 12
     },
     "seed": 73881,
-    "fitness": 0.12916666666666665,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.13846153846153847,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_125_5862",
@@ -3783,16 +3783,16 @@
       "pool_size": 14
     },
     "seed": 51536,
-    "fitness": 0.08333333333333333,
+    "fitness": 0.07692307692307693,
     "total_hits": 7,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_126_8316",
@@ -3806,16 +3806,16 @@
       "pool_size": 14
     },
     "seed": 98667,
-    "fitness": 0.12916666666666668,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.13846153846153847,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 3,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_127_1428",
@@ -3829,16 +3829,16 @@
       "pool_size": 15
     },
     "seed": 25467,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_128_4895",
@@ -3852,16 +3852,16 @@
       "pool_size": 21
     },
     "seed": 1177,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_129_7431",
@@ -3875,16 +3875,16 @@
       "pool_size": 15
     },
     "seed": 15964,
-    "fitness": 0.10416666666666666,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.13461538461538464,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_130_5139",
@@ -3898,16 +3898,16 @@
       "pool_size": 13
     },
     "seed": 67350,
-    "fitness": 0.0875,
+    "fitness": 0.08076923076923077,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
     "star_hits_total": 1,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.041666666666666664
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.038461538461538464
   },
   {
     "id": "g_131_1286",
@@ -3921,16 +3921,16 @@
       "pool_size": 12
     },
     "seed": 72948,
-    "fitness": 0.15,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.17692307692307693,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 2,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_132_6570",
@@ -3944,16 +3944,16 @@
       "pool_size": 15
     },
     "seed": 23662,
-    "fitness": 0.17083333333333334,
-    "total_hits": 13,
-    "draws_evaluated": 12,
+    "fitness": 0.17692307692307693,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.20833333333333334
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_133_7838",
@@ -3967,16 +3967,16 @@
       "pool_size": 30
     },
     "seed": 59539,
-    "fitness": 0.11666666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.12692307692307692,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "star_hits_total": 5,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_134_4486",
@@ -3990,16 +3990,16 @@
       "pool_size": 20
     },
     "seed": 46386,
-    "fitness": 0.14166666666666666,
-    "total_hits": 11,
-    "draws_evaluated": 12,
+    "fitness": 0.13846153846153847,
+    "total_hits": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 7,
+    "ball_hits_total": 8,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_135_6160",
@@ -4013,16 +4013,16 @@
       "pool_size": 6
     },
     "seed": 6015,
-    "fitness": 0.09999999999999999,
-    "total_hits": 6,
-    "draws_evaluated": 12,
+    "fitness": 0.1,
+    "total_hits": 7,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
-    "ball_hits_total": 2,
+    "ball_hits_total": 3,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.03333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_136_9372",
@@ -4036,16 +4036,16 @@
       "pool_size": 15
     },
     "seed": 50834,
-    "fitness": 0.1625,
+    "fitness": 0.15000000000000002,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_137_6083",
@@ -4059,16 +4059,16 @@
       "pool_size": 13
     },
     "seed": 39740,
-    "fitness": 0.175,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.16923076923076924,
+    "total_hits": 13,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
-    "ball_hits_total": 6,
+    "ball_hits_total": 7,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_138_8212",
@@ -4082,16 +4082,16 @@
       "pool_size": 6
     },
     "seed": 97975,
-    "fitness": 0.23333333333333334,
-    "total_hits": 16,
-    "draws_evaluated": 12,
+    "fitness": 0.23461538461538461,
+    "total_hits": 17,
+    "draws_evaluated": 13,
     "generation": 5,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 8,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.3333333333333333
+    "star_hits_total": 9,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.34615384615384615
   },
   {
     "id": "g_139_2271",
@@ -4105,16 +4105,16 @@
       "pool_size": 15
     },
     "seed": 70690,
-    "fitness": 0.075,
+    "fitness": 0.06923076923076923,
     "total_hits": 6,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 4,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_140_1040",
@@ -4128,16 +4128,16 @@
       "pool_size": 13
     },
     "seed": 21753,
-    "fitness": 0.1,
+    "fitness": 0.09230769230769231,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 4,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_141_8253",
@@ -4151,16 +4151,16 @@
       "pool_size": 27
     },
     "seed": 35252,
-    "fitness": 0.09166666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.12307692307692308,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 6,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_142_5634",
@@ -4174,16 +4174,16 @@
       "pool_size": 13
     },
     "seed": 41665,
-    "fitness": 0.15833333333333333,
-    "total_hits": 10,
-    "draws_evaluated": 12,
+    "fitness": 0.16538461538461538,
+    "total_hits": 11,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 4,
-    "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.25
+    "star_hits_total": 7,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.2692307692307692
   },
   {
     "id": "g_143_5182",
@@ -4197,16 +4197,16 @@
       "pool_size": 5
     },
     "seed": 99780,
-    "fitness": 0.10416666666666666,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.11538461538461539,
+    "total_hits": 9,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 5,
-    "star_hits_total": 3,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.125
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_144_5596",
@@ -4220,16 +4220,16 @@
       "pool_size": 13
     },
     "seed": 13854,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_145_3594",
@@ -4243,16 +4243,16 @@
       "pool_size": 15
     },
     "seed": 46627,
-    "fitness": 0.06666666666666667,
-    "total_hits": 5,
-    "draws_evaluated": 12,
+    "fitness": 0.07692307692307693,
+    "total_hits": 7,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
-    "ball_hits_total": 3,
+    "ball_hits_total": 5,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_146_9499",
@@ -4266,16 +4266,16 @@
       "pool_size": 23
     },
     "seed": 59221,
-    "fitness": 0.11666666666666667,
+    "fitness": 0.1076923076923077,
     "total_hits": 8,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 4,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.06666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_147_3989",
@@ -4289,16 +4289,16 @@
       "pool_size": 23
     },
     "seed": 61994,
-    "fitness": 0.125,
+    "fitness": 0.11538461538461539,
     "total_hits": 9,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_148_2804",
@@ -4312,16 +4312,16 @@
       "pool_size": 26
     },
     "seed": 83555,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_149_7795",
@@ -4335,16 +4335,16 @@
       "pool_size": 16
     },
     "seed": 55724,
-    "fitness": 0.13333333333333333,
+    "fitness": 0.12307692307692308,
     "total_hits": 10,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_150_5793",
@@ -4358,16 +4358,16 @@
       "pool_size": 20
     },
     "seed": 64282,
-    "fitness": 0.125,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.15384615384615385,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 10,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.16666666666666666,
-    "fitness_stars": 0.08333333333333333
+    "star_hits_total": 4,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.15384615384615385,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_151_2366",
@@ -4381,16 +4381,16 @@
       "pool_size": 19
     },
     "seed": 76000,
-    "fitness": 0.0875,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.1,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 8,
-    "star_hits_total": 1,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.13333333333333333,
-    "fitness_stars": 0.041666666666666664
+    "star_hits_total": 2,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_152_3849",
@@ -4404,16 +4404,16 @@
       "pool_size": 30
     },
     "seed": 17296,
-    "fitness": 0.14166666666666666,
+    "fitness": 0.13076923076923078,
     "total_hits": 11,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_153_1066",
@@ -4427,16 +4427,16 @@
       "pool_size": 18
     },
     "seed": 28416,
-    "fitness": 0.14166666666666666,
+    "fitness": 0.13076923076923078,
     "total_hits": 11,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_154_4910",
@@ -4450,16 +4450,16 @@
       "pool_size": 9
     },
     "seed": 56317,
-    "fitness": 0.09166666666666667,
-    "total_hits": 8,
-    "draws_evaluated": 12,
+    "fitness": 0.11153846153846154,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
-    "ball_hits_total": 6,
-    "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.08333333333333333
+    "ball_hits_total": 7,
+    "star_hits_total": 3,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.11538461538461539
   },
   {
     "id": "g_155_7293",
@@ -4473,16 +4473,16 @@
       "pool_size": 17
     },
     "seed": 73414,
-    "fitness": 0.12916666666666668,
+    "fitness": 0.11923076923076924,
     "total_hits": 8,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 3,
     "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.20833333333333334
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.046153846153846156,
+    "fitness_stars": 0.19230769230769232
   },
   {
     "id": "g_156_5021",
@@ -4496,16 +4496,16 @@
       "pool_size": 10
     },
     "seed": 62052,
-    "fitness": 0.175,
+    "fitness": 0.16153846153846155,
     "total_hits": 12,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 6,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.1,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.09230769230769231,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_157_4605",
@@ -4519,16 +4519,16 @@
       "pool_size": 9
     },
     "seed": 90014,
-    "fitness": 0.1625,
-    "total_hits": 12,
-    "draws_evaluated": 12,
+    "fitness": 0.17692307692307693,
+    "total_hits": 14,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
-    "ball_hits_total": 7,
-    "star_hits_total": 5,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.20833333333333334
+    "ball_hits_total": 8,
+    "star_hits_total": 6,
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.12307692307692308,
+    "fitness_stars": 0.23076923076923078
   },
   {
     "id": "g_158_1806",
@@ -4542,16 +4542,16 @@
       "pool_size": 11
     },
     "seed": 96675,
-    "fitness": 0.14166666666666666,
+    "fitness": 0.13076923076923078,
     "total_hits": 11,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 7,
     "star_hits_total": 4,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.11666666666666667,
-    "fitness_stars": 0.16666666666666666
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.1076923076923077,
+    "fitness_stars": 0.15384615384615385
   },
   {
     "id": "g_159_1177",
@@ -4565,16 +4565,16 @@
       "pool_size": 14
     },
     "seed": 90430,
-    "fitness": 0.08333333333333333,
+    "fitness": 0.07692307692307693,
     "total_hits": 7,
-    "draws_evaluated": 12,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
     "ball_hits_total": 5,
     "star_hits_total": 2,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.08333333333333333,
-    "fitness_stars": 0.08333333333333333
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.07692307692307693,
+    "fitness_stars": 0.07692307692307693
   },
   {
     "id": "g_160_6476",
@@ -4588,15 +4588,15 @@
       "pool_size": 18
     },
     "seed": 31622,
-    "fitness": 0.15,
-    "total_hits": 9,
-    "draws_evaluated": 12,
+    "fitness": 0.14615384615384616,
+    "total_hits": 10,
+    "draws_evaluated": 13,
     "generation": 0,
     "age": 0,
-    "ball_hits_total": 3,
+    "ball_hits_total": 4,
     "star_hits_total": 6,
-    "split_draws_evaluated": 12,
-    "fitness_balls": 0.05,
-    "fitness_stars": 0.25
+    "split_draws_evaluated": 13,
+    "fitness_balls": 0.06153846153846154,
+    "fitness_stars": 0.23076923076923078
   }
 ]
