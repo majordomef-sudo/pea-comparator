@@ -1,7 +1,7 @@
 """ETF Scrapler v2.6 - yfinance + Scrapling JustETF avec mapping ISIN → ticker"""
-import json, re, os, time, urllib.request
+import json, re, os, sys, time, urllib.request, fcntl
 from datetime import datetime
-from scrapling import Fetcher
+from scrapling.fetchers import Fetcher
 
 WS = os.path.expanduser("~/.openclaw/workspace")
 PEA_ETFS = os.path.join(WS, "web", "pea-comparator", "etf-data.js")
@@ -22,6 +22,36 @@ EXCHANGE_MAP = {
 }
 
 DEFAULT_SUFFIX = ".DE"  # Fallback Xetra
+
+
+# --- Verrou anti-double execution (flock interne) -------------------------
+# Protege contre les lancements concurrents : cron + manuel, nohup + background.
+# Aucune dependance externe, aucun effet de bord : le lock est relache a la
+# sortie du process (y compris crash).
+LOCK_PATH = os.environ.get("ETF_SCRAPLER_LOCK", "/tmp/etf_scrapler_internal.lock")
+_lock_fd = None
+
+
+def _acquire_lock():
+    """Prend un lock exclusif non-bloquant. Sort proprement (exit 0) si deja pris."""
+    global _lock_fd
+    _lock_fd = open(LOCK_PATH, "w")
+    try:
+        fcntl.flock(_lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except (IOError, BlockingIOError):
+        print(f"skip: une instance de etf_scrapler tourne deja (lock {LOCK_PATH})")
+        sys.exit(0)
+    _lock_fd.write(str(os.getpid()))
+    _lock_fd.flush()
+
+
+def _release_lock():
+    global _lock_fd
+    if _lock_fd is not None:
+        try:
+            fcntl.flock(_lock_fd, fcntl.LOCK_UN)
+        except Exception:
+            pass
 
 
 def load():
@@ -143,8 +173,7 @@ def fetch_justetf(isin):
     """Fetch ETF ticker + name from JustETF using Scrapling.
     Returns ticker (Yahoo format) and name if found."""
     try:
-        f = Fetcher()
-        r = f.get(f"https://www.justetf.com/en/etf-profile.html?isin={isin}", timeout=15)
+        r = Fetcher.get(f"https://www.justetf.com/en/etf-profile.html?isin={isin}", timeout=15)
         if r.status != 200:
             return {"error": f"HTTP {r.status}"}
 
@@ -276,8 +305,7 @@ from datetime import datetime
 def fetch_fundamentals(isin):
     """Enrichit un ETF avec les fondamentaux justETF : encours, devise, dist/cap, date creation, indice, vol, replication."""
     try:
-        f = Fetcher()
-        r = f.get(f"https://www.justetf.com/fr/etf-profile.html?isin={isin}", timeout=15)
+        r = Fetcher.get(f"https://www.justetf.com/fr/etf-profile.html?isin={isin}", timeout=15)
         if r.status != 200:
             return {"error": f"HTTP {r.status}"}
         s = r.body.decode("utf-8", "ignore")
@@ -399,6 +427,7 @@ def main():
     p.add_argument("--refresh-all", action="store_true")
     p.add_argument("--peap", type=int, default=0, help="backfill PEA: N ETF sans peap (fiche FR)")
     args = p.parse_args()
+    _acquire_lock()
     print(f"ETF Scrapler v2.6 - {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     etfs = load()
     print(f"  {len(etfs)} ETFs loaded")

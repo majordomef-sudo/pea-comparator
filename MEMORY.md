@@ -255,11 +255,12 @@ Couvre : ETF PEA/non-PEA, SCPI, Private Equity, Or, Crypto, Obligataires,
 
 
 
-### Metriques (2026-09-29 23:00)
+
+### Metriques (2026-09-30 23:00)
 - Site: 5/5 pages OK
-- Trafic 24h: 289 hits, 137 visiteurs
-- Trafic 7j: 4085 hits, 685 visiteurs
-- YouTube: 17 abos, 607 vues
+- Trafic 24h: 299 hits, 124 visiteurs
+- Trafic 7j: 3369 hits, 691 visiteurs
+- YouTube: 17 abos, 632 vues
 
 ## Projet Macro Gave (methode corrigee 2026-08-24)
 - **Methode:** quadrant classe vs moyenne de CYCLE 7 ANS (croissance PIB YoY + inflation HICP Eurostat), PAS a des seuils absolus. Backtest 4/4 valide.
@@ -497,3 +498,7 @@ En plus d'Euromillions (deja note), l'audit a revele et corrige d'autres fichier
 - git worktree prune fait (5 worktrees perimes supprimes).
 - Reste a trancher : 491 fichiers modifies non committes (487 dans web/pea-comparator, +7045/-5095) = travail site en attente.
 - Rapport : rapports/audit_git_2026-09-30.md
+
+- ETAPE 2 FAITE (30/09 21:15) : backup bundle 2,1 Go (/home/ubuntu/backups/workspace_pre_filter_20260930.bundle, a purger dans quelques jours), git-filter-repo --strip-blobs-bigger-than 5M, .git 2,4 Go -> 325 Mo, 450 commits, 0 blob >5Mo, fsck OK. Remote origin reajoute (filter-repo le supprime) + git push --force origin main OK -> GitHub main = d32f3f0.
+- Commit site 0938060 (511 fichiers, travail web/pea-comparator rattrape).
+- Reste : 46 branches locales orphelines coordinator/* experiment/* ; bundle de sauvegarde a supprimer.

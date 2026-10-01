@@ -1806,7 +1806,7 @@ window.PEA_ETFS = [
     "stress5": "-29,00",
     "ticker": "LYJPN.SW",
     "prix": "24200.0",
-    "perf3": "44.0",
+    "perf3": "47.1",
     "perf1": "6.1",
     "encours_mio": 133.0,
     "encours_devise": "EUR",
@@ -3032,7 +3032,7 @@ window.PEA_ETFS = [
     "hedge": "Currency unhedged",
     "peap": "Non",
     "ticker": "AMGOLDN.MX",
-    "perf1": "15.3",
+    "perf1": "0.0",
     "prix": 2970.29
   },
   {
